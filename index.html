@@ -1,0 +1,636 @@
+<!doctype html>
+
+<head>
+    <title>fnanime!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <style>
+        * {
+            transition: none !important;
+        }
+        
+        [data-title] {
+            cursor: help;
+        }
+
+        hr {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-dark, .table-dark {
+            background: #1b1d1f !important;
+        }
+
+        .table-dark.table-striped tbody tr:nth-of-type(odd) {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        tr {
+            transition: background 0.15s ease-in-out;
+        }
+
+        tbody tr:hover {
+            background: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        th {
+            border-color: #000000 !important;
+            border-width: 2px !important;
+        }
+
+        th.d-flex {
+            display: table-cell !important;
+        }
+
+        td {
+            border: none !important;
+        }
+
+        td:not(:first-child) {
+            white-space: nowrap !important;
+        }
+
+        .anime-image {
+            background-size: cover;
+            background-position: center;
+            height: 52px;
+            width: 37px;
+            margin: -0.75rem 0 -0.75rem -0.75rem;
+        }
+
+        .d-flex button {
+            flex-grow: 1 !important;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:active {
+            background: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .btn-info {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+        }
+
+        .btn-info:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+        }
+
+        .btn-info:active {
+            background: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .btn-group .btn {
+            margin-left: 0 !important;
+        }
+
+        .dataTables_filter {
+            display: none;
+        }
+
+        .progress {
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .progress.bg-secondary {
+            background: hsl(0, 0%, 25%) !important;
+        }
+
+        .text-secondary {
+            color: hsl(0, 0%, 50%) !important;
+        }
+
+        select, input {
+            height: calc(26px + 12px) !important;
+            padding: 5px 12px 7px !important;
+            border: none !important;
+        }
+
+        select:focus, input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        th:active, td:active, input:focus, button:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .sorting, .sorting_asc, .sorting_desc {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sorting:before, .sorting:after, .sorting_asc:before, .sorting_asc:after, .sorting_desc:before, .sorting_desc:after {
+            position: absolute;
+            bottom: 0.9em;
+            display: block;
+            opacity: 0.25;
+        }
+
+        .sorting:before, .sorting_asc:before, .sorting_desc:before {
+            right: 1em;
+            content: "\2191";
+        }
+
+        .sorting:after, .sorting_asc:after, .sorting_desc:after {
+            right: 0.5em;
+            content: "\2193";
+        }
+
+        .sorting_asc:before, .sorting_desc:after {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container">
+
+        <div class="row mt-xl-3">
+            <div class="col-xl-6 d-flex mt-3 mt-xl-0 text-light d-flex align-items-center">
+                <h1>fnanime!</h1>
+            </div>
+            <div class="col-xl-6 d-flex mt-3 mt-xl-0 text-light d-flex align-items-center justify-content-center">
+                <p class="my-0"><span id="total-count"></span> anime occupying <span id="total-size"></span>, last updated on <span id="updated"></span> GMT</p>
+            </div>
+        </div>
+
+        <div class="row mt-xl-3">
+            <div class="col-xl-6 mt-3 mt-xl-0">
+                <input type="text" class="form-control" id="search" placeholder="Search...">
+            </div>
+            <div class="col-xl-6 mt-3 mt-xl-0">
+                <select class="custom-select" id="subs">
+                    <option value="">All Sub Groups</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-xl-3">
+            <div class="col-xl-6 mt-3 mt-xl-0">
+                <div class="btn-group d-flex filter" id="type">
+                    <button class="btn btn-info" data-value="">All Types</button>
+                </div>
+            </div> 
+            <div class="col-xl-6 mt-3 mt-xl-0">
+                <div class="btn-group d-flex filter" id="status">
+                    <button class="btn btn-info" data-value="">All Statuses</button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="row mt-xl-3"> 
+            <div class="col-xl-6 mt-3 mt-xl-0">
+                <div class="btn-group d-flex filter" id="resolution">
+                    <button class="btn btn-info" data-value="">All Resolutions</button>
+                </div>
+            </div>   
+            <div class="col-xl-5 mt-3 mt-xl-0">
+                <div class="btn-group d-flex filter" id="source">
+                    <button class="btn btn-info" data-value="">All Sources</button>
+                </div>
+            </div>
+            <div class="col-xl-1 d-flex mt-3 mt-xl-0">
+                <button class="btn btn-info" id="reset">Reset</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid mt-xl-3 mt-3">
+        <table class="table table-striped table-dark" id="anime" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Sub Group</th>
+                    <th>Resolution</th>
+                    <th>Source</th>
+                    <th>Rating</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="container">
+        <hr class="mt-4 mb-3">
+        <p class="text-light">There are <span id="unused-count"></span> anime which are completed or being watched on MyAnimeList but are not present here, they are:</p>
+        <table class="table table-striped table-dark" id="unused-anime" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody class="table-sm"></tbody>
+        </table>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+
+    <script>
+(function () {
+
+    // Rounding decimals (modified)
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+    let round = (value, exp = -2) => {
+        value = value.toString().split('e');
+        value = Math.round(+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+        value = value.toString().split('e');
+
+        return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    }
+   
+    // Convert bytes to normal size (modified)
+    // https://stackoverflow.com/a/18650828/1561377
+    let formatSize = (bytes, i, showLabel = true) => {
+        let k = 1024;
+        let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        i = (i === undefined ? Math.floor(Math.log(bytes) / Math.log(k)) : +i);
+
+        return round((bytes / Math.pow(k, i)), -2) + (showLabel ? ' ' + sizes[i] : '');
+    }
+
+    // Converting XML to JSON (modified)
+    // https://gist.github.com/chinchang/8106a82c56ad007e27b1
+    let xml2json = (xml) => {
+        // Just text
+        if (xml.nodeType == 3) {
+            return xml.nodeValue;
+        }
+
+        // Do children
+        if (xml.hasChildNodes()) {
+            if (xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+                return xml.childNodes[0].nodeValue;
+            }
+
+            // Create the return object
+            let obj = {};
+
+            xml.childNodes.forEach((item) => {
+                let nodeName = item.nodeName;
+
+                if (typeof obj[nodeName] == 'undefined') {
+                    obj[nodeName] = xml2json(item);
+                } else {
+                    if (typeof obj[nodeName].push == 'undefined') {
+                        let old = obj[nodeName];
+                        obj[nodeName] = [];
+                        obj[nodeName].push(old);
+                    }
+
+                    obj[nodeName].push(xml2json(item));
+                }
+            });
+
+            return obj;
+        }
+    }
+
+    // Type lookup
+    let typeLU = {
+        1: 'TV',
+        2: 'OVA',
+        3: 'Movie',
+        4: 'Special',
+        5: 'TV',  // Original: ONA
+        6: 'Music',
+    };
+
+    // Status lookup
+    let statusLU = {
+        1: 'Watching',
+        2: 'Completed',
+        3: 'On-Hold',
+        4: 'Dropped',
+        6: 'Plan to Watch',
+    };
+
+    // Status colour lookup 
+    let statusColorLU = {
+        'Watching': 'success',
+        'Completed': 'primary',
+        'On-Hold': 'warning',
+        'Dropped': 'danger',
+        'Plan to Watch': 'secondary',
+    };
+
+    // Resolution colour lookup
+    let resolutionLU = {
+        1080: 'success',
+        720: 'warning',
+        480: 'danger',
+        360: 'danger',
+    };
+
+    // Resolution colour lookup
+    let sourceLU = {
+        BD: 'success',
+        TV: 'warning',
+        DVD: 'danger',
+    };
+
+    // Clean data
+    let parser = new DOMParser();
+    let malData = {};
+    let malSizes = {};
+    let malTitles = [];
+    let localTitles = [];
+    let localData = [];
+    let localSizes = [];
+
+    // Cache MAL size data because it's slow AF
+    parser.parseFromString(malHTML, 'text/html').querySelectorAll('.animetitle').forEach((el) => {
+        let el2 = el.closest('tr').querySelector('span[title="EHD"]');
+        malSizes[el.href.match(/\/(\d+)\//)[1]] = (el2 ? parseFloat(el2.textContent.match(/\d+(?:\.\d+)*/)[0]) : 0);
+    });
+
+    // Parse MAL XML data
+    xml2json(parser.parseFromString(malXML.replace(' \n', ''), 'text/xml')).myanimelist.anime.forEach((anime) => {
+        // Clean up the title
+        let title = anime.series_title.trim()
+        // Unique replacements
+        .replace(/ef:/g, 'ef_')
+        .replace(/\//g, ' ')
+        // Special replacements
+        .replace(/[√★!":]/g, '')
+        // Replace diacritics
+        .replace(/[åăâäàáāã]/g, 'a')
+        .replace(/[ĕêěėëèéē]/g, 'e');
+
+        malData[title] = {
+            title: title,
+            image: anime.series_image,
+            rating: parseInt(anime.my_score, 10),
+            id: parseInt(anime.series_animedb_id, 10),
+            status: statusLU[anime.my_status],
+            type: typeLU[anime.series_type],
+            episodes: parseInt(anime.series_episodes, 10),
+            malSize: malSizes[anime.series_animedb_id],
+        };
+
+        malTitles.push(title);
+    });
+
+    // Parse local data
+    localRawData.forEach((line) => {
+        // Skip rows that are probably not anime
+        if (!line.match(/](?:\.[a-z]{3})?#\d+$/)) {
+            return;
+        }
+
+        // Get all data from the string
+        let [, title, subs, resolution, source, size] =
+            line.match(/([^\[]+)\s(?:\[([^\[]+)\])?\[(\d+)p\]\[?(\.?\w+)\]?(?:\.\w+)?#(\d+)/);
+
+        // This anime
+        let anime = Object.assign({}, malData[title]);
+        anime.subs = subs;
+        anime.resolution = parseInt(resolution, 10);
+        anime.source = (source.includes('.') ? 'BD' : source);
+        anime.size = parseInt(size, 10);
+        anime.sizeMatches = !!(anime.malSize === round(formatSize(size, 3, false), -1));
+
+        // Add data to places
+        localTitles.push(title);
+        localData.push(anime);
+        localSizes.push(anime.size);
+    });
+
+    // Figure out relative sizes for formula
+    let relativeMin = Math.min.apply(Math, localSizes);
+    let relativeMax = Math.max.apply(Math, localSizes) - relativeMin;
+
+    // Create data table
+    let table = $('#anime').DataTable({
+        data: localData,
+        paging: false,
+        info: false,
+        columns: [ {
+            data: 'title',
+            className: 'd-flex align-items-center',
+            // Add image, type, status
+            render: (data, type, row) => type == 'display' ? `
+                <span class="anime-image" style="background-image: url(${row.image})"></span>
+                <a class="text-white ml-2 mr-1" href="https://myanimelist.net/anime/${row.id}/" target="_blank">
+                    ${data}
+                </a>
+                <span class="text-secondary">
+                    ${row.type}
+                </span>
+                <span class="bg-${statusColorLU[row.status]} py-0 px-1 m-0 rounded ml-auto">
+                    ${row.status}
+                </span>` : data,
+        }, {
+            data: 'subs',
+            name: 'subs',
+        }, {
+            data: 'resolution',
+            name: 'resolution',
+            className: 'text-center',
+            // Add colour and "p"
+            render: (data, type) => type == 'display' ? `<span class="text-${resolutionLU[data]}">${data}p</span>` : data,
+        }, {
+            data: 'source',
+            name: 'source',
+            className: 'text-center',
+            // Add colour
+            render: (data, type) => type == 'display' ? `<span class="text-${sourceLU[data]}">${data}</span>` : data,
+        }, {
+            data: 'rating',
+            name: 'rating',
+            className: 'text-center',
+            // Dash for missing ratings
+            render: (data, type) => (type == 'display' && data == 0) ? `&mdash;` : data,
+        }, {
+            data: 'size',
+            name: 'size',
+            // Format and add a relative size bar indicator
+            render: (data, type, row) => {
+                if (type != 'display') {
+                    return data;
+                }
+
+                let title = '';
+                let style = '';
+
+                // Calculate size per episode
+                title += `${row.episodes} episode`;
+                if (row.episodes > 1) {
+                    title += `s, ${formatSize(row.size / row.episodes)} per episode on average.`;
+                }
+                title += '<br><br>';
+
+                // Check whether size matches with MAL
+                if (row.sizeMatches) {
+                    title += `Stored size matches with MyAnimeList.`;
+                } else {
+                    title += `Stored size doesn't match with MyAnimeList! (${row.malSize} GB)`;
+                    style += 'rounded bg-danger text-center'
+                }
+
+                let el = `
+                <div data-toggle="tooltip" data-placement="left" data-html="true" data-title="${title}" class="${style}">
+                ${formatSize(data, 3)}`;
+
+                // Add relative size width bar and colour based on size
+                let width = ((data - relativeMin) / relativeMax) * 100;
+                style = (data > 32212254720 ? 'danger' : (data > 21474836480 ? 'warning' : 'primary'));
+
+                el += `
+                <div class="progress bg-secondary">
+                    <div class="progress-bar bg-${style}" style="width:${width}%"></div>
+                </div>`;
+
+                return el;
+            },
+        }, {
+            data: 'status',
+            name: 'status',
+            type: 'num',
+            visible: false,
+        }, {
+            data: 'type',
+            name: 'type',
+            type: 'num',
+            visible: false,
+        } ],
+    });
+
+    // Bind search
+    $('#search').on('keyup', (e) => table.search(e.target.value).draw());
+
+    // Populate dropdowns and buttons
+    ['subs', 'resolution', 'source', 'status', 'type'].forEach((filter) => {
+        // Get all column data in an array, make sure it's unique and sorted
+        let data = table.column(filter + ':name').data();
+
+        // Count how many anime of this type are
+        let counts = {};
+        data.toArray().forEach((value) => {
+            if (counts.hasOwnProperty(value)) {
+                counts[value]++;
+                return;
+            }
+            counts[value] = 1;
+        });
+
+        // Create unique and sorted dropdown options
+        let sort;
+        if (filter == 'resolution') {
+            sort = (a, b) => (a === b ? 0 : (a < b ? 1 : -1));
+        }
+
+        data.unique().sort(sort).toArray().forEach((value) => {
+            if (filter == 'subs') {
+                $('#subs').append(`<option value="${value}">${value} (${counts[value]})</option>`);
+                return;
+            }
+
+            if (value == 'N/A') {
+                return;
+            }
+
+            let displayValue = (filter == 'resolution' ? `${value}p` : value);
+            $(`#${filter}`).append(`
+                <button class="btn btn-secondary" value="${value}">
+                    ${displayValue} (${counts[value]})
+                </button>`
+            );
+        });
+    });
+
+    // Bind filtering
+    $('#subs').on('change keyup', (e) => table.column('subs:name').search(e.target.value, false, true).draw());
+
+    $('.filter').on('click', (e) => {
+        let el = $(e.target);
+
+        // Reset filtering by clicking again on currently selected option
+        if (el.hasClass('btn-info') && el.val().length) {
+            el.parent().find('button').eq(0).click();
+            return;
+        }
+
+        el.parent().find('.btn-info').removeClass('btn-info').addClass('btn-secondary');
+        el.removeClass('btn-secondary').addClass('btn-info');
+        table.column(el.parent().attr('id') + ':name').search(e.target.value, true).draw();
+    });
+
+    // Init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Statistics
+    $('#updated').text(batchUpdated.replace(/:\d+\.\d+$/, '').replace(' ', ' at '));
+    $('#total-count').text(localData.length);
+    $('#total-size').text(formatSize(localSizes.reduce((a, b) => a + b)));
+
+    // Figure out unused anime from MAL
+    let unusedMalAnime = [];
+    malTitles.forEach((anime) => {
+        if (localTitles.indexOf(anime) === -1 &&
+            malData[anime].status != "Plan to Watch" && malData[anime].status != "Dropped")
+        {
+            unusedMalAnime.push(malData[anime]);
+        }
+    });
+
+    // Populate unused anime data
+    let unusedTable = $('#unused-anime').DataTable({
+        data: unusedMalAnime,
+        paging: false,
+        info: false,
+        columns: [ {
+            data: 'title',
+            render: (data, type, row) => type == 'display' ?
+                `<a class="text-white ml-2 mr-1" href="https://myanimelist.net/anime/${row.id}/" target="_blank">
+                    ${data}
+                </a>` : data,
+        }, {
+            data: 'type',
+            className: 'text-center',
+        }, {
+            data: 'status',
+            className: 'text-center',
+        } ],
+    });
+
+    $('#unused-count').text(unusedMalAnime.length);
+
+    // Clear search and sort
+    $('#reset').on('click', () => {
+        table.order([0, 'asc']).draw();
+        unusedTable.order([0, 'asc']).draw();
+        $('.filter button:first-of-type').click();
+        $('#search').val('').trigger('keyup');
+        $('#subs').val('').trigger('change');
+    });
+
+    // Blergh
+    localRawData = null;
+    malHTML = null;
+    malXML = null;
+
+}());
+    </script>
+
+</body>
