@@ -7,7 +7,7 @@
         * {
             transition: none !important;
         }
-        
+
         [data-title] {
             cursor: help;
         }
@@ -184,20 +184,20 @@
                 <div class="btn-group d-flex filter" id="type">
                     <button class="btn btn-info" data-value="">All Types</button>
                 </div>
-            </div> 
+            </div>
             <div class="col-xl-6 mt-3 mt-xl-0">
                 <div class="btn-group d-flex filter" id="status">
                     <button class="btn btn-info" data-value="">All Statuses</button>
                 </div>
-            </div> 
+            </div>
         </div>
 
-        <div class="row mt-xl-3"> 
+        <div class="row mt-xl-3">
             <div class="col-xl-6 mt-3 mt-xl-0">
                 <div class="btn-group d-flex filter" id="resolution">
                     <button class="btn btn-info" data-value="">All Resolutions</button>
                 </div>
-            </div>   
+            </div>
             <div class="col-xl-5 mt-3 mt-xl-0">
                 <div class="btn-group d-flex filter" id="source">
                     <button class="btn btn-info" data-value="">All Sources</button>
@@ -241,7 +241,7 @@
     </div>
 
     <script src="data.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
@@ -258,7 +258,7 @@
 
         return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
     }
-   
+
     // Convert bytes to normal size (modified)
     // https://stackoverflow.com/a/18650828/1561377
     let formatSize = (bytes, i, showLabel = true) => {
@@ -325,7 +325,7 @@
         6: 'Plan to Watch',
     };
 
-    // Status colour lookup 
+    // Status colour lookup
     let statusColorLU = {
         'Watching': 'success',
         'Completed': 'primary',
@@ -629,6 +629,16 @@
     localRawData = null;
     malHTML = null;
     malXML = null;
+
+    $.post('https://myanimelist.net/includes/ajax-no-auth.inc.php', {
+        t: 6,
+        color: 2,
+        id: 3087,
+        memId: 1039043,
+        type: 'anime',
+    }, data => {
+        console.log(data);
+    });
 
 }());
     </script>
