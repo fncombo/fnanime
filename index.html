@@ -33,9 +33,10 @@
             background: rgba(255, 255, 255, 0.05) !important;
         }
 
-        th {
+        .table th {
             border-color: #000000 !important;
             border-width: 2px !important;
+            padding: 0.75rem 2em 0.75em 0.75em;
         }
 
         th.d-flex {
@@ -216,10 +217,12 @@
                 <tr>
                     <th>Title</th>
                     <th>Sub Group</th>
-                    <th>Resolution</th>
+                    <th>Res</th>
                     <th>Source</th>
                     <th>Rating</th>
+                    <th>Rewatched</th>
                     <th>Size</th>
+                    <th>Size/ep</th>
                 </tr>
             </thead>
         </table>
@@ -353,15 +356,20 @@
     let parser = new DOMParser();
     let malData = {};
     let malSizes = {};
+    let malRewatched = {};
     let malTitles = [];
     let localTitles = [];
     let localData = [];
     let localSizes = [];
+    let localRelativeSizes = [];
 
     // Cache MAL size data because it's slow AF
     parser.parseFromString(malHTML, 'text/html').querySelectorAll('.animetitle').forEach((el) => {
-        let el2 = el.closest('tr').querySelector('span[title="EHD"]');
-        malSizes[el.href.match(/\/(\d+)\//)[1]] = (el2 ? parseFloat(el2.textContent.match(/\d+(?:\.\d+)*/)[0]) : 0);
+        let sizeEl = el.closest('tr').querySelector('span[title="EHD"]');
+        let rewatchedEl = el.closest('tr').querySelector('span[id^="tagLinks"] a');
+        let key = el.href.match(/\/(\d+)\//)[1];
+        malSizes[key] = (sizeEl ? parseFloat(sizeEl.textContent.match(/\d+(?:\.\d+)*/)[0]) : 0);
+        malRewatched[key] = (rewatchedEl ? parseFloat(rewatchedEl.textContent.match(/\d{1,2}/)[0]) : 0);
     });
 
     // Parse MAL XML data
@@ -386,6 +394,7 @@
             type: typeLU[anime.series_type],
             episodes: parseInt(anime.series_episodes, 10),
             malSize: malSizes[anime.series_animedb_id],
+            rewatched: malRewatched[anime.series_animedb_id],
         };
 
         malTitles.push(title);
@@ -409,16 +418,20 @@
         anime.source = (source.includes('.') ? 'BD' : source);
         anime.size = parseInt(size, 10);
         anime.sizeMatches = !!(anime.malSize === round(formatSize(size, 3, false), -1));
+        anime.relativeSize = size / anime.episodes;
 
         // Add data to places
         localTitles.push(title);
         localData.push(anime);
         localSizes.push(anime.size);
+        localRelativeSizes.push(anime.relativeSize);
     });
 
-    // Figure out relative sizes for formula
-    let relativeMin = Math.min.apply(Math, localSizes);
-    let relativeMax = Math.max.apply(Math, localSizes) - relativeMin;
+    // Figure out min/man sizes for formula for size and relative size
+    let sizeMin = Math.min.apply(Math, localSizes);
+    let sizeMax = Math.max.apply(Math, localSizes) - sizeMin;
+    let relativeMin = Math.min.apply(Math, localRelativeSizes);
+    let relativeMax = Math.max.apply(Math, localRelativeSizes) - relativeMin;
 
     // Create data table
     let table = $('#anime').DataTable({
@@ -432,7 +445,7 @@
             render: (data, type, row) => type == 'display' ? `
                 <span class="anime-image" style="background-image: url(${row.image})"></span>
                 <a class="text-white ml-2 mr-1" href="https://myanimelist.net/anime/${row.id}/" target="_blank">
-                    ${data}
+                    ${data.length > 50 ? `<span title="${data}">` + data.substr(0, 50) + '&hellip;</span>' : data}
                 </a>
                 <span class="text-secondary">
                     ${row.type}
@@ -462,6 +475,12 @@
             // Dash for missing ratings
             render: (data, type) => (type == 'display' && data == 0) ? `&mdash;` : data,
         }, {
+            data: 'rewatched',
+            name: 'rewatched',
+            className: 'text-center',
+            // Dash for missing count
+            render: (data, type) => (type == 'display' && data == 0) ? `&mdash;` : data,
+        }, {
             data: 'size',
             name: 'size',
             // Format and add a relative size bar indicator
@@ -470,38 +489,39 @@
                     return data;
                 }
 
-                let title = '';
-                let style = '';
+                // Tooltip text and style
+                let tooltipTitle = row.sizeMatches ? 'Stored size matches with MyAnimeList.' : `Stored size doesn't match with MyAnimeList! (${row.malSize} GB)`;
+                let tooltipStyle = row.sizeMatches ? '' : 'rounded bg-danger text-center';
 
-                // Calculate size per episode
-                title += `${row.episodes} episode`;
-                if (row.episodes > 1) {
-                    title += `s, ${formatSize(row.size / row.episodes)} per episode on average.`;
+                // Add relative size width bar and colour based on size
+                let width = ((data - sizeMin) / sizeMax) * 100;
+                let style = (data > (sizeMax * 0.8) ? 'danger' : (data > (sizeMax * 0.6) ? 'warning' : 'primary'));
+
+                return `
+                <div data-toggle="tooltip" data-placement="left" data-html="true" data-title="${tooltipTitle}" class="${tooltipStyle}">
+                    ${formatSize(data, 3)}
+                    <div class="progress bg-secondary">
+                        <div class="progress-bar bg-${style}" style="width:${width}%"></div>
+                    </div>
+                </div>
+                `;
+            },
+        }, {
+            data: 'relativeSize',
+            name: 'relativeSize',
+            render: (data, type) => {
+                if (type != 'display') {
+                    return data;
                 }
-                title += '<br><br>';
-
-                // Check whether size matches with MAL
-                if (row.sizeMatches) {
-                    title += `Stored size matches with MyAnimeList.`;
-                } else {
-                    title += `Stored size doesn't match with MyAnimeList! (${row.malSize} GB)`;
-                    style += 'rounded bg-danger text-center'
-                }
-
-                let el = `
-                <div data-toggle="tooltip" data-placement="left" data-html="true" data-title="${title}" class="${style}">
-                ${formatSize(data, 3)}`;
 
                 // Add relative size width bar and colour based on size
                 let width = ((data - relativeMin) / relativeMax) * 100;
-                style = (data > 32212254720 ? 'danger' : (data > 21474836480 ? 'warning' : 'primary'));
+                let style = (data > (relativeMax * 0.8) ? 'danger' : (data > (relativeMax * 0.6) ? 'warning' : 'primary'));
 
-                el += `
+                return `${formatSize(data, 3)}
                 <div class="progress bg-secondary">
                     <div class="progress-bar bg-${style}" style="width:${width}%"></div>
                 </div>`;
-
-                return el;
             },
         }, {
             data: 'status',
