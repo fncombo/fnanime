@@ -21,6 +21,11 @@
             background: #1b1d1f !important;
         }
 
+        .container-max {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
         .table-dark.table-striped tbody tr:nth-of-type(odd) {
             background: rgba(0, 0, 0, 0.25);
         }
@@ -98,7 +103,7 @@
             display: none;
         }
 
-        .progress {
+        table .progress {
             height: 4px;
             border-radius: 2px;
         }
@@ -153,12 +158,48 @@
         .sorting_asc:before, .sorting_desc:after {
             opacity: 1;
         }
+
+        #ratings-gallery > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        #ratings-gallery > div > div {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #ratings-gallery a {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #ratings-gallery .image {
+            height: calc(100px * 1.6);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #ratings-gallery .unused-anime {
+            opacity: 0.1;
+        }
+
+        #ratings-gallery .unused-anime:hover {
+            opacity: 0.5;
+        }
     </style>
 </head>
 
 <body class="bg-dark">
 
-    <div class="container">
+    <div class="container-fluid container-max">
 
         <div class="row mt-xl-3">
             <div class="col-xl-6 d-flex mt-3 mt-xl-0 text-light d-flex align-items-center">
@@ -211,7 +252,7 @@
 
     </div>
 
-    <div class="container-fluid mt-xl-3 mt-3">
+    <div class="container-fluid container-max mt-xl-3 mt-3">
         <table class="table table-striped table-dark" id="anime" style="width: 100%;">
             <thead>
                 <tr>
@@ -228,9 +269,12 @@
         </table>
     </div>
 
+    <div class="container" id="ratings"></div>
+
+    <div class="container-fluid" id="ratings-gallery"></div>
+
     <div class="container">
-        <hr class="mt-4 mb-3">
-        <p class="text-light">There are <span id="unused-count"></span> anime which are completed or being watched on MyAnimeList but are not present here, they are:</p>
+        <p class="text-light">There are <span id="unused-count"></span> anime which are completed or being watched on MyAnimeList but are not downloaded locally, they are:</p>
         <table class="table table-striped table-dark" id="unused-anime" style="width: 100%;">
             <thead>
                 <tr>
@@ -325,7 +369,7 @@
         2: 'Completed',
         3: 'On-Hold',
         4: 'Dropped',
-        6: 'Plan to Watch',
+        6: 'PTW',
     };
 
     // Status colour lookup
@@ -334,7 +378,7 @@
         'Completed': 'primary',
         'On-Hold': 'warning',
         'Dropped': 'danger',
-        'Plan to Watch': 'secondary',
+        'PTW': 'secondary',
     };
 
     // Resolution colour lookup
@@ -362,6 +406,9 @@
     let localData = [];
     let localSizes = [];
     let localRelativeSizes = [];
+    let ratingCounts = {};
+    let totalRating = 0;
+    let totalRated = 0;
 
     // Cache MAL size data because it's slow AF
     parser.parseFromString(malHTML, 'text/html').querySelectorAll('.animetitle').forEach((el) => {
@@ -398,6 +445,12 @@
         };
 
         malTitles.push(title);
+
+        if (malData[title].rating > 0) {
+            ratingCounts.hasOwnProperty(malData[title].rating) ? ratingCounts[malData[title].rating]++ : ratingCounts[malData[title].rating] = 1;
+            totalRating += malData[title].rating;
+            totalRated++;
+        }
     });
 
     // Parse local data
@@ -411,6 +464,10 @@
         let [, title, subs, resolution, source, size] =
             line.match(/([^\[]+)\s(?:\[([^\[]+)\])?\[(\d+)p\]\[?(\.?\w+)\]?(?:\.\w+)?#(\d+)/);
 
+        if (!malData.hasOwnProperty(title)) {
+            console.log(title, ' not found in MAL data!');
+        }
+
         // This anime
         let anime = Object.assign({}, malData[title]);
         anime.subs = subs;
@@ -419,11 +476,17 @@
         anime.size = parseInt(size, 10);
         anime.sizeMatches = !!(anime.malSize === round(formatSize(size, 3, false), -1));
         anime.relativeSize = size / anime.episodes;
+        anime.local = true;
 
         // Add data to places
         localTitles.push(title);
         localData.push(anime);
-        localSizes.push(anime.size);
+
+        // Ignore oversized anime (NARUTO LOOKING AT YOU)
+        console.log(anime.size);
+        if (anime.size < 1e11) {
+            localSizes.push(anime.size);
+        }
         localRelativeSizes.push(anime.relativeSize);
     });
 
@@ -596,9 +659,6 @@
         table.column(el.parent().attr('id') + ':name').search(e.target.value, true).draw();
     });
 
-    // Init tooltips
-    $('[data-toggle="tooltip"]').tooltip();
-
     // Statistics
     $('#updated').text(batchUpdated.replace(/:\d+\.\d+$/, '').replace(' ', ' at '));
     $('#total-count').text(localData.length);
@@ -608,9 +668,11 @@
     let unusedMalAnime = [];
     malTitles.forEach((anime) => {
         if (localTitles.indexOf(anime) === -1 &&
-            malData[anime].status != "Plan to Watch" && malData[anime].status != "Dropped")
+            malData[anime].status != statusLU[6] && malData[anime].status != statusLU[4])
         {
-            unusedMalAnime.push(malData[anime]);
+            let unusedAnime = malData[anime];
+            unusedAnime.unused = true;
+            unusedMalAnime.push(unusedAnime);
         }
     });
 
@@ -636,6 +698,83 @@
 
     $('#unused-count').text(unusedMalAnime.length);
 
+    // Rating bars
+    let mostRated = ratingCounts[Object.keys(ratingCounts).reduce((a, b) => ratingCounts[a] > ratingCounts[b] ? a : b)];
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1].forEach((rating) => {
+        $('#ratings').append(`
+        <div class="row justify-content-center align-items-center text-light">
+            <div class="col-1 text-center">Rated ${rating}</div>
+            <div class="col-4">
+                <div class="progress bg-secondary">
+                    <div class="progress-bar bg-primary" style="width: ${(ratingCounts[rating] / mostRated) * 100}%;">${ratingCounts[rating] > 1 ? ratingCounts[rating] : ''}</div>
+                </div>
+            </div>
+        </div>`
+        );
+
+        let movies = [];
+        let series = [];
+        let specials = [];
+
+        let assignAnimeType = (anime) => {
+            if (anime.rating === rating) {
+                switch (anime.type) {
+                    case typeLU[1]:
+                    case typeLU[5]:
+                        series.push(anime);
+                        break;
+                    case typeLU[3]:
+                        movies.push(anime);
+                        break;
+                    default:
+                        specials.push(anime);
+                        break;
+                }
+            }
+        };
+
+        localData.forEach(assignAnimeType);
+        unusedMalAnime.forEach(assignAnimeType);
+
+        // Sort all by title
+        let titleSort = (a, b) => {
+            a = a.title.toUpperCase();
+            b = b.title.toUpperCase();
+
+            if (a < b) {
+                return -1;
+            }
+
+            if (a > b) {
+                return 1;
+            }
+
+            return 0;
+        };
+        movies.sort(titleSort);
+        series.sort(titleSort);
+        specials.sort(titleSort);
+
+        let addToGallery = (anime) => {
+            $(`#ratings-gallery-${rating}`).append(`
+            <div class="${anime.unused ? 'unused-anime' : ''}" data-toggle="tooltip" data-placement="top" data-html="true" data-title="${anime.title}${anime.unused ? ' <span class=\'text-danger\'>(Missing locally)</span>' : ''}">
+                <a href="https://myanimelist.net/anime/${anime.id}/" target="_blank"></a>
+                <span class="image" style="background-image: url(${anime.image});"></span>
+                <span class="type text-light text-center">${anime.type}${anime.episodes > 1 ? ', ' + anime.episodes + ' ep' : ''}</span>
+            </div>
+            `);
+        };
+
+        if (movies != 0 || series != 0 || specials != 0) {
+            $('#ratings-gallery').append(`<h3 class="text-light text-center">Rated ${rating} (${ratingCounts[rating]} anime)</h3><div id="ratings-gallery-${rating}"></div>`);
+            movies.forEach(addToGallery);
+            series.forEach(addToGallery);
+            specials.forEach(addToGallery);
+        }
+    });
+
+    $('#ratings').append(`<p class="text-light text-center">Average rating: ${round(totalRating / totalRated, -2)}</p>`);
+
     // Clear search and sort
     $('#reset').on('click', () => {
         table.order([0, 'asc']).draw();
@@ -644,6 +783,9 @@
         $('#search').val('').trigger('keyup');
         $('#subs').val('').trigger('change');
     });
+
+    // Init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
 
     // Blergh
     localRawData = null;
