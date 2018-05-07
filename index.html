@@ -13,8 +13,9 @@
         }
 
         hr {
+            margin: 2rem 0;
             border-top: 1px solid #000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .bg-dark, .table-dark {
@@ -269,7 +270,11 @@
         </table>
     </div>
 
-    <div class="container" id="ratings"></div>
+    <div class="container-fluid">
+        <hr>
+        <div class="container" id="ratings"></div>
+        <hr>
+    </div>
 
     <div class="container-fluid" id="ratings-gallery"></div>
 
@@ -352,6 +357,20 @@
             return obj;
         }
     }
+
+    // Rating lookup
+    let ratingLU = {
+        10: 'Masterpiece',
+        9: 'Great',
+        8: 'Very Good',
+        7: 'Good',
+        6: 'Fine',
+        5: 'Average',
+        4: 'Bad',
+        3: 'Very Bad',
+        2: 'Horrible',
+        1: 'Appaling',
+    };
 
     // Type lookup
     let typeLU = {
@@ -703,7 +722,7 @@
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1].forEach((rating) => {
         $('#ratings').append(`
         <div class="row justify-content-center align-items-center text-light">
-            <div class="col-1 text-center">Rated ${rating}</div>
+            <div class="col-2">${rating} &mdash; ${ratingLU[rating]}</div>
             <div class="col-4">
                 <div class="progress bg-secondary">
                     <div class="progress-bar bg-primary" style="width: ${(ratingCounts[rating] / mostRated) * 100}%;">${ratingCounts[rating] > 1 ? ratingCounts[rating] : ''}</div>
@@ -766,10 +785,11 @@
         };
 
         if (movies != 0 || series != 0 || specials != 0) {
-            $('#ratings-gallery').append(`<h3 class="text-light text-center">Rated ${rating} (${ratingCounts[rating]} anime)</h3><div id="ratings-gallery-${rating}"></div>`);
+            $('#ratings-gallery').append(`<h3 class="text-light text-center">${rating} &mdash; ${ratingLU[rating]} <span style="opacity:0.25">${ratingCounts[rating]} anime</span></h3><div id="ratings-gallery-${rating}"></div>`);
             movies.forEach(addToGallery);
             series.forEach(addToGallery);
             specials.forEach(addToGallery);
+            $('#ratings-gallery').append('<hr>');
         }
     });
 
