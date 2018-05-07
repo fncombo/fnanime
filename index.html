@@ -12,6 +12,10 @@
             cursor: help;
         }
 
+        .nav-item:hover {
+            text-decoration: underline;
+        }
+
         hr {
             margin: 2rem 0;
             border-top: 1px solid #000;
@@ -200,16 +204,24 @@
 
 <body class="bg-dark">
 
-    <div class="container-fluid container-max">
 
-        <div class="row mt-xl-3">
-            <div class="col-xl-6 d-flex mt-3 mt-xl-0 text-light d-flex align-items-center">
-                <h1>fnanime!</h1>
-            </div>
-            <div class="col-xl-6 d-flex mt-3 mt-xl-0 text-light d-flex align-items-center justify-content-center">
-                <p class="my-0"><span id="total-count"></span> anime occupying <span id="total-size"></span>, last updated on <span id="updated"></span> GMT</p>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid container-max">
+            <span class="navbar-brand mb-0 h1">fnanime!</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Anime List</a>
+                    <a class="nav-item nav-link active" href="#ratings">Ratings Breakdown</a>
+                    <a class="nav-item nav-link active" href="#missing">Missing Locally</a>
+                </div>
             </div>
         </div>
+    </nav>
+
+    <div class="container-fluid container-max">
 
         <div class="row mt-xl-3">
             <div class="col-xl-6 mt-3 mt-xl-0">
@@ -251,10 +263,7 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="container-fluid container-max mt-xl-3 mt-3">
-        <table class="table table-striped table-dark" id="anime" style="width: 100%;">
+        <table class="table table-striped table-dark mt-3" id="anime" style="width: 100%;">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -268,18 +277,25 @@
                 </tr>
             </thead>
         </table>
+
+        <p class="text-center text-light"><span id="total-count"></span> anime occupying <span id="total-size"></span>, last updated on <span id="updated"></span> GMT</p>
+
     </div>
 
     <div class="container-fluid">
-        <hr>
-        <div class="container" id="ratings"></div>
-        <hr>
+        <hr id="ratings">
     </div>
 
-    <div class="container-fluid" id="ratings-gallery"></div>
+    <div class="container-fluid">
+        <div class="container" id="ratings-chart"></div>
+        <div id="ratings-gallery"></div>
+        <hr id="missing">
+    </div>
 
-    <div class="container">
+    <div class="container-fluid container-max">
+
         <p class="text-light">There are <span id="unused-count"></span> anime which are completed or being watched on MyAnimeList but are not downloaded locally, they are:</p>
+
         <table class="table table-striped table-dark" id="unused-anime" style="width: 100%;">
             <thead>
                 <tr>
@@ -290,6 +306,7 @@
             </thead>
             <tbody class="table-sm"></tbody>
         </table>
+
     </div>
 
     <script src="data.js"></script>
@@ -720,7 +737,7 @@
     // Rating bars
     let mostRated = ratingCounts[Object.keys(ratingCounts).reduce((a, b) => ratingCounts[a] > ratingCounts[b] ? a : b)];
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1].forEach((rating) => {
-        $('#ratings').append(`
+        $('#ratings-chart').append(`
         <div class="row justify-content-center align-items-center text-light">
             <div class="col-2">${rating} &mdash; ${ratingLU[rating]}</div>
             <div class="col-4">
@@ -785,15 +802,14 @@
         };
 
         if (movies != 0 || series != 0 || specials != 0) {
-            $('#ratings-gallery').append(`<h3 class="text-light text-center">${rating} &mdash; ${ratingLU[rating]} <span style="opacity:0.25">${ratingCounts[rating]} anime</span></h3><div id="ratings-gallery-${rating}"></div>`);
+            $('#ratings-gallery').append(`<hr><h3 class="text-light text-center">${rating} &mdash; ${ratingLU[rating]} <span style="opacity:0.25">${ratingCounts[rating]} anime</span></h3><div id="ratings-gallery-${rating}"></div>`);
             movies.forEach(addToGallery);
             series.forEach(addToGallery);
             specials.forEach(addToGallery);
-            $('#ratings-gallery').append('<hr>');
         }
     });
 
-    $('#ratings').append(`<p class="text-light text-center">Average rating: ${round(totalRating / totalRated, -2)}</p>`);
+    $('#ratings-chart').append(`<p class="text-light text-center">Average rating: ${round(totalRating / totalRated, -2)}</p>`);
 
     // Clear search and sort
     $('#reset').on('click', () => {
