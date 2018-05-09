@@ -30,6 +30,11 @@
         return self.indexOf(value) === index;
     };
 
+    // Clean-up anime title
+    const cleanUpTitle = title => {
+        return title.replace(/[:!"]/g, '').replace(/[\/\u2605]/g, ' ');
+    };
+
     // Converting XML to JSON (modified)
     // https://gist.github.com/chinchang/8106a82c56ad007e27b1
     const xml2json = xml => {
@@ -65,11 +70,6 @@
 
             return obj;
         }
-    };
-
-    // Clean-up anime title
-    const cleanUpTitle = title => {
-        return title.replace(/[:!"]/g, '').replace(/[\/\u2605]/g, ' ');
     };
 
     // Definition lookups
