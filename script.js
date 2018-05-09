@@ -197,6 +197,9 @@
         }
     });
 
+    // Anime data as an array
+    let animeDataValues = Object.values(animeData);
+
     // Parse local data
     localRawData.forEach(line => {
         // Skip rows that are probably not anime
@@ -211,7 +214,7 @@
         let id = -1;
 
         let compareTitle = title.toLowerCase();
-        Object.values(animeData).forEach(anime => {
+        animeDataValues.forEach(anime => {
             // if title matches directly             or there are synonyms and not season title and there is a match to a synonym
             if (anime.compareTitle === compareTitle || (anime.synonyms && !anime.compareTitle.match(/(?:2nd|3rd|4th) season/gi) && anime.compareSynonyms.some(title => title === compareTitle))) {
                 id = anime.id;
@@ -233,9 +236,6 @@
         animeData[id].sizeMatches = !!(animeData[id].malSize === round(formatSize(size, 3, false), -1));
         animeData[id].epSize = size / animeData[id].episodes;
     });
-
-    // Anime data as an array
-    let animeDataValues = Object.values(animeData);
 
     // Anime sizes, no bigger than 100GB
     let sizes = animeDataValues.map(anime => ((anime.size > 1e11) ? 0 : (anime.size || 0)));
