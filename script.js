@@ -6,7 +6,7 @@
 
     // Rounding decimals (modified)
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
-    let round = (value, exp = -2) => {
+    const round = (value, exp = -2) => {
         value = value.toString().split('e');
         value = Math.round(+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
         value = value.toString().split('e');
@@ -16,9 +16,9 @@
 
     // Convert bytes to normal size (modified)
     // https://stackoverflow.com/a/18650828/1561377
-    let formatSize = (bytes, i, showLabel = true) => {
-        let k = 1024;
-        let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    const formatSize = (bytes, i, showLabel = true) => {
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
         i = (i === undefined ? Math.floor(Math.log(bytes) / Math.log(k)) : +i);
 
         return round((bytes / Math.pow(k, i)), -2) + (showLabel ? ' ' + sizes[i] : '');
@@ -26,13 +26,13 @@
 
     // Filter unique array
     // https://stackoverflow.com/a/14438954/1561377
-    let uniqueArray = (value, index, self) => {
+    const uniqueArray = (value, index, self) => {
         return self.indexOf(value) === index;
     };
 
     // Converting XML to JSON (modified)
     // https://gist.github.com/chinchang/8106a82c56ad007e27b1
-    let xml2json = xml => {
+    const xml2json = xml => {
         // Just text
         if (xml.nodeType === 3) {
             return xml.nodeValue;
@@ -48,13 +48,13 @@
             let obj = {};
 
             xml.childNodes.forEach(item => {
-                let nodeName = item.nodeName;
+                const nodeName = item.nodeName;
 
                 if (typeof obj[nodeName] === 'undefined') {
                     obj[nodeName] = xml2json(item);
                 } else {
                     if (typeof obj[nodeName].push === 'undefined') {
-                        let old = obj[nodeName];
+                        const old = obj[nodeName];
                         obj[nodeName] = [];
                         obj[nodeName].push(old);
                     }
@@ -68,12 +68,12 @@
     };
 
     // Clean-up anime title
-    let cleanUpTitle = title => {
+    const cleanUpTitle = title => {
         return title.replace(/[:!"]/g, '').replace(/[\/\u2605]/g, ' ');
     };
 
     // Definition lookups
-    let lookup = {
+    const lookup = {
         rating: {
             10: 'Masterpiece',
             9: 'Great',
@@ -136,21 +136,21 @@
     };
 
     // Possible anime ratings
-    let ratings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    const ratings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
     // Possible filters
-    let filters = ['subs', 'resolution', 'source', 'status', 'type'];
+    const filters = ['subs', 'resolution', 'source', 'status', 'type'];
 
     // Clean data
-    let parser = new DOMParser();
+    const parser = new DOMParser();
     let animeData = {};
 
     // Parse MAL XML data
     xml2json(parser.parseFromString(malXML.replace(' \n', ''), 'text/xml')).myanimelist.anime.forEach(anime => {
-        let id = parseInt(anime.series_animedb_id, 10);
-        let synonyms = anime.series_synonyms ? anime.series_synonyms.split('; ') : undefined;
-        let rating = parseInt(anime.my_score, 10);
-        let tags = anime.my_tags ? anime.my_tags.split(', ') : undefined;
+        const id = parseInt(anime.series_animedb_id, 10);
+        const synonyms = anime.series_synonyms ? anime.series_synonyms.split('; ') : undefined;
+        const rating = parseInt(anime.my_score, 10);
+        const tags = anime.my_tags ? anime.my_tags.split(', ') : undefined;
 
         animeData[id] = {
             // MAL data
@@ -164,7 +164,7 @@
             rating: rating,
             tags: tags,
             rewatchCount: 0,
-            malSize: undefined,
+            malSize: 0,
             // Local data
             local: false,
             subs: false,
@@ -180,7 +180,7 @@
 
         if (tags) {
             tags.forEach(tag => {
-                let match = tag.match(/re-?watched:\s(\d+)/i);
+                const match = tag.match(/re-?watched:\s(\d+)/i);
                 if (match) {
                     animeData[id].rewatchCount = parseInt(match[1], 10);
                 }
@@ -190,15 +190,15 @@
 
     // Process and cache needed data from MAL HTML because it's too slow to look up individually
     parser.parseFromString(malHTML, 'text/html').querySelectorAll('.animetitle').forEach(el => {
-        let id = el.href.match(/\/(\d+)\//)[1];
-        let sizeEl = el.closest('tr').querySelector('span[title="EHD"]');
+        const id = el.href.match(/\/(\d+)\//)[1];
+        const sizeEl = el.closest('tr').querySelector('span[title="EHD"]');
         if (sizeEl) {
             animeData[id].malSize = parseFloat(sizeEl.textContent.match(/\d+(?:\.\d+)*/)[0]);
         }
     });
 
     // Anime data as an array
-    let animeDataValues = Object.values(animeData);
+    const animeDataValues = Object.values(animeData);
 
     // Parse local data
     localRawData.forEach(line => {
@@ -208,12 +208,11 @@
         }
 
         // Get all data from the string
-        let [, title, subs, resolution, source, size] = line.match(/([^\[]+)\s(?:\[([^\[]+)\])?\[(\d+)p\]\[?(\.?\w+)\]?(?:\.\w+)?#(\d+)/);
+        const [, title, subs, resolution, source, size] = line.match(/([^\[]+)\s(?:\[([^\[]+)\])?\[(\d+)p\]\[?(\.?\w+)\]?(?:\.\w+)?#(\d+)/);
 
         // Figure out the anime's ID from MAL data
-        let id = -1;
-
-        let compareTitle = title.toLowerCase();
+        let id = false;
+        const compareTitle = title.toLowerCase();
         animeDataValues.forEach(anime => {
             // if title matches directly             or there are synonyms and not season title and there is a match to a synonym
             if (anime.compareTitle === compareTitle || (anime.synonyms && !anime.compareTitle.match(/(?:2nd|3rd|4th) season/gi) && anime.compareSynonyms.some(title => title === compareTitle))) {
@@ -221,7 +220,7 @@
             }
         });
 
-        if (id === -1) {
+        if (!id) {
             console.error(`"${title}" not found in MAL data!`);
             return;
         }
@@ -233,19 +232,19 @@
         animeData[id].resolution = parseInt(resolution, 10);
         animeData[id].source = (source.includes('.') ? 'BD' : source);
         animeData[id].size = parseInt(size, 10);
-        animeData[id].sizeMatches = !!(animeData[id].malSize === round(formatSize(size, 3, false), -1));
+        animeData[id].sizeMatches = (animeData[id].malSize === round(formatSize(size, 3, false), -1));
         animeData[id].epSize = size / animeData[id].episodes;
     });
 
     // Anime sizes, no bigger than 100GB
-    let sizes = animeDataValues.map(anime => ((anime.size > 1e11) ? 0 : (anime.size || 0)));
-    let biggestSize = Math.max(...sizes);
-    let smallestSize = Math.min(...sizes);
+    const sizes = animeDataValues.map(anime => ((anime.size > 1e11) ? 0 : anime.size));
+    const biggestSize = Math.max(...sizes);
+    const smallestSize = Math.min(...sizes);
 
     // Episode sizes, no bigger than 20GB
-    let epSizes = animeDataValues.map(anime => ((anime.epSize > 2e10) ? 0 : (anime.epSize || 0)));
-    let epBiggestSize = Math.max(...epSizes);
-    let epSmallestSize = Math.min(...epSizes);
+    const epSizes = animeDataValues.map(anime => ((anime.epSize > 2e10) ? 0 : anime.epSize));
+    const epBiggestSize = Math.max(...epSizes);
+    const epSmallestSize = Math.min(...epSizes);
 
     // Create filtering buttons and dropdowns
     filters.forEach(filter => {
@@ -277,7 +276,7 @@
     });
 
     // Create data table
-    let table = $('#anime').DataTable({
+    const table = $('#anime').DataTable({
         data: animeDataValues,
         pageLength: 30,
         lengthChange: false,
@@ -355,8 +354,8 @@
                 }
 
                 // Add relative size width bar and colour based on size
-                let width = ((data - smallestSize) / biggestSize) * 100;
-                let style = (data > (biggestSize * 0.75) ? 'danger' : (data > (biggestSize * 0.5) ? 'warning' : 'primary'));
+                const width = ((data - smallestSize) / biggestSize) * 100;
+                const style = (data > (biggestSize * 0.75) ? 'danger' : (data > (biggestSize * 0.5) ? 'warning' : 'primary'));
 
                 return `
                 ${formatSize(data, 3)}
@@ -374,8 +373,8 @@
                 }
 
                 // Add relative size width bar and colour based on size
-                let width = ((data - epSmallestSize) / epBiggestSize) * 100;
-                let style = (data > (epBiggestSize * 0.75) ? 'danger' : (data > (epBiggestSize * 0.5) ? 'warning' : 'primary'));
+                const width = ((data - epSmallestSize) / epBiggestSize) * 100;
+                const style = (data > (epBiggestSize * 0.75) ? 'danger' : (data > (epBiggestSize * 0.5) ? 'warning' : 'primary'));
 
                 return `
                 ${formatSize(data, 3)}
@@ -409,12 +408,12 @@
             }
         },
         drawCallback: settings => {
-            var api = new $.fn.dataTable.Api(settings);
-            var currentFilterData = Object.values(api.rows({filter: 'applied'}).data()).filter(value => value.hasOwnProperty('title'));
+            const api = new $.fn.dataTable.Api(settings);
+            const currentFilterData = Object.values(api.rows({filter: 'applied'}).data()).filter(value => value.hasOwnProperty('title'));
 
             // Update filter button counts
             filters.forEach(filter => {
-                let data = api.column(`${filter}:name`, {filter: 'applied'}).data();
+                const data = api.column(`${filter}:name`, {filter: 'applied'}).data();
 
                 // Count how many anime of this type are
                 let counts = {};
@@ -448,9 +447,9 @@
 
             // Statistics
             if (currentFilterData.length) {
-                let missingLocally = currentFilterData.filter(anime => !anime.local).length;
+                const missingLocally = currentFilterData.filter(anime => !anime.local).length;
                 $('#stats').html(`Showing <strong>${currentFilterData.filter(anime => anime.local).length}</strong>${missingLocally ? ' (+' + missingLocally + ' missing locally)' : '' } anime occupying
-                                <strong>${formatSize(currentFilterData.map(a => a.size || 0).reduce((a, b) => a + b))}</strong>,
+                                <strong>${formatSize(currentFilterData.map(a => a.size).reduce((a, b) => a + b))}</strong>,
                                 updated ${batchUpdated.substr(0, 10)}`)
             } else {
                 $('#stats').text('No matching anime found.');
@@ -465,7 +464,7 @@
             // Ratings gallery
             ratings.forEach(rating => {
                 // See if there's any anime with this rating
-                let currentlyRatedAnime = currentFilterData.filter(anime => anime.rating === rating);
+                const currentlyRatedAnime = currentFilterData.filter(anime => anime.rating === rating);
                 ratingCounts[rating] = currentlyRatedAnime.length || 0;
                 if (!currentlyRatedAnime.length) {
                     return;
@@ -530,7 +529,7 @@
 
     // Bind filtering buttons
     $('.filter').on('click', e => {
-        let el = $(e.target);
+        const el = $(e.target);
 
         // Reset filtering by clicking again on currently selected option
         if (el.hasClass('btn-primary') && el.val().length) {

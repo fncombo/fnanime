@@ -3,7 +3,7 @@
 
     REM get all folders in the current folder, echo their names and size in bytes
 
-    echo var localRawData ^= ^[ > data.js
+    echo const localRawData ^= ^[ > data.js
 
     set "folder=G:\Anime\Series"
     for /d %%a in ("%folder%\*") do (
@@ -33,14 +33,14 @@
 
     REM get my anime list page and echo contents
 
-    echo var malHTML ^= ^` >> data.js
+    echo const malHTML ^= ^` >> data.js
     powershell -Command "Invoke-WebRequest https://myanimelist.net/animelist/fncombo -OutFile malhtml.html"
     copy data.js+malhtml.html data.js
     echo ^`; >> data.js
 
     REM get my anime list api and echo contents
 
-    echo var malXML ^= ^` >> data.js
+    echo const malXML ^= ^` >> data.js
     powershell -Command "Invoke-WebRequest https://myanimelist.net/malappinfo.php?u=fncombo\"^&\"status=all\"^&\"type=anime -OutFile malxml.html"
     copy data.js+malxml.html data.js
     echo ^`; >> data.js
@@ -52,4 +52,4 @@
 
     REM last updated date and time
 
-    echo var batchUpdated ^= "%date% %time%" >> data.js
+    echo const batchUpdated ^= "%date% %time%" >> data.js
