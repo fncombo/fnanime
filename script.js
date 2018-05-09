@@ -449,7 +449,7 @@
             // Statistics
             if (currentFilterData.length) {
                 let missingLocally = currentFilterData.filter(anime => !anime.local).length;
-                $('#stats').html(`Showing <strong>${currentFilterData.filter(anime => anime.local).length}</strong>${missingLocally ? ' (+  ' + missingLocally + ' missing locally)' : '' } anime occupying
+                $('#stats').html(`Showing <strong>${currentFilterData.filter(anime => anime.local).length}</strong>${missingLocally ? ' (+' + missingLocally + ' missing locally)' : '' } anime occupying
                                 <strong>${formatSize(currentFilterData.map(a => a.size || 0).reduce((a, b) => a + b))}</strong>,
                                 updated ${batchUpdated.substr(0, 10)}`)
             } else {
