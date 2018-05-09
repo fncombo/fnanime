@@ -546,7 +546,7 @@
     // Clear search and sort
     $('#reset').on('click', () => {
         table.order([[1, 'asc'], [0, 'asc']]).draw();
-        $('.filter button:first-of-type').click();
+        $('.filter button:first-of-type:not(.btn-primary)').click();
         $('#search').val('').trigger('keyup');
         $('#subs').val('').trigger('change');
     });
