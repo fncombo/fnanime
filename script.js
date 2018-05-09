@@ -30,6 +30,24 @@
         return self.indexOf(value) === index;
     };
 
+    // Filter unique array for sub groups
+    const uniqueSubsArray = subs => {
+        // console.log(subs);
+        let allSubs = [];
+        subs.forEach(subsInner => {
+            // If more than 1 sub group, get them all
+            if (subsInner.length > 1) {
+                subsInner.forEach(sub => allSubs.push(sub))
+                return;
+            } else if (subsInner) {
+                // Otherwise just push the one
+                allSubs.push(subsInner[0]);
+            }
+        });
+
+        return allSubs.filter(uniqueArray);
+    };
+
     // Clean-up anime title
     const cleanUpTitle = title => {
         return title.replace(/[:!"]/g, '').replace(/[\/\u2605]/g, ' ');
@@ -228,7 +246,7 @@
         // Add in local data and mark it as present locally
         animeData[id].title = title;
         animeData[id].local = true;
-        animeData[id].subs = subs;
+        animeData[id].subs = subs.split('-');
         animeData[id].resolution = parseInt(resolution, 10);
         animeData[id].source = (source.includes('.') ? 'BD' : source);
         animeData[id].size = parseInt(size, 10);
@@ -251,18 +269,28 @@
         // Get all column data in an array, make sure it's unique and sorted
         let data = animeDataValues.map(anime => anime[filter]);
 
-        // Include empty source for "missing locally", otherwise discard
-        if (filter === 'source') {
-            data = data.filter(uniqueArray);
-        } else {
-            data = data.filter(uniqueArray).filter(value => !!value);
-        }
-
-        // Correct sotring of resolutions
         let sort = undefined;
-        if (filter === 'resolution') {
-            sort = (a, b) => (a === b ? 0 : (a < b ? 1 : -1));
-        }
+        switch (filter) {
+            case 'source':
+                // Include empty source for "missing locally"
+                data = data.filter(uniqueArray);
+                break;
+
+            case 'subs':
+                data = uniqueSubsArray(data);
+                break;
+
+            case 'resolution':
+                // Correct sotring of resolutions
+                sort = (a, b) => (a === b ? 0 : (a < b ? 1 : -1));
+                data = data.filter(uniqueArray).filter(value => !!value);
+                break;
+
+            default:
+                // Don't include empty source for "missing locally"
+                data = data.filter(uniqueArray).filter(value => !!value);
+                break;
+        };
 
         // Create unique and sorted options
         data.sort(sort).forEach(value => {
@@ -305,7 +333,7 @@
             className: 'text-center',
             render: (data, type) => type === 'display' ? `<span class="text-${lookup.statusColor[data]} py-1 px-2 rounded">${lookup.status[data]}</span>` : data,
         }, {
-            data: 'subs',
+            data: 'subs[, ]',
             name: 'subs',
             render: (data, type) => (type === 'display' && !data) ? '&mdash;' : data,
         }, {
