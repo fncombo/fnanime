@@ -423,11 +423,12 @@
             visible: false,
         } ],
         createdRow: (row, data, index) => {
-            $('td', row).eq(7).addClass(data.sizeMatches ? '' : 'bg-danger').attr({
+            $('td', row).eq(7).addClass(data.sizeMatches ? '' : 'size-mismatch').attr({
                 'data-toggle': 'tooltip',
                 'data-placement': 'left',
                 'data-html': 'true',
-                'data-title': data.sizeMatches ? 'Stored size matches with MyAnimeList.' : `Stored size doesn't match with MyAnimeList! (${row.malSize} GB)`,
+                'data-title': data.sizeMatches ? 'Stored size matches with MyAnimeList.' :
+                                `Stored size doesn't match with MyAnimeList! (${data.malSize} GB)`,
             });
 
             if (!data.local) {
@@ -473,21 +474,34 @@
                 });
             });
 
-            // Statistics
-            if (currentFilterData.length) {
-                const missingLocally = currentFilterData.filter(anime => !anime.local).length;
-                $('#stats').html(`Showing <strong>${currentFilterData.filter(anime => anime.local).length}</strong>${missingLocally ? ' (+' + missingLocally + ' missing locally)' : '' } anime occupying
-                                <strong>${formatSize(currentFilterData.map(a => a.size).reduce((a, b) => a + b))}</strong>,
-                                updated ${batchUpdated.substr(0, 10)}`)
-            } else {
+            // Clear current containers
+            $('#ratings-gallery, #ratings-chart').html('');
+
+            // No data
+            if (!currentFilterData.length) {
                 $('#stats').text('No matching anime found.');
+                return;
             }
+
+            // Statistics
+            const notMissing = currentFilterData.filter(anime => anime.local).length;
+            const missingLocally = currentFilterData.filter(anime => !anime.local).length;
+            let statsHtml = '';
+
+            if (notMissing && missingLocally) {
+                statsHtml += `Showing <strong>${notMissing}</strong> (+${missingLocally} missing locally) anime occupying
+                <strong>${formatSize(currentFilterData.map(a => a.size).reduce((a, b) => a + b))}</strong>`;
+            } else if (notMissing && !missingLocally) {
+                statsHtml += `Showing <strong>${notMissing}</strong> anime occupying
+                <strong>${formatSize(currentFilterData.map(a => a.size).reduce((a, b) => a + b))}</strong>`;
+            } else if (!notMissing && missingLocally) {
+                statsHtml += `Showing ${missingLocally} missing locally anime`;
+            }
+
+            $('#stats').html(`${statsHtml}, updated ${batchUpdated.substr(0, 10)}`);
 
             // Temporary rating status
             let ratingCounts = {};
-
-            // Clear current containers
-            $('#ratings-gallery, #ratings-chart').html('');
 
             // Ratings gallery
             ratings.forEach(rating => {

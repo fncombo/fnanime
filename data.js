@@ -21,6 +21,7 @@ const localRawData = [
 "Black Rock Shooter [Commie][720p][TV]#2631726104", 
 "Boku dake ga Inai Machi [Kametsu][1080p][BD]#16803060347", 
 "Boku no Hero Academia 2nd Season [neko-kBaraka][1080p][BD]#55263621017", 
+"Boku no Hero Academia 3rd Season [EraiRaws][1080p][TV]#5045101050", 
 "Boku no Hero Academia [neko-kBaraka][1080p][BD]#28812921707", 
 "Chihayafuru 2 [Commie][720p][TV]#7151053479", 
 "Chihayafuru [Commie][720p][TV]#5665229520", 
@@ -82,6 +83,7 @@ const localRawData = [
 "Kuroshitsuji Book of Circus [Chyuu][720p][TV]#4579407835", 
 "Kuroshitsuji Book of Murder [JaneDoeSubs][1080p][BD]#1435054779", 
 "Kuroshitsuji II [ShinsenSubs][720p][TV]#3699378636", 
+"Kuroshitsuji Movie Book of the Atlantic [BeatriceRaws-sunny49joyee][1080p][BD]#8501227765", 
 "Kuroshitsuji [ShinsenSubs][720p][TV]#8783684256", 
 "Kyoukai no Kanata [RH][1080p][BD]#14890665313", 
 "Log Horizon 2nd Season [SallySubs][1080p][BD]#36762388571", 
@@ -252,7 +254,7 @@ const localRawData = [
 "Hyouka Motsubeki Mono wa [Coalgirls][1080p][BD].mkv#1562361737", 
 "Kara no Kyoukai 8 Shuushou [Coalgirls][1080p].mkv#3332387434", 
 "Kimi ni Todoke 2nd Season Kataomoi [tlacatlc6][720p][BD].mkv#341957303", 
-"Kuroshitsuji Sono Shitsuji, Kougyou [Shinsen-Subs][480p][DVD].mkv#243850177", 
+"Kuroshitsuji Sono Shitsuji, Kougyou [ShinsenSubs][480p][DVD].mkv#243850177", 
 "Mirai Nikki Redial [GotWoot][480p][DVD].mkv#285588289", 
 "Mushishi Special Hihamukage [Vivid][720p].mkv#394967642", 
 "Mushishi Zoku Shou Odoro no Michi [Vivid][720p].mkv#592342639", 
@@ -540,7 +542,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
 
 <meta name="referrer" content="default"><link rel="manifest" href="/manifest.json">
 
-<meta name='csrf_token' content='be121e03288aae887b0a2b9fd967d69ece21436a'>  <link rel="stylesheet" href="https://myanimelist.cdn-dena.com/css/list.css?v=36" type="text/css" />
+<meta name='csrf_token' content='fd733ea9df7627f53061f5c336b5656312e5c7ca'>  <link rel="stylesheet" href="https://myanimelist.cdn-dena.com/css/list.css?v=36" type="text/css" />
 <link rel="stylesheet" type="text/css" href="https://myanimelist.cdn-dena.com/static/assets/css/pc/style-f2982b3840.css" />
 
 <script type="text/javascript" src="https://myanimelist.cdn-dena.com/static/assets/js/pc/header-97ddd6d7fd.js"></script>
@@ -630,7 +632,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
     </td>
     <td width="75" class="status_not_selected"
         style="border-width: 1px 1px 1px 0;" align="center">
-      <a href="https://myanimelist.net/animelist/fncombo?status=2&amp;tag=" title="268 Entries">
+      <a href="https://myanimelist.net/animelist/fncombo?status=2&amp;tag=" title="269 Entries">
         Completed
       </a>
     </td>
@@ -648,7 +650,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
     </td>
     <td width="115" class="status_not_selected"
         style="border-width: 1px 1px 1px 0;" align="center">
-      <a href="https://myanimelist.net/animelist/fncombo?status=6&amp;tag=" title="60 Entries">
+      <a href="https://myanimelist.net/animelist/fncombo?status=6&amp;tag=" title="59 Entries">
         Plan to Watch
       </a>
     </td>
@@ -810,67 +812,10 @@ fncombo&#039;s Anime List - MyAnimeList.net
                               <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
-                                                  <a href="/ownlist/anime/add?selected_series_id=31859&hideLayout" class="List_LightBox">Add</a>
-                                -
-                <a href="javascript:void(0);" id="xmenu31859"
-                   onclick="getExpand(31859, 2);" title="View More Information">More</a>
-              </small>
-            </div>
-            <a href="/anime/31859/Hai_to_Gensou_no_Grimgar" target="_blank" class="animetitle" title="Anime Information">
-              <span>Hai to Gensou no Grimgar</span>
-            </a>
-                          <small>Rewatching</small>
-                                  </td>
-
-                                <td class="td2" align="center" width="45">
-                                            8
-                          </td>
-          
-                                <td class="td2" width="50" align="center">
-              TV
-            </td>
-          
-                                <td class="td2" align="center" width="70">
-                                                                            <span id="output31859">1</span>/12
-                                          </td>
-          
-                                <td class="td2" width="125" align="left">
-                            <span id="tagLinks31859"></span>
-              <span id="tagRow31859" style="display: none;"></span>
-            </td>
-          
-                    
-                    
-                    
-                                <td class="td2" width="75" align="center" nowrap>
-            <span title="EHD">
-              EHD
-                              11.1
-                            Gb
-            </span>
-            </td>
-          
-                            </tr>
-      </table>
-      <!-- START HIDDEN -->
-      <div id="more31859" class="hide" style="width:100%px"></div>
-      <!-- // END HIDDEN -->
-
-                      
-                  
-      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              3
-            </td>
-          
-                              <td class="td1" style="border-left-width: 0">
-                      <div style="float: right;">
-              <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=33352&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu33352"
-                   onclick="getExpand(33352, 1);" title="View More Information">More</a>
+                   onclick="getExpand(33352, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/33352/Violet_Evergarden" target="_blank" class="animetitle" title="Anime Information">
@@ -878,19 +823,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output33352">10</span>/13
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks33352"></span>
               <span id="tagRow33352" style="display: none;"></span>
             </td>
@@ -898,7 +843,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               6.5
@@ -916,14 +861,14 @@ fncombo&#039;s Anime List - MyAnimeList.net
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td class="category_totals">
-          TV: 3,
+          TV: 2,
           OVA: 0,
           Movies: 0,
           <span title="Specials">Spcl.</span>: 0,
-          Eps: 15,
+          Eps: 14,
           Days: 0.23,
           Mean Score: 8.0,
-          Score <span title="Deviation">Dev.</span>: -0.39
+          Score <span title="Deviation">Dev.</span>: -0.67
         </td>
       </tr>
     </table>
@@ -5941,10 +5886,66 @@ fncombo&#039;s Anime List - MyAnimeList.net
                               <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
+                                                  <a href="/ownlist/anime/add?selected_series_id=31859&hideLayout" class="List_LightBox">Add</a>
+                                -
+                <a href="javascript:void(0);" id="xmenu31859"
+                   onclick="getExpand(31859, 1);" title="View More Information">More</a>
+              </small>
+            </div>
+            <a href="/anime/31859/Hai_to_Gensou_no_Grimgar" target="_blank" class="animetitle" title="Anime Information">
+              <span>Hai to Gensou no Grimgar</span>
+            </a>
+                                  </td>
+
+                                <td class="td1" align="center" width="45">
+                                            8
+                          </td>
+          
+                                <td class="td1" width="50" align="center">
+              TV
+            </td>
+          
+                                <td class="td1" align="center" width="70">
+                                                          12
+                          </td>
+          
+                                <td class="td1" width="125" align="left">
+                            <span id="tagLinks31859">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+1">Re-watched: 1</a></span>
+              <span id="tagRow31859" style="display: none;">Re-watched: 1</span>
+            </td>
+          
+                    
+                    
+                    
+                                <td class="td1" width="75" align="center" nowrap>
+            <span title="EHD">
+              EHD
+                              11.1
+                            Gb
+            </span>
+            </td>
+          
+                            </tr>
+      </table>
+      <!-- START HIDDEN -->
+      <div id="more31859" class="hide" style="width:100%px"></div>
+      <!-- // END HIDDEN -->
+
+                      
+                  
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              90
+            </td>
+          
+                              <td class="td2" style="border-left-width: 0">
+                      <div style="float: right;">
+              <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=32561&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu32561"
-                   onclick="getExpand(32561, 1);" title="View More Information">More</a>
+                   onclick="getExpand(32561, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/32561/Hai_to_Gensou_no_Grimgar_Special" target="_blank" class="animetitle" title="Anime Information">
@@ -5952,19 +5953,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             5
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Special
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks32561"></span>
               <span id="tagRow32561" style="display: none;"></span>
             </td>
@@ -5972,7 +5973,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.5
@@ -5990,17 +5991,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              90
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              91
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=16528&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu16528"
-                   onclick="getExpand(16528, 2);" title="View More Information">More</a>
+                   onclick="getExpand(16528, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/16528/Hal" target="_blank" class="animetitle" title="Anime Information">
@@ -6008,19 +6009,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             3
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks16528"></span>
               <span id="tagRow16528" style="display: none;"></span>
             </td>
@@ -6028,7 +6029,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.4
@@ -6046,17 +6047,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              91
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              92
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=27969&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu27969"
-                   onclick="getExpand(27969, 1);" title="View More Information">More</a>
+                   onclick="getExpand(27969, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/27969/Hana_to_Alice__Satsujin_Jiken" target="_blank" class="animetitle" title="Anime Information">
@@ -6064,19 +6065,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks27969"></span>
               <span id="tagRow27969" style="display: none;"></span>
             </td>
@@ -6084,7 +6085,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.9
@@ -6102,17 +6103,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              92
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              93
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=14175&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu14175"
-                   onclick="getExpand(14175, 2);" title="View More Information">More</a>
+                   onclick="getExpand(14175, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/14175/Hanasaku_Iroha__Home_Sweet_Home" target="_blank" class="animetitle" title="Anime Information">
@@ -6120,19 +6121,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             5
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks14175"></span>
               <span id="tagRow14175" style="display: none;"></span>
             </td>
@@ -6140,7 +6141,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.5
@@ -6158,17 +6159,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              93
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              94
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=20903&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu20903"
-                   onclick="getExpand(20903, 1);" title="View More Information">More</a>
+                   onclick="getExpand(20903, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/20903/Harmonie" target="_blank" class="animetitle" title="Anime Information">
@@ -6176,19 +6177,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks20903"></span>
               <span id="tagRow20903" style="display: none;"></span>
             </td>
@@ -6196,7 +6197,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.2
@@ -6214,17 +6215,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              94
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              95
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=270&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu270"
-                   onclick="getExpand(270, 2);" title="View More Information">More</a>
+                   onclick="getExpand(270, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/270/Hellsing" target="_blank" class="animetitle" title="Anime Information">
@@ -6232,19 +6233,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           13
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks270"></span>
               <span id="tagRow270" style="display: none;"></span>
             </td>
@@ -6252,7 +6253,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.5
@@ -6270,17 +6271,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              95
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              96
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=777&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu777"
-                   onclick="getExpand(777, 1);" title="View More Information">More</a>
+                   onclick="getExpand(777, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/777/Hellsing_Ultimate" target="_blank" class="animetitle" title="Anime Information">
@@ -6288,19 +6289,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           10
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks777"></span>
               <span id="tagRow777" style="display: none;"></span>
             </td>
@@ -6308,7 +6309,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               23.2
@@ -6326,17 +6327,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              96
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              97
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=934&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu934"
-                   onclick="getExpand(934, 2);" title="View More Information">More</a>
+                   onclick="getExpand(934, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/934/Higurashi_no_Naku_Koro_ni" target="_blank" class="animetitle" title="Anime Information">
@@ -6344,19 +6345,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             9
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           26
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks934">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+1">Re-watched: 1</a></span>
               <span id="tagRow934" style="display: none;">Re-watched: 1</span>
             </td>
@@ -6364,7 +6365,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               7.2
@@ -6382,17 +6383,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              97
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              98
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=1889&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu1889"
-                   onclick="getExpand(1889, 1);" title="View More Information">More</a>
+                   onclick="getExpand(1889, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/1889/Higurashi_no_Naku_Koro_ni_Kai" target="_blank" class="animetitle" title="Anime Information">
@@ -6400,19 +6401,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             9
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           24
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks1889">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+1">Re-watched: 1</a></span>
               <span id="tagRow1889" style="display: none;">Re-watched: 1</span>
             </td>
@@ -6420,7 +6421,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               7.7
@@ -6438,17 +6439,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              98
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              99
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=16700&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu16700"
-                   onclick="getExpand(16700, 2);" title="View More Information">More</a>
+                   onclick="getExpand(16700, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/16700/Higurashi_no_Naku_Koro_ni_Kaku__Outbreak" target="_blank" class="animetitle" title="Anime Information">
@@ -6456,19 +6457,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks16700"></span>
               <span id="tagRow16700" style="display: none;"></span>
             </td>
@@ -6476,7 +6477,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.4
@@ -6494,17 +6495,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              99
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              100
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3652&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3652"
-                   onclick="getExpand(3652, 1);" title="View More Information">More</a>
+                   onclick="getExpand(3652, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3652/Higurashi_no_Naku_Koro_ni_Rei" target="_blank" class="animetitle" title="Anime Information">
@@ -6512,19 +6513,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           5
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks3652"></span>
               <span id="tagRow3652" style="display: none;"></span>
             </td>
@@ -6532,7 +6533,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               5.2
@@ -6550,17 +6551,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              100
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              101
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=14753&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu14753"
-                   onclick="getExpand(14753, 2);" title="View More Information">More</a>
+                   onclick="getExpand(14753, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/14753/Hori-san_to_Miyamura-kun" target="_blank" class="animetitle" title="Anime Information">
@@ -6568,19 +6569,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           3
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks14753"></span>
               <span id="tagRow14753" style="display: none;"></span>
             </td>
@@ -6588,7 +6589,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.3
@@ -6606,17 +6607,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              101
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              102
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=256&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu256"
-                   onclick="getExpand(256, 1);" title="View More Information">More</a>
+                   onclick="getExpand(256, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/256/Hoshi_no_Koe" target="_blank" class="animetitle" title="Anime Information">
@@ -6624,19 +6625,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks256"></span>
               <span id="tagRow256" style="display: none;"></span>
             </td>
@@ -6644,7 +6645,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.5
@@ -6662,17 +6663,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              102
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              103
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=9760&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu9760"
-                   onclick="getExpand(9760, 2);" title="View More Information">More</a>
+                   onclick="getExpand(9760, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/9760/Hoshi_wo_Ou_Kodomo" target="_blank" class="animetitle" title="Anime Information">
@@ -6680,19 +6681,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks9760">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+2">Re-watched: 2</a></span>
               <span id="tagRow9760" style="display: none;">Re-watched: 2</span>
             </td>
@@ -6700,7 +6701,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               7.0
@@ -6718,17 +6719,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              103
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              104
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=578&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu578"
-                   onclick="getExpand(578, 1);" title="View More Information">More</a>
+                   onclick="getExpand(578, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/578/Hotaru_no_Haka" target="_blank" class="animetitle" title="Anime Information">
@@ -6736,19 +6737,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks578"></span>
               <span id="tagRow578" style="display: none;"></span>
             </td>
@@ -6756,7 +6757,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               9.4
@@ -6774,17 +6775,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              104
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              105
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=10408&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu10408"
-                   onclick="getExpand(10408, 2);" title="View More Information">More</a>
+                   onclick="getExpand(10408, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/10408/Hotarubi_no_Mori_e" target="_blank" class="animetitle" title="Anime Information">
@@ -6792,19 +6793,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks10408"></span>
               <span id="tagRow10408" style="display: none;"></span>
             </td>
@@ -6812,7 +6813,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.9
@@ -6830,17 +6831,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              105
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              106
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=431&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu431"
-                   onclick="getExpand(431, 1);" title="View More Information">More</a>
+                   onclick="getExpand(431, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/431/Howl_no_Ugoku_Shiro" target="_blank" class="animetitle" title="Anime Information">
@@ -6848,19 +6849,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             9
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks431">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+11">Re-watched: 11</a></span>
               <span id="tagRow431" style="display: none;">Re-watched: 11</span>
             </td>
@@ -6868,7 +6869,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               10.0
@@ -6886,17 +6887,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              106
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              107
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=12189&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu12189"
-                   onclick="getExpand(12189, 2);" title="View More Information">More</a>
+                   onclick="getExpand(12189, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/12189/Hyouka" target="_blank" class="animetitle" title="Anime Information">
@@ -6904,19 +6905,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             10
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           22
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks12189">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+2">Re-watched: 2</a></span>
               <span id="tagRow12189" style="display: none;">Re-watched: 2</span>
             </td>
@@ -6924,7 +6925,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               35.9
@@ -6942,17 +6943,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              107
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              108
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=13469&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu13469"
-                   onclick="getExpand(13469, 1);" title="View More Information">More</a>
+                   onclick="getExpand(13469, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/13469/Hyouka__Motsubeki_Mono_wa" target="_blank" class="animetitle" title="Anime Information">
@@ -6960,19 +6961,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks13469">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+2">Re-watched: 2</a></span>
               <span id="tagRow13469" style="display: none;">Re-watched: 2</span>
             </td>
@@ -6980,7 +6981,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               1.5
@@ -6998,17 +6999,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              108
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              109
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=9938&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu9938"
-                   onclick="getExpand(9938, 2);" title="View More Information">More</a>
+                   onclick="getExpand(9938, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/9938/Ikoku_Meiro_no_Croisée_The_Animation" target="_blank" class="animetitle" title="Anime Information">
@@ -7016,19 +7017,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks9938"></span>
               <span id="tagRow9938" style="display: none;"></span>
             </td>
@@ -7036,7 +7037,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.7
@@ -7054,17 +7055,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              109
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              110
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=10357&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu10357"
-                   onclick="getExpand(10357, 1);" title="View More Information">More</a>
+                   onclick="getExpand(10357, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/10357/Jinrui_wa_Suitai_Shimashita" target="_blank" class="animetitle" title="Anime Information">
@@ -7072,19 +7073,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             9
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks10357">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+1">Re-watched: 1</a></span>
               <span id="tagRow10357" style="display: none;">Re-watched: 1</span>
             </td>
@@ -7092,7 +7093,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               5.3
@@ -7110,17 +7111,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              110
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              111
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=15617&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu15617"
-                   onclick="getExpand(15617, 2);" title="View More Information">More</a>
+                   onclick="getExpand(15617, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/15617/Jinrui_wa_Suitai_Shimashita_Specials" target="_blank" class="animetitle" title="Anime Information">
@@ -7128,19 +7129,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           6
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks15617"></span>
               <span id="tagRow15617" style="display: none;"></span>
             </td>
@@ -7148,7 +7149,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.4
@@ -7166,17 +7167,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              111
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              112
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3092&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3092"
-                   onclick="getExpand(3092, 1);" title="View More Information">More</a>
+                   onclick="getExpand(3092, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3092/Junjou_Romantica" target="_blank" class="animetitle" title="Anime Information">
@@ -7184,19 +7185,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks3092"></span>
               <span id="tagRow3092" style="display: none;"></span>
             </td>
@@ -7204,7 +7205,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.0
@@ -7222,17 +7223,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              112
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              113
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=4814&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu4814"
-                   onclick="getExpand(4814, 2);" title="View More Information">More</a>
+                   onclick="getExpand(4814, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/4814/Junjou_Romantica_2" target="_blank" class="animetitle" title="Anime Information">
@@ -7240,19 +7241,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks4814"></span>
               <span id="tagRow4814" style="display: none;"></span>
             </td>
@@ -7260,7 +7261,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               1.9
@@ -7278,17 +7279,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              113
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              114
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=25649&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu25649"
-                   onclick="getExpand(25649, 1);" title="View More Information">More</a>
+                   onclick="getExpand(25649, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/25649/Junjou_Romantica_3" target="_blank" class="animetitle" title="Anime Information">
@@ -7296,19 +7297,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks25649"></span>
               <span id="tagRow25649" style="display: none;"></span>
             </td>
@@ -7316,7 +7317,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               5.2
@@ -7334,17 +7335,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              114
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              115
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=2593&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu2593"
-                   onclick="getExpand(2593, 2);" title="View More Information">More</a>
+                   onclick="getExpand(2593, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/2593/Kara_no_Kyoukai_1__Fukan_Fuukei" target="_blank" class="animetitle" title="Anime Information">
@@ -7352,19 +7353,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks2593"></span>
               <span id="tagRow2593" style="display: none;"></span>
             </td>
@@ -7372,7 +7373,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.1
@@ -7390,17 +7391,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              115
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              116
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3782&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3782"
-                   onclick="getExpand(3782, 1);" title="View More Information">More</a>
+                   onclick="getExpand(3782, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3782/Kara_no_Kyoukai_2__Satsujin_Kousatsu_Zen" target="_blank" class="animetitle" title="Anime Information">
@@ -7408,19 +7409,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks3782"></span>
               <span id="tagRow3782" style="display: none;"></span>
             </td>
@@ -7428,7 +7429,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.5
@@ -7446,17 +7447,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              116
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              117
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3783&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3783"
-                   onclick="getExpand(3783, 2);" title="View More Information">More</a>
+                   onclick="getExpand(3783, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3783/Kara_no_Kyoukai_3__Tsuukaku_Zanryuu" target="_blank" class="animetitle" title="Anime Information">
@@ -7464,19 +7465,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks3783"></span>
               <span id="tagRow3783" style="display: none;"></span>
             </td>
@@ -7484,7 +7485,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.0
@@ -7502,17 +7503,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              117
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              118
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=4280&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu4280"
-                   onclick="getExpand(4280, 1);" title="View More Information">More</a>
+                   onclick="getExpand(4280, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/4280/Kara_no_Kyoukai_4__Garan_no_Dou" target="_blank" class="animetitle" title="Anime Information">
@@ -7520,19 +7521,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks4280"></span>
               <span id="tagRow4280" style="display: none;"></span>
             </td>
@@ -7540,7 +7541,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.4
@@ -7558,17 +7559,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              118
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              119
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=4282&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu4282"
-                   onclick="getExpand(4282, 2);" title="View More Information">More</a>
+                   onclick="getExpand(4282, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/4282/Kara_no_Kyoukai_5__Mujun_Rasen" target="_blank" class="animetitle" title="Anime Information">
@@ -7576,19 +7577,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks4282"></span>
               <span id="tagRow4282" style="display: none;"></span>
             </td>
@@ -7596,7 +7597,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               23.4
@@ -7614,17 +7615,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              119
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              120
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=5204&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu5204"
-                   onclick="getExpand(5204, 1);" title="View More Information">More</a>
+                   onclick="getExpand(5204, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/5204/Kara_no_Kyoukai_6__Boukyaku_Rokuon" target="_blank" class="animetitle" title="Anime Information">
@@ -7632,19 +7633,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks5204"></span>
               <span id="tagRow5204" style="display: none;"></span>
             </td>
@@ -7652,7 +7653,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.2
@@ -7670,17 +7671,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              120
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              121
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=5205&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu5205"
-                   onclick="getExpand(5205, 2);" title="View More Information">More</a>
+                   onclick="getExpand(5205, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/5205/Kara_no_Kyoukai_7__Satsujin_Kousatsu_Kou" target="_blank" class="animetitle" title="Anime Information">
@@ -7688,19 +7689,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks5205"></span>
               <span id="tagRow5205" style="display: none;"></span>
             </td>
@@ -7708,7 +7709,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               9.4
@@ -7726,17 +7727,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              121
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              122
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=6954&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu6954"
-                   onclick="getExpand(6954, 1);" title="View More Information">More</a>
+                   onclick="getExpand(6954, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/6954/Kara_no_Kyoukai_8__Shuushou" target="_blank" class="animetitle" title="Anime Information">
@@ -7744,19 +7745,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Special
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks6954"></span>
               <span id="tagRow6954" style="display: none;"></span>
             </td>
@@ -7764,7 +7765,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.1
@@ -7782,17 +7783,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              122
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              123
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=14807&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu14807"
-                   onclick="getExpand(14807, 2);" title="View More Information">More</a>
+                   onclick="getExpand(14807, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/14807/Kara_no_Kyoukai__Mirai_Fukuin" target="_blank" class="animetitle" title="Anime Information">
@@ -7800,19 +7801,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks14807"></span>
               <span id="tagRow14807" style="display: none;"></span>
             </td>
@@ -7820,7 +7821,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               10.9
@@ -7838,17 +7839,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              123
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              124
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=7711&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu7711"
-                   onclick="getExpand(7711, 1);" title="View More Information">More</a>
+                   onclick="getExpand(7711, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/7711/Karigurashi_no_Arrietty" target="_blank" class="animetitle" title="Anime Information">
@@ -7856,19 +7857,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks7711">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+4">Re-watched: 4</a></span>
               <span id="tagRow7711" style="display: none;">Re-watched: 4</span>
             </td>
@@ -7876,7 +7877,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               7.0
@@ -7894,17 +7895,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              124
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              125
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=6594&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu6594"
-                   onclick="getExpand(6594, 2);" title="View More Information">More</a>
+                   onclick="getExpand(6594, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/6594/Katanagatari" target="_blank" class="animetitle" title="Anime Information">
@@ -7912,19 +7913,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks6594"></span>
               <span id="tagRow6594" style="display: none;"></span>
             </td>
@@ -7932,7 +7933,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               25.7
@@ -7950,17 +7951,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              125
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              126
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=572&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu572"
-                   onclick="getExpand(572, 1);" title="View More Information">More</a>
+                   onclick="getExpand(572, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/572/Kaze_no_Tani_no_Nausicaä" target="_blank" class="animetitle" title="Anime Information">
@@ -7968,19 +7969,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             10
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks572">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+14">Re-watched: 14</a></span>
               <span id="tagRow572" style="display: none;">Re-watched: 14</span>
             </td>
@@ -7988,7 +7989,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               13.0
@@ -8006,17 +8007,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              126
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              127
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=16662&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu16662"
-                   onclick="getExpand(16662, 2);" title="View More Information">More</a>
+                   onclick="getExpand(16662, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/16662/Kaze_Tachinu" target="_blank" class="animetitle" title="Anime Information">
@@ -8024,19 +8025,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks16662"></span>
               <span id="tagRow16662" style="display: none;"></span>
             </td>
@@ -8044,7 +8045,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               7.9
@@ -8062,17 +8063,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              127
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              128
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=6205&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu6205"
-                   onclick="getExpand(6205, 1);" title="View More Information">More</a>
+                   onclick="getExpand(6205, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/6205/Kämpfer" target="_blank" class="animetitle" title="Anime Information">
@@ -8080,19 +8081,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             4
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks6205"></span>
               <span id="tagRow6205" style="display: none;"></span>
             </td>
@@ -8100,7 +8101,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -8117,17 +8118,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              128
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              129
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=18679&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu18679"
-                   onclick="getExpand(18679, 2);" title="View More Information">More</a>
+                   onclick="getExpand(18679, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/18679/Kill_la_Kill" target="_blank" class="animetitle" title="Anime Information">
@@ -8135,19 +8136,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           24
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks18679"></span>
               <span id="tagRow18679" style="display: none;"></span>
             </td>
@@ -8155,7 +8156,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               11.6
@@ -8173,17 +8174,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              129
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              130
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=21659&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu21659"
-                   onclick="getExpand(21659, 1);" title="View More Information">More</a>
+                   onclick="getExpand(21659, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/21659/Kill_la_Kill_Specials" target="_blank" class="animetitle" title="Anime Information">
@@ -8191,19 +8192,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Special
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           2
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks21659"></span>
               <span id="tagRow21659" style="display: none;"></span>
             </td>
@@ -8211,7 +8212,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.1
@@ -8229,17 +8230,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              130
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              131
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=6045&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu6045"
-                   onclick="getExpand(6045, 2);" title="View More Information">More</a>
+                   onclick="getExpand(6045, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/6045/Kimi_ni_Todoke" target="_blank" class="animetitle" title="Anime Information">
@@ -8247,19 +8248,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           25
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks6045"></span>
               <span id="tagRow6045" style="display: none;"></span>
             </td>
@@ -8267,7 +8268,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               8.3
@@ -8285,17 +8286,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              131
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              132
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=9656&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu9656"
-                   onclick="getExpand(9656, 1);" title="View More Information">More</a>
+                   onclick="getExpand(9656, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/9656/Kimi_ni_Todoke_2nd_Season" target="_blank" class="animetitle" title="Anime Information">
@@ -8303,19 +8304,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks9656"></span>
               <span id="tagRow9656" style="display: none;"></span>
             </td>
@@ -8323,7 +8324,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.5
@@ -8341,17 +8342,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              132
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              133
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=10152&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu10152"
-                   onclick="getExpand(10152, 2);" title="View More Information">More</a>
+                   onclick="getExpand(10152, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/10152/Kimi_ni_Todoke_2nd_Season__Kataomoi" target="_blank" class="animetitle" title="Anime Information">
@@ -8359,19 +8360,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks10152"></span>
               <span id="tagRow10152" style="display: none;"></span>
             </td>
@@ -8379,7 +8380,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.3
@@ -8397,17 +8398,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              133
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              134
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=32281&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu32281"
-                   onclick="getExpand(32281, 1);" title="View More Information">More</a>
+                   onclick="getExpand(32281, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/32281/Kimi_no_Na_wa" target="_blank" class="animetitle" title="Anime Information">
@@ -8415,19 +8416,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             10
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks32281">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+2">Re-watched: 2</a></span>
               <span id="tagRow32281" style="display: none;">Re-watched: 2</span>
             </td>
@@ -8435,7 +8436,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -8452,17 +8453,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              134
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              135
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3466&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3466"
-                   onclick="getExpand(3466, 2);" title="View More Information">More</a>
+                   onclick="getExpand(3466, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3466/Kino_no_Tabi__The_Beautiful_World_-_Tou_no_Kuni" target="_blank" class="animetitle" title="Anime Information">
@@ -8470,19 +8471,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks3466"></span>
               <span id="tagRow3466" style="display: none;"></span>
             </td>
@@ -8490,7 +8491,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.2
@@ -8508,17 +8509,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              135
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              136
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=22535&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu22535"
-                   onclick="getExpand(22535, 1);" title="View More Information">More</a>
+                   onclick="getExpand(22535, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/22535/Kiseijuu__Sei_no_Kakuritsu" target="_blank" class="animetitle" title="Anime Information">
@@ -8526,19 +8527,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           24
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks22535"></span>
               <span id="tagRow22535" style="display: none;"></span>
             </td>
@@ -8546,7 +8547,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               11.1
@@ -8564,17 +8565,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              136
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              137
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=31798&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu31798"
-                   onclick="getExpand(31798, 2);" title="View More Information">More</a>
+                   onclick="getExpand(31798, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/31798/Kiznaiver" target="_blank" class="animetitle" title="Anime Information">
@@ -8582,19 +8583,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks31798"></span>
               <span id="tagRow31798" style="display: none;"></span>
             </td>
@@ -8602,7 +8603,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.8
@@ -8620,17 +8621,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              137
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              138
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=28851&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu28851"
-                   onclick="getExpand(28851, 1);" title="View More Information">More</a>
+                   onclick="getExpand(28851, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/28851/Koe_no_Katachi" target="_blank" class="animetitle" title="Anime Information">
@@ -8638,19 +8639,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             9
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks28851"></span>
               <span id="tagRow28851" style="display: none;"></span>
             </td>
@@ -8658,7 +8659,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               4.2
@@ -8676,17 +8677,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              138
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              139
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=17635&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu17635"
-                   onclick="getExpand(17635, 2);" title="View More Information">More</a>
+                   onclick="getExpand(17635, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/17635/Koitabi__True_Tours_Nanto" target="_blank" class="animetitle" title="Anime Information">
@@ -8694,19 +8695,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             4
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           6
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks17635"></span>
               <span id="tagRow17635" style="display: none;"></span>
             </td>
@@ -8714,7 +8715,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.3
@@ -8732,17 +8733,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              139
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              140
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=11887&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu11887"
-                   onclick="getExpand(11887, 1);" title="View More Information">More</a>
+                   onclick="getExpand(11887, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/11887/Kokoro_Connect" target="_blank" class="animetitle" title="Anime Information">
@@ -8750,19 +8751,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           13
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks11887"></span>
               <span id="tagRow11887" style="display: none;"></span>
             </td>
@@ -8770,7 +8771,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               24.6
@@ -8788,17 +8789,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              140
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              141
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=16001&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu16001"
-                   onclick="getExpand(16001, 2);" title="View More Information">More</a>
+                   onclick="getExpand(16001, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/16001/Kokoro_Connect__Michi_Random" target="_blank" class="animetitle" title="Anime Information">
@@ -8806,19 +8807,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           4
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks16001"></span>
               <span id="tagRow16001" style="display: none;"></span>
             </td>
@@ -8826,7 +8827,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               5.7
@@ -8844,17 +8845,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              141
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              142
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=28725&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu28725"
-                   onclick="getExpand(28725, 1);" title="View More Information">More</a>
+                   onclick="getExpand(28725, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/28725/Kokoro_ga_Sakebitagatterunda" target="_blank" class="animetitle" title="Anime Information">
@@ -8862,19 +8863,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks28725">                  <a href="https://myanimelist.net/animelist/fncombo?status=7&amp;tag=Re-watched%3A+2">Re-watched: 2</a></span>
               <span id="tagRow28725" style="display: none;">Re-watched: 2</span>
             </td>
@@ -8882,7 +8883,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               5.5
@@ -8900,17 +8901,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              142
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              143
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=16782&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu16782"
-                   onclick="getExpand(16782, 2);" title="View More Information">More</a>
+                   onclick="getExpand(16782, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/16782/Kotonoha_no_Niwa" target="_blank" class="animetitle" title="Anime Information">
@@ -8918,19 +8919,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks16782"></span>
               <span id="tagRow16782" style="display: none;"></span>
             </td>
@@ -8938,7 +8939,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.2
@@ -8956,17 +8957,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              143
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              144
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=433&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu433"
-                   onclick="getExpand(433, 1);" title="View More Information">More</a>
+                   onclick="getExpand(433, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/433/Kumo_no_Mukou_Yakusoku_no_Basho" target="_blank" class="animetitle" title="Anime Information">
@@ -8974,19 +8975,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks433"></span>
               <span id="tagRow433" style="display: none;"></span>
             </td>
@@ -8994,7 +8995,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               6.0
@@ -9012,17 +9013,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              144
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              145
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=416&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu416"
-                   onclick="getExpand(416, 2);" title="View More Information">More</a>
+                   onclick="getExpand(416, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/416/Kurenai_no_Buta" target="_blank" class="animetitle" title="Anime Information">
@@ -9030,19 +9031,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             7
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           1
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks416"></span>
               <span id="tagRow416" style="display: none;"></span>
             </td>
@@ -9050,7 +9051,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               6.7
@@ -9068,17 +9069,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              145
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              146
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=4898&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu4898"
-                   onclick="getExpand(4898, 1);" title="View More Information">More</a>
+                   onclick="getExpand(4898, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/4898/Kuroshitsuji" target="_blank" class="animetitle" title="Anime Information">
@@ -9086,19 +9087,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             8
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                           24
                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks4898"></span>
               <span id="tagRow4898" style="display: none;"></span>
             </td>
@@ -9106,7 +9107,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               8.2
@@ -9124,17 +9125,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              146
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              147
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=6707&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu6707"
-                   onclick="getExpand(6707, 2);" title="View More Information">More</a>
+                   onclick="getExpand(6707, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/6707/Kuroshitsuji_II" target="_blank" class="animetitle" title="Anime Information">
@@ -9142,19 +9143,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             6
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                           12
                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks6707"></span>
               <span id="tagRow6707" style="display: none;"></span>
             </td>
@@ -9162,7 +9163,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.5
@@ -9180,8 +9181,64 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              148
+            </td>
+          
+                              <td class="td2" style="border-left-width: 0">
+                      <div style="float: right;">
+              <small>
+                                                  <a href="/ownlist/anime/add?selected_series_id=31812&hideLayout" class="List_LightBox">Add</a>
+                                -
+                <a href="javascript:void(0);" id="xmenu31812"
+                   onclick="getExpand(31812, 2);" title="View More Information">More</a>
+              </small>
+            </div>
+            <a href="/anime/31812/Kuroshitsuji_Movie__Book_of_the_Atlantic" target="_blank" class="animetitle" title="Anime Information">
+              <span>Kuroshitsuji Movie: Book of the Atlantic</span>
+            </a>
+                                  </td>
+
+                                <td class="td2" align="center" width="45">
+                                            8
+                          </td>
+          
+                                <td class="td2" width="50" align="center">
+              Movie
+            </td>
+          
+                                <td class="td2" align="center" width="70">
+                                                          1
+                          </td>
+          
+                                <td class="td2" width="125" align="left">
+                            <span id="tagLinks31812"></span>
+              <span id="tagRow31812" style="display: none;"></span>
+            </td>
+          
+                    
+                    
+                    
+                                <td class="td2" width="75" align="center" nowrap>
+            <span title="EHD">
+              EHD
+                              7.9
+                            Gb
+            </span>
+            </td>
+          
+                            </tr>
+      </table>
+      <!-- START HIDDEN -->
+      <div id="more31812" class="hide" style="width:100%px"></div>
+      <!-- // END HIDDEN -->
+
+                      
+                  
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              147
+              149
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9237,7 +9294,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              148
+              150
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9293,7 +9350,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              149
+              151
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9349,7 +9406,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              150
+              152
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9405,7 +9462,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              151
+              153
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9461,7 +9518,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              152
+              154
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9517,7 +9574,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              153
+              155
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9573,7 +9630,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              154
+              156
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9629,7 +9686,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              155
+              157
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9685,7 +9742,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              156
+              158
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9741,7 +9798,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              157
+              159
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9797,7 +9854,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              158
+              160
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9853,7 +9910,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              159
+              161
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -9909,7 +9966,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              160
+              162
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -9965,7 +10022,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              161
+              163
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10021,7 +10078,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              162
+              164
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10077,7 +10134,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              163
+              165
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10133,7 +10190,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              164
+              166
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10189,7 +10246,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              165
+              167
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10245,7 +10302,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              166
+              168
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10301,7 +10358,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              167
+              169
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10357,7 +10414,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              168
+              170
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10413,7 +10470,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              169
+              171
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10469,7 +10526,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              170
+              172
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10525,7 +10582,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              171
+              173
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10581,7 +10638,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              172
+              174
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10637,7 +10694,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              173
+              175
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10693,7 +10750,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              174
+              176
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10749,7 +10806,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              175
+              177
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10805,7 +10862,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              176
+              178
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10861,7 +10918,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              177
+              179
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -10917,7 +10974,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              178
+              180
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -10973,7 +11030,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              179
+              181
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11029,7 +11086,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              180
+              182
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11085,7 +11142,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              181
+              183
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11141,7 +11198,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              182
+              184
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11197,7 +11254,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              183
+              185
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11253,7 +11310,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              184
+              186
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11309,7 +11366,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              185
+              187
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11365,7 +11422,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              186
+              188
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11421,7 +11478,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              187
+              189
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11477,7 +11534,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              188
+              190
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11533,7 +11590,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              189
+              191
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11588,7 +11645,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              190
+              192
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11643,7 +11700,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              191
+              193
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11698,7 +11755,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              192
+              194
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11753,7 +11810,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              193
+              195
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11808,7 +11865,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              194
+              196
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11864,7 +11921,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              195
+              197
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -11920,7 +11977,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              196
+              198
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -11975,7 +12032,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              197
+              199
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12030,7 +12087,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              198
+              200
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12086,7 +12143,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              199
+              201
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12142,7 +12199,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              200
+              202
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12198,7 +12255,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              201
+              203
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12254,7 +12311,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              202
+              204
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12310,7 +12367,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              203
+              205
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12366,7 +12423,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              204
+              206
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12422,7 +12479,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              205
+              207
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12478,7 +12535,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              206
+              208
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12534,7 +12591,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              207
+              209
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12590,7 +12647,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              208
+              210
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12646,7 +12703,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              209
+              211
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12702,7 +12759,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              210
+              212
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12758,7 +12815,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              211
+              213
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12814,7 +12871,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              212
+              214
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12870,7 +12927,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              213
+              215
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -12926,7 +12983,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              214
+              216
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -12982,7 +13039,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              215
+              217
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13038,7 +13095,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              216
+              218
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13094,7 +13151,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              217
+              219
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13150,7 +13207,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              218
+              220
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13206,7 +13263,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              219
+              221
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13262,7 +13319,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              220
+              222
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13318,7 +13375,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              221
+              223
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13374,7 +13431,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              222
+              224
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13430,7 +13487,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              223
+              225
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13486,7 +13543,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              224
+              226
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13542,7 +13599,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              225
+              227
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13598,7 +13655,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              226
+              228
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13654,7 +13711,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              227
+              229
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13710,7 +13767,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              228
+              230
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13766,7 +13823,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              229
+              231
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13822,7 +13879,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              230
+              232
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13878,7 +13935,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              231
+              233
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -13934,7 +13991,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              232
+              234
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -13990,7 +14047,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              233
+              235
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14046,7 +14103,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              234
+              236
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14102,7 +14159,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              235
+              237
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14158,7 +14215,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              236
+              238
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14214,7 +14271,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              237
+              239
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14270,7 +14327,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              238
+              240
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14326,7 +14383,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              239
+              241
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14382,7 +14439,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              240
+              242
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14438,7 +14495,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              241
+              243
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14494,7 +14551,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              242
+              244
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14550,7 +14607,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              243
+              245
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14606,7 +14663,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              244
+              246
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14662,7 +14719,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              245
+              247
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14718,7 +14775,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              246
+              248
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14774,7 +14831,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              247
+              249
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14830,7 +14887,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              248
+              250
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14886,7 +14943,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              249
+              251
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -14942,7 +14999,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              250
+              252
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -14998,7 +15055,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              251
+              253
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15054,7 +15111,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              252
+              254
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15110,7 +15167,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              253
+              255
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15166,7 +15223,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              254
+              256
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15222,7 +15279,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              255
+              257
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15278,7 +15335,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              256
+              258
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15334,7 +15391,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              257
+              259
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15390,7 +15447,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              258
+              260
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15446,7 +15503,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              259
+              261
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15502,7 +15559,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              260
+              262
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15558,7 +15615,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              261
+              263
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15614,7 +15671,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              262
+              264
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15670,7 +15727,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              263
+              265
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15726,7 +15783,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              264
+              266
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15782,7 +15839,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              265
+              267
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15838,7 +15895,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              266
+              268
             </td>
           
                               <td class="td2" style="border-left-width: 0">
@@ -15894,7 +15951,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
                                 <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              267
+              269
             </td>
           
                               <td class="td1" style="border-left-width: 0">
@@ -15949,14 +16006,14 @@ fncombo&#039;s Anime List - MyAnimeList.net
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td class="category_totals">
-          TV: 133,
+          TV: 134,
           OVA: 17,
-          Movies: 90,
+          Movies: 91,
           <span title="Specials">Spcl.</span>: 24,
-          Eps: 3443,
-          Days: 67.64,
+          Eps: 3468,
+          Days: 68.09,
           Mean Score: 7.1,
-          Score <span title="Deviation">Dev.</span>: -0.80
+          Score <span title="Deviation">Dev.</span>: -0.79
         </td>
       </tr>
     </table>
@@ -18245,14 +18302,14 @@ fncombo&#039;s Anime List - MyAnimeList.net
                               <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
-                                                  <a href="/ownlist/anime/add?selected_series_id=31812&hideLayout" class="List_LightBox">Add</a>
+                                                  <a href="/ownlist/anime/add?selected_series_id=2034&hideLayout" class="List_LightBox">Add</a>
                                 -
-                <a href="javascript:void(0);" id="xmenu31812"
-                   onclick="getExpand(31812, 1);" title="View More Information">More</a>
+                <a href="javascript:void(0);" id="xmenu2034"
+                   onclick="getExpand(2034, 1);" title="View More Information">More</a>
               </small>
             </div>
-            <a href="/anime/31812/Kuroshitsuji_Movie__Book_of_the_Atlantic" target="_blank" class="animetitle" title="Anime Information">
-              <span>Kuroshitsuji Movie: Book of the Atlantic</span>
+            <a href="/anime/2034/Lovely★Complex" target="_blank" class="animetitle" title="Anime Information">
+              <span>Lovely★Complex</span>
             </a>
                                   </td>
 
@@ -18261,69 +18318,14 @@ fncombo&#039;s Anime List - MyAnimeList.net
                           </td>
           
                                 <td class="td1" width="50" align="center">
-              Movie
-            </td>
-          
-                                <td class="td1" align="center" width="70">
-                                                                            <span id="output31812">-</span>/1
-                                          </td>
-          
-                                <td class="td1" width="125" align="left">
-                            <span id="tagLinks31812"></span>
-              <span id="tagRow31812" style="display: none;"></span>
-            </td>
-          
-                    
-                    
-                    
-                                <td class="td1" width="75" align="center" nowrap>
-            <span title="">
-              
-                            
-            </span>
-            </td>
-          
-                            </tr>
-      </table>
-      <!-- START HIDDEN -->
-      <div id="more31812" class="hide" style="width:100%px"></div>
-      <!-- // END HIDDEN -->
-
-                      
-                  
-      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              26
-            </td>
-          
-                              <td class="td2" style="border-left-width: 0">
-                      <div style="float: right;">
-              <small>
-                                                  <a href="/ownlist/anime/add?selected_series_id=2034&hideLayout" class="List_LightBox">Add</a>
-                                -
-                <a href="javascript:void(0);" id="xmenu2034"
-                   onclick="getExpand(2034, 2);" title="View More Information">More</a>
-              </small>
-            </div>
-            <a href="/anime/2034/Lovely★Complex" target="_blank" class="animetitle" title="Anime Information">
-              <span>Lovely★Complex</span>
-            </a>
-                                  </td>
-
-                                <td class="td2" align="center" width="45">
-                                            -
-                          </td>
-          
-                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output2034">-</span>/24
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks2034"></span>
               <span id="tagRow2034" style="display: none;"></span>
             </td>
@@ -18331,7 +18333,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18348,17 +18350,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              27
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              26
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36862&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36862"
-                   onclick="getExpand(36862, 1);" title="View More Information">More</a>
+                   onclick="getExpand(36862, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36862/Made_in_Abyss_2nd_Season" target="_blank" class="animetitle" title="Anime Information">
@@ -18367,19 +18369,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output36862">-</span>/-
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks36862"></span>
               <span id="tagRow36862" style="display: none;"></span>
             </td>
@@ -18387,7 +18389,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18404,17 +18406,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              28
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              27
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=37514&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu37514"
-                   onclick="getExpand(37514, 2);" title="View More Information">More</a>
+                   onclick="getExpand(37514, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/37514/Made_in_Abyss_Movie_1__Tabidachi_no_Yoake" target="_blank" class="animetitle" title="Anime Information">
@@ -18423,19 +18425,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output37514">-</span>/1
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks37514"></span>
               <span id="tagRow37514" style="display: none;"></span>
             </td>
@@ -18443,7 +18445,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18460,17 +18462,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              29
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              28
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=37515&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu37515"
-                   onclick="getExpand(37515, 1);" title="View More Information">More</a>
+                   onclick="getExpand(37515, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/37515/Made_in_Abyss_Movie_2__Hourou_suru_Tasogare" target="_blank" class="animetitle" title="Anime Information">
@@ -18479,19 +18481,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output37515">-</span>/1
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks37515"></span>
               <span id="tagRow37515" style="display: none;"></span>
             </td>
@@ -18499,7 +18501,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18516,17 +18518,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              30
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              29
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=3342&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu3342"
-                   onclick="getExpand(3342, 2);" title="View More Information">More</a>
+                   onclick="getExpand(3342, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/3342/Mnemosyne__Mnemosyne_no_Musume-tachi" target="_blank" class="animetitle" title="Anime Information">
@@ -18534,19 +18536,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output3342">-</span>/6
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks3342"></span>
               <span id="tagRow3342" style="display: none;"></span>
             </td>
@@ -18554,7 +18556,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18571,17 +18573,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              31
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              30
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=32983&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu32983"
-                   onclick="getExpand(32983, 1);" title="View More Information">More</a>
+                   onclick="getExpand(32983, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/32983/Natsume_Yuujinchou_Go" target="_blank" class="animetitle" title="Anime Information">
@@ -18589,19 +18591,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output32983">-</span>/11
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks32983"></span>
               <span id="tagRow32983" style="display: none;"></span>
             </td>
@@ -18609,7 +18611,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18626,17 +18628,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              32
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              31
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=10379&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu10379"
-                   onclick="getExpand(10379, 2);" title="View More Information">More</a>
+                   onclick="getExpand(10379, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/10379/Natsume_Yuujinchou_San" target="_blank" class="animetitle" title="Anime Information">
@@ -18644,19 +18646,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output10379">-</span>/13
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks10379"></span>
               <span id="tagRow10379" style="display: none;"></span>
             </td>
@@ -18664,7 +18666,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18681,17 +18683,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              33
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              32
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=11665&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu11665"
-                   onclick="getExpand(11665, 1);" title="View More Information">More</a>
+                   onclick="getExpand(11665, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/11665/Natsume_Yuujinchou_Shi" target="_blank" class="animetitle" title="Anime Information">
@@ -18699,19 +18701,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output11665">-</span>/13
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks11665"></span>
               <span id="tagRow11665" style="display: none;"></span>
             </td>
@@ -18719,7 +18721,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18736,17 +18738,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              34
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              33
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=20651&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu20651"
-                   onclick="getExpand(20651, 2);" title="View More Information">More</a>
+                   onclick="getExpand(20651, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/20651/Natsume_Yuujinchou__Itsuka_Yuki_no_Hi_ni" target="_blank" class="animetitle" title="Anime Information">
@@ -18754,19 +18756,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output20651">-</span>/1
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks20651"></span>
               <span id="tagRow20651" style="display: none;"></span>
             </td>
@@ -18774,7 +18776,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18791,17 +18793,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              35
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              34
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36038&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36038"
-                   onclick="getExpand(36038, 1);" title="View More Information">More</a>
+                   onclick="getExpand(36038, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36038/Net-juu_no_Susume" target="_blank" class="animetitle" title="Anime Information">
@@ -18809,19 +18811,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output36038">-</span>/10
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks36038"></span>
               <span id="tagRow36038" style="display: none;"></span>
             </td>
@@ -18829,7 +18831,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               2.8
@@ -18847,17 +18849,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              36
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              35
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36043&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36043"
-                   onclick="getExpand(36043, 2);" title="View More Information">More</a>
+                   onclick="getExpand(36043, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36043/Net-juu_no_Susume_Special" target="_blank" class="animetitle" title="Anime Information">
@@ -18865,19 +18867,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Special
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output36043">-</span>/1
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks36043"></span>
               <span id="tagRow36043" style="display: none;"></span>
             </td>
@@ -18885,7 +18887,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.3
@@ -18903,17 +18905,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              37
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              36
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36990&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36990"
-                   onclick="getExpand(36990, 1);" title="View More Information">More</a>
+                   onclick="getExpand(36990, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36990/Non_Non_Biyori_Movie__Vacation" target="_blank" class="animetitle" title="Anime Information">
@@ -18922,19 +18924,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output36990">-</span>/1
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks36990"></span>
               <span id="tagRow36990" style="display: none;"></span>
             </td>
@@ -18942,7 +18944,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -18959,17 +18961,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              38
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              37
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=21667&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu21667"
-                   onclick="getExpand(21667, 2);" title="View More Information">More</a>
+                   onclick="getExpand(21667, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/21667/Non_Non_Biyori__Okinawa_e_Ikukoto_ni_Natta" target="_blank" class="animetitle" title="Anime Information">
@@ -18977,19 +18979,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output21667">-</span>/1
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks21667"></span>
               <span id="tagRow21667" style="display: none;"></span>
             </td>
@@ -18997,7 +18999,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19014,17 +19016,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              39
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              38
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=23673&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu23673"
-                   onclick="getExpand(23673, 1);" title="View More Information">More</a>
+                   onclick="getExpand(23673, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/23673/Ookami_Shoujo_to_Kuro_Ouji" target="_blank" class="animetitle" title="Anime Information">
@@ -19032,19 +19034,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output23673">-</span>/12
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks23673"></span>
               <span id="tagRow23673" style="display: none;"></span>
             </td>
@@ -19052,7 +19054,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19069,17 +19071,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              40
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              39
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=853&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu853"
-                   onclick="getExpand(853, 2);" title="View More Information">More</a>
+                   onclick="getExpand(853, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/853/Ouran_Koukou_Host_Club" target="_blank" class="animetitle" title="Anime Information">
@@ -19087,19 +19089,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output853">-</span>/26
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks853"></span>
               <span id="tagRow853" style="display: none;"></span>
             </td>
@@ -19107,7 +19109,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               9.3
@@ -19125,17 +19127,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              41
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              40
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=29803&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu29803"
-                   onclick="getExpand(29803, 1);" title="View More Information">More</a>
+                   onclick="getExpand(29803, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/29803/Overlord" target="_blank" class="animetitle" title="Anime Information">
@@ -19143,19 +19145,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output29803">-</span>/13
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks29803"></span>
               <span id="tagRow29803" style="display: none;"></span>
             </td>
@@ -19163,7 +19165,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19180,17 +19182,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              42
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              41
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=35073&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu35073"
-                   onclick="getExpand(35073, 2);" title="View More Information">More</a>
+                   onclick="getExpand(35073, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/35073/Overlord_II" target="_blank" class="animetitle" title="Anime Information">
@@ -19198,19 +19200,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output35073">-</span>/13
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks35073"></span>
               <span id="tagRow35073" style="display: none;"></span>
             </td>
@@ -19218,7 +19220,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19235,17 +19237,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              43
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              42
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=37675&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu37675"
-                   onclick="getExpand(37675, 1);" title="View More Information">More</a>
+                   onclick="getExpand(37675, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/37675/Overlord_III" target="_blank" class="animetitle" title="Anime Information">
@@ -19254,19 +19256,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output37675">-</span>/-
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks37675"></span>
               <span id="tagRow37675" style="display: none;"></span>
             </td>
@@ -19274,7 +19276,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19291,17 +19293,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              44
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              43
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=529&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu529"
-                   onclick="getExpand(529, 2);" title="View More Information">More</a>
+                   onclick="getExpand(529, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/529/Saishuu_Heiki_Kanojo" target="_blank" class="animetitle" title="Anime Information">
@@ -19309,19 +19311,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output529">-</span>/13
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks529"></span>
               <span id="tagRow529" style="display: none;"></span>
             </td>
@@ -19329,7 +19331,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               4.9
@@ -19347,17 +19349,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              45
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              44
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=1827&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu1827"
-                   onclick="getExpand(1827, 1);" title="View More Information">More</a>
+                   onclick="getExpand(1827, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/1827/Seirei_no_Moribito" target="_blank" class="animetitle" title="Anime Information">
@@ -19365,19 +19367,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output1827">-</span>/26
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks1827"></span>
               <span id="tagRow1827" style="display: none;"></span>
             </td>
@@ -19385,7 +19387,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19402,17 +19404,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              46
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              45
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=11123&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu11123"
-                   onclick="getExpand(11123, 2);" title="View More Information">More</a>
+                   onclick="getExpand(11123, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/11123/Sekaiichi_Hatsukoi_2" target="_blank" class="animetitle" title="Anime Information">
@@ -19420,19 +19422,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output11123">-</span>/12
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks11123"></span>
               <span id="tagRow11123" style="display: none;"></span>
             </td>
@@ -19440,7 +19442,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               3.0
@@ -19458,17 +19460,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              47
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              46
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=35760&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu35760"
-                   onclick="getExpand(35760, 1);" title="View More Information">More</a>
+                   onclick="getExpand(35760, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/35760/Shingeki_no_Kyojin_Season_3" target="_blank" class="animetitle" title="Anime Information">
@@ -19477,19 +19479,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output35760">-</span>/-
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks35760"></span>
               <span id="tagRow35760" style="display: none;"></span>
             </td>
@@ -19497,7 +19499,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19514,17 +19516,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              48
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              47
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=25781&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu25781"
-                   onclick="getExpand(25781, 2);" title="View More Information">More</a>
+                   onclick="getExpand(25781, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/25781/Shingeki_no_Kyojin__Kuinaki_Sentaku" target="_blank" class="animetitle" title="Anime Information">
@@ -19532,19 +19534,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output25781">-</span>/2
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks25781"></span>
               <span id="tagRow25781" style="display: none;"></span>
             </td>
@@ -19552,7 +19554,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="EHD">
               EHD
                               0.8
@@ -19570,17 +19572,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              49
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              48
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=37804&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu37804"
-                   onclick="getExpand(37804, 1);" title="View More Information">More</a>
+                   onclick="getExpand(37804, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/37804/Shirobako_Movie" target="_blank" class="animetitle" title="Anime Information">
@@ -19589,19 +19591,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output37804">-</span>/1
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks37804"></span>
               <span id="tagRow37804" style="display: none;"></span>
             </td>
@@ -19609,7 +19611,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19626,17 +19628,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              50
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              49
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=28171&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu28171"
-                   onclick="getExpand(28171, 2);" title="View More Information">More</a>
+                   onclick="getExpand(28171, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/28171/Shokugeki_no_Souma" target="_blank" class="animetitle" title="Anime Information">
@@ -19644,19 +19646,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output28171">-</span>/24
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks28171"></span>
               <span id="tagRow28171" style="display: none;"></span>
             </td>
@@ -19664,7 +19666,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19681,17 +19683,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              51
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              50
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=32282&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu32282"
-                   onclick="getExpand(32282, 1);" title="View More Information">More</a>
+                   onclick="getExpand(32282, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/32282/Shokugeki_no_Souma__Ni_no_Sara" target="_blank" class="animetitle" title="Anime Information">
@@ -19699,19 +19701,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output32282">-</span>/13
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks32282"></span>
               <span id="tagRow32282" style="display: none;"></span>
             </td>
@@ -19719,7 +19721,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19736,17 +19738,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              52
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              51
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=30484&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu30484"
-                   onclick="getExpand(30484, 2);" title="View More Information">More</a>
+                   onclick="getExpand(30484, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/30484/Steins_Gate_0" target="_blank" class="animetitle" title="Anime Information">
@@ -19755,19 +19757,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Airing</small>
                       </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output30484">-</span>/23
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks30484"></span>
               <span id="tagRow30484" style="display: none;"></span>
             </td>
@@ -19775,7 +19777,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19792,17 +19794,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              53
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              52
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=37492&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu37492"
-                   onclick="getExpand(37492, 1);" title="View More Information">More</a>
+                   onclick="getExpand(37492, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/37492/Steins_Gate_0_OVA" target="_blank" class="animetitle" title="Anime Information">
@@ -19811,19 +19813,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               Special
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output37492">-</span>/1
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks37492"></span>
               <span id="tagRow37492" style="display: none;"></span>
             </td>
@@ -19831,7 +19833,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19848,17 +19850,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              54
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              53
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=28621&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu28621"
-                   onclick="getExpand(28621, 2);" title="View More Information">More</a>
+                   onclick="getExpand(28621, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/28621/Subete_ga_F_ni_Naru__The_Perfect_Insider" target="_blank" class="animetitle" title="Anime Information">
@@ -19866,19 +19868,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output28621">-</span>/11
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks28621"></span>
               <span id="tagRow28621" style="display: none;"></span>
             </td>
@@ -19886,7 +19888,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19903,17 +19905,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              55
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              54
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=33013&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu33013"
-                   onclick="getExpand(33013, 1);" title="View More Information">More</a>
+                   onclick="getExpand(33013, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/33013/Super_Lovers_OVA" target="_blank" class="animetitle" title="Anime Information">
@@ -19921,19 +19923,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               OVA
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output33013">-</span>/2
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks33013"></span>
               <span id="tagRow33013" style="display: none;"></span>
             </td>
@@ -19941,7 +19943,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -19958,17 +19960,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              56
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              55
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=31765&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu31765"
-                   onclick="getExpand(31765, 2);" title="View More Information">More</a>
+                   onclick="getExpand(31765, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/31765/Sword_Art_Online_Movie__Ordinal_Scale" target="_blank" class="animetitle" title="Anime Information">
@@ -19976,19 +19978,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               Movie
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output31765">-</span>/1
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks31765"></span>
               <span id="tagRow31765" style="display: none;"></span>
             </td>
@@ -19996,7 +19998,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -20013,17 +20015,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              57
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              56
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36474&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36474"
-                   onclick="getExpand(36474, 1);" title="View More Information">More</a>
+                   onclick="getExpand(36474, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36474/Sword_Art_Online__Alicization" target="_blank" class="animetitle" title="Anime Information">
@@ -20032,19 +20034,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Not Yet Aired</small>
                       </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output36474">-</span>/-
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks36474"></span>
               <span id="tagRow36474" style="display: none;"></span>
             </td>
@@ -20052,7 +20054,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -20069,17 +20071,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              58
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              57
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=36511&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu36511"
-                   onclick="getExpand(36511, 2);" title="View More Information">More</a>
+                   onclick="getExpand(36511, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/36511/Tokyo_Ghoul_re" target="_blank" class="animetitle" title="Anime Information">
@@ -20088,19 +20090,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
                                       <small>Airing</small>
                       </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output36511">-</span>/12
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks36511"></span>
               <span id="tagRow36511" style="display: none;"></span>
             </td>
@@ -20108,7 +20110,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -20125,17 +20127,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
-              59
+                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
+              58
             </td>
           
-                              <td class="td1" style="border-left-width: 0">
+                              <td class="td2" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=14227&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu14227"
-                   onclick="getExpand(14227, 1);" title="View More Information">More</a>
+                   onclick="getExpand(14227, 2);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/14227/Tonari_no_Kaibutsu-kun" target="_blank" class="animetitle" title="Anime Information">
@@ -20143,19 +20145,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td1" align="center" width="45">
+                                <td class="td2" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td1" width="50" align="center">
+                                <td class="td2" width="50" align="center">
               TV
             </td>
           
-                                <td class="td1" align="center" width="70">
+                                <td class="td2" align="center" width="70">
                                                                             <span id="output14227">-</span>/13
                                           </td>
           
-                                <td class="td1" width="125" align="left">
+                                <td class="td2" width="125" align="left">
                             <span id="tagLinks14227"></span>
               <span id="tagRow14227" style="display: none;"></span>
             </td>
@@ -20163,7 +20165,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td1" width="75" align="center" nowrap>
+                                <td class="td2" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -20180,17 +20182,17 @@ fncombo&#039;s Anime List - MyAnimeList.net
                   
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-                                <td align="center" width="30" class="td2" style="border-left-width: 1px;">
-              60
+                                <td align="center" width="30" class="td1" style="border-left-width: 1px;">
+              59
             </td>
           
-                              <td class="td2" style="border-left-width: 0">
+                              <td class="td1" style="border-left-width: 0">
                       <div style="float: right;">
               <small>
                                                   <a href="/ownlist/anime/add?selected_series_id=5300&hideLayout" class="List_LightBox">Add</a>
                                 -
                 <a href="javascript:void(0);" id="xmenu5300"
-                   onclick="getExpand(5300, 2);" title="View More Information">More</a>
+                   onclick="getExpand(5300, 1);" title="View More Information">More</a>
               </small>
             </div>
             <a href="/anime/5300/Zoku_Natsume_Yuujinchou" target="_blank" class="animetitle" title="Anime Information">
@@ -20198,19 +20200,19 @@ fncombo&#039;s Anime List - MyAnimeList.net
             </a>
                                   </td>
 
-                                <td class="td2" align="center" width="45">
+                                <td class="td1" align="center" width="45">
                                             -
                           </td>
           
-                                <td class="td2" width="50" align="center">
+                                <td class="td1" width="50" align="center">
               TV
             </td>
           
-                                <td class="td2" align="center" width="70">
+                                <td class="td1" align="center" width="70">
                                                                             <span id="output5300">-</span>/13
                                           </td>
           
-                                <td class="td2" width="125" align="left">
+                                <td class="td1" width="125" align="left">
                             <span id="tagLinks5300"></span>
               <span id="tagRow5300" style="display: none;"></span>
             </td>
@@ -20218,7 +20220,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
                     
                     
                     
-                                <td class="td2" width="75" align="center" nowrap>
+                                <td class="td1" width="75" align="center" nowrap>
             <span title="">
               
                             
@@ -20237,7 +20239,7 @@ fncombo&#039;s Anime List - MyAnimeList.net
         <td class="category_totals">
           TV: 38,
           OVA: 4,
-          Movies: 16,
+          Movies: 15,
           <span title="Specials">Spcl.</span>: 2,
           Eps: 0,
           Days: ,
@@ -20254,8 +20256,8 @@ fncombo&#039;s Anime List - MyAnimeList.net
     OVA: 21,
     Movies: 106,
     <span title="Specials">Spcl.</span>: 26,
-    Eps: 3727,
-    Days: 72.23,
+    Eps: 3751,
+    Days: 72.61,
     Mean Score: 7.1,
     Score <span title="Deviation">Dev.</span>: -0.82
   </div>
@@ -20283,6 +20285,6 @@ fncombo&#039;s Anime List - MyAnimeList.net
 `; 
 const malXML = ` 
 <?xml version="1.0" encoding="UTF-8"?>
-<myanimelist><myinfo><user_id>1039043</user_id><user_name>fncombo</user_name><user_watching>2</user_watching><user_completed>268</user_completed><user_onhold>0</user_onhold><user_dropped>14</user_dropped><user_plantowatch>60</user_plantowatch><user_days_spent_watching>72.22</user_days_spent_watching></myinfo><anime><series_animedb_id>20</series_animedb_id><series_title>Naruto</series_title><series_synonyms>NARUTO; Naruto</series_synonyms><series_type>1</series_type><series_episodes>220</series_episodes><series_status>2</series_status><series_start>2002-10-03</series_start><series_end>2007-02-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/17405.jpg</series_image><my_id>0</my_id><my_watched_episodes>220</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947687</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30</series_animedb_id><series_title>Neon Genesis Evangelion</series_title><series_synonyms>Shinseiki Evangelion; Neon Genesis Evangelion</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>1995-10-04</series_start><series_end>1996-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/21418.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2016-07-03</my_start_date><my_finish_date>2016-07-04</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467656398</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32</series_animedb_id><series_title>Neon Genesis Evangelion: The End of Evangelion</series_title><series_synonyms>Shinseiki Evangelion Gekijouban: The End of Evangelion; Neon Genesis Evangelion: The End of Evangelion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1997-07-19</series_start><series_end>1997-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/39305.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-04</my_start_date><my_finish_date>2016-07-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467679336</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>43</series_animedb_id><series_title>Ghost in the Shell</series_title><series_synonyms>Koukaku Kidoutai; Ghost in the Shell</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1995-11-18</series_start><series_end>1995-11-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/82594.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-09-05</my_start_date><my_finish_date>2015-09-05</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1441410169</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>121</series_animedb_id><series_title>Fullmetal Alchemist</series_title><series_synonyms>Hagane no Renkinjutsushi; FMA; Full Metal Alchemist; Fullmetal Alchemist</series_synonyms><series_type>1</series_type><series_episodes>51</series_episodes><series_status>2</series_status><series_start>2003-10-04</series_start><series_end>2004-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75815.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358783045</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>134</series_animedb_id><series_title>Gunslinger Girl</series_title><series_synonyms>Gunslinger Girls; Gunslinger Girl</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2003-10-09</series_start><series_end>2004-02-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/3088.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-02-10</my_start_date><my_finish_date>2012-04-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333306942</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>154</series_animedb_id><series_title>Shaman King</series_title><series_synonyms>; Shaman King</series_synonyms><series_type>1</series_type><series_episodes>64</series_episodes><series_status>2</series_status><series_start>2001-07-04</series_start><series_end>2002-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/18990.jpg</series_image><my_id>0</my_id><my_watched_episodes>64</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>164</series_animedb_id><series_title>Mononoke Hime</series_title><series_synonyms>Mononoke Hime; Princess Mononoke</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1997-07-12</series_start><series_end>1997-07-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75919.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949821</my_last_updated><my_tags>Re-watched: 13</my_tags></anime><anime><series_animedb_id>199</series_animedb_id><series_title>Sen to Chihiro no Kamikakushi</series_title><series_synonyms>Sen and Chihiro's Spiriting Away; Spirited Away</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2001-07-20</series_start><series_end>2001-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/79597.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949948</my_last_updated><my_tags>Re-watched: 11</my_tags></anime><anime><series_animedb_id>226</series_animedb_id><series_title>Elfen Lied</series_title><series_synonyms>Elfen Song; Elfic Song; Elfen Lied</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2004-07-25</series_start><series_end>2004-10-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/6883.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948074</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>256</series_animedb_id><series_title>Hoshi no Koe</series_title><series_synonyms>; Voices of a Distant Star</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-02-02</series_start><series_end>2002-02-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/2389.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-31</my_start_date><my_finish_date>2013-05-31</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370031941</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>270</series_animedb_id><series_title>Hellsing</series_title><series_synonyms>; Hellsing</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2001-10-11</series_start><series_end>2002-01-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/19956.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948523</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>317</series_animedb_id><series_title>Final Fantasy VII: Advent Children</series_title><series_synonyms>Final Fantasy 7: Advent Children</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-09-14</series_start><series_end>2005-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/317.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322950096</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>339</series_animedb_id><series_title>Serial Experiments Lain</series_title><series_synonyms>; Serial Experiments Lain</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>1998-07-06</series_start><series_end>1998-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/10243.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-05-02</my_start_date><my_finish_date>2013-05-02</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367529939</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>356</series_animedb_id><series_title>Fate/stay night</series_title><series_synonyms>Fate - Stay Night; Fate/stay night</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2006-01-07</series_start><series_end>2006-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/30327.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948172</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>376</series_animedb_id><series_title>Elfen Lied Special</series_title><series_synonyms>Elfen Lied OVA; Elfen Lied: In the Passing Rain</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-04-21</series_start><series_end>2005-04-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/80498.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916573</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>387</series_animedb_id><series_title>Haibane Renmei</series_title><series_synonyms>Charcoal Feather Federation; Haibane Renmei</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2002-10-10</series_start><series_end>2002-12-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/13134.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217214</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>416</series_animedb_id><series_title>Kurenai no Buta</series_title><series_synonyms>The Scarlet Pig; Porco Rosso</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1992-07-18</series_start><series_end>1992-07-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/2878.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>2016-07-12</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468358901</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>431</series_animedb_id><series_title>Howl no Ugoku Shiro</series_title><series_synonyms>; Howl's Moving Castle</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2004-11-20</series_start><series_end>2004-11-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/75810.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949960</my_last_updated><my_tags>Re-watched: 11</my_tags></anime><anime><series_animedb_id>433</series_animedb_id><series_title>Kumo no Mukou, Yakusoku no Basho</series_title><series_synonyms>Beyond the Clouds; The Promised Place; The Place Promised in Our Early Days</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2004-11-20</series_start><series_end>2004-11-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/433.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-06-19</my_start_date><my_finish_date>2012-06-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340064069</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>437</series_animedb_id><series_title>Perfect Blue</series_title><series_synonyms>; Perfect Blue</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1998-02-28</series_start><series_end>1998-02-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79127.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-14</my_start_date><my_finish_date>2015-05-14</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1431564294</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>457</series_animedb_id><series_title>Mushishi</series_title><series_synonyms>; Mushi-Shi</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2005-10-23</series_start><series_end>2006-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/73862.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-06-04</my_start_date><my_finish_date>2012-06-18</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1339975731</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>486</series_animedb_id><series_title>Kino no Tabi: The Beautiful World</series_title><series_synonyms>Kino's Travels: The Beautiful World; Kino's Journey</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2003-04-08</series_start><series_end>2003-07-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/14415.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358783039</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>512</series_animedb_id><series_title>Majo no Takkyuubin</series_title><series_synonyms>Witch's Express Delivery; Kiki's Delivery Service</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1989-07-29</series_start><series_end>1989-07-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75916.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949978</my_last_updated><my_tags>Re-watched: 6</my_tags></anime><anime><series_animedb_id>513</series_animedb_id><series_title>Tenkuu no Shiro Laputa</series_title><series_synonyms>Tenkuu no Shiro Rapyuta; Castle in the Sky</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1986-08-02</series_start><series_end>1986-08-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/37799.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949989</my_last_updated><my_tags>Re-watched: 8</my_tags></anime><anime><series_animedb_id>523</series_animedb_id><series_title>Tonari no Totoro</series_title><series_synonyms>My Neighbour Totoro; My Neighbor Totoro</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1988-04-16</series_start><series_end>1988-04-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75923.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-03-23</my_start_date><my_finish_date>2013-03-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1363999405</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>529</series_animedb_id><series_title>Saishuu Heiki Kanojo</series_title><series_synonyms>SaiKano; Saishuuheiki Kanojo: The Last Love Song on This Little Planet; She, The Ultimate Weapon</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2002-07-02</series_start><series_end>2002-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/529.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1371506520</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>572</series_animedb_id><series_title>Kaze no Tani no Nausicaä</series_title><series_synonyms>Nausicaa of the Valley of the Wind; Kaze no Tani no Nausicaa; Warriors of the Wind; Nausicaä of the Valley of the Wind</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1984-03-11</series_start><series_end>1984-03-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75914.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949837</my_last_updated><my_tags>Re-watched: 14</my_tags></anime><anime><series_animedb_id>578</series_animedb_id><series_title>Hotaru no Haka</series_title><series_synonyms>Tombstone for Fireflies; Grave of the Fireflies</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1988-04-16</series_start><series_end>1988-04-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75808.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-03</my_start_date><my_finish_date>2013-05-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367602055</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>585</series_animedb_id><series_title>Mimi wo Sumaseba</series_title><series_synonyms>If You Listen Carefully; Ghibli Movie 10; Whisper of the Heart</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1995-07-15</series_start><series_end>1995-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75921.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-30</my_start_date><my_finish_date>2013-05-30</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1369950313</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>586</series_animedb_id><series_title>Ayakashi: Japanese Classic Horror</series_title><series_synonyms>Ayakashi - Samurai Horror Tales</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2006-01-13</series_start><series_end>2006-03-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/11746.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2016-07-26</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1469495193</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>597</series_animedb_id><series_title>Neko no Ongaeshi</series_title><series_synonyms>The Cat's Repayment; The Cat Returns</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-07-20</series_start><series_end>2002-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/597.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-08</my_start_date><my_finish_date>2016-07-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468019794</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>759</series_animedb_id><series_title>Tokyo Godfathers</series_title><series_synonyms>; Tokyo Godfathers</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2003-08-30</series_start><series_end>2003-08-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/759.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-07-11</my_start_date><my_finish_date>2015-07-11</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436636761</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>777</series_animedb_id><series_title>Hellsing Ultimate</series_title><series_synonyms>; Hellsing Ultimate</series_synonyms><series_type>2</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2006-02-10</series_start><series_end>2012-12-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/7333.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381344939</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>853</series_animedb_id><series_title>Ouran Koukou Host Club</series_title><series_synonyms>Ohran Koko Host Club; Ouran Koukou Hosutobu; Ouran Koukou Host Bu; OHSHC; Ouran High School Host Club</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2006-04-05</series_start><series_end>2006-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/71992.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333310092</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>934</series_animedb_id><series_title>Higurashi no Naku Koro ni</series_title><series_synonyms>When the Cicadas Cry; The Moment the Cicadas Cry; When They Cry</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2006-04-05</series_start><series_end>2006-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/19634.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-04-08</my_start_date><my_finish_date>2012-04-10</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1334082781</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>1033</series_animedb_id><series_title>Sennen Joyuu</series_title><series_synonyms>Chiyoko Millennial Actress; Sennen Joyuu Chiyoko; Millennium Actress</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-09-14</series_start><series_end>2002-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/1033.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-08</my_start_date><my_finish_date>2014-09-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410209906</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1140</series_animedb_id><series_title>Giniro no Kami no Agito</series_title><series_synonyms>Gin-iro no Kami no Agito; Silver-Haired Agito; Origin: Spirits of the Past</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-01-07</series_start><series_end>2006-01-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/83824.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-06-26</my_start_date><my_finish_date>2015-06-26</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1435359752</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1379</series_animedb_id><series_title>Kino no Tabi: Nanika wo Suru Tame ni - Life Goes On.</series_title><series_synonyms>Kino no Tabi: the Beautiful World - Life Goes On; Kino's Journey Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-02-19</series_start><series_end>2005-02-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73888.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450745162</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1535</series_animedb_id><series_title>Death Note</series_title><series_synonyms>DN; Death Note</series_synonyms><series_type>1</series_type><series_episodes>37</series_episodes><series_status>2</series_status><series_start>2006-10-04</series_start><series_end>2007-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/9453.jpg</series_image><my_id>0</my_id><my_watched_episodes>37</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1589</series_animedb_id><series_title>Bartender</series_title><series_synonyms>; Bartender</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2006-10-15</series_start><series_end>2006-12-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/67397.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1385934366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1689</series_animedb_id><series_title>Byousoku 5 Centimeter</series_title><series_synonyms>Five Centimeters Per Second; Byousoku 5 Centimeter - a chain of short stories about their distance; 5 Centimetres Per Second; 5 cm per second; 5 Centimeters Per Second</series_synonyms><series_type>3</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2007-03-03</series_start><series_end>2007-03-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/73426.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949194</my_last_updated><my_tags>Re-watched: 5</my_tags></anime><anime><series_animedb_id>1735</series_animedb_id><series_title>Naruto: Shippuuden</series_title><series_synonyms>Naruto Hurricane Chronicles; Naruto: Shippuden</series_synonyms><series_type>1</series_type><series_episodes>500</series_episodes><series_status>2</series_status><series_start>2007-02-15</series_start><series_end>2017-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/17407.jpg</series_image><my_id>0</my_id><my_watched_episodes>227</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1323299006</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1818</series_animedb_id><series_title>Claymore</series_title><series_synonyms>; Claymore</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2007-04-04</series_start><series_end>2007-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/21834.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948411</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1827</series_animedb_id><series_title>Seirei no Moribito</series_title><series_synonyms>Guardian of the Sacred Spirit; Moribito - Guardian of the Spirit</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2007-04-07</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/50337.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998963</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1829</series_animedb_id><series_title>Gedo Senki</series_title><series_synonyms>Ged Senki; Tales of Ged; Ged's War Chronicles; Tales from Earthsea</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-07-29</series_start><series_end>2006-07-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73443.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949935</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1889</series_animedb_id><series_title>Higurashi no Naku Koro ni Kai</series_title><series_synonyms>Higurashi no Naku Koro ni 2; Higurashi no Naku Koro ni 2nd Series; Higurashi no Nakukoro ni 2nd Season; The Moment the Cicadas Cry 2; When They Cry: Kai</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2007-07-06</series_start><series_end>2007-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/14114.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-04-10</my_start_date><my_finish_date>2012-04-13</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1334345311</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>1943</series_animedb_id><series_title>Paprika</series_title><series_synonyms>; Paprika</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-11-25</series_start><series_end>2006-11-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/3627.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-14</my_start_date><my_finish_date>2014-09-14</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410719392</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2001</series_animedb_id><series_title>Tengen Toppa Gurren Lagann</series_title><series_synonyms>Tengen Toppa Gurren-Lagann; Making Break-Through Gurren Lagann; Heavenly Breakthrough Gurren Lagann; TTGL; Gurren Laggan; Gurren Lagann</series_synonyms><series_type>1</series_type><series_episodes>27</series_episodes><series_status>2</series_status><series_start>2007-04-01</series_start><series_end>2007-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/5123.jpg</series_image><my_id>0</my_id><my_watched_episodes>27</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948616</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2034</series_animedb_id><series_title>Lovely★Complex</series_title><series_synonyms>Love★Com; Love Com; Lovely Complex</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2007-04-07</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/75563.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421099993</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2167</series_animedb_id><series_title>Clannad</series_title><series_synonyms>; Clannad</series_synonyms><series_type>1</series_type><series_episodes>23</series_episodes><series_status>2</series_status><series_start>2007-10-05</series_start><series_end>2008-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/8498.jpg</series_image><my_id>0</my_id><my_watched_episodes>23</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325027226</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2236</series_animedb_id><series_title>Toki wo Kakeru Shoujo</series_title><series_synonyms>Toki wo Kakeru Shojo; TokiKake; Toki o Kakeru Shojo; The Girl Who Cut Time; The Little Girl Who Conquered Time; The Girl Who Leapt Through Time</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-07-15</series_start><series_end>2006-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/2432.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948381</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2246</series_animedb_id><series_title>Mononoke</series_title><series_synonyms>; Mononoke</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2007-07-13</series_start><series_end>2007-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/20713.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-07-27</my_start_date><my_finish_date>2016-07-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1469840513</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2418</series_animedb_id><series_title>Stranger: Mukou Hadan</series_title><series_synonyms>; Sword of the Stranger</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-09-29</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/87066.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-06-01</my_start_date><my_finish_date>2013-06-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370109942</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2472</series_animedb_id><series_title>Naruto: Shippuuden Movie 1</series_title><series_synonyms>Naruto Shippuuden Movie; Naruto Movie 4; Gekijouban Naruto Shippuuden; Naruto: Shippuden the Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-08-04</series_start><series_end>2007-08-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/79705.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350947</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2593</series_animedb_id><series_title>Kara no Kyoukai 1: Fukan Fuukei</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 1; Borderline of Emptiness: Overlooking View; The Garden of Sinners: Thanatos; the Garden of sinners Chapter 1: Overlooking View</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-12-01</series_start><series_end>2007-12-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/21741.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413732582</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2594</series_animedb_id><series_title>Piano no Mori</series_title><series_synonyms>The Perfect World of Kai; Piano Forest</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-07-21</series_start><series_end>2007-07-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/45012.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-22</my_start_date><my_finish_date>2015-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450754882</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2759</series_animedb_id><series_title>Evangelion: 1.0 You Are (Not) Alone</series_title><series_synonyms>Evangelion Shin Gekijouban: Jo; Rebuild of Evangelion: 1.0 You Are (Not) Alone; Evangelion: 1.01 You Are (Not) Alone; Evangelion: 1.11 You Are (Not) Alone; Evangelion: 1.0 You Are (Not) Alone</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-09-01</series_start><series_end>2007-09-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/74975.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-13</my_start_date><my_finish_date>2016-07-13</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468435268</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2890</series_animedb_id><series_title>Gake no Ue no Ponyo</series_title><series_synonyms>Ponyo on the Cliff by the Sea; Ponyo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-07-19</series_start><series_end>2008-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/8970.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322950006</my_last_updated><my_tags>Re-watched: 3</my_tags></anime><anime><series_animedb_id>2924</series_animedb_id><series_title>ef: A Tale of Memories.</series_title><series_synonyms>; ef - a tale of memories.</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2007-10-07</series_start><series_end>2007-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/50411.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-12-26</my_start_date><my_finish_date>2016-01-03</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451845799</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2966</series_animedb_id><series_title>Ookami to Koushinryou</series_title><series_synonyms>Ookami to Koushinryou; Spice and Wolf</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-01-09</series_start><series_end>2008-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/59401.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948765</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>3087</series_animedb_id><series_title>Cencoroll</series_title><series_synonyms>Cencoroll</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-28</series_start><series_end>2009-07-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75930.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-25</my_start_date><my_finish_date>2015-12-25</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451074439</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3092</series_animedb_id><series_title>Junjou Romantica</series_title><series_synonyms>Junjyou Romantica; Junjou Romantica: Pure Romance; Junjo Romantica</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-04-11</series_start><series_end>2008-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/8811.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949119</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3231</series_animedb_id><series_title>Gunslinger Girl: Il Teatrino</series_title><series_synonyms>Gunslinger Girl 2nd Season; Gunslinger Girl Second; Gunslinger Girl: Il Teatrino</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-01-07</series_start><series_end>2008-04-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/16697.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-04-01</my_start_date><my_finish_date>2012-04-05</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333644904</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3342</series_animedb_id><series_title>Mnemosyne: Mnemosyne no Musume-tachi</series_title><series_synonyms>Mnemosyne: Daughters of Mnemosyne; Rin: Daughters of Mnemosyne</series_synonyms><series_type>1</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2008-02-04</series_start><series_end>2008-07-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/10918.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524869913</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3466</series_animedb_id><series_title>Kino no Tabi: The Beautiful World - Tou no Kuni</series_title><series_synonyms>Kino no Tabi: Tower Country/Free Lance; Kino's Travels; Kino no Tabi Episode 00; Kino's Journey: Tower Country</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-10-19</series_start><series_end>2005-10-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/62873.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-06</my_start_date><my_finish_date>2014-10-06</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412619774</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3588</series_animedb_id><series_title>Soul Eater</series_title><series_synonyms>; Soul Eater</series_synonyms><series_type>1</series_type><series_episodes>51</series_episodes><series_status>2</series_status><series_start>2008-04-07</series_start><series_end>2009-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/7804.jpg</series_image><my_id>0</my_id><my_watched_episodes>51</my_watched_episodes><my_start_date>2013-06-10</my_start_date><my_finish_date>2013-06-16</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1371346545</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3615</series_animedb_id><series_title>Neo Angelique Abyss</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-04-07</series_start><series_end>2008-06-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/20960.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947757</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3652</series_animedb_id><series_title>Higurashi no Naku Koro ni Rei</series_title><series_synonyms>Higurashi no Naku Koro ni 3rd Season; Higurashi no Naku Koro ni Dai San Ki; When They Cry: Rei</series_synonyms><series_type>2</series_type><series_episodes>5</series_episodes><series_status>2</series_status><series_start>2009-02-25</series_start><series_end>2009-08-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/14113.jpg</series_image><my_id>0</my_id><my_watched_episodes>5</my_watched_episodes><my_start_date>2012-05-04</my_start_date><my_finish_date>2012-05-06</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1336345101</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3782</series_animedb_id><series_title>Kara no Kyoukai 2: Satsujin Kousatsu (Zen)</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 2; Borderline of Emptiness: Murder Speculation; The Garden of Sinners: A Study in Murder; The Garden of Sinners: …and nothing heart.; the Garden of sinners Chapter 2: Murder Speculation Part A</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-12-29</series_start><series_end>2007-12-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/21737.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413740989</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3783</series_animedb_id><series_title>Kara no Kyoukai 3: Tsuukaku Zanryuu</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 3; Borderline of Emptiness: Remaining Sense of Pain; The Garden of Sinners: ever cry, never life; the Garden of sinners Chapter 3: Remaining Sense of Pain</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-02-09</series_start><series_end>2008-02-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/21735.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413744979</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3784</series_animedb_id><series_title>Evangelion: 2.0 You Can (Not) Advance</series_title><series_synonyms>Evangelion Shin Gekijouban: Ha; Rebuild of Evangelion: 2.0 You Can (Not) Advance; Evangelion 2.22; Evangelion: 2.0 You Can (Not) Advance</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-27</series_start><series_end>2009-07-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/74983.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-16</my_start_date><my_finish_date>2016-07-16</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468709773</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3785</series_animedb_id><series_title>Evangelion: 3.0 You Can (Not) Redo</series_title><series_synonyms>Evangelion Shin Gekijouban: Kyuu; Rebuild of Evangelion: 3.0; Evangelion: 3.0 Q Quickening; Evangelion 3.33; Evangelion: 3.0 You Can (Not) Redo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-11-17</series_start><series_end>2012-11-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/43201.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467483023</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3786</series_animedb_id><series_title>Evangelion: 3.0+1.0</series_title><series_synonyms>Evangelion: 4.0; Rebuild of Evangelion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/70371.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467580636</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4059</series_animedb_id><series_title>Clannad: Mou Hitotsu no Sekai, Tomoyo-hen</series_title><series_synonyms>Clannad OVA; Clannad: Another World, Tomoyo Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-07-16</series_start><series_end>2008-07-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/19620.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419723609</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4081</series_animedb_id><series_title>Natsume Yuujinchou</series_title><series_synonyms>Natsume Yujincho; Natsume Yujin-cho; Natsume's Book of Friends</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-07-08</series_start><series_end>2008-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/28859.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-07-19</my_start_date><my_finish_date>2017-12-16</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1513392985</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4181</series_animedb_id><series_title>Clannad: After Story</series_title><series_synonyms>; Clannad ~After Story~</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2008-10-03</series_start><series_end>2009-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/24647.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325801178</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>4280</series_animedb_id><series_title>Kara no Kyoukai 4: Garan no Dou</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 4; Borderline of Emptiness: The Hollow Shrine; The Garden of Sinners: garan-no-dou; the Garden of sinners Chapter 4: The Hollow Shrine</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-05-24</series_start><series_end>2008-05-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/21736.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413750950</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4282</series_animedb_id><series_title>Kara no Kyoukai 5: Mujun Rasen</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 5; Borderline of Emptiness: Paradox Spiral; The Garden of Sinners: Paradox Paradigm; the Garden of sinners Chapter 5: Paradox Paradigm</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-08-16</series_start><series_end>2008-08-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/9246.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-21</my_start_date><my_finish_date>2014-10-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413921160</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4437</series_animedb_id><series_title>Naruto: Shippuuden Movie 2 - Kizuna</series_title><series_synonyms>Naruto Movie 5; Naruto Shippuuden Movie 2; Naruto Shippuuden: Bonds; Naruto: Shippuden the Movie 2 -Bonds-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-08-02</series_start><series_end>2008-08-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/17830.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350910</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4662</series_animedb_id><series_title>Neo Angelique Abyss: Second Age</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-07-07</series_start><series_end>2008-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/27592.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947768</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4789</series_animedb_id><series_title>ef: A Tale of Melodies.</series_title><series_synonyms>ef: A Tale of Memories Second Season; ef: A Tale of Memories 2nd Season; ef - a tale of melodies.</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-10-07</series_start><series_end>2008-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/50519.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-01-03</my_start_date><my_finish_date>2016-01-07</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1452205353</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>4814</series_animedb_id><series_title>Junjou Romantica 2</series_title><series_synonyms>Junjou Romantica Second Season; Junjyou Romantica II; Junjo Romantica 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-10-12</series_start><series_end>2008-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/38417.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949150</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4896</series_animedb_id><series_title>Umineko no Naku Koro ni</series_title><series_synonyms>When They Cry 3; When the Seagulls Cry; When They Cry: Seagulls; Umineko: When They Cry</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2009-07-02</series_start><series_end>2009-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/17709.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2011-12-05</my_start_date><my_finish_date>2011-12-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1323551848</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4898</series_animedb_id><series_title>Kuroshitsuji</series_title><series_synonyms>Kuro Shitsuji; Kuroshitsuzi; Black Butler</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2008-10-03</series_start><series_end>2009-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/27013.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948917</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5081</series_animedb_id><series_title>Bakemonogatari</series_title><series_synonyms>Ghostory; Bakemonogatari</series_synonyms><series_type>1</series_type><series_episodes>15</series_episodes><series_status>2</series_status><series_start>2009-07-03</series_start><series_end>2010-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/75274.jpg</series_image><my_id>0</my_id><my_watched_episodes>5</my_watched_episodes><my_start_date>2013-01-25</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1377715295</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5084</series_animedb_id><series_title>Mai Mai Shinko to Sennen no Mahou</series_title><series_synonyms>Mai Mai Shinko and the Millennium-Old Magic; Mai-Mai Miracle</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-15</series_start><series_end>2009-08-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/82870.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-10</my_start_date><my_finish_date>2014-05-10</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399682400</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5114</series_animedb_id><series_title>Fullmetal Alchemist: Brotherhood</series_title><series_synonyms>Hagane no Renkinjutsushi: Fullmetal Alchemist; Fullmetal Alchemist (2009); FMA; Fullmetal Alchemist: Brotherhood</series_synonyms><series_type>1</series_type><series_episodes>64</series_episodes><series_status>2</series_status><series_start>2009-04-05</series_start><series_end>2010-07-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/47421.jpg</series_image><my_id>0</my_id><my_watched_episodes>64</my_watched_episodes><my_start_date>2014-06-28</my_start_date><my_finish_date>2014-06-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404167827</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5204</series_animedb_id><series_title>Kara no Kyoukai 6: Boukyaku Rokuon</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 6; Borderline of Emptiness: Oblivion Recording; The Garden of Sinners: Fairy Tale; the Garden of sinners Chapter 6: Oblivion Recording</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-12-20</series_start><series_end>2008-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/21739.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-23</my_start_date><my_finish_date>2014-10-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414092854</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5205</series_animedb_id><series_title>Kara no Kyoukai 7: Satsujin Kousatsu (Kou)</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 7; Borderline of Emptiness: Murder Speculation (Part 2); The Garden of Sinners: ...not nothing heart; the Garden of sinners Chapter 7: Murder Speculation Part B</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-08</series_start><series_end>2009-08-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/56619.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-25</my_start_date><my_finish_date>2014-10-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414276623</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5300</series_animedb_id><series_title>Zoku Natsume Yuujinchou</series_title><series_synonyms>Natsume Yuujinchou Two; Natsume Yuujinchou 2; Natsume Yujincho 2; Natsume's Book of Friends Season 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2009-01-06</series_start><series_end>2009-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79738.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217095</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5341</series_animedb_id><series_title>Ookami to Koushinryou II</series_title><series_synonyms>Ookami to Koushinryou 2nd Season; Spice and Wolf 2nd Season; Spice and Wolf II</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-07-09</series_start><series_end>2009-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/59399.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948798</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>5365</series_animedb_id><series_title>Tsumiki no Ie</series_title><series_synonyms>The House of Small Cubes; La Maison en Petits Cubes</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-06-10</series_start><series_end>2008-06-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/13357.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-21</my_start_date><my_finish_date>2012-09-21</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1348303716</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5630</series_animedb_id><series_title>Higashi no Eden</series_title><series_synonyms>Higashi no Eden; Eden of The East</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2009-04-10</series_start><series_end>2009-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/15033.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1330638625</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5681</series_animedb_id><series_title>Summer Wars</series_title><series_synonyms>; Summer Wars</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-01</series_start><series_end>2009-08-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/15796.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-04-22</my_start_date><my_finish_date>2013-04-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1366589546</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6007</series_animedb_id><series_title>Ookami to Koushinryou II: Ookami to Kohakuiro no Yuuutsu</series_title><series_synonyms>Ookami to Koushinryou 2 OVA Episode 0; Spice and Wolf 2 OVA Episode 0; Spice and Wolf II OVA Episode 0; Spice and Wolf II: The Wolf and the Amber Melancholy</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-04-30</series_start><series_end>2009-04-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/13070.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916832</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6045</series_animedb_id><series_title>Kimi ni Todoke</series_title><series_synonyms>Reaching You; Kimi ni Todoke: From Me to You</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2009-10-07</series_start><series_end>2010-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/17890.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947818</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6046</series_animedb_id><series_title>Tales of Vesperia: The First Strike</series_title><series_synonyms>; Tales of Vesperia ~The First Strike~</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-10-03</series_start><series_end>2009-10-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/16680.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948673</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>6205</series_animedb_id><series_title>Kämpfer</series_title><series_synonyms>Kampfer; Kaempfer; Kämpfer</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-10-02</series_start><series_end>2009-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/35423.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948047</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6211</series_animedb_id><series_title>Tokyo Magnitude 8.0</series_title><series_synonyms>; Tokyo Magnitude 8.0</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2009-07-10</series_start><series_end>2009-09-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/13776.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-10</my_start_date><my_finish_date>2015-07-11</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436623294</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6325</series_animedb_id><series_title>Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono</series_title><series_synonyms>Naruto Shippuuden: Gekijouban Naruto Shippuuden: Hi no Ishi o Tsugu Mono; Naruto Shippuuden Movie 3; Naruto Movie 6; Naruto Shippuuden 3: Inheritors of Will of Fire</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-01</series_start><series_end>2009-08-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/14686.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350888</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6351</series_animedb_id><series_title>Clannad: After Story - Mou Hitotsu no Sekai, Kyou-hen</series_title><series_synonyms>Clannad: After Story OVA; Clannad ~After Story~: Another World, Kyou Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-01</series_start><series_end>2009-07-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/19621.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419723638</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6361</series_animedb_id><series_title>ef: A Tale of Memories. - Prologue</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-08-24</series_start><series_end>2007-08-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/26046.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-26</my_start_date><my_finish_date>2015-12-26</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451163627</my_last_updated><my_tags>testr 1, test2</my_tags></anime><anime><series_animedb_id>6401</series_animedb_id><series_title>ef: A Tale of Melodies. - Prologue</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-05-10</series_start><series_end>2008-05-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/25650.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-01-07</my_start_date><my_finish_date>2016-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466348147</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6408</series_animedb_id><series_title>"Bungaku Shoujo" Movie</series_title><series_synonyms>Book Girl; Literature Girl</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-05-01</series_start><series_end>2010-05-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/81162.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-23</my_start_date><my_finish_date>2015-12-23</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450843949</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6547</series_animedb_id><series_title>Angel Beats!</series_title><series_synonyms>; Angel Beats!</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2010-04-03</series_start><series_end>2010-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/22061.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-06-23</my_start_date><my_finish_date>2012-06-24</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340552700</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6594</series_animedb_id><series_title>Katanagatari</series_title><series_synonyms>Sword Story; Katanagatari</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2010-01-26</series_start><series_end>2010-12-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/50023.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948737</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6624</series_animedb_id><series_title>Kara no Kyoukai Remix: Gate of Seventh Heaven</series_title><series_synonyms>The Garden of Sinners: Gate of Seventh Heaven; the Garden of sinners Remix -Gate of seventh heaven-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-03-14</series_start><series_end>2009-03-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/15175.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1515030854</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6707</series_animedb_id><series_title>Kuroshitsuji II</series_title><series_synonyms>Kuroshitsuji 2; Black Butler 2; Black Butler II</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2010-07-02</series_start><series_end>2010-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/25464.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948938</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6746</series_animedb_id><series_title>Durarara!!</series_title><series_synonyms>Dhurarara!!; Dyurarara!!; Dulalala!!; Dullalala!!; DRRR!!; Durarara!!</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2010-01-08</series_start><series_end>2010-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/71772.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2013-08-05</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1375747222</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6793</series_animedb_id><series_title>Kuroshitsuji: Sono Shitsuji, Kougyou</series_title><series_synonyms>Kuroshitsuji Special; Black Butler Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-09-30</series_start><series_end>2009-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/21336.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916941</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6922</series_animedb_id><series_title>Fate/stay night Movie: Unlimited Blade Works</series_title><series_synonyms>Gekijouban Fate/Stay Night: Unlimited Blade Works; Fate/stay night Movie; Fate/stay night UBW; Fate/stay night: Unlimited Blade Works</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-01-23</series_start><series_end>2010-01-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/80350.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948200</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6954</series_animedb_id><series_title>Kara no Kyoukai 8: Shuushou</series_title><series_synonyms>Kara no Kyoukai: Epilogue; The Garden of Sinners Epilogue; The Garden of Sinners: the Garden of Sinners; the Garden of sinners Chapter 8: The Final Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-02-02</series_start><series_end>2011-02-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/52557.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-29</my_start_date><my_finish_date>2014-10-29</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414599966</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7059</series_animedb_id><series_title>Black★Rock Shooter (OVA)</series_title><series_synonyms>BRS OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-24</series_start><series_end>2010-07-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/22417.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948469</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7193</series_animedb_id><series_title>Aoi Bungaku Series</series_title><series_synonyms>Blue Literature</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-10-11</series_start><series_end>2009-12-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/17471.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-06-27</my_start_date><my_finish_date>2016-07-03</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467506005</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7465</series_animedb_id><series_title>Eve no Jikan (Movie)</series_title><series_synonyms>Eve's Time; Eve no Jikan 1st Season Complete Edition; Gekijouban Eve no Jikan; Time of Eve</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-03-06</series_start><series_end>2010-03-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/27711.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411256250</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7711</series_animedb_id><series_title>Karigurashi no Arrietty</series_title><series_synonyms>Karigurashi no Arrietti; The Borrower Arrietty; The Secret World of Arrietty</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-17</series_start><series_end>2010-07-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/75905.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949908</my_last_updated><my_tags>Re-watched: 4</my_tags></anime><anime><series_animedb_id>8100</series_animedb_id><series_title>Mardock Scramble: The First Compression</series_title><series_synonyms>Mardock Scramble: Asshuku; Mardock Scramble: The First Compression</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-10-08</series_start><series_end>2010-10-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/26215.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-29</my_start_date><my_finish_date>2016-03-29</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389841</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8115</series_animedb_id><series_title>Uchuu Show e Youkoso</series_title><series_synonyms>Uchu Show e Youkoso; Welcome to THE SPACE SHOW</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-02-18</series_start><series_end>2010-02-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/20085.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-02-15</my_start_date><my_finish_date>2014-02-15</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1392425892</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8142</series_animedb_id><series_title>Colorful (Movie)</series_title><series_synonyms>Colourful; Colorful The Motion Picture</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-08-21</series_start><series_end>2010-08-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/29497.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-06-03</my_start_date><my_finish_date>2013-06-03</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217052</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8246</series_animedb_id><series_title>Naruto: Shippuuden Movie 4 - The Lost Tower</series_title><series_synonyms>Naruto Movie 7; Gekijouban Naruto Shippuuden: The Lost Tower</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-31</series_start><series_end>2010-07-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/23344.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350976</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8425</series_animedb_id><series_title>Gosick</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2011-01-08</series_start><series_end>2011-07-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/27906.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947941</my_last_updated><my_tags>Re-watched: 4</my_tags></anime><anime><series_animedb_id>8915</series_animedb_id><series_title>Dantalian no Shoka</series_title><series_synonyms>Bibliotheca Mystica de Dantalian; Dantalian's Bookshelf; The Mystic Archives of Dantalian</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-07-16</series_start><series_end>2011-10-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/52683.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949492</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>9055</series_animedb_id><series_title>Tamayura</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>4</series_episodes><series_status>2</series_status><series_start>2010-09-06</series_start><series_end>2010-12-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/28362.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>2013-08-28</my_start_date><my_finish_date>2013-09-28</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380326488</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9253</series_animedb_id><series_title>Steins;Gate</series_title><series_synonyms>; Steins;Gate</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2011-04-06</series_start><series_end>2011-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73199.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-06-24</my_start_date><my_finish_date>2012-07-10</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1341949776</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9479</series_animedb_id><series_title>Coppelion</series_title><series_synonyms>; Coppelion</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-10-02</series_start><series_end>2013-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75543.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-10-02</my_start_date><my_finish_date>2013-12-29</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388286326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9488</series_animedb_id><series_title>Cencoroll 2</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/60379.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451074413</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9656</series_animedb_id><series_title>Kimi ni Todoke 2nd Season</series_title><series_synonyms>Kimi ni Todoke: From Me to You 2nd Season; Reaching You 2nd Season; Kimi ni Todoke: From Me To You 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-01-12</series_start><series_end>2011-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/27174.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411423735</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9756</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica</series_title><series_synonyms>Mahou Shoujo Madoka Magika; Magical Girl Madoka Magica; Puella Magi Madoka Magica</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-01-07</series_start><series_end>2011-04-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/55225.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-08-18</my_start_date><my_finish_date>2012-08-20</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1345503576</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9760</series_animedb_id><series_title>Hoshi wo Ou Kodomo</series_title><series_synonyms>Children who Chase Lost Voices from Deep Below; Journey to Agartha; Children Who Chase Lost Voices</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-05-07</series_start><series_end>2011-05-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/29684.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-06-28</my_start_date><my_finish_date>2012-06-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340915937</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>9919</series_animedb_id><series_title>Ao no Exorcist</series_title><series_synonyms>Ao no Futsumashi; Blue Exorcist</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-04-17</series_start><series_end>2011-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75195.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948704</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9926</series_animedb_id><series_title>Sekaiichi Hatsukoi</series_title><series_synonyms>Sekai-ichi Hatsukoi; Sekai'ichi Hatsukoi; World's Greatest First Love; Sekai Ichi Hatsukoi - World's Greatest First Love</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-04-09</series_start><series_end>2011-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/29763.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949011</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9938</series_animedb_id><series_title>Ikoku Meiro no Croisée The Animation</series_title><series_synonyms>Ikoku Meiro no Croisee The Animation; La croisée dans un labyrinthe étranger Special; Croisée in a Foreign Labyrinth The Animation</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-07-04</series_start><series_end>2011-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/74051.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-02-06</my_start_date><my_finish_date>2012-02-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1328744415</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9981</series_animedb_id><series_title>Phi Brain: Kami no Puzzle</series_title><series_synonyms>Phi Φ Brain: Kami no Puzzle; Phi-Brain ~ Puzzle of God</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-10-02</series_start><series_end>2012-04-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/34045.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-06-20</my_start_date><my_finish_date>2012-06-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340392563</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9989</series_animedb_id><series_title>Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.</series_title><series_synonyms>AnoHana; We Still Don't Know the Name of the Flower We Saw That Day.; anohana: The Flower We Saw That Day</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-04-15</series_start><series_end>2011-06-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/79697.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2013-01-03</my_start_date><my_finish_date>2013-01-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1357341761</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10029</series_animedb_id><series_title>Coquelicot-zaka kara</series_title><series_synonyms>Kokurikozaka kara; Kokuriko-saka kara; Kokuriko-zaka kara; Coquelicot Saka kara; From Up on Poppy Hill</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-07-16</series_start><series_end>2011-07-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/32547.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-01-12</my_start_date><my_finish_date>2013-01-12</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358010512</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10087</series_animedb_id><series_title>Fate/Zero</series_title><series_synonyms>; Fate/Zero</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-10-02</series_start><series_end>2011-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/73249.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2011-10-02</my_start_date><my_finish_date>2012-01-05</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325801182</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10152</series_animedb_id><series_title>Kimi ni Todoke 2nd Season: Kataomoi</series_title><series_synonyms>Kimi ni Todoke 2nd Season Episode 00; Unrequited Love; Kimi ni Todoke Recap; Kimi ni Todoke - From Me To You Season 2 – A Crush</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-01-05</series_start><series_end>2011-01-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/28011.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411326851</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10161</series_animedb_id><series_title>No.6</series_title><series_synonyms>Number Six; Number 6; No. Six; No. 6</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-07-08</series_start><series_end>2011-09-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/29759.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949330</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10162</series_animedb_id><series_title>Usagi Drop</series_title><series_synonyms>Usagi Drop; Bunny Drop</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-07-08</series_start><series_end>2011-09-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/29665.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2012-01-31</my_start_date><my_finish_date>2012-02-05</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1328467444</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10165</series_animedb_id><series_title>Nichijou</series_title><series_synonyms>Everyday; Nichijou - My Ordinary Life</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2011-04-03</series_start><series_end>2011-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/75617.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2015-07-05</my_start_date><my_finish_date>2015-07-09</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436465927</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>10357</series_animedb_id><series_title>Jinrui wa Suitai Shimashita</series_title><series_synonyms>Jintai; Humanity Has Declined</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-07-02</series_start><series_end>2012-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/45704.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-03-17</my_start_date><my_finish_date>2014-03-18</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395175824</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>10379</series_animedb_id><series_title>Natsume Yuujinchou San</series_title><series_synonyms>Natsume Yuujinchou Three; Natsume Yuujinchou 3; Natsume Yujincho 3; Natsume's Book of Friends Season 3</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-07-05</series_start><series_end>2011-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/82394.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217102</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10389</series_animedb_id><series_title>Momo e no Tegami</series_title><series_synonyms>Momo e no Tegami; A Letter to Momo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-10</series_start><series_end>2011-09-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/43557.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-03-17</my_start_date><my_finish_date>2014-03-17</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395023169</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10408</series_animedb_id><series_title>Hotarubi no Mori e</series_title><series_synonyms>Into the Forest of Fireflies' Light; The Light of a Firefly Forest</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-17</series_start><series_end>2011-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/38229.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-19</my_start_date><my_finish_date>2012-09-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1348083288</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10460</series_animedb_id><series_title>Kimi to Boku.</series_title><series_synonyms>Kimi to Boku.; You and Me.</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-10-04</series_start><series_end>2011-12-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/34949.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411424544</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10620</series_animedb_id><series_title>Mirai Nikki (TV)</series_title><series_synonyms>Mirai Nikki; Mirai Nikki (2011); The Future Diary</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2011-10-09</series_start><series_end>2012-04-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/33465.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-06-03</my_start_date><my_finish_date>2012-06-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1338767619</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10624</series_animedb_id><series_title>Mardock Scramble: The Second Combustion</series_title><series_synonyms>; Mardock Scramble: The Second Combustion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-03</series_start><series_end>2011-09-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/29197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-30</my_start_date><my_finish_date>2016-03-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389874</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10793</series_animedb_id><series_title>Guilty Crown</series_title><series_synonyms>GUILTY CROWN; Guilty Crown</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2011-10-14</series_start><series_end>2012-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/33713.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2013-09-28</my_start_date><my_finish_date>2013-10-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380748115</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10800</series_animedb_id><series_title>Chihayafuru</series_title><series_synonyms>Chihayafull; Chihayafuru</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-10-05</series_start><series_end>2012-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/35749.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-01</my_start_date><my_finish_date>2014-01-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389296981</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10863</series_animedb_id><series_title>Steins;Gate: Oukoubakko no Poriomania</series_title><series_synonyms>Steins;Gate Special; Steins;Gate: Egoistic Poriomania</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-02-22</series_start><series_end>2012-02-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/36531.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-12-25</my_start_date><my_finish_date>2013-12-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388007249</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11111</series_animedb_id><series_title>Another</series_title><series_synonyms>; Another</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-01-10</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75509.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-06-22</my_start_date><my_finish_date>2012-06-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340459890</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11123</series_animedb_id><series_title>Sekaiichi Hatsukoi 2</series_title><series_synonyms>Sekai-ichi Hatsukoi 2; Sekai'ichi Hatsukoi 2; Sekai Ichi Hatsukoi - World's Greatest First Love 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-10-08</series_start><series_end>2011-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/34871.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404291769</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11285</series_animedb_id><series_title>Black★Rock Shooter (TV)</series_title><series_synonyms>BRS (TV); Black Rock Shooter</series_synonyms><series_type>1</series_type><series_episodes>8</series_episodes><series_status>2</series_status><series_start>2012-02-03</series_start><series_end>2012-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/53909.jpg</series_image><my_id>0</my_id><my_watched_episodes>8</my_watched_episodes><my_start_date>2012-04-02</my_start_date><my_finish_date>2012-04-02</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333382166</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11433</series_animedb_id><series_title>Ano Natsu de Matteru</series_title><series_synonyms>; Waiting in the Summer</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-01-10</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/59405.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-08</my_start_date><my_finish_date>2014-08-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1409264900</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11577</series_animedb_id><series_title>Steins;Gate Movie: Fuka Ryouiki no Déjà vu</series_title><series_synonyms>Steins Gate Movie; Steins;Gate: The Movie − Load Region of Déjà Vu</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-04-20</series_start><series_end>2013-04-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/50317.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-12-25</my_start_date><my_finish_date>2013-12-25</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388005109</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11665</series_animedb_id><series_title>Natsume Yuujinchou Shi</series_title><series_synonyms>Natsume Yuujinchou Four; Natsume Yuujinchou 4; Natsume Yujincho 4; Natsume's Book of Friends Season 4</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-01-03</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/37449.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217114</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11701</series_animedb_id><series_title>Another: The Other - Inga</series_title><series_synonyms>Another 00; Another: The Other -Inga-; Another OAD; Another OVA; Another: The Other</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-05-26</series_start><series_end>2012-05-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/42051.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916719</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11705</series_animedb_id><series_title>Dragon Age: Blood Mage no Seisen</series_title><series_synonyms>; Dragon Age: Dawn of the Seeker</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-02-11</series_start><series_end>2012-02-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1238/90707.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-08-04</my_start_date><my_finish_date>2012-08-04</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1344036559</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11737</series_animedb_id><series_title>Ao no Exorcist Movie</series_title><series_synonyms>Ao no Exorcist Gekijouban; Ao no Futsumashi Movie; Blue Exorcist Movie; Blue Exorcist The Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-12-28</series_start><series_end>2012-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/42005.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-08</my_start_date><my_finish_date>2014-05-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399586167</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11739</series_animedb_id><series_title>Kimi to Boku. 2</series_title><series_synonyms>You and Me. Second Season; Kimi to Boku. 2nd Season; You and Me 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-04-03</series_start><series_end>2012-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/42107.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411424551</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11741</series_animedb_id><series_title>Fate/Zero 2nd Season</series_title><series_synonyms>Fate/Zero Second Season; Fate/Zero Season 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-04-08</series_start><series_end>2012-06-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/41125.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-04-22</my_start_date><my_finish_date>2012-06-24</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340554495</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11757</series_animedb_id><series_title>Sword Art Online</series_title><series_synonyms>S.A.O; SAO; Sword Art Online</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39717.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-12-25</my_start_date><my_finish_date>2012-12-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1356554455</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>11759</series_animedb_id><series_title>Accel World</series_title><series_synonyms>Accelerated World; Accel World</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2012-04-07</series_start><series_end>2012-09-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/38155.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-12-26</my_start_date><my_finish_date>2012-12-28</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1356656730</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11887</series_animedb_id><series_title>Kokoro Connect</series_title><series_synonyms>Kokoroco; Kokoro Connect</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/39665.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-06-04</my_start_date><my_finish_date>2016-06-12</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465766889</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11977</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 1: Hajimari no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 1; Magical Girl Madoka Magica Movie 1; Puella Magi Madoka Magica the Movie Part 1: Beginnings</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-10-06</series_start><series_end>2012-10-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/42331.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-12</my_start_date><my_finish_date>2013-10-12</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381609624</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>11979</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 2: Eien no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 2; Magical Girl Madoka Magica Movie 2; Puella Magi Madoka Magica the Movie Part 2: Eternal</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-10-13</series_start><series_end>2012-10-13</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/42265.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-13</my_start_date><my_finish_date>2013-10-13</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381619325</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>11981</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 3; Magical Girl Madoka Magica Movie 3; Puella Magi Madoka Magica the Movie: Rebellion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-10-26</series_start><series_end>2013-10-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/54231.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-05</my_start_date><my_finish_date>2014-05-05</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399298340</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12053</series_animedb_id><series_title>Mardock Scramble: The Third Exhaust</series_title><series_synonyms>; Mardock Scramble: The Third Exhaust</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-09-29</series_start><series_end>2012-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/39309.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-31</my_start_date><my_finish_date>2016-03-31</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389901</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12189</series_animedb_id><series_title>Hyouka</series_title><series_synonyms>Hyou-ka; Hyouka: You can't escape; Hyou-ka: You can't escape; Hyoka; Hyouka</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2012-04-23</series_start><series_end>2012-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/50521.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2012-12-28</my_start_date><my_finish_date>2013-01-02</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1402327883</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12355</series_animedb_id><series_title>Ookami Kodomo no Ame to Yuki</series_title><series_synonyms>The Wolf Children Ame and Yuki; Wolf Children</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-21</series_start><series_end>2012-07-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/35721.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-03-31</my_start_date><my_finish_date>2013-03-31</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1364758144</my_last_updated><my_tags>Re-watched: 5</my_tags></anime><anime><series_animedb_id>12445</series_animedb_id><series_title>Tasogare Otome x Amnesia</series_title><series_synonyms>Tasogare Otome x Amnesia; Dusk Maiden of Amnesia</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-04-09</series_start><series_end>2012-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/64435.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-05-22</my_start_date><my_finish_date>2015-05-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432336332</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12477</series_animedb_id><series_title>Sakasama no Patema</series_title><series_synonyms>Sakasama no Patema; Patema Inverted</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-11-09</series_start><series_end>2013-11-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/52415.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-06</my_start_date><my_finish_date>2014-09-06</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410017329</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12565</series_animedb_id><series_title>Fate/Prototype</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-12-31</series_start><series_end>2011-12-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/51045.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-01-06</my_start_date><my_finish_date>2013-01-06</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1357490485</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12753</series_animedb_id><series_title>Phi Brain: Kami no Puzzle - Orpheus Order-hen</series_title><series_synonyms>Phi Brain: Kami no Puzzle Dai 2 Series; Phi Φ Brain: Kami no Puzzle Second Season; Phi Brain: Kami no Puzzle 2nd Season; Phi-Brain ~ Puzzle of God: The Orpheus Order</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-04-08</series_start><series_end>2012-09-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39033.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-10-26</my_start_date><my_finish_date>2012-10-31</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1351648101</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12879</series_animedb_id><series_title>Dantalian no Shoka: Ibarahime</series_title><series_synonyms>Bibliotheca Mystica de Dantalian: Ibarahime; Dantalian's Bookshelf: Ibarahime; The Mystic Archives of Dantalian: Ibarahime</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-08-09</series_start><series_end>2012-08-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/46959.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-02</my_start_date><my_finish_date>2012-09-02</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1346621326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13125</series_animedb_id><series_title>Shinsekai yori</series_title><series_synonyms>Shin Sekai yori; From the New World</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-09-29</series_start><series_end>2013-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/36775.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-05-10</my_start_date><my_finish_date>2014-05-13</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399996698</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13411</series_animedb_id><series_title>Guilty Crown: Lost Christmas</series_title><series_synonyms>; Guilty Crown: Lost Christmas</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-26</series_start><series_end>2012-07-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/80010.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-02</my_start_date><my_finish_date>2013-10-02</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380749399</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13469</series_animedb_id><series_title>Hyouka: Motsubeki Mono wa</series_title><series_synonyms>Hyouka Episode 11.5; Hyouka OVA; Hyou-ka OVA; Hyouka: You can't escape OVA; Hyou-ka: You can't escape OVA; Hyoka OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-07-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/50363.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516915958</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>13601</series_animedb_id><series_title>Psycho-Pass</series_title><series_synonyms>Psychopath; Psycho-Pass</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2012-10-12</series_start><series_end>2013-03-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/43399.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-24</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466804189</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14175</series_animedb_id><series_title>Hanasaku Iroha: Home Sweet Home</series_title><series_synonyms>; Hanasaku Iroha the Movie: Home Sweet Home</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-09</series_start><series_end>2013-03-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/70701.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-07</my_start_date><my_finish_date>2014-09-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410111237</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14189</series_animedb_id><series_title>Tasogare Otome x Amnesia: Taima Otome</series_title><series_synonyms>Dusk Maiden of Amnesia: Exorcism Maiden; Tasogare Otome x Amnesia Special; Dusk Maiden of Amnesia: Ghost Girl</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-11-28</series_start><series_end>2012-11-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/65883.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-23</my_start_date><my_finish_date>2015-05-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432407084</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14227</series_animedb_id><series_title>Tonari no Kaibutsu-kun</series_title><series_synonyms>Tonari no Kaibutsukun; The Monster Next Door; My Neighbor Monster-kun; My Little Monster</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-10-02</series_start><series_end>2012-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/39779.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1379535451</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14289</series_animedb_id><series_title>Sukitte Ii na yo.</series_title><series_synonyms>Suki-tte Ii na yo.; Sukinayo; Say "I Love You".</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-10-07</series_start><series_end>2012-12-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39777.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-04-10</my_start_date><my_finish_date>2016-04-24</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1461536685</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14349</series_animedb_id><series_title>Little Witch Academia</series_title><series_synonyms>Wakate Animator Ikusei Project; 2012 Young Animator Training Project; Anime Mirai 2012; LWA</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-02</series_start><series_end>2013-03-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/42989.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-13</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410648863</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14353</series_animedb_id><series_title>Death Billiards</series_title><series_synonyms>Wakate Animator Ikusei Project; 2012 Young Animator Training Project; Anime Mirai 2012; Death Billiards</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-02</series_start><series_end>2013-03-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/48721.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-12-25</my_start_date><my_finish_date>2014-12-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419524579</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14397</series_animedb_id><series_title>Chihayafuru 2</series_title><series_synonyms>Chihayafull 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-01-12</series_start><series_end>2013-06-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/47435.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-09-26</my_start_date><my_finish_date>2014-10-01</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412188990</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14513</series_animedb_id><series_title>Magi: The Labyrinth of Magic</series_title><series_synonyms>Magi Season 1; Magi: The Labyrinth of Magic</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-10-07</series_start><series_end>2013-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/42773.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-04</my_start_date><my_finish_date>2018-04-06</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1522969371</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14741</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai!</series_title><series_synonyms>Chu-2 Byo demo Koi ga Shitai!; Regardless of My Adolescent Delusions of Grandeur, I Want a Date!; Love, Chunibyo &amp; Other Delusions!</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-10-04</series_start><series_end>2012-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/46931.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-04-27</my_start_date><my_finish_date>2013-04-27</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367098652</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14751</series_animedb_id><series_title>Bishoujo Senshi Sailor Moon Crystal</series_title><series_synonyms>Pretty Soldier Sailor Moon (2014); Sailor Moon Remake; Bishoujo Senshi Sailor Moon (2014); Sailor Moon Crystal; Pretty Guardian Sailor Moon Crystal</series_synonyms><series_type>5</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2014-07-05</series_start><series_end>2015-07-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/60085.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2014-07-05</my_start_date><my_finish_date>2016-06-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1464987489</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14753</series_animedb_id><series_title>Hori-san to Miyamura-kun</series_title><series_synonyms>Horimiya</series_synonyms><series_type>2</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2012-09-26</series_start><series_end>2015-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/40175.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2018-03-02</my_start_date><my_finish_date>2018-03-02</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520031447</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14807</series_animedb_id><series_title>Kara no Kyoukai: Mirai Fukuin</series_title><series_synonyms>Kara no Kyoukai: the Garden of sinners/recalled out summer; the Garden of sinners -recalled out summer-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-28</series_start><series_end>2013-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/56621.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-11-01</my_start_date><my_finish_date>2014-11-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414801367</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14833</series_animedb_id><series_title>Maoyuu Maou Yuusha</series_title><series_synonyms>Maoyu Maou Yusha; Maoyu ~ Archenemy &amp; Hero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-01-05</series_start><series_end>2013-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/46041.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-04-30</my_start_date><my_finish_date>2013-05-02</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367451578</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15039</series_animedb_id><series_title>Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai. Movie</series_title><series_synonyms>AnoHana Movie; We Still Don't Know the Name of the Flower We Saw That Day. Movie; anohana: The Flower We Saw That Day The Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-08-31</series_start><series_end>2013-08-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/49993.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-08-10</my_start_date><my_finish_date>2014-08-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1407706856</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15617</series_animedb_id><series_title>Jinrui wa Suitai Shimashita Specials</series_title><series_synonyms>Jintai Specials; Humanity Has Declined Specials</series_synonyms><series_type>4</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2012-09-19</series_start><series_end>2013-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/63069.jpg</series_image><my_id>0</my_id><my_watched_episodes>6</my_watched_episodes><my_start_date>2014-03-18</my_start_date><my_finish_date>2014-03-18</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395176900</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15651</series_animedb_id><series_title>Phi Brain: Kami no Puzzle - Shukuteki! Rätsel-hen</series_title><series_synonyms>Phi Brain: Kami no Puzzle Dai 3; Phi Brain: Kami no Puzzle Third Season; Phi Brain: Kami no Puzzle 3rd Season; Phi Brain: Puzzle of God - Nemesis! Raetsel-hen; Phi Brain: Puzzle of God 3</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2014-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/54099.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-06</my_start_date><my_finish_date>2014-06-24</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1403648489</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16001</series_animedb_id><series_title>Kokoro Connect: Michi Random</series_title><series_synonyms>Kokoro Connect Episodes 14, 15, 16, and 17; Kokoroco: Michi Random; Kokoro Connect OVA</series_synonyms><series_type>4</series_type><series_episodes>4</series_episodes><series_status>2</series_status><series_start>2012-11-19</series_start><series_end>2012-12-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/45526.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>2016-06-15</my_start_date><my_finish_date>2016-06-18</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466279287</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16067</series_animedb_id><series_title>Nagi no Asukara</series_title><series_synonyms>Nagi no Asu Kara; Earth color of a calm; Nagiasu; A Lull in the Sea</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2013-10-03</series_start><series_end>2014-04-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/53549.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2013-10-03</my_start_date><my_finish_date>2014-07-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404233742</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16201</series_animedb_id><series_title>Aku no Hana</series_title><series_synonyms>Aku no Hana; Flowers of Evil</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-04-05</series_start><series_end>2013-06-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/50559.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-08-08</my_start_date><my_finish_date>2013-08-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1376014048</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16498</series_animedb_id><series_title>Shingeki no Kyojin</series_title><series_synonyms>AoT; Attack on Titan</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-04-07</series_start><series_end>2013-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/47347.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-11-01</my_start_date><my_finish_date>2013-11-01</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1383351175</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16528</series_animedb_id><series_title>Hal</series_title><series_synonyms>Haru; Hal</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-08</series_start><series_end>2013-06-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/46549.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-28</my_start_date><my_finish_date>2014-10-28</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414526668</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16592</series_animedb_id><series_title>Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation</series_title><series_synonyms>Dangan Ronpa: The Animation; Danganronpa: The Animation</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-07-05</series_start><series_end>2013-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/51463.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380317293</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16662</series_animedb_id><series_title>Kaze Tachinu</series_title><series_synonyms>Kaze Tachinu; The Wind Rises</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-07-20</series_start><series_end>2013-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/52353.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-17</my_start_date><my_finish_date>2014-09-17</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410967436</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16700</series_animedb_id><series_title>Higurashi no Naku Koro ni Kaku: Outbreak</series_title><series_synonyms>When They Cry - Outbreak</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-08-15</series_start><series_end>2013-08-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/51063.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-09-25</my_start_date><my_finish_date>2013-09-25</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380072609</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16762</series_animedb_id><series_title>Mirai Nikki: Redial</series_title><series_synonyms>Mirai Nikki OVA;; The Future Diary: Redial</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-19</series_start><series_end>2013-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/53247.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-07-06</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404668095</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16782</series_animedb_id><series_title>Kotonoha no Niwa</series_title><series_synonyms>Koto no Ha no Niwa; The Garden of Kotonoha; The Garden of Words</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-05-31</series_start><series_end>2013-05-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/79676.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-07-08</my_start_date><my_finish_date>2013-07-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1373288763</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16918</series_animedb_id><series_title>Gin no Saji</series_title><series_synonyms>; Silver Spoon</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2013-07-12</series_start><series_end>2013-09-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/49237.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-23</my_start_date><my_finish_date>2015-07-26</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1437943165</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16934</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai!: Kirameki no... Slapstick Noel</series_title><series_synonyms>Chuunibyou demo Koi ga Shitai! Episode 13; Chu-2 Byo demo Koi ga Shitai! Episode 13; Love, Chunibyo &amp; Other Delusions!: Sparkling... Slapstick Noel</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-19</series_start><series_end>2013-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/45512.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-01-09</my_start_date><my_finish_date>2014-01-09</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389303375</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17121</series_animedb_id><series_title>Dareka no Manazashi</series_title><series_synonyms>; Someone's Gaze</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-02-10</series_start><series_end>2013-02-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/46741.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-05</my_start_date><my_finish_date>2016-07-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467750681</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17247</series_animedb_id><series_title>Machine-Doll wa Kizutsukanai</series_title><series_synonyms>Machine Girl wa Kizutsukanai; Kikou Shoujo wa Kizutsukanai; Unbreakable Machine-Doll</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-07</series_start><series_end>2013-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/56141.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-07</my_start_date><my_finish_date>2014-01-06</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388972892</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17265</series_animedb_id><series_title>Log Horizon</series_title><series_synonyms>; Log Horizon</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-05</series_start><series_end>2014-03-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/84004.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-05</my_start_date><my_finish_date>2014-03-23</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395576189</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>17269</series_animedb_id><series_title>Captain Herlock</series_title><series_synonyms>; Space Pirate Captain Harlock</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-07</series_start><series_end>2013-09-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/62619.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-05-11</my_start_date><my_finish_date>2016-05-11</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1462937787</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17549</series_animedb_id><series_title>Non Non Biyori</series_title><series_synonyms>; Non Non Biyori</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-08</series_start><series_end>2013-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/51581.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-11-02</my_start_date><my_finish_date>2014-12-31</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420040229</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>17635</series_animedb_id><series_title>Koitabi: True Tours Nanto</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2013-04-28</series_start><series_end>2013-04-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/50321.jpg</series_image><my_id>0</my_id><my_watched_episodes>6</my_watched_episodes><my_start_date>2016-06-19</my_start_date><my_finish_date>2016-06-19</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466351119</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17895</series_animedb_id><series_title>Golden Time</series_title><series_synonyms>; Golden Time</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/52091.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2015-08-13</my_start_date><my_finish_date>2015-11-24</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1448400872</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18115</series_animedb_id><series_title>Magi: The Kingdom of Magic</series_title><series_synonyms>Magi: The Labyrinth of Magic 2; Magi Season 2; Magi: The Kingdom of Magic</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2014-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/55039.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-06</my_start_date><my_finish_date>2018-04-07</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523064984</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18119</series_animedb_id><series_title>Servant x Service</series_title><series_synonyms>; Servant x Service</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-07-05</series_start><series_end>2013-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/51579.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-01-25</my_start_date><my_finish_date>2015-10-30</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1446220848</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18153</series_animedb_id><series_title>Kyoukai no Kanata</series_title><series_synonyms>Beyond the Horizon; Beyond the Boundary</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-03</series_start><series_end>2013-12-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/85468.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-03</my_start_date><my_finish_date>2013-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1387727461</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18277</series_animedb_id><series_title>Strike the Blood</series_title><series_synonyms>SutoBura; Strike the Blood</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/56163.jpg</series_image><my_id>0</my_id><my_watched_episodes>8</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410048372</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18411</series_animedb_id><series_title>Gingitsune</series_title><series_synonyms>Silver Fox; Gingitsune: Messenger Fox of the Gods</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-07</series_start><series_end>2013-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/56247.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-07</my_start_date><my_finish_date>2014-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389053296</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18497</series_animedb_id><series_title>Yozakura Quartet: Hana no Uta</series_title><series_synonyms>Yozakura Quartet: Hana no Uta</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2013-12-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/52563.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-10-06</my_start_date><my_finish_date>2014-01-05</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388960407</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18507</series_animedb_id><series_title>Free!</series_title><series_synonyms>フリー！; Free! - Iwatobi Swim Club</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-07-04</series_start><series_end>2013-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/51107.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1376735953</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18671</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai! Ren</series_title><series_synonyms>Chuunibyou demo Koi ga Shitai! 2; Chu-2 Byo demo Koi ga Shitai! Ren; Love, Chunibyo &amp; Other Delusions!: Heart Throb</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-01-09</series_start><series_end>2014-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/56643.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-01-09</my_start_date><my_finish_date>2014-04-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1396472930</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18679</series_animedb_id><series_title>Kill la Kill</series_title><series_synonyms>KLK; Dressed to Kill; KILL la KILL</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75514.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2013-10-04</my_start_date><my_finish_date>2014-03-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1396031267</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18745</series_animedb_id><series_title>Chihayafuru 2: Waga Mi Yo ni Furu Nagame Seshi Ma ni</series_title><series_synonyms>Chihayafuru 2 OVA; Chihayafull 2 OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-13</series_start><series_end>2013-09-13</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/54451.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-01</my_start_date><my_finish_date>2014-10-01</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412190807</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19021</series_animedb_id><series_title>Takanashi Rikka Kai: Chuunibyou demo Koi ga Shitai! Movie</series_title><series_synonyms>; Love, Chunibyo &amp; Other Delusions!: Rikka Version</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-14</series_start><series_end>2013-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/56167.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-03-22</my_start_date><my_finish_date>2014-03-22</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395512551</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19363</series_animedb_id><series_title>Gin no Saji 2nd Season</series_title><series_synonyms>Gin no Saji 2nd Season; Silver Spoon 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2014-01-10</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/57995.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-27</my_start_date><my_finish_date>2015-08-07</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1438972797</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19369</series_animedb_id><series_title>Outbreak Company</series_title><series_synonyms>; Outbreak Company</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2013-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/54343.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-04</my_start_date><my_finish_date>2013-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1387730261</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19489</series_animedb_id><series_title>Little Witch Academia: Mahoujikake no Parade</series_title><series_synonyms>LWA 2; Little Witch Academia 2; Little Witch Academia: The Enchanted Parade</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-10-09</series_start><series_end>2015-10-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/75752.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-04</my_start_date><my_finish_date>2016-03-04</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1457127009</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19815</series_animedb_id><series_title>No Game No Life</series_title><series_synonyms>NGNL; No Game, No Life</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-09</series_start><series_end>2014-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/65187.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-08-03</my_start_date><my_finish_date>2014-09-07</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410093118</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20057</series_animedb_id><series_title>Space☆Dandy</series_title><series_synonyms>; Space Dandy</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-01-05</series_start><series_end>2014-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/56611.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410048389</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20651</series_animedb_id><series_title>Natsume Yuujinchou: Itsuka Yuki no Hi ni</series_title><series_synonyms>Natsume Yuujinchou OVA; Natsume Yujincho OVA; Natsume's Book of Friends OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-02-01</series_start><series_end>2014-02-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79742.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1433433328</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20903</series_animedb_id><series_title>Harmonie</series_title><series_synonyms>Wakate Animator Ikusei Project; 2014 Young Animator Training Project; Anime Mirai 2014</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-03-01</series_start><series_end>2014-03-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/55197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-02-05</my_start_date><my_finish_date>2018-02-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1517794005</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20973</series_animedb_id><series_title>Sekai Seifuku: Bouryaku no Zvezda</series_title><series_synonyms>Sekai Seifuku: Bouryaku no Zvezda; World Conquest Zvezda Plot</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-01-12</series_start><series_end>2014-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/56133.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-01-12</my_start_date><my_finish_date>2014-07-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404690008</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21329</series_animedb_id><series_title>Mushishi Special: Hihamukage</series_title><series_synonyms>Mushi-shi Tokubetsu-hen: Hihamu Kage; The Shadow that Devours the Sun</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-01-04</series_start><series_end>2014-01-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/59315.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-01-11</my_start_date><my_finish_date>2014-01-11</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389482067</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>21557</series_animedb_id><series_title>Omoide no Marnie</series_title><series_synonyms>; When Marnie Was There</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-07-19</series_start><series_end>2014-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/64293.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-20</my_start_date><my_finish_date>2015-05-20</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432162852</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21603</series_animedb_id><series_title>Mekakucity Actors</series_title><series_synonyms>Mekaku City Actors; Kagerou Project; MEKAKUCITY ACTORS</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-13</series_start><series_end>2014-06-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/61519.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-04-13</my_start_date><my_finish_date>2014-07-01</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404250486</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21659</series_animedb_id><series_title>Kill la Kill Specials</series_title><series_synonyms>Kill la Kill Tokubetsu-hen; Sayonara wo Mou Ichido; Kill la Kill Digest: Naked Memories; KILL la KILL Digest –Naked Memories by Aikuro Mikisugi–</series_synonyms><series_type>4</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2014-09-03</series_start><series_end>2014-09-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/73654.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-13</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410647106</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21667</series_animedb_id><series_title>Non Non Biyori: Okinawa e Ikukoto ni Natta</series_title><series_synonyms>Non Non Biyori OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-07-23</series_start><series_end>2014-07-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/63773.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514211194</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21881</series_animedb_id><series_title>Sword Art Online II</series_title><series_synonyms>Phantom Bullet; SAO II; Sword Art Online 2; SAO 2; Sword Art Online II</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-07-05</series_start><series_end>2014-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/65185.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-12-25</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419550516</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>21939</series_animedb_id><series_title>Mushishi Zoku Shou</series_title><series_synonyms>Mushi-shi Zoku Shou; Mushishi: The Next Chapter; MUSHI-SHI -Next Passage-</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-04-05</series_start><series_end>2014-06-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/58533.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-04-05</my_start_date><my_finish_date>2014-06-24</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1403643576</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>22145</series_animedb_id><series_title>Kuroshitsuji: Book of Circus</series_title><series_synonyms>Kuroshitsuji Circus Hen; Kuroshitsuji Shin Series; Black Butler 3; Kuroshitsuji III; Black Butler: Book of Circus</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-07-11</series_start><series_end>2014-09-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/64811.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-07-11</my_start_date><my_finish_date>2014-09-19</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411147830</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22147</series_animedb_id><series_title>Amagi Brilliant Park</series_title><series_synonyms>Amaburi; Amagi Brilliant Park</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-10-07</series_start><series_end>2014-12-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/85435.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-04-05</my_start_date><my_finish_date>2016-05-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1463790807</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22199</series_animedb_id><series_title>Akame ga Kill!</series_title><series_synonyms>Akame ga Kiru!; Akame ga Kill!</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-07-07</series_start><series_end>2014-12-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/78438.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-07-07</my_start_date><my_finish_date>2014-12-15</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1418604647</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22265</series_animedb_id><series_title>Free!: Eternal Summer</series_title><series_synonyms>Free! - Iwatobi Swim Club 2; Free! 2nd Season; Free! - Eternal Summer</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-07-03</series_start><series_end>2014-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/64097.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404662439</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22297</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works</series_title><series_synonyms>Fate/stay night (2014); Fate - Stay Night; Fate/stay night [Unlimited Blade Works]</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-10-12</series_start><series_end>2014-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/67333.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-10-12</my_start_date><my_finish_date>2015-01-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420819332</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22319</series_animedb_id><series_title>Tokyo Ghoul</series_title><series_synonyms>Tokyo Kushu; Toukyou Kushu; Toukyou Ghoul; Tokyo Ghoul</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-04</series_start><series_end>2014-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/64449.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-04</my_start_date><my_finish_date>2014-09-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411166060</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22359</series_animedb_id><series_title>Sanzoku no Musume Ronja</series_title><series_synonyms>Sanzoku no Musume Ronia; Ronia the Robber's Daughter; Ronja Rövardotter</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2014-10-11</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/68125.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421861743</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22433</series_animedb_id><series_title>Break Blade</series_title><series_synonyms>; Broken Blade</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-06</series_start><series_end>2014-06-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/58635.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1408914109</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22535</series_animedb_id><series_title>Kiseijuu: Sei no Kakuritsu</series_title><series_synonyms>Parasite; Parasitic Beasts; Parasyte; Parasyte -the maxim-</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-10-09</series_start><series_end>2015-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/73178.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-10-09</my_start_date><my_finish_date>2015-03-27</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427456284</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22539</series_animedb_id><series_title>One More Time, One More Chance</series_title><series_synonyms></series_synonyms><series_type>6</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-07-19</series_start><series_end>2007-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/58799.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1409084520</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22729</series_animedb_id><series_title>Aldnoah.Zero</series_title><series_synonyms>AZ; Aldnoah.Zero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-06</series_start><series_end>2014-09-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/60263.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411306180</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22789</series_animedb_id><series_title>Barakamon</series_title><series_synonyms>Barakamon; Barakamon</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-06</series_start><series_end>2014-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/59321.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413402971</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23273</series_animedb_id><series_title>Shigatsu wa Kimi no Uso</series_title><series_synonyms>; Your Lie in April</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2014-10-10</series_start><series_end>2015-03-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/67177.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2014-10-10</my_start_date><my_finish_date>2015-03-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514851396</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23283</series_animedb_id><series_title>Zankyou no Terror</series_title><series_synonyms>Terror in Tokyo; Terror of Resonance; Terror in Resonance</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2014-07-11</series_start><series_end>2014-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/64447.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-27</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411826562</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23317</series_animedb_id><series_title>Kuroshitsuji: Book of Murder</series_title><series_synonyms>; Black Butler: Book of Murder</series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2015-01-28</series_start><series_end>2015-02-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/74392.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2016-04-18</my_start_date><my_finish_date>2016-04-18</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1460940679</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23321</series_animedb_id><series_title>Log Horizon 2nd Season</series_title><series_synonyms>Log Horizon Second Season; Log Horizon Dai 2 Series; Log Horizon 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2014-10-04</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/68097.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-10-04</my_start_date><my_finish_date>2015-05-20</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432138009</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23447</series_animedb_id><series_title>Ano Natsu de Matteru: Bokutachi wa Koukou Saigo no Natsu wo Sugoshinagara, Ano Natsu de Matteiru.</series_title><series_synonyms>Ano Natsu de Matteru Special; Waiting in the Summer Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-08-29</series_start><series_end>2014-08-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/63493.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-02-05</my_start_date><my_finish_date>2018-02-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1517798965</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23623</series_animedb_id><series_title>Non Non Biyori Repeat</series_title><series_synonyms>Non Non Biyori 2nd Season; Non Non Biyori Second Season; Non Non Biyori Repeat</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-07-07</series_start><series_end>2015-09-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/75105.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-07-07</my_start_date><my_finish_date>2015-09-25</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1443187096</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>23673</series_animedb_id><series_title>Ookami Shoujo to Kuro Ouji</series_title><series_synonyms>Ookami Shoujo to Kuroouji; Wolf Girl &amp; Black Prince; Wolf Girl &amp; Black Prince</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-10-05</series_start><series_end>2014-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/67805.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1453243322</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>24459</series_animedb_id><series_title>Tales of Zestiria: Doushi no Yoake</series_title><series_synonyms>; Tales of Zestiria: Dawn of the Shepherd</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-12-30</series_start><series_end>2014-12-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/69719.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-01-07</my_start_date><my_finish_date>2015-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420670723</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>24687</series_animedb_id><series_title>Mushishi Zoku Shou: Odoro no Michi</series_title><series_synonyms>Mushishi Zoku Shou Special; Mushi-shi Zoku Shou: Odoro no Michi; Mushishi Zoku Shou Episode 11 and 12; Mushishi Path of Thorns</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-08-20</series_start><series_end>2014-08-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/63539.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-08-24</my_start_date><my_finish_date>2014-08-24</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1408912806</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>24701</series_animedb_id><series_title>Mushishi Zoku Shou 2nd Season</series_title><series_synonyms>Mushishi Zoku Shou 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-10-19</series_start><series_end>2014-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/68095.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-12-22</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419209745</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>25015</series_animedb_id><series_title>Kyoukai no Kanata Movie 1: I'll Be Here - Kako-hen</series_title><series_synonyms>Beyond the Boundary Movie; Kyokai no Kanata Movie; Beyond the Boundary: I'll Be Here - Past</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-03-14</series_start><series_end>2015-03-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/73298.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-07</my_start_date><my_finish_date>2018-03-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520391161</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25537</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel - I. Presage Flower</series_title><series_synonyms>; Fate/stay night: Heaven's Feel - I. Presage Flower</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-10-14</series_start><series_end>2017-10-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/87106.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411213047</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25649</series_animedb_id><series_title>Junjou Romantica 3</series_title><series_synonyms>Junjou Romantica Third Season; Junjo Romantica 3</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-07-09</series_start><series_end>2015-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/74170.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-09-03</my_start_date><my_finish_date>2015-09-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1443037387</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25777</series_animedb_id><series_title>Shingeki no Kyojin Season 2</series_title><series_synonyms>; Attack on Titan Season 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-04-01</series_start><series_end>2017-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/84177.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2018-02-27</my_start_date><my_finish_date>2018-02-28</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519793112</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25781</series_animedb_id><series_title>Shingeki no Kyojin: Kuinaki Sentaku</series_title><series_synonyms>Attack on Titan: No Regrets; Shingeki no Kyojin: Birth of Levi</series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2014-12-09</series_start><series_end>2015-04-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/69497.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411213201</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25835</series_animedb_id><series_title>Shirobako</series_title><series_synonyms>White Box; Shirobako</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-10-09</series_start><series_end>2015-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1835/91537.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-10-09</my_start_date><my_finish_date>2015-04-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428162562</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27631</series_animedb_id><series_title>God Eater</series_title><series_synonyms>; God Eater</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-07-12</series_start><series_end>2016-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/73852.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-08-07</my_start_date><my_finish_date>2016-06-11</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465669463</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27655</series_animedb_id><series_title>Aldnoah.Zero 2nd Season</series_title><series_synonyms>; Aldnoah.Zero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-11</series_start><series_end>2015-03-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/71297.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-11</my_start_date><my_finish_date>2015-03-29</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427636555</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27727</series_animedb_id><series_title>Binan Koukou Chikyuu Boueibu LOVE!</series_title><series_synonyms>; Cute High Earth Defense Club LOVE!</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-07</series_start><series_end>2015-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/68451.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421597956</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27821</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works - Prologue</series_title><series_synonyms>Fate/stay night (2014) Episode 00; Fate/stay night: Unlimited Blade Works - Prologue</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-10-05</series_start><series_end>2014-10-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/67425.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-05</my_start_date><my_finish_date>2014-10-05</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412542390</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27899</series_animedb_id><series_title>Tokyo Ghoul √A</series_title><series_synonyms>Tokyo Ghoul Root A; Tokyo Ghoul 2nd Season; Tokyo Ghoul Second Season; Tokyo Ghoul √A</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-09</series_start><series_end>2015-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/71777.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-11</my_start_date><my_finish_date>2015-04-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428007195</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27969</series_animedb_id><series_title>Hana to Alice: Satsujin Jiken</series_title><series_synonyms>Hana &amp; Alice: The Murder Case; The Case of Hana &amp; Alice</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-02-20</series_start><series_end>2015-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/71197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-05-15</my_start_date><my_finish_date>2016-05-15</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1463351868</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28121</series_animedb_id><series_title>Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka</series_title><series_synonyms>DanMachi; Is It Wrong That I Want to Meet You in a Dungeon; Is It Wrong to Try to Pick Up Girls in a Dungeon?</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-04-04</series_start><series_end>2015-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/70187.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468344441</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28171</series_animedb_id><series_title>Shokugeki no Souma</series_title><series_synonyms>Shokugeki no Soma; Food Wars: Shokugeki no Soma; Food Wars! Shokugeki no Soma</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2015-04-04</series_start><series_end>2015-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/72943.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428423510</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28223</series_animedb_id><series_title>Death Parade</series_title><series_synonyms>; Death Parade</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-10</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/71553.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-10</my_start_date><my_finish_date>2015-03-28</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427575256</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28621</series_animedb_id><series_title>Subete ga F ni Naru: The Perfect Insider</series_title><series_synonyms>Everything Becomes F: The Perfect Insider; The Perfect Insider</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2015-10-09</series_start><series_end>2015-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/76071.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459100733</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28625</series_animedb_id><series_title>Shisha no Teikoku</series_title><series_synonyms>Project Itoh; The Empire of Corpses</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-10-02</series_start><series_end>2015-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75468.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-02-01</my_start_date><my_finish_date>2017-02-02</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1485998902</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28675</series_animedb_id><series_title>Kyoukai no Kanata Movie 2: I'll Be Here - Mirai-hen</series_title><series_synonyms>Beyond the Boundary Movie; Kyokai no Kanata Movie; Beyond the Boundary: I'll Be Here - Future</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-04-25</series_start><series_end>2015-04-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/72614.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-10</my_start_date><my_finish_date>2018-03-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520649412</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28701</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works 2nd Season</series_title><series_synonyms>Fate/stay night (2015); Fate - Stay Night; Fate/stay night [Unlimited Blade Works] Season 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-04-05</series_start><series_end>2015-06-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/72863.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-04-05</my_start_date><my_finish_date>2015-07-13</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436812710</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28725</series_animedb_id><series_title>Kokoro ga Sakebitagatterunda.</series_title><series_synonyms>Kokosake; The Anthem of the Heart</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-09-19</series_start><series_end>2015-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75745.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-04-01</my_start_date><my_finish_date>2016-04-01</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459468045</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>28805</series_animedb_id><series_title>Bakemono no Ko</series_title><series_synonyms>Child of a Beast; The Boy and the Beast</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-07-11</series_start><series_end>2015-07-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/73540.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-04</my_start_date><my_finish_date>2016-06-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465069094</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>28851</series_animedb_id><series_title>Koe no Katachi</series_title><series_synonyms>The Shape of Voice; A Silent Voice: The Movie; A Silent Voice</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-09-17</series_start><series_end>2016-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/80136.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-10-25</my_start_date><my_finish_date>2017-10-25</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1508888432</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28957</series_animedb_id><series_title>Mushishi Zoku Shou: Suzu no Shizuku</series_title><series_synonyms>Mushishi Tokubetsu-hen: Suzu no Shizuku; Mushishi: The Next Chapter - Drops of Bells</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-05-16</series_start><series_end>2015-05-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/72689.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-09-16</my_start_date><my_finish_date>2015-09-16</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1442361418</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>29803</series_animedb_id><series_title>Overlord</series_title><series_synonyms>; Overlord</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-07-07</series_start><series_end>2015-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/88019.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509999593</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30187</series_animedb_id><series_title>Sakurako-san no Ashimoto ni wa Shitai ga Umatteiru</series_title><series_synonyms>A Corpse is Buried Under Sakurako's Feet.; Beautiful Bones -Sakurako's Investigation-</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-10-08</series_start><series_end>2015-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/76116.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-25</my_start_date><my_finish_date>2016-05-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1462322215</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30276</series_animedb_id><series_title>One Punch Man</series_title><series_synonyms>One Punch-Man; One-Punch Man; OPM; One Punch Man</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-10-05</series_start><series_end>2015-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/76049.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-05</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1457311771</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30346</series_animedb_id><series_title>Doukyuusei (Movie)</series_title><series_synonyms>; Doukyusei -Classmates-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-02-20</series_start><series_end>2016-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/78606.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-01</my_start_date><my_finish_date>2016-07-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467334013</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30484</series_animedb_id><series_title>Steins;Gate 0</series_title><series_synonyms>Steins;Gate Zero</series_synonyms><series_type>1</series_type><series_episodes>23</series_episodes><series_status>1</series_status><series_start>2018-04-12</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1031/90444.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352518</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30911</series_animedb_id><series_title>Tales of Zestiria the X</series_title><series_synonyms>Tales of Zestiria the Cross; Tales of Zestiria the X</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-07-10</series_start><series_end>2016-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/79271.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468943183</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31043</series_animedb_id><series_title>Boku dake ga Inai Machi</series_title><series_synonyms>The Town Where Only I am Missing; BokuMachi; ERASED</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-08</series_start><series_end>2016-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/77957.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-01-08</my_start_date><my_finish_date>2016-03-29</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459262482</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31240</series_animedb_id><series_title>Re:Zero kara Hajimeru Isekai Seikatsu</series_title><series_synonyms>Re: Life in a different world from zero; ReZero; Re:ZERO -Starting Life in Another World-</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2016-04-04</series_start><series_end>2016-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79410.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2016-06-30</my_start_date><my_finish_date>2018-02-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519681487</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31580</series_animedb_id><series_title>Ajin</series_title><series_synonyms>Ajin; Ajin: Demi-Human</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-01-16</series_start><series_end>2016-04-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/77968.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-06-22</my_start_date><my_finish_date>2016-06-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466645556</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31680</series_animedb_id><series_title>Super Lovers</series_title><series_synonyms>; Super Lovers</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2016-04-06</series_start><series_end>2016-06-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/78450.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2016-06-29</my_start_date><my_finish_date>2016-06-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467262552</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31733</series_animedb_id><series_title>Bishoujo Senshi Sailor Moon Crystal Season III</series_title><series_synonyms>Bishoujo Senshi Sailor Moon Crystal: Death Busters-hen; Pretty Guardian Sailor Moon Crystal: Death Busters; Pretty Guardian Sailor Moon Crystal Season III</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-04</series_start><series_end>2016-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/78859.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1460997549</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31741</series_animedb_id><series_title>Magi: Sinbad no Bouken (TV)</series_title><series_synonyms>; Magi: Adventure of Sinbad</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-16</series_start><series_end>2016-07-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/78783.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-04-07</my_start_date><my_finish_date>2018-04-08</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523145824</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31765</series_animedb_id><series_title>Sword Art Online Movie: Ordinal Scale</series_title><series_synonyms>Gekijouban Sword Art Online; Sword Art Online the Movie -Ordinal Scale-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-02-18</series_start><series_end>2017-02-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/83811.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352542</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31798</series_animedb_id><series_title>Kiznaiver</series_title><series_synonyms>; Kiznaiver</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-09</series_start><series_end>2016-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/78466.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-06</my_start_date><my_finish_date>2016-06-27</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467050210</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31812</series_animedb_id><series_title>Kuroshitsuji Movie: Book of the Atlantic</series_title><series_synonyms>; Black Butler: Book of the Atlantic</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-01-21</series_start><series_end>2017-01-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/85792.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1460940786</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31859</series_animedb_id><series_title>Hai to Gensou no Grimgar</series_title><series_synonyms>Grimgal of Ashes and Fantasies; Hai to Gensou no Grimgal; Grimgar: Ashes and Illusions</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-11</series_start><series_end>2016-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/77976.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-06</my_start_date><my_finish_date>2016-07-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>1</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525698860</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31914</series_animedb_id><series_title>Shoujo-tachi wa Kouya wo Mezasu</series_title><series_synonyms>The girls who aim for the wildlands; Girls beyond the youth KOYA; Shokomeza; Girls Beyond the Wasteland</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-07</series_start><series_end>2016-03-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/77837.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>3</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1454290022</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31964</series_animedb_id><series_title>Boku no Hero Academia</series_title><series_synonyms>; My Hero Academia</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-03</series_start><series_end>2016-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/78745.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-13</my_start_date><my_finish_date>2018-04-27</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524792367</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32093</series_animedb_id><series_title>Tanaka-kun wa Itsumo Kedaruge</series_title><series_synonyms>; Tanaka-kun is Always Listless</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-09</series_start><series_end>2016-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/78565.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-05-09</my_start_date><my_finish_date>2016-06-27</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467047583</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>32281</series_animedb_id><series_title>Kimi no Na wa.</series_title><series_synonyms>; Your Name.</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-08-26</series_start><series_end>2016-08-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/87048.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-04-03</my_start_date><my_finish_date>2017-04-03</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1491257701</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>32282</series_animedb_id><series_title>Shokugeki no Souma: Ni no Sara</series_title><series_synonyms>Shokugeki no Souma 2nd Season; Shokugeki no Soma 2; Food Wars: Shokugeki no Soma 2; Shokugeki no Soma: The Second Plate; Food Wars! The Second Plate</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-07-02</series_start><series_end>2016-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/79353.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352485</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32438</series_animedb_id><series_title>Mayoiga</series_title><series_synonyms>; The Lost Village</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-01</series_start><series_end>2016-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79413.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-01</my_start_date><my_finish_date>2016-06-29</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467208204</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32542</series_animedb_id><series_title>Sakamoto desu ga?</series_title><series_synonyms>Sakamoto desu ga?; Haven't You Heard? I'm Sakamoto</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-08</series_start><series_end>2016-07-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79468.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-28</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467223463</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32561</series_animedb_id><series_title>Hai to Gensou no Grimgar Special</series_title><series_synonyms>Grimgar of Fantasy and Ash Special; Grimgal of Ashes and Illusion Special; Grimgal of Ashes and Fantasies Special; Hai to Gensou no Grimgal Special; Grimgar of Fantasy and Ash Episode 2.5; Grimgal of Ashes and Illusion Episode 2.5; Grimgar: Ashes and Illusions Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-03-16</series_start><series_end>2016-03-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/78160.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-05-07</my_start_date><my_finish_date>2018-05-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525705208</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32902</series_animedb_id><series_title>Mahoutsukai no Yome: Hoshi Matsu Hito</series_title><series_synonyms>The Magician's Bride; The Ancient Magus' Bride: Those Awaiting a Star</series_synonyms><series_type>2</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2016-09-10</series_start><series_end>2017-09-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/80587.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2018-04-08</my_start_date><my_finish_date>2018-04-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523213185</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32983</series_animedb_id><series_title>Natsume Yuujinchou Go</series_title><series_synonyms>Natsume Yuujinchou Season 5; Natsume's Book of Friends Five; Natsume's Book of Friends Season 5</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2016-10-05</series_start><series_end>2016-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/81755.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468933729</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33013</series_animedb_id><series_title>Super Lovers OVA</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2017-01-01</series_start><series_end>2017-09-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/87516.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467256506</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33049</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel - II. Lost Butterfly</series_title><series_synonyms>Fate/stay night Movie: Heaven's Feel 2; Fate/stay night: Heaven's Feel - II. Lost Butterfly</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-00-00</series_start><series_end>2018-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79291.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998419</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33050</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel 3</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79292.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998423</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33253</series_animedb_id><series_title>Ajin 2nd Season</series_title><series_synonyms>Ajin: Demi-Human 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-10-08</series_start><series_end>2016-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/81858.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-05</my_start_date><my_finish_date>2018-03-06</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520306366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33352</series_animedb_id><series_title>Violet Evergarden</series_title><series_synonyms>; Violet Evergarden</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2018-01-11</series_start><series_end>2018-04-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1329/90618.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-20</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>1</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525035515</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33417</series_animedb_id><series_title>Super Lovers 2</series_title><series_synonyms>Super Lovers Second Season; Super Lovers 2</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2017-01-12</series_start><series_end>2017-03-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/83807.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-20</my_start_date><my_finish_date>2018-01-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516678249</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33486</series_animedb_id><series_title>Boku no Hero Academia 2nd Season</series_title><series_synonyms>; My Hero Academia 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2017-04-01</series_start><series_end>2017-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/85221.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-27</my_start_date><my_finish_date>2018-04-29</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525012633</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33506</series_animedb_id><series_title>Ao no Exorcist: Kyoto Fujouou-hen</series_title><series_synonyms>Blue Exorcist: Kyoto Impure King Arc; Blue Exorcist: Kyoto Saga</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-01-07</series_start><series_end>2017-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/85201.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2017-12-16</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519664773</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33558</series_animedb_id><series_title>Tales of Zestiria the X: Saiyaku no Jidai</series_title><series_synonyms>Tales of Zestiria the X Episode 00; Tales of Zestiria the X Prologue: The Age of Chaos</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-07-03</series_start><series_end>2016-07-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/80723.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>2016-07-12</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468338424</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33674</series_animedb_id><series_title>No Game No Life: Zero</series_title><series_synonyms>NGNL Zero; NGNL the Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-07-15</series_start><series_end>2017-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1085/90759.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-01</my_start_date><my_finish_date>2018-03-11</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520727052</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>34599</series_animedb_id><series_title>Made in Abyss</series_title><series_synonyms>; Made in Abyss</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2017-07-07</series_start><series_end>2017-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1922/91900.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-12</my_start_date><my_finish_date>2018-03-13</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520914521</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35062</series_animedb_id><series_title>Mahoutsukai no Yome</series_title><series_synonyms>The Magician's Bride; The Ancient Magus' Bride</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2017-10-08</series_start><series_end>2018-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/88476.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2018-04-09</my_start_date><my_finish_date>2018-04-24</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524528196</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35073</series_animedb_id><series_title>Overlord II</series_title><series_synonyms>; Overlord II</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2018-01-09</series_start><series_end>2018-04-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/89562.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509999606</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35079</series_animedb_id><series_title>Kino no Tabi: The Beautiful World - The Animated Series</series_title><series_synonyms>; Kino's Journey -the Beautiful World- the Animated Series</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-10-06</series_start><series_end>2017-12-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/87235.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1511392664</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35120</series_animedb_id><series_title>Devilman: Crybaby</series_title><series_synonyms>; Devilman: Crybaby</series_synonyms><series_type>5</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2018-01-05</series_start><series_end>2018-01-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/89973.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-23</my_start_date><my_finish_date>2018-01-24</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516756065</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35262</series_animedb_id><series_title>Boku no Hero Academia 2nd Season: Hero Note</series_title><series_synonyms>Boku no Hero Academia Recap; Boku no Hero Academia 13.5; My Hero Academia Season 2: Hero Notebook</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-03-25</series_start><series_end>2017-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/84951.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-04-27</my_start_date><my_finish_date>2018-04-27</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525012718</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35608</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai! Movie: Take On Me</series_title><series_synonyms>Eiga Chuunibyou demo Koi ga Shitai! Take On Me</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2018-01-06</series_start><series_end>2018-01-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/89974.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1495810112</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35760</series_animedb_id><series_title>Shingeki no Kyojin Season 3</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-07-23</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1173/92110.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1497748383</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36038</series_animedb_id><series_title>Net-juu no Susume</series_title><series_synonyms>Netojuu no Susume; Recovery of an MMO Junkie</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2017-10-10</series_start><series_end>2017-12-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/87463.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998092</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36043</series_animedb_id><series_title>Net-juu no Susume Special</series_title><series_synonyms>Net-juu no Susume Episode 11; Recommendation of Real Life; Moriko's Log-in to Fruits de Mer; Riajuu no Susume; Moriko no Fruits de Mer ni Log-in Shimashita; Recovery of an MMO Junkie Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-12-08</series_start><series_end>2017-12-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/90115.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516804617</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36456</series_animedb_id><series_title>Boku no Hero Academia 3rd Season</series_title><series_synonyms>; My Hero Academia 3</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>1</series_status><series_start>2018-04-07</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1319/92084.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>1</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525022504</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36474</series_animedb_id><series_title>Sword Art Online: Alicization</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-10-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1841/91357.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1507470291</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36511</series_animedb_id><series_title>Tokyo Ghoul:re</series_title><series_synonyms>Tokyo Kushu:re; Toukyou Kuushu:re</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>1</series_status><series_start>2018-04-03</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1812/90955.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1507470344</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36862</series_animedb_id><series_title>Made in Abyss 2nd Season</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1022/91393.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520972611</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36896</series_animedb_id><series_title>Boku no Hero Academia The Movie: Futari no Hero</series_title><series_synonyms>My Hero Academia the Movie: The Two Heroes</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-08-03</series_start><series_end>2018-08-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1230/91404.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525022588</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36990</series_animedb_id><series_title>Non Non Biyori Movie: Vacation</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-08-25</series_start><series_end>2018-08-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/89629.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514152179</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37492</series_animedb_id><series_title>Steins;Gate 0 OVA</series_title><series_synonyms>Steins,Gate Zero</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-11-28</series_start><series_end>2018-11-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1197/92518.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525475594</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37514</series_animedb_id><series_title>Made in Abyss Movie 1: Tabidachi no Yoake</series_title><series_synonyms>Made in Abyss Movie 1: Journey's Dawn</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2019-00-00</series_start><series_end>2019-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1120/91387.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1521558560</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37515</series_animedb_id><series_title>Made in Abyss Movie 2: Hourou suru Tasogare</series_title><series_synonyms>Made in Abyss Movie 2: Wandering Twilight</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2019-00-00</series_start><series_end>2019-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1110/91388.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1521558553</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37597</series_animedb_id><series_title>Dakaretai Otoko 1-i ni Odosarete Imasu.</series_title><series_synonyms>Dakaretai Otoko Ichii ni Odosarete Imasu., Dakaretai Otoko No.1 ni Odosareteimasu.</series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1224/91474.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524434678</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37675</series_animedb_id><series_title>Overlord III</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-07-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1319/91709.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1522949173</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37804</series_animedb_id><series_title>Shirobako Movie</series_title><series_synonyms>White Box Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1041/92114.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525475577</my_last_updated><my_tags></my_tags></anime></myanimelist>
+<myanimelist><myinfo><user_id>1039043</user_id><user_name>fncombo</user_name><user_watching>2</user_watching><user_completed>269</user_completed><user_onhold>0</user_onhold><user_dropped>14</user_dropped><user_plantowatch>59</user_plantowatch><user_days_spent_watching>72.67</user_days_spent_watching></myinfo><anime><series_animedb_id>20</series_animedb_id><series_title>Naruto</series_title><series_synonyms>NARUTO; Naruto</series_synonyms><series_type>1</series_type><series_episodes>220</series_episodes><series_status>2</series_status><series_start>2002-10-03</series_start><series_end>2007-02-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/17405.jpg</series_image><my_id>0</my_id><my_watched_episodes>220</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947687</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30</series_animedb_id><series_title>Neon Genesis Evangelion</series_title><series_synonyms>Shinseiki Evangelion; Neon Genesis Evangelion</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>1995-10-04</series_start><series_end>1996-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/21418.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2016-07-03</my_start_date><my_finish_date>2016-07-04</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467656398</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32</series_animedb_id><series_title>Neon Genesis Evangelion: The End of Evangelion</series_title><series_synonyms>Shinseiki Evangelion Gekijouban: The End of Evangelion; Neon Genesis Evangelion: The End of Evangelion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1997-07-19</series_start><series_end>1997-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/39305.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-04</my_start_date><my_finish_date>2016-07-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467679336</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>43</series_animedb_id><series_title>Ghost in the Shell</series_title><series_synonyms>Koukaku Kidoutai; Ghost in the Shell</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1995-11-18</series_start><series_end>1995-11-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/82594.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-09-05</my_start_date><my_finish_date>2015-09-05</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1441410169</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>121</series_animedb_id><series_title>Fullmetal Alchemist</series_title><series_synonyms>Hagane no Renkinjutsushi; FMA; Full Metal Alchemist; Fullmetal Alchemist</series_synonyms><series_type>1</series_type><series_episodes>51</series_episodes><series_status>2</series_status><series_start>2003-10-04</series_start><series_end>2004-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75815.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358783045</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>134</series_animedb_id><series_title>Gunslinger Girl</series_title><series_synonyms>Gunslinger Girls; Gunslinger Girl</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2003-10-09</series_start><series_end>2004-02-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/3088.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-02-10</my_start_date><my_finish_date>2012-04-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333306942</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>154</series_animedb_id><series_title>Shaman King</series_title><series_synonyms>; Shaman King</series_synonyms><series_type>1</series_type><series_episodes>64</series_episodes><series_status>2</series_status><series_start>2001-07-04</series_start><series_end>2002-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/18990.jpg</series_image><my_id>0</my_id><my_watched_episodes>64</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>164</series_animedb_id><series_title>Mononoke Hime</series_title><series_synonyms>Mononoke Hime; Princess Mononoke</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1997-07-12</series_start><series_end>1997-07-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75919.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949821</my_last_updated><my_tags>Re-watched: 13</my_tags></anime><anime><series_animedb_id>199</series_animedb_id><series_title>Sen to Chihiro no Kamikakushi</series_title><series_synonyms>Sen and Chihiro's Spiriting Away; Spirited Away</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2001-07-20</series_start><series_end>2001-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/79597.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949948</my_last_updated><my_tags>Re-watched: 11</my_tags></anime><anime><series_animedb_id>226</series_animedb_id><series_title>Elfen Lied</series_title><series_synonyms>Elfen Song; Elfic Song; Elfen Lied</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2004-07-25</series_start><series_end>2004-10-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/6883.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948074</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>256</series_animedb_id><series_title>Hoshi no Koe</series_title><series_synonyms>; Voices of a Distant Star</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-02-02</series_start><series_end>2002-02-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/2389.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-31</my_start_date><my_finish_date>2013-05-31</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370031941</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>270</series_animedb_id><series_title>Hellsing</series_title><series_synonyms>; Hellsing</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2001-10-11</series_start><series_end>2002-01-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/19956.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948523</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>317</series_animedb_id><series_title>Final Fantasy VII: Advent Children</series_title><series_synonyms>Final Fantasy 7: Advent Children</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-09-14</series_start><series_end>2005-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/317.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322950096</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>339</series_animedb_id><series_title>Serial Experiments Lain</series_title><series_synonyms>; Serial Experiments Lain</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>1998-07-06</series_start><series_end>1998-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/10243.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-05-02</my_start_date><my_finish_date>2013-05-02</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367529939</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>356</series_animedb_id><series_title>Fate/stay night</series_title><series_synonyms>Fate - Stay Night; Fate/stay night</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2006-01-07</series_start><series_end>2006-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/30327.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948172</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>376</series_animedb_id><series_title>Elfen Lied Special</series_title><series_synonyms>Elfen Lied OVA; Elfen Lied: In the Passing Rain</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-04-21</series_start><series_end>2005-04-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/80498.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916573</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>387</series_animedb_id><series_title>Haibane Renmei</series_title><series_synonyms>Charcoal Feather Federation; Haibane Renmei</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2002-10-10</series_start><series_end>2002-12-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/13134.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217214</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>416</series_animedb_id><series_title>Kurenai no Buta</series_title><series_synonyms>The Scarlet Pig; Porco Rosso</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1992-07-18</series_start><series_end>1992-07-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/2878.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>2016-07-12</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468358901</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>431</series_animedb_id><series_title>Howl no Ugoku Shiro</series_title><series_synonyms>; Howl's Moving Castle</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2004-11-20</series_start><series_end>2004-11-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/75810.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949960</my_last_updated><my_tags>Re-watched: 11</my_tags></anime><anime><series_animedb_id>433</series_animedb_id><series_title>Kumo no Mukou, Yakusoku no Basho</series_title><series_synonyms>Beyond the Clouds; The Promised Place; The Place Promised in Our Early Days</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2004-11-20</series_start><series_end>2004-11-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/433.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-06-19</my_start_date><my_finish_date>2012-06-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340064069</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>437</series_animedb_id><series_title>Perfect Blue</series_title><series_synonyms>; Perfect Blue</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1998-02-28</series_start><series_end>1998-02-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79127.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-14</my_start_date><my_finish_date>2015-05-14</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1431564294</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>457</series_animedb_id><series_title>Mushishi</series_title><series_synonyms>; Mushi-Shi</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2005-10-23</series_start><series_end>2006-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/73862.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-06-04</my_start_date><my_finish_date>2012-06-18</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1339975731</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>486</series_animedb_id><series_title>Kino no Tabi: The Beautiful World</series_title><series_synonyms>Kino's Travels: The Beautiful World; Kino's Journey</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2003-04-08</series_start><series_end>2003-07-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/14415.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358783039</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>512</series_animedb_id><series_title>Majo no Takkyuubin</series_title><series_synonyms>Witch's Express Delivery; Kiki's Delivery Service</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1989-07-29</series_start><series_end>1989-07-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75916.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949978</my_last_updated><my_tags>Re-watched: 6</my_tags></anime><anime><series_animedb_id>513</series_animedb_id><series_title>Tenkuu no Shiro Laputa</series_title><series_synonyms>Tenkuu no Shiro Rapyuta; Castle in the Sky</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1986-08-02</series_start><series_end>1986-08-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/37799.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949989</my_last_updated><my_tags>Re-watched: 8</my_tags></anime><anime><series_animedb_id>523</series_animedb_id><series_title>Tonari no Totoro</series_title><series_synonyms>My Neighbour Totoro; My Neighbor Totoro</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1988-04-16</series_start><series_end>1988-04-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75923.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-03-23</my_start_date><my_finish_date>2013-03-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1363999405</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>529</series_animedb_id><series_title>Saishuu Heiki Kanojo</series_title><series_synonyms>SaiKano; Saishuuheiki Kanojo: The Last Love Song on This Little Planet; She, The Ultimate Weapon</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2002-07-02</series_start><series_end>2002-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/529.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1371506520</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>572</series_animedb_id><series_title>Kaze no Tani no Nausicaä</series_title><series_synonyms>Nausicaa of the Valley of the Wind; Kaze no Tani no Nausicaa; Warriors of the Wind; Nausicaä of the Valley of the Wind</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1984-03-11</series_start><series_end>1984-03-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75914.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949837</my_last_updated><my_tags>Re-watched: 14</my_tags></anime><anime><series_animedb_id>578</series_animedb_id><series_title>Hotaru no Haka</series_title><series_synonyms>Tombstone for Fireflies; Grave of the Fireflies</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1988-04-16</series_start><series_end>1988-04-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75808.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-03</my_start_date><my_finish_date>2013-05-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367602055</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>585</series_animedb_id><series_title>Mimi wo Sumaseba</series_title><series_synonyms>If You Listen Carefully; Ghibli Movie 10; Whisper of the Heart</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>1995-07-15</series_start><series_end>1995-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75921.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-05-30</my_start_date><my_finish_date>2013-05-30</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1369950313</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>586</series_animedb_id><series_title>Ayakashi: Japanese Classic Horror</series_title><series_synonyms>Ayakashi - Samurai Horror Tales</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2006-01-13</series_start><series_end>2006-03-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/11746.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2016-07-26</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1469495193</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>597</series_animedb_id><series_title>Neko no Ongaeshi</series_title><series_synonyms>The Cat's Repayment; The Cat Returns</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-07-20</series_start><series_end>2002-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/597.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-08</my_start_date><my_finish_date>2016-07-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468019794</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>759</series_animedb_id><series_title>Tokyo Godfathers</series_title><series_synonyms>; Tokyo Godfathers</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2003-08-30</series_start><series_end>2003-08-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/759.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-07-11</my_start_date><my_finish_date>2015-07-11</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436636761</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>777</series_animedb_id><series_title>Hellsing Ultimate</series_title><series_synonyms>; Hellsing Ultimate</series_synonyms><series_type>2</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2006-02-10</series_start><series_end>2012-12-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/7333.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381344939</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>853</series_animedb_id><series_title>Ouran Koukou Host Club</series_title><series_synonyms>Ohran Koko Host Club; Ouran Koukou Hosutobu; Ouran Koukou Host Bu; OHSHC; Ouran High School Host Club</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2006-04-05</series_start><series_end>2006-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/71992.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333310092</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>934</series_animedb_id><series_title>Higurashi no Naku Koro ni</series_title><series_synonyms>When the Cicadas Cry; The Moment the Cicadas Cry; When They Cry</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2006-04-05</series_start><series_end>2006-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/19634.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-04-08</my_start_date><my_finish_date>2012-04-10</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1334082781</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>1033</series_animedb_id><series_title>Sennen Joyuu</series_title><series_synonyms>Chiyoko Millennial Actress; Sennen Joyuu Chiyoko; Millennium Actress</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2002-09-14</series_start><series_end>2002-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/1033.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-08</my_start_date><my_finish_date>2014-09-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410209906</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1140</series_animedb_id><series_title>Giniro no Kami no Agito</series_title><series_synonyms>Gin-iro no Kami no Agito; Silver-Haired Agito; Origin: Spirits of the Past</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-01-07</series_start><series_end>2006-01-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/83824.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-06-26</my_start_date><my_finish_date>2015-06-26</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1435359752</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1379</series_animedb_id><series_title>Kino no Tabi: Nanika wo Suru Tame ni - Life Goes On.</series_title><series_synonyms>Kino no Tabi: the Beautiful World - Life Goes On; Kino's Journey Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-02-19</series_start><series_end>2005-02-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73888.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450745162</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1535</series_animedb_id><series_title>Death Note</series_title><series_synonyms>DN; Death Note</series_synonyms><series_type>1</series_type><series_episodes>37</series_episodes><series_status>2</series_status><series_start>2006-10-04</series_start><series_end>2007-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/9453.jpg</series_image><my_id>0</my_id><my_watched_episodes>37</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1589</series_animedb_id><series_title>Bartender</series_title><series_synonyms>; Bartender</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2006-10-15</series_start><series_end>2006-12-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/67397.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1385934366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1689</series_animedb_id><series_title>Byousoku 5 Centimeter</series_title><series_synonyms>Five Centimeters Per Second; Byousoku 5 Centimeter - a chain of short stories about their distance; 5 Centimetres Per Second; 5 cm per second; 5 Centimeters Per Second</series_synonyms><series_type>3</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2007-03-03</series_start><series_end>2007-03-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/73426.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949194</my_last_updated><my_tags>Re-watched: 5</my_tags></anime><anime><series_animedb_id>1735</series_animedb_id><series_title>Naruto: Shippuuden</series_title><series_synonyms>Naruto Hurricane Chronicles; Naruto: Shippuden</series_synonyms><series_type>1</series_type><series_episodes>500</series_episodes><series_status>2</series_status><series_start>2007-02-15</series_start><series_end>2017-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/17407.jpg</series_image><my_id>0</my_id><my_watched_episodes>227</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1323299006</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1818</series_animedb_id><series_title>Claymore</series_title><series_synonyms>; Claymore</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2007-04-04</series_start><series_end>2007-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/21834.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948411</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1827</series_animedb_id><series_title>Seirei no Moribito</series_title><series_synonyms>Guardian of the Sacred Spirit; Moribito - Guardian of the Spirit</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2007-04-07</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/50337.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998963</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1829</series_animedb_id><series_title>Gedo Senki</series_title><series_synonyms>Ged Senki; Tales of Ged; Ged's War Chronicles; Tales from Earthsea</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-07-29</series_start><series_end>2006-07-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73443.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949935</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>1889</series_animedb_id><series_title>Higurashi no Naku Koro ni Kai</series_title><series_synonyms>Higurashi no Naku Koro ni 2; Higurashi no Naku Koro ni 2nd Series; Higurashi no Nakukoro ni 2nd Season; The Moment the Cicadas Cry 2; When They Cry: Kai</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2007-07-06</series_start><series_end>2007-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/14114.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-04-10</my_start_date><my_finish_date>2012-04-13</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1334345311</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>1943</series_animedb_id><series_title>Paprika</series_title><series_synonyms>; Paprika</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-11-25</series_start><series_end>2006-11-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/3627.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-14</my_start_date><my_finish_date>2014-09-14</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410719392</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2001</series_animedb_id><series_title>Tengen Toppa Gurren Lagann</series_title><series_synonyms>Tengen Toppa Gurren-Lagann; Making Break-Through Gurren Lagann; Heavenly Breakthrough Gurren Lagann; TTGL; Gurren Laggan; Gurren Lagann</series_synonyms><series_type>1</series_type><series_episodes>27</series_episodes><series_status>2</series_status><series_start>2007-04-01</series_start><series_end>2007-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/5123.jpg</series_image><my_id>0</my_id><my_watched_episodes>27</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948616</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2034</series_animedb_id><series_title>Lovely★Complex</series_title><series_synonyms>Love★Com; Love Com; Lovely Complex</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2007-04-07</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/75563.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421099993</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2167</series_animedb_id><series_title>Clannad</series_title><series_synonyms>; Clannad</series_synonyms><series_type>1</series_type><series_episodes>23</series_episodes><series_status>2</series_status><series_start>2007-10-05</series_start><series_end>2008-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/8498.jpg</series_image><my_id>0</my_id><my_watched_episodes>23</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325027226</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2236</series_animedb_id><series_title>Toki wo Kakeru Shoujo</series_title><series_synonyms>Toki wo Kakeru Shojo; TokiKake; Toki o Kakeru Shojo; The Girl Who Cut Time; The Little Girl Who Conquered Time; The Girl Who Leapt Through Time</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2006-07-15</series_start><series_end>2006-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1/2432.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948381</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2246</series_animedb_id><series_title>Mononoke</series_title><series_synonyms>; Mononoke</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2007-07-13</series_start><series_end>2007-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/20713.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-07-27</my_start_date><my_finish_date>2016-07-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1469840513</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2418</series_animedb_id><series_title>Stranger: Mukou Hadan</series_title><series_synonyms>; Sword of the Stranger</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-09-29</series_start><series_end>2007-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/87066.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-06-01</my_start_date><my_finish_date>2013-06-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370109942</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2472</series_animedb_id><series_title>Naruto: Shippuuden Movie 1</series_title><series_synonyms>Naruto Shippuuden Movie; Naruto Movie 4; Gekijouban Naruto Shippuuden; Naruto: Shippuden the Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-08-04</series_start><series_end>2007-08-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/79705.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350947</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2593</series_animedb_id><series_title>Kara no Kyoukai 1: Fukan Fuukei</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 1; Borderline of Emptiness: Overlooking View; The Garden of Sinners: Thanatos; the Garden of sinners Chapter 1: Overlooking View</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-12-01</series_start><series_end>2007-12-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/21741.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413732582</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2594</series_animedb_id><series_title>Piano no Mori</series_title><series_synonyms>The Perfect World of Kai; Piano Forest</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-07-21</series_start><series_end>2007-07-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/45012.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-22</my_start_date><my_finish_date>2015-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450754882</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2759</series_animedb_id><series_title>Evangelion: 1.0 You Are (Not) Alone</series_title><series_synonyms>Evangelion Shin Gekijouban: Jo; Rebuild of Evangelion: 1.0 You Are (Not) Alone; Evangelion: 1.01 You Are (Not) Alone; Evangelion: 1.11 You Are (Not) Alone; Evangelion: 1.0 You Are (Not) Alone</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-09-01</series_start><series_end>2007-09-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/74975.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-13</my_start_date><my_finish_date>2016-07-13</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468435268</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>2890</series_animedb_id><series_title>Gake no Ue no Ponyo</series_title><series_synonyms>Ponyo on the Cliff by the Sea; Ponyo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-07-19</series_start><series_end>2008-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/8970.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322950006</my_last_updated><my_tags>Re-watched: 3</my_tags></anime><anime><series_animedb_id>2924</series_animedb_id><series_title>ef: A Tale of Memories.</series_title><series_synonyms>; ef - a tale of memories.</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2007-10-07</series_start><series_end>2007-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/50411.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-12-26</my_start_date><my_finish_date>2016-01-03</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451845799</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>2966</series_animedb_id><series_title>Ookami to Koushinryou</series_title><series_synonyms>Ookami to Koushinryou; Spice and Wolf</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-01-09</series_start><series_end>2008-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/59401.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948765</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>3087</series_animedb_id><series_title>Cencoroll</series_title><series_synonyms>Cencoroll</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-28</series_start><series_end>2009-07-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/75930.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-25</my_start_date><my_finish_date>2015-12-25</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451074439</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3092</series_animedb_id><series_title>Junjou Romantica</series_title><series_synonyms>Junjyou Romantica; Junjou Romantica: Pure Romance; Junjo Romantica</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-04-11</series_start><series_end>2008-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/8811.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949119</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3231</series_animedb_id><series_title>Gunslinger Girl: Il Teatrino</series_title><series_synonyms>Gunslinger Girl 2nd Season; Gunslinger Girl Second; Gunslinger Girl: Il Teatrino</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-01-07</series_start><series_end>2008-04-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/16697.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-04-01</my_start_date><my_finish_date>2012-04-05</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333644904</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3342</series_animedb_id><series_title>Mnemosyne: Mnemosyne no Musume-tachi</series_title><series_synonyms>Mnemosyne: Daughters of Mnemosyne; Rin: Daughters of Mnemosyne</series_synonyms><series_type>1</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2008-02-04</series_start><series_end>2008-07-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/10918.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524869913</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3466</series_animedb_id><series_title>Kino no Tabi: The Beautiful World - Tou no Kuni</series_title><series_synonyms>Kino no Tabi: Tower Country/Free Lance; Kino's Travels; Kino no Tabi Episode 00; Kino's Journey: Tower Country</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2005-10-19</series_start><series_end>2005-10-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/62873.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-06</my_start_date><my_finish_date>2014-10-06</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412619774</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3588</series_animedb_id><series_title>Soul Eater</series_title><series_synonyms>; Soul Eater</series_synonyms><series_type>1</series_type><series_episodes>51</series_episodes><series_status>2</series_status><series_start>2008-04-07</series_start><series_end>2009-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/7804.jpg</series_image><my_id>0</my_id><my_watched_episodes>51</my_watched_episodes><my_start_date>2013-06-10</my_start_date><my_finish_date>2013-06-16</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1371346545</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3615</series_animedb_id><series_title>Neo Angelique Abyss</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-04-07</series_start><series_end>2008-06-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/20960.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947757</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3652</series_animedb_id><series_title>Higurashi no Naku Koro ni Rei</series_title><series_synonyms>Higurashi no Naku Koro ni 3rd Season; Higurashi no Naku Koro ni Dai San Ki; When They Cry: Rei</series_synonyms><series_type>2</series_type><series_episodes>5</series_episodes><series_status>2</series_status><series_start>2009-02-25</series_start><series_end>2009-08-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/14113.jpg</series_image><my_id>0</my_id><my_watched_episodes>5</my_watched_episodes><my_start_date>2012-05-04</my_start_date><my_finish_date>2012-05-06</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1336345101</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3782</series_animedb_id><series_title>Kara no Kyoukai 2: Satsujin Kousatsu (Zen)</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 2; Borderline of Emptiness: Murder Speculation; The Garden of Sinners: A Study in Murder; The Garden of Sinners: …and nothing heart.; the Garden of sinners Chapter 2: Murder Speculation Part A</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-12-29</series_start><series_end>2007-12-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/21737.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413740989</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3783</series_animedb_id><series_title>Kara no Kyoukai 3: Tsuukaku Zanryuu</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 3; Borderline of Emptiness: Remaining Sense of Pain; The Garden of Sinners: ever cry, never life; the Garden of sinners Chapter 3: Remaining Sense of Pain</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-02-09</series_start><series_end>2008-02-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/21735.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413744979</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3784</series_animedb_id><series_title>Evangelion: 2.0 You Can (Not) Advance</series_title><series_synonyms>Evangelion Shin Gekijouban: Ha; Rebuild of Evangelion: 2.0 You Can (Not) Advance; Evangelion 2.22; Evangelion: 2.0 You Can (Not) Advance</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-27</series_start><series_end>2009-07-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/74983.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-16</my_start_date><my_finish_date>2016-07-16</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468709773</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3785</series_animedb_id><series_title>Evangelion: 3.0 You Can (Not) Redo</series_title><series_synonyms>Evangelion Shin Gekijouban: Kyuu; Rebuild of Evangelion: 3.0; Evangelion: 3.0 Q Quickening; Evangelion 3.33; Evangelion: 3.0 You Can (Not) Redo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-11-17</series_start><series_end>2012-11-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/43201.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467483023</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>3786</series_animedb_id><series_title>Evangelion: 3.0+1.0</series_title><series_synonyms>Evangelion: 4.0; Rebuild of Evangelion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/70371.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467580636</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4059</series_animedb_id><series_title>Clannad: Mou Hitotsu no Sekai, Tomoyo-hen</series_title><series_synonyms>Clannad OVA; Clannad: Another World, Tomoyo Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-07-16</series_start><series_end>2008-07-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/19620.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419723609</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4081</series_animedb_id><series_title>Natsume Yuujinchou</series_title><series_synonyms>Natsume Yujincho; Natsume Yujin-cho; Natsume's Book of Friends</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-07-08</series_start><series_end>2008-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/28859.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-07-19</my_start_date><my_finish_date>2017-12-16</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1513392985</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4181</series_animedb_id><series_title>Clannad: After Story</series_title><series_synonyms>; Clannad ~After Story~</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2008-10-03</series_start><series_end>2009-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/24647.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325801178</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>4280</series_animedb_id><series_title>Kara no Kyoukai 4: Garan no Dou</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 4; Borderline of Emptiness: The Hollow Shrine; The Garden of Sinners: garan-no-dou; the Garden of sinners Chapter 4: The Hollow Shrine</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-05-24</series_start><series_end>2008-05-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/21736.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-10-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413750950</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4282</series_animedb_id><series_title>Kara no Kyoukai 5: Mujun Rasen</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 5; Borderline of Emptiness: Paradox Spiral; The Garden of Sinners: Paradox Paradigm; the Garden of sinners Chapter 5: Paradox Paradigm</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-08-16</series_start><series_end>2008-08-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/9246.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-21</my_start_date><my_finish_date>2014-10-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413921160</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4437</series_animedb_id><series_title>Naruto: Shippuuden Movie 2 - Kizuna</series_title><series_synonyms>Naruto Movie 5; Naruto Shippuuden Movie 2; Naruto Shippuuden: Bonds; Naruto: Shippuden the Movie 2 -Bonds-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-08-02</series_start><series_end>2008-08-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/17830.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350910</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4662</series_animedb_id><series_title>Neo Angelique Abyss: Second Age</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2008-07-07</series_start><series_end>2008-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/27592.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947768</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4789</series_animedb_id><series_title>ef: A Tale of Melodies.</series_title><series_synonyms>ef: A Tale of Memories Second Season; ef: A Tale of Memories 2nd Season; ef - a tale of melodies.</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-10-07</series_start><series_end>2008-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/50519.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-01-03</my_start_date><my_finish_date>2016-01-07</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1452205353</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>4814</series_animedb_id><series_title>Junjou Romantica 2</series_title><series_synonyms>Junjou Romantica Second Season; Junjyou Romantica II; Junjo Romantica 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2008-10-12</series_start><series_end>2008-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/38417.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949150</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4896</series_animedb_id><series_title>Umineko no Naku Koro ni</series_title><series_synonyms>When They Cry 3; When the Seagulls Cry; When They Cry: Seagulls; Umineko: When They Cry</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2009-07-02</series_start><series_end>2009-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/17709.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2011-12-05</my_start_date><my_finish_date>2011-12-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1323551848</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>4898</series_animedb_id><series_title>Kuroshitsuji</series_title><series_synonyms>Kuro Shitsuji; Kuroshitsuzi; Black Butler</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2008-10-03</series_start><series_end>2009-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/27013.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948917</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5081</series_animedb_id><series_title>Bakemonogatari</series_title><series_synonyms>Ghostory; Bakemonogatari</series_synonyms><series_type>1</series_type><series_episodes>15</series_episodes><series_status>2</series_status><series_start>2009-07-03</series_start><series_end>2010-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/75274.jpg</series_image><my_id>0</my_id><my_watched_episodes>5</my_watched_episodes><my_start_date>2013-01-25</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1377715295</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5084</series_animedb_id><series_title>Mai Mai Shinko to Sennen no Mahou</series_title><series_synonyms>Mai Mai Shinko and the Millennium-Old Magic; Mai-Mai Miracle</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-15</series_start><series_end>2009-08-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/82870.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-10</my_start_date><my_finish_date>2014-05-10</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399682400</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5114</series_animedb_id><series_title>Fullmetal Alchemist: Brotherhood</series_title><series_synonyms>Hagane no Renkinjutsushi: Fullmetal Alchemist; Fullmetal Alchemist (2009); FMA; Fullmetal Alchemist: Brotherhood</series_synonyms><series_type>1</series_type><series_episodes>64</series_episodes><series_status>2</series_status><series_start>2009-04-05</series_start><series_end>2010-07-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/47421.jpg</series_image><my_id>0</my_id><my_watched_episodes>64</my_watched_episodes><my_start_date>2014-06-28</my_start_date><my_finish_date>2014-06-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404167827</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5204</series_animedb_id><series_title>Kara no Kyoukai 6: Boukyaku Rokuon</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 6; Borderline of Emptiness: Oblivion Recording; The Garden of Sinners: Fairy Tale; the Garden of sinners Chapter 6: Oblivion Recording</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-12-20</series_start><series_end>2008-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/21739.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-23</my_start_date><my_finish_date>2014-10-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414092854</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5205</series_animedb_id><series_title>Kara no Kyoukai 7: Satsujin Kousatsu (Kou)</series_title><series_synonyms>Kara no Kyoukai: The Garden of Sinners Movie 7; Borderline of Emptiness: Murder Speculation (Part 2); The Garden of Sinners: ...not nothing heart; the Garden of sinners Chapter 7: Murder Speculation Part B</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-08</series_start><series_end>2009-08-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/56619.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-25</my_start_date><my_finish_date>2014-10-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414276623</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5300</series_animedb_id><series_title>Zoku Natsume Yuujinchou</series_title><series_synonyms>Natsume Yuujinchou Two; Natsume Yuujinchou 2; Natsume Yujincho 2; Natsume's Book of Friends Season 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2009-01-06</series_start><series_end>2009-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79738.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217095</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5341</series_animedb_id><series_title>Ookami to Koushinryou II</series_title><series_synonyms>Ookami to Koushinryou 2nd Season; Spice and Wolf 2nd Season; Spice and Wolf II</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-07-09</series_start><series_end>2009-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/59399.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948798</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>5365</series_animedb_id><series_title>Tsumiki no Ie</series_title><series_synonyms>The House of Small Cubes; La Maison en Petits Cubes</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-06-10</series_start><series_end>2008-06-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/13357.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-21</my_start_date><my_finish_date>2012-09-21</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1348303716</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5630</series_animedb_id><series_title>Higashi no Eden</series_title><series_synonyms>Higashi no Eden; Eden of The East</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2009-04-10</series_start><series_end>2009-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/15033.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1330638625</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>5681</series_animedb_id><series_title>Summer Wars</series_title><series_synonyms>; Summer Wars</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-01</series_start><series_end>2009-08-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/15796.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-04-22</my_start_date><my_finish_date>2013-04-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1366589546</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6007</series_animedb_id><series_title>Ookami to Koushinryou II: Ookami to Kohakuiro no Yuuutsu</series_title><series_synonyms>Ookami to Koushinryou 2 OVA Episode 0; Spice and Wolf 2 OVA Episode 0; Spice and Wolf II OVA Episode 0; Spice and Wolf II: The Wolf and the Amber Melancholy</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-04-30</series_start><series_end>2009-04-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/13070.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916832</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6045</series_animedb_id><series_title>Kimi ni Todoke</series_title><series_synonyms>Reaching You; Kimi ni Todoke: From Me to You</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2009-10-07</series_start><series_end>2010-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/17890.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947818</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6046</series_animedb_id><series_title>Tales of Vesperia: The First Strike</series_title><series_synonyms>; Tales of Vesperia ~The First Strike~</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-10-03</series_start><series_end>2009-10-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/16680.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948673</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>6205</series_animedb_id><series_title>Kämpfer</series_title><series_synonyms>Kampfer; Kaempfer; Kämpfer</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-10-02</series_start><series_end>2009-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/35423.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948047</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6211</series_animedb_id><series_title>Tokyo Magnitude 8.0</series_title><series_synonyms>; Tokyo Magnitude 8.0</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2009-07-10</series_start><series_end>2009-09-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/13776.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-10</my_start_date><my_finish_date>2015-07-11</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436623294</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6325</series_animedb_id><series_title>Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono</series_title><series_synonyms>Naruto Shippuuden: Gekijouban Naruto Shippuuden: Hi no Ishi o Tsugu Mono; Naruto Shippuuden Movie 3; Naruto Movie 6; Naruto Shippuuden 3: Inheritors of Will of Fire</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-08-01</series_start><series_end>2009-08-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/14686.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350888</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6351</series_animedb_id><series_title>Clannad: After Story - Mou Hitotsu no Sekai, Kyou-hen</series_title><series_synonyms>Clannad: After Story OVA; Clannad ~After Story~: Another World, Kyou Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-07-01</series_start><series_end>2009-07-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/19621.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419723638</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6361</series_animedb_id><series_title>ef: A Tale of Memories. - Prologue</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-08-24</series_start><series_end>2007-08-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/26046.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-26</my_start_date><my_finish_date>2015-12-26</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451163627</my_last_updated><my_tags>testr 1, test2</my_tags></anime><anime><series_animedb_id>6401</series_animedb_id><series_title>ef: A Tale of Melodies. - Prologue</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2008-05-10</series_start><series_end>2008-05-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/25650.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-01-07</my_start_date><my_finish_date>2016-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466348147</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6408</series_animedb_id><series_title>"Bungaku Shoujo" Movie</series_title><series_synonyms>Book Girl; Literature Girl</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-05-01</series_start><series_end>2010-05-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/81162.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-12-23</my_start_date><my_finish_date>2015-12-23</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1450843949</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6547</series_animedb_id><series_title>Angel Beats!</series_title><series_synonyms>; Angel Beats!</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2010-04-03</series_start><series_end>2010-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/22061.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2012-06-23</my_start_date><my_finish_date>2012-06-24</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340552700</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6594</series_animedb_id><series_title>Katanagatari</series_title><series_synonyms>Sword Story; Katanagatari</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2010-01-26</series_start><series_end>2010-12-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/50023.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948737</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6624</series_animedb_id><series_title>Kara no Kyoukai Remix: Gate of Seventh Heaven</series_title><series_synonyms>The Garden of Sinners: Gate of Seventh Heaven; the Garden of sinners Remix -Gate of seventh heaven-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-03-14</series_start><series_end>2009-03-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/15175.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1515030854</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6707</series_animedb_id><series_title>Kuroshitsuji II</series_title><series_synonyms>Kuroshitsuji 2; Black Butler 2; Black Butler II</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2010-07-02</series_start><series_end>2010-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/25464.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948938</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6746</series_animedb_id><series_title>Durarara!!</series_title><series_synonyms>Dhurarara!!; Dyurarara!!; Dulalala!!; Dullalala!!; DRRR!!; Durarara!!</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2010-01-08</series_start><series_end>2010-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/71772.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2013-08-05</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1375747222</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6793</series_animedb_id><series_title>Kuroshitsuji: Sono Shitsuji, Kougyou</series_title><series_synonyms>Kuroshitsuji Special; Black Butler Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2009-09-30</series_start><series_end>2009-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/21336.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916941</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6922</series_animedb_id><series_title>Fate/stay night Movie: Unlimited Blade Works</series_title><series_synonyms>Gekijouban Fate/Stay Night: Unlimited Blade Works; Fate/stay night Movie; Fate/stay night UBW; Fate/stay night: Unlimited Blade Works</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-01-23</series_start><series_end>2010-01-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/80350.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948200</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>6954</series_animedb_id><series_title>Kara no Kyoukai 8: Shuushou</series_title><series_synonyms>Kara no Kyoukai: Epilogue; The Garden of Sinners Epilogue; The Garden of Sinners: the Garden of Sinners; the Garden of sinners Chapter 8: The Final Chapter</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-02-02</series_start><series_end>2011-02-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/52557.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-29</my_start_date><my_finish_date>2014-10-29</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414599966</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7059</series_animedb_id><series_title>Black★Rock Shooter (OVA)</series_title><series_synonyms>BRS OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-24</series_start><series_end>2010-07-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/22417.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948469</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7193</series_animedb_id><series_title>Aoi Bungaku Series</series_title><series_synonyms>Blue Literature</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2009-10-11</series_start><series_end>2009-12-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/17471.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-06-27</my_start_date><my_finish_date>2016-07-03</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467506005</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7465</series_animedb_id><series_title>Eve no Jikan (Movie)</series_title><series_synonyms>Eve's Time; Eve no Jikan 1st Season Complete Edition; Gekijouban Eve no Jikan; Time of Eve</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-03-06</series_start><series_end>2010-03-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/27711.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411256250</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>7711</series_animedb_id><series_title>Karigurashi no Arrietty</series_title><series_synonyms>Karigurashi no Arrietti; The Borrower Arrietty; The Secret World of Arrietty</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-17</series_start><series_end>2010-07-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/75905.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949908</my_last_updated><my_tags>Re-watched: 4</my_tags></anime><anime><series_animedb_id>8100</series_animedb_id><series_title>Mardock Scramble: The First Compression</series_title><series_synonyms>Mardock Scramble: Asshuku; Mardock Scramble: The First Compression</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-10-08</series_start><series_end>2010-10-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/26215.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-29</my_start_date><my_finish_date>2016-03-29</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389841</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8115</series_animedb_id><series_title>Uchuu Show e Youkoso</series_title><series_synonyms>Uchu Show e Youkoso; Welcome to THE SPACE SHOW</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-02-18</series_start><series_end>2010-02-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/20085.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-02-15</my_start_date><my_finish_date>2014-02-15</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1392425892</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8142</series_animedb_id><series_title>Colorful (Movie)</series_title><series_synonyms>Colourful; Colorful The Motion Picture</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-08-21</series_start><series_end>2010-08-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/29497.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-06-03</my_start_date><my_finish_date>2013-06-03</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217052</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8246</series_animedb_id><series_title>Naruto: Shippuuden Movie 4 - The Lost Tower</series_title><series_synonyms>Naruto Movie 7; Gekijouban Naruto Shippuuden: The Lost Tower</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2010-07-31</series_start><series_end>2010-07-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/23344.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1326350976</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>8425</series_animedb_id><series_title>Gosick</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2011-01-08</series_start><series_end>2011-07-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/27906.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322947941</my_last_updated><my_tags>Re-watched: 4</my_tags></anime><anime><series_animedb_id>8915</series_animedb_id><series_title>Dantalian no Shoka</series_title><series_synonyms>Bibliotheca Mystica de Dantalian; Dantalian's Bookshelf; The Mystic Archives of Dantalian</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-07-16</series_start><series_end>2011-10-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/52683.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949492</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>9055</series_animedb_id><series_title>Tamayura</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>4</series_episodes><series_status>2</series_status><series_start>2010-09-06</series_start><series_end>2010-12-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/28362.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>2013-08-28</my_start_date><my_finish_date>2013-09-28</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380326488</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9253</series_animedb_id><series_title>Steins;Gate</series_title><series_synonyms>; Steins;Gate</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2011-04-06</series_start><series_end>2011-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/73199.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-06-24</my_start_date><my_finish_date>2012-07-10</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1341949776</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9479</series_animedb_id><series_title>Coppelion</series_title><series_synonyms>; Coppelion</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-10-02</series_start><series_end>2013-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75543.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-10-02</my_start_date><my_finish_date>2013-12-29</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388286326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9488</series_animedb_id><series_title>Cencoroll 2</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/60379.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1451074413</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9656</series_animedb_id><series_title>Kimi ni Todoke 2nd Season</series_title><series_synonyms>Kimi ni Todoke: From Me to You 2nd Season; Reaching You 2nd Season; Kimi ni Todoke: From Me To You 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-01-12</series_start><series_end>2011-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/27174.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411423735</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9756</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica</series_title><series_synonyms>Mahou Shoujo Madoka Magika; Magical Girl Madoka Magica; Puella Magi Madoka Magica</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-01-07</series_start><series_end>2011-04-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/55225.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-08-18</my_start_date><my_finish_date>2012-08-20</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1345503576</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9760</series_animedb_id><series_title>Hoshi wo Ou Kodomo</series_title><series_synonyms>Children who Chase Lost Voices from Deep Below; Journey to Agartha; Children Who Chase Lost Voices</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-05-07</series_start><series_end>2011-05-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/29684.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-06-28</my_start_date><my_finish_date>2012-06-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340915937</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>9919</series_animedb_id><series_title>Ao no Exorcist</series_title><series_synonyms>Ao no Futsumashi; Blue Exorcist</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-04-17</series_start><series_end>2011-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/75195.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322948704</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9926</series_animedb_id><series_title>Sekaiichi Hatsukoi</series_title><series_synonyms>Sekai-ichi Hatsukoi; Sekai'ichi Hatsukoi; World's Greatest First Love; Sekai Ichi Hatsukoi - World's Greatest First Love</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-04-09</series_start><series_end>2011-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/29763.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949011</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9938</series_animedb_id><series_title>Ikoku Meiro no Croisée The Animation</series_title><series_synonyms>Ikoku Meiro no Croisee The Animation; La croisée dans un labyrinthe étranger Special; Croisée in a Foreign Labyrinth The Animation</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-07-04</series_start><series_end>2011-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/74051.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-02-06</my_start_date><my_finish_date>2012-02-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1328744415</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9981</series_animedb_id><series_title>Phi Brain: Kami no Puzzle</series_title><series_synonyms>Phi Φ Brain: Kami no Puzzle; Phi-Brain ~ Puzzle of God</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-10-02</series_start><series_end>2012-04-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/34045.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-06-20</my_start_date><my_finish_date>2012-06-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340392563</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>9989</series_animedb_id><series_title>Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.</series_title><series_synonyms>AnoHana; We Still Don't Know the Name of the Flower We Saw That Day.; anohana: The Flower We Saw That Day</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-04-15</series_start><series_end>2011-06-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/79697.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2013-01-03</my_start_date><my_finish_date>2013-01-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1357341761</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10029</series_animedb_id><series_title>Coquelicot-zaka kara</series_title><series_synonyms>Kokurikozaka kara; Kokuriko-saka kara; Kokuriko-zaka kara; Coquelicot Saka kara; From Up on Poppy Hill</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-07-16</series_start><series_end>2011-07-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/32547.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-01-12</my_start_date><my_finish_date>2013-01-12</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1358010512</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10087</series_animedb_id><series_title>Fate/Zero</series_title><series_synonyms>; Fate/Zero</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-10-02</series_start><series_end>2011-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/73249.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2011-10-02</my_start_date><my_finish_date>2012-01-05</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1325801182</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10152</series_animedb_id><series_title>Kimi ni Todoke 2nd Season: Kataomoi</series_title><series_synonyms>Kimi ni Todoke 2nd Season Episode 00; Unrequited Love; Kimi ni Todoke Recap; Kimi ni Todoke - From Me To You Season 2 – A Crush</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-01-05</series_start><series_end>2011-01-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/28011.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-21</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411326851</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10161</series_animedb_id><series_title>No.6</series_title><series_synonyms>Number Six; Number 6; No. Six; No. 6</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-07-08</series_start><series_end>2011-09-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/29759.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1322949330</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10162</series_animedb_id><series_title>Usagi Drop</series_title><series_synonyms>Usagi Drop; Bunny Drop</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2011-07-08</series_start><series_end>2011-09-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/29665.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2012-01-31</my_start_date><my_finish_date>2012-02-05</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1328467444</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10165</series_animedb_id><series_title>Nichijou</series_title><series_synonyms>Everyday; Nichijou - My Ordinary Life</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2011-04-03</series_start><series_end>2011-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/75617.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2015-07-05</my_start_date><my_finish_date>2015-07-09</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436465927</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>10357</series_animedb_id><series_title>Jinrui wa Suitai Shimashita</series_title><series_synonyms>Jintai; Humanity Has Declined</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-07-02</series_start><series_end>2012-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/45704.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-03-17</my_start_date><my_finish_date>2014-03-18</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395175824</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>10379</series_animedb_id><series_title>Natsume Yuujinchou San</series_title><series_synonyms>Natsume Yuujinchou Three; Natsume Yuujinchou 3; Natsume Yujincho 3; Natsume's Book of Friends Season 3</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-07-05</series_start><series_end>2011-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/82394.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217102</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10389</series_animedb_id><series_title>Momo e no Tegami</series_title><series_synonyms>Momo e no Tegami; A Letter to Momo</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-10</series_start><series_end>2011-09-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/43557.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-03-17</my_start_date><my_finish_date>2014-03-17</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395023169</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10408</series_animedb_id><series_title>Hotarubi no Mori e</series_title><series_synonyms>Into the Forest of Fireflies' Light; The Light of a Firefly Forest</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-17</series_start><series_end>2011-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/38229.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-19</my_start_date><my_finish_date>2012-09-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1348083288</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10460</series_animedb_id><series_title>Kimi to Boku.</series_title><series_synonyms>Kimi to Boku.; You and Me.</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2011-10-04</series_start><series_end>2011-12-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/34949.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411424544</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10620</series_animedb_id><series_title>Mirai Nikki (TV)</series_title><series_synonyms>Mirai Nikki; Mirai Nikki (2011); The Future Diary</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2011-10-09</series_start><series_end>2012-04-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/33465.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2012-06-03</my_start_date><my_finish_date>2012-06-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1338767619</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10624</series_animedb_id><series_title>Mardock Scramble: The Second Combustion</series_title><series_synonyms>; Mardock Scramble: The Second Combustion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-09-03</series_start><series_end>2011-09-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/29197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-30</my_start_date><my_finish_date>2016-03-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389874</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10793</series_animedb_id><series_title>Guilty Crown</series_title><series_synonyms>GUILTY CROWN; Guilty Crown</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2011-10-14</series_start><series_end>2012-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/33713.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2013-09-28</my_start_date><my_finish_date>2013-10-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380748115</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10800</series_animedb_id><series_title>Chihayafuru</series_title><series_synonyms>Chihayafull; Chihayafuru</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2011-10-05</series_start><series_end>2012-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/35749.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-01</my_start_date><my_finish_date>2014-01-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389296981</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>10863</series_animedb_id><series_title>Steins;Gate: Oukoubakko no Poriomania</series_title><series_synonyms>Steins;Gate Special; Steins;Gate: Egoistic Poriomania</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-02-22</series_start><series_end>2012-02-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/36531.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-12-25</my_start_date><my_finish_date>2013-12-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388007249</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11111</series_animedb_id><series_title>Another</series_title><series_synonyms>; Another</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-01-10</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75509.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-06-22</my_start_date><my_finish_date>2012-06-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340459890</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11123</series_animedb_id><series_title>Sekaiichi Hatsukoi 2</series_title><series_synonyms>Sekai-ichi Hatsukoi 2; Sekai'ichi Hatsukoi 2; Sekai Ichi Hatsukoi - World's Greatest First Love 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2011-10-08</series_start><series_end>2011-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/34871.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404291769</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11285</series_animedb_id><series_title>Black★Rock Shooter (TV)</series_title><series_synonyms>BRS (TV); Black Rock Shooter</series_synonyms><series_type>1</series_type><series_episodes>8</series_episodes><series_status>2</series_status><series_start>2012-02-03</series_start><series_end>2012-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/53909.jpg</series_image><my_id>0</my_id><my_watched_episodes>8</my_watched_episodes><my_start_date>2012-04-02</my_start_date><my_finish_date>2012-04-02</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1333382166</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11433</series_animedb_id><series_title>Ano Natsu de Matteru</series_title><series_synonyms>; Waiting in the Summer</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-01-10</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/59405.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-08</my_start_date><my_finish_date>2014-08-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1409264900</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11577</series_animedb_id><series_title>Steins;Gate Movie: Fuka Ryouiki no Déjà vu</series_title><series_synonyms>Steins Gate Movie; Steins;Gate: The Movie − Load Region of Déjà Vu</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-04-20</series_start><series_end>2013-04-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/50317.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-12-25</my_start_date><my_finish_date>2013-12-25</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388005109</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11665</series_animedb_id><series_title>Natsume Yuujinchou Shi</series_title><series_synonyms>Natsume Yuujinchou Four; Natsume Yuujinchou 4; Natsume Yujincho 4; Natsume's Book of Friends Season 4</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-01-03</series_start><series_end>2012-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/37449.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1370217114</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11701</series_animedb_id><series_title>Another: The Other - Inga</series_title><series_synonyms>Another 00; Another: The Other -Inga-; Another OAD; Another OVA; Another: The Other</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-05-26</series_start><series_end>2012-05-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/42051.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516916719</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11705</series_animedb_id><series_title>Dragon Age: Blood Mage no Seisen</series_title><series_synonyms>; Dragon Age: Dawn of the Seeker</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-02-11</series_start><series_end>2012-02-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1238/90707.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-08-04</my_start_date><my_finish_date>2012-08-04</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1344036559</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11737</series_animedb_id><series_title>Ao no Exorcist Movie</series_title><series_synonyms>Ao no Exorcist Gekijouban; Ao no Futsumashi Movie; Blue Exorcist Movie; Blue Exorcist The Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-12-28</series_start><series_end>2012-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/42005.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-08</my_start_date><my_finish_date>2014-05-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399586167</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11739</series_animedb_id><series_title>Kimi to Boku. 2</series_title><series_synonyms>You and Me. Second Season; Kimi to Boku. 2nd Season; You and Me 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-04-03</series_start><series_end>2012-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/42107.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411424551</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11741</series_animedb_id><series_title>Fate/Zero 2nd Season</series_title><series_synonyms>Fate/Zero Second Season; Fate/Zero Season 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-04-08</series_start><series_end>2012-06-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/41125.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2012-04-22</my_start_date><my_finish_date>2012-06-24</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1340554495</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11757</series_animedb_id><series_title>Sword Art Online</series_title><series_synonyms>S.A.O; SAO; Sword Art Online</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39717.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-12-25</my_start_date><my_finish_date>2012-12-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1356554455</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>11759</series_animedb_id><series_title>Accel World</series_title><series_synonyms>Accelerated World; Accel World</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2012-04-07</series_start><series_end>2012-09-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/38155.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2012-12-26</my_start_date><my_finish_date>2012-12-28</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1356656730</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11887</series_animedb_id><series_title>Kokoro Connect</series_title><series_synonyms>Kokoroco; Kokoro Connect</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/39665.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-06-04</my_start_date><my_finish_date>2016-06-12</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465766889</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>11977</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 1: Hajimari no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 1; Magical Girl Madoka Magica Movie 1; Puella Magi Madoka Magica the Movie Part 1: Beginnings</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-10-06</series_start><series_end>2012-10-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/42331.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-12</my_start_date><my_finish_date>2013-10-12</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381609624</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>11979</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 2: Eien no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 2; Magical Girl Madoka Magica Movie 2; Puella Magi Madoka Magica the Movie Part 2: Eternal</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-10-13</series_start><series_end>2012-10-13</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/42265.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-13</my_start_date><my_finish_date>2013-10-13</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1381619325</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>11981</series_animedb_id><series_title>Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari</series_title><series_synonyms>Mahou Shoujo Madoka Magika Movie 3; Magical Girl Madoka Magica Movie 3; Puella Magi Madoka Magica the Movie: Rebellion</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-10-26</series_start><series_end>2013-10-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/54231.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-05-05</my_start_date><my_finish_date>2014-05-05</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399298340</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12053</series_animedb_id><series_title>Mardock Scramble: The Third Exhaust</series_title><series_synonyms>; Mardock Scramble: The Third Exhaust</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-09-29</series_start><series_end>2012-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/39309.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-31</my_start_date><my_finish_date>2016-03-31</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459389901</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12189</series_animedb_id><series_title>Hyouka</series_title><series_synonyms>Hyou-ka; Hyouka: You can't escape; Hyou-ka: You can't escape; Hyoka; Hyouka</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2012-04-23</series_start><series_end>2012-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/50521.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2012-12-28</my_start_date><my_finish_date>2013-01-02</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1402327883</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12355</series_animedb_id><series_title>Ookami Kodomo no Ame to Yuki</series_title><series_synonyms>The Wolf Children Ame and Yuki; Wolf Children</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-21</series_start><series_end>2012-07-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/35721.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-03-31</my_start_date><my_finish_date>2013-03-31</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1364758144</my_last_updated><my_tags>Re-watched: 5</my_tags></anime><anime><series_animedb_id>12445</series_animedb_id><series_title>Tasogare Otome x Amnesia</series_title><series_synonyms>Tasogare Otome x Amnesia; Dusk Maiden of Amnesia</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-04-09</series_start><series_end>2012-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/64435.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-05-22</my_start_date><my_finish_date>2015-05-22</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432336332</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12477</series_animedb_id><series_title>Sakasama no Patema</series_title><series_synonyms>Sakasama no Patema; Patema Inverted</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-11-09</series_start><series_end>2013-11-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/52415.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-06</my_start_date><my_finish_date>2014-09-06</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410017329</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>12565</series_animedb_id><series_title>Fate/Prototype</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2011-12-31</series_start><series_end>2011-12-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/51045.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-01-06</my_start_date><my_finish_date>2013-01-06</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1357490485</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12753</series_animedb_id><series_title>Phi Brain: Kami no Puzzle - Orpheus Order-hen</series_title><series_synonyms>Phi Brain: Kami no Puzzle Dai 2 Series; Phi Φ Brain: Kami no Puzzle Second Season; Phi Brain: Kami no Puzzle 2nd Season; Phi-Brain ~ Puzzle of God: The Orpheus Order</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-04-08</series_start><series_end>2012-09-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39033.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2012-10-26</my_start_date><my_finish_date>2012-10-31</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1351648101</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>12879</series_animedb_id><series_title>Dantalian no Shoka: Ibarahime</series_title><series_synonyms>Bibliotheca Mystica de Dantalian: Ibarahime; Dantalian's Bookshelf: Ibarahime; The Mystic Archives of Dantalian: Ibarahime</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-08-09</series_start><series_end>2012-08-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/46959.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2012-09-02</my_start_date><my_finish_date>2012-09-02</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1346621326</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13125</series_animedb_id><series_title>Shinsekai yori</series_title><series_synonyms>Shin Sekai yori; From the New World</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-09-29</series_start><series_end>2013-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/36775.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-05-10</my_start_date><my_finish_date>2014-05-13</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1399996698</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13411</series_animedb_id><series_title>Guilty Crown: Lost Christmas</series_title><series_synonyms>; Guilty Crown: Lost Christmas</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-26</series_start><series_end>2012-07-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/80010.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-10-02</my_start_date><my_finish_date>2013-10-02</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380749399</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>13469</series_animedb_id><series_title>Hyouka: Motsubeki Mono wa</series_title><series_synonyms>Hyouka Episode 11.5; Hyouka OVA; Hyou-ka OVA; Hyouka: You can't escape OVA; Hyou-ka: You can't escape OVA; Hyoka OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-07-08</series_start><series_end>2012-07-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/50363.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516915958</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>13601</series_animedb_id><series_title>Psycho-Pass</series_title><series_synonyms>Psychopath; Psycho-Pass</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2012-10-12</series_start><series_end>2013-03-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/43399.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-24</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466804189</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14175</series_animedb_id><series_title>Hanasaku Iroha: Home Sweet Home</series_title><series_synonyms>; Hanasaku Iroha the Movie: Home Sweet Home</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-09</series_start><series_end>2013-03-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/70701.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-07</my_start_date><my_finish_date>2014-09-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410111237</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14189</series_animedb_id><series_title>Tasogare Otome x Amnesia: Taima Otome</series_title><series_synonyms>Dusk Maiden of Amnesia: Exorcism Maiden; Tasogare Otome x Amnesia Special; Dusk Maiden of Amnesia: Ghost Girl</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2012-11-28</series_start><series_end>2012-11-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/65883.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-23</my_start_date><my_finish_date>2015-05-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432407084</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14227</series_animedb_id><series_title>Tonari no Kaibutsu-kun</series_title><series_synonyms>Tonari no Kaibutsukun; The Monster Next Door; My Neighbor Monster-kun; My Little Monster</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-10-02</series_start><series_end>2012-12-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/39779.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1379535451</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14289</series_animedb_id><series_title>Sukitte Ii na yo.</series_title><series_synonyms>Suki-tte Ii na yo.; Sukinayo; Say "I Love You".</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2012-10-07</series_start><series_end>2012-12-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/39777.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-04-10</my_start_date><my_finish_date>2016-04-24</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1461536685</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14349</series_animedb_id><series_title>Little Witch Academia</series_title><series_synonyms>Wakate Animator Ikusei Project; 2012 Young Animator Training Project; Anime Mirai 2012; LWA</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-02</series_start><series_end>2013-03-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/42989.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-13</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410648863</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14353</series_animedb_id><series_title>Death Billiards</series_title><series_synonyms>Wakate Animator Ikusei Project; 2012 Young Animator Training Project; Anime Mirai 2012; Death Billiards</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-03-02</series_start><series_end>2013-03-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/48721.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-12-25</my_start_date><my_finish_date>2014-12-25</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419524579</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14397</series_animedb_id><series_title>Chihayafuru 2</series_title><series_synonyms>Chihayafull 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-01-12</series_start><series_end>2013-06-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/47435.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-09-26</my_start_date><my_finish_date>2014-10-01</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412188990</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14513</series_animedb_id><series_title>Magi: The Labyrinth of Magic</series_title><series_synonyms>Magi Season 1; Magi: The Labyrinth of Magic</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2012-10-07</series_start><series_end>2013-03-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/42773.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-04</my_start_date><my_finish_date>2018-04-06</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1522969371</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14741</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai!</series_title><series_synonyms>Chu-2 Byo demo Koi ga Shitai!; Regardless of My Adolescent Delusions of Grandeur, I Want a Date!; Love, Chunibyo &amp; Other Delusions!</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2012-10-04</series_start><series_end>2012-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/46931.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-04-27</my_start_date><my_finish_date>2013-04-27</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367098652</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14751</series_animedb_id><series_title>Bishoujo Senshi Sailor Moon Crystal</series_title><series_synonyms>Pretty Soldier Sailor Moon (2014); Sailor Moon Remake; Bishoujo Senshi Sailor Moon (2014); Sailor Moon Crystal; Pretty Guardian Sailor Moon Crystal</series_synonyms><series_type>5</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2014-07-05</series_start><series_end>2015-07-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/60085.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2014-07-05</my_start_date><my_finish_date>2016-06-03</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1464987489</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14753</series_animedb_id><series_title>Hori-san to Miyamura-kun</series_title><series_synonyms>Horimiya</series_synonyms><series_type>2</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2012-09-26</series_start><series_end>2015-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/40175.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2018-03-02</my_start_date><my_finish_date>2018-03-02</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520031447</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14807</series_animedb_id><series_title>Kara no Kyoukai: Mirai Fukuin</series_title><series_synonyms>Kara no Kyoukai: the Garden of sinners/recalled out summer; the Garden of sinners -recalled out summer-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-28</series_start><series_end>2013-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/56621.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-11-01</my_start_date><my_finish_date>2014-11-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414801367</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>14833</series_animedb_id><series_title>Maoyuu Maou Yuusha</series_title><series_synonyms>Maoyu Maou Yusha; Maoyu ~ Archenemy &amp; Hero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-01-05</series_start><series_end>2013-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/46041.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-04-30</my_start_date><my_finish_date>2013-05-02</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1367451578</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15039</series_animedb_id><series_title>Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai. Movie</series_title><series_synonyms>AnoHana Movie; We Still Don't Know the Name of the Flower We Saw That Day. Movie; anohana: The Flower We Saw That Day The Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-08-31</series_start><series_end>2013-08-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/49993.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-08-10</my_start_date><my_finish_date>2014-08-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1407706856</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15617</series_animedb_id><series_title>Jinrui wa Suitai Shimashita Specials</series_title><series_synonyms>Jintai Specials; Humanity Has Declined Specials</series_synonyms><series_type>4</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2012-09-19</series_start><series_end>2013-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/63069.jpg</series_image><my_id>0</my_id><my_watched_episodes>6</my_watched_episodes><my_start_date>2014-03-18</my_start_date><my_finish_date>2014-03-18</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395176900</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>15651</series_animedb_id><series_title>Phi Brain: Kami no Puzzle - Shukuteki! Rätsel-hen</series_title><series_synonyms>Phi Brain: Kami no Puzzle Dai 3; Phi Brain: Kami no Puzzle Third Season; Phi Brain: Kami no Puzzle 3rd Season; Phi Brain: Puzzle of God - Nemesis! Raetsel-hen; Phi Brain: Puzzle of God 3</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2014-03-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/54099.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-06</my_start_date><my_finish_date>2014-06-24</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1403648489</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16001</series_animedb_id><series_title>Kokoro Connect: Michi Random</series_title><series_synonyms>Kokoro Connect Episodes 14, 15, 16, and 17; Kokoroco: Michi Random; Kokoro Connect OVA</series_synonyms><series_type>4</series_type><series_episodes>4</series_episodes><series_status>2</series_status><series_start>2012-11-19</series_start><series_end>2012-12-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/45526.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>2016-06-15</my_start_date><my_finish_date>2016-06-18</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466279287</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16067</series_animedb_id><series_title>Nagi no Asukara</series_title><series_synonyms>Nagi no Asu Kara; Earth color of a calm; Nagiasu; A Lull in the Sea</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2013-10-03</series_start><series_end>2014-04-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/53549.jpg</series_image><my_id>0</my_id><my_watched_episodes>26</my_watched_episodes><my_start_date>2013-10-03</my_start_date><my_finish_date>2014-07-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404233742</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16201</series_animedb_id><series_title>Aku no Hana</series_title><series_synonyms>Aku no Hana; Flowers of Evil</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-04-05</series_start><series_end>2013-06-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/50559.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-08-08</my_start_date><my_finish_date>2013-08-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1376014048</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16498</series_animedb_id><series_title>Shingeki no Kyojin</series_title><series_synonyms>AoT; Attack on Titan</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-04-07</series_start><series_end>2013-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/47347.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-11-01</my_start_date><my_finish_date>2013-11-01</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1383351175</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16528</series_animedb_id><series_title>Hal</series_title><series_synonyms>Haru; Hal</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-08</series_start><series_end>2013-06-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/46549.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-28</my_start_date><my_finish_date>2014-10-28</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1414526668</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16592</series_animedb_id><series_title>Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation</series_title><series_synonyms>Dangan Ronpa: The Animation; Danganronpa: The Animation</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-07-05</series_start><series_end>2013-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/51463.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380317293</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16662</series_animedb_id><series_title>Kaze Tachinu</series_title><series_synonyms>Kaze Tachinu; The Wind Rises</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-07-20</series_start><series_end>2013-07-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/52353.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-17</my_start_date><my_finish_date>2014-09-17</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410967436</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16700</series_animedb_id><series_title>Higurashi no Naku Koro ni Kaku: Outbreak</series_title><series_synonyms>When They Cry - Outbreak</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-08-15</series_start><series_end>2013-08-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/51063.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-09-25</my_start_date><my_finish_date>2013-09-25</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1380072609</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16762</series_animedb_id><series_title>Mirai Nikki: Redial</series_title><series_synonyms>Mirai Nikki OVA;; The Future Diary: Redial</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-19</series_start><series_end>2013-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/53247.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-07-06</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404668095</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16782</series_animedb_id><series_title>Kotonoha no Niwa</series_title><series_synonyms>Koto no Ha no Niwa; The Garden of Kotonoha; The Garden of Words</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-05-31</series_start><series_end>2013-05-31</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/79676.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2013-07-08</my_start_date><my_finish_date>2013-07-08</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1373288763</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16918</series_animedb_id><series_title>Gin no Saji</series_title><series_synonyms>; Silver Spoon</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2013-07-12</series_start><series_end>2013-09-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/49237.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-23</my_start_date><my_finish_date>2015-07-26</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1437943165</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>16934</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai!: Kirameki no... Slapstick Noel</series_title><series_synonyms>Chuunibyou demo Koi ga Shitai! Episode 13; Chu-2 Byo demo Koi ga Shitai! Episode 13; Love, Chunibyo &amp; Other Delusions!: Sparkling... Slapstick Noel</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-06-19</series_start><series_end>2013-06-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/45512.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-01-09</my_start_date><my_finish_date>2014-01-09</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389303375</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17121</series_animedb_id><series_title>Dareka no Manazashi</series_title><series_synonyms>; Someone's Gaze</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-02-10</series_start><series_end>2013-02-10</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/46741.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-05</my_start_date><my_finish_date>2016-07-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467750681</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17247</series_animedb_id><series_title>Machine-Doll wa Kizutsukanai</series_title><series_synonyms>Machine Girl wa Kizutsukanai; Kikou Shoujo wa Kizutsukanai; Unbreakable Machine-Doll</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-07</series_start><series_end>2013-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/56141.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-07</my_start_date><my_finish_date>2014-01-06</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388972892</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17265</series_animedb_id><series_title>Log Horizon</series_title><series_synonyms>; Log Horizon</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-05</series_start><series_end>2014-03-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/84004.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2013-10-05</my_start_date><my_finish_date>2014-03-23</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395576189</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>17269</series_animedb_id><series_title>Captain Herlock</series_title><series_synonyms>; Space Pirate Captain Harlock</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-07</series_start><series_end>2013-09-07</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/62619.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-05-11</my_start_date><my_finish_date>2016-05-11</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1462937787</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17549</series_animedb_id><series_title>Non Non Biyori</series_title><series_synonyms>; Non Non Biyori</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-08</series_start><series_end>2013-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/51581.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-11-02</my_start_date><my_finish_date>2014-12-31</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420040229</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>17635</series_animedb_id><series_title>Koitabi: True Tours Nanto</series_title><series_synonyms></series_synonyms><series_type>4</series_type><series_episodes>6</series_episodes><series_status>2</series_status><series_start>2013-04-28</series_start><series_end>2013-04-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/50321.jpg</series_image><my_id>0</my_id><my_watched_episodes>6</my_watched_episodes><my_start_date>2016-06-19</my_start_date><my_finish_date>2016-06-19</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466351119</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>17895</series_animedb_id><series_title>Golden Time</series_title><series_synonyms>; Golden Time</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/52091.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2015-08-13</my_start_date><my_finish_date>2015-11-24</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1448400872</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18115</series_animedb_id><series_title>Magi: The Kingdom of Magic</series_title><series_synonyms>Magi: The Labyrinth of Magic 2; Magi Season 2; Magi: The Kingdom of Magic</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2014-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/55039.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-06</my_start_date><my_finish_date>2018-04-07</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523064984</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18119</series_animedb_id><series_title>Servant x Service</series_title><series_synonyms>; Servant x Service</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-07-05</series_start><series_end>2013-09-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/51579.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-01-25</my_start_date><my_finish_date>2015-10-30</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1446220848</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18153</series_animedb_id><series_title>Kyoukai no Kanata</series_title><series_synonyms>Beyond the Horizon; Beyond the Boundary</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-03</series_start><series_end>2013-12-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/85468.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-03</my_start_date><my_finish_date>2013-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1387727461</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18277</series_animedb_id><series_title>Strike the Blood</series_title><series_synonyms>SutoBura; Strike the Blood</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/56163.jpg</series_image><my_id>0</my_id><my_watched_episodes>8</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>4</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410048372</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18411</series_animedb_id><series_title>Gingitsune</series_title><series_synonyms>Silver Fox; Gingitsune: Messenger Fox of the Gods</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-07</series_start><series_end>2013-12-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/56247.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-07</my_start_date><my_finish_date>2014-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389053296</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18497</series_animedb_id><series_title>Yozakura Quartet: Hana no Uta</series_title><series_synonyms>Yozakura Quartet: Hana no Uta</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2013-10-06</series_start><series_end>2013-12-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/52563.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2013-10-06</my_start_date><my_finish_date>2014-01-05</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1388960407</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18507</series_animedb_id><series_title>Free!</series_title><series_synonyms>フリー！; Free! - Iwatobi Swim Club</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-07-04</series_start><series_end>2013-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/51107.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1376735953</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18671</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai! Ren</series_title><series_synonyms>Chuunibyou demo Koi ga Shitai! 2; Chu-2 Byo demo Koi ga Shitai! Ren; Love, Chunibyo &amp; Other Delusions!: Heart Throb</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-01-09</series_start><series_end>2014-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/56643.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-01-09</my_start_date><my_finish_date>2014-04-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1396472930</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18679</series_animedb_id><series_title>Kill la Kill</series_title><series_synonyms>KLK; Dressed to Kill; KILL la KILL</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75514.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2013-10-04</my_start_date><my_finish_date>2014-03-28</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1396031267</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>18745</series_animedb_id><series_title>Chihayafuru 2: Waga Mi Yo ni Furu Nagame Seshi Ma ni</series_title><series_synonyms>Chihayafuru 2 OVA; Chihayafull 2 OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-13</series_start><series_end>2013-09-13</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/54451.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-01</my_start_date><my_finish_date>2014-10-01</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412190807</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19021</series_animedb_id><series_title>Takanashi Rikka Kai: Chuunibyou demo Koi ga Shitai! Movie</series_title><series_synonyms>; Love, Chunibyo &amp; Other Delusions!: Rikka Version</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2013-09-14</series_start><series_end>2013-09-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/56167.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-03-22</my_start_date><my_finish_date>2014-03-22</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1395512551</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19363</series_animedb_id><series_title>Gin no Saji 2nd Season</series_title><series_synonyms>Gin no Saji 2nd Season; Silver Spoon 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2014-01-10</series_start><series_end>2014-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/57995.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2015-07-27</my_start_date><my_finish_date>2015-08-07</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1438972797</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19369</series_animedb_id><series_title>Outbreak Company</series_title><series_synonyms>; Outbreak Company</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2013-10-04</series_start><series_end>2013-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/54343.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2013-10-04</my_start_date><my_finish_date>2013-12-22</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1387730261</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19489</series_animedb_id><series_title>Little Witch Academia: Mahoujikake no Parade</series_title><series_synonyms>LWA 2; Little Witch Academia 2; Little Witch Academia: The Enchanted Parade</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-10-09</series_start><series_end>2015-10-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/75752.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-04</my_start_date><my_finish_date>2016-03-04</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1457127009</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>19815</series_animedb_id><series_title>No Game No Life</series_title><series_synonyms>NGNL; No Game, No Life</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-09</series_start><series_end>2014-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/65187.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-08-03</my_start_date><my_finish_date>2014-09-07</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410093118</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20057</series_animedb_id><series_title>Space☆Dandy</series_title><series_synonyms>; Space Dandy</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-01-05</series_start><series_end>2014-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/56611.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410048389</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20651</series_animedb_id><series_title>Natsume Yuujinchou: Itsuka Yuki no Hi ni</series_title><series_synonyms>Natsume Yuujinchou OVA; Natsume Yujincho OVA; Natsume's Book of Friends OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-02-01</series_start><series_end>2014-02-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79742.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1433433328</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20903</series_animedb_id><series_title>Harmonie</series_title><series_synonyms>Wakate Animator Ikusei Project; 2014 Young Animator Training Project; Anime Mirai 2014</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-03-01</series_start><series_end>2014-03-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/55197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-02-05</my_start_date><my_finish_date>2018-02-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1517794005</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>20973</series_animedb_id><series_title>Sekai Seifuku: Bouryaku no Zvezda</series_title><series_synonyms>Sekai Seifuku: Bouryaku no Zvezda; World Conquest Zvezda Plot</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-01-12</series_start><series_end>2014-03-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/56133.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-01-12</my_start_date><my_finish_date>2014-07-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404690008</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21329</series_animedb_id><series_title>Mushishi Special: Hihamukage</series_title><series_synonyms>Mushi-shi Tokubetsu-hen: Hihamu Kage; The Shadow that Devours the Sun</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-01-04</series_start><series_end>2014-01-04</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/59315.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-01-11</my_start_date><my_finish_date>2014-01-11</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1389482067</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>21557</series_animedb_id><series_title>Omoide no Marnie</series_title><series_synonyms>; When Marnie Was There</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-07-19</series_start><series_end>2014-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/64293.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-05-20</my_start_date><my_finish_date>2015-05-20</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432162852</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21603</series_animedb_id><series_title>Mekakucity Actors</series_title><series_synonyms>Mekaku City Actors; Kagerou Project; MEKAKUCITY ACTORS</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-13</series_start><series_end>2014-06-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/61519.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-04-13</my_start_date><my_finish_date>2014-07-01</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404250486</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21659</series_animedb_id><series_title>Kill la Kill Specials</series_title><series_synonyms>Kill la Kill Tokubetsu-hen; Sayonara wo Mou Ichido; Kill la Kill Digest: Naked Memories; KILL la KILL Digest –Naked Memories by Aikuro Mikisugi–</series_synonyms><series_type>4</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2014-09-03</series_start><series_end>2014-09-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/73654.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-13</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1410647106</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21667</series_animedb_id><series_title>Non Non Biyori: Okinawa e Ikukoto ni Natta</series_title><series_synonyms>Non Non Biyori OVA</series_synonyms><series_type>2</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-07-23</series_start><series_end>2014-07-23</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/63773.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514211194</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>21881</series_animedb_id><series_title>Sword Art Online II</series_title><series_synonyms>Phantom Bullet; SAO II; Sword Art Online 2; SAO 2; Sword Art Online II</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-07-05</series_start><series_end>2014-12-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/65185.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-12-25</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419550516</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>21939</series_animedb_id><series_title>Mushishi Zoku Shou</series_title><series_synonyms>Mushi-shi Zoku Shou; Mushishi: The Next Chapter; MUSHI-SHI -Next Passage-</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-04-05</series_start><series_end>2014-06-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/58533.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-04-05</my_start_date><my_finish_date>2014-06-24</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1403643576</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>22145</series_animedb_id><series_title>Kuroshitsuji: Book of Circus</series_title><series_synonyms>Kuroshitsuji Circus Hen; Kuroshitsuji Shin Series; Black Butler 3; Kuroshitsuji III; Black Butler: Book of Circus</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-07-11</series_start><series_end>2014-09-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/64811.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-07-11</my_start_date><my_finish_date>2014-09-19</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411147830</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22147</series_animedb_id><series_title>Amagi Brilliant Park</series_title><series_synonyms>Amaburi; Amagi Brilliant Park</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-10-07</series_start><series_end>2014-12-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/85435.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-04-05</my_start_date><my_finish_date>2016-05-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1463790807</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22199</series_animedb_id><series_title>Akame ga Kill!</series_title><series_synonyms>Akame ga Kiru!; Akame ga Kill!</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-07-07</series_start><series_end>2014-12-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/78438.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-07-07</my_start_date><my_finish_date>2014-12-15</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1418604647</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22265</series_animedb_id><series_title>Free!: Eternal Summer</series_title><series_synonyms>Free! - Iwatobi Swim Club 2; Free! 2nd Season; Free! - Eternal Summer</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2014-07-03</series_start><series_end>2014-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/64097.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1404662439</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22297</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works</series_title><series_synonyms>Fate/stay night (2014); Fate - Stay Night; Fate/stay night [Unlimited Blade Works]</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-10-12</series_start><series_end>2014-12-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/67333.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-10-12</my_start_date><my_finish_date>2015-01-09</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420819332</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22319</series_animedb_id><series_title>Tokyo Ghoul</series_title><series_synonyms>Tokyo Kushu; Toukyou Kushu; Toukyou Ghoul; Tokyo Ghoul</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-04</series_start><series_end>2014-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/64449.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-04</my_start_date><my_finish_date>2014-09-19</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411166060</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22359</series_animedb_id><series_title>Sanzoku no Musume Ronja</series_title><series_synonyms>Sanzoku no Musume Ronia; Ronia the Robber's Daughter; Ronja Rövardotter</series_synonyms><series_type>1</series_type><series_episodes>26</series_episodes><series_status>2</series_status><series_start>2014-10-11</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/68125.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>6</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421861743</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22433</series_animedb_id><series_title>Break Blade</series_title><series_synonyms>; Broken Blade</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-04-06</series_start><series_end>2014-06-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/58635.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1408914109</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22535</series_animedb_id><series_title>Kiseijuu: Sei no Kakuritsu</series_title><series_synonyms>Parasite; Parasitic Beasts; Parasyte; Parasyte -the maxim-</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-10-09</series_start><series_end>2015-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/73178.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-10-09</my_start_date><my_finish_date>2015-03-27</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427456284</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22539</series_animedb_id><series_title>One More Time, One More Chance</series_title><series_synonyms></series_synonyms><series_type>6</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2007-07-19</series_start><series_end>2007-07-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/58799.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1409084520</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22729</series_animedb_id><series_title>Aldnoah.Zero</series_title><series_synonyms>AZ; Aldnoah.Zero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-06</series_start><series_end>2014-09-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/60263.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2014-07-06</my_start_date><my_finish_date>2014-09-21</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411306180</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>22789</series_animedb_id><series_title>Barakamon</series_title><series_synonyms>Barakamon; Barakamon</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-07-06</series_start><series_end>2014-09-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/59321.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1413402971</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23273</series_animedb_id><series_title>Shigatsu wa Kimi no Uso</series_title><series_synonyms>; Your Lie in April</series_synonyms><series_type>1</series_type><series_episodes>22</series_episodes><series_status>2</series_status><series_start>2014-10-10</series_start><series_end>2015-03-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/67177.jpg</series_image><my_id>0</my_id><my_watched_episodes>22</my_watched_episodes><my_start_date>2014-10-10</my_start_date><my_finish_date>2015-03-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514851396</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23283</series_animedb_id><series_title>Zankyou no Terror</series_title><series_synonyms>Terror in Tokyo; Terror of Resonance; Terror in Resonance</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2014-07-11</series_start><series_end>2014-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/64447.jpg</series_image><my_id>0</my_id><my_watched_episodes>11</my_watched_episodes><my_start_date>2014-09-13</my_start_date><my_finish_date>2014-09-27</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411826562</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23317</series_animedb_id><series_title>Kuroshitsuji: Book of Murder</series_title><series_synonyms>; Black Butler: Book of Murder</series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2015-01-28</series_start><series_end>2015-02-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/74392.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2016-04-18</my_start_date><my_finish_date>2016-04-18</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1460940679</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23321</series_animedb_id><series_title>Log Horizon 2nd Season</series_title><series_synonyms>Log Horizon Second Season; Log Horizon Dai 2 Series; Log Horizon 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2014-10-04</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/68097.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2014-10-04</my_start_date><my_finish_date>2015-05-20</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1432138009</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23447</series_animedb_id><series_title>Ano Natsu de Matteru: Bokutachi wa Koukou Saigo no Natsu wo Sugoshinagara, Ano Natsu de Matteiru.</series_title><series_synonyms>Ano Natsu de Matteru Special; Waiting in the Summer Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-08-29</series_start><series_end>2014-08-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/63493.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-02-05</my_start_date><my_finish_date>2018-02-05</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1517798965</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>23623</series_animedb_id><series_title>Non Non Biyori Repeat</series_title><series_synonyms>Non Non Biyori 2nd Season; Non Non Biyori Second Season; Non Non Biyori Repeat</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-07-07</series_start><series_end>2015-09-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/75105.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-07-07</my_start_date><my_finish_date>2015-09-25</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1443187096</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>23673</series_animedb_id><series_title>Ookami Shoujo to Kuro Ouji</series_title><series_synonyms>Ookami Shoujo to Kuroouji; Wolf Girl &amp; Black Prince; Wolf Girl &amp; Black Prince</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2014-10-05</series_start><series_end>2014-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/67805.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1453243322</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>24459</series_animedb_id><series_title>Tales of Zestiria: Doushi no Yoake</series_title><series_synonyms>; Tales of Zestiria: Dawn of the Shepherd</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-12-30</series_start><series_end>2014-12-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/69719.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-01-07</my_start_date><my_finish_date>2015-01-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1420670723</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>24687</series_animedb_id><series_title>Mushishi Zoku Shou: Odoro no Michi</series_title><series_synonyms>Mushishi Zoku Shou Special; Mushi-shi Zoku Shou: Odoro no Michi; Mushishi Zoku Shou Episode 11 and 12; Mushishi Path of Thorns</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-08-20</series_start><series_end>2014-08-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/63539.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-08-24</my_start_date><my_finish_date>2014-08-24</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1408912806</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>24701</series_animedb_id><series_title>Mushishi Zoku Shou 2nd Season</series_title><series_synonyms>Mushishi Zoku Shou 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2014-10-19</series_start><series_end>2014-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/68095.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2014-10-19</my_start_date><my_finish_date>2014-12-22</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1419209745</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>25015</series_animedb_id><series_title>Kyoukai no Kanata Movie 1: I'll Be Here - Kako-hen</series_title><series_synonyms>Beyond the Boundary Movie; Kyokai no Kanata Movie; Beyond the Boundary: I'll Be Here - Past</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-03-14</series_start><series_end>2015-03-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/73298.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-07</my_start_date><my_finish_date>2018-03-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520391161</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25537</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel - I. Presage Flower</series_title><series_synonyms>; Fate/stay night: Heaven's Feel - I. Presage Flower</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-10-14</series_start><series_end>2017-10-14</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/87106.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411213047</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25649</series_animedb_id><series_title>Junjou Romantica 3</series_title><series_synonyms>Junjou Romantica Third Season; Junjo Romantica 3</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-07-09</series_start><series_end>2015-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/74170.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-09-03</my_start_date><my_finish_date>2015-09-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1443037387</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25777</series_animedb_id><series_title>Shingeki no Kyojin Season 2</series_title><series_synonyms>; Attack on Titan Season 2</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-04-01</series_start><series_end>2017-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/84177.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2018-02-27</my_start_date><my_finish_date>2018-02-28</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519793112</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25781</series_animedb_id><series_title>Shingeki no Kyojin: Kuinaki Sentaku</series_title><series_synonyms>Attack on Titan: No Regrets; Shingeki no Kyojin: Birth of Levi</series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2014-12-09</series_start><series_end>2015-04-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/69497.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1411213201</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>25835</series_animedb_id><series_title>Shirobako</series_title><series_synonyms>White Box; Shirobako</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2014-10-09</series_start><series_end>2015-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1835/91537.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2014-10-09</my_start_date><my_finish_date>2015-04-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428162562</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27631</series_animedb_id><series_title>God Eater</series_title><series_synonyms>; God Eater</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-07-12</series_start><series_end>2016-03-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/73852.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-08-07</my_start_date><my_finish_date>2016-06-11</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465669463</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27655</series_animedb_id><series_title>Aldnoah.Zero 2nd Season</series_title><series_synonyms>; Aldnoah.Zero</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-11</series_start><series_end>2015-03-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/71297.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-11</my_start_date><my_finish_date>2015-03-29</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427636555</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27727</series_animedb_id><series_title>Binan Koukou Chikyuu Boueibu LOVE!</series_title><series_synonyms>; Cute High Earth Defense Club LOVE!</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-07</series_start><series_end>2015-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/68451.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1421597956</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27821</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works - Prologue</series_title><series_synonyms>Fate/stay night (2014) Episode 00; Fate/stay night: Unlimited Blade Works - Prologue</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2014-10-05</series_start><series_end>2014-10-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/67425.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2014-10-05</my_start_date><my_finish_date>2014-10-05</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1412542390</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27899</series_animedb_id><series_title>Tokyo Ghoul √A</series_title><series_synonyms>Tokyo Ghoul Root A; Tokyo Ghoul 2nd Season; Tokyo Ghoul Second Season; Tokyo Ghoul √A</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-09</series_start><series_end>2015-03-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/71777.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-11</my_start_date><my_finish_date>2015-04-02</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428007195</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>27969</series_animedb_id><series_title>Hana to Alice: Satsujin Jiken</series_title><series_synonyms>Hana &amp; Alice: The Murder Case; The Case of Hana &amp; Alice</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-02-20</series_start><series_end>2015-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/71197.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-05-15</my_start_date><my_finish_date>2016-05-15</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1463351868</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28121</series_animedb_id><series_title>Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka</series_title><series_synonyms>DanMachi; Is It Wrong That I Want to Meet You in a Dungeon; Is It Wrong to Try to Pick Up Girls in a Dungeon?</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-04-04</series_start><series_end>2015-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/70187.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468344441</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28171</series_animedb_id><series_title>Shokugeki no Souma</series_title><series_synonyms>Shokugeki no Soma; Food Wars: Shokugeki no Soma; Food Wars! Shokugeki no Soma</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2015-04-04</series_start><series_end>2015-09-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/72943.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1428423510</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28223</series_animedb_id><series_title>Death Parade</series_title><series_synonyms>; Death Parade</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-01-10</series_start><series_end>2015-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/71553.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2015-01-10</my_start_date><my_finish_date>2015-03-28</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching></my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1427575256</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28621</series_animedb_id><series_title>Subete ga F ni Naru: The Perfect Insider</series_title><series_synonyms>Everything Becomes F: The Perfect Insider; The Perfect Insider</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2015-10-09</series_start><series_end>2015-12-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/76071.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459100733</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28625</series_animedb_id><series_title>Shisha no Teikoku</series_title><series_synonyms>Project Itoh; The Empire of Corpses</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-10-02</series_start><series_end>2015-10-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/75468.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-02-01</my_start_date><my_finish_date>2017-02-02</my_finish_date><my_score>4</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1485998902</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28675</series_animedb_id><series_title>Kyoukai no Kanata Movie 2: I'll Be Here - Mirai-hen</series_title><series_synonyms>Beyond the Boundary Movie; Kyokai no Kanata Movie; Beyond the Boundary: I'll Be Here - Future</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-04-25</series_start><series_end>2015-04-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/72614.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-10</my_start_date><my_finish_date>2018-03-10</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520649412</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28701</series_animedb_id><series_title>Fate/stay night: Unlimited Blade Works 2nd Season</series_title><series_synonyms>Fate/stay night (2015); Fate - Stay Night; Fate/stay night [Unlimited Blade Works] Season 2</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-04-05</series_start><series_end>2015-06-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/72863.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2015-04-05</my_start_date><my_finish_date>2015-07-13</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1436812710</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28725</series_animedb_id><series_title>Kokoro ga Sakebitagatterunda.</series_title><series_synonyms>Kokosake; The Anthem of the Heart</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-09-19</series_start><series_end>2015-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/75745.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-04-01</my_start_date><my_finish_date>2016-04-01</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459468045</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>28805</series_animedb_id><series_title>Bakemono no Ko</series_title><series_synonyms>Child of a Beast; The Boy and the Beast</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-07-11</series_start><series_end>2015-07-11</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/73540.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-04</my_start_date><my_finish_date>2016-06-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1465069094</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>28851</series_animedb_id><series_title>Koe no Katachi</series_title><series_synonyms>The Shape of Voice; A Silent Voice: The Movie; A Silent Voice</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-09-17</series_start><series_end>2016-09-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/80136.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-10-25</my_start_date><my_finish_date>2017-10-25</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1508888432</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>28957</series_animedb_id><series_title>Mushishi Zoku Shou: Suzu no Shizuku</series_title><series_synonyms>Mushishi Tokubetsu-hen: Suzu no Shizuku; Mushishi: The Next Chapter - Drops of Bells</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2015-05-16</series_start><series_end>2015-05-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/72689.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2015-09-16</my_start_date><my_finish_date>2015-09-16</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1442361418</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>29803</series_animedb_id><series_title>Overlord</series_title><series_synonyms>; Overlord</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2015-07-07</series_start><series_end>2015-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/88019.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509999593</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30187</series_animedb_id><series_title>Sakurako-san no Ashimoto ni wa Shitai ga Umatteiru</series_title><series_synonyms>A Corpse is Buried Under Sakurako's Feet.; Beautiful Bones -Sakurako's Investigation-</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-10-08</series_start><series_end>2015-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/76116.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-25</my_start_date><my_finish_date>2016-05-04</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1462322215</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30276</series_animedb_id><series_title>One Punch Man</series_title><series_synonyms>One Punch-Man; One-Punch Man; OPM; One Punch Man</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2015-10-05</series_start><series_end>2015-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/76049.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-03-05</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1457311771</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30346</series_animedb_id><series_title>Doukyuusei (Movie)</series_title><series_synonyms>; Doukyusei -Classmates-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-02-20</series_start><series_end>2016-02-20</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/78606.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-01</my_start_date><my_finish_date>2016-07-01</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467334013</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30484</series_animedb_id><series_title>Steins;Gate 0</series_title><series_synonyms>Steins;Gate Zero</series_synonyms><series_type>1</series_type><series_episodes>23</series_episodes><series_status>1</series_status><series_start>2018-04-12</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1031/90444.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352518</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>30911</series_animedb_id><series_title>Tales of Zestiria the X</series_title><series_synonyms>Tales of Zestiria the Cross; Tales of Zestiria the X</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-07-10</series_start><series_end>2016-09-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/79271.jpg</series_image><my_id>0</my_id><my_watched_episodes>2</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468943183</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31043</series_animedb_id><series_title>Boku dake ga Inai Machi</series_title><series_synonyms>The Town Where Only I am Missing; BokuMachi; ERASED</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-08</series_start><series_end>2016-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/77957.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-01-08</my_start_date><my_finish_date>2016-03-29</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1459262482</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31240</series_animedb_id><series_title>Re:Zero kara Hajimeru Isekai Seikatsu</series_title><series_synonyms>Re: Life in a different world from zero; ReZero; Re:ZERO -Starting Life in Another World-</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2016-04-04</series_start><series_end>2016-09-19</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/79410.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2016-06-30</my_start_date><my_finish_date>2018-02-26</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519681487</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31580</series_animedb_id><series_title>Ajin</series_title><series_synonyms>Ajin; Ajin: Demi-Human</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-01-16</series_start><series_end>2016-04-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/77968.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2016-06-22</my_start_date><my_finish_date>2016-06-23</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1466645556</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31680</series_animedb_id><series_title>Super Lovers</series_title><series_synonyms>; Super Lovers</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2016-04-06</series_start><series_end>2016-06-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/78450.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2016-06-29</my_start_date><my_finish_date>2016-06-30</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467262552</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31733</series_animedb_id><series_title>Bishoujo Senshi Sailor Moon Crystal Season III</series_title><series_synonyms>Bishoujo Senshi Sailor Moon Crystal: Death Busters-hen; Pretty Guardian Sailor Moon Crystal: Death Busters; Pretty Guardian Sailor Moon Crystal Season III</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-04</series_start><series_end>2016-06-27</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/78859.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1460997549</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31741</series_animedb_id><series_title>Magi: Sinbad no Bouken (TV)</series_title><series_synonyms>; Magi: Adventure of Sinbad</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-16</series_start><series_end>2016-07-02</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/78783.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-04-07</my_start_date><my_finish_date>2018-04-08</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523145824</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31765</series_animedb_id><series_title>Sword Art Online Movie: Ordinal Scale</series_title><series_synonyms>Gekijouban Sword Art Online; Sword Art Online the Movie -Ordinal Scale-</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-02-18</series_start><series_end>2017-02-18</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/83811.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352542</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31798</series_animedb_id><series_title>Kiznaiver</series_title><series_synonyms>; Kiznaiver</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-09</series_start><series_end>2016-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/78466.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-06</my_start_date><my_finish_date>2016-06-27</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467050210</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31812</series_animedb_id><series_title>Kuroshitsuji Movie: Book of the Atlantic</series_title><series_synonyms>; Black Butler: Book of the Atlantic</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-01-21</series_start><series_end>2017-01-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/85792.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-05-10</my_start_date><my_finish_date>2018-05-10</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525916528</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31859</series_animedb_id><series_title>Hai to Gensou no Grimgar</series_title><series_synonyms>Grimgal of Ashes and Fantasies; Hai to Gensou no Grimgal; Grimgar: Ashes and Illusions</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-11</series_start><series_end>2016-03-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/77976.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-07-06</my_start_date><my_finish_date>2016-07-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525904612</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>31914</series_animedb_id><series_title>Shoujo-tachi wa Kouya wo Mezasu</series_title><series_synonyms>The girls who aim for the wildlands; Girls beyond the youth KOYA; Shokomeza; Girls Beyond the Wasteland</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-01-07</series_start><series_end>2016-03-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/77837.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>3</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1454290022</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>31964</series_animedb_id><series_title>Boku no Hero Academia</series_title><series_synonyms>; My Hero Academia</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-04-03</series_start><series_end>2016-06-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/10/78745.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-13</my_start_date><my_finish_date>2018-04-27</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524792367</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32093</series_animedb_id><series_title>Tanaka-kun wa Itsumo Kedaruge</series_title><series_synonyms>; Tanaka-kun is Always Listless</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-09</series_start><series_end>2016-06-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/78565.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-05-09</my_start_date><my_finish_date>2016-06-27</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467047583</my_last_updated><my_tags>Re-watched: 1</my_tags></anime><anime><series_animedb_id>32281</series_animedb_id><series_title>Kimi no Na wa.</series_title><series_synonyms>; Your Name.</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-08-26</series_start><series_end>2016-08-26</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/87048.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2017-04-03</my_start_date><my_finish_date>2017-04-03</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1491257701</my_last_updated><my_tags>Re-watched: 2</my_tags></anime><anime><series_animedb_id>32282</series_animedb_id><series_title>Shokugeki no Souma: Ni no Sara</series_title><series_synonyms>Shokugeki no Souma 2nd Season; Shokugeki no Soma 2; Food Wars: Shokugeki no Soma 2; Shokugeki no Soma: The Second Plate; Food Wars! The Second Plate</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-07-02</series_start><series_end>2016-09-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/8/79353.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468352485</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32438</series_animedb_id><series_title>Mayoiga</series_title><series_synonyms>; The Lost Village</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-01</series_start><series_end>2016-06-17</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79413.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2016-04-01</my_start_date><my_finish_date>2016-06-29</my_finish_date><my_score>3</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467208204</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32542</series_animedb_id><series_title>Sakamoto desu ga?</series_title><series_synonyms>Sakamoto desu ga?; Haven't You Heard? I'm Sakamoto</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2016-04-08</series_start><series_end>2016-07-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79468.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-06-28</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>4</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467223463</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32561</series_animedb_id><series_title>Hai to Gensou no Grimgar Special</series_title><series_synonyms>Grimgar of Fantasy and Ash Special; Grimgal of Ashes and Illusion Special; Grimgal of Ashes and Fantasies Special; Hai to Gensou no Grimgal Special; Grimgar of Fantasy and Ash Episode 2.5; Grimgal of Ashes and Illusion Episode 2.5; Grimgar: Ashes and Illusions Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-03-16</series_start><series_end>2016-03-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/78160.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-05-07</my_start_date><my_finish_date>2018-05-07</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525705208</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32902</series_animedb_id><series_title>Mahoutsukai no Yome: Hoshi Matsu Hito</series_title><series_synonyms>The Magician's Bride; The Ancient Magus' Bride: Those Awaiting a Star</series_synonyms><series_type>2</series_type><series_episodes>3</series_episodes><series_status>2</series_status><series_start>2016-09-10</series_start><series_end>2017-09-09</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/80587.jpg</series_image><my_id>0</my_id><my_watched_episodes>3</my_watched_episodes><my_start_date>2018-04-08</my_start_date><my_finish_date>2018-04-08</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1523213185</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>32983</series_animedb_id><series_title>Natsume Yuujinchou Go</series_title><series_synonyms>Natsume Yuujinchou Season 5; Natsume's Book of Friends Five; Natsume's Book of Friends Season 5</series_synonyms><series_type>1</series_type><series_episodes>11</series_episodes><series_status>2</series_status><series_start>2016-10-05</series_start><series_end>2016-12-21</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/81755.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468933729</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33013</series_animedb_id><series_title>Super Lovers OVA</series_title><series_synonyms></series_synonyms><series_type>2</series_type><series_episodes>2</series_episodes><series_status>2</series_status><series_start>2017-01-01</series_start><series_end>2017-09-01</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/87516.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1467256506</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33049</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel - II. Lost Butterfly</series_title><series_synonyms>Fate/stay night Movie: Heaven's Feel 2; Fate/stay night: Heaven's Feel - II. Lost Butterfly</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-00-00</series_start><series_end>2018-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1829/92753.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998419</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33050</series_animedb_id><series_title>Fate/stay night Movie: Heaven's Feel 3</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/4/79292.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998423</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33253</series_animedb_id><series_title>Ajin 2nd Season</series_title><series_synonyms>Ajin: Demi-Human 2nd Season</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2016-10-08</series_start><series_end>2016-12-24</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/81858.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-05</my_start_date><my_finish_date>2018-03-06</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520306366</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33352</series_animedb_id><series_title>Violet Evergarden</series_title><series_synonyms>; Violet Evergarden</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2018-01-11</series_start><series_end>2018-04-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1329/90618.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-20</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>1</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525035515</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33417</series_animedb_id><series_title>Super Lovers 2</series_title><series_synonyms>Super Lovers Second Season; Super Lovers 2</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2017-01-12</series_start><series_end>2017-03-16</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/9/83807.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-20</my_start_date><my_finish_date>2018-01-23</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516678249</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33486</series_animedb_id><series_title>Boku no Hero Academia 2nd Season</series_title><series_synonyms>; My Hero Academia 2</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>2</series_status><series_start>2017-04-01</series_start><series_end>2017-09-30</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/85221.jpg</series_image><my_id>0</my_id><my_watched_episodes>25</my_watched_episodes><my_start_date>2018-04-27</my_start_date><my_finish_date>2018-04-29</my_finish_date><my_score>9</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525012633</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33506</series_animedb_id><series_title>Ao no Exorcist: Kyoto Fujouou-hen</series_title><series_synonyms>Blue Exorcist: Kyoto Impure King Arc; Blue Exorcist: Kyoto Saga</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-01-07</series_start><series_end>2017-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/5/85201.jpg</series_image><my_id>0</my_id><my_watched_episodes>12</my_watched_episodes><my_start_date>2017-12-16</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>7</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1519664773</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33558</series_animedb_id><series_title>Tales of Zestiria the X: Saiyaku no Jidai</series_title><series_synonyms>Tales of Zestiria the X Episode 00; Tales of Zestiria the X Prologue: The Age of Chaos</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2016-07-03</series_start><series_end>2016-07-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/6/80723.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2016-07-12</my_start_date><my_finish_date>2016-07-12</my_finish_date><my_score>5</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1468338424</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>33674</series_animedb_id><series_title>No Game No Life: Zero</series_title><series_synonyms>NGNL Zero; NGNL the Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-07-15</series_start><series_end>2017-07-15</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1085/90759.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-03-01</my_start_date><my_finish_date>2018-03-11</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520727052</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>34599</series_animedb_id><series_title>Made in Abyss</series_title><series_synonyms>; Made in Abyss</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2017-07-07</series_start><series_end>2017-09-29</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1922/91900.jpg</series_image><my_id>0</my_id><my_watched_episodes>13</my_watched_episodes><my_start_date>2018-03-12</my_start_date><my_finish_date>2018-03-13</my_finish_date><my_score>10</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520914521</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35062</series_animedb_id><series_title>Mahoutsukai no Yome</series_title><series_synonyms>The Magician's Bride; The Ancient Magus' Bride</series_synonyms><series_type>1</series_type><series_episodes>24</series_episodes><series_status>2</series_status><series_start>2017-10-08</series_start><series_end>2018-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/88476.jpg</series_image><my_id>0</my_id><my_watched_episodes>24</my_watched_episodes><my_start_date>2018-04-09</my_start_date><my_finish_date>2018-04-24</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524528196</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35073</series_animedb_id><series_title>Overlord II</series_title><series_synonyms>; Overlord II</series_synonyms><series_type>1</series_type><series_episodes>13</series_episodes><series_status>2</series_status><series_start>2018-01-09</series_start><series_end>2018-04-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/12/89562.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509999606</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35079</series_animedb_id><series_title>Kino no Tabi: The Beautiful World - The Animated Series</series_title><series_synonyms>; Kino's Journey -the Beautiful World- the Animated Series</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>2</series_status><series_start>2017-10-06</series_start><series_end>2017-12-22</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/13/87235.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1511392664</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35120</series_animedb_id><series_title>Devilman: Crybaby</series_title><series_synonyms>; Devilman: Crybaby</series_synonyms><series_type>5</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2018-01-05</series_start><series_end>2018-01-05</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/89973.jpg</series_image><my_id>0</my_id><my_watched_episodes>10</my_watched_episodes><my_start_date>2018-01-23</my_start_date><my_finish_date>2018-01-24</my_finish_date><my_score>8</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516756065</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35262</series_animedb_id><series_title>Boku no Hero Academia 2nd Season: Hero Note</series_title><series_synonyms>Boku no Hero Academia Recap; Boku no Hero Academia 13.5; My Hero Academia Season 2: Hero Notebook</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-03-25</series_start><series_end>2017-03-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/11/84951.jpg</series_image><my_id>0</my_id><my_watched_episodes>1</my_watched_episodes><my_start_date>2018-04-27</my_start_date><my_finish_date>2018-04-27</my_finish_date><my_score>6</my_score><my_status>2</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525012718</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35608</series_animedb_id><series_title>Chuunibyou demo Koi ga Shitai! Movie: Take On Me</series_title><series_synonyms>Eiga Chuunibyou demo Koi ga Shitai! Take On Me</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2018-01-06</series_start><series_end>2018-01-06</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/2/89974.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1495810112</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>35760</series_animedb_id><series_title>Shingeki no Kyojin Season 3</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-07-23</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1173/92110.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1497748383</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36038</series_animedb_id><series_title>Net-juu no Susume</series_title><series_synonyms>Netojuu no Susume; Recovery of an MMO Junkie</series_synonyms><series_type>1</series_type><series_episodes>10</series_episodes><series_status>2</series_status><series_start>2017-10-10</series_start><series_end>2017-12-12</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/3/87463.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1509998092</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36043</series_animedb_id><series_title>Net-juu no Susume Special</series_title><series_synonyms>Net-juu no Susume Episode 11; Recommendation of Real Life; Moriko's Log-in to Fruits de Mer; Riajuu no Susume; Moriko no Fruits de Mer ni Log-in Shimashita; Recovery of an MMO Junkie Special</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>2</series_status><series_start>2017-12-08</series_start><series_end>2017-12-08</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/7/90115.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1516804617</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36456</series_animedb_id><series_title>Boku no Hero Academia 3rd Season</series_title><series_synonyms>; My Hero Academia 3</series_synonyms><series_type>1</series_type><series_episodes>25</series_episodes><series_status>1</series_status><series_start>2018-04-07</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1319/92084.jpg</series_image><my_id>0</my_id><my_watched_episodes>4</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>9</my_score><my_status>1</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525022504</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36474</series_animedb_id><series_title>Sword Art Online: Alicization</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-10-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1841/91357.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1507470291</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36511</series_animedb_id><series_title>Tokyo Ghoul:re</series_title><series_synonyms>Tokyo Kushu:re; Toukyou Kuushu:re</series_synonyms><series_type>1</series_type><series_episodes>12</series_episodes><series_status>1</series_status><series_start>2018-04-03</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1812/90955.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1507470344</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36862</series_animedb_id><series_title>Made in Abyss 2nd Season</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1022/91393.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1520972611</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36896</series_animedb_id><series_title>Boku no Hero Academia The Movie: Futari no Hero</series_title><series_synonyms>My Hero Academia the Movie: The Two Heroes</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-08-03</series_start><series_end>2018-08-03</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1230/91404.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525022588</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>36990</series_animedb_id><series_title>Non Non Biyori Movie: Vacation</series_title><series_synonyms></series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-08-25</series_start><series_end>2018-08-25</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1771/92198.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1514152179</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37492</series_animedb_id><series_title>Steins;Gate 0 OVA</series_title><series_synonyms>Steins,Gate Zero</series_synonyms><series_type>4</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2018-11-28</series_start><series_end>2018-11-28</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1197/92518.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525475594</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37514</series_animedb_id><series_title>Made in Abyss Movie 1: Tabidachi no Yoake</series_title><series_synonyms>Made in Abyss Movie 1: Journey's Dawn</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2019-00-00</series_start><series_end>2019-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1120/91387.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1521558560</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37515</series_animedb_id><series_title>Made in Abyss Movie 2: Hourou suru Tasogare</series_title><series_synonyms>Made in Abyss Movie 2: Wandering Twilight</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>2019-00-00</series_start><series_end>2019-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1110/91388.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1521558553</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37597</series_animedb_id><series_title>Dakaretai Otoko 1-i ni Odosarete Imasu.</series_title><series_synonyms>Dakaretai Otoko Ichii ni Odosarete Imasu., Dakaretai Otoko No.1 ni Odosareteimasu.</series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1224/91474.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1524434678</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37675</series_animedb_id><series_title>Overlord III</series_title><series_synonyms></series_synonyms><series_type>1</series_type><series_episodes>0</series_episodes><series_status>3</series_status><series_start>2018-07-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1319/91709.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1522949173</my_last_updated><my_tags></my_tags></anime><anime><series_animedb_id>37804</series_animedb_id><series_title>Shirobako Movie</series_title><series_synonyms>White Box Movie</series_synonyms><series_type>3</series_type><series_episodes>1</series_episodes><series_status>3</series_status><series_start>0000-00-00</series_start><series_end>0000-00-00</series_end><series_image>https://myanimelist.cdn-dena.com/images/anime/1041/92114.jpg</series_image><my_id>0</my_id><my_watched_episodes>0</my_watched_episodes><my_start_date>0000-00-00</my_start_date><my_finish_date>0000-00-00</my_finish_date><my_score>0</my_score><my_status>6</my_status><my_rewatching>0</my_rewatching><my_rewatching_ep>0</my_rewatching_ep><my_last_updated>1525475577</my_last_updated><my_tags></my_tags></anime></myanimelist>
 `; 
-const batchUpdated = "09/05/2018  4:07:51.98" 
+const batchUpdated = "10/05/2018  2:51:22.24" 

@@ -145,14 +145,13 @@ th.d-flex {
     display: table-cell !important;
 }
 
-tr.missing-locally {
-    background-color: hsl(0, 0%, 90%) !important;
+tr.missing-locally, td.size-mismatch {
     background-image: linear-gradient(-45deg,
-        rgba(255, 255, 255, 0.3) 25%,
+        rgba(0, 0, 0, 0.05) 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0.3) 75%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(0, 0, 0, 0.05) 75%,
         transparent 75%,
         transparent) !important;
     background-size: 25px 25px;
@@ -165,6 +164,11 @@ td {
 
 td:first-child {
     padding-left: calc(37px + 0.75rem) !important;
+}
+
+td.size-mismatch {
+    color: var(--dropped-color);
+    font-weight: bolder;
 }
 
 .anime-image {
