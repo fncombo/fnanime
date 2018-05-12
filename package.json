@@ -1,0 +1,25 @@
+{
+  "name": "fnanime",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "array-sort": "^1.0.0",
+    "async": "^2.6.0",
+    "delay": "^2.0.0",
+    "fuzzysort": "^1.1.1",
+    "get-folder-size": "^2.0.0",
+    "jsdom": "^11.10.0",
+    "node-fetch": "^2.1.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "sifter": "^0.5.3",
+    "xml2js": "^0.4.19"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
