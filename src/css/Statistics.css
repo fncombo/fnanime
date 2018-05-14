@@ -1,6 +1,6 @@
 .statistics .row {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     cursor: default;
 }
 
@@ -18,4 +18,8 @@
 
 .statistics .row:not(.border-row):nth-of-type(even) {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+.statistics .progress {
+    height: 0.5rem;
 }

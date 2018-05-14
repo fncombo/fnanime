@@ -20,37 +20,62 @@ export default class InfoBox extends PureComponent {
 
         this.state = {
             loaded: false,
+            props: {},
             apiData: {},
         }
     }
 
-    // Add/remove class from body when opening/closing
-    componentDidUpdate(prevProps, prevState) {
-        const { selectedAnimeId } = this.props
+    // Add/remove class from body when opening, closing, or updating
+    componentWillUpdate(nextProps, nextState) {
+        const currentId = nextState.props.selectedAnimeId
+        const nextId = nextProps.selectedAnimeId
 
-        // Don't do anythiung if it's still the same anime
-        if (prevProps.selectedAnimeId === selectedAnimeId) {
-            return
-        }
+        // Anime ID changed
+        if (currentId && nextId && currentId !== nextId) {
+            document.body.classList.add('modal-switching')
 
-        // Reset state
-        this.setState({
-            loaded: false,
-        })
+            // Wait for CSS animation to finish
+            setTimeout(() => {
+                document.body.classList.remove('modal-switching')
+                this.setState({
+                    loaded: false,
+                    transitioning: false,
+                    props: nextProps,
+                }, this.getApiData)
+            }, 150)
 
-        // Get API data that was too big for the local JSON data
-        if (selectedAnimeId) {
-            fetch(`https://api.jikan.moe/anime/${selectedAnimeId}`)
-            .then(res => res.json())
-            .then(data => this.setState({
-                loaded: true,
-                apiData: data,
-            }), error => console.error(error))
+        // Just opened and new ID set
+        } else if (!currentId && nextId && currentId !== nextId) {
+            this.setState({
+                loaded: false,
+                props: nextProps,
+            }, this.getApiData)
+
+        // Close and ID removed
+        } else if (currentId && !nextId && currentId !== nextId) {
+            // Wait for CSS animation to finish
+            setTimeout(() => {
+                this.setState({
+                    loaded: false,
+                    props: {},
+                })
+            }, 150)
         }
     }
 
+    // Get API data from Jikan about this anime, such as synopsis
+    getApiData() {
+        fetch(`https://api.jikan.moe/anime/${this.state.props.selectedAnimeId}`)
+        .then(res => res.json())
+        .then(data => this.setState({
+            loaded: true,
+            apiData: data,
+        }), error => console.error(error))
+    }
+
     render() {
-        const { selectedAnimeId, openInfoBox, closeInfoBox } = this.props;
+        const { loaded, props, apiData } = this.state
+        const { selectedAnimeId, openInfoBox, closeInfoBox } = props
 
         // The anime we're talkin' about
         const anime = data.anime[selectedAnimeId];
@@ -67,11 +92,26 @@ export default class InfoBox extends PureComponent {
             watchedString = `${anime.watchedEpisodes}/${anime.episodes} episodes`
         }
 
+        // Synopsis text
+        const synopsis = loaded ? apiData.synopsis.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1)) : false
+        let synopsisSize = 0
+
+        // Calculate the size of the paragraph to smoothly animate the height when it loads in
+        if (synopsis) {
+            const synopsisTextEl = document.createTextNode(synopsis)
+            const synopsisEl = document.createElement('p')
+            synopsisEl.style.width = '867px'
+            synopsisEl.appendChild(synopsisTextEl)
+            document.body.appendChild(synopsisEl)
+            synopsisSize = synopsisEl.clientHeight
+            document.body.removeChild(synopsisEl)
+        }
+
         return (
             <Fragment>
                 <div className="modal-header">
-                    <h5 className="modal-title">
-                        <a title="Open on MyAnimeList" href={anime.url} target="_blank">
+                    <h5 className={`modal-title`}>
+                        <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank">
                             {anime.title}
                         </a>
                         <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]}`}>
@@ -82,7 +122,7 @@ export default class InfoBox extends PureComponent {
                         <span>&times;</span>
                     </button>
                 </div>
-                <div className="modal-body row">
+                <div className={`modal-body row`}>
                     <div className="col-3">
                         <img className="image rounded" width="250" src={anime.imageUrl} alt={anime.title} />
                         <div className="rating-stars text-center">
@@ -92,12 +132,16 @@ export default class InfoBox extends PureComponent {
                             <span className="inactive">
                                 {new Array(10 - anime.rating).fill(0).map(() => '★')}
                             </span>
-                            <h5>{anime.rating ? `${anime.rating} - ${data.lookup.rating[anime.rating]}` : 'Not Rated'}</h5>
-                            <p>Average MAL rating: {anime.averageRating ? anime.averageRating : 'N/A'}</p>
+                            <h5>{anime.rating ? data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
+                            {loaded ?
+                            <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
+                            <span className="loading-text mt-3" />}
                         </div>
                         <hr />
                         <p className="text-center mb-0">{data.lookup.actualType[anime.actualType]} - {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}</p>
-                        <p className="text-center">Aired {this.state.loaded ? this.state.apiData.aired_string : '????'}</p>
+                        {loaded ?
+                        <p className="text-center mb-0">Aired {apiData.aired_string}</p> :
+                        <span className="loading-text  mb-0" />}
                     </div>
                     <div className="col-9">
                         <h5>Statistics</h5>
@@ -133,7 +177,12 @@ export default class InfoBox extends PureComponent {
                         </div>
                         <hr />
                         <h5>Synopsis</h5>
-                        <p>{this.state.loaded ? this.state.apiData.synopsis.replace(/[[(].+[\])]/, '').replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1)) : '?????'}</p>
+                        <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{height: loaded ? `${synopsisSize}px` : false}}>
+                            <span /><span /><span />
+                            <span /><span /><span />
+                            <span /><span /><span />
+                            {loaded && <p>{synopsis}</p>}
+                        </div>
                         <hr />
                         <h5>Related Anime</h5>
                         <RelatedAnimeList selectedAnimeId={selectedAnimeId} openInfoBox={openInfoBox} />
@@ -162,7 +211,7 @@ class RelatedAnimeList extends PureComponent {
                 <ul className="related">
                     {anime.map(anime =>
                         <li className="container" key={anime.id}>
-                            <a title="Open on MyAnimeList" href={anime.url} target="_blank">
+                            <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank">
                                 {anime.title.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
                             </a>
                             {data.anime.hasOwnProperty(anime.id) &&

@@ -112,7 +112,8 @@ a:hover {
     border-color: var(--primary-color-hover) !important;
 }
 
-.btn-primary:focus, .btn-primary:active {
+.btn-primary:focus,
+.btn-primary:active {
     box-shadow: none !important;
 }
 
@@ -128,7 +129,8 @@ a:hover {
     border-color: var(--secondary-color-hover) !important;
 }
 
-.btn-secondary:focus, .btn-secondary:active {
+.btn-secondary:focus,
+.btn-secondary:active {
     box-shadow: none !important;
 }
 

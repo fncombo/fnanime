@@ -39,6 +39,26 @@ export default class Statistics extends Component {
         let firstNonZero = ratingCounts.slice(1).findIndex(i => !!i) + 1
         let lastNonZero = ratingCounts.length - Object.values(Object.assign([], ratingCounts)).reverse().findIndex(i => !!i) - 1
 
+        // Total sizes per rating
+        let sizeTotals = new Array(11).fill(0)
+        anime.forEach(anime => sizeTotals[anime.rating] += anime.size)
+        const biggestSize = Math.max(...sizeTotals.slice(1))
+
+        // Total durations per rating
+        let durationTotals = new Array(11).fill(0)
+        anime.forEach(anime => durationTotals[anime.rating] += anime.duration * anime.episodes)
+        const longestDuration = Math.max(...durationTotals.slice(1))
+
+        // Total watch times per rating
+        let watchTimeTotals = new Array(11).fill(0)
+        anime.forEach(anime => watchTimeTotals[anime.rating] += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1))
+        const longestWatchTime = Math.max(...watchTimeTotals.slice(1))
+
+        // Total episode count per rating
+        let episodeTotals = new Array(11).fill(0)
+        anime.forEach(anime => episodeTotals[anime.rating] += anime.episodes)
+        const biggestEpisodes = Math.max(...episodeTotals.slice(1))
+
         return (
             <div className="container-fluid statistics">
                 <hr />
@@ -49,16 +69,16 @@ export default class Statistics extends Component {
                     <div className="col text-center">
                         <h6>Number of Anime</h6>
                     </div>
-                    <div className="col">
+                    <div className="col text-center">
                         <h6>Total Storage Size</h6>
                     </div>
-                    <div className="col">
+                    <div className="col text-center">
                         <h6>Total Duration</h6>
                     </div>
-                    <div className="col">
+                    <div className="col text-center">
                         <h6>Total Watch Time</h6>
                     </div>
-                    <div className="col">
+                    <div className="col text-center">
                         <h6>Total Number of Episodes</h6>
                     </div>
                 </div>
@@ -71,17 +91,24 @@ export default class Statistics extends Component {
 
                     return (
                         <StatisticsRow
-                            anime={anime}
                             rating={rating}
-                            topRating={topRating}
                             ratingCounts={ratingCounts}
+                            topRating={topRating}
+                            sizeTotals={sizeTotals}
+                            biggestSize={biggestSize}
+                            durationTotals={durationTotals}
+                            longestDuration={longestDuration}
+                            watchTimeTotals={watchTimeTotals}
+                            longestWatchTime={longestWatchTime}
+                            episodeTotals={episodeTotals}
+                            biggestEpisodes={biggestEpisodes}
                             key={rating}
                         />
                     )
                 })}
                 <div className="row justify-content-center align-items-center border-row">
                     <div className="col-1 text-center">
-                        <h6>Totals:</h6>
+                        <h6>Totals</h6>
                     </div>
                     <div className="col text-center">
                         Average Rating: {topRating ? round(totalRating / totalRated, 2) : 'N/A'}
@@ -97,24 +124,47 @@ export default class Statistics extends Component {
 // Single row with the relative progress bar and totals
 class StatisticsRow extends PureComponent {
     render() {
-        const { anime, rating, topRating, ratingCounts } = this.props
+        const { rating,
+            ratingCounts, topRating,
+            sizeTotals, biggestSize,
+            durationTotals, longestDuration,
+            watchTimeTotals, longestWatchTime,
+            episodeTotals, biggestEpisodes
+        } = this.props
 
         return (
             <div className="row justify-content-center align-items-center">
                 <div className="col-1 text-center">
                     {rating}
                 </div>
-                <div className="col text-center">
-                    <div className="progress bg-secondary">
-                        <div
-                            className="progress-bar bg-primary"
-                            style={{width: `${topRating ? ((ratingCounts[rating] / topRating) * 100) : 0}%`}}
-                        >
-                            {ratingCounts[rating] > 0 && ratingCounts[rating]}
+                <StatisticsColumn rating={rating} data={ratingCounts} biggestData={topRating} />
+                <StatisticsColumn rating={rating} data={sizeTotals} biggestData={biggestSize} formatFunction={filesize} />
+                <StatisticsColumn rating={rating} data={durationTotals} biggestData={longestDuration} formatFunction={prettyTime} />
+                <StatisticsColumn rating={rating} data={watchTimeTotals} biggestData={longestWatchTime} formatFunction={prettyTime} />
+                <StatisticsColumn rating={rating} data={episodeTotals} biggestData={biggestEpisodes} />
+            </div>
+        )
+    }
+}
+
+class StatisticsColumn extends PureComponent {
+    render() {
+        const { rating, data, biggestData, formatFunction } = this.props
+
+        return (
+            <div className="col text-center">
+                {!!data[rating] ? (
+                    <Fragment>
+                        {formatFunction ? formatFunction(data[rating]) : data[rating]}
+                        <div className="progress bg-secondary">
+                            <div
+                                className="progress-bar bg-primary"
+                                style={{width: `${biggestData ? ((data[rating] / biggestData) * 100) : 0}%`}}
+                            >
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <StatisticsTotals anime={anime} rating={rating} />
+                    </Fragment>
+                ) : <Fragment>&mdash;</Fragment>}
             </div>
         )
     }
@@ -142,17 +192,17 @@ class StatisticsTotals extends PureComponent {
 
         return (
             <Fragment>
-                <div className="col">
+                <div className="col text-center">
                     {totals.size ? filesize(totals.size) : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col">
+                <div className="col text-center">
                     {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col">
+                <div className="col text-center">
                     {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col">
-                    {totals.episodes ? `${totals.episodes} Episodes` : <Fragment>&mdash;</Fragment>}
+                <div className="col text-center">
+                    {totals.episodes ? totals.episodes : <Fragment>&mdash;</Fragment>}
                 </div>
             </Fragment>
         )

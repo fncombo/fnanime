@@ -7,11 +7,11 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: var(--secondary-color) !important;
+    /* background-color: var(--secondary-color) !important; */
     cursor: pointer;
 }
 
-tbody tr:hover .link {
+tbody tr:hover .link  {
     text-decoration: underline;
 }
 

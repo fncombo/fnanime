@@ -45,7 +45,9 @@ class TitleColumn extends PureComponent {
                     {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
                     {/* <span className="anime-image" style={{backgroundImage: `url(${anime.imageUrl})`}} /> */}
                     <img width="37" height="50" src={anime.imageUrl} alt={anime.title} />
-                    {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
+                    <span className="link">
+                        {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
+                    </span>
                     <span className="text-secondary ml-1">
                         {data.lookup.type[anime.type]}
                     </span>

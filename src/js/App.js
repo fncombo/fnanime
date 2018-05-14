@@ -20,6 +20,7 @@ export default class Page extends Component {
     constructor() {
         super()
 
+        // Default state
         this.state = {
             anime: Results(),
             searchQuery: '',
@@ -37,6 +38,14 @@ export default class Page extends Component {
         this.closeInfoBox = this.closeInfoBox.bind(this)
         this.getSorting = this.getSorting.bind(this)
         this.getFilters = this.getFilters.bind(this)
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', event => {
+            // ESC key to close the info box
+            if (event.keyCode === 27 && this.state.selectedAnimeId) {
+                this.closeInfoBox()
+            }
+        }, false)
     }
 
     // Update search, sort and filters
@@ -87,7 +96,9 @@ export default class Page extends Component {
 
     // Close the info box
     closeInfoBox() {
-        document.body.classList.remove('modal-open')
+        this.setState({
+            selectedAnimeId: false,
+        }, () => document.body.classList.remove('modal-open'))
     }
 
     // Get the current sorting order
@@ -127,7 +138,8 @@ export default class Page extends Component {
                         <Gallery anime={this.state.anime} openInfoBox={this.openInfoBox} />
                     </div>
                 </div>
-                <div className="modal">
+                {/* Close when clicking outside of the modal-content window */}
+                <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : false}>
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                             <InfoBox

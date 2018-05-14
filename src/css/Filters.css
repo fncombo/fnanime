@@ -2,7 +2,20 @@
     flex-grow: 1 !important;
 }
 
-.form-control:focus, .custom-select:focus {
+.form-control:focus,
+.custom-select:focus {
     border-color: var(--completed-color);
     box-shadow: none;
+}
+
+.col-12 .btn-group .btn:first-child {
+    width: 7% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(2) {
+    width: 12% !important;
+}
+
+.btn-group .btn span {
+    opacity: 0.5;
 }

@@ -1,7 +1,7 @@
 // Modified and extremely simplified verion of
 // https://github.com/jonschlinkert/pretty-time
 const scale = {
-    'w': 100080,
+    // 'w': 100080, // WRONG
     'd': 1440,
     'h': 60,
     'm': 1,
@@ -18,7 +18,7 @@ const expandUom = (number, uom) => {
     return ' ' + expandedUom[uom] + (number === 1 ? '' : 's')
 }
 
-export default function prettyTime(time, smallest) {
+export default function prettyTime(time, smallest = 'm') {
     let res = ''
     let prev
 

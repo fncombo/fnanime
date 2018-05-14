@@ -23,6 +23,9 @@ export default class Filters extends Component {
                     <FilterGroup anime={anime} filterName="source" update={update} getFilters={getFilters} />
                 </div>
                 <div className="row mt-3">
+                    <FilterGroup anime={anime} filterName="rating" full={true} update={update} getFilters={getFilters} />
+                </div>
+                <div className="row mt-3">
                     <div className="col-3">
                         <input
                             type="text"
@@ -81,13 +84,13 @@ class Summary extends PureComponent {
 // A group of buttons for a single filter
 class FilterGroup extends PureComponent {
     render() {
-        const { anime, filterName, update, getFilters } = this.props
+        const { anime, filterName, full, update, getFilters } = this.props
 
         // Width of all buttons in this group should be equal
         const width = 100 / data.filterValues[filterName].length
 
         return (
-            <div className="col-6">
+            <div className={full ? 'col-12' : 'col-6'}>
                 <div className="btn-group d-flex">
                     {data.filterValues[filterName].map(value => {
                         // Count how many of currently shown anime match this filter
@@ -106,7 +109,7 @@ class FilterGroup extends PureComponent {
                                 key={value}
                             >
                                 {data.lookup[filterName][value]}
-                                {!!count && ` (${count})`}
+                                {!!count && <span> ({count})</span>}
                             </button>
                         )
                     })}

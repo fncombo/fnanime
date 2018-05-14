@@ -26,7 +26,7 @@ export default class Gallery extends PureComponent {
             return (
                 <div key={rating}>
                     <h3 className="text-center rounded p-3">
-                        {rating} - {data.lookup.rating[rating]}
+                        {data.lookup.rating[rating]}
                     </h3>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>

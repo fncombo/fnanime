@@ -220,9 +220,9 @@ fetch(apiUrl).then(res =>
 
             // Add other data from the Jikan API
             // data.anime[id].synopsis = cachedApi[id].synopsis;
-            data.anime[id].url = cachedApi[id].link_canonical;
+            data.anime[id].url = cachedApi[id].link_canonical.match(/[^\/]+$/)[0];
             data.anime[id].related = false;
-            data.anime[id].averageRating = cachedApi[id].score;
+            // data.anime[id].averageRating = cachedApi[id].score;
             // data.anime[id].aired = cachedApi[id].aired_string;
             data.anime[id].duration = 0;
 
@@ -259,6 +259,9 @@ fetch(apiUrl).then(res =>
 
                         // Remove type
                         delete anime.type;
+
+                        // Remove undeeded part of the url
+                        anime.url = anime.url.match(/[^\/]+$/)[0];
 
                         data.anime[id].related[type].push(anime);
                     });
@@ -397,7 +400,7 @@ const getMiscData = () => {
     })
 
     // Possible filters
-    const filters = ['subGroup', 'resolution', 'source', 'status', 'type'];
+    const filters = ['subGroup', 'resolution', 'source', 'status', 'type', 'rating'];
     // data.filtersAll = {
     //     subGroup: 'All Sub Groups',
     //     resolution: 'All Resolutions',
@@ -427,6 +430,11 @@ const getMiscData = () => {
                 filterData = filterData.filter(uniqueArray).filter(value => !!value).sort((a, b) => b - a);
                 break;
 
+            case 'rating':
+                // Exclude the 0 rating and correct sorting (highest to lowest)
+                filterData = filterData.filter(uniqueArray).filter(value => !!value).sort((a, b) => b - a);
+                break;
+
             default:
                 // Don't include empty values
                 filterData = filterData.filter(uniqueArray).filter(value => !!value).sort();
@@ -444,17 +452,32 @@ const getMiscData = () => {
             false: 'All Sub Groups',
         },
         rating: {
-            10: 'Masterpiece',
-            9: 'Great',
-            8: 'Very Good',
-            7: 'Good',
-            6: 'Fine',
-            5: 'Average',
-            4: 'Bad',
-            3: 'Very Bad',
-            2: 'Horrible',
-            1: 'Appaling',
+            false: 'All Ratings',
+            10:'10 - Masterpiece', //  10,
+            9: '9 - Great', // 9,
+            8: '8 - Very Good', // 8,
+            7: '7 - Good', // 7,
+            6: '6 - Fine', // 6,
+            5: '5 - Average', // 5,
+            4: '4 - Bad', // 4,
+            3: '3 - Very Bad', // 3,
+            2: '2 - Horrible', // 2,
+            1: '1 - Appaling', // 1,
+            0: '0 - Not Rated', // 'Not Rated',
         },
+        // ratingVerbose: {
+        //     10: 'Masterpiece',
+        //     9: 'Great',
+        //     8: 'Very Good',
+        //     7: 'Good',
+        //     6: 'Fine',
+        //     5: 'Average',
+        //     4: 'Bad',
+        //     3: 'Very Bad',
+        //     2: 'Horrible',
+        //     1: 'Appaling',
+        //     0: 'Not Rated',
+        // },
         type: {
             false: 'All Types',
             1: 'TV',

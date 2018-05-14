@@ -64,7 +64,7 @@ export default class Table extends PureComponent {
 
         return (
             <Fragment>
-                <table className="table table-striped mt-3" style={{width: '100%'}}>
+                <table className="table table-striped table-hover mt-3" style={{width: '100%'}}>
                     <thead title="Hold shift to sort multiple columns">
                         <tr>
                             {Object.entries(data.columns).map(([name, column]) =>

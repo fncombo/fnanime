@@ -18,7 +18,7 @@
     overflow-y: scroll;
 }
 
-.modal {
+.modal{
     /* autoprefixer: off */
     display: block;
     opacity: 0;
@@ -40,6 +40,11 @@
     z-index: 100;
     transform: translateZ(0) scale(1);
     transition-delay: 0s, 0s, 0s;
+}
+
+.modal-switching .modal {
+    opacity: 0;
+    transform: translateZ(0) scale(1.05);
 }
 
 .modal-dialog {
@@ -79,20 +84,14 @@
     font-weight: normal;
 }
 
-.modal .rating-stars span {
-    font-size: 2rem;
-}
-
 .modal .rating-stars .active {
+    font-size: 1.75rem;
     color: #fcc200;
 }
 
 .modal .rating-stars .inactive {
+    font-size: 1.75rem;
     color: hsl(0, 0%, 75%);
-}
-
-.modal .status-pill-link {
-
 }
 
 .modal .status-pill-link:hover {
@@ -102,4 +101,77 @@
 
 .modal .close:focus {
     outline: none;
+}
+
+@keyframes loading-text {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40rem;
+    }
+}
+
+@keyframes loaded-paragraph {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading-text,
+.loading-paragraph span {
+    background-image: linear-gradient(to right, hsl(0, 0%, 97.5%), hsl(0, 0%, 92.5%), hsl(0, 0%, 97.5%));
+    background-size: 40rem 1rem;
+    display: block;
+    height: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.25rem;
+    animation: loading-text 0.75s linear infinite;
+}
+
+.loading-paragraph {
+    height: 4.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-paragraph.loaded {
+    transition: height 0.15s ease-in-out;
+}
+
+.loading-paragraph p {
+    background: #fff;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: loaded-paragraph 0.15s ease-in-out forwards;
+}
+
+.loading-paragraph span {
+    position: relative;
+    top: -0.25rem;
+}
+
+.loading-paragraph span:nth-child(1),
+.loading-paragraph span:nth-child(4),
+.loading-paragraph span:nth-child(7) {
+    width: 75%;
+}
+
+.loading-paragraph span:nth-child(2),
+.loading-paragraph span:nth-child(5),
+.loading-paragraph span:nth-child(8) {
+    width: 85%;
+}
+
+.loading-paragraph span:nth-child(3),
+.loading-paragraph span:nth-child(6),
+.loading-paragraph span:nth-child(9) {
+    width: 60%;
 }
