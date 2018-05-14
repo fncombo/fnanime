@@ -67,10 +67,19 @@ export default class InfoBox extends PureComponent {
     getApiData() {
         fetch(`https://api.jikan.moe/anime/${this.state.props.selectedAnimeId}`)
         .then(res => res.json())
-        .then(data => this.setState({
-            loaded: true,
-            apiData: data,
-        }), error => console.error(error))
+        .then(data => {
+            if (data.hasOwnProperty('error')) {
+                console.error('API responded with an error:', data.error)
+                return
+            }
+
+            this.setState({
+                loaded: true,
+                apiData: data,
+            })
+        }, error => {
+            console.error('Error while fetching API:', error)
+        })
     }
 
     render() {
