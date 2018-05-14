@@ -7,6 +7,9 @@ const delay = require('delay');
 
 console.time('All data processed and saved');
 
+// Already cached data
+let existingData;
+
 // List of anime IDs from MAL list
 let animeIds = [];
 
@@ -38,7 +41,15 @@ fetch(apiUrl).then(res =>
             animeIds.push(parseInt(anime.series_animedb_id));
         });
 
-        getApiData();
+        fs.readFile('apidata.json', 'utf8', (err, data) => {
+            if (err) {
+                throw err;
+            }
+
+            existingData = JSON.parse(data);
+            getApiData();
+        });
+
     });
 });
 
@@ -48,6 +59,8 @@ const getApiData = () => {
 
     // Count how many requests done
     let done = 0;
+
+    animeIds = animeIds.filter(id => !existingData.hasOwnProperty(id));
 
     animeIds.forEach((id, i) => {
         // 5 second delay between each request
@@ -83,7 +96,7 @@ const getApiData = () => {
 
 // Save the JSON data file
 const saveDataFile = () => {
-    fs.writeFile('apidata.json', JSON.stringify(data), err => {
+    fs.writeFile('apidata.json', JSON.stringify(Object.assign(existingData, data)), err => {
         if (err) {
             throw err;
         }

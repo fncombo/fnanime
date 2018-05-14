@@ -26,7 +26,6 @@ export default class Page extends Component {
             sort: Object.assign([], data.defaultSort),
             filters: Object.assign({}, data.defaultFilters),
             page: 1,
-            infoBoxVisible: false,
             selectedAnimeId: false,
         }
 
@@ -68,7 +67,6 @@ export default class Page extends Component {
             sort: Object.assign([], data.defaultSort),
             filters: Object.assign({}, data.defaultFilters),
             page: 1,
-            infoBoxVisible: false,
             selectedAnimeId: false,
         })
     }
@@ -83,16 +81,13 @@ export default class Page extends Component {
     // Open the info box for the selected anime
     openInfoBox(animeId) {
         this.setState({
-            infoBoxVisible: true,
             selectedAnimeId: animeId,
-        })
+        }, () => document.body.classList.add('modal-open'))
     }
 
     // Close the info box
     closeInfoBox() {
-        this.setState({
-            infoBoxVisible: false,
-        })
+        document.body.classList.remove('modal-open')
     }
 
     // Get the current sorting order
@@ -132,12 +127,11 @@ export default class Page extends Component {
                         <Gallery anime={this.state.anime} openInfoBox={this.openInfoBox} />
                     </div>
                 </div>
-                <div className={`modal ${this.state.infoBoxVisible && this.state.selectedAnimeId ? 'modal-show' : ''}`}>
+                <div className="modal">
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                             <InfoBox
                                 selectedAnimeId={this.state.selectedAnimeId}
-                                infoBoxVisible={this.state.infoBoxVisible}
                                 openInfoBox={this.openInfoBox}
                                 closeInfoBox={this.closeInfoBox}
                             />

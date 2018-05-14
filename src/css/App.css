@@ -9,9 +9,9 @@ body {
     --secondary-color: #e1e7f5;
     --secondary-color-hover: #bdcae9;
     --watching-color: #2db039;
-    --completed-color: #26448f;
-    --onhold-color: #f9d457;
-    --dropped-color: #a12f31;
+    --completed-color: #2e51a2;
+    --onhold-color: #f3bd08;
+    --dropped-color: #d74245;
 	--plantowatch-color: #c3c3c3;
 }
 
@@ -65,13 +65,34 @@ a:hover {
     background: var(--plantowatch-color) !important;
 }
 
+/* Text colours */
+.text-success {
+    color: var(--completed-color);
+}
+
+.text-warning {
+    color: var(--onhold-color);
+}
+
+.text-danger {
+    color: var(--dropped-color);
+}
+
 /* Background colours */
 .bg-primary {
-    background-color: var(--primary-color-hover) !important;
+    background-color: var(--primary-color) !important;
 }
 
 .bg-secondary {
     background-color: var(--secondary-color-hover) !important;
+}
+
+.bg-warning {
+    background-color: var(--onhold-color) !important;
+}
+
+.bg-danger {
+    background-color: var(--dropped-color) !important;
 }
 
 /* Forms and buttons */
@@ -114,9 +135,4 @@ a:hover {
 .btn-disabled {
     opacity: 0.5 !important;
     pointer-events: none;
-}
-
-.form-control:focus, .custom-select:focus {
-    border-color: var(--completed-color);
-    box-shadow: none;
 }

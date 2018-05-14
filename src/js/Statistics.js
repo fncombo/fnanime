@@ -46,19 +46,19 @@ export default class Statistics extends Component {
                     <div className="col-1 text-center">
                         <h6>Rating</h6>
                     </div>
-                    <div className="col-3 text-center">
+                    <div className="col text-center">
                         <h6>Number of Anime</h6>
                     </div>
-                    <div className="col-2">
+                    <div className="col">
                         <h6>Total Storage Size</h6>
                     </div>
-                    <div className="col-2">
+                    <div className="col">
                         <h6>Total Duration</h6>
                     </div>
-                    <div className="col-2">
+                    <div className="col">
                         <h6>Total Watch Time</h6>
                     </div>
-                    <div className="col-2">
+                    <div className="col">
                         <h6>Total Number of Episodes</h6>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export default class Statistics extends Component {
                     <div className="col-1 text-center">
                         <h6>Totals:</h6>
                     </div>
-                    <div className="col-3 text-center">
+                    <div className="col text-center">
                         Average Rating: {topRating ? round(totalRating / totalRated, 2) : 'N/A'}
                     </div>
                     <StatisticsTotals anime={anime} />
@@ -104,7 +104,7 @@ class StatisticsRow extends PureComponent {
                 <div className="col-1 text-center">
                     {rating}
                 </div>
-                <div className="col-3 text-center">
+                <div className="col text-center">
                     <div className="progress bg-secondary">
                         <div
                             className="progress-bar bg-primary"
@@ -142,16 +142,16 @@ class StatisticsTotals extends PureComponent {
 
         return (
             <Fragment>
-                <div className="col-2">
+                <div className="col">
                     {totals.size ? filesize(totals.size) : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col-2">
+                <div className="col">
                     {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col-2">
+                <div className="col">
                     {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
                 </div>
-                <div className="col-2">
+                <div className="col">
                     {totals.episodes ? `${totals.episodes} Episodes` : <Fragment>&mdash;</Fragment>}
                 </div>
             </Fragment>

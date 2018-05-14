@@ -1,3 +1,8 @@
 .d-flex button {
     flex-grow: 1 !important;
 }
+
+.form-control:focus, .custom-select:focus {
+    border-color: var(--completed-color);
+    box-shadow: none;
+}

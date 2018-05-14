@@ -52,8 +52,8 @@ class GalleryItem extends PureComponent {
             <div className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
                 {/* <span className="image rounded-top" style={{backgroundImage: `url(${imageUrl})`}} /> */}
-                <img className="rounded-top" src={anime.imageUrl} alt={anime.title} />
-                <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]}`}>
+                <img src={anime.imageUrl} alt={anime.title} />
+                <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]} rounded-0`}>
                     {data.lookup.actualType[anime.actualType]}
                     {anime.episodes > 1 && ` ${anime.episodes} ep`}
                 </span>

@@ -219,11 +219,11 @@ fetch(apiUrl).then(res =>
             }
 
             // Add other data from the Jikan API
-            data.anime[id].synopsis = cachedApi[id].synopsis;
+            // data.anime[id].synopsis = cachedApi[id].synopsis;
             data.anime[id].url = cachedApi[id].link_canonical;
             data.anime[id].related = false;
             data.anime[id].averageRating = cachedApi[id].score;
-            data.anime[id].aired = cachedApi[id].aired_string;
+            // data.anime[id].aired = cachedApi[id].aired_string;
             data.anime[id].duration = 0;
 
             // Get duration in minutes

@@ -10,7 +10,7 @@ import data from './data.json'
 // Filters, search, and reset
 export default class Filters extends Component {
     render() {
-        const { anime, searchQuery, update, reset, getFilters } = this.props;
+        const { anime, searchQuery, update, reset, getFilters } = this.props
 
         return (
             <Fragment>

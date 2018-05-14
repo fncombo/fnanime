@@ -48,7 +48,7 @@ export default function Results (searchQuery = '', sort = data.defaultSort, filt
         })
     }
 
-    const resultsToUse = filtersActive ? results : anime;
+    const resultsToUse = filtersActive ? results : anime
 
     // Perform the search query (if any)
     if (searchQuery.length) {

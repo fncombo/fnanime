@@ -1,11 +1,3 @@
-.gallery a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 /* .gallery .image {
     height: calc(100px * 1.4);
     background-size: cover;
@@ -19,11 +11,6 @@
 
 .gallery .not-downloaded {
     opacity: 0.3;
-    transition: opacity 0.15s ease-in-out;
-}
-
-.gallery .not-downloaded:hover {
-    opacity: 1;
 }
 
 .gallery .status-pill {
@@ -42,7 +29,26 @@
 }
 
 .gallery-item {
+    /* autoprefixer: off */
+    border-radius: 0.25rem;
+    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    z-index: 1;
+    transition-property: z-index, opacity, box-shadow, transform;
+    transition-duration: 0s, 0.15s, 0.15s, 0.15s;
+    /* Need to delay z-index to allow the element to face out first */
+    transition-delay: 0.15s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.gallery-item:hover {
+    /* autoprefixer: off */
+    opacity: 1;
+    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transform: scale(1.5);
+    transition-delay: 0s, 0s, 0s, 0s;
 }

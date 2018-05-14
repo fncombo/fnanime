@@ -15,10 +15,38 @@ import prettyTime from './PrettyTime'
 
 // Information box about a specific selected anime
 export default class InfoBox extends PureComponent {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            loaded: false,
+            apiData: {},
+        }
+    }
+
     // Add/remove class from body when opening/closing
-    componentDidUpdate() {
-        const { selectedAnimeId, infoBoxVisible } = this.props;
-        document.body.classList[infoBoxVisible && selectedAnimeId ? 'add' : 'remove']('modal-open')
+    componentDidUpdate(prevProps, prevState) {
+        const { selectedAnimeId } = this.props
+
+        // Don't do anythiung if it's still the same anime
+        if (prevProps.selectedAnimeId === selectedAnimeId) {
+            return
+        }
+
+        // Reset state
+        this.setState({
+            loaded: false,
+        })
+
+        // Get API data that was too big for the local JSON data
+        if (selectedAnimeId) {
+            fetch(`https://api.jikan.moe/anime/${selectedAnimeId}`)
+            .then(res => res.json())
+            .then(data => this.setState({
+                loaded: true,
+                apiData: data,
+            }), error => console.error(error))
+        }
     }
 
     render() {
@@ -29,6 +57,14 @@ export default class InfoBox extends PureComponent {
 
         if (!anime) {
             return null
+        }
+
+        // Nicely display how many episodes watched, or how many total times watched if more than 1 or only 1 episode
+        let watchedString
+        if (anime.rewatchCount || (anime.watchedEpisodes && anime.episodes === 1)) {
+            watchedString = `${anime.rewatchCount + 1} time${anime.rewatchCount + 1 > 1 ? 's' : ''}`
+        } else if (anime.watchedEpisodes && anime.episodes > 1) {
+            watchedString = `${anime.watchedEpisodes}/${anime.episodes} episodes`
         }
 
         return (
@@ -48,23 +84,20 @@ export default class InfoBox extends PureComponent {
                 </div>
                 <div className="modal-body row">
                     <div className="col-3">
-                        <div className="image rounded" style={{backgroundImage: `url(${anime.imageUrl})`}}></div>
-                        {!!anime.rating &&
-                        <Fragment>
-                            <div className="rating-stars text-center">
-                                <span className="active">
-                                    {new Array(anime.rating).fill(0).map(() => '★')}
-                                </span>
-                                <span className="inactive">
-                                    {new Array(10 - anime.rating).fill(0).map(() => '★')}
-                                </span>
-                                <h5>{anime.rating} - {data.lookup.rating[anime.rating]}</h5>
-                                <p>Average MAL rating: {anime.averageRating}</p>
-                            </div>
-                            <hr />
-                        </Fragment>}
+                        <img className="image rounded" width="250" src={anime.imageUrl} alt={anime.title} />
+                        <div className="rating-stars text-center">
+                            <span className="active">
+                                {new Array(anime.rating).fill(0).map(() => '★')}
+                            </span>
+                            <span className="inactive">
+                                {new Array(10 - anime.rating).fill(0).map(() => '★')}
+                            </span>
+                            <h5>{anime.rating ? `${anime.rating} - ${data.lookup.rating[anime.rating]}` : 'Not Rated'}</h5>
+                            <p>Average MAL rating: {anime.averageRating ? anime.averageRating : 'N/A'}</p>
+                        </div>
+                        <hr />
                         <p className="text-center mb-0">{data.lookup.actualType[anime.actualType]} - {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}</p>
-                        <p className="text-center">Aired {anime.aired}</p>
+                        <p className="text-center">Aired {this.state.loaded ? this.state.apiData.aired_string : '????'}</p>
                     </div>
                     <div className="col-9">
                         <h5>Statistics</h5>
@@ -74,8 +107,8 @@ export default class InfoBox extends PureComponent {
                                     <li><strong>Total Storage Size:</strong> {anime.downloaded ? filesize(anime.size) : 'Not Downloaded'}</li>
                                     {anime.episodes > 1 &&
                                     <li><strong>Average per Episode:</strong> {anime.downloaded ? filesize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
-                                    {!!anime.rewatchCount &&
-                                    <li><strong>Rewatched:</strong> {anime.rewatchCount} {anime.rewatchCount === 1 ? 'time' : 'times'}</li>}
+                                    {!!watchedString &&
+                                    <li><strong>Watched:</strong> {watchedString}</li>}
                                 </ul>
                             </div>
                             <div className="col-6">
@@ -100,7 +133,7 @@ export default class InfoBox extends PureComponent {
                         </div>
                         <hr />
                         <h5>Synopsis</h5>
-                        <p>{anime.synopsis.replace(/[[(].+[\])]/, '').replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p>
+                        <p>{this.state.loaded ? this.state.apiData.synopsis.replace(/[[(].+[\])]/, '').replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1)) : '?????'}</p>
                         <hr />
                         <h5>Related Anime</h5>
                         <RelatedAnimeList selectedAnimeId={selectedAnimeId} openInfoBox={openInfoBox} />
@@ -129,7 +162,9 @@ class RelatedAnimeList extends PureComponent {
                 <ul className="related">
                     {anime.map(anime =>
                         <li className="container" key={anime.id}>
-                            <a title="Open on MyAnimeList" href={anime.url} target="_blank">{anime.title}</a>
+                            <a title="Open on MyAnimeList" href={anime.url} target="_blank">
+                                {anime.title.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
+                            </a>
                             {data.anime.hasOwnProperty(anime.id) &&
                             <span
                                 title="View"

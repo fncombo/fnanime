@@ -7,6 +7,7 @@
     backface-visibility: hidden;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
 }
 
 .modal-open .container-main {
@@ -32,7 +33,7 @@
     transition-timing-function: ease-in-out;
 }
 
-.modal-show {
+.modal-open .modal {
     /* autoprefixer: off */
     opacity: 1;
     pointer-events: all;
@@ -47,7 +48,7 @@
 }
 
 .modal-content {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.15);
 }
 
 .modal ul {
@@ -68,10 +69,7 @@
 }
 
 .modal .image {
-    background-size: cover;
-    background-position: center;
-    width: 250px;
-    height: calc(250px * 1.4);
+    display: block;
     margin: 0 auto;
 }
 
