@@ -1,0 +1,129 @@
+table {
+	table-layout: fixed;
+}
+
+tbody tr {
+    height: 50px;
+}
+
+tbody tr:hover {
+    background-color: var(--secondary-color) !important;
+    cursor: pointer;
+}
+
+tbody tr:hover .link {
+    text-decoration: underline;
+}
+
+table .progress {
+    height: 4px;
+    border-radius: 2px;
+}
+
+th:not(:first-child) {
+	text-align: center;
+}
+
+th {
+    position: relative;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+th:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+}
+
+th:before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: solid transparent;
+    border-bottom-color: var(--secondary-color-hover);
+    border-width: 5px;
+    position: absolute;
+    top: 11px;
+    right: calc(0.75rem - 5px);
+}
+
+th.sort-asc:before {
+    border-bottom-color: var(--primary-color);
+}
+
+th:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: solid transparent;
+    border-top-color: var(--secondary-color-hover);
+    border-width: 5px;
+    position: absolute;
+    bottom: 11px;
+    right: calc(0.75rem - 5px);
+}
+
+th.sort-desc:after {
+    border-top-color: var(--primary-color);
+}
+
+th.d-flex {
+    display: table-cell !important;
+}
+
+td:not(:first-child) {
+	text-align: center;
+}
+
+td {
+    border: none !important;
+    position: relative;
+}
+
+td:first-child {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem 0 calc(37px + 0.75rem) !important;
+}
+
+td:first-child strong {
+    background-color: var(--primary-color);
+    padding: 0.2rem 0.1rem;
+    color: #fff;
+    font-weight: normal;
+    border-radius: 0.25rem;
+}
+
+td.size-column {
+	padding: 0.7rem;
+}
+
+/* .anime-image {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 52px;
+    width: 37px;
+} */
+
+tr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.not-downloaded, .size-mismatch {
+    background-image: linear-gradient(-45deg,
+     rgba(0, 0, 0, 0.05) 25%,
+     transparent 25%,
+     transparent 50%,
+     rgba(0, 0, 0, 0.05) 50%,
+     rgba(0, 0, 0, 0.05) 75%,
+     transparent 75%,
+     transparent) !important;
+    background-size: 25px 25px;
+}

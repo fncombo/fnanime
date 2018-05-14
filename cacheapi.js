@@ -51,21 +51,32 @@ const getApiData = () => {
 
     animeIds.forEach((id, i) => {
         // 5 second delay between each request
-        delay(5000 * i).then(() => {
+        delay(2500 * i).then(() => {
             console.log(`Getting info for anime ID ${id}, ${done + 1}/${animeIds.length}`);
 
-            fetch(`${jikanUrl}${id}`).then(res =>
-                res.json()
-            ).then(body => {
-                data[parseInt(id)] = body;
+            const getData = () => {
+                fetch(`${jikanUrl}${id}`).then(res =>
+                    res.json()
+                ).then(body => {
+                    if (body.hasOwnProperty('error')) {
+                        console.log(`Retrying info for anime ID ${id}, failed:`, body.error);
+                        getData();
+                        return;
+                    }
 
-                done++;
+                    data[parseInt(id)] = body;
 
-                // When all done
-                if (done === animeIds.length) {
-                    saveDataFile();
-                }
-            });
+                    done++;
+
+                    // When all done
+                    if (done === animeIds.length) {
+                        saveDataFile();
+                    }
+                });
+            };
+
+            getData();
+
         });
     });
 };

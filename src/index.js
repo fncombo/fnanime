@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Fnanime from './fnanime';
+import App from './js/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Fnanime />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

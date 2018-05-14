@@ -1,0 +1,122 @@
+/* General */
+[data-title] {
+    cursor: help;
+}
+
+body {
+    --primary-color: #2e51a2;
+    --primary-color-hover: #203871;
+    --secondary-color: #e1e7f5;
+    --secondary-color-hover: #bdcae9;
+    --watching-color: #2db039;
+    --completed-color: #26448f;
+    --onhold-color: #f9d457;
+    --dropped-color: #a12f31;
+	--plantowatch-color: #c3c3c3;
+}
+
+.container-fluid {
+    transition: filter 0.15s ease-in-out;
+}
+
+.container-limited {
+    max-width: 1400px;
+    min-width: 1400px;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-color-hover);
+}
+
+/* Status pills */
+.status-pill {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.status-pill-watching {
+    background: var(--watching-color) !important;
+    color: #fff;
+}
+
+.status-pill-completed {
+    background: var(--completed-color) !important;
+    color: #fff;
+}
+
+.status-pill-onhold {
+    background: var(--onhold-color) !important;
+    color: #fff;
+}
+
+.status-pill-dropped {
+    background: var(--dropped-color) !important;
+    color: #fff;
+}
+
+.status-pill-plantowatch {
+    color: hsl(0, 0%, 20%);
+    background: var(--plantowatch-color) !important;
+}
+
+/* Background colours */
+.bg-primary {
+    background-color: var(--primary-color-hover) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color-hover) !important;
+}
+
+/* Forms and buttons */
+.btn-group .btn {
+    margin: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover) !important;
+    border-color: var(--primary-color-hover) !important;
+}
+
+.btn-primary:focus, .btn-primary:active {
+    box-shadow: none !important;
+}
+
+.btn-secondary {
+    color: var(--primary-color);
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-secondary:hover {
+    color: var(--primary-color-hover) !important;
+    background-color: var(--secondary-color-hover) !important;
+    border-color: var(--secondary-color-hover) !important;
+}
+
+.btn-secondary:focus, .btn-secondary:active {
+    box-shadow: none !important;
+}
+
+.btn-disabled {
+    opacity: 0.5 !important;
+    pointer-events: none;
+}
+
+.form-control:focus, .custom-select:focus {
+    border-color: var(--completed-color);
+    box-shadow: none;
+}

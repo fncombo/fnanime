@@ -8,6 +8,7 @@ const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
 const sifter = require('sifter');
 const cachedApi = require('./apidata.json');
+const filesize = require('filesize');
 
 console.time('All data processed and saved');
 
@@ -69,6 +70,7 @@ const round = (value, exp = -2) => {
 
 // Convert bytes to normal size (modified)
 // https://stackoverflow.com/a/18650828/1561377
+// This is needed because of the weird way MAL displays and rounds their values
 const formatSize = (bytes, i, showLabel = true) => {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
@@ -145,23 +147,16 @@ const processLocalData = (name, size) => {
 
     // Add in local data and mark it as present locally
     data.anime[id].title = replaceDiacritics(data.anime[id].title);
-    data.anime[id].titleLocal = title;
-    data.anime[id].local = true;
+    data.anime[id].localTitle = title;
+    data.anime[id].downloaded = true;
     data.anime[id].subGroup = subs.split('-');
     data.anime[id].resolution = parseInt(resolution);
     data.anime[id].source = (source.includes('.') ? 'BD' : source);
     data.anime[id].size = size;
-    data.anime[id].sizeDisplay = formatSize(size, 3);
+    // data.anime[id].displaySize = filesize(size);
     data.anime[id].sizeMatches = (data.anime[id].malSize === round(formatSize(size, 3, false), -1));
-    data.anime[id].epSize = size / data.anime[id].episodes;
-    data.anime[id].epSizeDisplay = formatSize(size / data.anime[id].episodes, 3);
-
-    // Add other data from the Jikan API
-    data.anime[id].synopsis = cachedApi[id].synopsis;
-    data.anime[id].url = cachedApi[id].link_canonical;
-    data.anime[id].related = Array.isArray(cachedApi[id].related) ? false : cachedApi[id].related;
-    data.anime[id].averageRating = cachedApi[id].score;
-    data.anime[id].season = cachedApi[id].premiered;
+    // data.anime[id].epSize = size / data.anime[id].episodes;
+    // data.anime[id].displayEpSize = filesize(size / data.anime[id].episodes);
 };
 
 // Get MAL API XML
@@ -194,22 +189,23 @@ fetch(apiUrl).then(res =>
                 title: anime.series_title,
                 synonyms: synonyms,
                 type: type > 4 ? 7 : type,
-                typeActual: type,
+                actualType: type,
                 episodes: parseInt(anime.series_episodes),
                 imageUrl: anime.series_image,
                 status: parseInt(anime.my_status),
                 rating: rating,
-                tags: tags,
                 rewatchCount: 0,
+                watchedEpisodes: parseInt(anime.my_watched_episodes) || 0,
                 malSize: 0,
                 // Local data
-                local: false,
+                localTitle: '',
+                downloaded: false,
                 subGroup: false,
                 resolution: undefined,
                 source: 'ZMISS',
                 size: 0,
                 sizeMatches: false,
-                epSize: 0,
+                // epSize: 0,
             };
 
             // If there are tags, try to get the rewatch count
@@ -221,6 +217,54 @@ fetch(apiUrl).then(res =>
                     }
                 });
             }
+
+            // Add other data from the Jikan API
+            data.anime[id].synopsis = cachedApi[id].synopsis;
+            data.anime[id].url = cachedApi[id].link_canonical;
+            data.anime[id].related = false;
+            data.anime[id].averageRating = cachedApi[id].score;
+            data.anime[id].aired = cachedApi[id].aired_string;
+            data.anime[id].duration = 0;
+
+            // Get duration in minutes
+            if (/per ep/i.test(cachedApi[id].duration)) {
+                data.anime[id].duration = parseInt(cachedApi[id].duration);
+            } else if (/hr/i.test(cachedApi[id].duration)) {
+                const match = cachedApi[id].duration.match(/(\d+)\shr\.\s?(\d+)?/i);
+                data.anime[id].duration = (parseInt(match[1]) * 60) + (match[2] ? parseInt(match[2]) : 0);
+            } else {
+                data.anime[id].duration = parseInt(cachedApi[id].duration);
+            }
+
+            // Clean up and add related anime
+            if (!Array.isArray(cachedApi[id].related)) {
+                Object.entries(cachedApi[id].related).forEach(([type, anime]) => {
+                    // Don't include anything related that's not an anime
+                    anime = anime.filter(anime => anime.type === 'anime')
+
+                    if (!anime.length) {
+                        return;
+                    }
+
+                    if (!data.anime[id].related) {
+                        data.anime[id].related = {};
+                    }
+
+                    data.anime[id].related[type] = [];
+
+                    anime.forEach(anime => {
+                        // Rename
+                        anime.id = anime.mal_id;
+                        delete anime.mal_id;
+
+                        // Remove type
+                        delete anime.type;
+
+                        data.anime[id].related[type].push(anime);
+                    });
+                });
+            }
+
         });
 
         getListHtml();
@@ -328,43 +372,43 @@ const getMiscData = () => {
 
     // Anime sizes, no bigger than 50GB
     const sizes = Object.values(data.anime).map(anime => ((anime.size > 5e10) ? 0 : anime.size));
-    data.biggestSize = Math.max(...sizes);
-    data.smallestSize = Math.min(...sizes);
+    const biggestSize = Math.max(...sizes);
+    const smallestSize = Math.min(...sizes);
 
     // Episode sizes, no bigger than 20GB
-    const epSizes = Object.values(data.anime).map(anime => ((anime.epSize > 2e10) ? 0 : anime.epSize));
-    data.epBiggestSize = Math.max(...epSizes);
-    data.epSmallestSize = Math.min(...epSizes);
+    // const epSizes = Object.values(data.anime).map(anime => ((anime.epSize > 2e10) ? 0 : anime.epSize));
+    // const epBiggestSize = Math.max(...epSizes);
+    // const epSmallestSize = Math.min(...epSizes);
 
     // Calculate the "progress bar" display size for each anime
     Object.values(data.anime).forEach(anime => {
         const id = anime.id;
 
-        const size = data.anime[id].size;
-        data.anime[id].sizeWidth = ((size - data.smallestSize) / data.biggestSize) * 100;
-        data.anime[id].sizeColor = (size > (data.biggestSize * 0.75) ? 'danger' : (size > (data.biggestSize * 0.5) ? 'warning' : 'primary'));
+        // Delete not needed properties
+        delete data.anime[id].malSize;
 
-        const epSize = data.anime[id].epSize;
-        data.anime[id].epSizeWidth = ((epSize - data.epSmallestSize) / data.epBiggestSize) * 100;
-        data.anime[id].epSizeColor = (epSize > (data.epBiggestSize * 0.75) ? 'danger' : (epSize > (data.epBiggestSize * 0.5) ? 'warning' : 'primary'));
+        const size = data.anime[id].size;
+        data.anime[id].sizeWidth = (((size - smallestSize) / biggestSize) * 100) || 0;
+        data.anime[id].sizeColor = ((size > (biggestSize * 0.75) ? 'danger' : (size > (biggestSize * 0.5) ? 'warning' : 'primary'))) || 0;
+
+        // const epSize = data.anime[id].epSize;
+        // data.anime[id].epSizeWidth = ((epSize - data.epSmallestSize) / data.epBiggestSize) * 100;
+        // data.anime[id].epSizeColor = (epSize > (data.epBiggestSize * 0.75) ? 'danger' : (epSize > (data.epBiggestSize * 0.5) ? 'warning' : 'primary'));
     })
 
-    // Possible anime ratings
-    data.ratings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-
     // Possible filters
-    data.filters = ['subGroup', 'resolution', 'source', 'status', 'type'];
-    data.filtersAll = {
-        subGroup: 'All Sub Groups',
-        resolution: 'All Resolutions',
-        source: 'All Sources',
-        status: 'All Statuses',
-        type: 'All Types',
-    };
+    const filters = ['subGroup', 'resolution', 'source', 'status', 'type'];
+    // data.filtersAll = {
+    //     subGroup: 'All Sub Groups',
+    //     resolution: 'All Resolutions',
+    //     source: 'All Sources',
+    //     status: 'All Statuses',
+    //     type: 'All Types',
+    // };
 
     // Possible filter values
     data.filterValues = {};
-    data.filters.forEach(filter => {
+    filters.forEach(filter => {
         // Get all data for this filter
         let filterData = Object.values(data.anime).map(anime => anime[filter]);
 
@@ -396,6 +440,9 @@ const getMiscData = () => {
 
     // Definition lookups
     data.lookup = {
+        subGroup: {
+            false: 'All Sub Groups',
+        },
         rating: {
             10: 'Masterpiece',
             9: 'Great',
@@ -409,6 +456,7 @@ const getMiscData = () => {
             1: 'Appaling',
         },
         type: {
+            false: 'All Types',
             1: 'TV',
             2: 'OVA',
             3: 'Movie',
@@ -417,7 +465,7 @@ const getMiscData = () => {
             // 6: 'Music',
             7: 'Other',
         },
-        typeActual: {
+        actualType: {
             1: 'TV',
             2: 'OVA',
             3: 'Movie',
@@ -426,6 +474,7 @@ const getMiscData = () => {
             6: 'Music',
         },
         status: {
+            false: 'All Statuses',
             1: 'Watching',
             2: 'Completed',
             3: 'On-Hold',
@@ -442,6 +491,7 @@ const getMiscData = () => {
             6: 'plantowatch',
         },
         resolution: {
+            false: 'All Resolutions',
             1080: '1080p',
             720: '720p',
             480: '480p',
@@ -454,6 +504,7 @@ const getMiscData = () => {
             360: 'danger',
         },
         source: {
+            false: 'All Sources',
             BD: 'BD',
             TV: 'TV',
             DVD: 'DVD',
@@ -467,12 +518,69 @@ const getMiscData = () => {
         },
     };
 
+    data.defaultSort = [
+        {
+            field: 'status',
+            direction: 'asc',
+        }, {
+            field: 'title',
+            direction: 'asc',
+        },
+    ];
+
+    data.defaultFilters = {};
+    filters.map(filterName => data.defaultFilters[filterName] = false);
+
+    // Table columns
+    data.columns = {
+        title: {
+            name: 'Title',
+            defaultSort: 'asc',
+            size: '36.5%',
+        },
+        status: {
+            name: 'Status',
+            defaultSort: 'asc',
+            size: '9%',
+        },
+        subGroup: {
+            name: 'SubGroup',
+            defaultSort: 'asc',
+            size: '12.5%',
+        },
+        resolution: {
+            name: 'Resolution',
+            defaultSort: 'desc',
+            size: '9%',
+        },
+        source: {
+            name: 'Source',
+            defaultSort: 'asc',
+            size: 'auto',
+        },
+        rating: {
+            name: 'Rating',
+            defaultSort: 'desc',
+            size: 'auto',
+        },
+        rewatchCount: {
+            name: 'Rewatched',
+            defaultSort: 'desc',
+            size: '9%',
+        },
+        size: {
+            name: 'Size',
+            defaultSort: 'desc',
+            size: '11%',
+        },
+    };
+
     saveDataFile();
 };
 
 // Save the JSON data file
 const saveDataFile = () => {
-    fs.writeFile('src/data.json', JSON.stringify(data), err => {
+    fs.writeFile('src/js/data.json', JSON.stringify(data), err => {
         if (err) {
             throw err;
         }
