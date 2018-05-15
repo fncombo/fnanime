@@ -35,7 +35,7 @@ export default function Results (searchQuery = '', sort = data.defaultSort, filt
     if (filtersActive) {
         Object.entries(filters).forEach(([filterName, value], i) => {
             // Always use cached results past the first filter
-            const resultsToUse = i === 0 ? anime : results;
+            const resultsToUse = i === 0 ? anime : results
 
             tempResults = []
 

@@ -87,7 +87,7 @@ export default class InfoBox extends PureComponent {
         const { selectedAnimeId, openInfoBox, closeInfoBox } = props
 
         // The anime we're talkin' about
-        const anime = data.anime[selectedAnimeId];
+        const anime = data.anime[selectedAnimeId]
 
         if (!anime) {
             return null

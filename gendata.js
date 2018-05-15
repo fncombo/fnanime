@@ -447,23 +447,24 @@ const getMiscData = () => {
     });
 
     // Definition lookups
+    // \u2013 => &endash;
     data.lookup = {
         subGroup: {
             false: 'All Sub Groups',
         },
         rating: {
             false: 'All Ratings',
-            10:'10 - Masterpiece', //  10,
-            9: '9 - Great', // 9,
-            8: '8 - Very Good', // 8,
-            7: '7 - Good', // 7,
-            6: '6 - Fine', // 6,
-            5: '5 - Average', // 5,
-            4: '4 - Bad', // 4,
-            3: '3 - Very Bad', // 3,
-            2: '2 - Horrible', // 2,
-            1: '1 - Appaling', // 1,
-            0: '0 - Not Rated', // 'Not Rated',
+            10:'10 \u2013 Masterpiece', //  10,
+            9: '9 \u2013 Great', // 9,
+            8: '8 \u2013 Very Good', // 8,
+            7: '7 \u2013 Good', // 7,
+            6: '6 \u2013 Fine', // 6,
+            5: '5 \u2013 Average', // 5,
+            4: '4 \u2013 Bad', // 4,
+            3: '3 \u2013 Very Bad', // 3,
+            2: '2 \u2013 Horrible', // 2,
+            1: '1 \u2013 Appaling', // 1,
+            0: '0 \u2013 Not Rated', // 'Not Rated',
         },
         // ratingVerbose: {
         //     10: 'Masterpiece',

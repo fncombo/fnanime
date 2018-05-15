@@ -60,7 +60,7 @@ export default class Filters extends Component {
 // Quick summary of the current table state
 class Summary extends PureComponent {
     render() {
-        const { anime } = this.props;
+        const { anime } = this.props
 
         if (!anime.length) {
             return <Fragment>No matching anime</Fragment>

@@ -16,6 +16,7 @@ body {
 }
 
 .container-fluid {
+    min-width: 1400px;
     transition: filter 0.15s ease-in-out;
 }
 
@@ -93,6 +94,26 @@ a:hover {
 
 .bg-danger {
     background-color: var(--dropped-color) !important;
+}
+
+.bg-watching {
+    background-color: var(--watching-color) !important;
+}
+
+.bg-completed {
+    background-color: var(--completed-color) !important;
+}
+
+.bg-onhold {
+    background-color: var(--onhold-color) !important;
+}
+
+.bg-dropped {
+    background-color: var(--dropped-color) !important;
+}
+
+.bg-plantowatch {
+    background-color: var(--plantowatch-color) !important;
 }
 
 /* Forms and buttons */
