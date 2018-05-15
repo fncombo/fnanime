@@ -44,14 +44,14 @@ export default class InfoBox extends PureComponent {
                 }, this.getApiData)
             }, 150)
 
-        // Just opened and new ID set
+            // Just opened and new ID set
         } else if (!currentId && nextId && currentId !== nextId) {
             this.setState({
                 loaded: false,
                 props: nextProps,
             }, this.getApiData)
 
-        // Close and ID removed
+            // Close and ID removed
         } else if (currentId && !nextId && currentId !== nextId) {
             // Wait for CSS animation to finish
             setTimeout(() => {
@@ -66,20 +66,20 @@ export default class InfoBox extends PureComponent {
     // Get API data from Jikan about this anime, such as synopsis
     getApiData() {
         fetch(`https://api.jikan.moe/anime/${this.state.props.selectedAnimeId}`)
-        .then(res => res.json())
-        .then(data => {
-            if (data.hasOwnProperty('error')) {
-                console.error('API responded with an error:', data.error)
-                return
-            }
+            .then(res => res.json())
+            .then(data => {
+                if (data.hasOwnProperty('error')) {
+                    console.error('API responded with an error:', data.error)
+                    return
+                }
 
-            this.setState({
-                loaded: true,
-                apiData: data,
+                this.setState({
+                    loaded: true,
+                    apiData: data,
+                })
+            }, error => {
+                console.error('Error while fetching API:', error)
             })
-        }, error => {
-            console.error('Error while fetching API:', error)
-        })
     }
 
     render() {
@@ -119,7 +119,7 @@ export default class InfoBox extends PureComponent {
         return (
             <Fragment>
                 <div className="modal-header">
-                    <h5 className={`modal-title`}>
+                    <h5 className='modal-title'>
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank">
                             {anime.title}
                         </a>
@@ -131,7 +131,7 @@ export default class InfoBox extends PureComponent {
                         <span>&times;</span>
                     </button>
                 </div>
-                <div className={`modal-body row`}>
+                <div className='modal-body row'>
                     <div className="col-3">
                         <img className="image rounded" width="250" src={anime.imageUrl} alt={anime.title} />
                         <div className="rating-stars text-center">
@@ -143,14 +143,14 @@ export default class InfoBox extends PureComponent {
                             </span>
                             <h5>{anime.rating ? data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
                             {loaded ?
-                            <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
-                            <span className="loading-text mt-3" />}
+                                <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
+                                <span className="loading-text mt-3" />}
                         </div>
                         <hr />
                         <p className="text-center mb-0">{data.lookup.actualType[anime.actualType]} - {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}</p>
                         {loaded ?
-                        <p className="text-center mb-0">Aired {apiData.aired_string}</p> :
-                        <span className="loading-text  mb-0" />}
+                            <p className="text-center mb-0">Aired {apiData.aired_string}</p> :
+                            <span className="loading-text  mb-0" />}
                     </div>
                     <div className="col-9">
                         <h5>Statistics</h5>
@@ -159,9 +159,9 @@ export default class InfoBox extends PureComponent {
                                 <ul>
                                     <li><strong>Total Storage Size:</strong> {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}</li>
                                     {anime.episodes > 1 &&
-                                    <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
+                                        <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
                                     {!!watchedString &&
-                                    <li><strong>Watched:</strong> {watchedString}</li>}
+                                        <li><strong>Watched:</strong> {watchedString}</li>}
                                 </ul>
                             </div>
                             <div className="col-6">
@@ -172,21 +172,21 @@ export default class InfoBox extends PureComponent {
                                         {!!anime.duration && anime.episodes > 1 && ' per episode'}
                                     </li>
                                     {anime.episodes > 1 &&
-                                    <li>
-                                        <strong>Total Duration: </strong>
-                                        {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
-                                    </li>}
+                                        <li>
+                                            <strong>Total Duration: </strong>
+                                            {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
+                                        </li>}
                                     {!!anime.watchedEpisodes &&
-                                    <li>
-                                        <strong>Total Watch Time: </strong>
-                                        {prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1), 'm')}
-                                    </li>}
+                                        <li>
+                                            <strong>Total Watch Time: </strong>
+                                            {prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1), 'm')}
+                                        </li>}
                                 </ul>
                             </div>
                         </div>
                         <hr />
                         <h5>Synopsis</h5>
-                        <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{height: loaded ? `${synopsisSize}px` : false}}>
+                        <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{ height: loaded ? `${synopsisSize}px` : false }}>
                             <span /><span /><span />
                             <span /><span /><span />
                             <span /><span /><span />
@@ -224,14 +224,14 @@ class RelatedAnimeList extends PureComponent {
                                 {anime.title.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
                             </a>
                             {data.anime.hasOwnProperty(anime.id) &&
-                            <span
-                                title="View"
-                                className={`status-pill status-pill-link status-pill-${data.lookup.statusColor[data.anime[anime.id].status]}`}
-                                onClick={() => openInfoBox(anime.id)}
-                            >
-                                {data.lookup.status[data.anime[anime.id].status]}
-                                {!!data.anime[anime.id].rating && ` - Rated ${data.anime[anime.id].rating}`}
-                            </span>}
+                                <span
+                                    title="View"
+                                    className={`status-pill status-pill-link status-pill-${data.lookup.statusColor[data.anime[anime.id].status]}`}
+                                    onClick={() => openInfoBox(anime.id)}
+                                >
+                                    {data.lookup.status[data.anime[anime.id].status]}
+                                    {!!data.anime[anime.id].rating && ` - Rated ${data.anime[anime.id].rating}`}
+                                </span>}
                         </li>
                     )}
                 </ul>

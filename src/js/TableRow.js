@@ -72,7 +72,7 @@ class DataColumns extends PureComponent {
 
                 <td className="text-left">{anime.subGroup ? anime.subGroup.join(', ') : <Fragment>&mdash;</Fragment>}</td>
 
-                <td className={!!anime.resolution ? `text-${data.lookup.resolutionColor[anime.resolution]}` : ''}>
+                <td className={anime.resolution ? `text-${data.lookup.resolutionColor[anime.resolution]}` : ''}>
                     {anime.resolution ? `${anime.resolution}p` : <Fragment>&mdash;</Fragment>}
                 </td>
 
@@ -86,12 +86,12 @@ class DataColumns extends PureComponent {
 
                 <td
                     title={!anime.sizeMatches && anime.downloaded ? 'Size does not match with the one specified on MyAnimeList' : ''}
-                    className={`size-column ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch': ''}`}>
+                    className={`size-column ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch' : ''}`}>
                     {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
                     {anime.downloaded &&
-                    <div className='progress bg-secondary'>
-                        <div className={`progress-bar bg-${anime.sizeColor}`} style={{width: `${anime.sizeWidth}px`}} />
-                    </div>}
+                        <div className='progress bg-secondary'>
+                            <div className={`progress-bar bg-${anime.sizeColor}`} style={{ width: `${anime.sizeWidth}px` }} />
+                        </div>}
                 </td>
             </Fragment>
         )

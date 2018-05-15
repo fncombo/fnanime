@@ -19,8 +19,13 @@ const reducer = (a, b) => a + b
 
 // Show all the ratings, number of anime per rating, and other totals
 // Arrays are done that way so they are all unique and don't cross-reference each other when modifying
+// because deep copying is a pain in the butt
 export default class Statistics extends Component {
-    allRatings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    constructor() {
+        super()
+
+        this.allRatings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    }
 
     render() {
         const { anime } = this.props
@@ -42,7 +47,7 @@ export default class Statistics extends Component {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0],
         ]
         anime.forEach(anime => ratingsTotals[anime.rating][anime.status]++)
 
@@ -70,7 +75,7 @@ export default class Statistics extends Component {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0],
         ]
         anime.forEach(anime => sizeTotals[anime.rating][anime.status] += anime.size)
         const biggestSize = Math.max(...sizeTotals.slice(1).map(n => n.reduce(reducer)))
@@ -87,7 +92,7 @@ export default class Statistics extends Component {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0],
         ]
         anime.forEach(anime => durationTotals[anime.rating][anime.status] += anime.duration * anime.episodes)
         const biggestDuration = Math.max(...durationTotals.slice(1).map(n => n.reduce(reducer)))
@@ -104,7 +109,7 @@ export default class Statistics extends Component {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0],
         ]
         anime.forEach(anime => watchTimeTotals[anime.rating][anime.status] += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1))
         const biggestWatchTime = Math.max(...watchTimeTotals.slice(1).map(n => n.reduce(reducer)))
@@ -121,7 +126,7 @@ export default class Statistics extends Component {
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0],
         ]
         anime.forEach(anime => episodeTotals[anime.rating][anime.status] += anime.episodes)
         const biggestEpisodes = Math.max(...episodeTotals.slice(1).map(n => n.reduce(reducer)))
@@ -182,7 +187,7 @@ export default class Statistics extends Component {
                             <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={prettyTime} />
                             <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={prettyTime} />
                             <StatisticsColumn rating={rating} ratingData={episodeTotals[rating]} biggestData={biggestEpisodes} />
-                    </  div>
+                        </  div>
                     )
                 })}
                 <div className="row justify-content-center align-items-center border-row">
@@ -229,7 +234,7 @@ class StatisticsColumn extends PureComponent {
                                 <div
                                     title={data.lookup.status[status]}
                                     className={`progress-bar bg-${data.lookup.statusColor[status]}`}
-                                    style={{width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%`}}
+                                    style={{ width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%` }}
                                     key={`${rating}-${status}`}
                                 />
                             )}

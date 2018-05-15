@@ -9,7 +9,7 @@ import data from './data.json'
 const anime = Object.values(data.anime)
 
 // Search, sort and filter anime
-export default function Results (searchQuery = '', sort = data.defaultSort, filters = data.defaultFilters) {
+export default function Results(searchQuery = '', sort = data.defaultSort, filters = data.defaultFilters) {
     // Whether any filters are active
     const filtersActive = !!Object.values(filters).filter(value => !!value).length
 

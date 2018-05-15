@@ -14,7 +14,7 @@ export default class Filters extends Component {
 
         return (
             <Fragment>
-                 <div className="row mt-3">
+                <div className="row mt-3">
                     <FilterGroup anime={anime} filterName="type" update={update} getFilters={getFilters} />
                     <FilterGroup anime={anime} filterName="status" update={update} getFilters={getFilters} />
                 </div>
@@ -98,13 +98,13 @@ class FilterGroup extends PureComponent {
 
                         const currentlySelected = getFilters()[filterName] === value
                         const attributes = {
-                            onClick: !currentlySelected ? () => update('filters', filterName, value) : undefined
+                            onClick: !currentlySelected ? () => update('filters', filterName, value) : undefined,
                         }
 
                         return (
                             <button
                                 className={`btn btn-${currentlySelected ? 'primary' : 'secondary'}`}
-                                style={{width: `${width}%`}}
+                                style={{ width: `${width}%` }}
                                 {...attributes}
                                 key={value}
                             >

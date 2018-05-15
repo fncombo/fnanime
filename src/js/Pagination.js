@@ -6,8 +6,12 @@ import '../css/Pagination.css'
 
 // Page buttons to control the table
 export default class Pagination extends PureComponent {
-    // How many buttons to show on each side of the current page button
-    buttonCount = 2
+    constructor() {
+        super()
+
+        // How many buttons to show on each side of the current page button
+        this.buttonCount = 2
+    }
 
     // Check if the current page more than the last page when the data changes
     componentWillUpdate(nextProps) {
@@ -75,8 +79,8 @@ export default class Pagination extends PureComponent {
             if (previousPage) {
                 if (page - previousPage === 2) {
                     buttons.push(this.button(previousPage + 1))
-                // Show "..." after first page and before the last page
-                // if there are more than 2 pages in between them and adjacent buttons
+                    // Show "..." after first page and before the last page
+                    // if there are more than 2 pages in between them and adjacent buttons
                 } else if (page - previousPage !== 1) {
                     buttons.push(<span key={`${page}-dots`}>&hellip;</span>)
                 }

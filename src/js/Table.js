@@ -13,8 +13,12 @@ import data from './data.json'
 
 // Table with all the anime data
 export default class Table extends PureComponent {
-    // Anime to show per page
-    perPage = 25
+    constructor() {
+        super()
+
+        // Anime to show per page
+        this.perPage = 25
+    }
 
     // Sort when clicking on a column header
     sortColumn(column, defaultDirection, ammend) {
@@ -22,9 +26,8 @@ export default class Table extends PureComponent {
 
         // Ammending (by holding shift) or sorting only the current sorted column modifies the existing sorting
         let sort = (ammend || (
-                getSorting().length === 1 && getSorting()[0].field === column
-            )
-        ) ? Object.assign([], getSorting()) : []
+            getSorting().length === 1 && getSorting()[0].field === column
+        )) ? Object.assign([], getSorting()) : []
 
         // Check if this column is already being sorted,
         // in which case reverse it, otherwise use default sorting for that column
@@ -32,7 +35,7 @@ export default class Table extends PureComponent {
             // Get the index of the sort setting
             let index = sort.findIndex(sort => sort.field === column)
             sort[index].direction = sort[index].direction === 'asc' ? 'desc' : 'asc'
-        // Add new sorting
+            // Add new sorting
         } else {
             sort.push({
                 field: column,
@@ -64,13 +67,13 @@ export default class Table extends PureComponent {
 
         return (
             <Fragment>
-                <table className="table table-striped table-hover mt-3" style={{width: '100%'}}>
+                <table className="table table-striped table-hover mt-3" style={{ width: '100%' }}>
                     <thead title="Hold shift to sort multiple columns">
                         <tr>
                             {Object.entries(data.columns).map(([name, column]) =>
                                 <th
                                     className={this.columClassName(name)}
-                                    style={{width: column.size}}
+                                    style={{ width: column.size }}
                                     onClick={event => this.sortColumn(name, column.defaultSort, event.shiftKey)}
                                     key={name}
                                 >
