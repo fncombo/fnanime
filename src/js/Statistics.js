@@ -225,7 +225,13 @@ class StatisticsColumn extends PureComponent {
                         {formatFunction ? formatFunction(sum) : sum}
                         <div className="progress bg-secondary">
                             {ratingData.map((singleData, status) =>
-                                !!singleData && <div className={`progress-bar bg-${data.lookup.statusColor[status]}`} style={{width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%`}} key={`${rating}-${status}`} />
+                                !!singleData &&
+                                <div
+                                    title={data.lookup.status[status]}
+                                    className={`progress-bar bg-${data.lookup.statusColor[status]}`}
+                                    style={{width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%`}}
+                                    key={`${rating}-${status}`}
+                                />
                             )}
                         </div>
                     </Fragment>
