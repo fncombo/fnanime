@@ -1,5 +1,5 @@
 // Libraries
-import filesize from 'filesize'
+import FileSize from 'filesize'
 
 // React
 import React, { PureComponent, Fragment } from 'react'
@@ -157,9 +157,9 @@ export default class InfoBox extends PureComponent {
                         <div className="row">
                             <div className="col-6">
                                 <ul>
-                                    <li><strong>Total Storage Size:</strong> {anime.downloaded ? filesize(anime.size) : 'Not Downloaded'}</li>
+                                    <li><strong>Total Storage Size:</strong> {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}</li>
                                     {anime.episodes > 1 &&
-                                    <li><strong>Average per Episode:</strong> {anime.downloaded ? filesize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
+                                    <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
                                     {!!watchedString &&
                                     <li><strong>Watched:</strong> {watchedString}</li>}
                                 </ul>

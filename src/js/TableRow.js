@@ -1,6 +1,6 @@
 // Libraries
-import fuzzysort from 'fuzzysort'
-import filesize from 'filesize'
+import FuzzySort from 'fuzzysort'
+import FileSize from 'filesize'
 
 // React
 import React, { PureComponent, Fragment } from 'react'
@@ -28,11 +28,11 @@ class TitleColumn extends PureComponent {
         const { anime, searchQuery } = this.props
 
         // Search for the match in the title, or local title which doesn't have special characters
-        const result = fuzzysort.single(searchQuery, anime.title) || fuzzysort.single(searchQuery, anime.localTitle)
+        const result = FuzzySort.single(searchQuery, anime.title) || FuzzySort.single(searchQuery, anime.localTitle)
 
         // Inner HTML must be set this way to count <strong> tags as HTML in JSX
         return {
-            __html: fuzzysort.highlight(result, '<strong>', '</strong>')
+            __html: FuzzySort.highlight(result, '<strong>', '</strong>')
         }
     }
 
@@ -87,7 +87,7 @@ class DataColumns extends PureComponent {
                 <td
                     title={!anime.sizeMatches && anime.downloaded ? 'Size does not match with the one specified on MyAnimeList' : ''}
                     className={`size-column ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch': ''}`}>
-                    {anime.downloaded ? filesize(anime.size) : 'Not Downloaded'}
+                    {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
                     {anime.downloaded &&
                     <div className='progress bg-secondary'>
                         <div className={`progress-bar bg-${anime.sizeColor}`} style={{width: `${anime.sizeWidth}px`}} />

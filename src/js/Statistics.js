@@ -1,5 +1,5 @@
 // Libraries
-import filesize from 'filesize'
+import FileSize from 'filesize'
 import { round } from 'math-precision'
 
 // React
@@ -178,7 +178,7 @@ export default class Statistics extends Component {
                                 {rating}
                             </div>
                             <StatisticsColumn rating={rating} ratingData={ratingsTotals[rating]} biggestData={biggestRating} />
-                            <StatisticsColumn rating={rating} ratingData={sizeTotals[rating]} biggestData={biggestSize} formatFunction={filesize} />
+                            <StatisticsColumn rating={rating} ratingData={sizeTotals[rating]} biggestData={biggestSize} formatFunction={FileSize} />
                             <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={prettyTime} />
                             <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={prettyTime} />
                             <StatisticsColumn rating={rating} ratingData={episodeTotals[rating]} biggestData={biggestEpisodes} />
@@ -193,7 +193,7 @@ export default class Statistics extends Component {
                         Average Rating: {biggestRating ? round(totalRating / totalRated, 2) : 'N/A'}
                     </div>
                     <div className="col text-center">
-                        {totals.size ? filesize(totals.size) : <Fragment>&mdash;</Fragment>}
+                        {totals.size ? FileSize(totals.size) : <Fragment>&mdash;</Fragment>}
                     </div>
                     <div className="col text-center">
                         {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}

@@ -1,6 +1,6 @@
 // Libraries
-import sifter from 'sifter'
-import fuzzysort from 'fuzzysort'
+import Sifter from 'sifter'
+import FuzzySort from 'fuzzysort'
 
 // Data
 import data from './data.json'
@@ -40,7 +40,7 @@ export default function Results (searchQuery = '', sort = data.defaultSort, filt
             tempResults = []
 
             // Search this exact filter value in the needed property,
-            new sifter(resultsToUse).search(value, {
+            new Sifter(resultsToUse).search(value, {
                 fields: [filterName],
             }).items.forEach(item => tempResults.push(resultsToUse[item.id]))
 
@@ -55,7 +55,7 @@ export default function Results (searchQuery = '', sort = data.defaultSort, filt
 
         tempResults = []
 
-        fuzzysort.go(searchQuery, resultsToUse, {
+        FuzzySort.go(searchQuery, resultsToUse, {
             keys: [
                 'title',
                 'localTitle',
@@ -67,7 +67,7 @@ export default function Results (searchQuery = '', sort = data.defaultSort, filt
     // Final sorting
     const finalResultsToUse = searchQuery.length ? tempResults : resultsToUse
 
-    new sifter(finalResultsToUse).search('', {
+    new Sifter(finalResultsToUse).search('', {
         fields: ['title'],
         sort: actualSort,
     }).items.forEach(item => finalResults.push(finalResultsToUse[item.id]))
