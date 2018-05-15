@@ -32,7 +32,7 @@ class TitleColumn extends PureComponent {
 
         // Inner HTML must be set this way to count <strong> tags as HTML in JSX
         return {
-            __html: FuzzySort.highlight(result, '<strong>', '</strong>')
+            __html: FuzzySort.highlight(result, '<strong>', '</strong>'),
         }
     }
 
