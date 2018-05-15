@@ -3,7 +3,7 @@ html,
 body,
 noscript .container,
 noscript .row {
-    min-height: 100%;
+    height: 100%;
 }
 
 [data-title] {
