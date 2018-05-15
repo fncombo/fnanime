@@ -1,6 +1,6 @@
 {
-    "short_name": "fnanime!",
-    "name": "fnanime!",
+    "short_name": "fnanime",
+    "name": "fnanime",
     "icons": [
         {
             "src": "favicon.ico",
@@ -9,5 +9,5 @@
         }
     ],
     "start_url": "./index.html",
-    "display": "standalone",
+    "display": "standalone"
 }
