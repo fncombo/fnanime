@@ -122,7 +122,7 @@ class FilterGroup extends PureComponent {
 // A list of <option>s for use in <select>
 class OptionGroup extends PureComponent {
     render() {
-        const { anime, filterName } = this.props;
+        const { anime, filterName } = this.props
 
         let options = []
 

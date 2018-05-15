@@ -49,7 +49,7 @@ class GalleryItem extends PureComponent {
         const { anime, openInfoBox } = this.props
 
         return (
-            <div className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
+            <div title={anime.title} className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
                 {/* <span className="image rounded-top" style={{backgroundImage: `url(${imageUrl})`}} /> */}
                 <img src={anime.imageUrl} alt={anime.title} />

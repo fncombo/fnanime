@@ -205,10 +205,10 @@ export default class InfoBox extends PureComponent {
 // Make a list of the related anime
 class RelatedAnimeList extends PureComponent {
     render() {
-        const { selectedAnimeId, openInfoBox } = this.props;
+        const { selectedAnimeId, openInfoBox } = this.props
 
         // The anime we're talkin' about
-        const anime = data.anime[selectedAnimeId];
+        const anime = data.anime[selectedAnimeId]
 
         if (!anime.related) {
             return <p>No related anime</p>
