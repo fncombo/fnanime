@@ -158,20 +158,14 @@
     top: -0.25rem;
 }
 
-.loading-paragraph span:nth-child(1),
-.loading-paragraph span:nth-child(4),
-.loading-paragraph span:nth-child(7) {
+.loading-paragraph span:nth-child(1n) {
     width: 75%;
 }
 
-.loading-paragraph span:nth-child(2),
-.loading-paragraph span:nth-child(5),
-.loading-paragraph span:nth-child(8) {
+.loading-paragraph span:nth-child(2n) {
     width: 85%;
 }
 
-.loading-paragraph span:nth-child(3),
-.loading-paragraph span:nth-child(6),
-.loading-paragraph span:nth-child(9) {
+.loading-paragraph span:nth-child(3n) {
     width: 60%;
 }

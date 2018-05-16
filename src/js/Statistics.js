@@ -148,7 +148,7 @@ export default class Statistics extends Component {
         })
 
         return (
-            <div className="container-fluid statistics">
+            <div className="container-fluid container-limited statistics">
                 <hr />
                 <div className="row justify-content-center align-items-center border-row">
                     <div className="col-1 text-center">

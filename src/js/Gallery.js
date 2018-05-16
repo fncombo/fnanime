@@ -25,9 +25,9 @@ export default class Gallery extends PureComponent {
 
             return (
                 <div key={rating}>
-                    <h3 className="text-center rounded p-3">
+                    <h2 className="text-center rounded p-3">
                         {data.lookup.rating[rating]}
-                    </h3>
+                    </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
                             <GalleryItem
@@ -49,7 +49,7 @@ class GalleryItem extends PureComponent {
         const { anime, openInfoBox } = this.props
 
         return (
-            <div title={anime.title} className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
+            <div className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
                 {/* <span className="image rounded-top" style={{backgroundImage: `url(${imageUrl})`}} /> */}
                 <img src={anime.imageUrl} alt={anime.title} />

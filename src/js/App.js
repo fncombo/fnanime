@@ -132,8 +132,8 @@ export default class Page extends Component {
                             changePage={this.changePage}
                             getSorting={this.getSorting}
                         />
-                        <Statistics anime={this.state.anime} />
                     </div>
+                    <Statistics anime={this.state.anime} />
                     <div className="container-fluid gallery">
                         <Gallery anime={this.state.anime} openInfoBox={this.openInfoBox} />
                     </div>

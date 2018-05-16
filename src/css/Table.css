@@ -17,7 +17,6 @@ tbody tr:hover .link  {
 
 table .progress {
     height: 4px;
-    border-radius: 2px;
 }
 
 th:not(:first-child) {
