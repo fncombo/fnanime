@@ -46,7 +46,7 @@ h1 {
 
 .fnheader:after {
     content: '';
-    background: linear-gradient(to right, #81b330, #4e9ff0);
+    background: linear-gradient(to right, #82b432, #50a0f0);
     display: block;
     width: 100%;
     height: 2px;
@@ -66,11 +66,11 @@ h1 {
 }
 
 .fnheader h1 a span:first-child {
-    color: #81b330;
+    color: #82b432;
 }
 
 .fnheader h1 a span:last-child {
-    color: #4e9ff0;
+    color: #50a0f0;
 }
 
 .fnheader h1 a:hover {
