@@ -8,12 +8,40 @@
     box-shadow: none;
 }
 
-.col-12 .btn-group .btn:first-child {
+.col-12 .btn-group .btn:nth-child(1) {
     width: 7% !important;
 }
 
 .col-12 .btn-group .btn:nth-child(2) {
+    width: 13% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(3) {
+    width: 10% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(4) {
     width: 12% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(5) {
+    width: 9% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(6) {
+    width: 8.5% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(7) {
+    width: 11% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(8) {
+    width: 8% !important;
+}
+
+.col-12 .btn-group .btn:nth-child(9) {
+    width: 11% !important;
 }
 
 .btn-group .btn span {

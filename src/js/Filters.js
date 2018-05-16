@@ -15,15 +15,15 @@ export default class Filters extends Component {
         return (
             <Fragment>
                 <div className="row mt-3">
+                    <FilterGroup anime={anime} filterName="rating" full={true} update={update} getFilters={getFilters} />
+                </div>
+                <div className="row mt-3">
                     <FilterGroup anime={anime} filterName="type" update={update} getFilters={getFilters} />
                     <FilterGroup anime={anime} filterName="status" update={update} getFilters={getFilters} />
                 </div>
                 <div className="row mt-3">
                     <FilterGroup anime={anime} filterName="resolution" update={update} getFilters={getFilters} />
                     <FilterGroup anime={anime} filterName="source" update={update} getFilters={getFilters} />
-                </div>
-                <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="rating" full={true} update={update} getFilters={getFilters} />
                 </div>
                 <div className="row mt-3">
                     <div className="col-3">
