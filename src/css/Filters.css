@@ -50,33 +50,31 @@
 
 .form-control,
 .custom-select {
-    background-color: hsl(0, 0%, 95%);
-    border: 1px solid hsl(0, 0%, 95%);
+    border: 1px solid var(--secondary-color-hover);
     transition-property: background-color, border;
     transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
     color: #000;
 }
 
-.form-control:focus,
 .form-control:hover,
-.custom-select:focus,
 .custom-select:hover {
-    background-color: hsl(0, 0%, 90%);
-    border: 1px solid hsl(0, 0%, 90%);
+    border: 1px solid var(--primary-color);
+    color: #000;
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border: 1px solid var(--primary-color-hover);
     color: #000;
 }
 
 .form-control::placeholder {
-    color: hsl(0, 0%, 50%);
+    color: var(--secondary-color-hover);
     transition: color 0.15s ease-in-out;
 }
 
 .form-control:hover::placeholder,
 .form-control:focus::placeholder {
-    color: hsl(0, 0%, 25%);
-}
-
-option {
-    background: #fff;
+    color: var(--primary-color);
 }

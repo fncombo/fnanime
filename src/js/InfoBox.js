@@ -96,7 +96,7 @@ export default class InfoBox extends PureComponent {
         // Nicely display how many episodes watched, or how many total times watched if more than 1 or only 1 episode
         let watchedString
         if (anime.rewatchCount || (anime.watchedEpisodes && anime.episodes === 1)) {
-            watchedString = `${anime.rewatchCount + 1} time${anime.rewatchCount + 1 > 1 ? 's' : ''}`
+            watchedString = `watched ${anime.rewatchCount + 1} time${anime.rewatchCount + 1 > 1 ? 's' : ''}`
         } else if (anime.watchedEpisodes && anime.episodes > 1) {
             watchedString = `${anime.watchedEpisodes}/${anime.episodes} episodes`
         }
@@ -155,30 +155,21 @@ export default class InfoBox extends PureComponent {
                             <div className="row">
                                 <div className="col-6">
                                     <ul>
-                                        <li><strong>Total Storage Size:</strong> {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}</li>
-                                        {anime.episodes > 1 &&
-                                            <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
-                                        {!!watchedString &&
-                                            <li><strong>Watched:</strong> {watchedString}</li>}
-                                    </ul>
-                                </div>
-                                <div className="col-6">
-                                    <ul>
+                                        <li>
+                                            <strong>Storage Size: </strong>
+                                            {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
+                                            {anime.downloaded && anime.episodes > 1 && <Fragment> (avgerage {FileSize(anime.size / anime.episodes)} per episode)</Fragment>}
+                                        </li>
                                         <li>
                                             <strong>Duration: </strong>
-                                            {anime.duration ? prettyTime(anime.duration, 'm') : 'Unknown'}
-                                            {!!anime.duration && anime.episodes > 1 && ' per episode'}
+                                            {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
+                                            {anime.duration && anime.episodes > 1 && <Fragment> ({prettyTime(anime.duration, 'm')} per episode)</Fragment>}
                                         </li>
-                                        {anime.episodes > 1 &&
-                                            <li>
-                                                <strong>Total Duration: </strong>
-                                                {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
-                                            </li>}
-                                        {!!anime.watchedEpisodes &&
-                                            <li>
-                                                <strong>Total Watch Time: </strong>
-                                                {prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1), 'm')}
-                                            </li>}
+                                        <li>
+                                            <strong>Watch Time: </strong>
+                                            {anime.watchedEpisodes ? prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1)) : 'None'}
+                                            {!!watchedString && <Fragment> ({watchedString})</Fragment>}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
