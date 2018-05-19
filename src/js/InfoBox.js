@@ -117,87 +117,86 @@ export default class InfoBox extends PureComponent {
         }
 
         return (
-            <Fragment>
+            <div className={`modal-content theme-${data.lookup.statusColor[anime.status]}`}>
                 <div className="modal-header">
                     <h5 className='modal-title'>
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank">
                             {anime.title}
                         </a>
-                        <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]}`}>
-                            {data.lookup.status[anime.status]}
-                        </span>
                     </h5>
                     <button className="close" onClick={closeInfoBox}>
                         <span>&times;</span>
                     </button>
                 </div>
-                <div className='modal-body row'>
-                    <div className="col-3">
-                        <img className="image rounded" width="250" src={anime.imageUrl} alt={anime.title} />
-                        <div className="rating-stars text-center">
-                            <span className="active">
-                                {new Array(anime.rating).fill(0).map(() => '★')}
-                            </span>
-                            <span className="inactive">
-                                {new Array(10 - anime.rating).fill(0).map(() => '★')}
-                            </span>
-                            <h5>{anime.rating ? data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
+                <div className="modal-body">
+                    <div className="row">
+                        <div className="col-3">
+                            <img className="image rounded" width="268.5" src={anime.imageUrl} alt={anime.title} />
+                            <div className="rating-stars text-center">
+                                <span className="active">
+                                    {new Array(anime.rating).fill(0).map(() => '★')}
+                                </span>
+                                <span className="inactive">
+                                    {new Array(10 - anime.rating).fill(0).map(() => '★')}
+                                </span>
+                                <h5>{anime.rating ? data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
+                                {loaded ?
+                                    <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
+                                    <span className="loading-text mt-3" />}
+                            </div>
+                            <hr />
+                            <p className="text-center mb-0">{data.lookup.actualType[anime.actualType]} - {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}</p>
                             {loaded ?
-                                <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
-                                <span className="loading-text mt-3" />}
+                                <p className="text-center mb-0">Aired {apiData.aired_string}</p> :
+                                <span className="loading-text  mb-0" />}
                         </div>
-                        <hr />
-                        <p className="text-center mb-0">{data.lookup.actualType[anime.actualType]} - {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}</p>
-                        {loaded ?
-                            <p className="text-center mb-0">Aired {apiData.aired_string}</p> :
-                            <span className="loading-text  mb-0" />}
-                    </div>
-                    <div className="col-9">
-                        <h5>Statistics</h5>
-                        <div className="row">
-                            <div className="col-6">
-                                <ul>
-                                    <li><strong>Total Storage Size:</strong> {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}</li>
-                                    {anime.episodes > 1 &&
-                                        <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
-                                    {!!watchedString &&
-                                        <li><strong>Watched:</strong> {watchedString}</li>}
-                                </ul>
-                            </div>
-                            <div className="col-6">
-                                <ul>
-                                    <li>
-                                        <strong>Duration: </strong>
-                                        {anime.duration ? prettyTime(anime.duration, 'm') : 'Unknown'}
-                                        {!!anime.duration && anime.episodes > 1 && ' per episode'}
-                                    </li>
-                                    {anime.episodes > 1 &&
+                        <div className="col-9">
+                            <h5>Statistics</h5>
+                            <div className="row">
+                                <div className="col-6">
+                                    <ul>
+                                        <li><strong>Total Storage Size:</strong> {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}</li>
+                                        {anime.episodes > 1 &&
+                                            <li><strong>Average per Episode:</strong> {anime.downloaded ? FileSize(anime.size / anime.episodes) : 'Not Downloaded'}</li>}
+                                        {!!watchedString &&
+                                            <li><strong>Watched:</strong> {watchedString}</li>}
+                                    </ul>
+                                </div>
+                                <div className="col-6">
+                                    <ul>
                                         <li>
-                                            <strong>Total Duration: </strong>
-                                            {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
-                                        </li>}
-                                    {!!anime.watchedEpisodes &&
-                                        <li>
-                                            <strong>Total Watch Time: </strong>
-                                            {prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1), 'm')}
-                                        </li>}
-                                </ul>
+                                            <strong>Duration: </strong>
+                                            {anime.duration ? prettyTime(anime.duration, 'm') : 'Unknown'}
+                                            {!!anime.duration && anime.episodes > 1 && ' per episode'}
+                                        </li>
+                                        {anime.episodes > 1 &&
+                                            <li>
+                                                <strong>Total Duration: </strong>
+                                                {anime.duration ? prettyTime(anime.duration * anime.episodes, 'm') : 'Unknown'}
+                                            </li>}
+                                        {!!anime.watchedEpisodes &&
+                                            <li>
+                                                <strong>Total Watch Time: </strong>
+                                                {prettyTime(anime.duration * anime.watchedEpisodes * (anime.rewatchCount + 1), 'm')}
+                                            </li>}
+                                    </ul>
+                                </div>
                             </div>
+                            <hr />
+                            <h5>Synopsis</h5>
+                            <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{ height: loaded ? `${synopsisSize}px` : false }}>
+                                <span /><span /><span />
+                                <span /><span /><span />
+                                <span /><span /><span />
+                                {loaded && <p>{synopsis}</p>}
+                            </div>
+                            <hr />
+                            <h5>Related Anime</h5>
+                            <RelatedAnimeList selectedAnimeId={selectedAnimeId} openInfoBox={openInfoBox} />
                         </div>
-                        <hr />
-                        <h5>Synopsis</h5>
-                        <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{ height: loaded ? `${synopsisSize}px` : false }}>
-                            <span /><span /><span />
-                            <span /><span /><span />
-                            <span /><span /><span />
-                            {loaded && <p>{synopsis}</p>}
-                        </div>
-                        <hr />
-                        <h5>Related Anime</h5>
-                        <RelatedAnimeList selectedAnimeId={selectedAnimeId} openInfoBox={openInfoBox} />
                     </div>
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }

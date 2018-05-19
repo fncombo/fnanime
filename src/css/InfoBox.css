@@ -1,31 +1,27 @@
-.container-main {
+.container-main,
+.fnheader {
     /* autoprefixer: off */
     opacity: 1;
-    transform: translateZ(0);
-    filter: none;
-    perspective: 100px;
-    backface-visibility: hidden;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
 }
 
-.modal-open .container-main {
+.modal-open .container-main,
+.modal-open .fnheader {
     /* autoprefixer: off */
     opacity: 0.1;
     filter: grayscale(100%);
-    /* Prevent page from jigging to the side */
-    overflow-y: scroll;
 }
 
-.modal{
+.modal  {
     /* autoprefixer: off */
     display: block;
     opacity: 0;
     backface-visibility: hidden;
     pointer-events: none;
     z-index: -100;
-    transform: translateZ(0) scale(0.95);
+    transform: scale(0.95);
     transition-property: z-index, opacity, transform;
     transition-duration: 0s, 0.15s, 0.15s;
     /* Need to delay z-index to allow the element to face out first */
@@ -38,13 +34,13 @@
     opacity: 1;
     pointer-events: all;
     z-index: 100;
-    transform: translateZ(0) scale(1);
+    transform: scale(1);
     transition-delay: 0s, 0s, 0s;
 }
 
 .modal-switching .modal {
     opacity: 0;
-    transform: translateZ(0) scale(1.05);
+    transform: scale(1.05);
 }
 
 .modal-dialog {
@@ -53,7 +49,46 @@
 }
 
 .modal-content {
-    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.modal-content.theme-watching {
+    background: var(--watching-color);
+    border: 2px solid var(--watching-color);
+}
+
+.modal-content.theme-completed {
+    background: var(--completed-color);
+    border: 2px solid var(--completed-color);
+}
+
+.modal-content.theme-onhold {
+    background: var(--onhold-color);
+    border: 2px solid var(--onhold-color);
+}
+
+.modal-content.theme-dropped {
+    background: var(--dropped-color);
+    border: 2px solid var(--dropped-color);
+}
+
+.modal-content.theme-plantowatch {
+    background: var(--plantowatch-color);
+    border: 2px solid var(--plantowatch-color);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header a {
+    color: #fff;
+    font-weight: normal;
+}
+
+.modal-body {
+    background: #fff;
+    border-radius: calc(0.25rem * 0.75);
 }
 
 .modal ul {
@@ -91,12 +126,23 @@
 
 .modal .rating-stars .inactive {
     font-size: 1.75rem;
-    color: hsl(0, 0%, 75%);
+    color: hsl(0, 0%, 90%);
 }
 
 .modal .status-pill-link:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.modal .close {
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.75;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.modal .close:hover {
+    opacity: 1;
 }
 
 .modal .close:focus {

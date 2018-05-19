@@ -18,7 +18,7 @@
 }
 
 .statistics .row:not(.border-row):nth-of-type(even) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: hsl(0, 0%, 95%);
 }
 
 .statistics .progress {

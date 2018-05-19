@@ -141,13 +141,11 @@ export default class Page extends Component {
                 {/* Close when clicking outside of the modal-content window */}
                 <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : false}>
                     <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            <InfoBox
-                                selectedAnimeId={this.state.selectedAnimeId}
-                                openInfoBox={this.openInfoBox}
-                                closeInfoBox={this.closeInfoBox}
-                            />
-                        </div>
+                        <InfoBox
+                            selectedAnimeId={this.state.selectedAnimeId}
+                            openInfoBox={this.openInfoBox}
+                            closeInfoBox={this.closeInfoBox}
+                        />
                     </div>
                 </div>
             </Fragment>

@@ -94,14 +94,14 @@ export default class Pagination extends PureComponent {
         return (
             <div className="pagination">
                 <button
-                    className={`btn ${page === 1 ? 'btn-disabled' : 'btn-secondary'}`}
+                    className={`btn btn-secondary ${page === 1 ? 'btn-disabled' : ''}`}
                     onClick={() => changePage(page - 1)} disabled={page === 1}
                 >
                     Previous
                 </button>
                 {buttons}
                 <button
-                    className={`btn ${page === lastPage ? 'btn-disabled' : 'btn-secondary'}`}
+                    className={`btn btn-secondary ${page === lastPage ? 'btn-disabled' : ''}`}
                     onClick={() => changePage(page + 1)} disabled={page === lastPage}
                 >
                     Next

@@ -2,13 +2,24 @@ table {
 	table-layout: fixed;
 }
 
+table tbody tr:hover {
+    background-color: hsl(0, 0%, 90%) !important;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
 tbody tr {
     height: 50px;
 }
 
 tbody tr:hover {
-    /* background-color: var(--secondary-color) !important; */
     cursor: pointer;
+}
+
+table tbody tr:nth-of-type(odd) {
+    background-color: hsl(0, 0%, 95%);
 }
 
 tbody tr:hover .link  {
@@ -23,7 +34,9 @@ th:not(:first-child) {
 	text-align: center;
 }
 
-th {
+.table thead th {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     position: relative;
     padding: 0.75rem 1.5rem 0.75rem 0.75rem !important;
     cursor: pointer;
@@ -31,7 +44,7 @@ th {
 }
 
 th:not(:last-child) {
-    border-right: 1px solid #dee2e6;
+    border-right: 1px solid var(--border-color);
 }
 
 th:before {
@@ -74,7 +87,7 @@ td:not(:first-child) {
 	text-align: center;
 }
 
-td {
+.table td {
     border: none !important;
     position: relative;
 }
@@ -98,16 +111,6 @@ td.size-column {
 	padding: 0.7rem;
 }
 
-/* .anime-image {
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 52px;
-    width: 37px;
-} */
-
 tr img {
     position: absolute;
     top: 0;
@@ -118,11 +121,11 @@ tr img {
 .not-downloaded,
 .size-mismatch {
     background-image: linear-gradient(-45deg,
-     rgba(0, 0, 0, 0.05) 25%,
+     var(--danger-overlay-color) 25%,
      transparent 25%,
      transparent 50%,
-     rgba(0, 0, 0, 0.05) 50%,
-     rgba(0, 0, 0, 0.05) 75%,
+     var(--danger-overlay-color) 50%,
+     var(--danger-overlay-color) 75%,
      transparent 75%,
      transparent) !important;
     background-size: 25px 25px;

@@ -86,7 +86,7 @@ class DataColumns extends PureComponent {
 
                 <td
                     title={!anime.sizeMatches && anime.downloaded ? 'Size does not match with the one specified on MyAnimeList' : ''}
-                    className={`size-column ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch' : ''}`}>
+                    className={`${anime.downloaded ? 'size-column' : ''} ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch' : ''}`}>
                     {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
                     {anime.downloaded &&
                         <div className='progress bg-secondary'>
