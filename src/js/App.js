@@ -114,6 +114,9 @@ export default class Page extends Component {
     render() {
         return (
             <Fragment>
+                <div class="fnheader">
+                    <h1>Anime List <a href="https://fncombo.me"><span>fn</span><span>combo</span></a></h1>
+                </div>
                 <div className="container-main">
                     <div className="container-fluid container-limited">
                         <Filters
