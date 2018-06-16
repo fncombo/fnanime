@@ -147,6 +147,11 @@ export default class Statistics extends Component {
             totals.watchTime += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1)
         })
 
+        // Don't show stats if all shown anime are "planned"
+        if (firstNonZero + lastNonZero === 0) {
+            return null
+        }
+
         return (
             <div className="container-fluid container-limited statistics">
                 <hr />
@@ -190,26 +195,28 @@ export default class Statistics extends Component {
                         </  div>
                     )
                 })}
-                <div className="row justify-content-center align-items-center border-row">
-                    <div className="col-1 text-center">
-                        <h6>Totals</h6>
+                {firstNonZero !== lastNonZero &&
+                    <div className="row justify-content-center align-items-center border-row">
+                        <div className="col-1 text-center">
+                            <h6>Totals</h6>
+                        </div>
+                        <div className="col text-center">
+                            Average Rating: {biggestRating ? round(totalRating / totalRated, 2) : 'N/A'}
+                        </div>
+                        <div className="col text-center">
+                            {totals.size ? FileSize(totals.size) : <Fragment>&mdash;</Fragment>}
+                        </div>
+                        <div className="col text-center">
+                            {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
+                        </div>
+                        <div className="col text-center">
+                            {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
+                        </div>
+                        <div className="col text-center">
+                            {totals.episodes ? totals.episodes : <Fragment>&mdash;</Fragment>}
+                        </div>
                     </div>
-                    <div className="col text-center">
-                        Average Rating: {biggestRating ? round(totalRating / totalRated, 2) : 'N/A'}
-                    </div>
-                    <div className="col text-center">
-                        {totals.size ? FileSize(totals.size) : <Fragment>&mdash;</Fragment>}
-                    </div>
-                    <div className="col text-center">
-                        {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
-                    </div>
-                    <div className="col text-center">
-                        {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
-                    </div>
-                    <div className="col text-center">
-                        {totals.episodes ? totals.episodes : <Fragment>&mdash;</Fragment>}
-                    </div>
-                </div>
+                }
                 <hr />
             </div>
         )
