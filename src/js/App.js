@@ -126,6 +126,7 @@ export default class Page extends Component {
                             reset={this.reset}
                             getFilters={this.getFilters}
                         />
+                        <p id="notice">Due to <a href="https://myanimelist.net">MyAnimeList.net</a> API being shut down, this list is currently not being maintained and some features may not work correctly.</p>
                         <Table
                             anime={this.state.anime}
                             searchQuery={this.state.searchQuery}

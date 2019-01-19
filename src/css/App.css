@@ -44,6 +44,24 @@ hr {
     border-top: 1px solid var(--border-color);
 }
 
+#notice {
+    background: var(--dropped-color);
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 0.25rem;
+}
+
+#notice a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#notice a:hover {
+    text-decoration: none;
+}
+
 /* fn */
 .fnheader {
     text-align: center;

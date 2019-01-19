@@ -33,7 +33,7 @@
     z-index: 1;
     transition-property: z-index, opacity, box-shadow, transform;
     transition-duration: 0s, 0.15s, 0.15s, 0.15s;
-    /* Need to delay z-index to allow the element to face out first */
+    /* Need to delay z-index to allow the element to fade out first */
     transition-delay: 0.15s, 0s, 0s, 0s;
     transition-timing-function: ease-in-out;
 }
