@@ -33,7 +33,7 @@ export default class Filters extends Component {
                             placeholder="Search..."
                             value={searchQuery}
                             onChange={event => update('searchQuery', event.target.value)}
-                            autoFocus="true"
+                            autoFocus={true}
                         />
                     </div>
                     <div className="col-3">
@@ -93,8 +93,8 @@ class FilterGroup extends PureComponent {
             <div className={full ? 'col-12' : 'col-6'}>
                 <div className="btn-group d-flex">
                     {data.filterValues[filterName].map(value => {
-                        // Count how many of currently shown anime match this filter
-                        const count = anime.filter(anime => anime[filterName] === value).length
+                        // Count how many of currently shown anime match this filter and aren't "false" value
+                        const count = anime.filter(anime => anime[filterName] === value && value).length
 
                         const currentlySelected = getFilters()[filterName] === value
                         const attributes = {

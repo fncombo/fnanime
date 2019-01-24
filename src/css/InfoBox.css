@@ -168,7 +168,7 @@
 }
 
 .loading-text,
-.loading-paragraph span {
+.loading-paragraph > span {
     background-image: linear-gradient(to right, hsl(0, 0%, 97.5%), hsl(0, 0%, 92.5%), hsl(0, 0%, 97.5%));
     background-size: 40rem 1rem;
     display: block;
@@ -176,6 +176,13 @@
     margin: 0.5rem 0;
     border-radius: 0.25rem;
     animation: loading-text 0.75s linear infinite;
+}
+
+.loading-inline {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    top: 3px;
 }
 
 .loading-paragraph {
@@ -188,7 +195,8 @@
     transition: height 0.15s ease-in-out;
 }
 
-.loading-paragraph p {
+.loading-paragraph > p,
+.loading-paragraph > div {
     background: #fff;
     display: block;
     width: 100%;
@@ -199,19 +207,23 @@
     animation: loaded-paragraph 0.15s ease-in-out forwards;
 }
 
-.loading-paragraph span {
+.loading-paragraph > span {
     position: relative;
     top: -0.25rem;
 }
 
-.loading-paragraph span:nth-child(1n) {
+.loading-paragraph > span:nth-child(1n) {
     width: 75%;
 }
 
-.loading-paragraph span:nth-child(2n) {
+.loading-paragraph > span:nth-child(2n) {
     width: 85%;
 }
 
-.loading-paragraph span:nth-child(3n) {
+.loading-paragraph > span:nth-child(3n) {
     width: 60%;
+}
+
+.related-anime-list {
+    padding-bottom: 3px;
 }

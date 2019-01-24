@@ -12,7 +12,7 @@ import '../css/Statistics.css'
 import data from './data.json'
 
 // Helpers
-import prettyTime from './PrettyTime'
+// import prettyTime from './PrettyTime'
 
 // Reduce function
 const reducer = (a, b) => a + b
@@ -80,6 +80,7 @@ export default class Statistics extends Component {
         anime.forEach(anime => sizeTotals[anime.rating][anime.status] += anime.size)
         const biggestSize = Math.max(...sizeTotals.slice(1).map(n => n.reduce(reducer)))
 
+        /*
         // Total durations per rating per status
         let durationTotals = [
             [0, 0, 0, 0, 0, 0, 0],
@@ -113,6 +114,7 @@ export default class Statistics extends Component {
         ]
         anime.forEach(anime => watchTimeTotals[anime.rating][anime.status] += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1))
         const biggestWatchTime = Math.max(...watchTimeTotals.slice(1).map(n => n.reduce(reducer)))
+        */
 
         // Total episode count per rating per status
         let episodeTotals = [
@@ -135,16 +137,16 @@ export default class Statistics extends Component {
         let totals = {
             size: 0,
             episodes: 0,
-            duration: 0,
-            watchTime: 0,
+            // duration: 0,
+            // watchTime: 0,
         }
 
         // Add up all the needed values, filtered by a rating if there is any
         anime.filter(anime => !!anime.rating).forEach(anime => {
             totals.size += anime.size
             totals.episodes += anime.episodes
-            totals.duration += anime.duration * anime.episodes
-            totals.watchTime += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1)
+            // totals.duration += anime.duration * anime.episodes
+            // totals.watchTime += (anime.duration * anime.watchedEpisodes) * (anime.rewatchCount + 1)
         })
 
         // Don't show stats if all shown anime are "planned"
@@ -165,12 +167,12 @@ export default class Statistics extends Component {
                     <div className="col text-center">
                         <h6>Total Storage Size</h6>
                     </div>
-                    <div className="col text-center">
+                    {/* <div className="col text-center">
                         <h6>Total Duration</h6>
                     </div>
                     <div className="col text-center">
                         <h6>Total Watch Time</h6>
-                    </div>
+                    </div> */}
                     <div className="col text-center">
                         <h6>Total Number of Episodes</h6>
                     </div>
@@ -189,8 +191,8 @@ export default class Statistics extends Component {
                             </div>
                             <StatisticsColumn rating={rating} ratingData={ratingsTotals[rating]} biggestData={biggestRating} />
                             <StatisticsColumn rating={rating} ratingData={sizeTotals[rating]} biggestData={biggestSize} formatFunction={FileSize} />
-                            <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={prettyTime} />
-                            <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={prettyTime} />
+                            {/* <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={prettyTime} />
+                            <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={prettyTime} /> */}
                             <StatisticsColumn rating={rating} ratingData={episodeTotals[rating]} biggestData={biggestEpisodes} />
                         </  div>
                     )
@@ -206,12 +208,12 @@ export default class Statistics extends Component {
                         <div className="col text-center">
                             {totals.size ? FileSize(totals.size) : <Fragment>&mdash;</Fragment>}
                         </div>
-                        <div className="col text-center">
+                        {/* <div className="col text-center">
                             {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
                         </div>
                         <div className="col text-center">
                             {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
-                        </div>
+                        </div> */}
                         <div className="col text-center">
                             {totals.episodes ? totals.episodes : <Fragment>&mdash;</Fragment>}
                         </div>

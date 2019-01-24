@@ -43,8 +43,8 @@ class TitleColumn extends PureComponent {
             <td>
                 <div>
                     {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
-                    {/* <span className="anime-image" style={{backgroundImage: `url(${anime.imageUrl})`}} /> */}
-                    <img width="37" height="50" src={anime.imageUrl} alt={anime.title} />
+                    {/* <span className="anime-image" style={{backgroundImage: `url(${anime.img})`}} /> */}
+                    <img width="37" height="50" src={anime.img} alt={anime.title} />
                     <span className="link">
                         {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                     </span>
@@ -61,6 +61,8 @@ class TitleColumn extends PureComponent {
 class DataColumns extends PureComponent {
     render() {
         const { anime } = this.props
+        const sizeWidth = (((anime.size - data.smallestSize) / data.biggestSize) * 100) || 0
+        const sizeColor = ((anime.size > (data.biggestSize * 0.75) ? 'danger' : (anime.size > (data.biggestSize * 0.5) ? 'warning' : 'primary'))) || 0
 
         return (
             <Fragment>
@@ -76,9 +78,13 @@ class DataColumns extends PureComponent {
                     {anime.resolution ? `${anime.resolution}p` : <Fragment>&mdash;</Fragment>}
                 </td>
 
-                <td className={!(!anime.source || anime.source === 'ZMISS') ? `text-${data.lookup.sourceColor[anime.source]}` : ''}>
-                    {!(!anime.source || anime.source === 'ZMISS') ? data.lookup.source[anime.source] : <Fragment>&mdash;</Fragment>}
+                <td className={anime.source ? `text-${data.lookup.sourceColor[anime.source]}` : ''}>
+                    {anime.source ? anime.source : <Fragment>&mdash;</Fragment>}
                 </td>
+
+                {/* <td className={!(!anime.source || anime.source === 'ZMISS') ? `text-${data.lookup.sourceColor[anime.source]}` : ''}>
+                    {!(!anime.source || anime.source === 'ZMISS') ? data.lookup.source[anime.source] : <Fragment>&mdash;</Fragment>}
+                </td> */}
 
                 <td>{anime.rating || <Fragment>&mdash;</Fragment>}</td>
 
@@ -90,7 +96,7 @@ class DataColumns extends PureComponent {
                     {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
                     {anime.downloaded &&
                         <div className='progress bg-secondary'>
-                            <div className={`progress-bar bg-${anime.sizeColor}`} style={{ width: `${anime.sizeWidth}px` }} />
+                            <div className={`progress-bar bg-${sizeColor}`} style={{ width: `${sizeWidth}px` }} />
                         </div>}
                 </td>
             </Fragment>
