@@ -1,3 +1,6 @@
+// Libraries
+import ClassNames from 'classnames'
+
 // React
 import React, { PureComponent } from 'react'
 
@@ -91,19 +94,21 @@ export default class Pagination extends PureComponent {
             previousPage = page
         })
 
+        const prevButtonClasses = ClassNames('btn', 'btn-secondary', {
+            'btn-disabled': page === 1,
+        })
+
+        const nextButtonClasses = ClassNames('btn', 'btn-secondary', {
+            'btn-disabled': page === lastPage,
+        })
+
         return (
             <div className="pagination">
-                <button
-                    className={`btn btn-secondary ${page === 1 ? 'btn-disabled' : ''}`}
-                    onClick={() => changePage(page - 1)} disabled={page === 1}
-                >
+                <button className={prevButtonClasses} onClick={() => changePage(page - 1)} disabled={page === 1}>
                     Previous
                 </button>
                 {buttons}
-                <button
-                    className={`btn btn-secondary ${page === lastPage ? 'btn-disabled' : ''}`}
-                    onClick={() => changePage(page + 1)} disabled={page === lastPage}
-                >
+                <button className={nextButtonClasses} onClick={() => changePage(page + 1)} disabled={page === lastPage}>
                     Next
                 </button>
             </div>

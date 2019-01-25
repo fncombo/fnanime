@@ -2,8 +2,8 @@
 import React, { PureComponent, Fragment } from 'react'
 
 // Components
-import TableRow from './TableRow'
 import Pagination from './Pagination'
+import TableRow from './TableRow'
 
 // Style
 import '../css/Table.css'

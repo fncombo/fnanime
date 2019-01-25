@@ -1,3 +1,6 @@
+// Libraries
+import ClassNames from 'classnames'
+
 // React
 import React, { PureComponent } from 'react'
 
@@ -19,6 +22,7 @@ export default class Gallery extends PureComponent {
         // Only show ratings which have anime, and exclude all zero-rated anime
         return ratingCounts.slice(1).reverse().map((count, rating) => {
             rating = 10 - rating
+
             if (!count) {
                 return null
             }
@@ -30,11 +34,7 @@ export default class Gallery extends PureComponent {
                     </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
-                            <GalleryItem
-                                anime={anime}
-                                openInfoBox={openInfoBox}
-                                key={anime.id}
-                            />
+                            <GalleryItem anime={anime} openInfoBox={openInfoBox} key={anime.id} />
                         )}
                     </div>
                 </div>
@@ -48,10 +48,12 @@ class GalleryItem extends PureComponent {
     render() {
         const { anime, openInfoBox } = this.props
 
+        const itemClasses = ClassNames('gallery-item', {
+            'not-downloaded': !anime.downloaded,
+        })
+
         return (
-            <div className={`gallery-item ${!anime.downloaded ? 'not-downloaded' : ''}`} onClick={() => openInfoBox(anime.id)} key={anime.id}>
-                {/* Using background image causes reflow and significantly impacts CSS rendering performance */}
-                {/* <span className="image rounded-top" style={{backgroundImage: `url(${img})`}} /> */}
+            <div className={itemClasses} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 <img src={anime.img} alt={anime.title} />
                 <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]} rounded-0`}>
                     {data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}

@@ -1,4 +1,5 @@
 /* General */
+
 html,
 body,
 noscript .container,
@@ -63,6 +64,7 @@ hr {
 }
 
 /* fn */
+
 .fnheader {
     text-align: center;
 }
@@ -105,6 +107,7 @@ hr {
 }
 
 /* Links */
+
 a {
     color: var(--primary-color);
 }
@@ -114,6 +117,7 @@ a:hover {
 }
 
 /* Status pills */
+
 .status-pill {
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
@@ -146,6 +150,7 @@ a:hover {
 }
 
 /* Text colours */
+
 .text-success {
     color: var(--completed-color);
 }
@@ -159,6 +164,7 @@ a:hover {
 }
 
 /* Background colours */
+
 .bg-primary {
     background-color: var(--primary-color) !important;
 }
@@ -196,6 +202,7 @@ a:hover {
 }
 
 /* Forms and buttons */
+
 .btn-group .btn {
     margin: 0 !important;
     padding-left: 0;
@@ -240,4 +247,31 @@ a:hover {
     color: hsl(0, 0%, 50%) !important;
     opacity: 1 !important;
     pointer-events: none;
+}
+
+/* Message box */
+
+#message {
+    background: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem 0 0 0 ;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.15s ease-in-out, background 0.15s ease-in-out;
+}
+
+#message.show {
+    transform: translateY(0);
+}
+
+#message.success {
+    background: var(--watching-color);
+}
+
+#message.failure {
+    background: var(--dropped-color);
 }

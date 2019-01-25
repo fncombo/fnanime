@@ -1,6 +1,8 @@
 // Libraries
+import ClassNames from 'classnames'
 import FileSize from 'filesize'
-import getRenderedSize from 'react-rendered-size'
+import GetRenderedSize from 'react-rendered-size'
+import PrettyTime from './PrettyTime'
 
 // React
 import React, { PureComponent, Fragment } from 'react'
@@ -13,9 +15,6 @@ import data from './data.json'
 
 // Components
 import Data from './Data'
-
-// Helpers
-import prettyTime from './PrettyTime'
 
 // Information box about a specific selected anime
 export default class InfoBox extends PureComponent {
@@ -71,6 +70,8 @@ export default class InfoBox extends PureComponent {
 
     // Get API data from Jikan about this anime, such as synopsis
     getApiData() {
+        const { closeInfoBox } = this.props
+
         fetch(`https://api.jikan.moe/v3/anime/${this.state.props.selectedAnimeId}`).then(response =>
             response.json()
         ).then(data => {
@@ -78,17 +79,18 @@ export default class InfoBox extends PureComponent {
                 console.error('API responded with an error:', data.error)
 
                 Data.loadingError()
+                closeInfoBox()
 
                 return
             }
 
-            const synopsis = getRenderedSize(this.synopsisText(data.synopsis), 865)
+            const synopsis = GetRenderedSize(this.synopsisText(data.synopsis), 865)
 
             // Emulate modal environment for calculating related anime list height
             let relatedAnimeContainer = document.createElement('div')
             relatedAnimeContainer.classList.add('modal')
 
-            const relatedAnimeList = getRenderedSize(this.relatedAnimeList(data.related), 865, {
+            const relatedAnimeList = GetRenderedSize(this.relatedAnimeList(data.related), 865, {
                 container: relatedAnimeContainer,
             })
 
@@ -106,6 +108,7 @@ export default class InfoBox extends PureComponent {
             console.error('Error while fetching API:', error)
 
             Data.loadingError()
+            closeInfoBox()
         })
     }
 
@@ -162,7 +165,8 @@ export default class InfoBox extends PureComponent {
                                 >
                                     {data.lookup.status[Data.getAnime(anime.mal_id).status]}
                                     {!!Data.getAnime(anime.mal_id).rating && ` - Rated ${Data.getAnime(anime.mal_id).rating}`}
-                                </span>}
+                                </span>
+                            }
                         </li>
                     )}
                 </ul>
@@ -196,7 +200,7 @@ export default class InfoBox extends PureComponent {
         // Format how to display the total duraction and per episode time
         let durationText = 'Unknown'
         if (duration) {
-            durationText = `${prettyTime(duration * anime.episodes, 'm')} ${anime.episodes > 1 ? `(${prettyTime(duration, 'm')} per episode)` : ''}`
+            durationText = `${PrettyTime(duration * anime.episodes, 'm')} ${anime.episodes > 1 ? `(${PrettyTime(duration, 'm')} per episode)` : ''}`
         }
 
         // Format how to display the total time if it can be worked out
@@ -208,7 +212,7 @@ export default class InfoBox extends PureComponent {
 
         // Otherwise calculate based on how many episodes have been watched
         } else if (duration && anime.watchedEpisodes) {
-            watchTimeText = prettyTime(duration * anime.watchedEpisodes * (anime.rewatchCount + 1))
+            watchTimeText = PrettyTime(duration * anime.watchedEpisodes * (anime.rewatchCount + 1))
 
             // If rewatched anime or it's a movie, say how many total times watched
             if (anime.rewatchCount || (anime.watchedEpisodes && anime.episodes === 1)) {
@@ -219,6 +223,10 @@ export default class InfoBox extends PureComponent {
                 watchTimeText += ` (${anime.watchedEpisodes}/${anime.episodes} episodes)`
             }
         }
+
+        const loadingParagraphClasses = ClassNames('loading-paragraph', {
+            'loaded': loaded,
+        })
 
         return (
             <div className={`modal-content theme-${data.lookup.statusColor[anime.status]}`}>
@@ -279,7 +287,7 @@ export default class InfoBox extends PureComponent {
                             </div>
                             <hr />
                             <h5>Synopsis</h5>
-                            <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{ height: loaded ? `${synopsisHeight}px` : false }}>
+                            <div className={loadingParagraphClasses} style={{ height: loaded ? `${synopsisHeight}px` : false }}>
                                 <span /><span /><span />
                                 <span /><span /><span />
                                 <span /><span /><span />
@@ -287,7 +295,7 @@ export default class InfoBox extends PureComponent {
                             </div>
                             <hr />
                             <h5>Related Anime</h5>
-                            <div className={`loading-paragraph ${loaded ? 'loaded' : ''}`} style={{ height: loaded ? `${relatedAnimeListHeight}px` : false }}>
+                            <div className={loadingParagraphClasses} style={{ height: loaded ? `${relatedAnimeListHeight}px` : false }}>
                                 <span /><span /><span />
                                 <span /><span /><span />
                                 <span /><span /><span />

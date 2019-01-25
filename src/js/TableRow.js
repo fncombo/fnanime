@@ -1,4 +1,5 @@
 // Libraries
+import ClassNames from 'classnames'
 import FuzzySort from 'fuzzysort'
 import FileSize from 'filesize'
 
@@ -13,8 +14,12 @@ export default class TableRow extends PureComponent {
     render() {
         const { anime, searchQuery, openInfoBox } = this.props
 
+        const rowClasses = ClassNames({
+            'not-downloaded': !anime.downloaded,
+        })
+
         return (
-            <tr className={!anime.downloaded ? 'not-downloaded' : ''} onClick={() => openInfoBox(anime.id)} key={anime.id}>
+            <tr className={rowClasses} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 <TitleColumn anime={anime} searchQuery={searchQuery} />
                 <DataColumns anime={anime} />
             </tr>
@@ -61,8 +66,14 @@ class TitleColumn extends PureComponent {
 class DataColumns extends PureComponent {
     render() {
         const { anime } = this.props
+
         const sizeWidth = (((anime.size - data.smallestSize) / data.biggestSize) * 100) || 0
         const sizeColor = ((anime.size > (data.biggestSize * 0.75) ? 'danger' : (anime.size > (data.biggestSize * 0.5) ? 'warning' : 'primary'))) || 0
+
+        const sizeClasses = ClassNames({
+            'size-column': anime.downloaded,
+            'size-mismatch': !anime.sizeMatches && anime.downloaded,
+        })
 
         return (
             <Fragment>
@@ -82,22 +93,19 @@ class DataColumns extends PureComponent {
                     {anime.source ? anime.source : <Fragment>&mdash;</Fragment>}
                 </td>
 
-                {/* <td className={!(!anime.source || anime.source === 'ZMISS') ? `text-${data.lookup.sourceColor[anime.source]}` : ''}>
-                    {!(!anime.source || anime.source === 'ZMISS') ? data.lookup.source[anime.source] : <Fragment>&mdash;</Fragment>}
-                </td> */}
-
                 <td>{anime.rating || <Fragment>&mdash;</Fragment>}</td>
 
                 <td>{anime.rewatchCount || <Fragment>&mdash;</Fragment>}</td>
 
                 <td
                     title={!anime.sizeMatches && anime.downloaded ? 'Size does not match with the one specified on MyAnimeList' : ''}
-                    className={`${anime.downloaded ? 'size-column' : ''} ${!anime.sizeMatches && anime.downloaded ? 'size-mismatch' : ''}`}>
+                    className={sizeClasses}>
                     {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
                     {anime.downloaded &&
                         <div className='progress bg-secondary'>
                             <div className={`progress-bar bg-${sizeColor}`} style={{ width: `${sizeWidth}px` }} />
-                        </div>}
+                        </div>
+                    }
                 </td>
             </Fragment>
         )

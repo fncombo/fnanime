@@ -1,4 +1,5 @@
 // Libraries
+// import PrettyTime from './PrettyTime'
 import FileSize from 'filesize'
 import { round } from 'math-precision'
 
@@ -10,9 +11,6 @@ import '../css/Statistics.css'
 
 // Data
 import data from './data.json'
-
-// Helpers
-// import prettyTime from './PrettyTime'
 
 // Reduce function
 const reducer = (a, b) => a + b
@@ -191,8 +189,8 @@ export default class Statistics extends Component {
                             </div>
                             <StatisticsColumn rating={rating} ratingData={ratingsTotals[rating]} biggestData={biggestRating} />
                             <StatisticsColumn rating={rating} ratingData={sizeTotals[rating]} biggestData={biggestSize} formatFunction={FileSize} />
-                            {/* <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={prettyTime} />
-                            <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={prettyTime} /> */}
+                            {/* <StatisticsColumn rating={rating} ratingData={durationTotals[rating]} biggestData={biggestDuration} formatFunction={PrettyTime} />
+                            <StatisticsColumn rating={rating} ratingData={watchTimeTotals[rating]} biggestData={biggestWatchTime} formatFunction={PrettyTime} /> */}
                             <StatisticsColumn rating={rating} ratingData={episodeTotals[rating]} biggestData={biggestEpisodes} />
                         </  div>
                     )
@@ -209,10 +207,10 @@ export default class Statistics extends Component {
                             {totals.size ? FileSize(totals.size) : <Fragment>&mdash;</Fragment>}
                         </div>
                         {/* <div className="col text-center">
-                            {totals.duration ? prettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
+                            {totals.duration ? PrettyTime(totals.duration, 'm') : <Fragment>&mdash;</Fragment>}
                         </div>
                         <div className="col text-center">
-                            {totals.watchTime ? prettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
+                            {totals.watchTime ? PrettyTime(totals.watchTime, 'm') : <Fragment>&mdash;</Fragment>}
                         </div> */}
                         <div className="col text-center">
                             {totals.episodes ? totals.episodes : <Fragment>&mdash;</Fragment>}
@@ -249,7 +247,9 @@ class StatisticsColumn extends PureComponent {
                             )}
                         </div>
                     </Fragment>
-                ) : <Fragment>&mdash;</Fragment>}
+                ) :
+                    <Fragment>&mdash;</Fragment>
+                }
             </div>
         )
     }

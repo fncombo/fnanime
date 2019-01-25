@@ -10,15 +10,17 @@ import data from './data.json'
 // Components
 import Data from './Data'
 import Filters from './Filters'
-import Table from './Table'
-import Statistics from './Statistics'
 import Gallery from './Gallery'
 import InfoBox from './InfoBox'
+import Statistics from './Statistics'
+import Table from './Table'
 
 // Main page, filters, sorting, search and all components
 export default class Page extends Component {
     constructor() {
         super()
+
+        this.updateOnLoad = true
 
         // Default state
         this.state = {
@@ -28,6 +30,8 @@ export default class Page extends Component {
             filters: Object.assign({}, data.defaultFilters),
             page: 1,
             selectedAnimeId: false,
+            messageClasses: '',
+            messageText: '',
         }
 
         // Bind functions which need access to this.state
@@ -38,6 +42,7 @@ export default class Page extends Component {
         this.closeInfoBox = this.closeInfoBox.bind(this)
         this.getSorting = this.getSorting.bind(this)
         this.getFilters = this.getFilters.bind(this)
+        this.showMessage = this.showMessage.bind(this)
 
         // Keyboard shortcuts
         document.addEventListener('keydown', event => {
@@ -46,6 +51,15 @@ export default class Page extends Component {
                 this.closeInfoBox()
             }
         }, false)
+    }
+
+    // Update with latest API data after loading
+    componentDidMount() {
+        if (!this.updateOnLoad) {
+            return
+        }
+
+        this.showMessage('Loading latest information...')
 
         // Update certain cached data from live API
         this.apiData = []
@@ -68,6 +82,8 @@ export default class Page extends Component {
 
             // Update table with new data
             this.reset()
+
+            this.showMessage('Updated!', 1500, 'success')
         })
     }
 
@@ -78,6 +94,8 @@ export default class Page extends Component {
         ).then(response => {
             if (response.hasOwnProperty('error')) {
                 console.error(response.error)
+
+                this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
             }
 
             // Add all anime from API
@@ -93,6 +111,23 @@ export default class Page extends Component {
                 callback()
             }
         })
+    }
+
+    // Show a small message in the corner of the page
+    showMessage(text, duration = false, status = '') {
+        this.setState({
+            messageClasses: `show ${status}`,
+            messageText: text,
+        })
+
+        // Hide message after a duration if specified
+        if (duration) {
+            setTimeout(() => {
+                this.setState({
+                    messageClasses: status,
+                })
+            }, duration)
+        }
     }
 
     // Update search, sort and filters
@@ -159,6 +194,8 @@ export default class Page extends Component {
     }
 
     render() {
+        const { anime, searchQuery, page, selectedAnimeId, messageClasses, messageText } = this.state
+
         return (
             <Fragment>
                 <div className="fnheader">
@@ -167,37 +204,38 @@ export default class Page extends Component {
                 <div className="container-main">
                     <div className="container-fluid container-limited">
                         <Filters
-                            anime={this.state.anime}
-                            searchQuery={this.state.searchQuery}
+                            anime={anime}
+                            searchQuery={searchQuery}
                             update={this.update}
                             reset={this.reset}
                             getFilters={this.getFilters}
                         />
                         <Table
-                            anime={this.state.anime}
-                            searchQuery={this.state.searchQuery}
-                            page={this.state.page}
+                            anime={anime}
+                            searchQuery={searchQuery}
+                            page={page}
                             update={this.update}
                             openInfoBox={this.openInfoBox}
                             changePage={this.changePage}
                             getSorting={this.getSorting}
                         />
                     </div>
-                    <Statistics anime={this.state.anime} />
+                    <Statistics anime={anime} />
                     <div className="container-fluid gallery">
-                        <Gallery anime={this.state.anime} openInfoBox={this.openInfoBox} />
+                        <Gallery anime={anime} openInfoBox={this.openInfoBox} />
                     </div>
                 </div>
                 {/* Close when clicking outside of the modal-content window */}
                 <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : false}>
                     <div className="modal-dialog modal-dialog-centered">
                         <InfoBox
-                            selectedAnimeId={this.state.selectedAnimeId}
+                            selectedAnimeId={selectedAnimeId}
                             openInfoBox={this.openInfoBox}
                             closeInfoBox={this.closeInfoBox}
                         />
                     </div>
                 </div>
+                <div id="message" className={messageClasses}>{messageText}</div>
             </Fragment>
         )
     }

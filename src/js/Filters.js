@@ -1,3 +1,6 @@
+// Libraries
+import ClassNames from 'classnames'
+
 // React
 import React, { Component, PureComponent, Fragment } from 'react'
 
@@ -89,25 +92,34 @@ class FilterGroup extends PureComponent {
         // Width of all buttons in this group should be equal
         const width = 100 / data.filterValues[filterName].length
 
+        const colClasses = ClassNames({
+            'col-12': full,
+            'col-6': !full,
+        })
+
         return (
-            <div className={full ? 'col-12' : 'col-6'}>
+            <div className={colClasses}>
                 <div className="btn-group d-flex">
                     {data.filterValues[filterName].map(value => {
                         // Count how many of currently shown anime match this filter and aren't "false" value
                         const count = anime.filter(anime => anime[filterName] === value && value).length
 
+                        // Whether this button is currently selected
                         const currentlySelected = getFilters()[filterName] === value
+
+                        // Special onclick function wow
                         const attributes = {
                             onClick: !currentlySelected ? () => update('filters', filterName, value) : undefined,
                         }
 
+                        // Class
+                        const buttonClasses = ClassNames('btn', {
+                            'btn-primary': currentlySelected,
+                            'btn-secondary': !currentlySelected,
+                        })
+
                         return (
-                            <button
-                                className={`btn btn-${currentlySelected ? 'primary' : 'secondary'}`}
-                                style={{ width: `${width}%` }}
-                                {...attributes}
-                                key={value}
-                            >
+                            <button className={buttonClasses} style={{ width: `${width}%` }} {...attributes} key={value}>
                                 {data.lookup[filterName][value]}
                                 {!!count && <span> ({count})</span>}
                             </button>
