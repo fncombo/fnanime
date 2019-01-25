@@ -8,16 +8,57 @@ import TableRow from './TableRow'
 // Style
 import '../css/Table.css'
 
-// Data
-import data from './data.json'
-
 // Table with all the anime data
 export default class Table extends PureComponent {
     constructor() {
         super()
 
         // Anime to show per page
-        this.perPage = 25
+        this.perPage = 30
+
+        // Column setup
+        this.columns = {
+            title: {
+                name: 'Title',
+                defaultSort: 'asc',
+                size: '36.5%',
+            },
+            status: {
+                name: 'Status',
+                defaultSort: 'asc',
+                size: '9%',
+            },
+            subGroup: {
+                name: 'Sub Group',
+                defaultSort: 'asc',
+                size: '12.5%',
+            },
+            resolution: {
+                name: 'Resolution',
+                defaultSort: 'desc',
+                size: '9%',
+            },
+            source: {
+                name: 'Source',
+                defaultSort: 'asc',
+                size: 'auto',
+            },
+            rating: {
+                name: 'Rating',
+                defaultSort: 'desc',
+                size: 'auto',
+            },
+            rewatchCount: {
+                name: 'Rewatched',
+                defaultSort: 'desc',
+                size: '9%',
+            },
+            size: {
+                name: 'Size',
+                defaultSort: 'desc',
+                size: '11%',
+            },
+        }
     }
 
     // Sort when clicking on a column header
@@ -70,7 +111,7 @@ export default class Table extends PureComponent {
                 <table className="table mt-3" style={{ width: '100%' }}>
                     <thead title="Hold shift to sort multiple columns">
                         <tr>
-                            {Object.entries(data.columns).map(([name, column]) =>
+                            {Object.entries(this.columns).map(([name, column]) =>
                                 <th
                                     className={this.columClassName(name)}
                                     style={{ width: column.size }}

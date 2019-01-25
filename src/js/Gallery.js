@@ -7,8 +7,8 @@ import React, { PureComponent } from 'react'
 // Style
 import '../css/Gallery.css'
 
-// Data
-import data from './data.json'
+// Components
+import Data from './Data'
 
 // Make a gallery for each rating which has matching anime
 export default class Gallery extends PureComponent {
@@ -30,7 +30,7 @@ export default class Gallery extends PureComponent {
             return (
                 <div key={rating}>
                     <h2 className="text-center rounded p-3">
-                        {data.lookup.rating[rating]}
+                        {Data.lookup.rating[rating]}
                     </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
@@ -55,8 +55,8 @@ class GalleryItem extends PureComponent {
         return (
             <div className={itemClasses} onClick={() => openInfoBox(anime.id)} key={anime.id}>
                 <img src={anime.img} alt={anime.title} />
-                <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]} rounded-0`}>
-                    {data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}
+                <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]} rounded-0`}>
+                    {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}
                     {anime.episodes > 1 && ` ${anime.episodes} ep`}
                 </span>
             </div>

@@ -7,8 +7,8 @@ import React, { Component, PureComponent, Fragment } from 'react'
 // Style
 import '../css/Filters.css'
 
-// Data
-import data from './data.json'
+// Components
+import Data from './Data'
 
 // Filters, search, and reset
 export default class Filters extends Component {
@@ -90,7 +90,7 @@ class FilterGroup extends PureComponent {
         const { anime, filterName, full, update, getFilters } = this.props
 
         // Width of all buttons in this group should be equal
-        const width = 100 / data.filterValues[filterName].length
+        const width = 100 / Data.filterValues[filterName].length
 
         const colClasses = ClassNames({
             'col-12': full,
@@ -100,7 +100,7 @@ class FilterGroup extends PureComponent {
         return (
             <div className={colClasses}>
                 <div className="btn-group d-flex">
-                    {data.filterValues[filterName].map(value => {
+                    {Data.filterValues[filterName].map(value => {
                         // Count how many of currently shown anime match this filter and aren't "false" value
                         const count = anime.filter(anime => anime[filterName] === value && value).length
 
@@ -120,7 +120,7 @@ class FilterGroup extends PureComponent {
 
                         return (
                             <button className={buttonClasses} style={{ width: `${width}%` }} {...attributes} key={value}>
-                                {data.lookup[filterName][value]}
+                                {Data.lookup[filterName][value]}
                                 {!!count && <span> ({count})</span>}
                             </button>
                         )
@@ -138,7 +138,7 @@ class OptionGroup extends PureComponent {
 
         let options = []
 
-        data.filterValues[filterName].forEach(value => {
+        Data.filterValues[filterName].forEach(value => {
             // Count how many of currently shown anime match this option
             const count = anime.filter(anime => {
                 return Array.isArray(anime[filterName]) && anime[filterName].indexOf(value) !== -1
@@ -151,7 +151,7 @@ class OptionGroup extends PureComponent {
 
             options.push(
                 <option value={value} key={value}>
-                    {value ? value + (count && ` (${count})`) : data.lookup[filterName][value]}
+                    {value ? value + (count && ` (${count})`) : Data.lookup[filterName][value]}
                 </option>
             )
         })

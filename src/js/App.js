@@ -4,9 +4,6 @@ import React, { Component, Fragment } from 'react'
 // Style
 import '../css/App.css'
 
-// Data
-import data from './data.json'
-
 // Components
 import Data from './Data'
 import Filters from './Filters'
@@ -26,8 +23,8 @@ export default class Page extends Component {
         this.state = {
             anime: Data.results(),
             searchQuery: '',
-            sort: Object.assign([], data.defaultSort),
-            filters: Object.assign({}, data.defaultFilters),
+            sort: Object.assign([], Data.defaults.sorting),
+            filters: Object.assign({}, Data.defaults.filters),
             page: 1,
             selectedAnimeId: false,
             messageClasses: '',
@@ -157,8 +154,8 @@ export default class Page extends Component {
         this.setState({
             anime: Data.results(),
             searchQuery: '',
-            sort: Object.assign([], data.defaultSort),
-            filters: Object.assign({}, data.defaultFilters),
+            sort: Object.assign([], Data.defaults.sorting),
+            filters: Object.assign({}, Data.defaults.filters),
             page: 1,
             selectedAnimeId: false,
         })

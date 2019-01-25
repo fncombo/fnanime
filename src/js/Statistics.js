@@ -9,8 +9,8 @@ import React, { Component, PureComponent, Fragment } from 'react'
 // Style
 import '../css/Statistics.css'
 
-// Data
-import data from './data.json'
+// Components
+import Data from './Data'
 
 // Reduce function
 const reducer = (a, b) => a + b
@@ -239,8 +239,8 @@ class StatisticsColumn extends PureComponent {
                             {ratingData.map((singleData, status) =>
                                 !!singleData &&
                                 <div
-                                    title={data.lookup.status[status]}
-                                    className={`progress-bar bg-${data.lookup.statusColor[status]}`}
+                                    title={Data.lookup.status[status]}
+                                    className={`progress-bar bg-${Data.lookup.statusColor[status]}`}
                                     style={{ width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%` }}
                                     key={`${rating}-${status}`}
                                 />

@@ -10,9 +10,6 @@ import React, { PureComponent, Fragment } from 'react'
 // Style
 import '../css/InfoBox.css'
 
-// Data
-import data from './data.json'
-
 // Components
 import Data from './Data'
 
@@ -160,10 +157,10 @@ export default class InfoBox extends PureComponent {
                             {Data.animeExists(anime.mal_id) &&
                                 <span
                                     title="View"
-                                    className={`status-pill status-pill-link status-pill-${data.lookup.statusColor[Data.getAnime(anime.mal_id).status]}`}
+                                    className={`status-pill status-pill-link status-pill-${Data.lookup.statusColor[Data.getAnime(anime.mal_id).status]}`}
                                     onClick={() => openInfoBox(anime.mal_id)}
                                 >
-                                    {data.lookup.status[Data.getAnime(anime.mal_id).status]}
+                                    {Data.lookup.status[Data.getAnime(anime.mal_id).status]}
                                     {!!Data.getAnime(anime.mal_id).rating && ` - Rated ${Data.getAnime(anime.mal_id).rating}`}
                                 </span>
                             }
@@ -229,7 +226,7 @@ export default class InfoBox extends PureComponent {
         })
 
         return (
-            <div className={`modal-content theme-${data.lookup.statusColor[anime.status]}`}>
+            <div className={`modal-content theme-${Data.lookup.statusColor[anime.status]}`}>
                 <div className="modal-header">
                     <h4 className="modal-title">
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
@@ -251,14 +248,14 @@ export default class InfoBox extends PureComponent {
                                 <span className="inactive">
                                     {new Array(10 - anime.rating).fill(0).map(() => '★')}
                                 </span>
-                                <h5>{anime.rating ? data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
+                                <h5>{anime.rating ? Data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
                                 {loaded ?
                                     <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
                                     <span className="loading-text mt-3" />}
                             </div>
                             <hr />
                             <p className="text-center mb-0">
-                                {data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]} {String.fromCharCode(8211)} {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}
+                                {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]} {String.fromCharCode(8211)} {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}
                             </p>
                             {loaded ?
                                 <p className="text-center mb-0">Aired {apiData.aired.string}</p> :

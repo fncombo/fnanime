@@ -6,8 +6,8 @@ import FileSize from 'filesize'
 // React
 import React, { PureComponent, Fragment } from 'react'
 
-// Data
-import data from './data.json'
+// Components
+import Data from './Data'
 
 // Single table row for an anime, preventing re-rendering of statics columns whenever possible
 export default class TableRow extends PureComponent {
@@ -54,7 +54,7 @@ class TitleColumn extends PureComponent {
                         {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                     </span>
                     <span className="text-secondary ml-1">
-                        {data.lookup.type[anime.type]}
+                        {Data.lookup.type[anime.type]}
                     </span>
                 </div>
             </td>
@@ -67,8 +67,8 @@ class DataColumns extends PureComponent {
     render() {
         const { anime } = this.props
 
-        const sizeWidth = (((anime.size - data.smallestSize) / data.biggestSize) * 100) || 0
-        const sizeColor = ((anime.size > (data.biggestSize * 0.75) ? 'danger' : (anime.size > (data.biggestSize * 0.5) ? 'warning' : 'primary'))) || 0
+        const sizeWidth = (((anime.size - Data.storageSizeLimits.min) / Data.storageSizeLimits.max) * 100) || 0
+        const sizeColor = ((anime.size > (Data.storageSizeLimits.max * 0.75) ? 'danger' : (anime.size > (Data.storageSizeLimits.max * 0.5) ? 'warning' : 'primary'))) || 0
 
         const sizeClasses = ClassNames({
             'size-column': anime.downloaded,
@@ -78,18 +78,18 @@ class DataColumns extends PureComponent {
         return (
             <Fragment>
                 <td>
-                    <span className={`status-pill status-pill-${data.lookup.statusColor[anime.status]}`}>
-                        {data.lookup.status[anime.status]}
+                    <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]}`}>
+                        {Data.lookup.status[anime.status]}
                     </span>
                 </td>
 
                 <td className="text-left">{anime.subGroup ? anime.subGroup.join(', ') : <Fragment>&mdash;</Fragment>}</td>
 
-                <td className={anime.resolution ? `text-${data.lookup.resolutionColor[anime.resolution]}` : ''}>
+                <td className={anime.resolution ? `text-${Data.lookup.resolutionColor[anime.resolution]}` : ''}>
                     {anime.resolution ? `${anime.resolution}p` : <Fragment>&mdash;</Fragment>}
                 </td>
 
-                <td className={anime.source ? `text-${data.lookup.sourceColor[anime.source]}` : ''}>
+                <td className={anime.source ? `text-${Data.lookup.sourceColor[anime.source]}` : ''}>
                     {anime.source ? anime.source : <Fragment>&mdash;</Fragment>}
                 </td>
 
