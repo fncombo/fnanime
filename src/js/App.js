@@ -96,6 +96,8 @@ export default class Page extends Component {
                 console.error(response.error)
 
                 this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
+
+                return
             }
 
             // Add all anime from API
