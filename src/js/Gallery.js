@@ -53,7 +53,7 @@ class GalleryItem extends PureComponent {
         })
 
         return (
-            <div className={itemClasses} onClick={() => openInfoBox(anime.id)} key={anime.id}>
+            <div className={itemClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.id}>
                 <img src={anime.img} alt={anime.title} />
                 <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]} rounded-0`}>
                     {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}

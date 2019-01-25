@@ -19,7 +19,7 @@ export default class TableRow extends PureComponent {
         })
 
         return (
-            <tr className={rowClasses} onClick={() => openInfoBox(anime.id)} key={anime.id}>
+            <tr className={rowClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.id}>
                 <TitleColumn anime={anime} searchQuery={searchQuery} />
                 <DataColumns anime={anime} />
             </tr>
