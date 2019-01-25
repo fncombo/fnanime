@@ -92,12 +92,9 @@
 }
 
 .modal ul {
+    margin-bottom: 0;
     padding: 0;
     list-style: none;
-}
-
-.modal .row ul {
-    margin-bottom: 0;
 }
 
 .modal .related li {
@@ -222,8 +219,4 @@
 
 .loading-paragraph > span:nth-child(3n) {
     width: 60%;
-}
-
-.related-anime-list {
-    padding-bottom: 3px;
 }

@@ -8,7 +8,7 @@ import '../css/App.css'
 import data from './data.json'
 
 // Components
-import Results from './Results'
+import Data from './Data'
 import Filters from './Filters'
 import Table from './Table'
 import Statistics from './Statistics'
@@ -22,7 +22,7 @@ export default class Page extends Component {
 
         // Default state
         this.state = {
-            anime: Results(),
+            anime: Data.results(),
             searchQuery: '',
             sort: Object.assign([], data.defaultSort),
             filters: Object.assign({}, data.defaultFilters),
@@ -46,6 +46,53 @@ export default class Page extends Component {
                 this.closeInfoBox()
             }
         }, false)
+
+        // Update certain cached data from live API
+        this.apiData = []
+
+        this.getApiData(1, () => {
+            // To use in working out how many times anime was re-wathed
+            const rewatchRegex = new RegExp(/re-watched:\s(\d+)/, 'i')
+
+            this.apiData.forEach(anime => {
+                const match = anime.tags ? anime.tags.match(rewatchRegex) : 0
+
+                // Update only this information
+                Data.updateAnime(anime.mal_id, {
+                    status: anime.watching_status,
+                    rating: anime.score,
+                    rewatchCount: match ? parseInt(match[1], 10) : 0,
+                    watchedEpisodes: anime.watched_episodes,
+                })
+            })
+
+            // Update table with new data
+            this.reset()
+        })
+    }
+
+    // Get my anime list API data
+    getApiData(page, callback) {
+        fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`).then(response =>
+            response.json()
+        ).then(response => {
+            if (response.hasOwnProperty('error')) {
+                console.error(response.error)
+            }
+
+            // Add all anime from API
+            this.apiData.push.apply(this.apiData, response.anime)
+
+            // Since API only does 300 entries per responce, keep trying next page until we get everything
+            if (response.anime.length === 300) {
+                // Small delay to not exceed API request limit
+                setTimeout(() => {
+                    this.getApiData(page + 1, callback)
+                }, 2000)
+            } else {
+                callback()
+            }
+        })
     }
 
     // Update search, sort and filters
@@ -63,7 +110,7 @@ export default class Page extends Component {
             newState[action] = args[0]
         }
 
-        newState.anime = Results(newState.searchQuery, newState.sort, newState.filters)
+        newState.anime = Data.results(newState.searchQuery, newState.sort, newState.filters)
 
         this.setState(newState)
     }
@@ -71,7 +118,7 @@ export default class Page extends Component {
     // Reset all filters, sorting and search
     reset() {
         this.setState({
-            anime: Results(),
+            anime: Data.results(),
             searchQuery: '',
             sort: Object.assign([], data.defaultSort),
             filters: Object.assign({}, data.defaultFilters),

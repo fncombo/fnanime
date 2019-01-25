@@ -11,6 +11,9 @@ import '../css/InfoBox.css'
 // Data
 import data from './data.json'
 
+// Components
+import Data from './Data'
+
 // Helpers
 import prettyTime from './PrettyTime'
 
@@ -73,27 +76,42 @@ export default class InfoBox extends PureComponent {
         ).then(data => {
             if (data.hasOwnProperty('error')) {
                 console.error('API responded with an error:', data.error)
-                // TODO display error to the user
+
+                Data.loadingError()
+
                 return
             }
+
+            const synopsis = getRenderedSize(this.synopsisText(data.synopsis), 865)
+
+            // Emulate modal environment for calculating related anime list height
+            let relatedAnimeContainer = document.createElement('div')
+            relatedAnimeContainer.classList.add('modal')
+
+            const relatedAnimeList = getRenderedSize(this.relatedAnimeList(data.related), 865, {
+                container: relatedAnimeContainer,
+            })
+
+            // Add 8 pixels to the height if there is a <ul> to account for the bottom margin
+            const relatedAnimeListHeight = relatedAnimeList.height > 24 ? relatedAnimeList.height + 8 : relatedAnimeList.height
 
             this.setState({
                 loaded: true,
                 apiData: data,
                 // Get the heights of the loaded synopsis and related anime data to animate smoothly
-                synopsisHeight: getRenderedSize(<p>${this.fixSynopsisText(data.synopsis)}</p>, 867).height,
-                // +3 extra height to accont for bottom pill button padding
-                relatedAnimeListHeight: getRenderedSize(<div>{this.relatedAnimeList(data.related)}</div>, 867).height + 3,
+                synopsisHeight: synopsis.height,
+                relatedAnimeListHeight: relatedAnimeListHeight,
             })
         }, error => {
             console.error('Error while fetching API:', error)
-            // TODO display error to the user
+
+            Data.loadingError()
         })
     }
 
     // Replace special characters in synopsis text
-    fixSynopsisText(text) {
-        return text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))
+    synopsisText(text) {
+        return <p>{text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p>
     }
 
     // Remove non-anime related entries
@@ -127,7 +145,7 @@ export default class InfoBox extends PureComponent {
             return <p>No related anime</p>
         }
 
-        return Object.entries(cleanData).map(([type, anime]) =>
+        const list = Object.entries(cleanData).map(([type, anime]) =>
             <Fragment key={type}>
                 <h6>{type}</h6>
                 <ul className="related">
@@ -136,20 +154,22 @@ export default class InfoBox extends PureComponent {
                             <a title="Open on MyAnimeList" href={anime.url} target="_blank" rel="noopener noreferrer">
                                 {anime.name.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
                             </a>
-                            {data.anime.hasOwnProperty(anime.mal_id) &&
+                            {Data.animeExists(anime.mal_id) &&
                                 <span
                                     title="View"
-                                    className={`status-pill status-pill-link status-pill-${data.lookup.statusColor[data.anime[anime.mal_id].status]}`}
+                                    className={`status-pill status-pill-link status-pill-${data.lookup.statusColor[Data.getAnime(anime.mal_id).status]}`}
                                     onClick={() => openInfoBox(anime.mal_id)}
                                 >
-                                    {data.lookup.status[data.anime[anime.mal_id].status]}
-                                    {!!data.anime[anime.mal_id].rating && ` - Rated ${data.anime[anime.mal_id].rating}`}
+                                    {data.lookup.status[Data.getAnime(anime.mal_id).status]}
+                                    {!!Data.getAnime(anime.mal_id).rating && ` - Rated ${Data.getAnime(anime.mal_id).rating}`}
                                 </span>}
                         </li>
                     )}
                 </ul>
             </Fragment>
         )
+
+        return <div>{list}</div>
     }
 
     render() {
@@ -157,7 +177,7 @@ export default class InfoBox extends PureComponent {
         const { selectedAnimeId, closeInfoBox } = props
 
         // The anime we're talkin' about
-        const anime = data.anime[selectedAnimeId]
+        const anime = Data.getAnime(selectedAnimeId)
 
         if (!anime) {
             return null
@@ -203,11 +223,11 @@ export default class InfoBox extends PureComponent {
         return (
             <div className={`modal-content theme-${data.lookup.statusColor[anime.status]}`}>
                 <div className="modal-header">
-                    <h5 className='modal-title'>
+                    <h4 className="modal-title">
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
                             {anime.title}
                         </a>
-                    </h5>
+                    </h4>
                     <button className="close" onClick={closeInfoBox}>
                         <span>&times;</span>
                     </button>
@@ -263,7 +283,7 @@ export default class InfoBox extends PureComponent {
                                 <span /><span /><span />
                                 <span /><span /><span />
                                 <span /><span /><span />
-                                {loaded && <p>{this.fixSynopsisText(apiData.synopsis)}</p>}
+                                {loaded && this.synopsisText(apiData.synopsis)}
                             </div>
                             <hr />
                             <h5>Related Anime</h5>
@@ -271,7 +291,7 @@ export default class InfoBox extends PureComponent {
                                 <span /><span /><span />
                                 <span /><span /><span />
                                 <span /><span /><span />
-                                {loaded && <div className="related-anime-list">{this.relatedAnimeList()}</div>}
+                                {loaded && this.relatedAnimeList()}
                             </div>
                         </div>
                     </div>
