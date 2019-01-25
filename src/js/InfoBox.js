@@ -75,7 +75,7 @@ export default class InfoBox extends PureComponent {
             if (data.hasOwnProperty('error')) {
                 console.error('API responded with an error:', data.error)
 
-                Data.loadingError()
+                this.loadingError()
                 closeInfoBox()
 
                 return
@@ -104,9 +104,14 @@ export default class InfoBox extends PureComponent {
         }, error => {
             console.error('Error while fetching API:', error)
 
-            Data.loadingError()
+            this.loadingError()
             closeInfoBox()
         })
+    }
+
+    // Error when failed to load API
+    loadingError() {
+        alert('Error loading data from MyAnimeList.net, please try again later.')
     }
 
     // Replace special characters in synopsis text

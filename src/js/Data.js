@@ -175,11 +175,6 @@ export default class Data {
         return allSubs.filter(this.uniqueArray)
     }
 
-    // Error when failed to load API
-    static loadingError() {
-        alert('There was an error loading data from MyAnimeList.net, please try again.')
-    }
-
     // Update info about an anime which exists already in the data
     static updateAnime(id, data) {
         if (!this.animeExists(id)) {
