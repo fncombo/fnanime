@@ -77,8 +77,8 @@ export default class Page extends Component {
                 })
             })
 
-            // Update table with new data
-            this.reset()
+            // Update state with new anime data
+            this.update()
 
             this.showMessage('Updated!', 1500, 'success')
         })
@@ -103,9 +103,9 @@ export default class Page extends Component {
             // Since API only does 300 entries per responce, keep trying next page until we get everything
             if (response.anime.length === 300) {
                 // Small delay to not exceed API request limit
-                setTimeout(() => {
-                    this.getApiData(page + 1, callback)
-                }, 2000)
+                // setTimeout(() => {
+                this.getApiData(page + 1, callback)
+                // }, 2000)
             } else {
                 callback()
             }
@@ -129,10 +129,11 @@ export default class Page extends Component {
         }
     }
 
-    // Update search, sort and filters
+    // Update search, sort and filters (or refresh anime results if no params)
     update(action, ...args) {
         let newState = Object.assign({}, this.state)
 
+        // Updating a filter value
         if (args.length === 2) {
             // If the value is string false, we probably mean "false" keyword!
             if (args[1] === 'false') {
@@ -140,7 +141,9 @@ export default class Page extends Component {
             }
 
             newState[action][args[0]] = args[1]
-        } else {
+
+        // Everything else if it exists
+        } else if (action && args.length) {
             newState[action] = args[0]
         }
 
