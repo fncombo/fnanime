@@ -14,7 +14,7 @@ export default class Table extends PureComponent {
         super()
 
         // Anime to show per page
-        this.perPage = 30
+        this.perPage = 25
 
         // Column setup
         this.columns = {
