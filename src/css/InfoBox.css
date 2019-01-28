@@ -10,8 +10,8 @@
 .modal-open .container-main,
 .modal-open .fnheader {
     /* autoprefixer: off */
-    opacity: 0.5;
-    filter: blur(0.75rem);
+    opacity: 0.25;
+    filter: blur(0.75rem) grayscale(50%);
 }
 
 .modal  {
@@ -49,46 +49,64 @@
 }
 
 .modal-content {
-    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 3.5rem rgba(0, 0, 0, 0.25);
 }
 
 .modal-content.theme-watching {
-    background: var(--watching-color);
-    border: 2px solid var(--watching-color);
+    border: 1px solid var(--watching-color);
 }
 
 .modal-content.theme-completed {
-    background: var(--completed-color);
-    border: 2px solid var(--completed-color);
+    border: 1px solid var(--completed-color);
 }
 
 .modal-content.theme-onhold {
-    background: var(--onhold-color);
-    border: 2px solid var(--onhold-color);
+    border: 1px solid var(--onhold-color);
 }
 
 .modal-content.theme-dropped {
-    background: var(--dropped-color);
-    border: 2px solid var(--dropped-color);
+    border: 1px solid var(--dropped-color);
 }
 
 .modal-content.theme-plantowatch {
-    background: var(--plantowatch-color);
-    border: 2px solid var(--plantowatch-color);
+    border: 1px solid var(--plantowatch-color);
+}
+
+.modal-content.theme-watching .modal-header a {
+    color: var(--watching-color);
+}
+
+.modal-content.theme-completed .modal-header a {
+    color: var(--completed-color);
+}
+
+.modal-content.theme-onhold .modal-header a {
+    color: var(--onhold-color);
+}
+
+.modal-content.theme-dropped .modal-header a {
+    color: var(--dropped-color);
+}
+
+.modal-content.theme-plantowatch .modal-header a {
+    color: var(--plantowatch-color);
 }
 
 .modal-header {
+    padding-bottom: 0;
     border-bottom: none;
 }
 
 .modal-header a {
-    color: #fff;
     font-weight: normal;
 }
 
-.modal-body {
-    background: #fff;
-    border-radius: calc(0.25rem * 0.75);
+.modal-header .status-pill {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+    transform: translateY(-3px);
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .modal ul {
@@ -110,7 +128,7 @@
     margin: 0 auto;
 }
 
-.modal .status-pill {
+.modal-body .status-pill {
     margin: 0 0 0 1rem;
     font-size: 1rem;
     font-weight: normal;
@@ -132,18 +150,49 @@
 }
 
 .modal .close {
-    color: #fff;
+    color: rgba(0, 0, 0, 0.5);
     text-shadow: none;
-    opacity: 0.75;
-    transition: opacity 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    opacity: 1;
+    line-height: 0.5;
 }
 
 .modal .close:hover {
+    color: #000;
     opacity: 1;
 }
 
 .modal .close:focus {
     outline: none;
+}
+
+.modal-controls {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.15s ease-in-out;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.modal-controls:hover {
+    color: #000;
+}
+
+.modal-controls-prev {
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+
+.modal-controls-next {
+    right: 0;
+    transform: translate(100%, -50%);
 }
 
 @keyframes loading-text {

@@ -44,8 +44,30 @@ export default class Page extends Component {
         // Keyboard shortcuts
         document.addEventListener('keydown', event => {
             // ESC key to close the info box
-            if (event.keyCode === 27 && this.state.selectedAnimeId) {
+            if (event.code === 'Escape' && this.state.selectedAnimeId) {
                 this.closeInfoBox()
+            }
+
+            // Previous anime info box using left arrow when the info box is open
+            if (event.code === 'ArrowLeft' && this.state.selectedAnimeId) {
+                const prevAnimeId = Data.adjacentAnime('prev', this.state.selectedAnimeId)
+
+                if (!prevAnimeId) {
+                    return
+                }
+
+                this.openInfoBox(Data.getAnime(prevAnimeId).id)
+            }
+
+            // Next anime info box using right arrow when the info box is open
+            if (event.code === 'ArrowRight' && this.state.selectedAnimeId) {
+                const nextAnimeId = Data.adjacentAnime('next', this.state.selectedAnimeId)
+
+                if (!nextAnimeId) {
+                    return
+                }
+
+                this.openInfoBox(Data.getAnime(nextAnimeId).id)
             }
         }, false)
     }

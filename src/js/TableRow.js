@@ -83,7 +83,7 @@ class DataColumns extends PureComponent {
                     </span>
                 </td>
 
-                <td className="text-left">{anime.subGroup ? anime.subGroup.join(', ') : <Fragment>&mdash;</Fragment>}</td>
+                <td className="text-left">{anime.subs ? anime.subs.join(', ') : <Fragment>&mdash;</Fragment>}</td>
 
                 <td className={anime.resolution ? `text-${Data.lookup.resolutionColor[anime.resolution]}` : ''}>
                     {anime.resolution ? `${anime.resolution}p` : <Fragment>&mdash;</Fragment>}

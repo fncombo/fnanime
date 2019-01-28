@@ -28,8 +28,8 @@ export default class Table extends PureComponent {
                 defaultSort: 'asc',
                 size: '9%',
             },
-            subGroup: {
-                name: 'Sub Group',
+            subs: {
+                name: 'Subtitles',
                 defaultSort: 'asc',
                 size: '12.5%',
             },

@@ -180,7 +180,7 @@ export default class InfoBox extends PureComponent {
 
     render() {
         const { loaded, props, apiData, synopsisHeight, relatedAnimeListHeight } = this.state
-        const { selectedAnimeId, closeInfoBox } = props
+        const { selectedAnimeId, openInfoBox, closeInfoBox } = props
 
         // The anime we're talkin' about
         const anime = Data.getAnime(selectedAnimeId)
@@ -188,6 +188,9 @@ export default class InfoBox extends PureComponent {
         if (!anime) {
             return null
         }
+
+        const prevAnimeId = Data.adjacentAnime('prev', selectedAnimeId)
+        const nextAnimeId = Data.adjacentAnime('next', selectedAnimeId)
 
         // Get the anime duration in minutes
         let duration = parseInt(apiData.duration, 10) || false
@@ -232,8 +235,17 @@ export default class InfoBox extends PureComponent {
 
         return (
             <div className={`modal-content theme-${Data.lookup.statusColor[anime.status]}`}>
+                {!!prevAnimeId &&
+                    <div className="modal-controls modal-controls-prev" title={Data.getAnime(prevAnimeId).title} onClick={() => openInfoBox(prevAnimeId)}>⯇</div>
+                }
+                {!!nextAnimeId &&
+                    <div className="modal-controls modal-controls-next" title={Data.getAnime(nextAnimeId).title} onClick={() => openInfoBox(nextAnimeId)}>⯈</div>
+                }
                 <div className="modal-header">
                     <h4 className="modal-title">
+                        <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]}`}>
+                            {Data.lookup.status[anime.status]}
+                        </span>
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
                             {anime.title}
                         </a>
@@ -265,6 +277,15 @@ export default class InfoBox extends PureComponent {
                             {loaded ?
                                 <p className="text-center mb-0">Aired {apiData.aired.string}</p> :
                                 <span className="loading-text  mb-0" />}
+                            <hr />
+                            <ul>
+                                <li>
+                                    <a href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">View on MyAnimeList</a>
+                                </li>
+                                <li>
+                                    <a href={`https://nyaa.si/?f=0&c=1_2&q=${anime.title}`} target="_blank" rel="noopener noreferrer">Search on Nyaa</a>
+                                </li>
+                            </ul>
                         </div>
                         <div className="col-9">
                             <h5>Statistics</h5>
@@ -284,6 +305,12 @@ export default class InfoBox extends PureComponent {
                                             <strong>Watch Time: </strong>
                                             {loaded ? watchTimeText : <span className="loading-text loading-inline col-3" />}
                                         </li>
+                                        {!!anime.subs &&
+                                            <li><strong>Subtitles:</strong> {anime.subs}</li>
+                                        }
+                                        {anime.downloaded &&
+                                            <li><strong>Quality:</strong> {anime.resolution ? `${anime.resolution}p` : ''} {anime.source}</li>
+                                        }
                                     </ul>
                                 </div>
                             </div>

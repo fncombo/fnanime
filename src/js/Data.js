@@ -11,11 +11,12 @@ export default class Data {
         // Anime data
         this.animeObject = anime
         this.animeArray = Object.values(anime)
+        this.lastResults = null
 
         // Lookups (\u2013 is &endash;)
         this.lookup = {
-            subGroup: {
-                false: 'All Sub Groups',
+            subs: {
+                false: 'All Subtitles',
             },
             resolution: {
                 false: 'All Resolutions',
@@ -101,7 +102,7 @@ export default class Data {
         }
 
         // Possible filters to work with
-        this.filters = ['subGroup', 'resolution', 'source', 'status', 'type', 'rating']
+        this.filters = ['subs', 'resolution', 'source', 'status', 'type', 'rating']
 
         // Populate default filters
         this.filters.map(filterName => this.defaults.filters[filterName] = false)
@@ -114,7 +115,7 @@ export default class Data {
             let filterData = this.animeArray.map(anime => anime[filterName])
 
             switch (filterName) {
-            case 'subGroup':
+            case 'subs':
                 // Unique, non-empty sub groups sorted alpahbetically
                 filterData = this.uniqueSubs(filterData.filter(value => !!value)).sort()
                 break
@@ -194,6 +195,32 @@ export default class Data {
         return this.animeObject.hasOwnProperty(id)
     }
 
+    // Get the previous or next anime in the current results list
+    static adjacentAnime(direction, id) {
+        let index = this.lastResults.findIndex(anime => anime.id === id)
+
+        switch (direction) {
+        case 'next':
+            // Last anime, can't get next
+            if (index === this.lastResults.length - 1) {
+                return false
+            }
+
+            return this.lastResults[index + 1].id
+
+        case 'prev':
+            // First anime, can't get previous
+            if (index === 0) {
+                return false
+            }
+
+            return this.lastResults[index - 1].id
+
+        default:
+            return false
+        }
+    }
+
     // Search, sort and filter anime
     static results(searchQuery = '', sort = this.defaults.sorting, filters = this.defaults.filters) {
         // Whether any filters are active
@@ -244,7 +271,6 @@ export default class Data {
             FuzzySort.go(searchQuery, resultsToUse, {
                 keys: [
                     'title',
-                    'localTitle',
                 ],
                 threshold: -150,
             }).forEach(item => tempResults.push(this.animeObject[item.obj.id]))
@@ -257,6 +283,8 @@ export default class Data {
             fields: ['title'],
             sort: actualSort,
         }).items.forEach(item => finalResults.push(finalResultsToUse[item.id]))
+
+        this.lastResults = finalResults
 
         return finalResults
     }

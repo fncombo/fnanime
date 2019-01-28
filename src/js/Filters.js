@@ -22,10 +22,10 @@ export default class Filters extends Component {
                 </div>
                 <div className="row mt-3">
                     <FilterGroup anime={anime} filterName="type" update={update} getFilters={getFilters} />
-                    <FilterGroup anime={anime} filterName="status" update={update} getFilters={getFilters} />
+                    <FilterGroup anime={anime} filterName="resolution" update={update} getFilters={getFilters} />
                 </div>
                 <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="resolution" update={update} getFilters={getFilters} />
+                    <FilterGroup anime={anime} filterName="status" update={update} getFilters={getFilters} />
                     <FilterGroup anime={anime} filterName="source" update={update} getFilters={getFilters} />
                 </div>
                 <div className="row mt-3">
@@ -42,10 +42,10 @@ export default class Filters extends Component {
                     <div className="col-3">
                         <select
                             className="custom-select"
-                            value={getFilters().subGroup}
-                            onChange={event => update('filters', 'subGroup', event.target.value)}
+                            value={getFilters().subs}
+                            onChange={event => update('filters', 'subs', event.target.value)}
                         >
-                            <OptionGroup anime={anime} filterName="subGroup" />
+                            <OptionGroup anime={anime} filterName="subs" />
                         </select>
                     </div>
                     <div className="col-5 d-flex align-items-center justify-content-center">
