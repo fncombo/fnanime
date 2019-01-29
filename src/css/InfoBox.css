@@ -24,7 +24,7 @@
     transition-delay: 0s, 0s, 0s;
 }
 
-.modal-switching .modal {
+.modal-switching .modal-content {
     opacity: 0;
     transform: scale(1.05);
 }
@@ -35,6 +35,9 @@
 }
 
 .modal-content {
+    min-width: 1200px;
+    max-width: 1200px;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
     box-shadow: 0 0.25rem 3.5rem rgba(0, 0, 0, 0.25);
     border-radius: 0;
     border: 1px solid #000;
@@ -89,14 +92,6 @@
     font-weight: normal;
 }
 
-.modal-header .status-pill {
-    margin: 0 1rem 0 0;
-    display: inline-block;
-    transform: translateY(-3px);
-    font-size: 1rem;
-    font-weight: normal;
-}
-
 .modal ul {
     margin-bottom: 0;
     padding: 0;
@@ -116,12 +111,6 @@
     margin: 0 auto;
 }
 
-.modal-body .status-pill {
-    margin: 0 0 0 1rem;
-    font-size: 1rem;
-    font-weight: normal;
-}
-
 .modal .rating-stars .active {
     font-size: 1.75rem;
     color: #fcc200;
@@ -130,11 +119,6 @@
 .modal .rating-stars .inactive {
     font-size: 1.75rem;
     color: hsl(0, 0%, 90%);
-}
-
-.modal .status-pill-link:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .modal .close {
@@ -160,27 +144,37 @@
 .modal-controls {
     position: absolute;
     top: 50%;
-    font-size: 2rem;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
-    padding: 0.5rem;
-    transition: padding 0.15s ease-in-out, color 0.15s ease-in-out;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.modal-controls polygon {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 1;
 }
 
 .modal-controls:hover {
-    color: #fff;
-    padding: 0.75rem;
+    opacity: 1;
 }
 
 .modal-controls-prev {
-    left: 0;
+    left: -0.5rem;
     transform: translate(-100%, -50%);
 }
 
+.modal-controls-prev:hover {
+    transform: translate(-100%, -50%) scale(1.25);
+}
+
 .modal-controls-next {
-    right: 0;
-    transform: translate(100%, -50%);
+    right: -0.5rem;
+    transform: translate(100%, -50%) rotate(180deg);
+}
+
+.modal-controls-next:hover {
+    transform: translate(100%, -50%) rotate(180deg) scale(1.25);
 }
 
 @keyframes loading-text {

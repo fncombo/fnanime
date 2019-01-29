@@ -84,17 +84,11 @@ export default class Page extends Component {
         this.apiData = []
 
         this.getApiData(1, () => {
-            // To use in working out how many times anime was re-wathed
-            const rewatchRegex = new RegExp(/re-watched:\s(\d+)/, 'i')
-
             this.apiData.forEach(anime => {
-                const match = anime.tags ? anime.tags.match(rewatchRegex) : 0
-
                 // Update only this information
                 Data.updateAnime(anime.mal_id, {
                     status: anime.watching_status,
                     rating: anime.score,
-                    rewatchCount: match ? parseInt(match[1], 10) : 0,
                     watchedEpisodes: anime.watched_episodes,
                 })
             })
@@ -124,10 +118,7 @@ export default class Page extends Component {
 
             // Since API only does 300 entries per responce, keep trying next page until we get everything
             if (response.anime.length === 300) {
-                // Small delay to not exceed API request limit
-                // setTimeout(() => {
                 this.getApiData(page + 1, callback)
-                // }, 2000)
             } else {
                 callback()
             }

@@ -11,13 +11,6 @@
     opacity: 0.3;
 }
 
-.gallery .status-pill {
-    padding-left: 0;
-    padding-right: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, var(--img-size));

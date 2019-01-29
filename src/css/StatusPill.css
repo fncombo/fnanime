@@ -1,0 +1,62 @@
+/* Status pill general */
+
+.status-pill {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.status-pill-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.status-pill-watching {
+    background: var(--watching-color) !important;
+    color: #fff;
+}
+
+.status-pill-completed {
+    background: var(--completed-color) !important;
+    color: #fff;
+}
+
+.status-pill-onhold {
+    background: var(--onhold-color) !important;
+    color: #fff;
+}
+
+.status-pill-dropped {
+    background: var(--dropped-color) !important;
+    color: #fff;
+}
+
+.status-pill-plantowatch {
+    background: var(--plantowatch-color) !important;
+    color: #fff;
+}
+
+/* Galeery status pills */
+
+.gallery .status-pill {
+    padding-left: 0;
+    padding-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Info box status pills */
+
+.modal-header .status-pill {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+    transform: translateY(-3px);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.modal-body .status-pill {
+    margin: 0 0 0 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+}

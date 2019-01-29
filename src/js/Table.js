@@ -21,17 +21,17 @@ export default class Table extends PureComponent {
             title: {
                 name: 'Title',
                 defaultSort: 'asc',
-                size: '36.5%',
+                size: 'auto',
             },
             status: {
                 name: 'Status',
                 defaultSort: 'asc',
-                size: '9%',
+                size: '13%',
             },
             subs: {
                 name: 'Subtitles',
                 defaultSort: 'asc',
-                size: '12.5%',
+                size: '11%',
             },
             resolution: {
                 name: 'Resolution',
@@ -41,12 +41,12 @@ export default class Table extends PureComponent {
             source: {
                 name: 'Source',
                 defaultSort: 'asc',
-                size: 'auto',
+                size: '7%',
             },
             rating: {
                 name: 'Rating',
                 defaultSort: 'desc',
-                size: 'auto',
+                size: '7%',
             },
             rewatchCount: {
                 name: 'Rewatched',
@@ -56,7 +56,7 @@ export default class Table extends PureComponent {
             size: {
                 name: 'Size',
                 defaultSort: 'desc',
-                size: '11%',
+                size: '9%',
             },
         }
     }

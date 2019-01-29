@@ -8,6 +8,7 @@ import React, { PureComponent, Fragment } from 'react'
 
 // Components
 import Data from './Data'
+import StatusPill from './StatusPill'
 
 // Single table row for an anime, preventing re-rendering of statics columns whenever possible
 export default class TableRow extends PureComponent {
@@ -68,7 +69,7 @@ class DataColumns extends PureComponent {
         const { anime } = this.props
 
         const sizeWidth = (((anime.size - Data.storageSizeLimits.min) / Data.storageSizeLimits.max) * 100) || 0
-        const sizeColor = ((anime.size > (Data.storageSizeLimits.max * 0.75) ? 'danger' : (anime.size > (Data.storageSizeLimits.max * 0.5) ? 'warning' : 'primary'))) || 0
+        const sizeColor = ((anime.size > (Data.storageSizeLimits.max * 0.8) ? 'danger' : (anime.size > (Data.storageSizeLimits.max * 0.5) ? 'warning' : 'primary'))) || 0
 
         const sizeClasses = ClassNames({
             'size-column': anime.downloaded,
@@ -78,9 +79,7 @@ class DataColumns extends PureComponent {
         return (
             <Fragment>
                 <td>
-                    <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]}`}>
-                        {Data.lookup.status[anime.status]}
-                    </span>
+                    <StatusPill animeId={anime.id} />
                 </td>
 
                 <td className="text-left">{anime.subs ? anime.subs.join(', ') : <Fragment>&mdash;</Fragment>}</td>
@@ -100,7 +99,7 @@ class DataColumns extends PureComponent {
                 <td
                     title={!anime.sizeMatches && anime.downloaded ? 'Size does not match with the one specified on MyAnimeList' : ''}
                     className={sizeClasses}>
-                    {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
+                    {anime.downloaded ? FileSize(anime.size) : <Fragment>&mdash;</Fragment>}
                     {anime.downloaded &&
                         <div className='progress bg-secondary'>
                             <div className={`progress-bar bg-${sizeColor}`} style={{ width: `${sizeWidth}px` }} />

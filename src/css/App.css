@@ -116,39 +116,6 @@ a:hover {
     color: var(--primary-color-hover);
 }
 
-/* Status pills */
-
-.status-pill {
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    text-align: center;
-}
-
-.status-pill-watching {
-    background: var(--watching-color) !important;
-    color: #fff;
-}
-
-.status-pill-completed {
-    background: var(--completed-color) !important;
-    color: #fff;
-}
-
-.status-pill-onhold {
-    background: var(--onhold-color) !important;
-    color: #fff;
-}
-
-.status-pill-dropped {
-    background: var(--dropped-color) !important;
-    color: #fff;
-}
-
-.status-pill-plantowatch {
-    background: var(--plantowatch-color) !important;
-    color: #fff;
-}
-
 /* Text colours */
 
 .text-success {

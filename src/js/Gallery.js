@@ -2,13 +2,14 @@
 import ClassNames from 'classnames'
 
 // React
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/Gallery.css'
 
 // Components
 import Data from './Data'
+import StatusPill from './StatusPill'
 
 // Make a gallery for each rating which has matching anime
 export default class Gallery extends PureComponent {
@@ -52,13 +53,16 @@ class GalleryItem extends PureComponent {
             'not-downloaded': !anime.downloaded,
         })
 
+        const statusPillText =
+            <Fragment>
+                {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}
+                {anime.episodes > 1 && ` ${anime.episodes} ep`}
+            </Fragment>
+
         return (
             <div className={itemClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.id}>
                 <img src={anime.img} alt={anime.title} />
-                <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]} rounded-0`}>
-                    {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}
-                    {anime.episodes > 1 && ` ${anime.episodes} ep`}
-                </span>
+                <StatusPill animeId={anime.id} text={statusPillText} />
             </div>
         )
     }

@@ -12,6 +12,7 @@ import '../css/InfoBox.css'
 
 // Components
 import Data from './Data'
+import StatusPill from './StatusPill'
 
 // Information box about a specific selected anime
 export default class InfoBox extends PureComponent {
@@ -159,16 +160,7 @@ export default class InfoBox extends PureComponent {
                             <a title="Open on MyAnimeList" href={anime.url} target="_blank" rel="noopener noreferrer">
                                 {anime.name.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
                             </a>
-                            {Data.animeExists(anime.mal_id) &&
-                                <span
-                                    title="View"
-                                    className={`status-pill status-pill-link status-pill-${Data.lookup.statusColor[Data.getAnime(anime.mal_id).status]}`}
-                                    onClick={() => openInfoBox(anime.mal_id)}
-                                >
-                                    {Data.lookup.status[Data.getAnime(anime.mal_id).status]}
-                                    {!!Data.getAnime(anime.mal_id).rating && ` - Rated ${Data.getAnime(anime.mal_id).rating}`}
-                                </span>
-                            }
+                            {Data.animeExists(anime.mal_id) && <StatusPill animeId={anime.mal_id} showRating={true} link={true} openInfoBox={openInfoBox} />}
                         </li>
                     )}
                 </ul>
@@ -233,19 +225,23 @@ export default class InfoBox extends PureComponent {
             'loaded': loaded,
         })
 
+        const arrowSize = 25
+
         return (
             <div className={`modal-content theme-${Data.lookup.statusColor[anime.status]}`}>
                 {!!prevAnimeId &&
-                    <div className="modal-controls modal-controls-prev" title={Data.getAnime(prevAnimeId).title} onClick={() => openInfoBox(prevAnimeId)}>⯇</div>
+                    <svg height={arrowSize} width={arrowSize} className="modal-controls modal-controls-prev" title={Data.getAnime(prevAnimeId).title} onClick={() => openInfoBox(prevAnimeId)}>
+                        <polygon points={`1,${arrowSize/2} ${arrowSize-1},1 ${arrowSize-1},${arrowSize-1}`} />
+                    </svg>
                 }
                 {!!nextAnimeId &&
-                    <div className="modal-controls modal-controls-next" title={Data.getAnime(nextAnimeId).title} onClick={() => openInfoBox(nextAnimeId)}>⯈</div>
+                    <svg height={arrowSize} width={arrowSize} className="modal-controls modal-controls-next" title={Data.getAnime(nextAnimeId).title} onClick={() => openInfoBox(nextAnimeId)}>
+                        <polygon points={`1,${arrowSize/2} ${arrowSize-1},1 ${arrowSize-1},${arrowSize-1}`} />
+                    </svg>
                 }
                 <div className="modal-header">
                     <h4 className="modal-title">
-                        <span className={`status-pill status-pill-${Data.lookup.statusColor[anime.status]}`}>
-                            {Data.lookup.status[anime.status]}
-                        </span>
+                        <StatusPill animeId={anime.id} />
                         <a title="Open on MyAnimeList" href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
                             {anime.title}
                         </a>
