@@ -82,13 +82,13 @@ export default class InfoBox extends PureComponent {
                 return
             }
 
-            const synopsis = GetRenderedSize(this.synopsisText(data.synopsis), 865)
+            const synopsis = GetRenderedSize(this.synopsisText(data.synopsis), 867)
 
             // Emulate modal environment for calculating related anime list height
             let relatedAnimeContainer = document.createElement('div')
             relatedAnimeContainer.classList.add('modal')
 
-            const relatedAnimeList = GetRenderedSize(this.relatedAnimeList(data.related), 865, {
+            const relatedAnimeList = GetRenderedSize(this.relatedAnimeList(data.related), 867, {
                 container: relatedAnimeContainer,
             })
 

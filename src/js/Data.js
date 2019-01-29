@@ -199,6 +199,11 @@ export default class Data {
     static adjacentAnime(direction, id) {
         let index = this.lastResults.findIndex(anime => anime.id === id)
 
+        // Anime is not in table, so can't show next/prev in relation to it
+        if (index === -1) {
+            return false
+        }
+
         switch (direction) {
         case 'next':
             // Last anime, can't get next
