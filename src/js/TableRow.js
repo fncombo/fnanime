@@ -55,7 +55,7 @@ class TitleColumn extends PureComponent {
                         {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                     </span>
                     <span className="text-secondary ml-1">
-                        {Data.lookup.type[anime.type]}
+                        {anime.hasOwnProperty('typeActual') ? Data.lookup.type[anime.typeActual] : Data.lookup.type[anime.type]}
                     </span>
                 </div>
             </td>

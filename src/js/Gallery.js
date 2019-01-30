@@ -55,7 +55,7 @@ class GalleryItem extends PureComponent {
 
         const statusPillText =
             <Fragment>
-                {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]}
+                {anime.hasOwnProperty('typeActual') ? Data.lookup.type[anime.typeActual] : Data.lookup.type[anime.type]}
                 {anime.episodes > 1 && ` ${anime.episodes} ep`}
             </Fragment>
 
