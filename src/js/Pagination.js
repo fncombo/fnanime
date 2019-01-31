@@ -7,52 +7,29 @@ import React, { PureComponent } from 'react'
 // Style
 import '../css/Pagination.css'
 
+// Components
+import Data from './Data'
+
 // Page buttons to control the table
 export default class Pagination extends PureComponent {
-    constructor() {
-        super()
-
-        // How many buttons to show on each side of the current page button
-        this.buttonCount = 2
-    }
-
-    // Check if the current page more than the last page when the data changes
+    // Check if the current page is further than the last page when the data changes
     componentWillUpdate(nextProps) {
-        const { page, totalAnime, perPage, changePage } = nextProps
+        const { currentPage, totalAnime, changePage } = nextProps
 
         // Last page based on how many anime to display
-        const lastPage = Math.ceil(totalAnime / perPage)
+        const lastPage = Math.ceil(totalAnime / Data.defaults.perPage)
 
-        if (page > lastPage && lastPage !== 0) {
+        // If the data updated and we're over the last possible page, switch to the last page instead
+        if (currentPage > lastPage && lastPage !== 0) {
             changePage(lastPage)
         }
     }
 
-    // Single button
-    button(pageNumber) {
-        const { page, changePage } = this.props
-
-        // Current page button does nothing and has a unique look
-        if (pageNumber === page) {
-            return (
-                <button className="btn btn-primary" key={pageNumber}>
-                    {pageNumber}
-                </button>
-            )
-        }
-
-        return (
-            <button className="btn btn-secondary" onClick={() => changePage(pageNumber)} key={pageNumber}>
-                {pageNumber}
-            </button>
-        )
-    }
-
     render() {
-        const { page, totalAnime, perPage, changePage } = this.props
+        const { currentPage, totalAnime, changePage } = this.props
 
         // Last page based on how many anime to display
-        const lastPage = Math.ceil(totalAnime / perPage)
+        const lastPage = Math.ceil(totalAnime / Data.defaults.perPage)
 
         // No anime to display
         if (lastPage === 0) {
@@ -60,8 +37,8 @@ export default class Pagination extends PureComponent {
         }
 
         // The lowest and highest page button numbers on each side of the current page
-        const leftPage = page - this.buttonCount
-        const rightPage = page + this.buttonCount + 1
+        const leftPage = currentPage - Data.defaults.pageButtons
+        const rightPage = currentPage + Data.defaults.pageButtons + 1
 
         // All pages to display
         let pages = []
@@ -69,49 +46,72 @@ export default class Pagination extends PureComponent {
         let previousPage = false
 
         // Create the needed page numbers
-        // First page, last page, all pages between left most and right most pages
         for (let i = 1; i <= lastPage; i++) {
+            // First page, last page, all pages between left most and right most pages
             if (i === 1 || i === lastPage || (i >= leftPage && i < rightPage)) {
                 pages.push(i)
             }
         }
 
-        // Create the buttons and "..." between the first button,
-        // last button, and the middle button group
+        // Create the buttons and "..." between the first button, last button, and the middle button group
         pages.forEach(page => {
             if (previousPage) {
                 if (page - previousPage === 2) {
-                    buttons.push(this.button(previousPage + 1))
-                    // Show "..." after first page and before the last page
-                    // if there are more than 2 pages in between them and adjacent buttons
+                    buttons.push(<Button buttonPage={previousPage + 1} currentPage={currentPage} changePage={changePage} key={previousPage + 1} />)
+
+                // Show "..." after first page and before the last page
+                // if there are more than 2 pages in between them and adjacent buttons
                 } else if (page - previousPage !== 1) {
                     buttons.push(<span key={`${page}-dots`}>&hellip;</span>)
                 }
             }
 
-            buttons.push(this.button(page))
+            buttons.push(<Button buttonPage={page} currentPage={currentPage} changePage={changePage} key={page} />)
 
             previousPage = page
         })
 
+        // Previous and next button classes
         const prevButtonClasses = ClassNames('btn', 'btn-secondary', {
-            'btn-disabled': page === 1,
+            'btn-disabled': currentPage === 1,
         })
 
         const nextButtonClasses = ClassNames('btn', 'btn-secondary', {
-            'btn-disabled': page === lastPage,
+            'btn-disabled': currentPage === lastPage,
         })
 
         return (
             <div className="pagination">
-                <button className={prevButtonClasses} onClick={() => changePage(page - 1)} disabled={page === 1}>
+                <button className={prevButtonClasses} onClick={() => changePage(currentPage - 1)} disabled={currentPage === 1}>
                     Previous
                 </button>
                 {buttons}
-                <button className={nextButtonClasses} onClick={() => changePage(page + 1)} disabled={page === lastPage}>
+                <button className={nextButtonClasses} onClick={() => changePage(currentPage + 1)} disabled={currentPage === lastPage}>
                     Next
                 </button>
             </div>
+        )
+    }
+}
+
+// Single page button
+class Button extends PureComponent {
+    render() {
+        const { buttonPage, currentPage, changePage } = this.props
+
+        // Current page button does nothing and has a unique look
+        if (buttonPage === currentPage) {
+            return (
+                <button className="btn btn-primary">
+                    {buttonPage}
+                </button>
+            )
+        }
+
+        return (
+            <button className="btn btn-secondary" onClick={() => changePage(buttonPage)}>
+                {buttonPage}
+            </button>
         )
     }
 }

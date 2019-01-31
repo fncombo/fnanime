@@ -9,38 +9,38 @@ import Data from './Data'
 import Filters from './Filters'
 import Gallery from './Gallery'
 import InfoBox from './InfoBox'
+import Pagination from './Pagination'
 import Statistics from './Statistics'
 import Table from './Table'
 
 // Main page, filters, sorting, search and all components
 export default class Page extends Component {
+    updateOnLoad = false
+
+    state = {
+        anime: Data.results(),
+        searchQuery: '',
+        sorting: Object.assign([], Data.defaults.sorting),
+        filters: Object.assign({}, Data.defaults.filters),
+        page: 1,
+        selectedAnimeId: false,
+        messageClasses: '',
+        messageText: '',
+    }
+
     constructor() {
         super()
 
-        this.updateOnLoad = true
-
-        // Default state
-        this.state = {
-            anime: Data.results(),
-            searchQuery: '',
-            sort: Object.assign([], Data.defaults.sorting),
-            filters: Object.assign({}, Data.defaults.filters),
-            page: 1,
-            selectedAnimeId: false,
-            messageClasses: '',
-            messageText: '',
-        }
-
-        // Bind functions which need access to this.state
+        // Bind functions which need access to this
         this.update = this.update.bind(this)
         this.reset = this.reset.bind(this)
         this.changePage = this.changePage.bind(this)
         this.openInfoBox = this.openInfoBox.bind(this)
         this.closeInfoBox = this.closeInfoBox.bind(this)
-        this.getSorting = this.getSorting.bind(this)
-        this.getFilters = this.getFilters.bind(this)
-        this.showMessage = this.showMessage.bind(this)
+    }
 
+    // Update with latest API data after loading
+    componentDidMount() {
         // Keyboard shortcuts
         document.addEventListener('keydown', event => {
             // ESC key to close the info box
@@ -50,35 +50,29 @@ export default class Page extends Component {
 
             // Previous anime info box using left arrow when the info box is open
             if (event.code === 'ArrowLeft' && this.state.selectedAnimeId) {
-                const prevAnimeId = Data.adjacentAnime('prev', this.state.selectedAnimeId)
+                const prevAnime = Data.adjacentAnime('prev', this.state.selectedAnimeId)
 
-                if (!prevAnimeId) {
-                    return
+                if (prevAnime) {
+                    this.openInfoBox(Data.getAnime(prevAnime).id)
                 }
-
-                this.openInfoBox(Data.getAnime(prevAnimeId).id)
             }
 
             // Next anime info box using right arrow when the info box is open
             if (event.code === 'ArrowRight' && this.state.selectedAnimeId) {
-                const nextAnimeId = Data.adjacentAnime('next', this.state.selectedAnimeId)
+                const nextAnime = Data.adjacentAnime('next', this.state.selectedAnimeId)
 
-                if (!nextAnimeId) {
-                    return
+                if (nextAnime) {
+                    this.openInfoBox(Data.getAnime(nextAnime).id)
                 }
-
-                this.openInfoBox(Data.getAnime(nextAnimeId).id)
             }
         }, false)
-    }
 
-    // Update with latest API data after loading
-    componentDidMount() {
-        if (!this.updateOnLoad) {
+        // Don't load API data in development mode
+        if (process.env.NODE_ENV === 'development') {
             return
         }
 
-        this.showMessage('Loading latest information...')
+        this.showMessage(<Fragment>Loading latest information&hellip;</Fragment>)
 
         // Update certain cached data from live API
         this.apiData = []
@@ -89,7 +83,8 @@ export default class Page extends Component {
                 Data.updateAnime(anime.mal_id, {
                     status: anime.watching_status,
                     rating: anime.score,
-                    watchedEpisodes: anime.watched_episodes,
+                    episodes: anime.total_episodes,
+                    episodesWatched: anime.watched_episodes,
                 })
             })
 
@@ -104,24 +99,25 @@ export default class Page extends Component {
     getApiData(page, callback) {
         fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`).then(response =>
             response.json()
-        ).then(response => {
-            if (response.hasOwnProperty('error')) {
-                console.error(response.error)
-
+        ).then(apiData => {
+            if (apiData.hasOwnProperty('error')) {
+                console.error('API responded with an error:', apiData.error)
                 this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
-
                 return
             }
 
             // Add all anime from API
-            this.apiData.push.apply(this.apiData, response.anime)
+            this.apiData.push.apply(this.apiData, apiData.anime)
 
             // Since API only does 300 entries per responce, keep trying next page until we get everything
-            if (response.anime.length === 300) {
+            if (apiData.anime.length === 300) {
                 this.getApiData(page + 1, callback)
             } else {
                 callback()
             }
+        }, error => {
+            console.error('Error while fetching API:', error)
+            this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
         })
     }
 
@@ -160,7 +156,7 @@ export default class Page extends Component {
             newState[action] = args[0]
         }
 
-        newState.anime = Data.results(newState.searchQuery, newState.sort, newState.filters)
+        newState.anime = Data.results(newState.searchQuery, newState.sorting, newState.filters)
 
         this.setState(newState)
     }
@@ -170,22 +166,21 @@ export default class Page extends Component {
         this.setState({
             anime: Data.results(),
             searchQuery: '',
-            sort: Object.assign([], Data.defaults.sorting),
+            sorting: Object.assign([], Data.defaults.sorting),
             filters: Object.assign({}, Data.defaults.filters),
             page: 1,
             selectedAnimeId: false,
+            messageClasses: '',
+            messageText: '',
         })
     }
 
     // Go to a specific results page
-    changePage(pageNumber) {
-        this.setState({
-            page: pageNumber,
-        })
+    changePage(page) {
+        this.setState({ page })
     }
 
     // Open the info box for the selected anime or open the anime link in a new tab with middle click
-    // 0 = left click, 1 = middle click
     openInfoBox(animeId, event) {
 
         // Click was not left click or middle click
@@ -212,18 +207,8 @@ export default class Page extends Component {
         }, () => document.body.classList.remove('modal-open'))
     }
 
-    // Get the current sorting order
-    getSorting() {
-        return this.state.sort
-    }
-
-    // Get the current filters
-    getFilters() {
-        return this.state.filters
-    }
-
     render() {
-        const { anime, searchQuery, page, selectedAnimeId, messageClasses, messageText } = this.state
+        const { anime, searchQuery, sorting, filters, page, selectedAnimeId, messageClasses, messageText } = this.state
 
         return (
             <Fragment>
@@ -237,16 +222,20 @@ export default class Page extends Component {
                             searchQuery={searchQuery}
                             update={this.update}
                             reset={this.reset}
-                            getFilters={this.getFilters}
+                            filters={filters}
                         />
                         <Table
                             anime={anime}
                             searchQuery={searchQuery}
-                            page={page}
+                            currentPage={page}
                             update={this.update}
                             openInfoBox={this.openInfoBox}
+                            sorting={sorting}
+                        />
+                        <Pagination
+                            currentPage={page}
+                            totalAnime={anime.length}
                             changePage={this.changePage}
-                            getSorting={this.getSorting}
                         />
                     </div>
                     <Statistics anime={anime} />
@@ -255,7 +244,7 @@ export default class Page extends Component {
                     </div>
                 </div>
                 {/* Close when clicking outside of the modal-content window */}
-                <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : false}>
+                <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : undefined}>
                     <div className="modal-dialog modal-dialog-centered">
                         <InfoBox
                             selectedAnimeId={selectedAnimeId}

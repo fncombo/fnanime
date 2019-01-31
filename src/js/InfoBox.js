@@ -2,10 +2,10 @@
 import ClassNames from 'classnames'
 import FileSize from 'filesize'
 import GetRenderedSize from 'react-rendered-size'
-import PrettyTime from './PrettyTime'
+import PrettyTime from '../lib/PrettyTime'
 
 // React
-import React, { PureComponent, Fragment } from 'react'
+import React, { Component, PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/InfoBox.css'
@@ -15,18 +15,18 @@ import Data from './Data'
 import StatusPill from './StatusPill'
 
 // Information box about a specific selected anime
-export default class InfoBox extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            loaded: false,
-            props: {},
-            apiData: {},
-            synopsisHeight: 0,
-            relatedAnimeListHeight: 0,
-        }
+export default class InfoBox extends Component {
+    state = {
+        loaded: false,
+        props: {},
+        apiData: {},
+        synopsis: null,
+        synopsisHeight: 0,
+        relatedAnimeList: null,
+        relatedAnimeListHeight: 0,
     }
+
+    width = 867
 
     // Add/remove class from body when opening, closing, or updating
     componentWillUpdate(nextProps, nextState) {
@@ -40,21 +40,21 @@ export default class InfoBox extends PureComponent {
             // Wait for CSS animation to finish
             setTimeout(() => {
                 document.body.classList.remove('modal-switching')
+
                 this.setState({
                     loaded: false,
-                    transitioning: false,
                     props: nextProps,
                 }, this.getApiData)
             }, 150)
 
-            // Just opened and new ID set
+        // Just opened and new ID set
         } else if (!currentId && nextId && currentId !== nextId) {
             this.setState({
                 loaded: false,
                 props: nextProps,
             }, this.getApiData)
 
-            // Close and ID removed
+        // Close and ID removed
         } else if (currentId && !nextId && currentId !== nextId) {
             // Wait for CSS animation to finish
             setTimeout(() => {
@@ -68,43 +68,45 @@ export default class InfoBox extends PureComponent {
 
     // Get API data from Jikan about this anime, such as synopsis
     getApiData() {
-        const { closeInfoBox } = this.props
+        const { openInfoBox, closeInfoBox } = this.props
 
         fetch(`https://api.jikan.moe/v3/anime/${this.state.props.selectedAnimeId}`).then(response =>
             response.json()
-        ).then(data => {
-            if (data.hasOwnProperty('error')) {
-                console.error('API responded with an error:', data.error)
-
+        ).then(apiData => {
+            if (apiData.hasOwnProperty('error')) {
+                console.error('API responded with an error:', apiData.error)
                 this.loadingError()
                 closeInfoBox()
-
                 return
             }
 
-            const synopsis = GetRenderedSize(this.synopsisText(data.synopsis), 867)
+            // Calculate the height of the synopsis
+            const synopsis = <Synopsis text={apiData.synopsis} />
+            const synopsisHeight = GetRenderedSize(synopsis, this.width).height
 
             // Emulate modal environment for calculating related anime list height
-            let relatedAnimeContainer = document.createElement('div')
+            const relatedAnimeContainer = document.createElement('div')
             relatedAnimeContainer.classList.add('modal')
 
-            const relatedAnimeList = GetRenderedSize(this.relatedAnimeList(data.related), 867, {
+            // Calculate height of the related anime list
+            const relatedAnimeList = <RelatedList relatedData={apiData.related} openInfoBox={openInfoBox} />
+            let relatedAnimeListHeight = GetRenderedSize(relatedAnimeList, this.width, {
                 container: relatedAnimeContainer,
-            })
+            }).height
 
             // Add 8 pixels to the height if there is a <ul> to account for the bottom margin
-            const relatedAnimeListHeight = relatedAnimeList.height > 24 ? relatedAnimeList.height + 8 : relatedAnimeList.height
+            relatedAnimeListHeight = relatedAnimeListHeight > 24 ? relatedAnimeListHeight + 8 : relatedAnimeListHeight
 
             this.setState({
                 loaded: true,
-                apiData: data,
-                // Get the heights of the loaded synopsis and related anime data to animate smoothly
-                synopsisHeight: synopsis.height,
-                relatedAnimeListHeight: relatedAnimeListHeight,
+                apiData,
+                synopsis,
+                synopsisHeight,
+                relatedAnimeList,
+                relatedAnimeListHeight,
             })
         }, error => {
             console.error('Error while fetching API:', error)
-
             this.loadingError()
             closeInfoBox()
         })
@@ -115,63 +117,8 @@ export default class InfoBox extends PureComponent {
         alert('Error loading data from MyAnimeList.net, please try again later.')
     }
 
-    // Replace special characters in synopsis text
-    synopsisText(text) {
-        return <p>{text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p>
-    }
-
-    // Remove non-anime related entries
-    removeUnwantedRelatedAnime(data) {
-        const newData = {}
-
-        Object.entries(data).forEach(([type, anime]) => {
-            const newAnime = anime.filter(anime => anime.type === 'anime')
-
-            if (newAnime.length) {
-                newData[type] = anime
-            }
-        })
-
-        return newData
-    }
-
-    // Make a list of the related anime
-    relatedAnimeList(relatedData) {
-        const { loaded, apiData } = this.state
-        const { openInfoBox } = this.props
-
-        // Can't make a list if no data is available while loading, unless specifically passed
-        if (!loaded && !relatedData) {
-            return null
-        }
-
-        const cleanData = this.removeUnwantedRelatedAnime(relatedData ? relatedData : apiData.related)
-
-        if (!Object.entries(cleanData).length) {
-            return <p>No related anime</p>
-        }
-
-        const list = Object.entries(cleanData).map(([type, anime]) =>
-            <Fragment key={type}>
-                <h6>{type}</h6>
-                <ul className="related">
-                    {anime.map(anime =>
-                        <li className="container" key={anime.mal_id}>
-                            <a title="Open on MyAnimeList" href={anime.url} target="_blank" rel="noopener noreferrer">
-                                {anime.name.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
-                            </a>
-                            {Data.animeExists(anime.mal_id) && <StatusPill animeId={anime.mal_id} showRating={true} link={true} openInfoBox={openInfoBox} />}
-                        </li>
-                    )}
-                </ul>
-            </Fragment>
-        )
-
-        return <div>{list}</div>
-    }
-
     render() {
-        const { loaded, props, apiData, synopsisHeight, relatedAnimeListHeight } = this.state
+        const { loaded, props, apiData, synopsis, synopsisHeight, relatedAnimeList, relatedAnimeListHeight } = this.state
         const { selectedAnimeId, openInfoBox, closeInfoBox } = props
 
         // The anime we're talkin' about
@@ -184,61 +131,14 @@ export default class InfoBox extends PureComponent {
         const prevAnimeId = Data.adjacentAnime('prev', selectedAnimeId)
         const nextAnimeId = Data.adjacentAnime('next', selectedAnimeId)
 
-        // Get the anime duration in minutes
-        let duration = parseInt(apiData.duration, 10) || false
-
-        if (/per ep/i.test(apiData.duration)) {
-            duration = parseInt(apiData.duration, 10)
-        } else if (/hr/i.test(apiData.duration)) {
-            const match = apiData.duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
-            duration = (parseInt(match[1], 10) * 60) + (match[2] ? parseInt(match[2], 10) : 0)
-        }
-
-        // Format how to display the total duraction and per episode time
-        let durationText = 'Unknown'
-        if (duration) {
-            durationText = `${PrettyTime(duration * anime.episodes, 'm')} ${anime.episodes > 1 ? `(${PrettyTime(duration, 'm')} per episode)` : ''}`
-        }
-
-        // Format how to display the total time if it can be worked out
-        let watchTimeText = 'None'
-
-        // If we don't know the duration of the anime or per episode, then we can't calculate it
-        if (!duration) {
-            watchTimeText = 'Unknown'
-
-        // Otherwise calculate based on how many episodes have been watched
-        } else if (duration && anime.watchedEpisodes) {
-            watchTimeText = PrettyTime(duration * anime.watchedEpisodes * (anime.rewatchCount + 1))
-
-            // If rewatched anime or it's a movie, say how many total times watched
-            if (anime.rewatchCount || (anime.watchedEpisodes && anime.episodes === 1)) {
-                watchTimeText += ` (watched ${anime.rewatchCount + 1} time${anime.rewatchCount + 1 > 1 ? 's' : ''})`
-
-            // Otherwsie say how many episodes out of total have watched
-            } else if (anime.watchedEpisodes && anime.episodes > 1) {
-                watchTimeText += ` (${anime.watchedEpisodes}/${anime.episodes} episodes)`
-            }
-        }
-
         const loadingParagraphClasses = ClassNames('loading-paragraph', {
             'loaded': loaded,
         })
 
-        const arrowSize = 25
-
         return (
             <div className={`modal-content theme-${Data.lookup.statusColor[anime.status]}`}>
-                {!!prevAnimeId &&
-                    <svg height={arrowSize} width={arrowSize} className="modal-controls modal-controls-prev" title={Data.getAnime(prevAnimeId).title} onClick={() => openInfoBox(prevAnimeId)}>
-                        <polygon points={`1,${arrowSize/2} ${arrowSize-1},1 ${arrowSize-1},${arrowSize-1}`} />
-                    </svg>
-                }
-                {!!nextAnimeId &&
-                    <svg height={arrowSize} width={arrowSize} className="modal-controls modal-controls-next" title={Data.getAnime(nextAnimeId).title} onClick={() => openInfoBox(nextAnimeId)}>
-                        <polygon points={`1,${arrowSize/2} ${arrowSize-1},1 ${arrowSize-1},${arrowSize-1}`} />
-                    </svg>
-                }
+                {!!prevAnimeId && <NavigationButton direction="prev" animeId={prevAnimeId} openInfoBox={openInfoBox} />}
+                {!!nextAnimeId && <NavigationButton direction="next" animeId={nextAnimeId} openInfoBox={openInfoBox} />}
                 <div className="modal-header">
                     <h4 className="modal-title">
                         <StatusPill animeId={anime.id} />
@@ -256,30 +156,36 @@ export default class InfoBox extends PureComponent {
                             <img className="image rounded" width="268.5" src={anime.img} alt={anime.title} />
                             <div className="rating-stars text-center">
                                 <span className="active">
-                                    {new Array(anime.rating).fill(0).map(() => '★')}
+                                    {Array(anime.rating).fill('★')}
                                 </span>
                                 <span className="inactive">
-                                    {new Array(10 - anime.rating).fill(0).map(() => '★')}
+                                    {Array(10 - anime.rating).fill('★')}
                                 </span>
                                 <h5>{anime.rating ? Data.lookup.rating[anime.rating] : 'Not Rated'}</h5>
                                 {loaded ?
                                     <p>Average MAL rating: {apiData.score ? apiData.score : 'N/A'}</p> :
-                                    <span className="loading-text mt-3" />}
+                                    <span className="loading-text mt-3" />
+                                }
                             </div>
                             <hr />
                             <p className="text-center mb-0">
-                                {Data.lookup.type[anime.hasOwnProperty('typeActual') ? anime.typeActual : anime.type]} {String.fromCharCode(8211)} {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}
+                                {Data.getAnimeTypeText(anime.id)} &ndash; {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}
                             </p>
                             {loaded ?
                                 <p className="text-center mb-0">Aired {apiData.aired.string}</p> :
-                                <span className="loading-text  mb-0" />}
+                                <span className="loading-text mb-0" />
+                            }
                             <hr />
                             <ul>
                                 <li>
-                                    <a href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">View on MyAnimeList</a>
+                                    <a href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
+                                        View on MyAnimeList
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href={`https://nyaa.si/?f=0&c=1_2&q=${anime.title}`} target="_blank" rel="noopener noreferrer">Search on Nyaa</a>
+                                    <a href={`https://nyaa.si/?f=0&c=1_2&q=${anime.title}`} target="_blank" rel="noopener noreferrer">
+                                        Search on Nyaa
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -291,45 +197,164 @@ export default class InfoBox extends PureComponent {
                                         <li>
                                             <strong>Storage Size: </strong>
                                             {anime.downloaded ? FileSize(anime.size) : 'Not Downloaded'}
-                                            {anime.downloaded && anime.episodes > 1 && <Fragment> (average {FileSize(anime.size / anime.episodes)} per episode)</Fragment>}
+                                            {(anime.downloaded && anime.episodes > 1) && <Fragment> (average {FileSize(anime.size / anime.episodes)} per episode)</Fragment>}
                                         </li>
                                         <li>
                                             <strong>Duration: </strong>
-                                            {loaded ? durationText : <span className="loading-text loading-inline col-3" />}
+                                            {loaded ?
+                                                <Duration duration={apiData.duration} episodes={anime.episodes} /> :
+                                                <span className="loading-text loading-inline col-3" />
+                                            }
                                         </li>
                                         <li>
                                             <strong>Watch Time: </strong>
-                                            {loaded ? watchTimeText : <span className="loading-text loading-inline col-3" />}
+                                            {loaded ?
+                                                <WatchTime duration={apiData.duration} episodes={anime.episodes} episodesWatched={anime.episodesWatched} rewatchCount={anime.rewatchCount} /> :
+                                                <span className="loading-text loading-inline col-3" />
+                                            }
                                         </li>
-                                        {!!anime.subs &&
-                                            <li><strong>Subtitles:</strong> {anime.subs}</li>
-                                        }
-                                        {anime.downloaded &&
-                                            <li><strong>Quality:</strong> {anime.resolution ? `${anime.resolution}p` : ''} {anime.source}</li>
-                                        }
+                                        {!!anime.subs && <li><strong>Subtitles:</strong> {anime.subs}</li>}
+                                        {anime.downloaded && <li><strong>Quality:</strong> {anime.resolution ? `${anime.resolution}p` : ''} {anime.source}</li>}
                                     </ul>
                                 </div>
                             </div>
                             <hr />
                             <h5>Synopsis</h5>
                             <div className={loadingParagraphClasses} style={{ height: loaded ? `${synopsisHeight}px` : false }}>
-                                <span /><span /><span />
-                                <span /><span /><span />
-                                <span /><span /><span />
-                                {loaded && this.synopsisText(apiData.synopsis)}
+                                {Array(10).fill(0).map((value, i) => <span key={i} />)}
+                                {loaded && synopsis}
                             </div>
                             <hr />
                             <h5>Related Anime</h5>
                             <div className={loadingParagraphClasses} style={{ height: loaded ? `${relatedAnimeListHeight}px` : false }}>
-                                <span /><span /><span />
-                                <span /><span /><span />
-                                <span /><span /><span />
-                                {loaded && this.relatedAnimeList()}
+                                {Array(10).fill(0).map((value, i) => <span key={i} />)}
+                                {loaded && relatedAnimeList}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         )
+    }
+}
+
+// Previos and next navigation buttons
+class NavigationButton extends PureComponent {
+    arrowSize = 32
+
+    render() {
+        const { direction, animeId, openInfoBox } = this.props
+
+        return (
+            <svg
+                height={this.arrowSize}
+                width={this.arrowSize}
+                className={`modal-controls modal-controls-${direction}`}
+                title={Data.getAnime(animeId).title}
+                onClick={() => openInfoBox(animeId)}
+            >
+                <polygon points={`1,${this.arrowSize/2} ${this.arrowSize-1},1 ${this.arrowSize-1},${this.arrowSize-1}`} />
+            </svg>
+        )
+    }
+}
+
+// Display the total duration of the anime, and per episode duration
+class Duration extends PureComponent {
+    render() {
+        let { duration, episodes } = this.props
+
+        duration = Data.convertDuration(duration)
+
+        if (!duration || !episodes) {
+            return 'Unknown'
+        }
+
+        return `${PrettyTime(duration * episodes, 'm')} ${episodes > 1 ? `(${PrettyTime(duration, 'm')} per episode)` : ''}`
+    }
+}
+
+// Display the total watch time of this anime based on episodes watched
+class WatchTime extends PureComponent {
+    render() {
+        let { duration, episodes, episodesWatched, rewatchCount } = this.props
+
+        duration = Data.convertDuration(duration)
+
+        if (!episodesWatched) {
+            return 'None'
+        }
+
+        if (!duration) {
+            return 'Unknown'
+        }
+
+        let watchTime = PrettyTime(duration * episodesWatched * (rewatchCount + 1))
+
+        // If rewatched anime or it's a movie, say how many total times watched
+        if (rewatchCount || (episodesWatched && episodes === 1)) {
+            watchTime += ` (watched ${rewatchCount + 1} time${rewatchCount + 1 > 1 ? 's' : ''})`
+
+        // Otherwsie say how many episodes out of total have watched
+        } else if (episodesWatched) {
+            watchTime += ` (${episodesWatched}/${episodes || '?'} episodes)`
+        }
+
+        return watchTime
+    }
+}
+
+// Synopsis paragraph
+class Synopsis extends PureComponent {
+    render() {
+        return <p>{this.props.text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p>
+    }
+}
+
+// List of all the related anime
+class RelatedList extends PureComponent {
+    // Remove non-anime related entries
+    removeUnwantedRelatedData(data) {
+        const newData = {}
+
+        Object.entries(data).forEach(([type, anime]) => {
+            const newAnime = anime.filter(anime => anime.type === 'anime')
+
+            if (newAnime.length) {
+                newData[type] = anime
+            }
+        })
+
+        return newData
+    }
+
+    render() {
+        const { relatedData, openInfoBox } = this.props
+
+        const relatedAnime = Object.entries(this.removeUnwantedRelatedData(relatedData))
+
+        if (!relatedAnime.length) {
+            return <p>No related anime</p>
+        }
+
+        const list = relatedAnime.map(([type, anime]) =>
+            <Fragment key={type}>
+                <h6>{type}</h6>
+                <ul className="related">
+                    {anime.map(anime =>
+                        <li className="container" key={anime.mal_id}>
+                            <a title="Open on MyAnimeList" href={anime.url} target="_blank" rel="noopener noreferrer">
+                                {anime.name.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}
+                            </a>
+                            {Data.animeExists(anime.mal_id) &&
+                                <StatusPill animeId={anime.mal_id} showRating={true} isLink={true} openInfoBox={openInfoBox} />
+                            }
+                        </li>
+                    )}
+                </ul>
+            </Fragment>
+        )
+
+        return <div>{list}</div>
     }
 }

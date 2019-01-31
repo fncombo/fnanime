@@ -1,27 +1,21 @@
 .modal  {
-    /* autoprefixer: off */
     background: rgba(0, 0, 0, 0.75);
     outline: 10rem solid rgba(0, 0, 0, 0.75);
     display: block;
     opacity: 0;
     backface-visibility: hidden;
     pointer-events: none;
-    z-index: -100;
     transform: scale(0.95);
     transition-property: z-index, opacity, transform;
-    transition-duration: 0s, 0.15s, 0.15s;
-    /* Need to delay z-index to allow the element to face out first */
-    transition-delay: 0.15s, 0s, 0s;
+    transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
 }
 
 .modal-open .modal {
-    /* autoprefixer: off */
     opacity: 1;
     pointer-events: all;
-    z-index: 100;
+    z-index: 200;
     transform: scale(1);
-    transition-delay: 0s, 0s, 0s;
 }
 
 .modal-switching .modal-content {
@@ -41,27 +35,7 @@
     box-shadow: 0 0.25rem 3.5rem rgba(0, 0, 0, 0.25);
     border: 1px solid #000;
 }
-/*
-.modal-content.theme-watching {
-    border: 1px solid var(--watching-color);
-}
 
-.modal-content.theme-completed {
-    border: 1px solid var(--completed-color);
-}
-
-.modal-content.theme-onhold {
-    border: 1px solid var(--onhold-color);
-}
-
-.modal-content.theme-dropped {
-    border: 1px solid var(--dropped-color);
-}
-
-.modal-content.theme-plantowatch {
-    border: 1px solid var(--plantowatch-color);
-}
-*/
 .modal-content.theme-watching .modal-header a {
     color: var(--watching-color);
 }

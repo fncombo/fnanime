@@ -1,5 +1,5 @@
 .gallery {
-    --img-size: 130px;
+    --img-size: 140px;
 }
 
 .gallery img {
@@ -20,7 +20,6 @@
 }
 
 .gallery-item {
-    /* autoprefixer: off */
     border-radius: 0.25rem;
     overflow: hidden;
     position: relative;
@@ -29,17 +28,13 @@
     cursor: pointer;
     z-index: 1;
     transition-property: z-index, opacity, box-shadow, transform;
-    transition-duration: 0s, 0.15s, 0.15s, 0.15s;
-    /* Need to delay z-index to allow the element to fade out first */
-    transition-delay: 0.15s, 0s, 0s, 0s;
+    transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
 }
 
 .gallery-item:hover {
-    /* autoprefixer: off */
     opacity: 1;
     box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
     z-index: 100;
     transform: scale(1.5);
-    transition-delay: 0s, 0s, 0s, 0s;
 }

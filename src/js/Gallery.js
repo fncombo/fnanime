@@ -17,10 +17,10 @@ export default class Gallery extends PureComponent {
         const { anime, openInfoBox } = this.props
 
         // Count how many anime for each rating
-        let ratingCounts = new Array(11).fill(0)
+        let ratingCounts = Array(11).fill(0)
         anime.forEach(anime => ratingCounts[anime.rating]++)
 
-        // Only show ratings which have anime, and exclude all zero-rated anime
+        // Only show ratings which have anime, and exclude all non-rated anime
         return ratingCounts.slice(1).reverse().map((count, rating) => {
             rating = 10 - rating
 
@@ -35,7 +35,7 @@ export default class Gallery extends PureComponent {
                     </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
-                            <GalleryItem anime={anime} openInfoBox={openInfoBox} key={anime.id} />
+                            <GalleryItem anime={anime} openInfoBox={openInfoBox} key={anime.hash} />
                         )}
                     </div>
                 </div>
@@ -53,16 +53,13 @@ class GalleryItem extends PureComponent {
             'not-downloaded': !anime.downloaded,
         })
 
-        const statusPillText =
-            <Fragment>
-                {anime.hasOwnProperty('typeActual') ? Data.lookup.type[anime.typeActual] : Data.lookup.type[anime.type]}
-                {anime.episodes > 1 && ` ${anime.episodes} ep`}
-            </Fragment>
-
         return (
-            <div className={itemClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.id}>
+            <div className={itemClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}>
                 <img src={anime.img} alt={anime.title} />
-                <StatusPill animeId={anime.id} text={statusPillText} />
+                <StatusPill
+                    animeId={anime.id}
+                    overrideText={anime.episodes > 1 ? <Fragment>{Data.getAnimeTypeText(anime.id)} &ndash; {anime.episodes} ep</Fragment> : Data.getAnimeTypeText(anime.id)}
+                />
             </div>
         )
     }

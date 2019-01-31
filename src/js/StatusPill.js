@@ -13,33 +13,42 @@ import Data from './Data'
 // Filters, search, and reset
 export default class StatusPill extends PureComponent {
     render() {
-        const { animeId, showRating, link, text, openInfoBox } = this.props
+        const { animeId, showRating, isLink, overrideText, openInfoBox } = this.props
         const anime = Data.getAnime(animeId)
 
-        // Element attributes depending on options
-        let attributes = {}
+        if (!anime) {
+            return null
+        }
 
-        if (link) {
+        // All pill attributes depending on options
+        let attributes = {
+            className: ClassNames(
+                'status-pill',
+                `status-pill-${Data.lookup.statusColor[anime.status]}`,
+                {
+                    'status-pill-link': isLink,
+                },
+            ),
+        }
+
+        if (isLink) {
             attributes.title = 'View'
-            attributes.onClick = () => openInfoBox(anime.id)
+            attributes.onClick = () => openInfoBox(animeId)
         }
 
-        // CSS classes for the pill depending on options
-        let pillClasses = ClassNames('status-pill', `status-pill-${Data.lookup.statusColor[anime.status]}`, {
-            'status-pill-link': link,
-        })
+        // Text of the pill
+        let statusPillText = overrideText || Data.lookup.status[anime.status]
 
-        // Text of the pill - show episode progress if status is "watching"
-        let statusPillText = text || Data.lookup.status[anime.status]
-
+        // Show episode progress if status is "watching"
         if (anime.status === 1) {
-            statusPillText = <Fragment>{Data.lookup.status[anime.status]} &ndash; {anime.watchedEpisodes}/{anime.episodes}</Fragment>
+            statusPillText = <Fragment>{statusPillText} &ndash; {anime.episodesWatched}/{anime.episodes || '?'}</Fragment>
         }
 
-        return (
-            <span className={pillClasses} {...attributes}>
-                {statusPillText}{(showRating && !!anime.rating) && <Fragment> &ndash; Rated {anime.rating}</Fragment>}
-            </span>
-        )
+        // Show anime rating if needed
+        if (showRating && !!anime.rating) {
+            statusPillText = <Fragment>{statusPillText} &ndash; Rated {anime.rating}</Fragment>
+        }
+
+        return <span {...attributes}>{statusPillText}</span>
     }
 }
