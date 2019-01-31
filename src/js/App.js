@@ -15,8 +15,6 @@ import Table from './Table'
 
 // Main page, filters, sorting, search and all components
 export default class Page extends Component {
-    updateOnLoad = false
-
     state = {
         anime: Data.results(),
         searchQuery: '',
