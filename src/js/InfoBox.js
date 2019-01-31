@@ -307,7 +307,7 @@ class WatchTime extends PureComponent {
 // Synopsis paragraph
 class Synopsis extends PureComponent {
     render() {
-        return <p>{this.props.text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p>
+        return this.props.text ? <p>{this.props.text.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))}</p> : <p>No Synopsis</p>
     }
 }
 
