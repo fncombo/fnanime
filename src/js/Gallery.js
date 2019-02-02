@@ -1,6 +1,3 @@
-// Libraries
-import ClassNames from 'classnames'
-
 // React
 import React, { PureComponent, Fragment } from 'react'
 
@@ -9,7 +6,6 @@ import '../css/Gallery.css'
 
 // Components
 import Data from './Data'
-import StatusPill from './StatusPill'
 
 // Make a gallery for each rating which has matching anime
 export default class Gallery extends PureComponent {
@@ -31,7 +27,7 @@ export default class Gallery extends PureComponent {
             return (
                 <div key={rating}>
                     <h2 className="text-center rounded p-3">
-                        {Data.lookup.rating[rating]}
+                        {Data.filters.rating.descriptions[rating]}
                     </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
@@ -49,17 +45,19 @@ class GalleryItem extends PureComponent {
     render() {
         const { anime, openInfoBox } = this.props
 
-        const itemClasses = ClassNames('gallery-item', {
-            'not-downloaded': !anime.downloaded,
-        })
-
         return (
-            <div className={itemClasses} onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}>
+            <div
+                className={`gallery-item ${anime.size ? 'downloaded' : 'not-downloaded'}`}
+                onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}
+                title={anime.title}
+            >
                 <img src={anime.img} alt={anime.title} />
-                <StatusPill
-                    animeId={anime.id}
-                    overrideText={anime.episodes > 1 ? <Fragment>{Data.getAnimeTypeText(anime.id)} &ndash; {anime.episodes} ep</Fragment> : Data.getAnimeTypeText(anime.id)}
-                />
+                <span className={`badge p-2 rounded-0 rounded-bottom badge-${Data.filters.status.colorCodes[anime.status]}`}>
+                    {anime.episodes > 1 ?
+                        <Fragment>{Data.filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes} ep</Fragment> :
+                        Data.filters.type.descriptions[anime.actualType]
+                    }
+                </span>
             </div>
         )
     }

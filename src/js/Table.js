@@ -1,27 +1,27 @@
 // React
 import React, { PureComponent } from 'react'
 
-// Components
-import TableRow from './TableRow'
-
 // Style
 import '../css/Table.css'
+
+// Components
 import Data from './Data'
+import TableRow from './TableRow'
 
 // Table with all the anime data
 export default class Table extends PureComponent {
     render() {
-        const { anime, searchQuery, currentPage, update, openInfoBox, sorting } = this.props
+        const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting } = this.props
 
         return (
-            <table className="table mt-3" style={{ width: '100%' }}>
-                <thead title="Hold shift to sort multiple columns">
+            <table className="table table-anime mt-3">
+                <thead title="Hold shift to sort by multiple columns">
                     <tr>
-                        <TableHeaders update={update} sorting={sorting} />
+                        <TableHeaders update={update} activeSorting={activeSorting} />
                     </tr>
                 </thead>
                 <tbody>
-                    {anime.slice((currentPage - 1) * Data.defaults.perPage, currentPage * Data.defaults.perPage).map(anime =>
+                    {anime.slice((currentPage - 1) * Data.defaults.animePerPage, currentPage * Data.defaults.animePerPage).map(anime =>
                         <TableRow anime={anime} searchQuery={searchQuery} openInfoBox={openInfoBox} key={anime.hash} />
                     )}
                 </tbody>
@@ -31,94 +31,104 @@ export default class Table extends PureComponent {
 }
 
 class TableHeaders extends PureComponent {
+    smallColumn = '5%'
+    mediumColumn = '8%'
+    largeColumn = '12%'
+
     // Columns setup
     columns = {
         title: {
             text: 'Title',
-            defaultSort: 'asc',
+            defaultSorting: 'asc',
             size: 'auto',
         },
         status: {
             text: 'Status',
-            defaultSort: 'asc',
-            size: '13%',
-        },
-        subs: {
-            text: 'Subtitles',
-            defaultSort: 'asc',
-            size: '11%',
-        },
-        resolution: {
-            text: 'Resolution',
-            defaultSort: 'desc',
-            size: '9%',
-        },
-        source: {
-            text: 'Source',
-            defaultSort: 'asc',
-            size: '7%',
+            defaultSorting: 'asc',
+            size: this.largeColumn,
         },
         rating: {
             text: 'Rating',
-            defaultSort: 'desc',
-            size: '7%',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
         },
         rewatchCount: {
             text: 'Rewatched',
-            defaultSort: 'desc',
-            size: '9%',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+        },
+        subs: {
+            text: 'Subtitles',
+            defaultSorting: 'asc',
+            size: this.mediumColumn,
+        },
+        resolution: {
+            text: 'Resolution',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+        },
+        source: {
+            text: 'Source',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+        },
+        videoCodec: {
+            text: 'Video',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+        },
+        audioCodec: {
+            text: 'Audio',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+        },
+        episodeSize: {
+            text: 'Episode Size',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
         },
         size: {
-            text: 'Size',
-            defaultSort: 'desc',
-            size: '9%',
+            text: 'Total Size',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
         },
     }
 
     // Apply the correct sorting class names to each column header
     headerClass(column) {
-        const { sorting } = this.props
+        const { activeSorting } = this.props
 
-        // If no sorting active or no curently sorted columns match this column
-        if (!sorting.length || !sorting.some(sort => sort.field === column)) {
-            return null
-        }
-
-        // Figure out the order (desc or asc) and return the class name
-        return sorting.filter(sort => sort.field === column).map(sort => `sort-${sort.direction}`)
+        return activeSorting.hasOwnProperty(column) ? `sort-${activeSorting[column]}` : ''
     }
 
     // Sort when clicking on a column header
     sortColumn(column, defaultDirection, ammend) {
-        const { update, sorting } = this.props
+        const { update, activeSorting } = this.props
 
-        // Ammending (by holding shift) or sorting only the current sorted column modifies the existing sorting
-        let sort = (ammend || (
-            sorting.length === 1 && sorting[0].field === column
-        )) ? Object.assign([], sorting) : []
+        // Ammending current sorting or sorting only the currently sorted column modifies existing sorting settings, otherwise create new settings
+        let newSorting = (ammend || (Object.keys(activeSorting).length === 1 && activeSorting.hasOwnProperty(column))) ? Object.assign({}, activeSorting) : {}
 
         // Check if this column is already being sorted, in which case reverse it, otherwise use default sorting for that column
-        if (sort.some(sort => sort.field === column)) {
-            // Get the index of the sort setting
-            let index = sort.findIndex(sort => sort.field === column)
-
-            sort[index].direction = sort[index].direction === 'asc' ? 'desc' : 'asc'
+        if (newSorting.hasOwnProperty(column)) {
+            newSorting[column] = newSorting[column] === 'asc' ? 'desc' : 'asc'
 
         // Add new sorting
         } else {
-            sort.push({
-                field: column,
-                direction: defaultDirection,
-            })
+            newSorting[column] = defaultDirection
         }
 
-        update('sorting', sort)
+        update('activeSorting', newSorting)
     }
 
     render() {
-        return Object.entries(this.columns).map(([name, column]) =>
-            <th className={this.headerClass(name)} style={{ width: column.size }} onClick={event => this.sortColumn(name, column.defaultSort, event.shiftKey)} key={name}>
-                {column.text}
+        return Object.entries(this.columns).map(([column, settings]) =>
+            <th
+                className={this.headerClass(column)}
+                style={{ width: settings.size }}
+                onClick={event => this.sortColumn(column, settings.defaultSorting, event.shiftKey)}
+                key={column}
+            >
+                {settings.text}
             </th>
         )
     }

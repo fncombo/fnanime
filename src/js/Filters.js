@@ -10,20 +10,24 @@ import Data from './Data'
 // Filters, search, and reset
 export default class Filters extends PureComponent {
     render() {
-        const { anime, searchQuery, update, reset, filters } = this.props
+        const { anime, searchQuery, update, reset, activeFilters } = this.props
 
         return (
             <Fragment>
                 <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="rating" full={true} update={update} filters={filters} />
+                    <FilterGroup anime={anime} filterName="rating" activeFilters={activeFilters} update={update} fullWidth={true} />
                 </div>
                 <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="type" update={update} filters={filters} />
-                    <FilterGroup anime={anime} filterName="resolution" update={update} filters={filters} />
+                    <FilterGroup anime={anime} filterName="type" activeFilters={activeFilters} update={update} />
+                    <FilterGroup anime={anime} filterName="resolution" activeFilters={activeFilters} update={update} />
                 </div>
                 <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="status" update={update} filters={filters} />
-                    <FilterGroup anime={anime} filterName="source" update={update} filters={filters} />
+                    <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />
+                    <FilterGroup anime={anime} filterName="videoCodec" activeFilters={activeFilters} update={update} />
+                </div>
+                <div className="row mt-3">
+                    <FilterGroup anime={anime} filterName="source" activeFilters={activeFilters} update={update} />
+                    <FilterGroup anime={anime} filterName="audioCodec" activeFilters={activeFilters} update={update} />
                 </div>
                 <div className="row mt-3">
                     <div className="col-3">
@@ -33,18 +37,21 @@ export default class Filters extends PureComponent {
                             placeholder="Search Anime Title..."
                             value={searchQuery}
                             onChange={event => update('searchQuery', event.target.value)}
+                            autoFocus={true}
                         />
                     </div>
                     <div className="col-3">
-                        <select className="custom-select" value={filters.subs} onChange={event => update('filters', 'subs', event.target.value)}>
+                        <select className="custom-select" value={activeFilters.subs} onChange={event => update('activeFilters', 'subs', event.target.value)}>
                             <OptionGroup anime={anime} filterName="subs" />
                         </select>
                     </div>
                     <div className="col-5 d-flex align-items-center justify-content-center">
-                        <Summary anime={anime} />
+                        <span>
+                            <Summary anime={anime} />
+                        </span>
                     </div>
                     <div className="col-1 d-flex">
-                        <button className="btn btn-primary" onClick={reset}>Reset</button>
+                        <button className="btn btn-primary flex-grow-1" onClick={reset}>Reset</button>
                     </div>
                 </div>
             </Fragment>
@@ -52,57 +59,28 @@ export default class Filters extends PureComponent {
     }
 }
 
-// Stats of what the table curently shows
-class Summary extends PureComponent {
-    render() {
-        const { anime } = this.props
-
-        if (!anime.length) {
-            return 'No matching anime'
-        }
-
-        const downloadedCount = anime.filter(anime => anime.downloaded).length
-        const notDownloadedCount = anime.length - downloadedCount
-
-        if (downloadedCount && notDownloadedCount) {
-            return <span>Showing <strong>{downloadedCount}</strong> (+{notDownloadedCount} not downloaded) anime</span>
-
-        } else if (downloadedCount && !notDownloadedCount) {
-            return <span>Showing <strong>{downloadedCount}</strong> anime</span>
-
-        } else if (!downloadedCount && notDownloadedCount) {
-            return `Showing ${notDownloadedCount} not downloaded anime`
-        }
-    }
-}
-
 // A group of buttons for a single filter
 class FilterGroup extends PureComponent {
     render() {
-        const { anime, filterName, full, update, filters } = this.props
-
-        // Width of all buttons in this group should be equal
-        const width = 100 / Data.filterValues[filterName].length
+        const { anime, filterName, activeFilters, update, fullWidth } = this.props
 
         return (
-            <div className={full ? 'col-12' : 'col-6'}>
+            <div className={fullWidth ? 'col-12' : 'col-6'}>
                 <div className="btn-group d-flex">
-                    {Data.filterValues[filterName].map(value => {
-                        // Count how many of currently shown anime match this filter and aren't "false" value
-                        const count = anime.filter(anime => anime[filterName] === value && value).length
+                    {Data.filters[filterName].values.map(filterValue => {
+                        // Count how many of currently shown anime match this filter
+                        const count = filterValue === false ? 0 : anime.filter(anime => anime[filterName] === filterValue).length
 
                         // Whether this button is currently selected
-                        const currentlySelected = filters[filterName] === value
+                        const currentlySelected = activeFilters[filterName] === filterValue
 
                         return (
                             <button
                                 className={`btn ${currentlySelected ? 'btn-primary' : 'btn-secondary'}`}
-                                style={{ width: `${width}%` }}
-                                onClick={!currentlySelected ? () => update('filters', filterName, value) : undefined}
-                                key={value}
+                                onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
+                                key={filterValue}
                             >
-                                {Data.lookup[filterName][value]}
-                                {!!count && <span> ({count})</span>}
+                                {Data.filters[filterName].descriptions[filterValue]}{!!count && <span> ({count})</span>}
                             </button>
                         )
                     })}
@@ -115,28 +93,45 @@ class FilterGroup extends PureComponent {
 // A list of <option>s for use in <select>
 class OptionGroup extends PureComponent {
     render() {
-        const { anime, filterName } = this.props
+        const { filterName, anime } = this.props
 
         let options = []
 
-        Data.filterValues[filterName].forEach(value => {
-            // Count how many of currently shown anime match this option
-            const count = anime.filter(anime => {
-                return Array.isArray(anime[filterName]) && anime[filterName].indexOf(value) !== -1
-            }).length
-
-            // Don't include options with no matching anime to them
-            if (!count && value) {
-                return null
-            }
+        Data.filters[filterName].values.forEach(filterValue => {
+            // Count how many of currently shown anime match this filter
+            const count = anime.filter(anime => anime[filterName] === filterValue).length
 
             options.push(
-                <option value={value} key={value}>
-                    {value ? value + (count && ` (${count})`) : Data.lookup[filterName][value]}
+                <option value={filterValue} key={filterValue}>
+                    {filterValue ? filterValue + (count ? ` (${count})` : '') : Data.filters[filterName].descriptions[filterValue]}
                 </option>
             )
         })
 
         return options
+    }
+}
+
+// Stats of what the table curently shows
+class Summary extends PureComponent {
+    render() {
+        const { anime } = this.props
+
+        if (!anime.length) {
+            return 'No matching anime'
+        }
+
+        const downloadedCount = anime.filter(anime => !!anime.size).length
+        const notDownloadedCount = anime.length - downloadedCount
+
+        if (downloadedCount && notDownloadedCount) {
+            return <Fragment>Found <strong>{downloadedCount}</strong> +{notDownloadedCount} anime</Fragment>
+
+        } else if (downloadedCount && !notDownloadedCount) {
+            return <Fragment>Found <strong>{downloadedCount}</strong> anime</Fragment>
+
+        } else if (!downloadedCount && notDownloadedCount) {
+            return <Fragment>Found {notDownloadedCount}  anime</Fragment>
+        }
     }
 }

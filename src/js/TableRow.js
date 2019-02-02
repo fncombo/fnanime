@@ -1,5 +1,4 @@
 // Libraries
-import ClassNames from 'classnames'
 import FileSize from 'filesize'
 import FuzzySort from 'fuzzysort'
 
@@ -8,7 +7,7 @@ import React, { PureComponent, Fragment } from 'react'
 
 // Components
 import Data from './Data'
-import StatusPill from './StatusPill'
+import Badge from './Badge'
 
 // Single row for an anime
 export default class TableRow extends PureComponent {
@@ -43,16 +42,14 @@ class TitleColumn extends PureComponent {
         const { anime, searchQuery } = this.props
 
         return (
-            <td>
-                <div>
-                    <img width="37" height="50" src={anime.img} alt={anime.title} />
-                    <span className="link">
-                        {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
-                    </span>
-                    <span className="text-secondary ml-1">
-                        {Data.getAnimeTypeText(anime.id)}
-                    </span>
-                </div>
+            <td className="text-left text-nowrap pl-0 d-flex align-items-center">
+                <img width="37" height="50" src={anime.img} alt={anime.title} />
+                <span className="link text-truncate">
+                    {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
+                </span>
+                <span className="text-secondary ml-2">
+                    {Data.filters.type.descriptions[anime.actualType]}
+                </span>
             </td>
         )
     }
@@ -66,19 +63,7 @@ class DataColumns extends PureComponent {
         return (
             <Fragment>
                 <td>
-                    <StatusPill animeId={anime.id} />
-                </td>
-
-                <td className="text-left">
-                    {anime.subs ? (anime.subs.length === 1 ? anime.subs[0] : anime.subs.join(', ')) : <Fragment>&ndash;</Fragment>}
-                </td>
-
-                <td className={`text-${Data.lookup.resolutionColor[anime.resolution]}`}>
-                    {anime.resolution ? `${anime.resolution}p` : <Fragment>&ndash;</Fragment>}
-                </td>
-
-                <td className={`text-${Data.lookup.sourceColor[anime.source]}`}>
-                    {anime.source || <Fragment>&ndash;</Fragment>}
+                    <Badge animeId={anime.id} />
                 </td>
 
                 <td>
@@ -86,38 +71,79 @@ class DataColumns extends PureComponent {
                 </td>
 
                 <td>
-                    {anime.rewatchCount || <Fragment>&ndash;</Fragment>}
+                    {anime.rewatchCount ? `${anime.rewatchCount} ${anime.rewatchCount > 1 ? 'times' : 'time'}` : <Fragment>&ndash;</Fragment>}
                 </td>
 
-                <SizeColumn size={anime.size} downloaded={anime.downloaded} sizeMatches={anime.sizeMatches} />
+                <td>
+                    {anime.subs || <Fragment>&ndash;</Fragment>}
+                </td>
+
+                <td className={`text-${Data.filters.resolution.colorCodes[anime.resolution]}`}>
+                    {anime.resolution ? Data.filters.resolution.descriptions[anime.resolution] : <Fragment>&ndash;</Fragment>}
+                </td>
+
+                <td className={`text-${Data.filters.source.colorCodes[anime.source]}`}>
+                    {anime.source || <Fragment>&ndash;</Fragment>}
+                </td>
+
+                <td className={`text-${Data.filters.videoCodec.colorCodes[anime.videoCodec]}`}>
+                    {anime.videoCodec || <Fragment>&ndash;</Fragment>}
+                </td>
+
+                <td className={`text-${Data.filters.audioCodec.colorCodes[anime.audioCodec]}`}>
+                    {anime.audioCodec || <Fragment>&ndash;</Fragment>}
+                </td>
+
+                <SizeColumns size={anime.size} episodeSize={anime.episodeSize} />
             </Fragment>
         )
     }
 }
 
-// Cell with the storage size and relative progress bar
-class SizeColumn extends PureComponent {
+// Cell with the storage sizes and relative progress bars
+class SizeColumns extends PureComponent {
     render() {
-        const { size, downloaded, sizeMatches } = this.props
+        const { size, episodeSize } = this.props
 
-        // Determine storage bar size, colour, and classes
-        const sizeWidth = size ? (((size - Data.storageSizeLimits.min) / Data.storageSizeLimits.max) * 100) : 0
-        const sizeColor = size ? ((size > Data.storageSizeLimits.danger ? 'danger' : (size > Data.storageSizeLimits.warning ? 'warning' : 'primary'))) : 0
-
-        const className = ClassNames({
-            'size-column': downloaded,
-            'size-mismatch': !sizeMatches && downloaded,
-        })
+        // Same size if only 1 episode, merge into a single cell
+        if (size === episodeSize) {
+            return (
+                <td className="py-0" colSpan="2">
+                    <SizeBar size={size} storageSizeLimits={Data.storageSizeLimits.total} />
+                </td>
+            )
+        }
 
         return (
-            <td className={className} title={!sizeMatches && downloaded ? 'Size does not match with the one specified on MyAnimeList' : null}>
-                {downloaded ? FileSize(size) : <Fragment>&ndash;</Fragment>}
-                {downloaded &&
-                    <div className='progress bg-secondary'>
-                        <div className={`progress-bar bg-${sizeColor}`} style={{ width: `${sizeWidth}px` }} />
+            <Fragment>
+                <td className="py-0">
+                    <SizeBar size={episodeSize} storageSizeLimits={Data.storageSizeLimits.episode} />
+                </td>
+                <td className="py-0">
+                    <SizeBar size={size} storageSizeLimits={Data.storageSizeLimits.total} />
+                </td>
+            </Fragment>
+        )
+    }
+}
+
+// Storage text and progress bar based on given size
+class SizeBar extends PureComponent {
+    render() {
+        const { size, storageSizeLimits } = this.props
+
+        const width = ((size - storageSizeLimits.min) / storageSizeLimits.max) * 100
+        const color = size ? ((size > storageSizeLimits.large ? 'danger' : (size > storageSizeLimits.medium ? 'warning' : 'success'))) : 0
+
+        return (
+            <Fragment>
+                {size ? FileSize(size, {round: size < 1e9 ? 0 : 2}) : <Fragment>&ndash;</Fragment>}
+                {size &&
+                    <div className="progress bg-secondary">
+                        <div className={`progress-bar bg-${color}`} style={{ width: `${width}px` }} />
                     </div>
                 }
-            </td>
+            </Fragment>
         )
     }
 }

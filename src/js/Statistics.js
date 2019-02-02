@@ -4,7 +4,7 @@ import FileSize from 'filesize'
 import { round as Round } from 'math-precision'
 
 // React
-import React, { Component, PureComponent, Fragment } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/Statistics.css'
@@ -16,8 +16,27 @@ import Data from './Data'
 const add = (a, b) => a + b
 
 // Show all the ratings, number of anime per rating, and other totals
-export default class Statistics extends Component {
-    allRatings = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+export default class Statistics extends PureComponent {
+    totals(data, countOnly) {
+        const { anime } = this.props
+
+        // Create a 2D array to store each status within each rating
+        let totals = [...Array(11)].map(() => Array(7).fill(0))
+
+        // Increment the number of anime or add up the data
+        anime.forEach(anime => totals[anime.rating][anime.status] += countOnly ? 1 : anime[data])
+
+        const sum = anime.map(anime => anime[data]).reduce(add)
+        const count = totals.slice(1).map(n => n.reduce(add)).reduce(add)
+
+        return {
+            totals,
+            max: Math.max(...totals.slice(1).map(n => n.reduce(add))),
+            sum,
+            count,
+            average: sum / count,
+        }
+    }
 
     render() {
         const { anime } = this.props
@@ -27,103 +46,63 @@ export default class Statistics extends Component {
             return null
         }
 
-        // How many anime there are for each rating
-        let ratingsTotals = [...Array(11)].map(() => Array(7).fill(0))
-        anime.forEach(anime => ratingsTotals[anime.rating][anime.status]++)
-
-        // Rating with the most anime in it, ignoring unrated
-        const biggestRating = Math.max(...ratingsTotals.slice(1).map(n => n.reduce(add)))
-
-        // Total combined rating and total non-zero rated anime used to calculate the average
-        const totalRating = !!biggestRating && anime.map(anime => anime.rating).reduce(add)
-        const totalRated = !!biggestRating && ratingsTotals.slice(1).map(n => n.reduce(add)).reduce(add)
+        // How many anime there are for each of these data points
+        const ratingTotals = this.totals('rating', true)
+        const sizeTotals = this.totals('size')
+        const episodeTotals = this.totals('episodes')
 
         // First and last non-zero values to exclude them from being shown
-        // e.g. [0, 0, 1, 2, 0, 3, 4, 0] => [1, 2, 0, 3, 4]
-        const firstNonZero = ratingsTotals.slice(1).map(n => n.reduce(add)).findIndex(i => !!i) + 1
-        const lastNonZero = ratingsTotals.length - Object.values(Object.assign([], ratingsTotals)).reverse().map(n => n.reduce(add)).findIndex(i => !!i) - 1
+        // e.g. [0, 0, 1, 2, 0, 3, 4, 0] turns into [1, 2, 0, 3, 4]
+        const firstNonZero = ratingTotals.totals.slice(1).map(n => n.reduce(add)).findIndex(i => !!i) + 1
+        const lastNonZero = ratingTotals.totals.length - Object.values(Object.assign([], ratingTotals.totals)).reverse().map(n => n.reduce(add)).findIndex(i => !!i) - 1
 
-        // Don't show stats if all shown anime are "planned"
+        // // Don't show stats if all shown anime are "planned"
         if (firstNonZero + lastNonZero === 0) {
             return null
         }
 
-        // Total storage size per rating per episode
-        let sizeTotals = [...Array(11)].map(() => Array(7).fill(0))
-        anime.forEach(anime => sizeTotals[anime.rating][anime.status] += anime.size)
-
-        // Biggest size among the ratings, ignoring unrated
-        const biggestSize = Math.max(...sizeTotals.slice(1).map(n => n.reduce(add)))
-
-        // Total episode count per rating per status
-        let episodeTotals = [...Array(11)].map(() => Array(7).fill(0))
-        anime.forEach(anime => episodeTotals[anime.rating][anime.status] += anime.episodes)
-
-        // Most number of episodes among the ratings, ignoring unrated
-        const biggestEpisodes = Math.max(...episodeTotals.slice(1).map(n => n.reduce(add)))
-
-        // Totals row
-        let totals = {
-            size: 0,
-            episodes: 0,
-        }
-
-        // Add up all the needed values, filtered by a rating if there is any
-        anime.filter(anime => !!anime.rating).forEach(anime => {
-            totals.size += anime.size
-            totals.episodes += anime.episodes
-        })
-
         return (
             <div className="container-fluid container-limited statistics">
                 <hr />
-                <div className="row justify-content-center align-items-center border-row">
+                <div className="row mt-2 mb-3 justify-content-center align-items-center">
                     <div className="col-1 text-center">
-                        <h6>Rating</h6>
+                        <h6 className="m-0">Rating</h6>
                     </div>
                     <div className="col text-center">
-                        <h6>Number of Anime</h6>
+                        <h6 className="m-0">Number of Anime</h6>
                     </div>
                     <div className="col text-center">
-                        <h6>Total Storage Size</h6>
+                        <h6 className="m-0">Total Storage Size</h6>
                     </div>
                     <div className="col text-center">
-                        <h6>Total Number of Episodes</h6>
+                        <h6 className="m-0">Total Number of Episodes</h6>
                     </div>
                 </div>
-                {this.allRatings.map((rating, index) => {
-                    // Invert the index
-                    index = 10 - index
-
-                    // Exlude starting and ending empty ratings which not to show
-                    if (index < firstNonZero || index > lastNonZero) {
-                        return null
-                    }
-
+                {Array.from(Array(10), (value, key) => key + 1).slice(firstNonZero - 1, lastNonZero).reverse().map(rating => {
                     return (
-                        <div className="row justify-content-center align-items-center" key={rating}>
+                        <div className="row row-striped py-2 justify-content-center align-items-center" key={rating}>
                             <div className="col-1 text-center">
                                 {rating}
                             </div>
-                            <StatisticsColumn rating={rating} ratingData={ratingsTotals[rating]} biggestData={biggestRating} />
-                            <StatisticsColumn rating={rating} ratingData={sizeTotals[rating]} biggestData={biggestSize} formatFunction={FileSize} />
-                            <StatisticsColumn rating={rating} ratingData={episodeTotals[rating]} biggestData={biggestEpisodes} />
+                            <StatisticsColumn rating={rating} data={ratingTotals} />
+                            <StatisticsColumn rating={rating} data={sizeTotals} formatFunction={FileSize} />
+                            <StatisticsColumn rating={rating} data={episodeTotals} />
                         </div>
                     )
                 })}
                 {firstNonZero !== lastNonZero &&
-                    <div className="row justify-content-center align-items-center border-row">
+                    <div className="row mt-3 mb-2 justify-content-center align-items-center">
                         <div className="col-1 text-center">
-                            <h6>Totals</h6>
+                            <h6 className="m-0">Totals</h6>
                         </div>
                         <div className="col text-center">
-                            Average Rating: {biggestRating ? Round(totalRating / totalRated, 2) : 'N/A'}
+                            Average Rating: {ratingTotals.average > 0 ? Round(ratingTotals.average, 2) : 'N/A'}
                         </div>
                         <div className="col text-center">
-                            {totals.size ? FileSize(totals.size) : <Fragment>&ndash;</Fragment>}
+                            {sizeTotals.sum > 1 ? FileSize(sizeTotals.sum) : <Fragment>&ndash;</Fragment>}
                         </div>
                         <div className="col text-center">
-                            {totals.episodes ? totals.episodes : <Fragment>&ndash;</Fragment>}
+                            {episodeTotals.sum > 1 ? episodeTotals.sum : <Fragment>&ndash;</Fragment>}
                         </div>
                     </div>
                 }
@@ -135,9 +114,9 @@ export default class Statistics extends Component {
 
 class StatisticsColumn extends PureComponent {
     render() {
-        const { rating, ratingData, biggestData, formatFunction } = this.props
+        const { rating, data, formatFunction } = this.props
 
-        // Total sum of all data
+        const ratingData = data.totals[rating]
         const sum = ratingData.reduce(add)
 
         // Nothing to show
@@ -151,9 +130,9 @@ class StatisticsColumn extends PureComponent {
                 <div className="progress bg-secondary">
                     {ratingData.map((singleData, status) => !!singleData &&
                         <div
-                            title={`${Data.lookup.status[status]} (${formatFunction ? formatFunction(singleData) : singleData})`}
-                            className={`progress-bar bg-${Data.lookup.statusColor[status]}`}
-                            style={{ width: `${biggestData ? ((singleData / biggestData) * 100) : 0}%` }}
+                            title={`${Data.filters.status.descriptions[status]} (${formatFunction ? formatFunction(singleData) : singleData})`}
+                            className={`progress-bar bg-${Data.filters.status.colorCodes[status]}`}
+                            style={{ width: `${data.max ? ((singleData / data.max) * 100) : 0}%` }}
                             key={`${rating}-${status}`}
                         />
                     )}

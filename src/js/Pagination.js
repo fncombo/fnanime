@@ -1,6 +1,3 @@
-// Libraries
-import ClassNames from 'classnames'
-
 // React
 import React, { PureComponent } from 'react'
 
@@ -14,10 +11,10 @@ import Data from './Data'
 export default class Pagination extends PureComponent {
     // Check if the current page is further than the last page when the data changes
     componentWillUpdate(nextProps) {
-        const { currentPage, totalAnime, changePage } = nextProps
+        const { currentPage, animeCount, changePage } = nextProps
 
         // Last page based on how many anime to display
-        const lastPage = Math.ceil(totalAnime / Data.defaults.perPage)
+        const lastPage = Math.ceil(animeCount / Data.defaults.animePerPage)
 
         // If the data updated and we're over the last possible page, switch to the last page instead
         if (currentPage > lastPage && lastPage !== 0) {
@@ -26,13 +23,13 @@ export default class Pagination extends PureComponent {
     }
 
     render() {
-        const { currentPage, totalAnime, changePage } = this.props
+        const { currentPage, animeCount, changePage } = this.props
 
         // Last page based on how many anime to display
-        const lastPage = Math.ceil(totalAnime / Data.defaults.perPage)
+        const lastPage = Math.ceil(animeCount / Data.defaults.animePerPage)
 
-        // No anime to display
-        if (lastPage === 0) {
+        // No anime or only 1 page
+        if (lastPage <= 1) {
             return null
         }
 
@@ -57,38 +54,45 @@ export default class Pagination extends PureComponent {
         pages.forEach(page => {
             if (previousPage) {
                 if (page - previousPage === 2) {
-                    buttons.push(<Button buttonPage={previousPage + 1} currentPage={currentPage} changePage={changePage} key={previousPage + 1} />)
+                    buttons.push(<Button page={previousPage + 1} currentPage={currentPage} changePage={changePage} key={previousPage + 1} />)
 
                 // Show "..." after first page and before the last page
                 // if there are more than 2 pages in between them and adjacent buttons
                 } else if (page - previousPage !== 1) {
-                    buttons.push(<span key={`${page}-dots`}>&hellip;</span>)
+                    buttons.push(<button className="btn btn-blank mx-1" disabled={true} key={`${page}-dots`}>&hellip;</button>)
                 }
             }
 
-            buttons.push(<Button buttonPage={page} currentPage={currentPage} changePage={changePage} key={page} />)
+            buttons.push(<Button page={page} currentPage={currentPage} changePage={changePage} key={page} />)
 
             previousPage = page
         })
 
-        // Previous and next button classes
-        const prevButtonClasses = ClassNames('btn', 'btn-secondary', {
-            'btn-disabled': currentPage === 1,
-        })
+        // Add blank buttons at the start to ensure the current page button is always in the center
+        if (currentPage <= Data.defaults.pageButtons + 2) {
+            for (let i = 0; i <= Data.defaults.pageButtons + 2 - currentPage; i++) {
+                buttons.unshift(<button className="btn btn-blank mx-1" disabled={true} key={`start-${i}-fill`} />)
+            }
+        }
 
-        const nextButtonClasses = ClassNames('btn', 'btn-secondary', {
-            'btn-disabled': currentPage === lastPage,
-        })
+        // Add black buttons at the end to ensure the current page button is always in the center
+        if (currentPage > lastPage - Data.defaults.pageButtons - 2) {
+            for (let i = lastPage + 1; i <= lastPage + Data.defaults.pageButtons + 2 - (lastPage - currentPage); i++) {
+                buttons.push(<button className="btn btn-blank mx-1" disabled={true} key={`end-${i}-fill`} />)
+            }
+        }
 
         return (
-            <div className="pagination">
-                <button className={prevButtonClasses} onClick={() => changePage(currentPage - 1)} disabled={currentPage === 1}>
-                    Previous
-                </button>
-                {buttons}
-                <button className={nextButtonClasses} onClick={() => changePage(currentPage + 1)} disabled={currentPage === lastPage}>
-                    Next
-                </button>
+            <div className="d-flex justify-content-between my-3 pagination">
+                <div className="d-flex justify-content-end">
+                    <Button page={currentPage - 1} text="Previous" changePage={changePage} disabled={currentPage === 1} />
+                </div>
+                <div className="d-flex justify-content-center">
+                    {buttons}
+                </div>
+                <div className="d-flex justify-content-start">
+                    <Button page={currentPage + 1} text="Next" changePage={changePage} disabled={currentPage === lastPage} />
+                </div>
             </div>
         )
     }
@@ -97,20 +101,20 @@ export default class Pagination extends PureComponent {
 // Single page button
 class Button extends PureComponent {
     render() {
-        const { buttonPage, currentPage, changePage } = this.props
+        const { page, text, currentPage, changePage, disabled } = this.props
 
         // Current page button does nothing and has a unique look
-        if (buttonPage === currentPage) {
+        if (page === currentPage) {
             return (
-                <button className="btn btn-primary">
-                    {buttonPage}
+                <button className="btn btn-primary mx-1">
+                    {text || page}
                 </button>
             )
         }
 
         return (
-            <button className="btn btn-secondary" onClick={() => changePage(buttonPage)}>
-                {buttonPage}
+            <button className="btn btn-secondary mx-1" onClick={() => changePage(page)} disabled={disabled}>
+                {text || page}
             </button>
         )
     }

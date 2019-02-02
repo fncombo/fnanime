@@ -1,5 +1,3 @@
-/* General */
-
 html,
 body,
 noscript .container,
@@ -13,22 +11,21 @@ noscript .row {
 
 body {
     --primary-color: #2e51a2;
-    --primary-color-hover: #203871;
+    --primary-color-hover: #1b3060;
+
     --secondary-color: #e1e7f5;
-    --secondary-color-hover: #bdcae9;
-    --watching-color: #2db039;
-    --completed-color: #2e51a2;
-    --onhold-color: #f3bd08;
-    --dropped-color: #d74245;
-    --plantowatch-color: #c3c3c3;
-    --border-color: hsl(0, 0%, 85%);
-    --danger-overlay-color: rgba(215, 66, 69, 0.1);
+    --secondary-color-hover: #c8d3ed;
+
+    --border-color: hsl(0, 0%, 80%);
+
+    --row-color: hsl(0, 0%, 95%);
+    --row-color-hover: hsl(0, 0%, 90%);
+
     background: #fff;
 }
 
 .container-fluid {
     min-width: 1400px;
-    transition: filter 0.15s ease-in-out;
 }
 
 .container-limited {
@@ -36,74 +33,19 @@ body {
     min-width: 1400px;
 }
 
+hr {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Text */
+
 h1 {
     font-size: 1.25rem;
     margin: 0;
 }
 
-hr {
-    border-top: 1px solid var(--border-color);
-}
-
-#notice {
-    background: var(--dropped-color);
-    margin: 1rem 0;
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    border-radius: 0.25rem;
-}
-
-#notice a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-#notice a:hover {
-    text-decoration: none;
-}
-
-/* fn */
-
-.fnheader {
-    text-align: center;
-}
-
-.fnheader:before {
-    content: '';
-    background: linear-gradient(to right, #82b432, #50a0f0);
-    display: block;
-    width: 100%;
-    height: 2px;
-}
-
-.fnheader h1 {
-    margin: 16px 0;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #000;
-    font-family: inherit;
-}
-
-.fnheader h1 a {
-    margin-left: 8px;
-}
-
-.fnheader h1 a span:first-child {
-    color: #82b432;
-}
-
-.fnheader h1 a span:last-child {
-    color: #50a0f0;
-}
-
-.fnheader h1 a:hover {
-    text-decoration: none;
-}
-
-.fnheader h1 a:hover span {
-    text-decoration: underline;
+.text-muted {
+    color: hsl(0, 0%, 50%) !important;
 }
 
 /* Links */
@@ -116,129 +58,69 @@ a:hover {
     color: var(--primary-color-hover);
 }
 
-/* Text colours */
+/* Progress bars */
 
-.text-success {
-    color: var(--completed-color);
+.progress.bg-secondary {
+    background: var(--border-color) !important;
 }
 
-.text-warning {
-    color: var(--onhold-color);
+.progress-bar.bg-primary {
+    background: var(--primary-color) !important;
 }
 
-.text-danger {
-    color: var(--dropped-color);
-}
+/* Buttons */
 
-/* Background colours */
-
-.bg-primary {
-    background-color: var(--primary-color) !important;
-}
-
-.bg-secondary {
-    background-color: var(--secondary-color-hover) !important;
-}
-
-.bg-warning {
-    background-color: var(--onhold-color) !important;
-}
-
-.bg-danger {
-    background-color: var(--dropped-color) !important;
-}
-
-.bg-watching {
-    background-color: var(--watching-color) !important;
-}
-
-.bg-completed {
-    background-color: var(--completed-color) !important;
-}
-
-.bg-onhold {
-    background-color: var(--onhold-color) !important;
-}
-
-.bg-dropped {
-    background-color: var(--dropped-color) !important;
-}
-
-.bg-plantowatch {
-    background-color: var(--plantowatch-color) !important;
-}
-
-/* Forms and buttons */
-
-.btn-group .btn {
-    margin: 0 !important;
-    padding-left: 0;
-    padding-right: 0;
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
 }
 
 .btn-primary {
-    background-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-color-hover) !important;
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--primary-color-hover) !important;
     border-color: var(--primary-color-hover) !important;
-}
-
-.btn-primary:focus,
-.btn-primary:active {
-    box-shadow: none !important;
 }
 
 .btn-secondary {
     color: var(--primary-color);
-    background-color: var(--secondary-color) !important;
+    background: var(--secondary-color) !important;
     border-color: var(--secondary-color) !important;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
     color: var(--primary-color-hover) !important;
-    background-color: var(--secondary-color-hover) !important;
+    background: var(--secondary-color-hover) !important;
     border-color: var(--secondary-color-hover) !important;
 }
 
-.btn-secondary:focus,
-.btn-secondary:active {
-    box-shadow: none !important;
+.btn[disabled] {
+    pointer-events: none;
 }
 
-.btn-disabled {
-    background: hsl(0, 0%, 95%) !important;
-    border-color: hsl(0, 0%, 95%) !important;
-    color: hsl(0, 0%, 50%) !important;
-    opacity: 1 !important;
-    pointer-events: none;
+.btn[disabled]:not(.btn-blank) {
+    color: #fff !important;
+    background: var(--border-color) !important;
+    border-color: var(--border-color) !important;
 }
 
 /* Message box */
 
 #message {
-    background: var(--primary-color);
-    padding: 0.75rem 1.5rem;
     border-radius: 0.25rem 0 0 0 ;
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 300;
-    color: #fff;
     transform: translateY(100%);
     transition: transform 0.15s ease-in-out, background 0.15s ease-in-out;
 }
 
 #message.show {
     transform: translateY(0);
-}
-
-#message.success {
-    background: var(--watching-color);
-}
-
-#message.failure {
-    background: var(--dropped-color);
 }

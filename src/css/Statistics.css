@@ -1,24 +1,5 @@
-.statistics .row {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    margin: 0;
-    cursor: default;
-}
-
-.statistics .border-row {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    cursor: default;
-}
-
-.statistics h6 {
-    margin: 0;
-}
-
-.statistics .row:not(.border-row):nth-of-type(even) {
-    background-color: hsl(0, 0%, 95%);
+.row-striped:nth-of-type(even) {
+    background-color: var(--row-color);
 }
 
 .statistics .progress {

@@ -1,0 +1,40 @@
+.fnheader {
+    text-align: center;
+}
+
+.fnheader:before {
+    content: '';
+    background: linear-gradient(to right, #82b432, #50a0f0);
+    display: block;
+    width: 100%;
+    height: 2px;
+}
+
+.fnheader h1 {
+    margin: 16px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    font-family: inherit;
+}
+
+.fnheader h1 a {
+    margin-left: 8px;
+}
+
+.fnheader h1 a span:first-child {
+    color: #82b432;
+}
+
+.fnheader h1 a span:last-child {
+    color: #50a0f0;
+}
+
+.fnheader h1 a:hover {
+    text-decoration: none;
+}
+
+.fnheader h1 a:hover span {
+    text-decoration: underline;
+}

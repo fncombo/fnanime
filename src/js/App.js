@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react'
 
 // Style
 import '../css/App.css'
+import '../css/fn.css'
 
 // Components
 import Data from './Data'
@@ -18,8 +19,8 @@ export default class Page extends Component {
     state = {
         anime: Data.results(),
         searchQuery: '',
-        sorting: Object.assign([], Data.defaults.sorting),
-        filters: Object.assign({}, Data.defaults.filters),
+        activeSorting: Object.assign([], Data.defaults.sorting),
+        activeFilters: Object.assign({}, Data.defaults.filters),
         page: 1,
         selectedAnimeId: false,
         messageClasses: '',
@@ -100,7 +101,7 @@ export default class Page extends Component {
         ).then(apiData => {
             if (apiData.hasOwnProperty('error')) {
                 console.error('API responded with an error:', apiData.error)
-                this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
+                this.showMessage('Error loading data from MyAnimeList.net', 1500, 'danger')
                 return
             }
 
@@ -115,14 +116,14 @@ export default class Page extends Component {
             }
         }, error => {
             console.error('Error while fetching API:', error)
-            this.showMessage('Error loading data from MyAnimeList.net', 1500, 'failure')
+            this.showMessage('Error loading data from MyAnimeList.net', 1500, 'danger')
         })
     }
 
     // Show a small message in the corner of the page
-    showMessage(text, duration = false, status = '') {
+    showMessage(text, duration = false, status = 'info') {
         this.setState({
-            messageClasses: `show ${status}`,
+            messageClasses: `show p-3 text-white bg-${status}`,
             messageText: text,
         })
 
@@ -130,7 +131,7 @@ export default class Page extends Component {
         if (duration) {
             setTimeout(() => {
                 this.setState({
-                    messageClasses: status,
+                    messageClasses: `p-3 text-white bg-${status}`,
                 })
             }, duration)
         }
@@ -142,7 +143,7 @@ export default class Page extends Component {
 
         // Updating a filter value
         if (args.length === 2) {
-            // If the value is string false, we probably mean "false" keyword!
+            // Correct strings coming from <option>
             if (args[1] === 'false') {
                 args[1] = false
             }
@@ -154,7 +155,7 @@ export default class Page extends Component {
             newState[action] = args[0]
         }
 
-        newState.anime = Data.results(newState.searchQuery, newState.sorting, newState.filters)
+        newState.anime = Data.results(newState.searchQuery, newState.activeSorting, newState.activeFilters)
 
         this.setState(newState)
     }
@@ -164,8 +165,8 @@ export default class Page extends Component {
         this.setState({
             anime: Data.results(),
             searchQuery: '',
-            sorting: Object.assign([], Data.defaults.sorting),
-            filters: Object.assign({}, Data.defaults.filters),
+            activeSorting: Object.assign([], Data.defaults.sorting),
+            activeFilters: Object.assign({}, Data.defaults.filters),
             page: 1,
             selectedAnimeId: false,
             messageClasses: '',
@@ -180,7 +181,6 @@ export default class Page extends Component {
 
     // Open the info box for the selected anime or open the anime link in a new tab with middle click
     openInfoBox(animeId, event) {
-
         // Click was not left click or middle click
         if (event && event.button > 1) {
             return
@@ -206,7 +206,7 @@ export default class Page extends Component {
     }
 
     render() {
-        const { anime, searchQuery, sorting, filters, page, selectedAnimeId, messageClasses, messageText } = this.state
+        const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText } = this.state
 
         return (
             <Fragment>
@@ -218,21 +218,21 @@ export default class Page extends Component {
                         <Filters
                             anime={anime}
                             searchQuery={searchQuery}
+                            activeFilters={activeFilters}
                             update={this.update}
                             reset={this.reset}
-                            filters={filters}
                         />
                         <Table
                             anime={anime}
                             searchQuery={searchQuery}
+                            activeSorting={activeSorting}
                             currentPage={page}
                             update={this.update}
                             openInfoBox={this.openInfoBox}
-                            sorting={sorting}
                         />
                         <Pagination
                             currentPage={page}
-                            totalAnime={anime.length}
+                            animeCount={anime.length}
                             changePage={this.changePage}
                         />
                     </div>
