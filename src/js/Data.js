@@ -2,7 +2,6 @@
 import FuzzySort from 'fuzzysort'
 import ObjectHash from 'object-hash'
 import FastSort from 'fast-sort'
-// import Sifter from 'sifter'
 
 // Anime
 import anime from './anime.json'

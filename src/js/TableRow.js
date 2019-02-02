@@ -94,7 +94,7 @@ class DataColumns extends PureComponent {
                     {anime.audioCodec || <Fragment>&ndash;</Fragment>}
                 </td>
 
-                <SizeColumns size={anime.size} episodeSize={anime.episodeSize} />
+                <SizeColumns totalSize={anime.size} episodeSize={anime.episodeSize} />
             </Fragment>
         )
     }
@@ -103,13 +103,13 @@ class DataColumns extends PureComponent {
 // Cell with the storage sizes and relative progress bars
 class SizeColumns extends PureComponent {
     render() {
-        const { size, episodeSize } = this.props
+        const { totalSize, episodeSize } = this.props
 
         // Same size if only 1 episode, merge into a single cell
-        if (size === episodeSize) {
+        if (totalSize === episodeSize) {
             return (
                 <td className="py-0" colSpan="2">
-                    <SizeBar size={size} storageSizeLimits={Data.storageSizeLimits.total} />
+                    <SizeBar size={totalSize} storageSizeLimits={Data.storageSizeLimits.total} />
                 </td>
             )
         }
@@ -120,7 +120,7 @@ class SizeColumns extends PureComponent {
                     <SizeBar size={episodeSize} storageSizeLimits={Data.storageSizeLimits.episode} />
                 </td>
                 <td className="py-0">
-                    <SizeBar size={size} storageSizeLimits={Data.storageSizeLimits.total} />
+                    <SizeBar size={totalSize} storageSizeLimits={Data.storageSizeLimits.total} />
                 </td>
             </Fragment>
         )
@@ -130,15 +130,15 @@ class SizeColumns extends PureComponent {
 // Storage text and progress bar based on given size
 class SizeBar extends PureComponent {
     render() {
-        const { size, storageSizeLimits } = this.props
+        const { totalSize, storageSizeLimits } = this.props
 
-        const width = ((size - storageSizeLimits.min) / storageSizeLimits.max) * 100
-        const color = size ? ((size > storageSizeLimits.large ? 'danger' : (size > storageSizeLimits.medium ? 'warning' : 'success'))) : 0
+        const width = ((totalSize - storageSizeLimits.min) / storageSizeLimits.max) * 100
+        const color = totalSize ? ((totalSize > storageSizeLimits.large ? 'danger' : (totalSize > storageSizeLimits.medium ? 'warning' : 'success'))) : 0
 
         return (
             <Fragment>
-                {size ? FileSize(size, {round: size < 1e9 ? 0 : 2}) : <Fragment>&ndash;</Fragment>}
-                {size &&
+                {totalSize ? FileSize(totalSize, {round: totalSize < 1e9 ? 0 : 2}) : <Fragment>&ndash;</Fragment>}
+                {totalSize &&
                     <div className="progress bg-secondary">
                         <div className={`progress-bar bg-${color}`} style={{ width: `${width}px` }} />
                     </div>
