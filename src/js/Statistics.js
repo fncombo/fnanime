@@ -1,5 +1,4 @@
 // Libraries
-// import PrettyTime from './PrettyTime'
 import FileSize from 'filesize'
 import { round as Round } from 'math-precision'
 
