@@ -23,7 +23,7 @@ export default class Badge extends PureComponent {
 
         // Show episode progress if status is "watching"
         if (anime.status === 1) {
-            text = <Fragment>{text} &ndash; {anime.episodesWatched}/{anime.episodes ? anime.episodes : '?'}</Fragment>
+            text = <Fragment>{text} &ndash; {anime.episodesWatched}/{anime.episodes || '?'}</Fragment>
         }
 
         // Show anime rating

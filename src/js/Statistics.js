@@ -96,13 +96,13 @@ export default class Statistics extends PureComponent {
                             <h6 className="m-0">Totals</h6>
                         </div>
                         <div className="col text-center">
-                            Average Rating: {ratingTotals.average > 0 ? Round(ratingTotals.average, 2) : 'N/A'}
+                            Average Rating: {ratingTotals.average ? Round(ratingTotals.average, 2) : 'N/A'}
                         </div>
                         <div className="col text-center">
-                            {sizeTotals.sum > 1 ? FileSize(sizeTotals.sum) : <Fragment>&ndash;</Fragment>}
+                            {sizeTotals.sum ? FileSize(sizeTotals.sum) : <Fragment>&ndash;</Fragment>}
                         </div>
                         <div className="col text-center">
-                            {episodeTotals.sum > 1 ? episodeTotals.sum : <Fragment>&ndash;</Fragment>}
+                            {episodeTotals.sum ? episodeTotals.sum : <Fragment>&ndash;</Fragment>}
                         </div>
                     </div>
                 }
