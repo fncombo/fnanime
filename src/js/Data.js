@@ -347,7 +347,7 @@ class Data {
         }
 
         // Go through each filter, narrowing down results each time, but don't filter when there is no value
-        Object.entries(filters).filter(([filterName, filterValue]) => filterValue !== false).forEach(([filterName, filterValue]) => {
+        Object.entries(filters).filter(([, filterValue]) => filterValue !== false).forEach(([filterName, filterValue]) => {
             results = results.filter(anime => anime[filterName] === filterValue)
         }, this)
 

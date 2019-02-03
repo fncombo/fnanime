@@ -78,7 +78,7 @@ export default class Statistics extends PureComponent {
                         <h6 className="m-0">Total Number of Episodes</h6>
                     </div>
                 </div>
-                {Array.from(Array(10), (value, key) => key + 1).slice(firstNonZero - 1, lastNonZero).reverse().map(rating => {
+                {Array.from(Array(10), (value, i) => i + 1).slice(firstNonZero - 1, lastNonZero).reverse().map(rating => {
                     return (
                         <div className="row row-striped py-2 justify-content-center align-items-center" key={rating}>
                             <div className="col-1 text-center">
