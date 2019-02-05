@@ -1,5 +1,5 @@
 // React
-import React, { PureComponent } from 'react'
+import React, { Component, PureComponent } from 'react'
 
 // Style
 import '../css/Table.css'
@@ -9,7 +9,7 @@ import Data from './Data'
 import TableRow from './TableRow'
 
 // Table with all the anime data
-export default class Table extends PureComponent {
+export default class Table extends Component {
     render() {
         const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting } = this.props
 

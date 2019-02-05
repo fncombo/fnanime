@@ -1,5 +1,5 @@
 // React
-import React, { PureComponent, Fragment } from 'react'
+import React, { Component, PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/Filters.css'
@@ -8,7 +8,7 @@ import '../css/Filters.css'
 import Data from './Data'
 
 // Filters, search, and reset
-export default class Filters extends PureComponent {
+export default class Filters extends Component {
     render() {
         const { anime, searchQuery, update, reset, activeFilters } = this.props
 
@@ -60,7 +60,7 @@ export default class Filters extends PureComponent {
 }
 
 // A group of buttons for a single filter
-class FilterGroup extends PureComponent {
+class FilterGroup extends Component {
     render() {
         const { anime, filterName, activeFilters, update, fullWidth } = this.props
 
@@ -91,7 +91,7 @@ class FilterGroup extends PureComponent {
 }
 
 // A list of <option>s for use in <select>
-class OptionGroup extends PureComponent {
+class OptionGroup extends Component {
     render() {
         const { filterName, anime } = this.props
 
