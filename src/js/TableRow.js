@@ -130,15 +130,15 @@ class SizeColumns extends PureComponent {
 // Storage text and progress bar based on given size
 class SizeBar extends PureComponent {
     render() {
-        const { totalSize, storageSizeLimits } = this.props
+        const { size, storageSizeLimits } = this.props
 
-        const width = ((totalSize - storageSizeLimits.min) / storageSizeLimits.max) * 100
-        const color = totalSize ? ((totalSize > storageSizeLimits.large ? 'danger' : (totalSize > storageSizeLimits.medium ? 'warning' : 'success'))) : 0
+        const width = ((size - storageSizeLimits.min) / storageSizeLimits.max) * 100
+        const color = size ? ((size > storageSizeLimits.large ? 'danger' : (size > storageSizeLimits.medium ? 'warning' : 'success'))) : 0
 
         return (
             <Fragment>
-                {totalSize ? FileSize(totalSize, {round: totalSize < 1e9 ? 0 : 2}) : <Fragment>&ndash;</Fragment>}
-                {totalSize &&
+                {size ? FileSize(size, {round: size < 1e9 ? 0 : 2}) : <Fragment>&ndash;</Fragment>}
+                {!!size &&
                     <div className="progress bg-secondary">
                         <div className={`progress-bar bg-${color}`} style={{ width: `${width}px` }} />
                     </div>
