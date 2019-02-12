@@ -82,7 +82,7 @@ export default class Page extends Component {
                 Data.updateAnime(anime.mal_id, {
                     status: anime.watching_status,
                     rating: anime.score,
-                    episodes: anime.total_episodes,
+                    episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
                     episodesWatched: anime.watched_episodes,
                 })
             })

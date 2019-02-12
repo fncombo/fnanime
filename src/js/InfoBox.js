@@ -134,7 +134,7 @@ export default class InfoBox extends Component {
                             }
                             <hr />
                             <p className="mb-0">
-                                {Data.filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes} {anime.episodes > 1 ? 'episodes' : 'episode'}
+                                {Data.filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes || '?'} {anime.episodes === null || anime.episodes > 1 ? 'episodes' : 'episode'}
                             </p>
                             {loaded ?
                                 <p className="mb-0">Aired {apiData.aired.string}</p> :
