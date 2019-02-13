@@ -103,7 +103,7 @@ class OptionGroup extends Component {
 
             options.push(
                 <option value={filterValue} key={filterValue}>
-                    {filterValue ? `${filterValue}${count > 0 ? `(${count})` : ''}` : Data.filters[filterName].descriptions[filterValue]}
+                    {filterValue ? `${filterValue}${count > 0 ? ` (${count})` : ''}` : Data.filters[filterName].descriptions[filterValue]}
                 </option>
             )
         })
