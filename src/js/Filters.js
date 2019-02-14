@@ -118,7 +118,7 @@ class Summary extends PureComponent {
         const { anime } = this.props
 
         if (!anime.length) {
-            return 'No matching anime'
+            return null
         }
 
         const downloadedCount = anime.filter(anime => !!anime.size).length

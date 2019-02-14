@@ -13,6 +13,10 @@ export default class Table extends Component {
     render() {
         const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting } = this.props
 
+        if (!anime.length) {
+            return <p className="alert alert-danger mt-3">No matching anime found!</p>
+        }
+
         return (
             <table className="table table-anime mt-3">
                 <thead title="Hold shift to sort by multiple columns">
