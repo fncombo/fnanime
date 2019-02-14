@@ -116,14 +116,14 @@ export default class InfoBox extends Component {
                             <img className="rounded" width="268" src={anime.img} alt={anime.title} />
                             {anime.rating ?
                                 <Fragment>
-                                    <h2>
+                                    <h3>
                                         <span className="text-warning">
                                             {Array(anime.rating).fill('★')}
                                         </span>
                                         <span className="text-muted">
                                             {Array(10 - anime.rating).fill('★')}
                                         </span>
-                                    </h2>
+                                    </h3>
                                     <h5>{Data.filters.rating.descriptions[anime.rating]}</h5>
                                 </Fragment> :
                                 <h5 className="mt-3">Not Rated</h5>
@@ -160,6 +160,30 @@ export default class InfoBox extends Component {
                             </ul>
                         </div>
                         <div className="col-9">
+                            <ul>
+                                <li>
+                                    <strong>English Title: </strong>
+                                    {loaded ?
+                                        (apiData.title_english || <Fragment>&ndash;</Fragment>) :
+                                        <span className="loading-text loading-inline col-3" />
+                                    }
+                                </li>
+                                <li>
+                                    <strong>Japanese Title: </strong>
+                                    {loaded ?
+                                        (apiData.title_japanese || <Fragment>&ndash;</Fragment>) :
+                                        <span className="loading-text loading-inline col-3" />
+                                    }
+                                </li>
+                                <li>
+                                    <strong>Synonyms: </strong>
+                                    {loaded ?
+                                        (apiData.title_synonyms.length ? apiData.title_synonyms.join(', ') : <Fragment>&ndash;</Fragment>) :
+                                        <span className="loading-text loading-inline col-3" />
+                                    }
+                                </li>
+                            </ul>
+                            <hr />
                             <h5>Statistics</h5>
                             <div className="row">
                                 <div className="col-12">
