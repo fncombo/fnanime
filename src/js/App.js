@@ -25,6 +25,7 @@ export default class Page extends Component {
         selectedAnimeId: false,
         messageClasses: '',
         messageText: '',
+        apiUpdated: false,
     }
 
     constructor() {
@@ -89,6 +90,10 @@ export default class Page extends Component {
 
             // Update state with new anime data
             this.update()
+
+            this.setState({
+                apiUpdated: true,
+            })
 
             this.showMessage('Updated!', 1500, 'success')
         })
@@ -206,7 +211,7 @@ export default class Page extends Component {
     }
 
     render() {
-        const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText } = this.state
+        const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText, apiUpdated } = this.state
 
         const updated = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(Data.localUpdated)
 
@@ -244,7 +249,7 @@ export default class Page extends Component {
                     </div>
                     <ul id="updated" className="container-fluid container-limited text-center">
                         <li>Local anime data last updated on {updated}</li>
-                        <li>MyAnimeList.net API data last updated {Data.apiUpdated ? 'now' : `on ${updated}`}</li>
+                        <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${updated}`}</li>
                         <li>All rankings are my own subjective opinion</li>
                     </ul>
                 </div>

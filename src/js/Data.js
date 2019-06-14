@@ -14,9 +14,6 @@ class Data {
     // The time this data was last updated
     localUpdated = updated.updated
 
-    // Whether the API data was updated successfully
-    apiUpdated = false
-
     // Saved data from API
     cachedApiData = {}
 
@@ -262,8 +259,6 @@ class Data {
 
             // Save this so we don't have to fetch it in the future
             this.cachedApiData[animeId] = apiData
-
-            this.apiUpdated = true
 
             callback(apiData)
 
