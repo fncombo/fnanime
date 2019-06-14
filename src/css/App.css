@@ -124,3 +124,10 @@ a:hover {
 #message.show {
     transform: translateY(0);
 }
+
+/* Last updated times data */
+#updated {
+    margin: 2rem auto;
+    padding: 0;
+    list-style: none;
+}

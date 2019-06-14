@@ -5,10 +5,17 @@ import FastSort from 'fast-sort'
 
 // Anime
 import anime from './anime.json'
+import updated from './updated.json'
 
 class Data {
     // Anime from the JSON
     animeObject = anime
+
+    // The time this data was last updated
+    localUpdated = updated.updated
+
+    // Whether the API data was updated successfully
+    apiUpdated = false
 
     // Saved data from API
     cachedApiData = {}
@@ -65,7 +72,7 @@ class Data {
             descriptions: {
                 false: 'All Ratings',
                 null: 'black',
-                10:'10 \u2013 Masterpiece',
+                10:'10 \u2013 Masterpiece / Favourite',
                 9: '9 \u2013 Great',
                 8: '8 \u2013 Very Good',
                 7: '7 \u2013 Good',
@@ -255,6 +262,8 @@ class Data {
 
             // Save this so we don't have to fetch it in the future
             this.cachedApiData[animeId] = apiData
+
+            this.apiUpdated = true
 
             callback(apiData)
 

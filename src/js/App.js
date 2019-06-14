@@ -208,6 +208,8 @@ export default class Page extends Component {
     render() {
         const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText } = this.state
 
+        const updated = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(Data.localUpdated)
+
         return (
             <Fragment>
                 <div className="fnheader">
@@ -240,6 +242,11 @@ export default class Page extends Component {
                     <div className="container-fluid gallery">
                         <Gallery anime={anime} openInfoBox={this.openInfoBox} />
                     </div>
+                    <ul id="updated" className="container-fluid container-limited text-center">
+                        <li>Local anime data last updated on {updated}</li>
+                        <li>MyAnimeList.net API data last updated {Data.apiUpdated ? 'now' : `on ${updated}`}</li>
+                        <li>All rankings are my own subjective opinion</li>
+                    </ul>
                 </div>
                 {/* Close when clicking outside of the modal-content window */}
                 <div className="modal" onClick={event => event.target.className === 'modal' ? this.closeInfoBox() : undefined}>
