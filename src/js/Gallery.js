@@ -49,15 +49,17 @@ class GalleryItem extends PureComponent {
             <div
                 className={`gallery-item ${anime.size ? 'downloaded' : 'not-downloaded'}`}
                 onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}
-                title={anime.title}
             >
-                <img src={anime.img} alt={anime.title} />
-                <span className={`badge p-2 rounded-0 rounded-bottom badge-${Data.filters.status.colorCodes[anime.status]}`}>
-                    {anime.episodes > 1 ?
-                        <Fragment>{Data.filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes} ep</Fragment> :
-                        Data.filters.type.descriptions[anime.actualType]
-                    }
-                </span>
+                <div className="gallery-item-inner">
+                    <img src={anime.img} alt={anime.title} />
+                    <span className={`badge p-2 rounded-0 rounded-bottom badge-${Data.filters.status.colorCodes[anime.status]}`}>
+                        {anime.episodes > 1 ?
+                            <Fragment>{Data.filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes} ep</Fragment> :
+                            Data.filters.type.descriptions[anime.actualType]
+                        }
+                    </span>
+                </div>
+                <span className="gallery-tooltip">{anime.title}</span>
             </div>
         )
     }
