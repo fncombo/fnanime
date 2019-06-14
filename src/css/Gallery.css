@@ -12,19 +12,20 @@
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, var(--img-size));
-    grid-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0 -0.5rem;
 }
 
 .gallery-item {
     border-radius: 0.25rem;
+    flex: 0 0 var(--img-size);
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 0.5rem;
     cursor: pointer;
     z-index: 1;
     transition-property: z-index, opacity, box-shadow, transform;
