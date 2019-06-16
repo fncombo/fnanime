@@ -126,9 +126,9 @@ export default class Page extends Component {
     }
 
     // Show a small message in the corner of the page
-    showMessage(text, duration = false, status = 'info') {
+    showMessage(text, duration = false, status = 'black') {
         this.setState({
-            messageClasses: `show p-3 text-white bg-${status}`,
+            messageClasses: `show bg-${status}`,
             messageText: text,
         })
 
@@ -136,7 +136,7 @@ export default class Page extends Component {
         if (duration) {
             setTimeout(() => {
                 this.setState({
-                    messageClasses: `p-3 text-white bg-${status}`,
+                    messageClasses: `bg-${status}`,
                 })
             }, duration)
         }
