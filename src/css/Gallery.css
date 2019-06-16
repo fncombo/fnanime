@@ -20,6 +20,7 @@
 
 .gallery-item {
     flex: 0 0 var(--img-size);
+    width: var(--img-size);
     margin: 0.5rem;
     transition-property: opacity;
     transition-duration: 0.15s;
