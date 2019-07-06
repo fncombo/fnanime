@@ -2,7 +2,6 @@
 import FuzzySort from 'fuzzysort'
 import ObjectHash from 'object-hash'
 import FastSort from 'fast-sort'
-import cookie from 'cookie'
 
 // Anime
 import anime from './anime.json'
@@ -315,13 +314,12 @@ class Data {
         }, this)
 
         // Get the cookie related to showing detailed view
-        const cookies = cookie.parse(document.cookie)
-        this.isDetailView = cookies.hasOwnProperty('detailView') && cookies.detailView === 'true'
+        this.isDetailView = localStorage.getItem('detailView') === 'true'
     }
 
     // Set a cookie to show or not show detailed view
     setDetailView(active) {
-        document.cookie = cookie.serialize('detailView', active)
+        document.cookie = localStorage.setItem('detailView', active)
     }
 
     // Get the size of column by its index instead of property name
