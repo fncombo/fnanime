@@ -29,6 +29,7 @@
     backdrop-filter: blur(10px);
     z-index: 1;
     pointer-events: none;
+    transition: box-shadow 0.15s ease-in-out;
 }
 
 .table-header-stuck:before {
@@ -151,7 +152,7 @@
 }
 
 .table img {
-    flex: 0 0 30px;
+    flex: 0 0 37px;
     height: 100%;
 }
 
