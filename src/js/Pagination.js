@@ -84,13 +84,13 @@ export default class Pagination extends PureComponent {
 
         return (
             <div className="d-flex justify-content-between my-3 pagination">
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-start">
                     <Button page={currentPage - 1} text="Previous" changePage={changePage} disabled={currentPage === 1} />
                 </div>
                 <div className="d-flex justify-content-center">
                     {buttons}
                 </div>
-                <div className="d-flex justify-content-start">
+                <div className="d-flex justify-content-end">
                     <Button page={currentPage + 1} text="Next" changePage={changePage} disabled={currentPage === lastPage} />
                 </div>
             </div>
@@ -106,14 +106,14 @@ class Button extends PureComponent {
         // Current page button does nothing and has a unique look
         if (page === currentPage) {
             return (
-                <button className="btn btn-info mx-1">
+                <button className="btn btn-primary mx-1">
                     {text || page}
                 </button>
             )
         }
 
         return (
-            <button className="btn btn-light mx-1" onClick={() => changePage(page)} disabled={disabled}>
+            <button className="btn btn-outline-primary mx-1" onClick={() => changePage(page)} disabled={disabled}>
                 {text || page}
             </button>
         )

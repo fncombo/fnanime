@@ -62,7 +62,7 @@ class FilterGroup extends Component {
         const { anime, filterName, activeFilters, update, fullWidth } = this.props
 
         return (
-            <div className={`mt-3 ${fullWidth ? 'col-12' : 'col-6'}`}>
+            <div className={fullWidth ? 'col-12 mt-3' : 'col-6 mt-3'}>
                 <div className="btn-group d-flex">
                     {Data.filters[filterName].values.map(filterValue => {
                         // Count how many of currently shown anime match this filter
@@ -73,7 +73,7 @@ class FilterGroup extends Component {
 
                         return (
                             <button
-                                className={`btn ${currentlySelected ? 'btn-primary' : 'btn-light'}`}
+                                className={`btn ${currentlySelected ? 'btn-secondary' : 'btn-outline-secondary'}`}
                                 onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
                                 key={filterValue}
                             >

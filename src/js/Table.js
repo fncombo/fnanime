@@ -10,8 +10,36 @@ import TableRow from './TableRow'
 
 // Table with all the anime data
 export default class Table extends Component {
+    state = {
+        stuck: false,
+    }
+
+    componentDidMount() {
+        // Check when the table header becomes stuck
+        window.addEventListener('scroll', () => {
+            // Get the positions of the header row and the first normal row
+            const tableHeader = document.querySelector('.table-header').getBoundingClientRect()
+            const tableFirstRow = document.querySelector('.table .table-row:not(.table-header)').getBoundingClientRect()
+
+            // If they passed each other, the header is stuck
+            if (tableHeader.y > tableFirstRow.y) {
+                this.setState({
+                    stuck: true,
+                })
+
+                return
+            }
+
+            // Otherwise the header is not stuck
+            this.setState({
+                stuck: false,
+            })
+        })
+    }
+
     render() {
         const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting, isDetailView } = this.props
+        const { stuck } = this.state
 
         if (!anime.length) {
             return <p className="alert alert-danger mt-3">No matching anime found!</p>
@@ -19,7 +47,7 @@ export default class Table extends Component {
 
         return (
             <div className={`table mt-3 ${!isDetailView ? 'table-reduced' : ''}`}>
-                <div className="table-row table-header" title="Hold shift to sort by multiple columns">
+                <div className={`table-row table-header ${stuck ? 'table-header-stuck' : ''}`} title="Hold shift to sort by multiple columns">
                     <TableHeaders update={update} activeSorting={activeSorting} isDetailView={isDetailView} />
                 </div>
                 {anime.slice((currentPage - 1) * Data.defaults.animePerPage, currentPage * Data.defaults.animePerPage).map(anime =>

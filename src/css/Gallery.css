@@ -50,25 +50,28 @@
 }
 
 .gallery-tooltip {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
     position: fixed;
-    bottom: 1rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 1.25rem;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
-    white-space: pre-wrap;
-    text-align: center;
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
     pointer-events: none;
-    font-size: 1.5rem;
-    box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s ease-in-out 0.15s, opacity 0.15s ease-in-out;
 }
 
 .gallery-item:hover .gallery-tooltip {
+    visibility: visible;
     opacity: 1;
+    transition: visibility 0s ease-in-out 0s, opacity 0.15s ease-in-out;
 }

@@ -58,7 +58,7 @@ class Data {
                 false: '',
                 null: 'black',
                 1: 'success',
-                2: 'info',
+                2: 'primary',
                 3: 'warning',
                 4: 'danger',
                 5: 'danger',
@@ -186,7 +186,7 @@ class Data {
         // Rows per table page
         animePerPage: 25,
         // Number of buttons beside the current page button
-        pageButtons: 2,
+        pageButtons: 3,
     }
 
     // Storage size limits

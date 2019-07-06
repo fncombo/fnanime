@@ -79,7 +79,7 @@ export default class Page extends Component {
 
         // Don't load API data in development mode
         if (process.env.NODE_ENV === 'development') {
-            return
+            // return
         }
 
         this.showMessage(<Fragment>Loading latest information&hellip;</Fragment>)
@@ -228,7 +228,7 @@ export default class Page extends Component {
         return (
             <Fragment>
                 <div className="fnheader">
-                    <h1>Anime List <a href="https://fncombo.me"><span>fn</span><span>combo</span></a></h1>
+                    <h1>Anime List <a href="https://fncombo.me">fncombo</a></h1>
                 </div>
                 <div className="container-main">
                     <div className="container-fluid container-limited">

@@ -1,10 +1,5 @@
 .btn-group .btn {
-    padding-left: 0;
-    padding-right: 0;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    z-index: 1 !important;
+    padding: 0.5rem 0.25rem;
 }
 
 .btn-group .btn span {

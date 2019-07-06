@@ -42,7 +42,10 @@ class TitleColumn extends PureComponent {
         const { anime, searchQuery } = this.props
 
         return (
-            <div className="table-column text-left text-nowrap pr-3 justify-content-start" style={{ flexBasis: Data.getColumnSize(0) }}>
+            <div
+                className={`table-column text-left text-nowrap pr-3 justify-content-start color-${Data.filters.status.colorCodes[anime.status]}`}
+                style={{ flexBasis: Data.getColumnSize(0) }}
+            >
                 <img width="37" height="50" src={anime.img} alt={anime.title} />
                 <span className="ml-3 text-truncate">
                     {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}

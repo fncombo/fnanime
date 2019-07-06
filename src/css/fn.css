@@ -1,13 +1,25 @@
 .fnheader {
-    background: linear-gradient(to right, rgba(130, 180, 50, 0.75), rgba(80, 160, 240, 0.75));
-    height: 55px;
+    background: rgba(255, 255, 255, 0.5);
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 200;
-    backdrop-filter: blur(var(--blur-amount));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.fnheader:before {
+    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
 }
 
 .fnheader h1 {
@@ -19,10 +31,31 @@
 }
 
 .fnheader h1 a {
-    margin-left: 0.5rem;
-    color: #fff;
+    margin-left: 0.25rem;
+    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.fnheader h1 a:after {
+    content: '';
+    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    right: -1px;
+    height: 2px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
 }
 
 .fnheader h1 a:hover {
     text-decoration: underline;
+}
+
+.fnheader h1 a:hover:after {
+    opacity: 1;
 }
