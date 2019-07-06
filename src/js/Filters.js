@@ -10,51 +10,48 @@ import Data from './Data'
 // Filters, search, and reset
 export default class Filters extends Component {
     render() {
-        const { anime, searchQuery, update, reset, activeFilters } = this.props
+        const { anime, searchQuery, update, reset, activeFilters, isDetailView } = this.props
 
         return (
-            <Fragment>
-                <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="rating" activeFilters={activeFilters} update={update} fullWidth={true} />
+            <div className="row">
+                <FilterGroup anime={anime} filterName="rating" activeFilters={activeFilters} update={update} fullWidth={true} />
+                <FilterGroup anime={anime} filterName="type" activeFilters={activeFilters} update={update} />
+                {isDetailView && <FilterGroup anime={anime} filterName="resolution" activeFilters={activeFilters} update={update} />}
+                {!isDetailView && <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />}
+                {isDetailView &&
+                    <Fragment>
+                        <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />
+                        <FilterGroup anime={anime} filterName="videoCodec" activeFilters={activeFilters} update={update} />
+                        <FilterGroup anime={anime} filterName="source" activeFilters={activeFilters} update={update} />
+                        <FilterGroup anime={anime} filterName="audioCodec" activeFilters={activeFilters} update={update} />
+                    </Fragment>
+                }
+                <div className={`mt-3 ${isDetailView ? 'col-3' : 'col-6'}`}>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Search by anime title..."
+                        value={searchQuery}
+                        onChange={event => update('searchQuery', event.target.value)}
+                        autoFocus={true}
+                    />
                 </div>
-                <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="type" activeFilters={activeFilters} update={update} />
-                    <FilterGroup anime={anime} filterName="resolution" activeFilters={activeFilters} update={update} />
-                </div>
-                <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />
-                    <FilterGroup anime={anime} filterName="videoCodec" activeFilters={activeFilters} update={update} />
-                </div>
-                <div className="row mt-3">
-                    <FilterGroup anime={anime} filterName="source" activeFilters={activeFilters} update={update} />
-                    <FilterGroup anime={anime} filterName="audioCodec" activeFilters={activeFilters} update={update} />
-                </div>
-                <div className="row mt-3">
-                    <div className="col-3">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Search Anime Title..."
-                            value={searchQuery}
-                            onChange={event => update('searchQuery', event.target.value)}
-                            autoFocus={true}
-                        />
-                    </div>
-                    <div className="col-3">
+                {isDetailView &&
+                    <div className="col-3 mt-3">
                         <select className="custom-select" value={activeFilters.subs} onChange={event => update('activeFilters', 'subs', event.target.value)}>
                             <OptionGroup anime={anime} filterName="subs" />
                         </select>
                     </div>
-                    <div className="col-5 d-flex align-items-center justify-content-center">
-                        <span>
-                            <Summary anime={anime} />
-                        </span>
-                    </div>
-                    <div className="col-1 d-flex">
-                        <button className="btn btn-primary flex-grow-1" onClick={reset}>Reset</button>
-                    </div>
+                }
+                <div className="col-5 mt-3 d-flex align-items-center justify-content-center">
+                    <span>
+                        <Summary anime={anime} isDetailView={isDetailView} />
+                    </span>
                 </div>
-            </Fragment>
+                <div className="col-1 mt-3 d-flex">
+                    <button className="btn btn-primary flex-grow-1" onClick={reset}>Reset</button>
+                </div>
+            </div>
         )
     }
 }
@@ -65,7 +62,7 @@ class FilterGroup extends Component {
         const { anime, filterName, activeFilters, update, fullWidth } = this.props
 
         return (
-            <div className={fullWidth ? 'col-12' : 'col-6'}>
+            <div className={`mt-3 ${fullWidth ? 'col-12' : 'col-6'}`}>
                 <div className="btn-group d-flex">
                     {Data.filters[filterName].values.map(filterValue => {
                         // Count how many of currently shown anime match this filter
@@ -76,7 +73,7 @@ class FilterGroup extends Component {
 
                         return (
                             <button
-                                className={`btn ${currentlySelected ? 'btn-primary' : 'btn-secondary'}`}
+                                className={`btn ${currentlySelected ? 'btn-primary' : 'btn-light'}`}
                                 onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
                                 key={filterValue}
                             >
@@ -115,7 +112,7 @@ class OptionGroup extends Component {
 // Stats of what the table curently shows
 class Summary extends PureComponent {
     render() {
-        const { anime } = this.props
+        const { anime, isDetailView } = this.props
 
         if (!anime.length) {
             return null
@@ -123,6 +120,10 @@ class Summary extends PureComponent {
 
         const downloadedCount = anime.filter(anime => !!anime.size).length
         const notDownloadedCount = anime.length - downloadedCount
+
+        if (!isDetailView) {
+            return <Fragment>Found {downloadedCount + notDownloadedCount} anime</Fragment>
+        }
 
         if (downloadedCount && notDownloadedCount) {
             return <Fragment>Found <strong>{downloadedCount}</strong> +{notDownloadedCount} anime</Fragment>

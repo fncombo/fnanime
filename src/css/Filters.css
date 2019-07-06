@@ -1,40 +1,12 @@
-.form-control,
-.custom-select {
-    border: 1px solid hsl(0, 0%, 50%);
-    color: #000;
-}
-
-.form-control:hover,
-.custom-select:hover,
-.form-control:focus,
-.custom-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: none;
-}
-
-.form-control::placeholder {
-    color: hsl(0, 0%, 50%);
-    transition: color 0.15s ease-in-out;
-}
-
-.form-control:hover::placeholder,
-.form-control:focus::placeholder {
-    color: var(--primary-color);
-}
-
 .btn-group .btn {
+    padding-left: 0;
+    padding-right: 0;
     border: none !important;
-    padding: calc(0.375rem + 1px) 0 !important;
-    margin: 0 !important;
-}
-
-.btn-group .btn-primary:hover,
-.btn-group .btn-primary:focus {
-    background: var(--primary-color) !important;
-    cursor: default;
+    outline: none !important;
+    box-shadow: none !important;
+    z-index: 1 !important;
 }
 
 .btn-group .btn span {
     opacity: 0.5;
-    font-weight: normal;
 }

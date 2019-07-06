@@ -26,6 +26,7 @@ export default class Page extends Component {
         messageClasses: '',
         messageText: '',
         apiUpdated: false,
+        isDetailView: Data.isDetailView,
     }
 
     constructor() {
@@ -44,12 +45,12 @@ export default class Page extends Component {
         // Keyboard shortcuts
         document.addEventListener('keydown', event => {
             // ESC key to close the info box
-            if (event.code === 'Escape' && this.state.selectedAnimeId) {
+            if (event.key === 'Escape' && this.state.selectedAnimeId) {
                 this.closeInfoBox()
             }
 
             // Previous anime info box using left arrow when the info box is open
-            if (event.code === 'ArrowLeft' && this.state.selectedAnimeId) {
+            if (event.key === 'ArrowLeft' && this.state.selectedAnimeId) {
                 const prevAnime = Data.adjacentAnime('prev', this.state.selectedAnimeId)
 
                 if (prevAnime) {
@@ -58,12 +59,21 @@ export default class Page extends Component {
             }
 
             // Next anime info box using right arrow when the info box is open
-            if (event.code === 'ArrowRight' && this.state.selectedAnimeId) {
+            if (event.key === 'ArrowRight' && this.state.selectedAnimeId) {
                 const nextAnime = Data.adjacentAnime('next', this.state.selectedAnimeId)
 
                 if (nextAnime) {
                     this.openInfoBox(Data.getAnime(nextAnime).id)
                 }
+            }
+
+            // Shortcut to toggle detail view and save it in a cookie
+            if (event.key === '.' && event.ctrlKey) {
+                Data.setDetailView(!Data.isDetailView)
+
+                this.setState({
+                    isDetailView: !this.state.isDetailView,
+                })
             }
         }, false)
 
@@ -211,7 +221,7 @@ export default class Page extends Component {
     }
 
     render() {
-        const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText, apiUpdated } = this.state
+        const { anime, searchQuery, activeSorting, activeFilters, page, selectedAnimeId, messageClasses, messageText, apiUpdated, isDetailView } = this.state
 
         const updated = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(Data.localUpdated)
 
@@ -226,6 +236,7 @@ export default class Page extends Component {
                             anime={anime}
                             searchQuery={searchQuery}
                             activeFilters={activeFilters}
+                            isDetailView={isDetailView}
                             update={this.update}
                             reset={this.reset}
                         />
@@ -233,6 +244,7 @@ export default class Page extends Component {
                             anime={anime}
                             searchQuery={searchQuery}
                             activeSorting={activeSorting}
+                            isDetailView={isDetailView}
                             currentPage={page}
                             update={this.update}
                             openInfoBox={this.openInfoBox}
@@ -243,12 +255,19 @@ export default class Page extends Component {
                             changePage={this.changePage}
                         />
                     </div>
-                    <Statistics anime={anime} />
+                    <Statistics
+                        anime={anime}
+                        isDetailView={isDetailView}
+                    />
                     <div className="container-fluid gallery">
-                        <Gallery anime={anime} openInfoBox={this.openInfoBox} />
+                        <Gallery
+                            anime={anime}
+                            isDetailView={isDetailView}
+                            openInfoBox={this.openInfoBox}
+                        />
                     </div>
                     <ul id="updated" className="container-fluid container-limited text-center">
-                        <li>Local anime data last updated on {updated}</li>
+                        {isDetailView && <li>Local anime data last updated on {updated}</li>}
                         <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${updated}`}</li>
                         <li>All rankings are my own subjective opinion</li>
                     </ul>
@@ -260,6 +279,7 @@ export default class Page extends Component {
                             selectedAnimeId={selectedAnimeId}
                             openInfoBox={this.openInfoBox}
                             closeInfoBox={this.closeInfoBox}
+                            isDetailView={isDetailView}
                         />
                     </div>
                 </div>

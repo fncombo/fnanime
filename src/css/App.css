@@ -10,18 +10,17 @@ noscript .row {
 }
 
 body {
-    --primary-color: #2e51a2;
-    --primary-color-hover: #1b3060;
-
-    --secondary-color: #e1e7f5;
-    --secondary-color-hover: #c8d3ed;
-
     --border-color: hsl(0, 0%, 80%);
 
     --row-color: hsl(0, 0%, 95%);
     --row-color-hover: hsl(0, 0%, 90%);
 
-    background: #fff;
+    --blur-background: rgba(255, 255, 255, 0.5);
+    --blur-amount: 10px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 .container-fluid {
@@ -33,80 +32,20 @@ body {
     min-width: 1400px;
 }
 
-hr {
-    border-top: 1px solid var(--border-color);
-}
-
 /* Text */
 
-h1 {
-    font-size: 1.25rem;
-    margin: 0;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
 }
 
-.text-muted {
-    color: hsl(0, 0%, 50%) !important;
-}
-
-/* Links */
-
-a {
-    color: var(--primary-color);
-}
-
-a:hover {
-    color: var(--primary-color-hover);
+strong {
+    font-weight: 600;
 }
 
 /* Progress bars */
 
 .progress.bg-secondary {
     background: var(--border-color) !important;
-}
-
-.progress-bar.bg-primary {
-    background: var(--primary-color) !important;
-}
-
-/* Buttons */
-
-.btn:focus,
-.btn:active {
-    box-shadow: none !important;
-}
-
-.btn-primary {
-    background: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background: var(--primary-color-hover) !important;
-    border-color: var(--primary-color-hover) !important;
-}
-
-.btn-secondary {
-    color: var(--primary-color);
-    background: var(--secondary-color) !important;
-    border-color: var(--secondary-color) !important;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-    color: var(--primary-color-hover) !important;
-    background: var(--secondary-color-hover) !important;
-    border-color: var(--secondary-color-hover) !important;
-}
-
-.btn[disabled] {
-    pointer-events: none;
-}
-
-.btn[disabled]:not(.btn-blank) {
-    color: #fff !important;
-    background: var(--border-color) !important;
-    border-color: var(--border-color) !important;
 }
 
 /* Message box */

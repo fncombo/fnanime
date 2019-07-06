@@ -38,7 +38,7 @@ export default class Statistics extends PureComponent {
     }
 
     render() {
-        const { anime } = this.props
+        const { anime, isDetailView } = this.props
 
         // No anime to display
         if (!anime.length) {
@@ -70,9 +70,11 @@ export default class Statistics extends PureComponent {
                     <div className="col text-center">
                         <h6 className="m-0">Number of Anime</h6>
                     </div>
-                    <div className="col text-center">
-                        <h6 className="m-0">Total Storage Size</h6>
-                    </div>
+                    {isDetailView &&
+                        <div className="col text-center">
+                            <h6 className="m-0">Total Storage Size</h6>
+                        </div>
+                    }
                     <div className="col text-center">
                         <h6 className="m-0">Total Number of Episodes</h6>
                     </div>
@@ -84,7 +86,7 @@ export default class Statistics extends PureComponent {
                                 {rating}
                             </div>
                             <StatisticsColumn rating={rating} data={ratingTotals} />
-                            <StatisticsColumn rating={rating} data={sizeTotals} formatFunction={FileSize} />
+                            {isDetailView && <StatisticsColumn rating={rating} data={sizeTotals} formatFunction={FileSize} />}
                             <StatisticsColumn rating={rating} data={episodeTotals} />
                         </div>
                     )
@@ -97,9 +99,11 @@ export default class Statistics extends PureComponent {
                         <div className="col text-center">
                             Average Rating: {ratingTotals.average ? Round(ratingTotals.average, 2) : 'N/A'}
                         </div>
-                        <div className="col text-center">
-                            {sizeTotals.sum ? FileSize(sizeTotals.sum) : <Fragment>&ndash;</Fragment>}
-                        </div>
+                        {isDetailView &&
+                            <div className="col text-center">
+                                {sizeTotals.sum ? FileSize(sizeTotals.sum) : <Fragment>&ndash;</Fragment>}
+                            </div>
+                        }
                         <div className="col text-center">
                             {episodeTotals.sum ? episodeTotals.sum : <Fragment>&ndash;</Fragment>}
                         </div>

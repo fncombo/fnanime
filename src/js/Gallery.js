@@ -10,7 +10,7 @@ import Data from './Data'
 // Make a gallery for each rating which has matching anime
 export default class Gallery extends PureComponent {
     render() {
-        const { anime, openInfoBox } = this.props
+        const { anime, openInfoBox, isDetailView} = this.props
 
         // Count how many anime for each rating
         let ratingCounts = Array(11).fill(0)
@@ -31,7 +31,7 @@ export default class Gallery extends PureComponent {
                     </h2>
                     <div className="gallery-grid">
                         {anime.filter(anime => anime.rating === rating).map(anime =>
-                            <GalleryItem anime={anime} openInfoBox={openInfoBox} key={anime.hash} />
+                            <GalleryItem anime={anime} openInfoBox={openInfoBox} isDetailView={isDetailView} key={anime.hash} />
                         )}
                     </div>
                 </div>
@@ -43,11 +43,11 @@ export default class Gallery extends PureComponent {
 // Single gallery item
 class GalleryItem extends PureComponent {
     render() {
-        const { anime, openInfoBox } = this.props
+        const { anime, openInfoBox, isDetailView } = this.props
 
         return (
             <div
-                className={`gallery-item ${anime.size ? 'downloaded' : 'not-downloaded'}`}
+                className={`gallery-item ${isDetailView && !anime.size ? 'not-downloaded' : ''}`}
                 onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}
             >
                 <div className="gallery-item-inner">

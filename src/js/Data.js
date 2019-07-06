@@ -2,6 +2,7 @@
 import FuzzySort from 'fuzzysort'
 import ObjectHash from 'object-hash'
 import FastSort from 'fast-sort'
+import cookie from 'cookie'
 
 // Anime
 import anime from './anime.json'
@@ -205,6 +206,81 @@ class Data {
         },
     }
 
+    // Column sizes
+    smallColumn = '5%'
+    mediumColumn = '8%'
+    largeColumn = '12%'
+
+    // Columns setup
+    columns = {
+        title: {
+            text: 'Title',
+            defaultSorting: 'asc',
+            size: '28%',
+            detailViewOnly: false,
+        },
+        status: {
+            text: 'Status',
+            defaultSorting: 'asc',
+            size: this.largeColumn,
+            detailViewOnly: false,
+        },
+        rating: {
+            text: 'Rating',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+            detailViewOnly: false,
+        },
+        rewatchCount: {
+            text: 'Rewatched',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+            detailViewOnly: false,
+        },
+        subs: {
+            text: 'Subtitles',
+            defaultSorting: 'asc',
+            size: this.mediumColumn,
+            detailViewOnly: true,
+        },
+        resolution: {
+            text: 'Resolution',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+            detailViewOnly: true,
+        },
+        source: {
+            text: 'Source',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+            detailViewOnly: true,
+        },
+        videoCodec: {
+            text: 'Video',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+            detailViewOnly: true,
+        },
+        audioCodec: {
+            text: 'Audio',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+            detailViewOnly: true,
+        },
+        episodeSize: {
+            text: 'Episode Size',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+            detailViewOnly: true,
+        },
+        size: {
+            text: 'Total Size',
+            defaultSorting: 'desc',
+            size: this.mediumColumn,
+            detailViewOnly: true,
+        },
+    }
+
     constructor() {
         // Process data
         Object.keys(this.animeObject).forEach(animeId => {
@@ -237,6 +313,25 @@ class Data {
 
             this.filters[filterName].values = filterValues
         }, this)
+
+        // Get the cookie related to showing detailed view
+        const cookies = cookie.parse(document.cookie)
+        this.isDetailView = cookies.hasOwnProperty('detailView') && cookies.detailView === 'true'
+    }
+
+    // Set a cookie to show or not show detailed view
+    setDetailView(active) {
+        document.cookie = cookie.serialize('detailView', active)
+    }
+
+    // Get the size of column by its index instead of property name
+    getColumnSize(index) {
+        return Object.entries(this.columns)[index][1].size
+    }
+
+    // Whether a column should only display in detail view
+    getColumnVisibility(index, isDetailView) {
+        return isDetailView ? true : !Object.entries(this.columns)[index][1].detailViewOnly
     }
 
     // Get more data about an anime either form API or saved if already called

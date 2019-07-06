@@ -11,93 +11,26 @@ import TableRow from './TableRow'
 // Table with all the anime data
 export default class Table extends Component {
     render() {
-        const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting } = this.props
+        const { anime, searchQuery, currentPage, update, openInfoBox, activeSorting, isDetailView } = this.props
 
         if (!anime.length) {
             return <p className="alert alert-danger mt-3">No matching anime found!</p>
         }
 
         return (
-            <table className="table table-anime mt-3">
-                <thead title="Hold shift to sort by multiple columns">
-                    <tr>
-                        <TableHeaders update={update} activeSorting={activeSorting} />
-                    </tr>
-                </thead>
-                <tbody>
-                    {anime.slice((currentPage - 1) * Data.defaults.animePerPage, currentPage * Data.defaults.animePerPage).map(anime =>
-                        <TableRow anime={anime} searchQuery={searchQuery} openInfoBox={openInfoBox} key={anime.hash} />
-                    )}
-                </tbody>
-            </table>
+            <div className={`table mt-3 ${!isDetailView ? 'table-reduced' : ''}`}>
+                <div className="table-row table-header" title="Hold shift to sort by multiple columns">
+                    <TableHeaders update={update} activeSorting={activeSorting} isDetailView={isDetailView} />
+                </div>
+                {anime.slice((currentPage - 1) * Data.defaults.animePerPage, currentPage * Data.defaults.animePerPage).map(anime =>
+                    <TableRow anime={anime} searchQuery={searchQuery} openInfoBox={openInfoBox} isDetailView={isDetailView} key={anime.hash} />
+                )}
+            </div>
         )
     }
 }
 
 class TableHeaders extends PureComponent {
-    smallColumn = '5%'
-    mediumColumn = '8%'
-    largeColumn = '12%'
-
-    // Columns setup
-    columns = {
-        title: {
-            text: 'Title',
-            defaultSorting: 'asc',
-            size: 'auto',
-        },
-        status: {
-            text: 'Status',
-            defaultSorting: 'asc',
-            size: this.largeColumn,
-        },
-        rating: {
-            text: 'Rating',
-            defaultSorting: 'desc',
-            size: this.smallColumn,
-        },
-        rewatchCount: {
-            text: 'Rewatched',
-            defaultSorting: 'desc',
-            size: this.mediumColumn,
-        },
-        subs: {
-            text: 'Subtitles',
-            defaultSorting: 'asc',
-            size: this.mediumColumn,
-        },
-        resolution: {
-            text: 'Resolution',
-            defaultSorting: 'desc',
-            size: this.mediumColumn,
-        },
-        source: {
-            text: 'Source',
-            defaultSorting: 'desc',
-            size: this.smallColumn,
-        },
-        videoCodec: {
-            text: 'Video',
-            defaultSorting: 'desc',
-            size: this.smallColumn,
-        },
-        audioCodec: {
-            text: 'Audio',
-            defaultSorting: 'desc',
-            size: this.smallColumn,
-        },
-        episodeSize: {
-            text: 'Episode Size',
-            defaultSorting: 'desc',
-            size: this.mediumColumn,
-        },
-        size: {
-            text: 'Total Size',
-            defaultSorting: 'desc',
-            size: this.mediumColumn,
-        },
-    }
-
     // Apply the correct sorting class names to each column header
     headerClass(column) {
         const { activeSorting } = this.props
@@ -125,15 +58,19 @@ class TableHeaders extends PureComponent {
     }
 
     render() {
-        return Object.entries(this.columns).map(([column, settings]) =>
-            <th
-                className={this.headerClass(column)}
-                style={{ width: settings.size }}
+        const { isDetailView } = this.props
+
+        const columns = isDetailView ? Object.entries(Data.columns) : Object.entries(Data.columns).filter(([, settings]) => !settings.detailViewOnly)
+
+        return columns.map(([column, settings]) =>
+            <div
+                className={`table-column ${this.headerClass(column)}`}
+                style={{ flexBasis: settings.size }}
                 onClick={event => this.sortColumn(column, settings.defaultSorting, event.shiftKey)}
                 key={column}
             >
                 {settings.text}
-            </th>
+            </div>
         )
     }
 }

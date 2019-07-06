@@ -106,14 +106,14 @@ class Button extends PureComponent {
         // Current page button does nothing and has a unique look
         if (page === currentPage) {
             return (
-                <button className="btn btn-primary mx-1">
+                <button className="btn btn-info mx-1">
                     {text || page}
                 </button>
             )
         }
 
         return (
-            <button className="btn btn-secondary mx-1" onClick={() => changePage(page)} disabled={disabled}>
+            <button className="btn btn-light mx-1" onClick={() => changePage(page)} disabled={disabled}>
                 {text || page}
             </button>
         )

@@ -1,40 +1,28 @@
 .fnheader {
-    text-align: center;
-}
-
-.fnheader:before {
-    content: '';
-    background: linear-gradient(to right, #82b432, #50a0f0);
-    display: block;
-    width: 100%;
-    height: 2px;
+    background: linear-gradient(to right, rgba(130, 180, 50, 0.75), rgba(80, 160, 240, 0.75));
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    backdrop-filter: blur(var(--blur-amount));
 }
 
 .fnheader h1 {
-    margin: 16px 0;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #000;
     font-family: inherit;
 }
 
 .fnheader h1 a {
-    margin-left: 8px;
-}
-
-.fnheader h1 a span:first-child {
-    color: #82b432;
-}
-
-.fnheader h1 a span:last-child {
-    color: #50a0f0;
+    margin-left: 0.5rem;
+    color: #fff;
 }
 
 .fnheader h1 a:hover {
-    text-decoration: none;
-}
-
-.fnheader h1 a:hover span {
     text-decoration: underline;
 }

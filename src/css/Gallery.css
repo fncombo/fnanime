@@ -46,7 +46,7 @@
 
 .gallery-item:hover .gallery-item-inner {
     box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
 .gallery-tooltip {

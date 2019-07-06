@@ -82,7 +82,7 @@ export default class InfoBox extends Component {
 
     render() {
         const { loaded, props, apiData, synopsisHeight, relatedAnimeListHeight } = this.state
-        const { selectedAnimeId, openInfoBox, closeInfoBox } = props
+        const { selectedAnimeId, openInfoBox, closeInfoBox, isDetailView } = props
 
         // The anime we're talkin' about
         const anime = Data.getAnime(selectedAnimeId)
@@ -120,7 +120,7 @@ export default class InfoBox extends Component {
                                         <span className="text-warning">
                                             {Array(anime.rating).fill('★')}
                                         </span>
-                                        <span className="text-muted">
+                                        <span className="text-black-50">
                                             {Array(10 - anime.rating).fill('★')}
                                         </span>
                                     </h3>
@@ -150,7 +150,7 @@ export default class InfoBox extends Component {
                                         View on MyAnimeList.net
                                     </a>
                                 </li>
-                                {process.env.NODE_ENV === 'development' &&
+                                {isDetailView &&
                                     <li>
                                         <a href={`https://nyaa.si/?f=0&c=1_2&q=${anime.title}`} target="_blank" rel="noopener noreferrer">
                                             Search on Nyaa
@@ -188,11 +188,13 @@ export default class InfoBox extends Component {
                             <div className="row">
                                 <div className="col-12">
                                     <ul>
-                                        <li>
-                                            <strong>Storage Size: </strong>
-                                            {anime.size ? FileSize(anime.size) : 'Not Downloaded'}
-                                            {(anime.size && anime.episodes > 1) && <span className="text-muted"> &ndash; average {FileSize(anime.size / anime.episodes)} per episode</span>}
-                                        </li>
+                                        {isDetailView &&
+                                            <li>
+                                                <strong>Storage Size: </strong>
+                                                {anime.size ? FileSize(anime.size) : 'Not Downloaded'}
+                                                {(anime.size && anime.episodes > 1) && <span className="text-black-50"> &ndash; average {FileSize(anime.size / anime.episodes)} per episode</span>}
+                                            </li>
+                                        }
                                         <li>
                                             <strong>Duration: </strong>
                                             {loaded ?
@@ -207,7 +209,7 @@ export default class InfoBox extends Component {
                                                 <span className="loading-text loading-inline col-3" />
                                             }
                                         </li>
-                                        {!!anime.subs && <li><strong>Subtitles:</strong> {anime.subs}</li>}
+                                        {isDetailView && !!anime.subs && <li><strong>Subtitles:</strong> {anime.subs}</li>}
                                     </ul>
                                 </div>
                             </div>
@@ -267,7 +269,7 @@ class Duration extends PureComponent {
             return 'Unknown'
         }
 
-        return <Fragment>{PrettyTime(duration * episodes, 'm')} {episodes > 1 && <span className="text-muted">&ndash; {PrettyTime(duration, 'm')} per episode</span>}</Fragment>
+        return <Fragment>{PrettyTime(duration * episodes, 'm')} {episodes > 1 && <span className="text-black-50">&ndash; {PrettyTime(duration, 'm')} per episode</span>}</Fragment>
     }
 }
 
@@ -290,11 +292,11 @@ class WatchTime extends PureComponent {
 
         // If rewatched anime or it's a movie, say how many total times watched
         if (rewatchCount || (episodesWatched && episodes === 1)) {
-            watchTime = <Fragment>{watchTime} <span className="text-muted"> &ndash; watched {rewatchCount + 1} {rewatchCount + 1 > 1  ? 'times' : 'time'}</span></Fragment>
+            watchTime = <Fragment>{watchTime} <span className="text-black-50"> &ndash; watched {rewatchCount + 1} {rewatchCount + 1 > 1  ? 'times' : 'time'}</span></Fragment>
 
         // Otherwsie say how many episodes out of total have watched
         } else if (episodesWatched) {
-            watchTime = <Fragment>{watchTime} <span className="text-muted"> &ndash; {episodesWatched}/{episodes || '?'} episodes</span></Fragment>
+            watchTime = <Fragment>{watchTime} <span className="text-black-50"> &ndash; {episodesWatched}/{episodes || '?'} episodes</span></Fragment>
         }
 
         return watchTime

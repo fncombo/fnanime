@@ -12,13 +12,13 @@ import Badge from './Badge'
 // Single row for an anime
 export default class TableRow extends PureComponent {
     render() {
-        const { anime, searchQuery, openInfoBox } = this.props
+        const { anime, searchQuery, openInfoBox, isDetailView } = this.props
 
         return (
-            <tr onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}>
+            <div className="table-row" onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}>
                 <TitleColumn anime={anime} searchQuery={searchQuery} />
-                <DataColumns anime={anime} />
-            </tr>
+                <DataColumns anime={anime} isDetailView={isDetailView} />
+            </div>
         )
     }
 }
@@ -42,15 +42,15 @@ class TitleColumn extends PureComponent {
         const { anime, searchQuery } = this.props
 
         return (
-            <td className="text-left text-nowrap pl-0 d-flex align-items-center">
+            <div className="table-column text-left text-nowrap pr-3 justify-content-start" style={{ flexBasis: Data.getColumnSize(0) }}>
                 <img width="37" height="50" src={anime.img} alt={anime.title} />
-                <span className="link text-truncate">
+                <span className="ml-3 text-truncate">
                     {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                 </span>
-                <span className="text-secondary ml-2">
+                <span className="text-secondary ml-3">
                     {Data.filters.type.descriptions[anime.actualType]}
                 </span>
-            </td>
+            </div>
         )
     }
 }
@@ -58,43 +58,61 @@ class TitleColumn extends PureComponent {
 // Misc cells with other data
 class DataColumns extends PureComponent {
     render() {
-        const { anime } = this.props
+        const { anime, isDetailView } = this.props
 
         return (
             <Fragment>
-                <td>
-                    <Badge animeId={anime.id} />
-                </td>
+                {Data.getColumnVisibility(1, isDetailView) &&
+                    <div className="table-column" style={{ flexBasis: Data.getColumnSize(1) }}>
+                        <Badge animeId={anime.id} />
+                    </div>
+                }
 
-                <td>
-                    {anime.rating || <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(2, isDetailView) &&
+                    <div className="table-column" style={{ flexBasis: Data.getColumnSize(2) }}>
+                        {anime.rating || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td>
-                    {anime.rewatchCount ? `${anime.rewatchCount} ${anime.rewatchCount > 1 ? 'times' : 'time'}` : <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(3, isDetailView) &&
+                    <div className="table-column" style={{ flexBasis: Data.getColumnSize(3) }}>
+                        {anime.rewatchCount ? `${anime.rewatchCount} ${anime.rewatchCount > 1 ? 'times' : 'time'}` : <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td>
-                    {anime.subs || <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(4, isDetailView) &&
+                    <div className="table-column" style={{ flexBasis: Data.getColumnSize(4) }}>
+                        {anime.subs || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td className={`text-${Data.filters.resolution.colorCodes[anime.resolution]}`}>
-                    {anime.resolution ? Data.filters.resolution.descriptions[anime.resolution] : <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(5, isDetailView) &&
+                    <div className={`table-column text-${Data.filters.resolution.colorCodes[anime.resolution]}`} style={{ flexBasis: Data.getColumnSize(5) }}>
+                        {anime.resolution ? Data.filters.resolution.descriptions[anime.resolution] : <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td className={`text-${Data.filters.source.colorCodes[anime.source]}`}>
-                    {anime.source || <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(6, isDetailView) &&
+                    <div className={`table-column text-${Data.filters.source.colorCodes[anime.source]}`} style={{ flexBasis: Data.getColumnSize(6) }}>
+                        {anime.source || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td className={`text-${Data.filters.videoCodec.colorCodes[anime.videoCodec]}`}>
-                    {anime.videoCodec || <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(7, isDetailView) &&
+                    <div className={`table-column text-${Data.filters.videoCodec.colorCodes[anime.videoCodec]}`} style={{ flexBasis: Data.getColumnSize(7) }}>
+                        {anime.videoCodec || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <td className={`text-${Data.filters.audioCodec.colorCodes[anime.audioCodec]}`}>
-                    {anime.audioCodec || <Fragment>&ndash;</Fragment>}
-                </td>
+                {Data.getColumnVisibility(8, isDetailView) &&
+                    <div className={`table-column text-${Data.filters.audioCodec.colorCodes[anime.audioCodec]}`} style={{ flexBasis: Data.getColumnSize(8) }}>
+                        {anime.audioCodec || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
 
-                <SizeColumns totalSize={anime.size} episodeSize={anime.episodeSize} />
+                {Data.getColumnVisibility(9, isDetailView) &&
+                    <SizeColumns totalSize={anime.size} episodeSize={anime.episodeSize} />
+                }
             </Fragment>
         )
     }
@@ -107,21 +125,23 @@ class SizeColumns extends PureComponent {
 
         // Same size if only 1 episode, merge into a single cell
         if (totalSize === episodeSize) {
+            const flexBasis = parseInt(Data.getColumnSize(9), 10) + parseInt(Data.getColumnSize(10), 10) + '%'
+
             return (
-                <td className="py-0" colSpan="2">
+                <div className="table-column table-progress" style={{ flexBasis }}>
                     <SizeBar size={totalSize} storageSizeLimits={Data.storageSizeLimits.total} />
-                </td>
+                </div>
             )
         }
 
         return (
             <Fragment>
-                <td className="py-0">
+                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(9) }}>
                     <SizeBar size={episodeSize} storageSizeLimits={Data.storageSizeLimits.episode} />
-                </td>
-                <td className="py-0">
+                </div>
+                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(10) }}>
                     <SizeBar size={totalSize} storageSizeLimits={Data.storageSizeLimits.total} />
-                </td>
+                </div>
             </Fragment>
         )
     }
