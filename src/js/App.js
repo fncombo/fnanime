@@ -79,7 +79,7 @@ export default class Page extends Component {
 
         // Don't load API data in development mode
         if (process.env.NODE_ENV === 'development') {
-            // return
+            return
         }
 
         this.showMessage(<Fragment>Loading latest information&hellip;</Fragment>)
