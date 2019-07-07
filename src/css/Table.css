@@ -149,6 +149,10 @@
     background-color: var(--danger);
 }
 
+.table-column.color-primary strong {
+    background-color: var(--primary);
+}
+
 .table-column.color-secondary strong {
     background-color: var(--secondary);
 }
