@@ -18,7 +18,7 @@
 }
 
 .table-header:before {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
     content: '';
     width: 200vw;
     height: 100%;
@@ -26,10 +26,16 @@
     position: absolute;
     top: 0;
     left: -50%;
-    backdrop-filter: blur(10px);
     z-index: 1;
     pointer-events: none;
     transition: box-shadow 0.15s ease-in-out;
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .table-header:before {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .table-header-stuck:before {

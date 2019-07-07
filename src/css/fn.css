@@ -1,5 +1,5 @@
 .fnheader {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.9);
     height: 60px;
     display: flex;
     justify-content: center;
@@ -7,8 +7,14 @@
     position: sticky;
     top: 0;
     z-index: 200;
-    backdrop-filter: blur(10px);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .fnheader {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .fnheader:before {
