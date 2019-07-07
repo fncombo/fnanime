@@ -254,11 +254,11 @@ export default class Page extends Component {
                             animeCount={anime.length}
                             changePage={this.changePage}
                         />
+                        <Statistics
+                            anime={anime}
+                            isDetailView={isDetailView}
+                        />
                     </div>
-                    <Statistics
-                        anime={anime}
-                        isDetailView={isDetailView}
-                    />
                     <div className="container-fluid gallery">
                         <Gallery
                             anime={anime}

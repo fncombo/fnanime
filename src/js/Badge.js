@@ -17,7 +17,7 @@ export default class Badge extends PureComponent {
             return null
         }
 
-        let classes = `badge p-2 badge-${Data.filters.status.colorCodes[anime.status]}`
+        let classes = `badge p-2 badge-${Data.filters.status.colorCodes[anime.status]} text-truncate`
 
         let text = Data.filters.status.descriptions[anime.status]
 
