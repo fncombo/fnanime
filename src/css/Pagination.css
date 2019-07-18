@@ -1,13 +1,7 @@
 .pagination .btn {
-    width: 2.703125rem;
+    width: 38px;
 }
 
-.pagination-prev-next .btn {
+.pagination .btn.pagination-btn {
     width: auto;
-    margin: 0 !important;
-}
-
-.btn-blank {
-    padding-top: 0;
-    padding-bottom: 0.4rem;
 }

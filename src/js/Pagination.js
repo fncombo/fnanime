@@ -54,16 +54,16 @@ export default class Pagination extends PureComponent {
         pages.forEach(page => {
             if (previousPage) {
                 if (page - previousPage === 2) {
-                    buttons.push(<Button page={previousPage + 1} currentPage={currentPage} changePage={changePage} key={previousPage + 1} />)
+                    buttons.push(<NumberButton page={previousPage + 1} currentPage={currentPage} changePage={changePage} key={previousPage + 1} />)
 
                 // Show "..." after first page and before the last page
                 // if there are more than 2 pages in between them and adjacent buttons
                 } else if (page - previousPage !== 1) {
-                    buttons.push(<button className="btn btn-blank mx-1" disabled={true} key={`${page}-dots`}>&hellip;</button>)
+                    buttons.push(<button className="btn btn-blank mx-1" disabled={true} key={`${page}-dots`}>&middot;&middot;&middot;</button>)
                 }
             }
 
-            buttons.push(<Button page={page} currentPage={currentPage} changePage={changePage} key={page} />)
+            buttons.push(<NumberButton page={page} currentPage={currentPage} changePage={changePage} key={page} />)
 
             previousPage = page
         })
@@ -85,13 +85,13 @@ export default class Pagination extends PureComponent {
         return (
             <div className="row my-3 pagination">
                 <div className="col-3 pagination-prev-next">
-                    <Button page={currentPage - 1} text="Previous" changePage={changePage} disabled={currentPage === 1} />
+                    <TextButton page={currentPage - 1} text="Previous" changePage={changePage} disabled={currentPage === 1} />
                 </div>
                 <div className="col-6 d-flex justify-content-center">
                     {buttons}
                 </div>
                 <div className="col-3 d-flex justify-content-end pagination-prev-next">
-                    <Button page={currentPage + 1} text="Next" changePage={changePage} disabled={currentPage === lastPage} />
+                    <TextButton page={currentPage + 1} text="Next" changePage={changePage} disabled={currentPage === lastPage} />
                 </div>
             </div>
         )
@@ -99,22 +99,35 @@ export default class Pagination extends PureComponent {
 }
 
 // Single page button
-class Button extends PureComponent {
+class NumberButton extends PureComponent {
     render() {
-        const { page, text, currentPage, changePage, disabled } = this.props
+        const { page, currentPage, changePage, disabled } = this.props
 
         // Current page button does nothing and has a unique look
         if (page === currentPage) {
             return (
-                <button className="btn btn-dark mx-1">
-                    {text || page}
+                <button className="btn btn-dark p-0 mx-1">
+                    {page}
                 </button>
             )
         }
 
         return (
-            <button className="btn btn-outline-dark mx-1" onClick={() => changePage(page)} disabled={disabled}>
-                {text || page}
+            <button className="btn btn-outline-dark p-0 mx-1" onClick={() => changePage(page)} disabled={disabled}>
+                {page}
+            </button>
+        )
+    }
+}
+
+// Prev/next button
+class TextButton extends PureComponent {
+    render() {
+        const { page, text, changePage, disabled } = this.props
+
+        return (
+            <button className="btn btn-dark pagination-btn" onClick={() => changePage(page)} disabled={disabled}>
+                {text}
             </button>
         )
     }
