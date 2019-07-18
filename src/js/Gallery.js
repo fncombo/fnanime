@@ -10,7 +10,7 @@ import Data from './Data'
 // Make a gallery for each rating which has matching anime
 export default class Gallery extends PureComponent {
     render() {
-        const { anime, openInfoBox, isDetailView} = this.props
+        const { anime, openInfoBox, isDetailView } = this.props
 
         // Count how many anime for each rating
         let ratingCounts = Array(11).fill(0)
