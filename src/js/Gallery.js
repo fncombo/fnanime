@@ -1,5 +1,5 @@
 // React
-import React, { PureComponent, Fragment } from 'react'
+import React, { Component, PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/Gallery.css'
@@ -8,7 +8,7 @@ import '../css/Gallery.css'
 import Data from './Data'
 
 // Make a gallery for each rating which has matching anime
-export default class Gallery extends PureComponent {
+export default class Gallery extends Component {
     render() {
         const { anime, openInfoBox, isDetailView } = this.props
 

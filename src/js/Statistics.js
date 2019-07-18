@@ -3,7 +3,7 @@ import FileSize from 'filesize'
 import { round as Round } from 'math-precision'
 
 // React
-import React, { PureComponent, Fragment } from 'react'
+import React, { Component, PureComponent, Fragment } from 'react'
 
 // Style
 import '../css/Statistics.css'
@@ -15,7 +15,7 @@ import Data from './Data'
 const add = (a, b) => a + b
 
 // Show all the ratings, number of anime per rating, and other totals
-export default class Statistics extends PureComponent {
+export default class Statistics extends Component {
     totals(data, countOnly) {
         const { anime } = this.props
 
