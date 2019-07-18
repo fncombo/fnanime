@@ -49,7 +49,7 @@ export default class Filters extends Component {
                     </span>
                 </div>
                 <div className="col-1 mt-3 d-flex">
-                    <button className="btn btn-primary flex-grow-1" onClick={reset}>Reset</button>
+                    <button className="btn btn-dark flex-grow-1" onClick={reset}>Reset</button>
                 </div>
             </div>
         )
@@ -73,7 +73,7 @@ class FilterGroup extends Component {
 
                         return (
                             <button
-                                className={`btn ${currentlySelected ? 'btn-secondary' : 'btn-outline-secondary'}`}
+                                className={`btn ${currentlySelected ? 'btn-dark' : 'btn-outline-dark'}`}
                                 onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
                                 key={filterValue}
                             >

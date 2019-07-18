@@ -10,10 +10,10 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-@supports (backdrop-filter: blur(10px)) {
+@supports (backdrop-filter: blur(20px)) {
     .fnheader {
         background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px) saturate(200%);
     }
 }
 

@@ -44,6 +44,10 @@ strong {
     font-weight: 600;
 }
 
+.text-gray {
+    color: hsl(0, 0%, 50%);
+}
+
 /* Progress bars */
 
 .progress.bg-secondary {
@@ -53,6 +57,7 @@ strong {
 /* Message box */
 
 #message {
+    background: rgba(0, 0, 0, 0.9);
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
@@ -70,12 +75,14 @@ strong {
     pointer-events: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
-    font-size: 1.25rem;
-    backdrop-filter: blur(10px);
+    font-size: 1.5rem;
 }
 
-#message.bg-black {
-    background: rgba(0, 0, 0, 0.75);
+@supports (backdrop-filter: blur(20px)) {
+    #message {
+        background: rgba(0, 0, 0, 0.666);
+        backdrop-filter: blur(20px) saturate(200%);
+    }
 }
 
 #message.show {

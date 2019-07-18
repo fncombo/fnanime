@@ -50,13 +50,13 @@
 }
 
 .gallery-tooltip {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     position: fixed;
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -64,10 +64,16 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    backdrop-filter: blur(10px);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s ease-in-out 0.15s, opacity 0.15s ease-in-out;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .gallery-tooltip {
+        background: rgba(0, 0, 0, 0.666);
+        backdrop-filter: blur(20px) saturate(200%);
+    }
 }
 
 .gallery-item:hover .gallery-tooltip {

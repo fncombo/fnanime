@@ -69,7 +69,7 @@ class Data {
             descriptions: {
                 false: 'All Ratings',
                 null: 'black',
-                10:'10 \u2013 Masterpiece / Favourite',
+                10:'10 \u2013 Masterpiece',
                 9: '9 \u2013 Great',
                 8: '8 \u2013 Very Good',
                 7: '7 \u2013 Good',

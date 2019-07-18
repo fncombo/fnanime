@@ -50,7 +50,7 @@ class TitleColumn extends PureComponent {
                 <span className="ml-3 text-truncate">
                     {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                 </span>
-                <span className="text-secondary ml-3">
+                <span className="text-gray ml-3">
                     {Data.filters.type.descriptions[anime.actualType]}
                 </span>
             </div>

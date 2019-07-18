@@ -120,7 +120,7 @@ export default class InfoBox extends Component {
                                         <span className="text-warning">
                                             {Array(anime.rating).fill('★')}
                                         </span>
-                                        <span className="text-secondary">
+                                        <span className="text-gray">
                                             {Array(10 - anime.rating).fill('★')}
                                         </span>
                                     </h3>
@@ -192,7 +192,7 @@ export default class InfoBox extends Component {
                                             <li>
                                                 <strong>Storage Size: </strong>
                                                 {anime.size ? FileSize(anime.size) : 'Not Downloaded'}
-                                                {(anime.size && anime.episodes > 1) && <span className="text-secondary"> &ndash; average {FileSize(anime.size / anime.episodes)} per episode</span>}
+                                                {(anime.size && anime.episodes > 1) && <span className="text-gray"> &ndash; average {FileSize(anime.size / anime.episodes)} per episode</span>}
                                             </li>
                                         }
                                         <li>
@@ -269,7 +269,7 @@ class Duration extends PureComponent {
             return 'Unknown'
         }
 
-        return <Fragment>{PrettyTime(duration * episodes, 'm')} {episodes > 1 && <span className="text-secondary">&ndash; {PrettyTime(duration, 'm')} per episode</span>}</Fragment>
+        return <Fragment>{PrettyTime(duration * episodes, 'm')} {episodes > 1 && <span className="text-gray">&ndash; {PrettyTime(duration, 'm')} per episode</span>}</Fragment>
     }
 }
 
@@ -292,11 +292,11 @@ class WatchTime extends PureComponent {
 
         // If rewatched anime or it's a movie, say how many total times watched
         if (rewatchCount || (episodesWatched && episodes === 1)) {
-            watchTime = <Fragment>{watchTime} <span className="text-secondary"> &ndash; watched {rewatchCount + 1} {rewatchCount + 1 > 1  ? 'times' : 'time'}</span></Fragment>
+            watchTime = <Fragment>{watchTime} <span className="text-gray"> &ndash; watched {rewatchCount + 1} {rewatchCount + 1 > 1  ? 'times' : 'time'}</span></Fragment>
 
         // Otherwsie say how many episodes out of total have watched
         } else if (episodesWatched) {
-            watchTime = <Fragment>{watchTime} <span className="text-secondary"> &ndash; {episodesWatched}/{episodes || '?'} episodes</span></Fragment>
+            watchTime = <Fragment>{watchTime} <span className="text-gray"> &ndash; {episodesWatched}/{episodes || '?'} episodes</span></Fragment>
         }
 
         return watchTime

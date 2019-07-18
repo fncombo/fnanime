@@ -2,12 +2,9 @@
     width: 2.703125rem;
 }
 
-.pagination div {
-    flex: 33% 0 0;
-}
-
-.pagination div:not(.justify-content-center) .btn {
+.pagination-prev-next .btn {
     width: auto;
+    margin: 0 !important;
 }
 
 .btn-blank {

@@ -105,7 +105,7 @@ export default class Page extends Component {
                 apiUpdated: true,
             })
 
-            this.showMessage('Updated!', 1500, 'success')
+            this.showMessage('Updated!', 3000, 'success')
         })
     }
 
@@ -116,7 +116,7 @@ export default class Page extends Component {
         ).then(apiData => {
             if (apiData.hasOwnProperty('error')) {
                 console.error('API responded with an error:', apiData.error)
-                this.showMessage('Error loading data from MyAnimeList.net', 1500, 'danger')
+                this.showMessage('Error loading data from MyAnimeList.net', 3000, 'danger')
                 return
             }
 
@@ -125,18 +125,24 @@ export default class Page extends Component {
 
             // Since API only does 300 entries per responce, keep trying next page until we get everything
             if (apiData.anime.length === 300) {
-                this.getApiData(page + 1, callback)
+                //  API requires some delay between requests
+                setTimeout(() => {
+                    this.getApiData(page + 1, callback)
+                }, 2000)
             } else {
                 callback()
             }
         }, error => {
             console.error('Error while fetching API:', error)
-            this.showMessage('Error loading data from MyAnimeList.net', 1500, 'danger')
+            this.showMessage('Error loading data from MyAnimeList.net', 3000, 'danger')
         })
     }
 
     // Show a small message in the corner of the page
     showMessage(text, duration = false, status = 'black') {
+        // No colours for now
+        status = ''
+
         this.setState({
             messageClasses: `show bg-${status}`,
             messageText: text,
