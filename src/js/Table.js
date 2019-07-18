@@ -22,7 +22,7 @@ export default class Table extends Component {
             const tableFirstRow = document.querySelector('.table .table-row:not(.table-header)').getBoundingClientRect()
 
             // If they passed each other, the header is stuck
-            if (tableHeader.y > tableFirstRow.y) {
+            if (tableHeader.y + tableHeader.height > tableFirstRow.y) {
                 this.setState({
                     stuck: true,
                 })
