@@ -114,6 +114,12 @@ class DataColumns extends PureComponent {
                 }
 
                 {Data.getColumnVisibility(9, isDetailView) &&
+                    <div className={`table-column text-${Data.getFileQualityColor(anime.fileQuality)}`} style={{ flexBasis: Data.getColumnSize(9) }}>
+                        {anime.fileQuality || <Fragment>&ndash;</Fragment>}
+                    </div>
+                }
+
+                {Data.getColumnVisibility(10, isDetailView) &&
                     <SizeColumns totalSize={anime.size} episodeSize={anime.episodeSize} />
                 }
             </Fragment>
@@ -128,7 +134,7 @@ class SizeColumns extends PureComponent {
 
         // Same size if only 1 episode, merge into a single cell
         if (totalSize === episodeSize) {
-            const flexBasis = parseInt(Data.getColumnSize(9), 10) + parseInt(Data.getColumnSize(10), 10) + '%'
+            const flexBasis = parseInt(Data.getColumnSize(10), 10) + parseInt(Data.getColumnSize(11), 10) + '%'
 
             return (
                 <div className="table-column table-progress" style={{ flexBasis }}>
@@ -139,10 +145,10 @@ class SizeColumns extends PureComponent {
 
         return (
             <Fragment>
-                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(9) }}>
+                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(10) }}>
                     <SizeBar size={episodeSize} storageSizeLimits={Data.storageSizeLimits.episode} />
                 </div>
-                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(10) }}>
+                <div className="table-column table-progress" style={{ flexBasis: Data.getColumnSize(11) }}>
                     <SizeBar size={totalSize} storageSizeLimits={Data.storageSizeLimits.total} />
                 </div>
             </Fragment>

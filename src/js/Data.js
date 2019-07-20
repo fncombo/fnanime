@@ -117,6 +117,15 @@ class Data {
                 480: 'danger',
                 360: 'danger',
             },
+            fileQuality: {
+                false: 0,
+                null: 0,
+                1080: 5,
+                720: 4,
+                576: 3,
+                480: 2,
+                360: 1,
+            },
             specialValuesProcess: values => {
                 // Reverse sort
                 return values.sort((a, b) => b - a)
@@ -139,6 +148,14 @@ class Data {
                 Web: 'warning',
                 DVD: 'warning',
             },
+            fileQuality: {
+                false: 0,
+                null: 0,
+                BD: 5,
+                TV: 4,
+                Web: 4,
+                DVD: 1,
+            },
         },
         videoCodec: {
             descriptions: {
@@ -153,6 +170,12 @@ class Data {
                 'H.265': 'success',
                 'H.264': 'warning',
             },
+            fileQuality: {
+                false: 0,
+                null: 0,
+                'H.265': 5,
+                'H.264': 4,
+            },
         },
         audioCodec: {
             descriptions: {
@@ -162,6 +185,7 @@ class Data {
                 DTS: 'DTS',
                 AAC: 'AAC',
                 AC3: 'AC3',
+                MPEG: 'MPEG',
             },
             colorCodes: {
                 false: '',
@@ -170,6 +194,16 @@ class Data {
                 DTS: 'success',
                 AAC: 'warning',
                 AC3: 'warning',
+                MPEG: 'warning',
+            },
+            fileQuality: {
+                false: 0,
+                null: 0,
+                FLAC: 5,
+                DTS: 5,
+                AAC: 4,
+                AC3: 3,
+                MPEG: 3,
             },
         },
     }
@@ -215,7 +249,7 @@ class Data {
         title: {
             text: 'Title',
             defaultSorting: 'asc',
-            size: '28%',
+            size: '23%',
             detailViewOnly: false,
         },
         status: {
@@ -266,6 +300,12 @@ class Data {
             size: this.smallColumn,
             detailViewOnly: true,
         },
+        fileQuality: {
+            text: 'Quality',
+            defaultSorting: 'desc',
+            size: this.smallColumn,
+            detailViewOnly: true,
+        },
         episodeSize: {
             text: 'Episode Size',
             defaultSorting: 'desc',
@@ -285,6 +325,7 @@ class Data {
         Object.keys(this.animeObject).forEach(animeId => {
             const anime = this.animeObject[animeId]
             anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : null
+            anime.fileQuality = this.getFileQuality(anime)
         }, this)
 
         // Only the anime entries for sorting
@@ -409,6 +450,48 @@ class Data {
         }
 
         return parseInt(duration, 10)
+    }
+
+    // Calculate the file quality of an anime based on the video and audio
+    getFileQuality(anime) {
+        let measuredStats = 0
+        let totalMeasure = 0
+
+        Object.entries(anime).forEach(([key, value]) => {
+            if (value === false || value === null) {
+                return
+            }
+
+            if (!this.filters.hasOwnProperty(key) || !this.filters[key].hasOwnProperty('fileQuality') || !this.filters[key].fileQuality.hasOwnProperty(value)) {
+                return
+            }
+
+            measuredStats++
+            totalMeasure += this.filters[key].fileQuality[value]
+        })
+
+        if (!measuredStats) {
+            return 0
+        }
+
+        return totalMeasure / measuredStats
+    }
+
+    // Get the colour for a given file quality
+    getFileQualityColor(fileQuality) {
+        if (!fileQuality) {
+            return 'black'
+        }
+
+        if (fileQuality <= 3) {
+            return 'danger'
+        }
+
+        if (fileQuality <= 4.5) {
+            return 'warning'
+        }
+
+        return 'success'
     }
 
     // Get the previous or next anime in the current results list
