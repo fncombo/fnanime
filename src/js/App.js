@@ -160,7 +160,7 @@ export default class Page extends Component {
 
     // Update search, sort and filters (or refresh anime results if no params)
     update(action, ...args) {
-        let newState = Object.assign({}, this.state)
+        const newState = Object.assign({}, this.state)
 
         // Updating a filter value
         if (args.length === 2) {

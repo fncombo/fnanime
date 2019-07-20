@@ -13,7 +13,7 @@ export default class Gallery extends Component {
         const { anime, openInfoBox, isDetailView } = this.props
 
         // Count how many anime for each rating
-        let ratingCounts = Array(11).fill(0)
+        const ratingCounts = Array(11).fill(0)
         anime.forEach(anime => ratingCounts[anime.rating]++)
 
         // Only show ratings which have anime, and exclude all non-rated anime

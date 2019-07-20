@@ -261,34 +261,34 @@ class NavigationButton extends PureComponent {
 // Display the total duration of the anime, and per episode duration
 class Duration extends PureComponent {
     render() {
-        let { duration, episodes } = this.props
+        const { duration, episodes } = this.props
 
-        duration = Data.convertDuration(duration)
+        const convertedDuration = Data.convertDuration(duration)
 
-        if (!duration || !episodes) {
+        if (!convertedDuration || !episodes) {
             return 'Unknown'
         }
 
-        return <Fragment>{PrettyTime(duration * episodes, 'm')} {episodes > 1 && <span className="text-gray">&ndash; {PrettyTime(duration, 'm')} per episode</span>}</Fragment>
+        return <Fragment>{PrettyTime(convertedDuration * episodes, 'm')} {episodes > 1 && <span className="text-gray">&ndash; {PrettyTime(convertedDuration, 'm')} per episode</span>}</Fragment>
     }
 }
 
 // Display the total watch time of this anime based on episodes watched
 class WatchTime extends PureComponent {
     render() {
-        let { duration, episodes, episodesWatched, rewatchCount } = this.props
+        const { duration, episodes, episodesWatched, rewatchCount } = this.props
 
-        duration = Data.convertDuration(duration)
+        const convertedDuration = Data.convertDuration(duration)
 
         if (!episodesWatched) {
             return 'None'
         }
 
-        if (!duration) {
+        if (!convertedDuration) {
             return 'Unknown'
         }
 
-        let watchTime = PrettyTime(duration * episodesWatched * (rewatchCount + 1))
+        let watchTime = PrettyTime(convertedDuration * episodesWatched * (rewatchCount + 1))
 
         // If rewatched anime or it's a movie, say how many total times watched
         if (rewatchCount || (episodesWatched && episodes === 1)) {

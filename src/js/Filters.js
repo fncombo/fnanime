@@ -12,18 +12,38 @@ export default class Filters extends Component {
     render() {
         const { anime, searchQuery, update, reset, activeFilters, isDetailView } = this.props
 
+        // Array of names of all filters
+        const filterNames = Object.keys(Data.filters)
+
+        // Make a default nested object of filter values for each filter name that starts counting at 0
+        const filterCounts = filterNames.reduce((object, filterName) => {
+            object[filterName] = Data.filters[filterName].values.reduce((object, filterValue) => {
+                object[filterValue] = 0
+                return object
+            }, {})
+
+            return object
+        }, {})
+
+        // Count how many anime match each filter
+        anime.forEach(anime => {
+            filterNames.forEach(filterName => {
+                filterCounts[filterName][anime[filterName]]++
+            })
+        })
+
         return (
             <div className="row">
-                <FilterGroup anime={anime} filterName="rating" activeFilters={activeFilters} update={update} fullWidth={true} />
-                <FilterGroup anime={anime} filterName="type" activeFilters={activeFilters} update={update} />
-                {isDetailView && <FilterGroup anime={anime} filterName="resolution" activeFilters={activeFilters} update={update} />}
-                {!isDetailView && <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />}
+                <FilterGroup filterCounts={filterCounts} filterName="rating" activeFilters={activeFilters} update={update} fullWidth={true} />
+                <FilterGroup filterCounts={filterCounts} filterName="type" activeFilters={activeFilters} update={update} />
+                {isDetailView && <FilterGroup filterCounts={filterCounts} filterName="resolution" activeFilters={activeFilters} update={update} />}
+                {!isDetailView && <FilterGroup filterCounts={filterCounts} filterName="status" activeFilters={activeFilters} update={update} />}
                 {isDetailView &&
                     <Fragment>
-                        <FilterGroup anime={anime} filterName="status" activeFilters={activeFilters} update={update} />
-                        <FilterGroup anime={anime} filterName="videoCodec" activeFilters={activeFilters} update={update} />
-                        <FilterGroup anime={anime} filterName="source" activeFilters={activeFilters} update={update} />
-                        <FilterGroup anime={anime} filterName="audioCodec" activeFilters={activeFilters} update={update} />
+                        <FilterGroup filterCounts={filterCounts} filterName="status" activeFilters={activeFilters} update={update} />
+                        <FilterGroup filterCounts={filterCounts} filterName="videoCodec" activeFilters={activeFilters} update={update} />
+                        <FilterGroup filterCounts={filterCounts} filterName="source" activeFilters={activeFilters} update={update} />
+                        <FilterGroup filterCounts={filterCounts} filterName="audioCodec" activeFilters={activeFilters} update={update} />
                     </Fragment>
                 }
                 <div className={`mt-3 ${isDetailView ? 'col-3' : 'col-6'}`}>
@@ -39,7 +59,7 @@ export default class Filters extends Component {
                 {isDetailView &&
                     <div className="col-3 mt-3">
                         <select className="custom-select" value={activeFilters.subs} onChange={event => update('activeFilters', 'subs', event.target.value)}>
-                            <OptionGroup anime={anime} filterName="subs" />
+                            <OptionGroup filterCounts={filterCounts} filterName="subs" />
                         </select>
                     </div>
                 }
@@ -59,53 +79,68 @@ export default class Filters extends Component {
 // A group of buttons for a single filter
 class FilterGroup extends Component {
     render() {
-        const { anime, filterName, activeFilters, update, fullWidth } = this.props
+        const { filterCounts, filterName, activeFilters, update, fullWidth } = this.props
 
         return (
             <div className={fullWidth ? 'col-12 mt-3' : 'col-6 mt-3'}>
                 <div className="btn-group d-flex">
-                    {Data.filters[filterName].values.map(filterValue => {
-                        // Count how many of currently shown anime match this filter
-                        const count = filterValue === false ? 0 : anime.filter(anime => anime[filterName] === filterValue).length
-
-                        // Whether this button is currently selected
-                        const currentlySelected = activeFilters[filterName] === filterValue
-
-                        return (
-                            <button
-                                className={`btn ${currentlySelected ? 'btn-dark' : 'btn-outline-dark'}`}
-                                onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
-                                key={filterValue}
-                            >
-                                {Data.filters[filterName].descriptions[filterValue]}{!!count && <span> ({count})</span>}
-                            </button>
-                        )
-                    })}
+                    {Data.filters[filterName].values.map(filterValue =>
+                        <FilterButton
+                            filterName={filterName}
+                            filterValue={filterValue}
+                            count={filterCounts[filterName][filterValue]}
+                            currentlySelected={activeFilters[filterName] === filterValue}
+                            update={update}
+                            key={filterValue}
+                        />
+                    )}
                 </div>
             </div>
         )
     }
 }
 
-// A list of <option>s for use in <select>
-class OptionGroup extends Component {
+// A single filter button
+class FilterButton extends PureComponent {
     render() {
-        const { filterName, anime } = this.props
+        const { filterName, filterValue, count, currentlySelected, update } = this.props
 
-        let options = []
+        return (
+            <button
+                className={`btn ${currentlySelected ? 'btn-dark' : 'btn-outline-dark'}`}
+                onClick={!currentlySelected ? () => update('activeFilters', filterName, filterValue) : undefined}
+                key={filterValue}
+            >
+                {Data.filters[filterName].descriptions[filterValue]}{!!count && <span> ({count})</span>}
+            </button>
+        )
+    }
+}
 
-        Data.filters[filterName].values.forEach(filterValue => {
+// A list of <option>s for use in <select>
+class OptionGroup extends PureComponent {
+    render() {
+        const { filterCounts, filterName } = this.props
+
+        return Data.filters[filterName].values.map(filterValue => {
             // Count how many of currently shown anime match this filter
-            const count = anime.filter(anime => anime[filterName] === filterValue).length
+            const count = filterCounts[filterName][filterValue]
 
-            options.push(
-                <option value={filterValue} key={filterValue}>
-                    {filterValue ? `${filterValue}${count > 0 ? ` (${count})` : ''}` : Data.filters[filterName].descriptions[filterValue]}
-                </option>
-            )
+            return !!count && <Option filterName={filterName} filterValue={filterValue} count={count} key={filterValue} />
         })
+    }
+}
 
-        return options
+// A single <option>
+class Option extends PureComponent {
+    render() {
+        const { filterName, filterValue, count } = this.props
+
+        return (
+            <option value={filterValue}>
+                {filterValue ? `${filterValue} (${count})` : Data.filters[filterName].descriptions[filterValue]}
+            </option>
+        )
     }
 }
 

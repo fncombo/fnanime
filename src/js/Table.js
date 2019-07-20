@@ -71,7 +71,7 @@ class TableHeaders extends PureComponent {
         const { update, activeSorting } = this.props
 
         // Ammending current sorting or sorting only the currently sorted column modifies existing sorting settings, otherwise create new settings
-        let newSorting = (ammend || (Object.keys(activeSorting).length === 1 && activeSorting.hasOwnProperty(column))) ? Object.assign({}, activeSorting) : {}
+        const newSorting = (ammend || (Object.keys(activeSorting).length === 1 && activeSorting.hasOwnProperty(column))) ? Object.assign({}, activeSorting) : {}
 
         // Check if this column is already being sorted, in which case reverse it, otherwise use default sorting for that column
         if (newSorting.hasOwnProperty(column)) {

@@ -20,7 +20,7 @@ export default class Statistics extends Component {
         const { anime } = this.props
 
         // Create a 2D array to store each status within each rating
-        let totals = [...Array(11)].map(() => Array(7).fill(0))
+        const totals = [...Array(11)].map(() => Array(7).fill(0))
 
         // Increment the number of anime or add up the data
         anime.forEach(anime => totals[anime.rating][anime.status] += countOnly ? 1 : anime[data])

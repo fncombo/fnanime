@@ -283,7 +283,7 @@ class Data {
     constructor() {
         // Process data
         Object.keys(this.animeObject).forEach(animeId => {
-            let anime = this.animeObject[animeId]
+            const anime = this.animeObject[animeId]
             anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : null
         }, this)
 
@@ -295,8 +295,7 @@ class Data {
             // Populate only the filter values which have any data to them
             let filterValues = this.animeArray
                 .map(anime => anime[filterName])
-                .filter((value, index, self) => self.indexOf(value) === index)
-                .filter(value => value !== false)
+                .filter((value, index, self) => self.indexOf(value) === index && value !== false)
                 .sort()
 
             // Apply any special processing for this filter
@@ -315,6 +314,9 @@ class Data {
 
         // Get the cookie related to showing detailed view
         this.isDetailView = localStorage.getItem('detailView') === 'true'
+
+        // Cache columns object as an array
+        this.columnsArray = Object.entries(this.columns)
     }
 
     // Set a cookie to show or not show detailed view
@@ -324,7 +326,7 @@ class Data {
 
     // Get the size of column by its index instead of property name
     getColumnSize(index) {
-        return Object.entries(this.columns)[index][1].size
+        return this.columnsArray[index][1].size
     }
 
     // Whether a column should only display in detail view

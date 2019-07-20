@@ -38,8 +38,8 @@ export default class Pagination extends PureComponent {
         const rightPage = currentPage + Data.defaults.pageButtons + 1
 
         // All pages to display
-        let pages = []
-        let buttons = []
+        const pages = []
+        const buttons = []
         let previousPage = false
 
         // Create the needed page numbers
