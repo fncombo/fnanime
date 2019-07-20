@@ -146,7 +146,7 @@ class Data {
                 BD: 'success',
                 TV: 'warning',
                 Web: 'warning',
-                DVD: 'warning',
+                DVD: 'danger',
             },
             fileQuality: {
                 false: 0,
