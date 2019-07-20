@@ -29,6 +29,9 @@ export default class Page extends Component {
         isDetailView: Data.isDetailView,
     }
 
+    // How many times API responded with an error and was re-tried to get data
+    apiRetries = 0
+
     constructor() {
         super()
 
@@ -114,9 +117,17 @@ export default class Page extends Component {
         fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`).then(response =>
             response.json()
         ).then(apiData => {
+            // If API responded with an error (e.g. too many requests), keep trying with increasing time between the tries
             if (apiData.hasOwnProperty('error')) {
-                console.error('API responded with an error:', apiData.error)
-                this.showMessage('Error loading data from MyAnimeList.net', 3000, 'danger')
+                console.warn('API responded with an error:', apiData.error)
+                console.log(`Retrying in ${this.retries * 2} seconds`)
+
+                this.retries++
+
+                setTimeout(() => {
+                    this.getApiData(page, callback)
+                }, this.retries * 2000)
+
                 return
             }
 
