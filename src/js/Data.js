@@ -366,8 +366,18 @@ class Data {
 
     // Update info about an anime
     updateAnime(animeId, newData) {
-        // Don't update is anime doesn't exist
+        // Don't update if anime doesn't exist
         if (!this.animeExists(animeId)) {
+            return
+        }
+
+        // Figure out if any data for this anime has changed
+        const changed = Object.entries(newData).some(([newDataName, newDataValue]) => {
+            return this.getAnime(animeId)[newDataName] !== newDataValue
+        })
+
+        // Do not update if all data is the same
+        if (!changed) {
             return
         }
 
