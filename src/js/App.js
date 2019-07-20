@@ -119,10 +119,10 @@ export default class Page extends Component {
         ).then(apiData => {
             // If API responded with an error (e.g. too many requests), keep trying with increasing time between the tries
             if (apiData.hasOwnProperty('error')) {
+                this.retries++
+
                 console.warn('API responded with an error:', apiData.error)
                 console.log(`Retrying in ${this.retries * 2} seconds`)
-
-                this.retries++
 
                 setTimeout(() => {
                     this.getApiData(page, callback)
