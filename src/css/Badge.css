@@ -11,3 +11,8 @@ a.badge {
 .modal li .badge {
     margin-left: 1rem;
 }
+
+.badge.btn {
+    cursor: pointer;
+    border: none;
+}

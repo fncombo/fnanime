@@ -15,10 +15,10 @@ export default class TableRow extends PureComponent {
         const { anime, searchQuery, openInfoBox, isDetailView } = this.props
 
         return (
-            <div className="table-row" onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}>
+            <a className="table-row" onClick={event => openInfoBox(anime.id, event)} key={anime.hash} href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer">
                 <TitleColumn anime={anime} searchQuery={searchQuery} />
                 <DataColumns anime={anime} isDetailView={isDetailView} />
-            </div>
+            </a>
         )
     }
 }
@@ -43,14 +43,14 @@ class TitleColumn extends PureComponent {
 
         return (
             <div
-                className={`table-column text-left text-nowrap pr-3 justify-content-start color-${Data.filters.status.colorCodes[anime.status]}`}
+                className={`table-column text-left text-nowrap pr-2 justify-content-start color-${Data.filters.status.colorCodes[anime.status]}`}
                 style={{ flexBasis: Data.getColumnSize(0) }}
             >
                 <img width="37" height="50" src={anime.img} alt={anime.title} />
-                <span className="ml-3 text-truncate">
+                <span className="ml-2 text-truncate" title={anime.title}>
                     {searchQuery.length ? <span dangerouslySetInnerHTML={this.highlightSearchQuery()} /> : anime.title}
                 </span>
-                <span className="text-gray ml-3">
+                <span className="text-gray ml-2">
                     {Data.filters.type.descriptions[anime.actualType]}
                 </span>
             </div>
@@ -85,7 +85,7 @@ class DataColumns extends PureComponent {
 
                 {Data.getColumnVisibility(4, isDetailView) &&
                     <div className="table-column" style={{ flexBasis: Data.getColumnSize(4) }}>
-                        {anime.subs || <Fragment>&ndash;</Fragment>}
+                        {<span className="text-truncate">{anime.subs}</span> || <Fragment>&ndash;</Fragment>}
                     </div>
                 }
 

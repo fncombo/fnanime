@@ -92,6 +92,12 @@
 
 .table-row {
     display: flex;
+    color: unset;
+}
+
+.table-row:hover {
+    color: unset;
+    text-decoration: none;
 }
 
 .table-row:nth-child(even) {

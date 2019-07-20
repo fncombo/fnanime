@@ -213,15 +213,8 @@ export default class Page extends Component {
 
     // Open the info box for the selected anime or open the anime link in a new tab with middle click
     openInfoBox(animeId, event) {
-        // Click was not left click or middle click
-        if (event && event.button > 1) {
-            return
-        }
-
-        // Open anime link in a new tab on middle click
-        if (event && event.button === 1) {
-            window.open(`https://myanimelist.net/anime/${animeId}/${Data.getAnime(animeId).url}`, '_blank')
-            return
+        if (event && event.button === 0) {
+            event.preventDefault()
         }
 
         // Open info box normally

@@ -46,9 +46,10 @@ class GalleryItem extends PureComponent {
         const { anime, openInfoBox, isDetailView } = this.props
 
         return (
-            <div
+            <a
                 className={`gallery-item ${isDetailView && !anime.size ? 'not-downloaded' : ''}`}
-                onMouseDown={event => openInfoBox(anime.id, event)} key={anime.hash}
+                onClick={event => openInfoBox(anime.id, event)} key={anime.hash}
+                href={`https://myanimelist.net/anime/${anime.id}/${anime.url}`} target="_blank" rel="noopener noreferrer"
             >
                 <div className="gallery-item-inner">
                     <img src={anime.img} alt={anime.title} />
@@ -60,7 +61,7 @@ class GalleryItem extends PureComponent {
                     </span>
                 </div>
                 <span className="gallery-tooltip">{anime.title}</span>
-            </div>
+            </a>
         )
     }
 }

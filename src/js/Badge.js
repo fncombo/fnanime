@@ -32,11 +32,7 @@ export default class Badge extends PureComponent {
         }
 
         if (isLink) {
-            // eslint-disable-next-line
-            return <a className={classes} href="#" title="View" onClick={event => {
-                event.preventDefault()
-                openInfoBox(animeId)}
-            }>{text}</a>
+            return <span className={`${classes} btn btn-${Data.filters.status.colorCodes[anime.status]} `} title="View" onClick={() => openInfoBox(animeId)}>{text}</span>
         }
 
         return <span className={classes}>{text}</span>
