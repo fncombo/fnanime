@@ -85,7 +85,7 @@ class DataColumns extends PureComponent {
 
                 {Data.getColumnVisibility(4, isDetailView) &&
                     <div className="table-column" style={{ flexBasis: Data.getColumnSize(4) }}>
-                        {<span className="text-truncate">{anime.subs}</span> || <Fragment>&ndash;</Fragment>}
+                        {anime.subs ? <span className="text-truncate">{anime.subs}</span> : <Fragment>&ndash;</Fragment>}
                     </div>
                 }
 
