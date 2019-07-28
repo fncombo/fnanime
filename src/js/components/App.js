@@ -109,10 +109,8 @@ function App() {
 
         // Update certain cached data from live API
         getApiData(1, () => {
-            console.log('ok?')
             dispatch({ type: ACTIONS.UPDATE_API_DATA })
         }, () => {
-            console.log('error?')
             dispatch({ type: ACTIONS.API_ERROR })
         })
     }, [apiUpdated])
