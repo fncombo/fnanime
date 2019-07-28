@@ -55,9 +55,14 @@ body {
 }
 
 /* Remove animations from buttons */
-.btn, .badge {
+.btn, .badge, .form-control {
     box-shadow: none !important;
     transition: none;
+}
+
+/* Style inputs */
+.form-control:active, .form-control:focus {
+    border-color: var(--dark)
 }
 
 /* Text */

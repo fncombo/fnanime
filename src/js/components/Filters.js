@@ -139,7 +139,7 @@ function OptionGroup({ filterName }) {
 
     return (
         <div className="col-3 mt-3">
-            <select className="custom-select" value={value} onChange={selectFilter}>
+            <select className="form-control custom-select" value={value} onChange={selectFilter}>
                 {Filters[filterName].values.map(filterValue =>
                     <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
                 )}
