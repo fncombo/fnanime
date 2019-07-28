@@ -45,7 +45,6 @@ function globalReducer(state, action) {
     case ACTIONS.UPDATE_API_DATA:
         return {
             ...state,
-            anime: getAnime(),
             apiUpdated: true,
         }
 
