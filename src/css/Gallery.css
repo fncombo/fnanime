@@ -1,85 +1,77 @@
-.gallery {
-    --img-size: 140px;
+/* Placeholder when the gallery is off screen */
+.gallery-placeholder {
+    height: 529rem;
 }
 
+/* Gallery container */
+.gallery {
+    --img-size: 165px;
+}
+
+/* Gallery image */
 .gallery img {
     height: calc(var(--img-size) * 1.4);
+    width: var(--img-size);
     pointer-events: none;
 }
 
-.gallery .not-downloaded {
+/* Not downloaded item style */
+.gallery .not-downloaded .gallery-item-inner {
     opacity: 0.3;
 }
 
+/* Grid of gallery items */
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 -0.5rem;
+    margin: 0 -15px;
 }
 
+/* Gallery item placeholder for when it shouldn't be rendered */
+.gallery-item-placeholder {
+    flex: 0 0 var(--img-size);
+    width: var(--img-size);
+    height: calc((var(--img-size) * 1.4) + 2rem);
+}
+
+/* Gallery item */
 .gallery-item {
     flex: 0 0 var(--img-size);
     width: var(--img-size);
     margin: 0.25rem;
-    transition-property: opacity;
-    transition-duration: 0.15s;
-    transition-timing-function: ease-in-out;
+    z-index: 1;
 }
 
-.gallery-item:hover {
-    opacity: 1;
-    z-index: 100;
+.gallery-item:hover  {
     text-decoration: none;
-    color: unset;
+    z-index: 100;
 }
 
+/* Inner container of gallery item */
 .gallery-item-inner {
     display: flex;
     flex-direction: column;
     border-radius: 0.25rem;
     cursor: pointer;
-    z-index: 1;
     transition-property: z-index, opacity, box-shadow, transform;
     transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
     overflow: hidden;
 }
 
-.gallery-item:hover .gallery-item-inner {
-    box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
-    transform: scale(1.4);
-}
-
-.gallery-tooltip {
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    position: fixed;
-    bottom: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s ease-in-out 0.15s, opacity 0.15s ease-in-out;
-}
-
-@supports (backdrop-filter: blur(20px)) {
-    .gallery-tooltip {
-        background: rgba(0, 0, 0, 0.666);
-        backdrop-filter: blur(20px) saturate(200%);
-    }
-}
-
-.gallery-item:hover .gallery-tooltip {
-    visibility: visible;
+.gallery-item:hover .gallery-item-inner  {
     opacity: 1;
-    transition: visibility 0s ease-in-out 0s, opacity 0.15s ease-in-out;
+    color: unset;
+    box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
+    transform: scale(1.5);
+}
+
+/* Style for items which are very close to the sides */
+.gallery-item.left {
+    transform-origin: left center;
+}
+
+.gallery-item.right {
+    transform-origin: right center;
 }

@@ -1,7 +1,18 @@
+/* Custom padding on the buttons */
 .btn-group .btn {
     padding: 0.5rem 0.25rem;
 }
 
-.btn-group .btn span {
+/* Fade out count indicator */
+.btn-group span {
     opacity: 0.75;
+}
+
+/* Wrap count indicator in brackets */
+.btn-group span::before {
+    content: ' (';
+}
+
+.btn-group span::after {
+    content: ')';
 }

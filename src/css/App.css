@@ -1,14 +1,4 @@
-html,
-body,
-noscript .container,
-noscript .row {
-    height: 100%;
-}
-
-[data-title] {
-    cursor: help;
-}
-
+/* Main style */
 body {
     --border-color: hsl(0, 0%, 80%);
     --border-color-half: hsla(0, 0%, 80%, 0.25);
@@ -21,6 +11,34 @@ body {
     overflow-x: hidden;
 }
 
+/* Different styling if can blur */
+@supports (backdrop-filter: blur(20px)) {
+    .modal-open::before {
+        content: '';
+        background: rgb(130, 180, 50);
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        z-index: 300;
+    }
+
+    .modal-open::after {
+        content: '';
+        background: rgb(80, 160, 240);
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 2px;
+        z-index: 300;
+    }
+}
+
+/* Modify containers */
 .container-fluid {
     min-width: 1200px;
 }
@@ -30,12 +48,19 @@ body {
     min-width: 1200px;
 }
 
+/* Lazy loading message */
+.alert-loading {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Remove animations from buttons */
 .btn, .badge {
     box-shadow: none !important;
+    transition: none;
 }
 
 /* Text */
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
@@ -49,14 +74,12 @@ strong {
 }
 
 /* Progress bars */
-
 .progress.bg-secondary {
     background: var(--border-color) !important;
 }
 
 /* Message box */
-
-#message {
+.message {
     background: rgba(0, 0, 0, 0.9);
     padding: 0.5rem 1rem;
     display: flex;
@@ -64,33 +87,35 @@ strong {
     align-items: center;
     border-radius: 0.25rem;
     position: fixed;
-    bottom: 5rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 300;
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out, background 0.15s ease-in-out;
     white-space: pre-wrap;
     text-align: center;
     pointer-events: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
     font-size: 1.5rem;
+    /* Weird visual bug with using opacity and backdrop filter together, so remove it before fading */
+    transition: opacity 0.15s ease-in-out, backdrop-filter 0s linear;
 }
 
 @supports (backdrop-filter: blur(20px)) {
-    #message {
-        background: rgba(0, 0, 0, 0.666);
+    .message {
+        background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(20px) saturate(200%);
     }
 }
 
-#message.show {
-    opacity: 1;
+.message.done {
+    transition-delay: 3s;
+    opacity: 0;
+    backdrop-filter: none;
 }
 
 /* Last updated times data */
-#updated {
+.updated-times {
     margin: 2rem auto;
     padding: 0;
     list-style: none;

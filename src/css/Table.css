@@ -1,22 +1,29 @@
+/* Table */
 .table {
     width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     border-top: 1px solid var(--border-color);
+    position: relative;
 }
 
-/* Header row */
+/* Sentinel element */
+.table-sentinel {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+/* Header */
 .table-header {
+    display: flex;
     position: sticky;
     top: 60px;
 }
 
-.table-row.table-header:hover {
-    background: none;
-}
-
+/* Page wide element to show the shadow when stuck */
 .table-header:before {
     background: rgba(255, 255, 255, 0.9);
     content: '';
@@ -31,14 +38,19 @@
     transition: box-shadow 0.15s ease-in-out;
 }
 
+/* Special style when the table header is stuck */
+.table-header.stuck:before {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
 @supports (backdrop-filter: blur(20px)) {
-    .table-header-stuck:before {
+    .table-header.stuck:before {
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(20px) saturate(200%);
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     }
 }
 
+/* Header columns */
 .table-header .table-column {
     text-align: center;
     position: relative;
@@ -46,6 +58,7 @@
     user-select: none;
     z-index: 2;
     font-weight: 600;
+    padding: 0 5px;
 
     --arrow-size: 6px;
 }
@@ -59,18 +72,14 @@
     padding-left: calc(40px + 1rem);
 }
 
-.table-header .table-column:not(:first-child) {
-    padding-right: 0;
-    padding-left: 0;
-}
-
+/* Arrow indicators for sorted table columns */
 .table-header .table-column:before {
     content: '';
     height: 0;
     width: 0;
     border: var(--arrow-size) solid transparent;
     position: absolute;
-    right: calc(50% - var(--arrow-size));
+    left: calc(50% - var(--arrow-size));
 }
 
 .table-header .table-column.sort-asc:before {
@@ -83,36 +92,51 @@
     top: var(--arrow-size);
 }
 
-.table-header .table-column:first-child:before,
-.table-header .table-column:first-child:after {
+.table-header .table-column:first-child:before {
     left: calc(40px + 1.75rem);
 }
 
-/* Normal row */
+.table-header .table-column:after {
+    content: attr(data-index);
+    width: 20px;
+    position: absolute;
+    left: calc(50% - (var(--arrow-size) * 5));
+    top: 1px;
+    font-size: 10px;
+    color: var(--primary);
+    text-align: right;
+}
 
+.table-header .table-column:first-child:after {
+    left: calc(40px - (var(--arrow-size) * 4) + 1.75rem);
+}
+
+/* Normal row */
 .table-row {
     display: flex;
     color: unset;
 }
 
-.table-row:hover {
-    color: unset;
-    text-decoration: none;
+.table-row:nth-child(odd) {
+    background: var(--row-color);
 }
 
-.table-row:nth-child(even) {
+.table-row:nth-child(odd) {
     background: var(--row-color);
+}
+
+.table-row:hover {
+    background: var(--row-color-hover);
+    cursor: pointer;
+    color: unset;
+    text-decoration: none;
 }
 
 .table-header + .table-row {
     border-top: 1px solid var(--border-color);
 }
 
-.table-row:hover {
-    background: var(--row-color-hover);
-    cursor: pointer;
-}
-
+/* Normal column */
 .table-column {
     height: 50px;
     display: flex;
@@ -123,10 +147,13 @@
     overflow: hidden;
 }
 
-.table-reduced .table-column:first-child {
-    flex-grow: 1;
+/* Image and title column */
+.table-column:first-child {
+    text-align: left;
+    justify-content: flex-start;
 }
 
+/* Highlighted search text */
 .table-column strong {
     display: inline-block;
     white-space: pre;
@@ -136,6 +163,7 @@
     border-radius: 0.25rem;
 }
 
+/* Color code highlighted search text according to anime status */
 .table-column.color-success strong {
     background-color: var(--success);
 }
@@ -160,15 +188,19 @@
     background-color: var(--secondary);
 }
 
-.table-row:hover .link  {
-    text-decoration: underline;
-}
-
+/* Anime image */
 .table img {
     flex: 0 0 37px;
+    width: 37px;
     height: 100%;
 }
 
+/* Size progress column don't wrap long numbers */
+.table-progress {
+    white-space: nowrap;
+}
+
+/* Size progress bars */
 .table .progress {
     width: 100%;
     height: 4px;

@@ -1,7 +1,21 @@
+/* Placeholder when statistics are off screen */
+.statistics-placeholder {
+    height: 32rem;
+}
+
+/* Border around the table */
+.statistics {
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+}
+
+/* Striped rows */
 .row-striped:nth-of-type(even) {
     background-color: var(--row-color);
 }
 
+/* Size of the progress bars */
 .statistics .progress {
     height: 0.5rem;
 }
