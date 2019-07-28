@@ -137,7 +137,10 @@ function App() {
                 </ul>
             </div>
             <div className={`message ${apiUpdated ? 'done' : ''}`}>
-                {apiUpdated ? (apiError ? 'Error contacting API, update failed!' : 'Updated!') : <>Loading latest information &hellip;</>}
+                {apiUpdated ?
+                    (apiError ? 'Error contacting API, update failed!' : 'Updated!') :
+                    <>Loading latest information &hellip;</>
+                }
             </div>
         </GlobalState.Provider>
     )
