@@ -85,7 +85,7 @@ strong {
 
 /* Message box */
 .message {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;

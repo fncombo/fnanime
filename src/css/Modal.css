@@ -11,13 +11,13 @@
 }
 
 .modal-open .modal-overlay {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 @supports (backdrop-filter: blur(20px)) {
     .modal-overlay {
         backdrop-filter: blur(0) saturate(100%);
-        transition: background 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+        transition: background 0.15s ease-in-out;
     }
 
     .modal-open .modal-overlay {
@@ -86,11 +86,11 @@
 }
 
 .modal-nav.prev:hover svg {
-    transform: translateX(-0.75rem) scale(1.5);
+    transform: translateX(-2.5rem) scale(1.25);
 }
 
 .modal-nav.next:hover svg {
-    transform: translateX(0.75rem) scale(1.5);
+    transform: translateX(2.5rem) scale(1.25);
 }
 
 .modal-nav img {
@@ -100,7 +100,7 @@
 
 .modal-nav:hover img {
     flex: 0 0 74px;
-    transform: scale(1.5);
+    transform: scale(1.75);
 }
 
 /* SVG arrow colors */
