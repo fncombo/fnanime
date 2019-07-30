@@ -40,6 +40,7 @@
     flex: 0 0 var(--img-size);
     width: var(--img-size);
     margin: 0.25rem;
+    transition: z-index 0.15s ease-in-out;
     z-index: 1;
 }
 
@@ -54,7 +55,7 @@
     flex-direction: column;
     border-radius: 0.25rem;
     cursor: pointer;
-    transition-property: z-index, opacity, box-shadow, transform;
+    transition-property: opacity, box-shadow, transform;
     transition-duration: 0.15s;
     transition-timing-function: ease-in-out;
     overflow: hidden;
@@ -68,10 +69,10 @@
 }
 
 /* Style for items which are very close to the sides */
-.gallery-item.left {
+.gallery-item.left .gallery-item-inner {
     transform-origin: left center;
 }
 
-.gallery-item.right {
+.gallery-item.right .gallery-item-inner {
     transform-origin: right center;
 }
