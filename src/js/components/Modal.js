@@ -67,15 +67,36 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
  * All the modal HTML including managing what it's displaying and its animations.
  */
 function Modal({ closeModal: closeCallback, ...props }) {
+    const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ anime, setAnime ] = useState(props)
     const ref = useRef(null)
+
+    // Switch between next and previous anime using arrow keys and close the modal using esc
+    const keyHandler = ({ key }) => {
+        if (key === 'Escape') {
+            closeModal()
+        }
+
+        if (key !== 'ArrowLeft' && key !== 'ArrowRight') {
+            return
+        }
+
+        const direction = key === 'ArrowLeft' ? ACTIONS.PREV_ANIME : ACTIONS.NEXT_ANIME
+        const adjacentAnime = getAdjacentAnime(allAnime, anime.id, direction)
+
+        if (adjacentAnime) {
+            changeAnime(adjacentAnime)
+        }
+    }
 
     // Add and remove the modal open classes from the body
     useEffect(() => {
         document.body.classList.add('modal-open')
+        window.addEventListener('keyup', keyHandler)
 
         return () => {
             document.body.classList.remove('modal-open')
+            window.removeEventListener('keyup', keyHandler)
         }
     })
 
