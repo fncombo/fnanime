@@ -212,7 +212,7 @@ function TitleColumn({ title, img, status, actualType, highlight }) {
     const highlightTitle = () => {
         return highlight.reduce((newTitle, indices) => {
             return reactStringReplace(newTitle, title.slice(indices[0], indices[1] + 1), (match, i) =>
-                (match.length === 1 || match === ' ') ? match : <strong key={match + i}>{match}</strong>
+                <strong key={match + i}>{match}</strong>
             )
         }, title)
     }

@@ -13,13 +13,12 @@ let AnimeArray = Object.values(AnimeObject)
 
 // Fuzy search options
 var FuseOptions = {
-    tokenize: true,
     includeMatches: true,
     threshold: 0.2,
     location: 0,
-    distance: 10,
+    distance: 100,
     maxPatternLength: 32,
-    minMatchCharLength: 1,
+    minMatchCharLength: 2,
     keys: [
         'title',
     ],
