@@ -32,6 +32,11 @@ const modalInitialState = {
     apiData: {},
 }
 
+// Function to process title synonyms
+function formatSynonyms(synonyms) {
+    return synonyms.join(', ')
+}
+
 /**
  * Makes any element a button to open a portal to a modal.
  */
@@ -216,19 +221,19 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <li>
                             <strong>English Title: </strong>
                             <LoadingInline>
-                                <ApiData property="title_english" fallback={<>&ndash;</>} />
+                                <ApiData property="title_english" />
                             </LoadingInline>
                         </li>
                         <li>
                             <strong>Japanese Title: </strong>
                             <LoadingInline>
-                                <ApiData property="title_japanese" fallback={<>&ndash;</>} />
+                                <ApiData property="title_japanese" />
                             </LoadingInline>
                         </li>
                         <li>
                             <strong>Synonyms: </strong>
                             <LoadingInline>
-                                <ApiData property="title_synonyms" fallback={<>&ndash;</>} />
+                                <ApiData property="title_synonyms" process={formatSynonyms} />
                             </LoadingInline>
                         </li>
                     </ul>
@@ -381,10 +386,11 @@ function LoadingParagraph({ children }) {
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data or the fallback.
  */
-function ApiData({ property, fallback = '' }) {
+function ApiData({ property, fallback = <>&mdash;</>, process }) {
     const { modalState: { apiData } } = useContext(ModalState)
+    const data = getNestedProperty.apply(undefined, [apiData, ...property.split('.')])
 
-    return getNestedProperty.apply(undefined, [apiData, ...property.split('.')]) || fallback
+    return (process ? process(data) : data) || fallback
 }
 
 /**
