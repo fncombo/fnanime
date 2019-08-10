@@ -1,6 +1,16 @@
 /* Custom padding on the buttons */
 .btn-group .btn {
     padding: 0.5rem 0.25rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Half opacity without the opacity */
+.btn-group .btn-fade {
+    border-color: #9a9da0;
+    color: #9a9da0;
+    position: relative;
+    z-index: 1;
 }
 
 /* Fade out count indicator */

@@ -114,7 +114,10 @@ function FilterButton({ filterName, filterValue }) {
     const count = filterCounts[filterName][filterValue]
 
     return (
-        <button className={`btn ${isSelected ? 'btn-dark' : 'btn-outline-dark'}`} onClick={selectFilter}>
+        <button
+            className={`btn ${isSelected ? 'btn-dark' : 'btn-outline-dark'} ${filterValue && !count ? 'btn-fade' : ''}`}
+            onClick={selectFilter}
+        >
             {Filters[filterName].descriptions[filterValue]}
             {!!count && <span>{count}</span>}
         </button>
