@@ -33,7 +33,7 @@ const initialState = {
     searchQuery: '',
     activeSorting: {...Defaults.sorting},
     activeFilters: {...Defaults.filters},
-    apiUpdated: false,
+    apiUpdated: process.env.NODE_ENV === 'development',
     apiError: false,
 }
 
@@ -104,6 +104,10 @@ function App() {
 
     useEffect(() => {
         if (apiUpdated) {
+            return
+        }
+
+        if (process.env.NODE_ENV === 'development') {
             return
         }
 
