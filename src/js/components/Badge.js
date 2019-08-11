@@ -22,8 +22,8 @@ function Badge({ showRating, isLink, ...anime }) {
 
     let text = Filters.status.descriptions[anime.status]
 
-    // Show episode progress if status is "watching"
-    if (anime.status === 1) {
+    // Show episode progress if number of watched episodes is different from total and not zero
+    if (anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) {
         text = <>{text} &ndash; {anime.episodesWatched}/{anime.episodes || '?'}</>
     }
 
