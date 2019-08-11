@@ -13,6 +13,12 @@
     z-index: 1;
 }
 
+.btn-group .btn-fade:hover {
+    border-color: #343a40;
+    color: #fff;
+    z-index: 20;
+}
+
 /* Fade out count indicator */
 .btn-group span {
     opacity: 0.75;
