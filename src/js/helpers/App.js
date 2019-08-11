@@ -1,5 +1,5 @@
 // Data
-import { updateAnimeFromApiData } from '../data/Data'
+import { updateAnimeFromApiData, populateFilterDefaults } from '../data/Data'
 
 // Count of API retries due to errors
 let apiRetries = 0
@@ -46,6 +46,8 @@ function getApiData(page = 1, callback, errorCallback) {
                     episodesWatched: anime.watched_episodes,
                 })
             })
+
+            populateFilterDefaults()
 
             callback()
         }

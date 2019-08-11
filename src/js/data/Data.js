@@ -43,27 +43,31 @@ const Defaults = {
 Object.keys(AnimeObject).forEach(processAnimeData)
 
 // Populate default filter data and filter values
-Object.keys(Filters).forEach(filterName => {
-    // Populate only the filter values which have some data to them
-    let filterValues = AnimeArray
-        .map(anime => anime[filterName])
-        .filter((value, index, self) => self.indexOf(value) === index && value !== false)
-        .sort()
+function populateFilterDefaults() {
+    Object.keys(Filters).forEach(filterName => {
+        // Populate only the filter values which have some data to them
+        let filterValues = AnimeArray
+            .map(anime => anime[filterName])
+            .filter((value, index, self) => self.indexOf(value) === index && value !== false)
+            .sort()
 
-    // Apply any special processing for this filter
-    if (Filters[filterName].hasOwnProperty('specialValuesProcess')) {
-        filterValues = Filters[filterName].specialValuesProcess(filterValues)
-    }
+        // Apply any special processing for this filter
+        if (Filters[filterName].hasOwnProperty('specialValuesProcess')) {
+            filterValues = Filters[filterName].specialValuesProcess(filterValues)
+        }
 
-    // Add the "all" option at the start
-    filterValues.unshift(false)
+        // Add the "all" option at the start
+        filterValues.unshift(false)
 
-    // Set the default value for this filter
-    Defaults.filters[filterName] = false
+        // Set the default value for this filter
+        Defaults.filters[filterName] = false
 
-    // Populate filter values in filter data
-    Filters[filterName].values = filterValues
-})
+        // Populate filter values in filter data
+        Filters[filterName].values = filterValues
+    })
+}
+
+populateFilterDefaults()
 
 /**
  * Add data to an anime that didn't need to be downloaded because it can be calcualted on the fly.
@@ -184,4 +188,5 @@ export {
     Defaults,
     getAnime,
     updateAnimeFromApiData,
+    populateFilterDefaults,
 }
