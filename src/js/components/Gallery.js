@@ -11,9 +11,6 @@ import '../../css/Gallery.css'
 import { GlobalState } from '../data/GlobalState'
 import { Filters } from '../data/Filters'
 
-// Helpers
-import { getAnimeLink } from '../helpers/Generic'
-
 // Components
 import ModalContainer from './Modal'
 
@@ -108,7 +105,7 @@ function GalleryItem(anime) {
         <ModalContainer
             anime={anime}
             className={`gallery-item ${anime.size ? '' : 'not-downloaded'} ${hoverClass}`}
-            href={getAnimeLink(anime.id, anime.url)}
+            href={anime.url}
             target="_blank"
             rel="noopener noreferrer"
             onMouseOver={hover}

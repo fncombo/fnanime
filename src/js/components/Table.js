@@ -16,7 +16,6 @@ import { Columns, SortingOrders, StorageSizeLimits } from '../data/Table'
 import { Filters } from '../data/Filters'
 
 // Helpers
-import { getAnimeLink } from '../helpers/Generic'
 import { formatOrdinal, getColumnTextColor } from '../helpers/Table'
 
 // Components
@@ -166,7 +165,7 @@ function Row(anime) {
         <ModalContainer
             anime={anime}
             className="table-row"
-            href={getAnimeLink(anime.id, anime.url)}
+            href={anime.url}
             target="_blank"
             rel="noopener noreferrer"
         >

@@ -17,7 +17,6 @@ import { AnimeObject } from '../data/Data'
 import { Filters } from '../data/Filters'
 
 // Helpers
-import { getAnimeLink } from '../helpers/Generic'
 import { getNestedProperty, replaceSpecialChars, convertDuration, getAdjacentAnime, getAnimeApiData } from '../helpers/Modal'
 
 // Components
@@ -142,7 +141,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                 <div className={`modal-content bg-${Filters.status.colorCodes[anime.status]}`} ref={ref}>
                     <div className="modal-header border-0 align-items-center">
                         <h5 className="modal-title">
-                            <a href={getAnimeLink(anime.id, anime.url)} target="_blank" rel="noopener noreferrer">
+                            <a href={anime.url} target="_blank" rel="noopener noreferrer">
                                 {anime.title}
                             </a>
                         </h5>
@@ -212,7 +211,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <Badge {...anime} />
                     </div>
                     <hr />
-                    <a href={getAnimeLink(anime.id, anime.url)} target="_blank" rel="noopener noreferrer">
+                    <a href={anime.url} target="_blank" rel="noopener noreferrer">
                         View on MyAnimeList.net
                     </a>
                 </div>
