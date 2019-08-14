@@ -117,8 +117,8 @@ function GalleryItem(anime) {
                 <img src={anime.img} alt={anime.title} />
                 <span className={`badge p-2 rounded-0 rounded-bottom badge-${Filters.status.colorCodes[anime.status]}`}>
                     {anime.episodes > 1 ?
-                        <>{Filters.type.descriptions[anime.actualType]} &ndash; {anime.episodes} ep</> :
-                        Filters.type.descriptions[anime.actualType]
+                        <>{Filters.type.descriptions[anime.type]} &ndash; {anime.episodes} ep</> :
+                        Filters.type.descriptions[anime.type]
                     }
                 </span>
             </div>

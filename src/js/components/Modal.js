@@ -202,7 +202,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     </LoadingText>
                     <hr />
                     <p className="mb-0">
-                        {Filters.type.descriptions[anime.actualType]}
+                        {Filters.type.descriptions[anime.type]}
                         <Episodes episodes={anime.episodes} />
                     </p>
                     <LoadingText>

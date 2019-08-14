@@ -207,7 +207,7 @@ function Row(anime) {
  * Title column for an anime which contains the image, title, and anime type. If a search query is present,
  * it gets highlighted using the anime status color.
  */
-function TitleColumn({ title, img, status, actualType, highlight }) {
+function TitleColumn({ title, img, status, type, highlight }) {
     // If there was a search and highlight indicies have been provided, highlight matches results using them
     const highlightTitle = () => {
         return highlight.reduce((newTitle, indices) => {
@@ -227,7 +227,7 @@ function TitleColumn({ title, img, status, actualType, highlight }) {
                 {highlight ? highlightTitle() : title}
             </span>
             <span className="text-gray ml-2">
-                {Filters.type.descriptions[actualType]}
+                {Filters.type.descriptions[type]}
             </span>
         </div>
     )
