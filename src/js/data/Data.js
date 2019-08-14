@@ -1,7 +1,6 @@
 // Libraries
 import FastSort from 'fast-sort'
 import Fuse from 'fuse.js'
-import ObjectHash from 'object-hash'
 
 // Data
 import AnimeObject from './Anime.json'
@@ -132,11 +131,6 @@ function updateAnimeFromApiData(animeId, newData) {
         ...AnimeObject[animeId],
         ...newData,
     }
-
-    // Update the hash
-    AnimeObject[animeId].hash = ObjectHash(AnimeObject[animeId], {
-        excludeKeys: key => key === 'hash',
-    })
 
     // Update the array of all anime
     AnimeArray = Object.values(AnimeObject)

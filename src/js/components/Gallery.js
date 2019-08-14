@@ -64,7 +64,7 @@ function Gallery() {
                         </h2>
                         <div className="gallery-grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === rating).map(anime =>
-                                <GalleryItem key={anime.hash} {...anime} />
+                                <GalleryItem key={anime.id} {...anime} />
                             )}
                         </div>
                     </div>
