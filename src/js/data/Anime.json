@@ -7238,6 +7238,25 @@
         "audioCodec": false,
         "size": false
     },
+    "40020": {
+        "id": 40020,
+        "title": "Cencoroll 3",
+        "type": 3,
+        "episodes": 1,
+        "episodesWatched": 0,
+        "img": "https://cdn.myanimelist.net/images/anime/1981/101698.jpg",
+        "status": 6,
+        "rating": 0,
+        "rewatchCount": 0,
+        "url": "https://myanimelist.net/anime/40020/Cencoroll_3",
+        "subs": false,
+        "resolution": false,
+        "source": false,
+        "videoCodec": false,
+        "bits": false,
+        "audioCodec": false,
+        "size": false
+    },
     "40206": {
         "id": 40206,
         "title": "Fate/Grand Order: Zettai Majuu Sensen Babylonia - Initium Iter",
