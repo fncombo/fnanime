@@ -163,10 +163,6 @@
                 "skipComments": true
             }
         ],
-        "max-lines-per-function": [
-            "error",
-            150
-        ],
         "max-nested-callbacks": [
             "error",
             5
@@ -174,10 +170,6 @@
         "max-params": [
             "error",
             3
-        ],
-        "max-statements": [
-            "error",
-            25
         ],
         "new-cap": "error",
         "new-parens": "error",
