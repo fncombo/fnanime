@@ -301,7 +301,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const navAnime = getAdjacentAnime(allAnime, currentAnimeId, direction)
 
     if (!navAnime) {
-        return null
+        return <div className="modal-nav placeholder" />
     }
 
     return (

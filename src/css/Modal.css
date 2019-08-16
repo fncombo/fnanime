@@ -103,6 +103,11 @@
     transform: scale(1.75);
 }
 
+.modal-nav-placeholder {
+    width: calc(74px + 0.75rem + 1.25rem);
+    height: 100px;
+}
+
 /* SVG arrow colors */
 .modal-nav .fill-success polygon {
     fill: var(--success);
