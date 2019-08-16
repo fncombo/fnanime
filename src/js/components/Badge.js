@@ -18,7 +18,7 @@ function Badge({ showRating, isLink, ...anime }) {
         return null
     }
 
-    const classes = `badge p-2 text-truncate badge-${Filters.status.colorCodes[anime.status]}`
+    const classes = `badge p-2 badge-${Filters.status.colorCodes[anime.status]}`
 
     let text = Filters.status.descriptions[anime.status]
 
@@ -41,7 +41,7 @@ function Badge({ showRating, isLink, ...anime }) {
         )
     }
 
-    return <span className={classes}>{text}</span>
+    return <span className={`${classes} text-truncate`}>{text}</span>
 }
 
 /**
