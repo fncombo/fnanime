@@ -76,36 +76,51 @@ function getAdjacentAnime(allAnime, animeId, direction) {
 /**
  * Get more data about an anime either form the API or cache.
  */
-function getAnimeApiData(animeId, callback, errorCallback) {
+async function getAnimeApiData(animeId, isRetry = false) {
     // Return cached data
     if (cachedApiData.hasOwnProperty(animeId)) {
-        callback(cachedApiData[animeId])
-
-        return
+        return cachedApiData[animeId]
     }
 
-    fetch(`https://api.jikan.moe/v3/anime/${animeId}`).then(response =>
-        response.json()
-    ).then(apiData => {
-        // Handle errors
-        if (apiData.hasOwnProperty('error')) {
-            console.error('API responded with an error:', apiData.error)
+    // Wait at least 2 seconds between API requests, increasing with each retry
+    if (isRetry) {
+        await new Promise(resolve => {
+            setTimeout(resolve, isRetry * 2000)
+        })
+    }
 
-            errorCallback(apiData.error)
+    // Attempt to get API data
+    let response
 
-            return
-        }
+    try {
+        response = await fetch(`https://api.jikan.moe/v3/anime/${animeId}`)
+    } catch (error) {
+        throw new Error('A network error occurred')
+    }
 
-        // Save this anime's data so we don't have to fetch it in the future
-        cachedApiData[animeId] = apiData
+    // If any response other than 200 was returned, try again
+    if (response.status !== 200) {
+        return getAnimeApiData(animeId, isRetry ? isRetry + 1 : 1)
+    }
 
-        callback(apiData)
-    }, error => {
-        // Handle errors
-        console.error('Error while fetching API:', error)
+    // Attempt to parse API daa
+    let apiData
 
-        errorCallback(error)
-    })
+    try {
+        apiData = await response.json()
+    } catch (error) {
+        throw new Error('Could not parse API data')
+    }
+
+    // Handle other errors returned by the API
+    if (apiData.hasOwnProperty('error')) {
+        throw new Error('API responded with an error')
+    }
+
+    // Save this anime's data so we don't have to fetch it in the future
+    cachedApiData[animeId] = apiData
+
+    return apiData
 }
 
 // Exports

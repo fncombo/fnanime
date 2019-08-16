@@ -172,31 +172,41 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
     const { isLoaded, apiData } = modalState
 
     useEffect(() => {
-        // Loading addition data about the anime
-        if (!isLoaded && !apiData.mal_id) {
-            getAnimeApiData(anime.id, newApiData => {
+        async function fetchData() {
+            // Loading addition data about the anime
+            if (!isLoaded && !apiData.mal_id) {
+                let loadingApiData
+
+                try {
+                    loadingApiData = await getAnimeApiData(anime.id)
+                } catch (error) {
+                    alert('Something went wrong while fetching API data, sorry!')
+
+                    closeModal()
+
+                    return
+                }
+
                 // Add a delay 2x the duration of animations to not make things too jumpy and give a sense
-                // of loading (and to let the user appreciate the animation hah)
+                // of loading (and to let the user appreciate the animation, hah!)
                 setTimeout(() => {
                     setModalState({
                         isLoaded: true,
-                        apiData: newApiData,
+                        apiData: loadingApiData,
                     })
                 }, 300)
-            }, () => {
-                alert('Something went wrong, sorry!')
+            }
 
-                closeModal()
-            })
+            // If the anime has changed, load in the new API data
+            if (isLoaded && apiData.mal_id && anime.id !== apiData.mal_id) {
+                setModalState({
+                    isLoaded: false,
+                    apiData: {},
+                })
+            }
         }
 
-        // If the anime has changed, load in the new API data
-        if (isLoaded && apiData.mal_id && anime.id !== apiData.mal_id) {
-            setModalState({
-                isLoaded: false,
-                apiData: {},
-            })
-        }
+        fetchData()
     }, [ isLoaded, apiData.mal_id, anime.id, closeModal ])
 
     return (
