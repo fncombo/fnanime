@@ -1,5 +1,5 @@
 // React
-import React, { Fragment, useState, useContext, useEffect, useRef } from 'react'
+import React, { Fragment, useState, useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 // Libraries
@@ -80,7 +80,6 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
 function Modal({ closeModal: closeCallback, ...props }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ anime, setAnime ] = useState(props)
-    const ref = useRef(null)
 
     // Callback to chage the anime info inside the modal with a transition animation in betweem
     const changeAnime = newAnime => {
@@ -147,7 +146,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                 currentAnimeId={anime.id}
             />
             <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div className={`modal-content bg-${Filters.status.colorCodes[anime.status]}`} ref={ref}>
+                <div className={`modal-content bg-${Filters.status.colorCodes[anime.status]}`}>
                     <div className="modal-header border-0 align-items-center">
                         <h5 className="modal-title">
                             <a href={anime.url} target="_blank" rel="noopener noreferrer">
