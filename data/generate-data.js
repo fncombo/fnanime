@@ -1,5 +1,5 @@
 // Node
-const { readdir, stat, writeFile } = require('fs').promises
+const { readdir, stat, readFile, writeFile } = require('fs').promises
 const { promisify } = require('util')
 
 // Libraries
@@ -242,7 +242,23 @@ getApiData().then(async () => {
         allAnimeObject[animeData.id] = animeData
     }
 
+    // Get the current anime data to compare if it has been updated
+    let currentAnimeData
+
+    try {
+        currentAnimeData = await readFile(animeJsonLocation, 'utf8')
+    } catch (error) {
+        console.log(yellow('Could not read existing anime data JSON to compare changes'))
+    }
+
     const allAnimeData = beautify(JSON.stringify(allAnimeObject))
+
+    if (currentAnimeData === allAnimeData) {
+        console.log(green('Anime data JSON is already up-to-date!'))
+
+        return
+    }
+
     const saveTimeData = beautify(JSON.stringify({ updated: Date.now() }))
 
     // Save all anime data
