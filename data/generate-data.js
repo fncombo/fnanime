@@ -139,12 +139,17 @@ function processLocalData(filename, size) {
 
 // Get my anime list API data
 async function getApiData(page = 1, isRetry = false) {
+    // Stop after too many retries
+    if (isRetry > 5) {
+        throw new Error('Too many API retries')
+    }
+
     console.log(isRetry ? 'Retrying' : 'Getting', 'page', yellow(page), 'of API')
 
-    // Wait 2 seconds between API requests
+    // Wait at least 2 seconds between API requests, increasing with each retry
     if (page > 1 || isRetry) {
         await new Promise(resolve => {
-            setTimeout(resolve, 2000)
+            setTimeout(resolve, (isRetry || 1) * 2000)
         })
     }
 
@@ -156,14 +161,14 @@ async function getApiData(page = 1, isRetry = false) {
     } catch (error) {
         console.log(magenta('Error occurred while fetching API, retrying'))
 
-        return getApiData(page, true)
+        return getApiData(page, isRetry ? isRetry + 1 : 1)
     }
 
     // Re-try if failed for any reason
     if (response.status !== 200) {
         console.log(magenta('API responded with non-200 status, retrying'))
 
-        return getApiData(page, true)
+        return getApiData(page, isRetry ? isRetry + 1 : 1)
     }
 
     // Parse JSON response
