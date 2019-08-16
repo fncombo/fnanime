@@ -10,7 +10,7 @@ import { Filters } from './Filters'
 // Only the anime object's entries in an array
 let AnimeArray = Object.values(AnimeObject)
 
-// Fuzy search options
+// Fuzzy search options
 const FuseOptions = {
     includeMatches: true,
     threshold: 0.2,
@@ -28,7 +28,7 @@ const Defaults = {
         status: SortingOrders.asc,
         title: SortingOrders.asc,
     },
-    // Filtering is populated later based on all available fitlers
+    // Filtering is populated later based on all available filters
     filters: {},
     // Rows per table page
     perPage: 25,
@@ -95,7 +95,7 @@ function getFileQuality(anime) {
 }
 
 /**
- * Add data to an anime that didn't need to be downloaded because it can be calcualted on the fly.
+ * Add data to an anime that didn't need to be downloaded because it can be calculated on the fly.
  */
 function processAnimeData(animeId) {
     // Reference back to object value

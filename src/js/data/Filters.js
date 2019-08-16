@@ -57,7 +57,7 @@ const Filters = {
             4: '4 \u2013 Bad',
             3: '3 \u2013 Very Bad',
             2: '2 \u2013 Horrible',
-            1: '1 \u2013 Appaling',
+            1: '1 \u2013 Appalling',
             0: '0 \u2013 Not Rated',
         },
         colorCodes: {

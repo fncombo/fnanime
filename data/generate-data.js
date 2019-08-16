@@ -23,7 +23,7 @@ const animeFolders = [
     'E:/Anime/Special and OVA',
 ]
 
-// Type loookup
+// Type lookup
 const typeLookup = {
     TV: 1,
     OVA: 2,

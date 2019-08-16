@@ -105,7 +105,7 @@ const HeaderColumn = memo(({ columnName }) => {
 
     // Callback to update sorting when clicking on a column
     const changeSorting = ({ shiftKey }) => {
-        // Ammending current sorting (holding shift) or sorting only the currently sorted column modifies existing
+        // Amending current sorting (holding shift) or sorting only the currently sorted column modifies existing
         // sorting settings, otherwise create new settings
         const newSorting = shiftKey || (
             activeSortingKeys.length === 1 && activeSorting.hasOwnProperty(columnName)
@@ -212,7 +212,7 @@ function Row(anime) {
  * it gets highlighted using the anime status color.
  */
 function TitleColumn({ title, img, status, type, highlight }) {
-    // If there was a search and highlight indicies have been provided, highlight matches results using them
+    // If there was a search and highlight indices have been provided, highlight matches results using them
     const highlightTitle = () =>
         highlight.reduce(
             (newTitle, indices) =>

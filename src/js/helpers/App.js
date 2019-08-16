@@ -32,7 +32,7 @@ function getApiData(page = 1, callback, errorCallback) {
         // Add all anime from API
         newApiData.push(apiData.anime)
 
-        // Since API only does 300 entries per responce, keep trying next page until got everything
+        // Since API only does 300 entries per response, keep trying next page until got everything
         if (apiData.anime.length === 300) {
             //  API requires some delay between requests
             setTimeout(() => {

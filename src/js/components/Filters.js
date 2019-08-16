@@ -12,7 +12,7 @@ import { Filters, FilterNames } from '../data/Filters'
 import { makeFilterCounts } from '../helpers/Filters'
 
 /**
- * Groups of filters, search inout, summary, and reset button.
+ * Groups of filters, search input, summary, and reset button.
  */
 function FilterButtons() {
     const { state: { anime }, dispatch } = useContext(GlobalState)
@@ -81,7 +81,7 @@ function FilterButtons() {
 }
 
 /**
- * Group of buttons for a filter. Can span full width of the container. Updates gobal filtering.
+ * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
     return (
@@ -125,7 +125,7 @@ function FilterButton({ filterName, filterValue }) {
 }
 
 /**
- * Select input for a filter. Updates gobal filtering.
+ * Select input for a filter. Updates global filtering.
  */
 function OptionGroup({ filterName }) {
     const { state: { activeFilters: { [filterName]: activeFilterValues } }, dispatch } = useContext(GlobalState)

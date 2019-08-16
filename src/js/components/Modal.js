@@ -81,7 +81,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ anime, setAnime ] = useState(props)
 
-    // Callback to chage the anime info inside the modal with a transition animation in betweem
+    // Callback to change the anime info inside the modal with a transition animation in between
     const changeAnime = newAnime => {
         document.body.classList.add('modal-changing')
 
@@ -428,7 +428,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         )
     }
 
-    // Otherwsie say how many episodes out of total have watched
+    // Otherwise say how many episodes out of total have watched
     if (episodesWatched) {
         return (
             <>
