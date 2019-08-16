@@ -1,5 +1,5 @@
 // Data
-import { updateAnimeFromApiData, populateFilterDefaults } from '../data/Data'
+import { createFilterDefaults, updateAnimeData } from '../data/Data'
 
 // Count of API retries due to errors
 let apiRetries = 0
@@ -16,9 +16,10 @@ function getApiData(page = 1, callback, errorCallback) {
     ).then(apiData => {
         // If API responded with an error (e.g. too many requests), keep trying with increasing time between retries
         if (apiData.hasOwnProperty('error')) {
-            apiRetries++
+            apiRetries += 1
 
             console.warn('API responded with an error:', apiData.error)
+
             console.log(`Retrying in ${apiRetries * 2} seconds`)
 
             setTimeout(() => {
@@ -29,7 +30,7 @@ function getApiData(page = 1, callback, errorCallback) {
         }
 
         // Add all anime from API
-        newApiData.push.apply(newApiData, apiData.anime)
+        newApiData.push(apiData.anime)
 
         // Since API only does 300 entries per responce, keep trying next page until got everything
         if (apiData.anime.length === 300) {
@@ -37,22 +38,25 @@ function getApiData(page = 1, callback, errorCallback) {
             setTimeout(() => {
                 getApiData(page + 1, callback, errorCallback)
             }, 2000)
-        } else {
-            newApiData.forEach(anime => {
-                updateAnimeFromApiData(anime.mal_id, {
-                    status: anime.watching_status,
-                    rating: anime.score,
-                    episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
-                    episodesWatched: anime.watched_episodes,
-                })
-            })
 
-            populateFilterDefaults()
-
-            callback()
+            return
         }
+
+        newApiData.forEach(anime => {
+            updateAnimeData(anime.mal_id, {
+                status: anime.watching_status,
+                rating: anime.score,
+                episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
+                episodesWatched: anime.watched_episodes,
+            })
+        })
+
+        createFilterDefaults()
+
+        callback()
     }, error => {
         console.error('Error while fetching API:', error)
+
         errorCallback()
     })
 }

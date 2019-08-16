@@ -40,9 +40,9 @@ function FilterButtons() {
     // Count how many anime match each filter
     const filterCounts = makeFilterCounts()
 
-    anime.forEach(anime => {
+    anime.forEach(cartoon => {
         FilterNames.forEach(filterName => {
-            filterCounts[filterName][anime[filterName]] += 1
+            filterCounts[filterName][cartoon[filterName]] += 1
         })
     })
 
@@ -188,10 +188,8 @@ function Summary() {
 
     if (downloadedCount && notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> +{notDownloadedCount} anime</span>
-
     } else if (downloadedCount && !notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> anime</span>
-
     } else if (!downloadedCount && notDownloadedCount) {
         return <span>Found {notDownloadedCount} anime</span>
     }

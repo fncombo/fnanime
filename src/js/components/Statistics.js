@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 
 // Libraries
-import FileSize from 'filesize'
+import fileSize from 'filesize'
 import { useInView } from 'react-intersection-observer'
 
 // Style
@@ -19,7 +19,7 @@ import { add, calculateTotals } from '../helpers/Statistics'
  * Show all the ratings, number of anime per rating, and other totals.
  */
 function Statistics() {
-    const { state: { anime} } = useContext(GlobalState)
+    const { state: { anime } } = useContext(GlobalState)
     const [ ref, inView, entry ] = useInView()
 
     // Do not render and do all this calculating if not in view and if scrolled upwards,
@@ -43,11 +43,10 @@ function Statistics() {
 
     // First and last non-zero values to exclude them from being shown
     // e.g. [0, 0, 1, 2, 0, 3, 4, 0] turns into [1, 2, 0, 3, 4]
-    const firstNonZero = totals.rating.totals.slice(1).map(n => n.reduce(add)).findIndex(i => !!i) + 1
+    const firstNonZero = totals.rating.totals.slice(1).map(row => row.reduce(add)).findIndex(index => !!index) + 1
 
-    const lastNonZero = totals.rating.totals.length - [...totals.rating.totals]
-        .reverse()
-        .map(n => n.reduce(add)).findIndex(i => !!i) - 1
+    const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
+        .reverse().map(row => row.reduce(add)).findIndex(index => !!index) - 1
 
     // Don't show stats if all shown anime are "planned"
     if (firstNonZero + lastNonZero === 0) {
@@ -70,9 +69,10 @@ function Statistics() {
                     <h6 className="m-0">Total Number of Episodes</h6>
                 </div>
             </div>
-            {[...Array(10)].map((value, i) => i + 1).slice(firstNonZero - 1, lastNonZero).reverse().map(rating =>
-                <StatisticsRow rating={rating} key={rating} totals={totals} />
-            )}
+            {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
+                .map(rating =>
+                    <StatisticsRow rating={rating} key={rating} totals={totals} />
+                )}
             {firstNonZero !== lastNonZero &&
                 <div className="row my-3 justify-content-center align-items-center">
                     <div className="col-1 text-center">
@@ -82,7 +82,7 @@ function Statistics() {
                         Average Rating: {totals.rating.average ? Math.round(totals.rating.average * 100) / 100 : 'N/A'}
                     </div>
                     <div className="col text-center">
-                        {totals.size.sum ? FileSize(totals.size.sum) : <>&mdash;</>}
+                        {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
                     <div className="col text-center">
                         {totals.episode.sum ? totals.episode.sum : <>&mdash;</>}
@@ -103,7 +103,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
                 {rating}
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />
-            <StatisticsColumn rating={rating} data={size} formatFunction={FileSize} />
+            <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
             <StatisticsColumn rating={rating} data={episode} />
         </div>
     )
@@ -138,7 +138,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
                         <div
                             title={`${Filters.status.descriptions[status]} (${count})`}
                             className={`progress-bar bg-${Filters.status.colorCodes[status]}`}
-                            style={{ width: `${data.max ? ((singleData / data.max) * 100) : 0}%` }}
+                            style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
                             key={`${rating}-${status}`}
                         />
                     )

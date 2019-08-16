@@ -48,7 +48,7 @@ const Filters = {
         descriptions: {
             false: 'All Ratings',
             null: 'black',
-            10:'10 \u2013 Masterpiece',
+            10: '10 \u2013 Masterpiece',
             9: '9 \u2013 Great',
             8: '8 \u2013 Very Good',
             7: '7 \u2013 Good',
@@ -63,19 +63,15 @@ const Filters = {
         colorCodes: {
 
         },
-        specialValuesProcess: values => {
-            // Exclude blank values and reverse sort
-            return values.filter(value => !!value).sort((a, b) => b - a)
-        },
+        // Exclude blank values and reverse sort
+        specialValuesProcess: values => values.filter(value => !!value).sort((a, b) => b - a),
     },
     subs: {
         descriptions: {
             false: 'All Subtitles',
         },
-        specialValuesProcess: values => {
-            // Exclude blank values
-            return values.filter(value => !!value)
-        },
+        // Exclude blank values
+        specialValuesProcess: values => values.filter(value => !!value),
     },
     resolution: {
         descriptions: {
@@ -105,10 +101,8 @@ const Filters = {
             480: 2,
             360: 1,
         },
-        specialValuesProcess: values => {
-            // Reverse sort
-            return values.sort((a, b) => b - a)
-        },
+        // Reverse sort
+        specialValuesProcess: values => values.sort((a, b) => b - a),
     },
     source: {
         descriptions: {

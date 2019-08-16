@@ -11,23 +11,27 @@ function add(a, b) {
  */
 function calculateTotals(anime, property, countOnly) {
     // Create the 2D array to populate
-    const totals = [...Array(11)].map(() => Array(7).fill(0))
+    const totals = [ ...Array(11) ].map(() => Array(7).fill(0))
 
     // Increment the number of matched anime or add up the data
     if (countOnly) {
-        anime.forEach(({ rating, status }) => totals[rating][status] += 1)
+        anime.forEach(({ rating, status }) => {
+            totals[rating][status] += 1
+        })
     } else {
-        anime.forEach(({ rating, status, [property]: value }) => totals[rating][status] += value)
+        anime.forEach(({ rating, status, [property]: value }) => {
+            totals[rating][status] += value
+        })
     }
 
     // Sum of all data
     const sum = anime.map(({ [property]: value }) => value).reduce(add)
 
     // Count of all data
-    const count = totals.slice(1).map(n => n.reduce(add)).reduce(add)
+    const count = totals.slice(1).map(row => row.reduce(add)).reduce(add)
 
     // Biggest total
-    const max = Math.max(...totals.slice(1).map(n => n.reduce(add)))
+    const max = Math.max(...totals.slice(1).map(row => row.reduce(add)))
 
     // Average of all totals
     const average = sum / count

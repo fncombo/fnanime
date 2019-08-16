@@ -3,8 +3,8 @@ import React, { Fragment, useState, useContext, useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom'
 
 // Libraries
-import FileSize from 'filesize'
-import PrettyTime from '../../lib/PrettyTime'
+import fileSize from 'filesize'
+import prettyTime from '../../lib/PrettyTime'
 import { SlideDown } from 'react-slidedown'
 
 // Style
@@ -17,7 +17,13 @@ import { AnimeObject } from '../data/Data'
 import { Filters } from '../data/Filters'
 
 // Helpers
-import { getNestedProperty, replaceSpecialChars, convertDuration, getAdjacentAnime, getAnimeApiData } from '../helpers/Modal'
+import {
+    getNestedProperty,
+    replaceSpecialChars,
+    convertDuration,
+    getAdjacentAnime,
+    getAnimeApiData,
+} from '../helpers/Modal'
 
 // Components
 import Badge from './Badge'
@@ -46,6 +52,7 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     const openModal = event => {
         if (event.button === 0) {
             event.preventDefault()
+
             setModalOpen(true)
         }
     }
@@ -75,6 +82,26 @@ function Modal({ closeModal: closeCallback, ...props }) {
     const [ anime, setAnime ] = useState(props)
     const ref = useRef(null)
 
+    // Callback to chage the anime info inside the modal with a transition animation in betweem
+    const changeAnime = newAnime => {
+        document.body.classList.add('modal-changing')
+
+        setTimeout(() => {
+            document.body.classList.remove('modal-changing')
+
+            setAnime(newAnime)
+        }, 150)
+    }
+
+    // Callback to close the modal after it has finished animating out
+    const closeModal = () => {
+        document.body.classList.remove('modal-open')
+
+        setTimeout(() => {
+            closeCallback()
+        }, 150)
+    }
+
     // Switch between next and previous anime using arrow keys and close the modal using esc
     const keyHandler = ({ key }) => {
         if (key === 'Escape') {
@@ -96,33 +123,15 @@ function Modal({ closeModal: closeCallback, ...props }) {
     // Add and remove the modal open classes from the body
     useEffect(() => {
         document.body.classList.add('modal-open')
+
         window.addEventListener('keyup', keyHandler)
 
         return () => {
             document.body.classList.remove('modal-open')
+
             window.removeEventListener('keyup', keyHandler)
         }
     })
-
-    // Callback to chage the anime info inside the modal with a transition animation in betweem
-    const changeAnime = newAnime => {
-        document.body.classList.add('modal-changing')
-
-        setTimeout(() => {
-            document.body.classList.remove('modal-changing')
-
-            setAnime(newAnime)
-        }, 150)
-    }
-
-    // Callback to close the modal after it has finished animating out
-    const closeModal = () => {
-        document.body.classList.remove('modal-open')
-
-        setTimeout(() => {
-            closeCallback()
-        }, 150)
-    }
 
     return (
         <div className="modal d-block">
@@ -166,17 +175,18 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
     useEffect(() => {
         // Loading addition data about the anime
         if (!isLoaded && !apiData.mal_id) {
-            getAnimeApiData(anime.id, apiData => {
+            getAnimeApiData(anime.id, newApiData => {
                 // Add a delay 2x the duration of animations to not make things too jumpy and give a sense
                 // of loading (and to let the user appreciate the animation hah)
                 setTimeout(() => {
                     setModalState({
                         isLoaded: true,
-                        apiData: apiData,
+                        apiData: newApiData,
                     })
                 }, 300)
             }, () => {
                 alert('Something went wrong, sorry!')
+
                 closeModal()
             })
         }
@@ -188,7 +198,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 apiData: {},
             })
         }
-    }, [isLoaded, apiData.mal_id, anime.id, closeModal])
+    }, [ isLoaded, apiData.mal_id, anime.id, closeModal ])
 
     return (
         <ModalState.Provider value={{ modalState, changeAnime }}>
@@ -272,7 +282,6 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
         </ModalState.Provider>
     )
 }
-
 
 /**
  * Previous and next buttons around the modal to quickly switch between adjacent anime.
@@ -387,7 +396,7 @@ function LoadingParagraph({ children }) {
  */
 function ApiData({ property, fallback = <>&mdash;</>, process }) {
     const { modalState: { apiData } } = useContext(ModalState)
-    const data = getNestedProperty.apply(undefined, [apiData, ...property.split('.')])
+    const data = getNestedProperty(apiData, ...property.split('.'))
 
     return (process ? process(data) : data) || fallback
 }
@@ -396,17 +405,17 @@ function ApiData({ property, fallback = <>&mdash;</>, process }) {
  * Display the total watch time of this anime based on episode duration and number of episodes watched.
  */
 function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
-    const convertedDuration = convertDuration(duration)
-
     if (!episodesWatched) {
         return 'None'
     }
+
+    const convertedDuration = convertDuration(duration)
 
     if (!convertedDuration) {
         return 'Unknown'
     }
 
-    const watchTime = PrettyTime(convertedDuration * episodesWatched * (rewatchCount + 1))
+    const watchTime = prettyTime(convertedDuration * episodesWatched * (rewatchCount + 1))
 
     // If rewatched anime or it's a movie, say how many total times watched
     if (rewatchCount || (episodesWatched && episodes === 1)) {
@@ -414,7 +423,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
             <>
                 {watchTime}
                 <span className="text-gray">
-                    &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1  ? 's' : ''}
+                    &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
             </>
         )
@@ -438,13 +447,13 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
 /**
  * Display the anime size. If anime has episodes, also display the average size per episode.
  */
-function Size({ size, episodes}) {
+function Size({ size, episodes }) {
     return (
         <>
-            {size ? FileSize(size) : 'Not Downloaded'}
+            {size ? fileSize(size) : 'Not Downloaded'}
             {(size && episodes > 1) &&
                 <span className="text-gray">
-                    &nbsp;&ndash; average {FileSize(size / episodes)} per episode
+                    &nbsp;&ndash; average {fileSize(size / episodes)} per episode
                 </span>
             }
         </>
@@ -461,8 +470,8 @@ function Duration({ duration, episodes }) {
         return 'Unknown'
     }
 
-    const totalDuration = PrettyTime(convertedDuration * episodes, 'm')
-    const episodeDuration = PrettyTime(convertedDuration, 'm')
+    const totalDuration = prettyTime(convertedDuration * episodes, 'm')
+    const episodeDuration = prettyTime(convertedDuration, 'm')
 
     return (
         <>
@@ -493,8 +502,8 @@ function RelatedList({ data }) {
     }
 
     // Get only related anime, i.e. filter out manga
-    const getRelatedAnime = () => {
-        return Object.entries(data).reduce((object, [relationType, anime]) => {
+    const getRelatedAnime = () =>
+        Object.entries(data).reduce((object, [ relationType, anime ]) => {
             const newAnime = anime.filter(({ type }) => type === 'anime')
 
             if (newAnime.length) {
@@ -503,7 +512,6 @@ function RelatedList({ data }) {
 
             return object
         }, {})
-    }
 
     const relatedAnime = Object.entries(getRelatedAnime())
 
@@ -512,23 +520,23 @@ function RelatedList({ data }) {
     }
 
     // Sub list for every relation type
-    return relatedAnime.map(([type, anime]) =>
+    return relatedAnime.map(([ type, anime ]) =>
         <Fragment key={type}>
             <h6 className="m-0">{type}</h6>
             <ul className="pb-2">
-                {anime.map(anime =>
-                    <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3" key={anime.mal_id}>
+                {anime.map(cartoon =>
+                    <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3" key={cartoon.mal_id}>
                         <a
                             className="text-truncate"
                             title="Open on MyAnimeList.net"
-                            href={anime.url}
+                            href={cartoon.url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            {replaceSpecialChars(anime.name)}
+                            {replaceSpecialChars(cartoon.name)}
                         </a>
-                        {AnimeObject.hasOwnProperty(anime.mal_id) &&
-                            <Badge showRating={true} isLink={true} {...AnimeObject[anime.mal_id]} />
+                        {AnimeObject.hasOwnProperty(cartoon.mal_id) &&
+                            <Badge showRating={true} isLink={true} {...AnimeObject[cartoon.mal_id]} />
                         }
                     </li>
                 )}

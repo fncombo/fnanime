@@ -1,14 +1,16 @@
 // Storage size limits
 const StorageSizeLimits = {
+    // 1GB min, 50GB max
     total: {
-        min: 1073741824, // 1GB
-        max: 53687091200, // 50 GB
+        min: 1073741824,
+        max: 53687091200,
         medium: 53687091200 * 0.5,
         large: 53687091200 * 0.75,
     },
+    // 50MB mib, 2GB max
     episode: {
-        min: 52428800, // 50 MB
-        max: 2147483648, // 2GB
+        min: 52428800,
+        max: 2147483648,
         medium: 2147483648 * 0.5,
         large: 2147483648 * 0.75,
     },

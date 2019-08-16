@@ -39,7 +39,7 @@ function Pagination() {
     const buttons = []
 
     // Create the needed page numbers
-    for (let i = 1; i <= lastPage; i++) {
+    for (let i = 1; i <= lastPage; i += 1) {
         // First page, last page, all pages between left most and right most pages
         if (i === 1 || i === lastPage || (i >= leftPage && i < rightPage)) {
             pageNumbers.push(i)
@@ -80,7 +80,7 @@ function Pagination() {
 
     // Add blank buttons at the start to ensure the current page button is always exactly in the middle
     if (page <= Defaults.pageButtons + 2) {
-        for (let i = 0; i <= Defaults.pageButtons + 2 - page; i++) {
+        for (let i = 0; i <= Defaults.pageButtons + 2 - page; i += 1) {
             buttons.unshift(
                 <button className="btn btn-blank mx-1" disabled={true} key={`start-${i}-fill`} />
             )
@@ -89,7 +89,7 @@ function Pagination() {
 
     // Add blank buttons at the end to ensure the current page button is always exactly in the middle
     if (page > lastPage - Defaults.pageButtons - 2) {
-        for (let i = lastPage + 1; i <= lastPage + Defaults.pageButtons + 2 - (lastPage - page); i++) {
+        for (let i = lastPage + 1; i <= lastPage + Defaults.pageButtons + 2 - (lastPage - page); i += 1) {
             buttons.push(
                 <button className="btn btn-blank mx-1" disabled={true} key={`end-${i}-fill`} />
             )

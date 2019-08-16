@@ -1,5 +1,5 @@
 // Libraries
-import FastSort from 'fast-sort'
+import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
 // Data
@@ -11,16 +11,14 @@ import { Filters } from './Filters'
 let AnimeArray = Object.values(AnimeObject)
 
 // Fuzy search options
-var FuseOptions = {
+const FuseOptions = {
     includeMatches: true,
     threshold: 0.2,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 2,
-    keys: [
-        'title',
-    ],
+    keys: [ 'title' ],
 }
 
 // Various default values for the app
@@ -38,11 +36,8 @@ const Defaults = {
     pageButtons: 3,
 }
 
-// Process all initial anime data
-Object.keys(AnimeObject).forEach(processAnimeData)
-
 // Populate default filter data and filter values
-function populateFilterDefaults() {
+function createFilterDefaults() {
     Object.keys(Filters).forEach(filterName => {
         // Populate only the filter values which have some data to them
         let filterValues = AnimeArray
@@ -66,19 +61,7 @@ function populateFilterDefaults() {
     })
 }
 
-populateFilterDefaults()
-
-/**
- * Add data to an anime that didn't need to be downloaded because it can be calcualted on the fly.
- */
-function processAnimeData(animeId) {
-    // Reference back to object value
-    const anime = AnimeObject[animeId]
-
-    // Calculate values on the fly
-    anime.episodeSize = (anime.size && anime.episodes) ? anime.size / anime.episodes : null
-    anime.fileQuality = getFileQuality(anime)
-}
+createFilterDefaults()
 
 /**
  * Calculate the file quality of an anime based on the video and audio properties.
@@ -87,16 +70,20 @@ function getFileQuality(anime) {
     let measuredStats = 0
     let totalMeasure = 0
 
-    Object.entries(anime).forEach(([key, value]) => {
+    Object.entries(anime).forEach(([ key, value ]) => {
         if (value === false || value === null) {
             return
         }
 
-        if (!Filters.hasOwnProperty(key) || !Filters[key].hasOwnProperty('fileQuality') || !Filters[key].fileQuality.hasOwnProperty(value)) {
+        if (!Filters.hasOwnProperty(key)
+            || !Filters[key].hasOwnProperty('fileQuality')
+            || !Filters[key].fileQuality.hasOwnProperty(value)
+        ) {
             return
         }
 
-        measuredStats++
+        measuredStats += 1
+
         totalMeasure += Filters[key].fileQuality[value]
     })
 
@@ -108,18 +95,34 @@ function getFileQuality(anime) {
 }
 
 /**
+ * Add data to an anime that didn't need to be downloaded because it can be calcualted on the fly.
+ */
+function processAnimeData(animeId) {
+    // Reference back to object value
+    const anime = AnimeObject[animeId]
+
+    // Calculate values on the fly
+    anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : null
+
+    anime.fileQuality = getFileQuality(anime)
+}
+
+// Process all initial anime data
+Object.keys(AnimeObject).forEach(processAnimeData)
+
+/**
  * Update info about an anime from provided new API data.
  */
-function updateAnimeFromApiData(animeId, newData) {
+function updateAnimeData(animeId, newData) {
     // Don't update if anime doesn't exist
     if (!AnimeObject.hasOwnProperty(animeId)) {
         return
     }
 
     // Figure out if any data for this anime has changed
-    const changed = Object.entries(newData).some(([newDataName, newDataValue]) => {
-        return AnimeObject[animeId][newDataName] !== newDataValue
-    })
+    const changed = Object.entries(newData).some(([ newDataName, newDataValue ]) =>
+        AnimeObject[animeId][newDataName] !== newDataValue
+    )
 
     // Do not update if all data is the same
     if (!changed) {
@@ -141,36 +144,34 @@ function updateAnimeFromApiData(animeId, newData) {
  */
 function getAnime(searchQuery = null, sorting = Defaults.sorting, filters = Defaults.filters) {
     // Start with all the anime
-    let results = [...AnimeArray]
+    let results = [ ...AnimeArray ]
+    let actualSorting = sorting
 
     // Add sorting alphabetically by title if not already, to make it more consistent and predictable
     if (!sorting.hasOwnProperty('title')) {
         // Copy to not modify actual sorting settings
-        sorting = {
+        actualSorting = {
             ...sorting,
             title: SortingOrders.asc,
         }
     }
 
     // Go through each filter, narrowing down results each time, but don't filter when there is no value
-    Object.entries(filters).filter(([, filterValue]) => filterValue !== false).forEach(([filterName, filterValue]) => {
-        results = results.filter(anime => anime[filterName] === filterValue)
-    })
+    Object.entries(filters).filter(([ , filterValue ]) => filterValue !== false)
+        .forEach(([ filterName, filterValue ]) => {
+            results = results.filter(anime => anime[filterName] === filterValue)
+        })
 
     // Perform the search query if there is one
     if (searchQuery && searchQuery.length) {
-        results = new Fuse(results, FuseOptions).search(searchQuery).map(({ item, matches }) => {
-            return {
-                ...item,
-                highlight: (matches && matches.length) ? matches[0].indices : false,
-            }
-        })
+        results = new Fuse(results, FuseOptions).search(searchQuery).map(({ item, matches }) => ({
+            ...item,
+            highlight: matches && matches.length ? matches[0].indices : false,
+        }))
     }
 
     // Finally apply all sorting
-    FastSort(results).by(Object.entries(sorting).map(([column, direction]) => {
-        return { [direction]: column }
-    }))
+    fastSort(results).by(Object.entries(actualSorting).map(([ column, direction ]) => ({ [direction]: column })))
 
     return results
 }
@@ -181,6 +182,6 @@ export {
     AnimeArray,
     Defaults,
     getAnime,
-    updateAnimeFromApiData,
-    populateFilterDefaults,
+    updateAnimeData,
+    createFilterDefaults,
 }

@@ -80,6 +80,7 @@ function getAnimeApiData(animeId, callback, errorCallback) {
     // Return cached data
     if (cachedApiData.hasOwnProperty(animeId)) {
         callback(cachedApiData[animeId])
+
         return
     }
 
@@ -89,7 +90,9 @@ function getAnimeApiData(animeId, callback, errorCallback) {
         // Handle errors
         if (apiData.hasOwnProperty('error')) {
             console.error('API responded with an error:', apiData.error)
+
             errorCallback(apiData.error)
+
             return
         }
 
@@ -100,6 +103,7 @@ function getAnimeApiData(animeId, callback, errorCallback) {
     }, error => {
         // Handle errors
         console.error('Error while fetching API:', error)
+
         errorCallback(error)
     })
 }

@@ -2,7 +2,7 @@
 import React, { memo, useContext, useReducer } from 'react'
 
 // Libraries
-import FileSize from 'filesize'
+import fileSize from 'filesize'
 import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
 
@@ -24,7 +24,7 @@ import Pagination from './Pagination'
 import ModalContainer from './Modal'
 
 // Default table state
-const initialTablePageState = {
+const initialTableState = {
     page: 1,
 }
 
@@ -52,7 +52,7 @@ function tablePageReducer(state, action) {
  */
 function Table() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ state, dispatch ] = useReducer(tablePageReducer, initialTablePageState)
+    const [ state, dispatch ] = useReducer(tablePageReducer, initialTableState)
 
     if (!anime.length) {
         return <p className="alert alert-danger mt-3">No matching anime found!</p>
@@ -65,8 +65,8 @@ function Table() {
         <TableState.Provider value={{ state, dispatch, lastPage }}>
             <div className="table mt-3">
                 <Header />
-                {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(anime =>
-                    <Row key={anime.id} {...anime} />
+                {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
+                    <Row key={cartoon.id} {...cartoon} />
                 )}
             </div>
             <Pagination />
@@ -81,7 +81,7 @@ const Header = memo(() => {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the table header is stuck to add additional styling
-    const isStuck = entry ? (inView ? '' : 'stuck') : ''
+    const isStuck = entry && inView ? '' : 'stuck'
 
     return (
         <>
@@ -107,14 +107,16 @@ const HeaderColumn = memo(({ columnName }) => {
     const changeSorting = ({ shiftKey }) => {
         // Ammending current sorting (holding shift) or sorting only the currently sorted column modifies existing
         // sorting settings, otherwise create new settings
-        const newSorting = (shiftKey || (
+        const newSorting = shiftKey || (
             activeSortingKeys.length === 1 && activeSorting.hasOwnProperty(columnName)
-        )) ? { ...activeSorting } : {}
+        ) ? { ...activeSorting } : {}
 
         // Check if this column is already being sorted, in which case reverse it,
         // otherwise use the default sorting for it
         if (newSorting.hasOwnProperty(columnName)) {
-            newSorting[columnName] = (newSorting[columnName] === SortingOrders.asc) ? SortingOrders.desc : SortingOrders.asc
+            newSorting[columnName] = newSorting[columnName] === SortingOrders.asc
+                ? SortingOrders.desc
+                : SortingOrders.asc
 
         // Add new sorting for this column because it isn't being sorted yet
         } else {
@@ -138,7 +140,10 @@ const HeaderColumn = memo(({ columnName }) => {
         // If there are multiple sorting columns, get the index this one was activated at
         if (activeSortingKeys.length > 1) {
             index = activeSortingKeys.indexOf(columnName) + 1
-            title = `Sorting ${index}${formatOrdinal(index)} by this column in ${activeSorting[columnName]}ending order.\n\n`
+
+            const ordinal = formatOrdinal(index)
+
+            title = `Sorting ${index}${ordinal} by this column in ${activeSorting[columnName]}ending order.\n\n`
         } else {
             title = `Sorting by this column in ${activeSorting[columnName]}ending order.\n\n`
         }
@@ -208,13 +213,13 @@ function Row(anime) {
  */
 function TitleColumn({ title, img, status, type, highlight }) {
     // If there was a search and highlight indicies have been provided, highlight matches results using them
-    const highlightTitle = () => {
-        return highlight.reduce((newTitle, indices) => {
-            return reactStringReplace(newTitle, title.slice(indices[0], indices[1] + 1), (match, i) =>
-                <strong key={match + i}>{match}</strong>
-            )
-        }, title)
-    }
+    const highlightTitle = () =>
+        highlight.reduce(
+            (newTitle, indices) =>
+                reactStringReplace(newTitle, title.slice(indices[0], indices[1] + 1), (match, index) =>
+                    <strong key={match + index}>{match}</strong>)
+            , title
+        )
 
     return (
         <div
@@ -241,7 +246,7 @@ function Column({ value, columnName, children }) {
     // Fallback to a dash if there are no children or value
     return (
         <div className={`table-column text-${textColor}`} style={{ flexBasis: Columns[columnName].size }}>
-            {(value !== undefined ? value : children) ? (children || value) : <>&mdash;</>}
+            {(value === undefined ? children : value) ? children || value : <>&mdash;</>}
         </div>
     )
 }
@@ -289,11 +294,11 @@ function SizeBar({ type, size }) {
     const width = ((size - limits.min) / limits.max) * 100
 
     // Work out the color of the bar based on size breakpoints
-    const color = size > limits.large ? 'danger' : (size > limits.medium ? 'warning' : 'success')
+    const color = size > limits.large ? 'danger' : size > limits.medium ? 'warning' : 'success'
 
     return (
         <>
-            {FileSize(size, {round: size < 1e9 ? 0 : 2})}
+            {fileSize(size, { round: size < 1e9 ? 0 : 2 })}
             <div className="progress bg-secondary">
                 <div className={`progress-bar bg-${color}`} style={{ width: `${width}px` }} />
             </div>

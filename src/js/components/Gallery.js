@@ -21,9 +21,9 @@ const imgWidth = 165
 const rootMargin = `${imgWidth * 1.4}px`
 
 // Intersection options for the component and individual items
-const galleryIntersectionOptions = { rootMargin }
+const galleryOptions = { rootMargin }
 
-const galleryItemIntersectionOptions = {
+const galleryItemOptions = {
     rootMargin,
     triggerOnce: true,
 }
@@ -33,7 +33,7 @@ const galleryItemIntersectionOptions = {
  */
 function Gallery() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ ref, inView ] = useInView(galleryIntersectionOptions)
+    const [ ref, inView ] = useInView(galleryOptions)
 
     // Do not render and do all this calculating and creating hundreds of components if not in view
     if (!inView) {
@@ -42,26 +42,29 @@ function Gallery() {
 
     // Count how many there are anime for each rating
     const ratingCounts = Array(11).fill(0)
-    anime.forEach(({ rating }) => ratingCounts[rating]++)
+
+    anime.forEach(({ rating }) => {
+        ratingCounts[rating] += 1
+    })
 
     // Only show ratings which have anime and exclude all non-rated anime
     return (
         <div className="container-fluid gallery" ref={ref}>
             {ratingCounts.slice(1).reverse().map((count, rating) => {
-                rating = 10 - rating
+                const actualRating = 10 - rating
 
                 if (!count) {
                     return null
                 }
 
                 return (
-                    <div key={rating}>
+                    <div key={actualRating}>
                         <h2 className="text-center rounded mt-5 mb-3">
-                            {Filters.rating.descriptions[rating]}
+                            {Filters.rating.descriptions[actualRating]}
                         </h2>
                         <div className="gallery-grid">
-                            {anime.filter(({ rating: animeRating }) => animeRating === rating).map(anime =>
-                                <GalleryItem key={anime.id} {...anime} />
+                            {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
+                                <GalleryItem key={cartoon.id} {...cartoon} />
                             )}
                         </div>
                     </div>
@@ -76,7 +79,7 @@ function Gallery() {
  */
 function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
-    const [ ref, inView ] = useInView(galleryItemIntersectionOptions)
+    const [ ref, inView ] = useInView(galleryItemOptions)
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
     const hover = ({ currentTarget }) => {
@@ -113,9 +116,9 @@ function GalleryItem(anime) {
             <div className="gallery-item-inner" ref={ref}>
                 <img src={anime.img} alt={anime.title} />
                 <span className={`badge p-2 rounded-0 rounded-bottom badge-${Filters.status.colorCodes[anime.status]}`}>
-                    {anime.episodes > 1 ?
-                        <>{Filters.type.descriptions[anime.type]} &ndash; {anime.episodes} ep</> :
-                        Filters.type.descriptions[anime.type]
+                    {anime.episodes > 1
+                        ? <>{Filters.type.descriptions[anime.type]} &ndash; {anime.episodes} ep</>
+                        : Filters.type.descriptions[anime.type]
                     }
                 </span>
             </div>

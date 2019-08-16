@@ -1,23 +1,6 @@
 import { Filters } from '../data/Filters'
 
 /**
- * Retrieve column's text colour based on the value and filter.
- */
-function getColumnTextColor(columnName, value) {
-    // Special treatment for file quality
-    if (columnName === 'fileQuality') {
-        return getFileQualityColor(value)
-    }
-
-    // If color codes mapping exists for this column
-    if (Filters.hasOwnProperty(columnName) && Filters[columnName].hasOwnProperty('colorCodes')) {
-        return Filters[columnName].colorCodes[value]
-    }
-
-    return 'default'
-}
-
-/**
  * Returns the colour for a given file quality.
  */
 function getFileQualityColor(fileQuality) {
@@ -37,11 +20,26 @@ function getFileQualityColor(fileQuality) {
 }
 
 /**
+ * Retrieve column's text colour based on the value and filter.
+ */
+function getColumnTextColor(columnName, value) {
+    // Special treatment for file quality
+    if (columnName === 'fileQuality') {
+        return getFileQualityColor(value)
+    }
+
+    // If color codes mapping exists for this column
+    if (Filters.hasOwnProperty(columnName) && Filters[columnName].hasOwnProperty('colorCodes')) {
+        return Filters[columnName].colorCodes[value]
+    }
+
+    return 'default'
+}
+
+/**
  * Returns the ordinal suffix for a number.
  */
 function formatOrdinal(number) {
-    number = Math.abs(number)
-
     const cent = number % 100
 
     if (cent >= 10 && cent <= 20) {

@@ -31,8 +31,8 @@ const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {
 const initialState = {
     anime: getAnime(),
     searchQuery: '',
-    activeSorting: {...Defaults.sorting},
-    activeFilters: {...Defaults.filters},
+    activeSorting: { ...Defaults.sorting },
+    activeFilters: { ...Defaults.filters },
     apiUpdated: process.env.NODE_ENV === 'development',
     apiError: false,
 }
@@ -101,6 +101,13 @@ function globalReducer(state, action) {
 function App() {
     const [ state, dispatch ] = useReducer(globalReducer, initialState)
     const { apiUpdated, apiError } = state
+    let updateStatusMessage
+
+    if (apiUpdated) {
+        updateStatusMessage = apiError ? 'Error contacting API, update failed!' : 'Updated!'
+    } else {
+        updateStatusMessage = <>Loading latest information &hellip;</>
+    }
 
     useEffect(() => {
         if (apiUpdated) {
@@ -117,7 +124,7 @@ function App() {
         }, () => {
             dispatch({ type: ACTIONS.API_ERROR })
         })
-    }, [apiUpdated])
+    }, [ apiUpdated ])
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
@@ -139,10 +146,7 @@ function App() {
                 </ul>
             </div>
             <div className={`message ${apiUpdated ? 'done' : ''}`}>
-                {apiUpdated ?
-                    (apiError ? 'Error contacting API, update failed!' : 'Updated!') :
-                    <>Loading latest information &hellip;</>
-                }
+                {updateStatusMessage}
             </div>
         </GlobalState.Provider>
     )

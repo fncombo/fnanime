@@ -25,13 +25,13 @@ const animeFolders = [
 
 // Type loookup
 const typeLookup = {
-    'TV': 1,
-    'OVA': 2,
-    'Movie': 3,
-    'Special': 4,
-    'ONA': 5,
-    'Music': 6,
-    'Other': 7,
+    TV: 1,
+    OVA: 2,
+    Movie: 3,
+    Special: 4,
+    ONA: 5,
+    Music: 6,
+    Other: 7,
 }
 
 // Collected anime data from API and local files
@@ -41,7 +41,7 @@ const allAnime = new Map()
 const tagsRegexp = RegExp(/\[([\w-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2})bit\s(\w{3,4})\]/)
 
 // Replace or remove characters that cannot be used in folder and file names
-function removeInvalidCharacters(string) {
+function removeInvalidChars(string) {
     return string.replace(/[√:?]/g, '').replace(/[★/]/g, ' ')
 }
 
@@ -52,27 +52,28 @@ function getRewatchCount(tags) {
     }
 
     const match = tags.match(/re-watched:\s(\d+)/i)
+
     return match ? parseInt(match[1], 10) : 0
 }
 
 // Save data from API
 function processApiData(anime) {
-    anime.forEach(anime => {
+    anime.forEach(cartoon => {
         // Remove diacritics and other unwanted characters from the title
-        const title = removeDiacritics(anime.title).replace(/["]/g, '')
+        const title = removeDiacritics(cartoon.title).replace(/["]/g, '')
 
         // Start compiling clean data that we need
-        allAnime.set(removeInvalidCharacters(title), {
-            id: anime.mal_id,
+        allAnime.set(removeInvalidChars(title), {
+            id: cartoon.mal_id,
             title,
-            type: typeLookup[anime.type],
-            episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
-            episodesWatched: anime.watched_episodes,
-            img: anime.image_url.match(/^[^?]+/)[0],
-            status: anime.watching_status,
-            rating: anime.score,
-            rewatchCount: getRewatchCount(anime.tags),
-            url: anime.url,
+            type: typeLookup[cartoon.type],
+            episodes: cartoon.total_episodes > 0 ? cartoon.total_episodes : null,
+            episodesWatched: cartoon.watched_episodes,
+            img: cartoon.image_url.match(/^[^?]+/)[0],
+            status: cartoon.watching_status,
+            rating: cartoon.score,
+            rewatchCount: getRewatchCount(cartoon.tags),
+            url: cartoon.url,
             // The following data will be replaced if the anime is downloaded locally
             subs: false,
             resolution: false,
@@ -93,7 +94,7 @@ function processLocalData(filename, size) {
     }
 
     // Get the anime title
-    const title = filename.match(/.+(?=\s\[)/)[0]
+    const [ title ] = filename.match(/.+(?=\s\[)/)
 
     // Check if this anime name exists in the API data first
     if (!allAnime.has(title)) {
@@ -154,12 +155,14 @@ async function getApiData(page = 1, isRetry = false) {
         response = await fetch(`https://api.jikan.moe/v3/user/${malUsername}/animelist/all/${page}`)
     } catch (error) {
         console.log(magenta('Error occurred while fetching API, retrying'))
+
         return getApiData(page, true)
     }
 
     // Re-try if failed for any reason
     if (response.status !== 200) {
         console.log(magenta('API responded with non-200 status, retrying'))
+
         return getApiData(page, true)
     }
 
@@ -173,6 +176,8 @@ async function getApiData(page = 1, isRetry = false) {
     if (anime.length === 300) {
         return getApiData(page + 1)
     }
+
+    return true
 }
 
 getApiData().then(async () => {
@@ -191,7 +196,7 @@ getApiData().then(async () => {
         await eachSeries(contents, async subContent => {
             const { name } = subContent
             const index = contents.indexOf(subContent) + 1
-            let size
+            let totalSize
 
             singleLineLog(
                 'Getting the total size of',
@@ -203,21 +208,22 @@ getApiData().then(async () => {
             // If this is a folder, get its total size recursively based on all the files inside
             if (subContent.isDirectory()) {
                 try {
-                    size = await getFolderSize(`${animeFolder}/${name}`)
+                    totalSize = await getFolderSize(`${animeFolder}/${name}`)
                 } catch (error) {
                     throw new Error(`Could not get total size of folder: ${animeFolder}/${name}`)
                 }
             } else {
                 try {
                     const stats = await stat(`${animeFolder}/${name}`)
-                    size = stats.size
+
+                    totalSize = stats.size
                 } catch (error) {
                     throw new Error(`Could not get stats of file: ${animeFolder}/${name}`)
                 }
             }
 
             // Save data about this local anime
-            processLocalData(name, size)
+            processLocalData(name, totalSize)
         })
 
         // Empty log to separate single line logs between anime folders
@@ -255,6 +261,7 @@ getApiData().then(async () => {
     // Do not commit if the "commit" argument was not passed
     if (process.argv.length !== 3 || process.argv[2] !== 'commit') {
         console.log(green('All done, have fun!'))
+
         return
     }
 
@@ -274,5 +281,6 @@ getApiData().then(async () => {
 }).catch(error => {
     // Catch and log any errors
     console.log('\n')
+
     console.log(red(error))
 })
