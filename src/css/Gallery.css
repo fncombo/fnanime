@@ -76,3 +76,42 @@
 .gallery-item.right .gallery-item-inner {
     transform-origin: right center;
 }
+
+/* Individual section of the gallery */
+.gallery-section {
+    position: relative;
+}
+
+/* Heading sentinel element */
+.gallery-heading-sentinel {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+/* Gallery heading */
+.gallery-heading {
+    background: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 60px;
+    margin: 0 -15px;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.gallery-heading.stuck {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    z-index: 150;
+}
+
+.gallery-heading span {
+    opacity: 0.5;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .gallery-heading {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(20px) saturate(200%);
+    }
+}

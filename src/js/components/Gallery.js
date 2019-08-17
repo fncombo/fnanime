@@ -2,6 +2,7 @@
 import React, { useContext, useState } from 'react'
 
 // Libraries
+import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
 // Style
@@ -18,7 +19,7 @@ import ModalContainer from './Modal'
 const imgWidth = 165
 
 // Offset of when to start showing the component and images offscreen
-const rootMargin = `${imgWidth * 1.4}px`
+const rootMargin = `${parseInt(imgWidth * 1.5, 10)}px`
 
 // Intersection options for the component and individual items
 const galleryOptions = { rootMargin }
@@ -50,18 +51,14 @@ function Gallery() {
     // Only show ratings which have anime and exclude all non-rated anime
     return (
         <div className="container-fluid gallery" ref={ref}>
-            {ratingCounts.slice(1).reverse().map((count, rating) => {
+            {ratingCounts.slice(1).reverse().filter(count => !!count).map((count, rating) => {
                 const actualRating = 10 - rating
 
-                if (!count) {
-                    return null
-                }
-
                 return (
-                    <div key={actualRating}>
-                        <h2 className="text-center rounded mt-5 mb-3">
-                            {Filters.rating.descriptions[actualRating]}
-                        </h2>
+                    <div className="gallery-section mb-3" key={actualRating}>
+                        <GalleryHeading>
+                            {Filters.rating.descriptions[actualRating]} <span>({count} anime)</span>
+                        </GalleryHeading>
                         <div className="gallery-grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
                                 <GalleryItem key={cartoon.id} {...cartoon} />
@@ -71,6 +68,27 @@ function Gallery() {
                 )
             })}
         </div>
+    )
+}
+
+/**
+ * Gallery section heading which can become stuck.
+ */
+function GalleryHeading({ children }) {
+    const [ ref, inView, entry ] = useInView()
+
+    // Check whether the heading is stuck to add additional styling
+    const headerClasses = classNames('gallery-heading', 'py-3', 'font-weight-light', 'text-center', {
+        stuck: !(entry && inView),
+    })
+
+    return (
+        <>
+            <div className="gallery-heading-sentinel" ref={ref} />
+            <h2 className={headerClasses}>
+                {children}
+            </h2>
+        </>
     )
 }
 
