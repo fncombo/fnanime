@@ -51,7 +51,11 @@ function Gallery() {
     // Only show ratings which have anime and exclude all non-rated anime
     return (
         <div className="container-fluid gallery" ref={ref}>
-            {ratingCounts.slice(1).reverse().filter(count => !!count).map((count, rating) => {
+            {ratingCounts.slice(1).reverse().map((count, rating) => {
+                if (!count) {
+                    return null
+                }
+
                 const actualRating = 10 - rating
 
                 return (
