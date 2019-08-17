@@ -510,19 +510,15 @@ function RelatedList({ data }) {
         return null
     }
 
-    // Get only related anime, i.e. filter out manga
-    const getRelatedAnime = () =>
-        Object.entries(data).reduce((object, [ relationType, anime ]) => {
-            const newAnime = anime.filter(({ type }) => type === 'anime')
+    const relatedAnime = Object.entries(data).reduce((relatedArray, [ relationType, relatedData ]) => {
+        const animeOnly = relatedData.filter(({ type }) => type === 'anime')
 
-            if (newAnime.length) {
-                object[relationType] = newAnime
-            }
+        if (animeOnly.length) {
+            relatedArray.push([ relationType, animeOnly ])
+        }
 
-            return object
-        }, {})
-
-    const relatedAnime = Object.entries(getRelatedAnime())
+        return relatedArray
+    }, [])
 
     if (!relatedAnime.length) {
         return <p className="m-0">No related anime</p>
@@ -534,23 +530,26 @@ function RelatedList({ data }) {
             <h6 className="m-0">{type}</h6>
             <ul className="pb-2">
                 {anime.map(cartoon =>
-                    <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3" key={cartoon.mal_id}>
-                        <a
-                            className="text-truncate"
-                            title="Open on MyAnimeList.net"
-                            href={cartoon.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {replaceSpecialChars(cartoon.name)}
-                        </a>
-                        {AnimeObject.hasOwnProperty(cartoon.mal_id) &&
-                            <Badge showRating={true} isLink={true} {...AnimeObject[cartoon.mal_id]} />
-                        }
-                    </li>
+                    <RelatedListItem {...cartoon} key={cartoon.mal_id} />
                 )}
             </ul>
         </Fragment>
+    )
+}
+
+/**
+ * Single item in the related anime list.
+ */
+function RelatedListItem({ ...anime }) {
+    return (
+        <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3">
+            <a className="text-truncate" href={anime.url} target="_blank" rel="noopener noreferrer">
+                {replaceSpecialChars(anime.name)}
+            </a>
+            {AnimeObject.hasOwnProperty(anime.mal_id) &&
+                <Badge showRating={true} isLink={true} {...AnimeObject[anime.mal_id]} />
+            }
+        </li>
     )
 }
 
