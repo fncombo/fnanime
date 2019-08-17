@@ -1,6 +1,9 @@
 // React
 import React, { useContext, useState } from 'react'
 
+// Libraries
+import classNames from 'classnames'
+
 // Style
 import '../../css/Filters.css'
 
@@ -84,8 +87,13 @@ function FilterButtons() {
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
+    const classes = classNames('btn-group', 'mt-3', {
+        'col-6': !fullWidth,
+        'col-12': fullWidth,
+    })
+
     return (
-        <div className={`col-${fullWidth ? '12' : '6'} mt-3 btn-group`}>
+        <div className={classes}>
             {Filters[filterName].values.map(filterValue =>
                 <FilterButton filterName={filterName} filterValue={filterValue} key={filterValue} />
             )}
@@ -112,12 +120,14 @@ function FilterButton({ filterName, filterValue }) {
     // Whether this filter is currently selected and a count of how many anime match it
     const isSelected = activeFilters[filterName] === filterValue
     const count = filterCounts[filterName][filterValue]
+    const classes = classNames('btn', {
+        'btn-dark': isSelected,
+        'btn-outline-dark': !isSelected,
+        'btn-fade': filterValue && !count,
+    })
 
     return (
-        <button
-            className={`btn ${isSelected ? 'btn-dark' : 'btn-outline-dark'} ${filterValue && !count ? 'btn-fade' : ''}`}
-            onClick={selectFilter}
-        >
+        <button className={classes} onClick={selectFilter}>
             {Filters[filterName].descriptions[filterValue]}
             {!!count && <span>{count}</span>}
         </button>

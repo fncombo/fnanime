@@ -54,7 +54,7 @@ function Statistics() {
     }
 
     return (
-        <div className="container-fluid container-limited statistics my-3" ref={ref}>
+        <div className="container-fluid container-limited statistics mt-3" ref={ref}>
             <div className="row my-3 justify-content-center align-items-center">
                 <div className="col-1 text-center">
                     <h6 className="m-0">Rating</h6>

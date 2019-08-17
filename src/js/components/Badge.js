@@ -1,6 +1,9 @@
 // React
 import React, { useContext } from 'react'
 
+// Libraries
+import classNames from 'classnames'
+
 // Style
 import '../../css/Badge.css'
 
@@ -18,7 +21,11 @@ function Badge({ showRating, isLink, ...anime }) {
         return null
     }
 
-    const classes = `badge p-2 badge-${Filters.status.colorCodes[anime.status]}`
+    const classes = classNames('badge', 'p-2', `badge-${Filters.status.colorCodes[anime.status]}`, {
+        btn: isLink,
+        [`btn-${Filters.status.colorCodes[anime.status]}`]: isLink,
+        'text-truncate': !isLink,
+    })
 
     let text = Filters.status.descriptions[anime.status]
 
@@ -35,13 +42,13 @@ function Badge({ showRating, isLink, ...anime }) {
     // Open info box if a link
     if (isLink) {
         return (
-            <LinkBadge anime={anime} className={`${classes} btn btn-${Filters.status.colorCodes[anime.status]}`}>
+            <LinkBadge anime={anime} className={classes}>
                 {text}
             </LinkBadge>
         )
     }
 
-    return <span className={`${classes} text-truncate`}>{text}</span>
+    return <span className={classes}>{text}</span>
 }
 
 /**
