@@ -1,4 +1,5 @@
 import { Filters } from '../data/Filters'
+import { StorageSizeLimits } from '../data/Table'
 
 /**
  * Returns the colour for a given file quality.
@@ -37,6 +38,28 @@ function getColumnTextColor(columnName, value) {
 }
 
 /**
+ * Returns the width for a size bar based on the min and max sizes for that type.
+ */
+function getSizeBarWidth(size, type) {
+    return ((size - StorageSizeLimits[type].min) / StorageSizeLimits[type].max) * 100
+}
+
+/**
+ * Returns the colour for a size bar based on the size and the type (episode or whole anime).
+ */
+function getSizeBarColor(size, type) {
+    if (size > StorageSizeLimits[type].large) {
+        return 'danger'
+    }
+
+    if (size > StorageSizeLimits[type].medium) {
+        return 'warning'
+    }
+
+    return 'success'
+}
+
+/**
  * Returns the ordinal suffix for a number.
  */
 function formatOrdinal(number) {
@@ -63,5 +86,7 @@ function formatOrdinal(number) {
 export {
     getColumnTextColor,
     getFileQualityColor,
+    getSizeBarWidth,
+    getSizeBarColor,
     formatOrdinal,
 }

@@ -2,6 +2,7 @@
 import React, { memo, useContext, useReducer } from 'react'
 
 // Libraries
+import classNames from 'classnames'
 import fileSize from 'filesize'
 import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
@@ -12,11 +13,11 @@ import '../../css/Table.css'
 // Data
 import { GlobalState, TableState, ACTIONS } from '../data/GlobalState'
 import { Defaults } from '../data/Data'
-import { Columns, SortingOrders, StorageSizeLimits } from '../data/Table'
+import { Columns, SortingOrders } from '../data/Table'
 import { Filters } from '../data/Filters'
 
 // Helpers
-import { formatOrdinal, getColumnTextColor } from '../helpers/Table'
+import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from '../helpers/Table'
 
 // Components
 import Badge from './Badge'
@@ -81,12 +82,14 @@ const Header = memo(() => {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the table header is stuck to add additional styling
-    const isStuck = entry && inView ? '' : 'stuck'
+    const classes = classNames('table-header', {
+        stuck: !(entry && inView),
+    })
 
     return (
         <>
             <div className="table-sentinel" ref={ref} />
-            <div className={`table-header ${isStuck}`}>
+            <div className={classes}>
                 {Object.keys(Columns).map(columnName =>
                     <HeaderColumn columnName={columnName} key={columnName} />
                 )}
@@ -130,8 +133,6 @@ const HeaderColumn = memo(({ columnName }) => {
         })
     }
 
-    const sortingClass = activeSorting.hasOwnProperty(columnName) ? `sort-${activeSorting[columnName]}` : ''
-
     let index = ''
     let title = ''
 
@@ -149,14 +150,15 @@ const HeaderColumn = memo(({ columnName }) => {
         }
     }
 
+    title = `${title}Hold shift to sort by multiple columns.`
+
+    const flexBasis = Columns[columnName].size
+    const classes = classNames('table-column', {
+        [`sort-${activeSorting[columnName]}`]: activeSorting.hasOwnProperty(columnName),
+    })
+
     return (
-        <div
-            className={`table-column ${sortingClass}`}
-            style={{ flexBasis: Columns[columnName].size }}
-            onClick={changeSorting}
-            data-index={index}
-            title={`${title}Hold shift to sort by multiple columns.`}
-        >
+        <div className={classes} style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
             {Columns[columnName].text}
         </div>
     )
@@ -167,13 +169,7 @@ const HeaderColumn = memo(({ columnName }) => {
  */
 function Row(anime) {
     return (
-        <ModalContainer
-            anime={anime}
-            className="table-row"
-            href={anime.url}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
             <TitleColumn {...anime} />
             <Column columnName="status">
                 <Badge {...anime} />
@@ -212,20 +208,22 @@ function Row(anime) {
  * it gets highlighted using the anime status color.
  */
 function TitleColumn({ title, img, status, type, highlight }) {
-    // If there was a search and highlight indices have been provided, highlight matches results using them
-    const highlightTitle = () =>
-        highlight.reduce(
-            (newTitle, indices) =>
-                reactStringReplace(newTitle, title.slice(indices[0], indices[1] + 1), (match, index) =>
-                    <strong key={match + index}>{match}</strong>)
-            , title
-        )
+    // If there was a search query and highlight indices have been provided, highlight matches results using them
+    const highlightTitle = () => {
+        // Get unique parts of the title to highlight, sorted from longest to shortest
+        const parts = [ ...new Set(highlight.map(([ start, end ]) => title.slice(start, end + 1).toUpperCase())) ]
+            .sort((a, b) => b.length - a.length)
+
+        // Construct a regex to match the title parts
+        const matches = RegExp(`(${parts.join('|')})`, 'gi')
+
+        return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
+    }
+
+    const classes = classNames('table-column', 'pr-2', `color-${Filters.status.colorCodes[status]}`)
 
     return (
-        <div
-            className={`table-column pr-2 color-${Filters.status.colorCodes[status]}`}
-            style={{ flexBasis: Columns.title.size }}
-        >
+        <div className={classes} style={{ flexBasis: Columns.title.size }}>
             <img width="37" height="50" src={img} alt={title} />
             <span className="ml-2 text-truncate" title={title}>
                 {highlight ? highlightTitle() : title}
@@ -263,7 +261,7 @@ function SizeColumns({ episodeSize, size }) {
 
         return (
             <div className="table-column table-progress" style={{ flexBasis: `${width}%` }}>
-                <SizeBar type="total" size={size} />
+                <SizeBar size={size} type="total" />
             </div>
         )
     }
@@ -271,10 +269,10 @@ function SizeColumns({ episodeSize, size }) {
     return (
         <>
             <div className="table-column table-progress" style={{ flexBasis: Columns.episodeSize.size }}>
-                <SizeBar type="episode" size={episodeSize} />
+                <SizeBar size={episodeSize} type="episode" />
             </div>
             <div className="table-column table-progress" style={{ flexBasis: Columns.size.size }}>
-                <SizeBar type="total" size={size} />
+                <SizeBar size={size} type="total" />
             </div>
         </>
     )
@@ -283,18 +281,14 @@ function SizeColumns({ episodeSize, size }) {
 /**
  * Size bar and formatted size text.
  */
-function SizeBar({ type, size }) {
+function SizeBar({ size, type }) {
     if (!size) {
         return <>&mdash;</>
     }
 
-    const limits = StorageSizeLimits[type]
-
     // Calculate the width of the bar relative to the min and max
-    const width = ((size - limits.min) / limits.max) * 100
-
-    // Work out the color of the bar based on size breakpoints
-    const color = size > limits.large ? 'danger' : size > limits.medium ? 'warning' : 'success'
+    const width = getSizeBarWidth(size, type)
+    const color = getSizeBarColor(size, type)
 
     return (
         <>
