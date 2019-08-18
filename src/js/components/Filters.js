@@ -139,6 +139,7 @@ function FilterButton({ filterName, filterValue }) {
  */
 function OptionGroup({ filterName }) {
     const { state: { activeFilters: { [filterName]: activeFilterValues } }, dispatch } = useContext(GlobalState)
+    const { filterCounts } = useContext(FiltersState)
     const { value } = useState(activeFilterValues)
 
     // Callback to update the anime list when selecting this filter
@@ -150,10 +151,28 @@ function OptionGroup({ filterName }) {
         })
     }
 
+    const withCount = Filters[filterName].values.filter(filterValue =>
+        filterValue && filterCounts[filterName][filterValue]
+    )
+
+    const withoutCount = Filters[filterName].values.filter(filterValue =>
+        filterValue && !filterCounts[filterName][filterValue]
+    )
+
+    const separator = Array(20).fill(String.fromCharCode(9472))
+
     return (
         <div className="col-3 mt-3">
             <select className="form-control custom-select" value={value} onChange={selectFilter}>
-                {Filters[filterName].values.map(filterValue =>
+                <Option filterName={filterName} filterValue={false} />
+                <option disabled>{separator}</option>
+                {withCount.map(filterValue =>
+                    <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
+                )}
+                {withCount.length && withoutCount.length &&
+                    <option disabled>{separator}</option>
+                }
+                {withoutCount.map(filterValue =>
                     <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
                 )}
             </select>
