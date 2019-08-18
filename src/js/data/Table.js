@@ -52,7 +52,7 @@ const Columns = {
         size: ColumnSizes.medium,
     },
     subs: {
-        text: 'Subtitles',
+        text: 'Release',
         defaultSorting: SortingOrders.asc,
         size: ColumnSizes.medium,
     },

@@ -68,7 +68,7 @@ const Filters = {
     },
     subs: {
         descriptions: {
-            false: 'All Subtitles',
+            false: 'All Releases',
         },
         // Exclude blank values
         specialValuesProcess: values => values.filter(value => !!value),
