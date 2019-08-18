@@ -3,6 +3,7 @@ import React, { Fragment, useState, useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 // Libraries
+import classNames from 'classnames'
 import fileSize from 'filesize'
 import prettyTime from '../../lib/PrettyTime'
 import { SlideDown } from 'react-slidedown'
@@ -299,17 +300,18 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
     const navAnime = getAdjacentAnime(allAnime, currentAnimeId, direction)
+    const classes = classNames('modal-nav', {
+        placeholder: !navAnime,
+        next: direction === ACTIONS.NEXT_ANIME,
+        prev: direction !== ACTIONS.NEXT_ANIME,
+    })
 
     if (!navAnime) {
-        return <div className="modal-nav placeholder" />
+        return <div className={classes} />
     }
 
     return (
-        <div
-            className={`modal-nav ${direction === ACTIONS.NEXT_ANIME ? 'next': 'prev'}`}
-            title={navAnime.title}
-            onClick={() => changeAnime(navAnime)}
-        >
+        <div className={classes} title={navAnime.title} onClick={() => changeAnime(navAnime)}>
             <svg viewBox="0 0 10 10" className={`fill-${Filters.status.colorCodes[navAnime.status]}`}>
                 {direction === ACTIONS.NEXT_ANIME
                     ? <polygon points="0,0 10,5 0,10" />
