@@ -43,12 +43,12 @@ body {
 
 /* Modify containers */
 .container-fluid {
-    min-width: 1200px;
+    min-width: 1175px;
 }
 
 .container-limited {
     max-width: 1400px;
-    min-width: 1200px;
+    min-width: 1175px;
 }
 
 /* Lazy loading message */
