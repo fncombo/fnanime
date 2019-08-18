@@ -1,64 +1,62 @@
-// Data
-import { createFilterDefaults, updateAnimeData } from '../data/Data'
-
-// Count of API retries due to errors
-let apiRetries = 0
-
-// Storage of new API data
-const newApiData = []
-
 /**
  * Get updated API date to display the latest info such as episode watch progress.
  */
-function getApiData(page = 1, callback, errorCallback) {
-    fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`).then(response =>
-        response.json()
-    ).then(apiData => {
-        // If API responded with an error (e.g. too many requests), keep trying with increasing time between retries
-        if (apiData.hasOwnProperty('error')) {
-            apiRetries += 1
+async function getApiData(page = 1, isRetry = false) {
+    // Collect new API data
+    let newApiData = []
 
-            console.warn('API responded with an error:', apiData.error)
+    // Stop after too many retries
+    if (isRetry > 5) {
+        throw new Error('Too many API retries')
+    }
 
-            console.log(`Retrying in ${apiRetries * 2} seconds`)
-
-            setTimeout(() => {
-                getApiData(page, callback, errorCallback)
-            }, apiRetries * 2000)
-
-            return
-        }
-
-        // Add all anime from API
-        newApiData.push(apiData.anime)
-
-        // Since API only does 300 entries per response, keep trying next page until got everything
-        if (apiData.anime.length === 300) {
-            //  API requires some delay between requests
-            setTimeout(() => {
-                getApiData(page + 1, callback, errorCallback)
-            }, 2000)
-
-            return
-        }
-
-        newApiData.forEach(anime => {
-            updateAnimeData(anime.mal_id, {
-                status: anime.watching_status,
-                rating: anime.score,
-                episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
-                episodesWatched: anime.watched_episodes,
-            })
+    // Wait at least 2 seconds between API requests, increasing with each retry
+    if (page > 1 || isRetry) {
+        await new Promise(resolve => {
+            setTimeout(resolve, (isRetry || 1) * 2000)
         })
+    }
 
-        createFilterDefaults()
+    // Get the data
+    let response
 
-        callback()
-    }, error => {
-        console.error('Error while fetching API:', error)
+    try {
+        response = await fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`)
+    } catch (error) {
+        console.warn('Error occurred while fetching API, retrying')
 
-        errorCallback()
-    })
+        newApiData = newApiData.concat(await getApiData(page, isRetry ? isRetry + 1 : 1))
+    }
+
+    // Re-try if failed for any reason
+    if (response.status !== 200) {
+        console.warn('API responded with non-200 status, retrying')
+
+        newApiData = newApiData.concat(await getApiData(page, isRetry ? isRetry + 1 : 1))
+    }
+
+    // Parse JSON response
+    let responseJson
+
+    try {
+        responseJson = await response.json()
+    } catch (error) {
+        throw new Error('Could not parse API data')
+    }
+
+    if (!responseJson.hasOwnProperty('anime') || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
+        throw new Error('Anime data not found in API data')
+    }
+
+    // Add all anime from API
+    newApiData.push(...responseJson.anime)
+
+    // If this page was full (300 entries per page), get the next page
+    if (responseJson.anime.length === 300) {
+        newApiData = newApiData.concat(await getApiData(page + 1))
+    }
+
+    return newApiData
 }
 
 // Exports

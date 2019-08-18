@@ -8,7 +8,7 @@ import '../../css/fn.css'
 // Data
 import LocalDataUpdateTime from '../data/LocalDataUpdated.json'
 import { GlobalState, ACTIONS } from '../data/GlobalState'
-import { Defaults, getAnime } from '../data/Data'
+import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from '../data/Data'
 
 // Helpers
 import { getApiData } from '../helpers/App'
@@ -27,13 +27,16 @@ const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
 }).format(LocalDataUpdateTime.updated)
 
+// Toggle to stop API from being updated
+const suppressApiUpdate = false
+
 // Initial global state
 const initialState = {
     anime: getAnime(),
     searchQuery: '',
     activeSorting: { ...Defaults.sorting },
     activeFilters: { ...Defaults.filters },
-    apiUpdated: process.env.NODE_ENV === 'development',
+    apiUpdated: suppressApiUpdate,
     apiError: false,
 }
 
@@ -110,20 +113,41 @@ function App() {
     }
 
     useEffect(() => {
-        if (apiUpdated) {
-            return
-        }
-
-        if (process.env.NODE_ENV === 'development') {
+        if (apiUpdated || suppressApiUpdate) {
             return
         }
 
         // Update certain cached data from live API
-        getApiData(1, () => {
+        async function fetchData() {
+            let newApiData
+
+            try {
+                newApiData = await getApiData()
+            } catch (error) {
+                console.warn(error)
+
+                dispatch({ type: ACTIONS.API_ERROR })
+
+                return
+            }
+
+            // Update each anime's data
+            newApiData.forEach(anime => {
+                updateAnimeData(anime.mal_id, {
+                    status: anime.watching_status,
+                    rating: anime.score,
+                    episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
+                    episodesWatched: anime.watched_episodes,
+                })
+            })
+
+            // Re-create filter defaults based on new anime data
+            createFilterDefaults()
+
             dispatch({ type: ACTIONS.UPDATE_API_DATA })
-        }, () => {
-            dispatch({ type: ACTIONS.API_ERROR })
-        })
+        }
+
+        fetchData()
     }, [ apiUpdated ])
 
     return (
