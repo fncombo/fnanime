@@ -18,9 +18,9 @@ const StorageSizeLimits = {
 
 // Column sizes
 const ColumnSizes = {
-    small: '5%',
-    medium: '8%',
-    large: '12%',
+    small: '4.5%',
+    medium: '7%',
+    large: '10%',
 }
 
 // Sorting directions
@@ -34,7 +34,7 @@ const Columns = {
     title: {
         text: 'Title',
         defaultSorting: SortingOrders.asc,
-        size: '23%',
+        size: 'auto',
     },
     status: {
         text: 'Status',

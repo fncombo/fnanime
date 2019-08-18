@@ -1,4 +1,8 @@
 /* Main style */
+html, body {
+    font-size: 14px;
+}
+
 body {
     --border-color: hsl(0, 0%, 80%);
     --border-color-half: hsla(0, 0%, 80%, 0.25);
@@ -7,7 +11,6 @@ body {
     --row-color-hover: hsl(0, 0%, 90%);
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
     overflow-x: hidden;
 }
 

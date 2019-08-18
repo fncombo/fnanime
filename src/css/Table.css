@@ -70,6 +70,8 @@
 .table-header .table-column:first-child {
     justify-content: flex-start;
     padding-left: calc(40px + 1rem);
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 /* Arrow indicators for sorted table columns */
@@ -138,7 +140,7 @@
 
 /* Normal column */
 .table-column {
-    height: 50px;
+    height: 45px;
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
@@ -151,6 +153,8 @@
 .table-column:first-child {
     text-align: left;
     justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 /* Highlighted search text */
@@ -190,8 +194,8 @@
 
 /* Anime image */
 .table img {
-    flex: 0 0 37px;
-    width: 37px;
+    flex: 0 0 33px;
+    width: 33px;
     height: 100%;
 }
 
