@@ -1,0 +1,30 @@
+@import '_variables.scss';
+
+@import '~bulma/sass/utilities/initial-variables.sass';
+@import '~bulma/sass/utilities/derived-variables.sass';
+
+/* Placeholder when statistics are off screen */
+.statistics-placeholder {
+    height: 32rem;
+}
+
+/* Border around the table */
+.statistics {
+    padding: $column-gap;
+    margin-top: $section-gap;
+    text-align: center;
+
+    .columns:nth-of-type(even) {
+        background-color: var(--row-color);
+    }
+
+    .columns:last-child {
+        background-color: unset;
+    }
+
+    .progress {
+        display: flex;
+        background: $border;
+        height: 8px;
+    }
+}

@@ -20,7 +20,7 @@ const StorageSizeLimits = {
 const ColumnSizes = {
     small: '4.5%',
     medium: '7%',
-    large: '10%',
+    large: '13%',
 }
 
 // Sorting directions

@@ -6,7 +6,7 @@ import fileSize from 'filesize'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../css/Statistics.css'
+import '../../scss/Statistics.scss'
 
 // Data
 import { GlobalState } from '../data/GlobalState'
@@ -54,19 +54,19 @@ function Statistics() {
     }
 
     return (
-        <div className="container-fluid container-limited statistics mt-3" ref={ref}>
-            <div className="row my-3 justify-content-center align-items-center">
-                <div className="col-1 text-center">
-                    <h6 className="m-0">Rating</h6>
+        <div className="statistics" ref={ref}>
+            <div className="columns">
+                <div className="column is-1">
+                    <h6>Rating</h6>
                 </div>
-                <div className="col text-center">
-                    <h6 className="m-0">Number of Anime</h6>
+                <div className="column">
+                    <h6>Number of Anime</h6>
                 </div>
-                <div className="col text-center">
-                    <h6 className="m-0">Total Storage Size</h6>
+                <div className="column">
+                    <h6>Total Storage Size</h6>
                 </div>
-                <div className="col text-center">
-                    <h6 className="m-0">Total Number of Episodes</h6>
+                <div className="column">
+                    <h6>Total Number of Episodes</h6>
                 </div>
             </div>
             {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
@@ -74,17 +74,17 @@ function Statistics() {
                     <StatisticsRow rating={rating} key={rating} totals={totals} />
                 )}
             {firstNonZero !== lastNonZero &&
-                <div className="row my-3 justify-content-center align-items-center">
-                    <div className="col-1 text-center">
-                        <h6 className="m-0">Totals</h6>
+                <div className="columns">
+                    <div className="column is-1">
+                        <h6>Totals</h6>
                     </div>
-                    <div className="col text-center">
+                    <div className="column">
                         Average Rating: {totals.rating.average ? Math.round(totals.rating.average * 100) / 100 : 'N/A'}
                     </div>
-                    <div className="col text-center">
+                    <div className="column">
                         {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
-                    <div className="col text-center">
+                    <div className="column">
                         {totals.episode.sum ? totals.episode.sum : <>&mdash;</>}
                     </div>
                 </div>
@@ -98,8 +98,8 @@ function Statistics() {
  */
 function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode } }) {
     return (
-        <div className="row row-striped py-2 justify-content-center align-items-center">
-            <div className="col-1 text-center">
+        <div className="columns">
+            <div className="column is-1">
                 {rating}
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />
@@ -119,14 +119,14 @@ function StatisticsColumn({ rating, data, formatFunction }) {
 
     // Nothing to show
     if (!sum) {
-        return <div className="col text-center">&mdash;</div>
+        return <div className="column">&mdash;</div>
     }
 
     // Draw a part of the progress bar in the correct color for each status of anime
     return (
-        <div className="col text-center">
+        <div className="column">
             {formatFunction ? formatFunction(sum) : sum}
-            <div className="progress bg-secondary">
+            <div className="progress">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {
                         return null
@@ -137,7 +137,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
                     return (
                         <div
                             title={`${Filters.status.descriptions[status]} (${count})`}
-                            className={`progress-bar bg-${Filters.status.colorCodes[status]}`}
+                            className={`progress-bar has-background-${Filters.status.colorCodes[status]}`}
                             style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
                             key={`${rating}-${status}`}
                         />

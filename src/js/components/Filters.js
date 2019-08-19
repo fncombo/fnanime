@@ -5,7 +5,7 @@ import React, { useContext, useState } from 'react'
 import classNames from 'classnames'
 
 // Style
-import '../../css/Filters.css'
+import '../../scss/Filters.scss'
 
 // Data
 import { GlobalState, FiltersState, ACTIONS } from '../data/GlobalState'
@@ -50,7 +50,7 @@ function FilterButtons() {
     })
 
     return (
-        <div className="row">
+        <div className="columns is-multiline filters">
             <FiltersState.Provider value={{ filterCounts }}>
                 <FilterGroup filterName="rating" fullWidth />
                 <FilterGroup filterName="type" />
@@ -59,22 +59,24 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="col-3 mt-3">
+                <div className="column is-3">
                     <input
                         type="text"
-                        className="form-control"
+                        className="input"
                         placeholder="Search by anime title&hellip;"
                         value={searchValue}
                         onChange={search}
                         autoFocus
                     />
                 </div>
-                <OptionGroup filterName="subs" />
-                <div className="col-5 mt-3 d-flex align-items-center justify-content-center">
+                <div className="column is-3">
+                    <OptionGroup filterName="subs" />
+                </div>
+                <div className="column is-5 summary">
                     <Summary />
                 </div>
-                <div className="col-1 mt-3 d-flex">
-                    <button className="btn btn-dark flex-grow-1" onClick={reset}>
+                <div className="column is-1">
+                    <button className="button is-dark is-fullwidth" onClick={reset}>
                         Reset
                     </button>
                 </div>
@@ -87,10 +89,7 @@ function FilterButtons() {
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
-    const classes = classNames('btn-group', 'mt-3', {
-        'col-6': !fullWidth,
-        'col-12': fullWidth,
-    })
+    const classes = classNames('column buttons has-addons is-marginless', fullWidth ? 'is-12' : 'is-6')
 
     return (
         <div className={classes}>
@@ -120,10 +119,9 @@ function FilterButton({ filterName, filterValue }) {
     // Whether this filter is currently selected and a count of how many anime match it
     const isSelected = activeFilters[filterName] === filterValue
     const count = filterCounts[filterName][filterValue]
-    const classes = classNames('btn', {
-        'btn-dark': isSelected,
-        'btn-outline-dark': !isSelected,
-        'btn-fade': filterValue && !count,
+    const classes = classNames('button', {
+        'is-dark is-active': isSelected,
+        'is-faded': filterValue && !count,
     })
 
     return (
@@ -162,8 +160,8 @@ function OptionGroup({ filterName }) {
     const separator = Array(20).fill(String.fromCharCode(9472))
 
     return (
-        <div className="col-3 mt-3">
-            <select className="form-control custom-select" value={value} onChange={selectFilter}>
+        <div className="select is-fullwidth">
+            <select value={value} onChange={selectFilter}>
                 <Option filterName={filterName} filterValue={false} />
                 <option disabled>{separator}</option>
                 {withCount.map(filterValue =>

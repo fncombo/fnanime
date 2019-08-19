@@ -8,7 +8,7 @@ import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../css/Table.css'
+import '../../scss/Table.scss'
 
 // Data
 import { GlobalState, TableState, ACTIONS } from '../data/GlobalState'
@@ -56,7 +56,7 @@ function Table() {
     const [ state, dispatch ] = useReducer(tablePageReducer, initialTableState)
 
     if (!anime.length) {
-        return <p className="alert alert-danger mt-3">No matching anime found!</p>
+        return <p className="alert alert-danger">No matching anime found!</p>
     }
 
     // Calculate the last possible page number
@@ -64,13 +64,17 @@ function Table() {
 
     return (
         <TableState.Provider value={{ state, dispatch, lastPage }}>
-            <div className="table mt-3">
-                <Header />
-                {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
-                    <Row key={cartoon.id} {...cartoon} />
-                )}
+            <div class="container">
+                <div className="table">
+                    <Header />
+                    {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
+                        <Row key={cartoon.id} {...cartoon} />
+                    )}
+                </div>
             </div>
-            <Pagination />
+            <div className="container">
+                <Pagination />
+            </div>
         </TableState.Provider>
     )
 }
@@ -181,7 +185,7 @@ function Row(anime) {
                 {anime.rewatchCount}
             </Column>
             <Column columnName="subs" value={anime.subs}>
-                <span className="text-truncate">{anime.subs}</span>
+                <span className="has-text-overflow">{anime.subs}</span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
                 {anime.resolution}p
@@ -220,15 +224,15 @@ function TitleColumn({ title, img, status, type, highlight }) {
         return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
     }
 
-    const classes = classNames('table-column', 'pr-2', `color-${Filters.status.colorCodes[status]}`)
+    const classes = classNames('table-column', `highlight-${Filters.status.colorCodes[status]}`)
 
     return (
         <div className={classes} style={{ flexBasis: Columns.title.size }}>
             <img width="37" height="50" src={img} alt={title} />
-            <span className="ml-2 text-truncate" title={title}>
+            <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle() : title}
             </span>
-            <span className="text-gray ml-2">
+            <span className="type">
                 {Filters.type.descriptions[type]}
             </span>
         </div>
@@ -243,7 +247,7 @@ function Column({ value, columnName, children }) {
 
     // Fallback to a dash if there are no children or value
     return (
-        <div className={`table-column text-${textColor}`} style={{ flexBasis: Columns[columnName].size }}>
+        <div className={`table-column has-text-${textColor}`} style={{ flexBasis: Columns[columnName].size }}>
             {(value === undefined ? children : value) ? children || value : <>&mdash;</>}
         </div>
     )
@@ -260,7 +264,7 @@ function SizeColumns({ episodeSize, size }) {
         const width = parseInt(Columns.episodeSize.size, 10) + parseInt(Columns.size.size, 10)
 
         return (
-            <div className="table-column table-progress" style={{ flexBasis: `${width}%` }}>
+            <div className="table-column progress-column" style={{ flexBasis: `${width}%` }}>
                 <SizeBar size={size} type="total" />
             </div>
         )
@@ -268,10 +272,10 @@ function SizeColumns({ episodeSize, size }) {
 
     return (
         <>
-            <div className="table-column table-progress" style={{ flexBasis: Columns.episodeSize.size }}>
+            <div className="table-column progress-column" style={{ flexBasis: Columns.episodeSize.size }}>
                 <SizeBar size={episodeSize} type="episode" />
             </div>
-            <div className="table-column table-progress" style={{ flexBasis: Columns.size.size }}>
+            <div className="table-column progress-column" style={{ flexBasis: Columns.size.size }}>
                 <SizeBar size={size} type="total" />
             </div>
         </>
@@ -293,9 +297,7 @@ function SizeBar({ size, type }) {
     return (
         <>
             {fileSize(size, { round: size < 1e9 ? 0 : 2 })}
-            <div className="progress bg-secondary">
-                <div className={`progress-bar bg-${color}`} style={{ width: `${width}px` }} />
-            </div>
+            <progress className={`progress is-${color}`} value={width} max="100" />
         </>
     )
 }

@@ -35,13 +35,13 @@ const Filters = {
         },
         colorCodes: {
             false: '',
-            null: 'black',
+            null: 'dark',
             1: 'success',
-            2: 'primary',
+            2: 'info',
             3: 'warning',
             4: 'danger',
             5: 'danger',
-            6: 'secondary',
+            6: 'dark',
         },
     },
     rating: {

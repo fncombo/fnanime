@@ -2,7 +2,7 @@
 import React, { memo, useContext } from 'react'
 
 // Style
-import '../../css/Pagination.css'
+import '../../scss/Pagination.scss'
 
 // Data
 import { TableState, ACTIONS } from '../data/GlobalState'
@@ -62,9 +62,9 @@ function Pagination() {
             // in between them and adjacent buttons
             } else if (pageNumber - previousPage !== 1) {
                 buttons.push(
-                    <button className="btn btn-blank mx-1" disabled={true} key={`${pageNumber}-dots`}>
-                        &middot;&middot;&middot;
-                    </button>
+                    <span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>
+                        &hellip;
+                    </span>
                 )
             }
         }
@@ -78,40 +78,18 @@ function Pagination() {
         previousPage = pageNumber
     })
 
-    // Add blank buttons at the start to ensure the current page button is always exactly in the middle
-    if (page <= Defaults.pageButtons + 2) {
-        for (let i = 0; i <= Defaults.pageButtons + 2 - page; i += 1) {
-            buttons.unshift(
-                <button className="btn btn-blank mx-1" disabled={true} key={`start-${i}-fill`} />
-            )
-        }
-    }
-
-    // Add blank buttons at the end to ensure the current page button is always exactly in the middle
-    if (page > lastPage - Defaults.pageButtons - 2) {
-        for (let i = lastPage + 1; i <= lastPage + Defaults.pageButtons + 2 - (lastPage - page); i += 1) {
-            buttons.push(
-                <button className="btn btn-blank mx-1" disabled={true} key={`end-${i}-fill`} />
-            )
-        }
-    }
-
     return (
-        <div className="row my-3 pagination">
-            <div className="col-3 pagination-prev-next">
-                <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1}>
-                    Previous
-                </TextButton>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
+        <nav className="pagination">
+            <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1} className="pagination-previous">
+                Previous
+            </TextButton>
+            <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} className="pagination-next">
+                Next
+            </TextButton>
+            <div className="pagination-list">
                 {buttons}
             </div>
-            <div className="col-3 d-flex justify-content-end pagination-prev-next">
-                <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage}>
-                    Next
-                </TextButton>
-            </div>
-        </div>
+        </nav>
     )
 }
 
@@ -131,33 +109,41 @@ function NumberButton({ children: pageNumber }) {
     // Current page button does nothing and has a unique look
     if (pageNumber === page) {
         return (
-            <button className="btn btn-dark p-0 mx-1">
+            <span className="pagination-link is-current">
                 {pageNumber}
-            </button>
+            </span>
         )
     }
 
     return (
-        <button className="btn btn-outline-dark p-0 mx-1" onClick={changePage}>
+        <span className="pagination-link" onClick={changePage}>
             {pageNumber}
-        </button>
+        </span>
     )
 }
 
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-const TextButton = memo(({ action: type, disabled = false, children }) => {
+const TextButton = memo(({ action: type, disabled = false, children, ...rest }) => {
     const { dispatch } = useContext(TableState)
 
     const changePage = () => {
         dispatch({ type })
     }
 
+    if (disabled) {
+        return (
+            <span disabled={disabled} {...rest}>
+                {children}
+            </span>
+        )
+    }
+
     return (
-        <button className="btn btn-dark btn-nav" onClick={changePage} disabled={disabled}>
+        <span onClick={changePage} {...rest}>
             {children}
-        </button>
+        </span>
     )
 })
 

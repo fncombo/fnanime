@@ -545,7 +545,7 @@ function RelatedList({ data }) {
 function RelatedListItem({ ...anime }) {
     return (
         <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3">
-            <a className="text-truncate" href={anime.url} target="_blank" rel="noopener noreferrer">
+            <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
             {AnimeObject.hasOwnProperty(anime.mal_id) &&

@@ -1,0 +1,128 @@
+@import '_variables.scss';
+
+// Placeholder when the gallery is off screen
+.gallery-placeholder {
+    height: 529rem;
+}
+
+// Gallery container
+.gallery {
+    $img-width: 147px;
+    $img-height: round($img-width * 1.4);
+
+    padding: 0 $column-gap;
+
+    .tag {
+        border-radius: 0;
+    }
+
+    img {
+        height: $img-height;
+        width: $img-width;
+        pointer-events: none;
+    }
+
+
+    // Gallery item placeholder for when it shouldn't be rendered
+    .item-placeholder {
+        flex: 0 0 $img-width;
+        width: $img-width;
+        height: calc(#{$img-height} + 2rem);
+    }
+
+    // Gallery item
+    .item {
+        flex: 0 0 $img-width;
+        width: $img-width;
+        margin: $column-gap / 2;
+        transition: z-index 0.15s ease-in-out;
+        z-index: 1;
+
+        &:hover  {
+            text-decoration: none;
+            z-index: 100;
+        }
+    }
+
+    // Inner container of gallery item
+    .item-inner {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition-property: opacity, box-shadow, transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease-in-out;
+        overflow: hidden;
+    }
+
+    .item:hover .item-inner  {
+        opacity: 1;
+        color: unset;
+        box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+        transform: scale(1.666);
+    }
+
+    // Style for items which are very close to the sides
+    .item.left .item-inner {
+        transform-origin: left center;
+    }
+
+    .item.right .item-inner {
+        transform-origin: right center;
+    }
+
+    .not-downloaded .item-inner {
+        opacity: 0.3;
+    }
+
+    // Grid of gallery items
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 (-$column-gap / 2);
+    }
+
+    // Heading sentinel element
+    .heading-sentinel {
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+    }
+
+    // Gallery heading
+    .heading {
+        background: rgba(255, 255, 255, 0.95);
+        position: sticky;
+        top: 60px;
+        margin: $section-gap -15px 0 !important;
+        padding: 1rem;
+        transition: box-shadow 0.15s ease-in-out;
+        text-align: center;
+
+        &.stuck {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+            z-index: 150;
+        }
+
+        span {
+            opacity: 0.5;
+        }
+
+        @supports (backdrop-filter: blur(20px)) {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px) saturate(200%);
+        }
+    }
+}
+
+
+
+
+/* Individual section of the gallery */
+.gallery-section {
+    position: relative;
+}

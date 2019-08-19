@@ -1,11 +1,8 @@
 // React
 import React, { useContext } from 'react'
 
-// Libraries
-import classNames from 'classnames'
-
 // Style
-import '../../css/Badge.css'
+import '../../scss/Badge.scss'
 
 // Data
 import { ModalState } from '../data/GlobalState'
@@ -21,34 +18,46 @@ function Badge({ showRating, isLink, ...anime }) {
         return null
     }
 
-    const classes = classNames('badge', 'p-2', `badge-${Filters.status.colorCodes[anime.status]}`, {
-        btn: isLink,
-        [`btn-${Filters.status.colorCodes[anime.status]}`]: isLink,
-        'text-truncate': !isLink,
-    })
-
-    let text = Filters.status.descriptions[anime.status]
+    const classes = `tag is-medium is-rounded is-${Filters.status.colorCodes[anime.status]}`
+    let extraInfo
 
     // Show episode progress if number of watched episodes is different from total and not zero
     if ((anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) || anime.status === 1) {
-        text = <>{text} &ndash; {anime.episodesWatched}/{anime.episodes || '?'}</>
+        extraInfo = <>{anime.episodesWatched}/{anime.episodes || '?'}</>
     }
 
     // Optionally show anime rating
     if (showRating && !!anime.rating) {
-        text = <>{text} &ndash; Rated {anime.rating}</>
+        extraInfo = <>Rated {anime.rating}</>
     }
 
     // Open info box if a link
     if (isLink) {
         return (
             <LinkBadge anime={anime} className={classes}>
-                {text}
+                {Filters.status.descriptions[anime.status]}
             </LinkBadge>
         )
     }
 
-    return <span className={classes}>{text}</span>
+    if (extraInfo) {
+        return (
+            <div className="tags has-addons">
+                <span class={classes}>
+                    {Filters.status.descriptions[anime.status]}
+                </span>
+                <span class='tag is-medium is-rounded is-dark'>
+                    {extraInfo}
+                </span>
+            </div>
+        )
+    }
+
+    return (
+        <span className={classes}>
+            {Filters.status.descriptions[anime.status]}
+        </span>
+    )
 }
 
 /**

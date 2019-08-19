@@ -1,0 +1,44 @@
+@import '_variables.scss';
+
+@import '~bulma/sass/utilities/_all.sass';
+
+@import '~bulma/sass/base/_all.sass';
+
+@import '~bulma/sass/grid/columns.sass';
+
+@import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/elements/progress.sass';
+@import '~bulma/sass/elements/tag.sass';
+@import '~bulma/sass/elements/title.sass';
+
+@import '~bulma/sass/components/pagination.sass';
+
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/input-textarea.sass';
+@import '~bulma/sass/form/select.sass';
+
+@import '~bulma/sass/utilities/initial-variables.sass';
+
+html {
+    font-family: 'Open Sans', $body-family;
+    font-size: 14px;
+    --border-color: hsl(0, 0%, 80%);
+    --border-color-half: hsla(0, 0%, 80%, 0.25);
+
+    --row-color: hsl(0, 0%, 95%);
+    --row-color-hover: hsl(0, 0%, 90%);
+}
+
+.container {
+    min-width: 1150px;
+    max-width: 1400px;
+    padding: 0 $column-gap;
+    margin: $column-gap auto;
+    // outline: 1px solid red;
+}
+
+.has-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

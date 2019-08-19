@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../css/Gallery.css'
+import '../../scss/Gallery.scss'
 
 // Data
 import { GlobalState } from '../data/GlobalState'
@@ -59,11 +59,11 @@ function Gallery() {
                 const actualRating = 10 - rating
 
                 return (
-                    <div className="gallery-section mb-3" key={actualRating}>
+                    <div className="gallery-section" key={actualRating}>
                         <GalleryHeading>
-                            {Filters.rating.descriptions[actualRating]} <span>({count} anime)</span>
+                            {Filters.rating.descriptions[actualRating]}
                         </GalleryHeading>
-                        <div className="gallery-grid">
+                        <div className="grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
                                 <GalleryItem key={cartoon.id} {...cartoon} />
                             )}
@@ -82,13 +82,13 @@ function GalleryHeading({ children }) {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the heading is stuck to add additional styling
-    const headerClasses = classNames('gallery-heading', 'py-3', 'font-weight-light', 'text-center', {
+    const headerClasses = classNames('heading subtitle is-3', {
         stuck: !(entry && inView),
     })
 
     return (
         <>
-            <div className="gallery-heading-sentinel" ref={ref} />
+            <div className="heading-sentinel" ref={ref} />
             <h2 className={headerClasses}>
                 {children}
             </h2>
@@ -123,21 +123,21 @@ function GalleryItem(anime) {
 
     // Do not render until the item is close to being visible to the user to prevent useless image loading
     if (!inView) {
-        return <div className="gallery-item-placeholder" ref={ref} />
+        return <div className="item-placeholder" ref={ref} />
     }
 
     return (
         <ModalContainer
             anime={anime}
-            className={`gallery-item ${anime.size ? '' : 'not-downloaded'} ${hoverClass}`}
+            className={`item ${anime.size ? '' : 'not-downloaded'} ${hoverClass}`}
             href={anime.url}
             target="_blank"
             rel="noopener noreferrer"
             onMouseOver={hover}
         >
-            <div className="gallery-item-inner" ref={ref}>
+            <div className="item-inner" ref={ref}>
                 <img src={anime.img} alt={anime.title} />
-                <span className={`badge p-2 rounded-0 rounded-bottom badge-${Filters.status.colorCodes[anime.status]}`}>
+                <span className={`tag is-medium is-${Filters.status.colorCodes[anime.status]}`}>
                     {anime.episodes > 1
                         ? <>{Filters.type.descriptions[anime.type]} &ndash; {anime.episodes} ep</>
                         : Filters.type.descriptions[anime.type]
