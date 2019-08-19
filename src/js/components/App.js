@@ -1,6 +1,9 @@
 // React
 import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 
+// Libraries
+import classNames from 'classnames'
+
 // Style
 import '../../scss/App.scss'
 import '../../scss/fn.scss'
@@ -150,6 +153,10 @@ function App() {
         fetchData()
     }, [ apiUpdated ])
 
+    const messageClasses = classNames('message', {
+        'is-done': apiUpdated,
+    })
+
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
             <div className="container">
@@ -169,7 +176,7 @@ function App() {
                 <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
                 <li>All rankings are my own subjective opinion</li>
             </ul>
-            <div className={`message ${apiUpdated ? 'done' : ''}`}>
+            <div className={messageClasses}>
                 {updateStatusMessage}
             </div>
         </GlobalState.Provider>
@@ -181,7 +188,7 @@ function App() {
  */
 function Loading() {
     return (
-        <div class="container">
+        <div className="container">
             <p className="notification">Loading&hellip;</p>
         </div>
     )
