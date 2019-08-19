@@ -3,7 +3,7 @@ import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 
 // Style
 import '../../scss/App.scss'
-import '../../css/fn.css'
+import '../../scss/fn.scss'
 
 // Data
 import LocalDataUpdateTime from '../data/LocalDataUpdated.json'
@@ -164,7 +164,7 @@ function App() {
             <Suspense fallback={<Loading />}>
                 <Gallery />
             </Suspense>
-            <ul className="updated-times container-fluid container-limited text-center">
+            <ul className="updated-times has-text-centered">
                 <li>Local anime data last updated on {localDataUpdateTime}</li>
                 <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
                 <li>All rankings are my own subjective opinion</li>
@@ -181,9 +181,9 @@ function App() {
  */
 function Loading() {
     return (
-        <p className="alert alert-dark alert-loading my-3 text-center">
-            Loading&hellip;
-        </p>
+        <div class="container">
+            <p className="notification">Loading&hellip;</p>
+        </div>
     )
 }
 

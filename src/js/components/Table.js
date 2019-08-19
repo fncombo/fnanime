@@ -56,7 +56,11 @@ function Table() {
     const [ state, dispatch ] = useReducer(tablePageReducer, initialTableState)
 
     if (!anime.length) {
-        return <p className="alert alert-danger">No matching anime found!</p>
+        return (
+            <div class="container">
+                <p className="notification is-danger">No matching anime found!</p>
+            </div>
+        )
     }
 
     // Calculate the last possible page number
@@ -64,7 +68,7 @@ function Table() {
 
     return (
         <TableState.Provider value={{ state, dispatch, lastPage }}>
-            <div class="container">
+            <div className="container">
                 <div className="table">
                     <Header />
                     {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
@@ -87,7 +91,7 @@ const Header = memo(() => {
 
     // Check whether the table header is stuck to add additional styling
     const classes = classNames('table-header', {
-        stuck: !(entry && inView),
+        'is-stuck': !(entry && inView),
     })
 
     return (
@@ -224,7 +228,7 @@ function TitleColumn({ title, img, status, type, highlight }) {
         return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
     }
 
-    const classes = classNames('table-column', `highlight-${Filters.status.colorCodes[status]}`)
+    const classes = classNames('table-column', `has-highlight-${Filters.status.colorCodes[status]}`)
 
     return (
         <div className={classes} style={{ flexBasis: Columns.title.size }}>
@@ -264,7 +268,7 @@ function SizeColumns({ episodeSize, size }) {
         const width = parseInt(Columns.episodeSize.size, 10) + parseInt(Columns.size.size, 10)
 
         return (
-            <div className="table-column progress-column" style={{ flexBasis: `${width}%` }}>
+            <div className="table-column has-progress" style={{ flexBasis: `${width}%` }}>
                 <SizeBar size={size} type="total" />
             </div>
         )
@@ -272,10 +276,10 @@ function SizeColumns({ episodeSize, size }) {
 
     return (
         <>
-            <div className="table-column progress-column" style={{ flexBasis: Columns.episodeSize.size }}>
+            <div className="table-column has-progress" style={{ flexBasis: Columns.episodeSize.size }}>
                 <SizeBar size={episodeSize} type="episode" />
             </div>
-            <div className="table-column progress-column" style={{ flexBasis: Columns.size.size }}>
+            <div className="table-column has-progress" style={{ flexBasis: Columns.size.size }}>
                 <SizeBar size={size} type="total" />
             </div>
         </>

@@ -54,7 +54,7 @@ function Statistics() {
     }
 
     return (
-        <div className="statistics" ref={ref}>
+        <div className="statistics has-text-centered" ref={ref}>
             <div className="columns">
                 <div className="column is-1">
                     <h6>Rating</h6>
@@ -126,7 +126,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum}
-            <div className="progress">
+            <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {
                         return null
@@ -137,7 +137,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
                     return (
                         <div
                             title={`${Filters.status.descriptions[status]} (${count})`}
-                            className={`progress-bar has-background-${Filters.status.colorCodes[status]}`}
+                            className={`has-background-${Filters.status.colorCodes[status]}`}
                             style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
                             key={`${rating}-${status}`}
                         />

@@ -9,7 +9,7 @@ import prettyTime from '../../lib/PrettyTime'
 import { SlideDown } from 'react-slidedown'
 
 // Style
-import '../../css/Modal.css'
+import '../../scss/Modal.scss'
 import 'react-slidedown/lib/slidedown.css'
 
 // Data
@@ -84,10 +84,10 @@ function Modal({ closeModal: closeCallback, ...props }) {
 
     // Callback to change the anime info inside the modal with a transition animation in between
     const changeAnime = newAnime => {
-        document.body.classList.add('modal-changing')
+        document.body.classList.add('is-changing')
 
         setTimeout(() => {
-            document.body.classList.remove('modal-changing')
+            document.body.classList.remove('is-changing')
 
             setAnime(newAnime)
         }, 150)
@@ -95,7 +95,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
 
     // Callback to close the modal after it has finished animating out
     const closeModal = () => {
-        document.body.classList.remove('modal-open')
+        document.body.classList.remove('is-active')
 
         setTimeout(() => {
             closeCallback()
@@ -122,20 +122,24 @@ function Modal({ closeModal: closeCallback, ...props }) {
 
     // Add and remove the modal open classes from the body
     useEffect(() => {
-        document.body.classList.add('modal-open')
+        document.body.classList.add('is-active')
+
+        document.documentElement.classList.add('is-clipped')
 
         window.addEventListener('keyup', keyHandler)
 
         return () => {
-            document.body.classList.remove('modal-open')
+            document.body.classList.remove('is-active')
+
+            document.documentElement.classList.remove('is-clipped')
 
             window.removeEventListener('keyup', keyHandler)
         }
     })
 
     return (
-        <div className="modal d-block">
-            <div className="modal-overlay" onClick={closeModal} />
+        <div className="modal is-flex">
+            <div className="modal-background" onClick={closeModal} />
             <NavigationButton
                 direction={ACTIONS.PREV_ANIME}
                 changeAnime={changeAnime}
@@ -146,19 +150,17 @@ function Modal({ closeModal: closeCallback, ...props }) {
                 changeAnime={changeAnime}
                 currentAnimeId={anime.id}
             />
-            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div className={`modal-content bg-${Filters.status.colorCodes[anime.status]}`}>
-                    <div className="modal-header border-0 align-items-center">
-                        <h5 className="modal-title">
-                            <a href={anime.url} target="_blank" rel="noopener noreferrer">
-                                {anime.title}
-                            </a>
-                        </h5>
-                        <button className="close" onClick={closeModal}>&times;</button>
-                    </div>
-                    <div className="modal-body rounded">
-                        <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
-                    </div>
+            <div className={`modal-card has-background-${Filters.status.colorCodes[anime.status]}`}>
+                <div className="modal-card-head">
+                    <h5 className="modal-card-title">
+                        <a href={anime.url} target="_blank" rel="noopener noreferrer">
+                            {anime.title}
+                        </a>
+                    </h5>
+                    <button className="delete" onClick={closeModal}></button>
+                </div>
+                <div className="modal-card-body">
+                    <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
                 </div>
             </div>
         </div>
@@ -212,22 +214,22 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
 
     return (
         <ModalState.Provider value={{ modalState, changeAnime }}>
-            <div className="row">
-                <div className="col-3 text-center">
+            <div className="columns">
+                <div className="column is-3 has-text-centered">
                     <img className="rounded" width="269" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
                     <LoadingText>
                         <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
                     <hr />
-                    <p className="mb-0">
+                    <p>
                         {Filters.type.descriptions[anime.type]}
                         <Episodes episodes={anime.episodes} />
                     </p>
                     <LoadingText>
-                        <p className="mb-0">Aired: <ApiData property="aired.string" fallback="N/A" /></p>
+                        <p>Aired: <ApiData property="aired.string" fallback="N/A" /></p>
                     </LoadingText>
-                    <div className="mt-3">
+                    <div className="status">
                         <Badge {...anime} />
                     </div>
                     <hr />
@@ -235,7 +237,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         View on MyAnimeList.net
                     </a>
                 </div>
-                <div className="col-9">
+                <div className="column">
                     <ul>
                         <li>
                             <strong>English Title: </strong>
@@ -257,7 +259,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                     </ul>
                     <hr />
-                    <h5>Statistics</h5>
+                    <h5 className="title is-5">Statistics</h5>
                     <ul>
                         <li>
                             <strong>Storage Size: </strong>
@@ -278,12 +280,12 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         {!!anime.subs && <li><strong>Release:</strong> {anime.subs}</li>}
                     </ul>
                     <hr />
-                    <h5>Synopsis</h5>
+                    <h5 className="title is-5">Synopsis</h5>
                     <LoadingParagraph>
                         <Synopsis data={apiData.synopsis} />
                     </LoadingParagraph>
                     <hr />
-                    <h5>Related Anime</h5>
+                    <h5 className="title is-5">Related Anime</h5>
                     <LoadingParagraph>
                         <RelatedList data={apiData.related} />
                     </LoadingParagraph>
@@ -328,19 +330,19 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
  */
 function Rating({ rating }) {
     if (!rating) {
-        return <h5 className="mt-3">Not Rated</h5>
+        return <h5>Not Rated</h5>
     }
 
     return (
         <>
-            <h3>
-                <span className="text-warning">
+            <div className="rating">
+                <span className="has-text-warning">
                     {Array(rating).fill('★')}
                 </span>
-                <span className="rating text-gray">
+                <span className="has-text-grey-lighter">
                     {Array(10 - rating).fill('★')}
                 </span>
-            </h3>
+            </div>
             <h5>{Filters.rating.descriptions[rating]}</h5>
         </>
     )
@@ -370,14 +372,14 @@ function Loading({ children, ...rest }) {
  * Inline, shorter loading placeholder.
  */
 function LoadingInline({ children }) {
-    return <Loading className="loading-text loading-inline col-3">{children}</Loading>
+    return <Loading className="loading-text loading-inline">{children}</Loading>
 }
 
 /**
  * Full line loading placeholder.
  */
 function LoadingText({ children }) {
-    return <Loading className="loading-text mb-0">{children}</Loading>
+    return <Loading className="loading-text">{children}</Loading>
 }
 
 /**
@@ -387,7 +389,7 @@ function LoadingParagraph({ children }) {
     const { modalState: { isLoaded } } = useContext(ModalState)
 
     return (
-        <SlideDown className={`loading-paragraph ${isLoaded ? 'loaded' : 'loading'}`}>
+        <SlideDown className={`loading-paragraph ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
             <div className="placeholders">
                 <span /><span />
                 <span /><span />
@@ -395,7 +397,7 @@ function LoadingParagraph({ children }) {
                 <span /><span />
                 <span /><span />
             </div>
-            <div className={`loading-content ${isLoaded ? 'loaded' : 'loading'}`}>
+            <div className={`loading-content ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
                 {isLoaded ? children : null}
             </div>
         </SlideDown>
@@ -433,7 +435,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         return (
             <>
                 {watchTime}
-                <span className="text-gray">
+                <span className="has-text-grey">
                     &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
             </>
@@ -445,7 +447,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         return (
             <>
                 {watchTime}
-                <span className="text-gray">
+                <span className="has-text-grey">
                     &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
                 </span>
             </>
@@ -463,7 +465,7 @@ function Size({ size, episodes }) {
         <>
             {size ? fileSize(size) : 'Not Downloaded'}
             {(size && episodes > 1) &&
-                <span className="text-gray">
+                <span className="has-text-grey">
                     &nbsp;&ndash; average {fileSize(size / episodes)} per episode
                 </span>
             }
@@ -487,7 +489,7 @@ function Duration({ duration, episodes }) {
     return (
         <>
             {totalDuration}
-            {episodes > 1 && <span className="text-gray"> &ndash; {episodeDuration} per episode</span>}
+            {episodes > 1 && <span className="has-text-grey"> &ndash; {episodeDuration} per episode</span>}
         </>
     )
 }
@@ -497,10 +499,10 @@ function Duration({ duration, episodes }) {
  */
 function Synopsis({ data }) {
     if (!data || typeof data !== 'string') {
-        return <p className="m-0">No synopsis</p>
+        return <p>No synopsis</p>
     }
 
-    return <p className="m-0">{replaceSpecialChars(data)}</p>
+    return <p>{replaceSpecialChars(data)}</p>
 }
 
 /**
@@ -523,14 +525,14 @@ function RelatedList({ data }) {
     }, [])
 
     if (!relatedAnime.length) {
-        return <p className="m-0">No related anime</p>
+        return <p>No related anime</p>
     }
 
     // Sub list for every relation type
     return relatedAnime.map(([ type, anime ]) =>
         <Fragment key={type}>
-            <h6 className="m-0">{type}</h6>
-            <ul className="pb-2">
+            <strong>{type}</strong>
+            <ul className="related-list">
                 {anime.map(cartoon =>
                     <RelatedListItem {...cartoon} key={cartoon.mal_id} />
                 )}
@@ -543,13 +545,19 @@ function RelatedList({ data }) {
  * Single item in the related anime list.
  */
 function RelatedListItem({ ...anime }) {
+    const { changeAnime } = useContext(ModalState)
+
+    const onClick = () => {
+        changeAnime(AnimeObject[anime.mal_id])
+    }
+
     return (
-        <li className="d-flex align-items-center text-nowrap mx-0 my-1 ml-3">
+        <li>
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
             {AnimeObject.hasOwnProperty(anime.mal_id) &&
-                <Badge showRating={true} isLink={true} {...AnimeObject[anime.mal_id]} />
+                <Badge showRating isSmall onClick={onClick} {...AnimeObject[anime.mal_id]} />
             }
         </li>
     )

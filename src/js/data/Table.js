@@ -18,7 +18,7 @@ const StorageSizeLimits = {
 
 // Column sizes
 const ColumnSizes = {
-    small: '4.5%',
+    small: '5%',
     medium: '7%',
     large: '13%',
 }
@@ -82,7 +82,7 @@ const Columns = {
         size: ColumnSizes.small,
     },
     episodeSize: {
-        text: 'Episode Size',
+        text: 'Ep. Size',
         defaultSorting: SortingOrders.desc,
         size: ColumnSizes.medium,
     },

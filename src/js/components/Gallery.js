@@ -50,7 +50,7 @@ function Gallery() {
 
     // Only show ratings which have anime and exclude all non-rated anime
     return (
-        <div className="container-fluid gallery" ref={ref}>
+        <div className="gallery" ref={ref}>
             {ratingCounts.slice(1).reverse().map((count, rating) => {
                 if (!count) {
                     return null
@@ -63,7 +63,7 @@ function Gallery() {
                         <GalleryHeading>
                             {Filters.rating.descriptions[actualRating]}
                         </GalleryHeading>
-                        <div className="grid">
+                        <div className="gallery-grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
                                 <GalleryItem key={cartoon.id} {...cartoon} />
                             )}
@@ -82,13 +82,13 @@ function GalleryHeading({ children }) {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the heading is stuck to add additional styling
-    const headerClasses = classNames('heading subtitle is-3', {
-        stuck: !(entry && inView),
+    const headerClasses = classNames('gallery-heading title is-3', {
+        'is-stuck': !(entry && inView),
     })
 
     return (
         <>
-            <div className="heading-sentinel" ref={ref} />
+            <div className="gallery-heading-sentinel" ref={ref} />
             <h2 className={headerClasses}>
                 {children}
             </h2>
@@ -109,11 +109,11 @@ function GalleryItem(anime) {
 
         // Close to the left
         if (bounds.x <= (imgWidth / 4)) {
-            setHoverClass('left')
+            setHoverClass('is-left')
 
         // Close to the right
         } else if (bounds.x + imgWidth + (imgWidth / 4) >= window.innerWidth) {
-            setHoverClass('right')
+            setHoverClass('is-right')
 
         // Reset previous class
         } else if (hoverClass.length) {
@@ -123,24 +123,23 @@ function GalleryItem(anime) {
 
     // Do not render until the item is close to being visible to the user to prevent useless image loading
     if (!inView) {
-        return <div className="item-placeholder" ref={ref} />
+        return <div className="gallery-item-placeholder" ref={ref} />
     }
 
+    const rel = 'noopener noreferrer'
+    const { title, img, url, episodes, type, size, status } = anime
+    const classes = classNames('gallery-item', hoverClass, {
+        'is-not-downloaded': !size,
+    })
+
     return (
-        <ModalContainer
-            anime={anime}
-            className={`item ${anime.size ? '' : 'not-downloaded'} ${hoverClass}`}
-            href={anime.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseOver={hover}
-        >
-            <div className="item-inner" ref={ref}>
-                <img src={anime.img} alt={anime.title} />
-                <span className={`tag is-medium is-${Filters.status.colorCodes[anime.status]}`}>
-                    {anime.episodes > 1
-                        ? <>{Filters.type.descriptions[anime.type]} &ndash; {anime.episodes} ep</>
-                        : Filters.type.descriptions[anime.type]
+        <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
+            <div className="gallery-item-inner" ref={ref}>
+                <img src={img} alt={title} />
+                <span className={`tag is-medium is-${Filters.status.colorCodes[status]}`}>
+                    {episodes > 1
+                        ? <>{Filters.type.descriptions[type]} &ndash; {episodes} ep</>
+                        : Filters.type.descriptions[type]
                     }
                 </span>
             </div>

@@ -76,7 +76,7 @@ function FilterButtons() {
                     <Summary />
                 </div>
                 <div className="column is-1">
-                    <button className="button is-dark is-fullwidth" onClick={reset}>
+                    <button className="button is-fullwidth" onClick={reset}>
                         Reset
                     </button>
                 </div>
@@ -89,7 +89,7 @@ function FilterButtons() {
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
-    const classes = classNames('column buttons has-addons is-marginless', fullWidth ? 'is-12' : 'is-6')
+    const classes = classNames('column is-flex buttons has-addons is-marginless', fullWidth ? 'is-12' : 'is-6')
 
     return (
         <div className={classes}>
@@ -119,8 +119,9 @@ function FilterButton({ filterName, filterValue }) {
     // Whether this filter is currently selected and a count of how many anime match it
     const isSelected = activeFilters[filterName] === filterValue
     const count = filterCounts[filterName][filterValue]
-    const classes = classNames('button', {
-        'is-dark is-active': isSelected,
+    const classes = classNames('button is-dark', {
+        'is-active': isSelected,
+        'is-outlined': !isSelected,
         'is-faded': filterValue && !count,
     })
 

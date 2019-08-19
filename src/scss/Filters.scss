@@ -1,26 +1,36 @@
-@import '_variables.scss';
+@import '_base';
 
-@import '~bulma/sass/utilities/initial-variables.sass';
-@import '~bulma/sass/utilities/derived-variables.sass';
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/input-textarea.sass';
+@import '~bulma/sass/form/select.sass';
 
 .filters {
-    .button {
-        flex: 1 1 auto;
-        height: 2.5em;
-        padding: 0.25rem;
-        margin-bottom: -$column-gap;
+    .buttons {
+        flex-wrap: nowrap;
+        overflow: hidden;
 
-        span {
-            opacity: 0.5;
+        .button {
+            flex: 1 1 auto;
+            height: 2.5em;
+            padding: 0.25rem;
+            margin-bottom: -$column-gap;
 
-            &::before {
-                content: '\00a0(';
-            }
+            span {
+                opacity: 0.5;
 
-            &::after {
-                content: ')'
+                &::before {
+                    content: '\00a0(';
+                }
+
+                &::after {
+                    content: ')'
+                }
             }
         }
+    }
+
+    .is-faded {
+        opacity: 0.5;
     }
 
     .select::after {

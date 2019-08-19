@@ -1,7 +1,4 @@
-@import '_variables.scss';
-
-@import '~bulma/sass/utilities/initial-variables.sass';
-@import '~bulma/sass/utilities/derived-variables.sass';
+@import '_base';
 
 .table {
     width: 100%;
@@ -40,7 +37,7 @@
     }
 
     // Special style when the table header is stuck
-    &.stuck::before {
+    &.is-stuck::before {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
         @supports (backdrop-filter: blur(20px)) {
@@ -127,7 +124,7 @@
         text-decoration: none;
     }
 
-    .table-header + & {
+    .table-header + &{
         border-top: 1px solid $border;
     }
 }
@@ -171,29 +168,29 @@
         border-radius: 0.25rem;
     }
 
-    &.highlight-success strong {
+    &.has-highlight-success strong {
         background-color: $success;
     }
 
-    &.highlight-info strong {
+    &.has-highlight-info strong {
         background-color: $info;
     }
 
-    &.highlight-warning strong {
+    &.has-highlight-warning strong {
         background-color: $warning;
         color: rgba(0, 0, 0, 0.7);
     }
 
-    &.highlight-danger strong {
+    &.has-highlight-danger strong {
         background-color: $danger;
     }
 
-    &.highlight-dark strong {
+    &.has-highlight-dark strong {
         background-color: $dark;
     }
 
     // Size progress column don't wrap long numbers
-    &.progress-column {
+    &.has-progress {
         flex-direction: column;
         padding: 0 0.75rem;
         white-space: nowrap;
@@ -201,6 +198,6 @@
 
     .progress {
         width: 100%;
-        height: 4px;
+        height: $progress-height;
     }
 }

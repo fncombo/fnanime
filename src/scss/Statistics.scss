@@ -1,30 +1,25 @@
-@import '_variables.scss';
+@import '_base';
 
-@import '~bulma/sass/utilities/initial-variables.sass';
-@import '~bulma/sass/utilities/derived-variables.sass';
-
-/* Placeholder when statistics are off screen */
+// Placeholder when statistics are off screen
 .statistics-placeholder {
-    height: 32rem;
+    height: 34rem;
 }
 
-/* Border around the table */
 .statistics {
     padding: $column-gap;
     margin-top: $section-gap;
-    text-align: center;
 
+    // Highlight every other row line in the table
     .columns:nth-of-type(even) {
-        background-color: var(--row-color);
+        background-color: $row-color;
     }
 
+    // Do not highlight the last totals row
     .columns:last-child {
         background-color: unset;
     }
 
     .progress {
-        display: flex;
-        background: $border;
-        height: 8px;
+        height: $progress-height * 2;
     }
 }
