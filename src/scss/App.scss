@@ -15,6 +15,7 @@
 html,
 body {
     font-family: 'Open Sans', $body-family;
+    color: #000;
 }
 
 .container {
@@ -28,6 +29,10 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.title {
+    color: #000;
 }
 
 // Message box

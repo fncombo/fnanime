@@ -37,10 +37,10 @@
 
 .modal-card-title {
     a {
-        color: $white-ter;
+        color: #fff;
 
         .has-background-warning & {
-            color: rgba(0, 0, 0, 0.7);
+            color: $yellow-invert;
         }
     }
 }

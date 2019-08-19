@@ -68,10 +68,6 @@ $gap: 5px;
             backdrop-filter: blur(20px) saturate(200%);
         }
     }
-
-    span {
-        opacity: 0.5;
-    }
 }
 
 // Item placeholder for when it shouldn't be rendered
@@ -123,6 +119,6 @@ $gap: 5px;
     }
 
     .is-not-downloaded & {
-        opacity: 0.3;
+        opacity: 0.5;
     }
 }

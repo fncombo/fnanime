@@ -339,7 +339,7 @@ function Rating({ rating }) {
                 <span className="has-text-warning">
                     {Array(rating).fill('★')}
                 </span>
-                <span className="has-text-grey-lighter">
+                <span className="has-text-grey-light">
                     {Array(10 - rating).fill('★')}
                 </span>
             </div>
