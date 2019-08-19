@@ -1,0 +1,25 @@
+@import '_base';
+
+// Placeholder when statistics are off screen
+.statistics-placeholder {
+    height: 34rem;
+}
+
+.statistics {
+    padding: $column-gap;
+    margin-top: $section-gap;
+
+    // Highlight every other row line in the table
+    .columns:nth-of-type(even) {
+        background-color: $row-color;
+    }
+
+    // Do not highlight the last totals row
+    .columns:last-child {
+        background-color: unset;
+    }
+
+    .progress {
+        height: $progress-height * 2;
+    }
+}

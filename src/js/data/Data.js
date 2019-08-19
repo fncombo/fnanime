@@ -33,7 +33,7 @@ const Defaults = {
     // Rows per table page
     perPage: 25,
     // Number of buttons on each side of the current page button
-    pageButtons: 3,
+    pageButtons: 2,
 }
 
 // Populate default filter data and filter values

@@ -1,0 +1,45 @@
+@import '_base';
+
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/input-textarea.sass';
+@import '~bulma/sass/form/select.sass';
+
+.filters {
+    .buttons {
+        flex-wrap: nowrap;
+        overflow: hidden;
+
+        .button {
+            flex: 1 1 auto;
+            height: 2.5em;
+            padding: 0.25rem;
+            margin-bottom: -$column-gap;
+
+            span {
+                opacity: 0.5;
+
+                &::before {
+                    content: '\00a0(';
+                }
+
+                &::after {
+                    content: ')'
+                }
+            }
+        }
+    }
+
+    .is-faded {
+        opacity: 0.5;
+    }
+
+    .select::after {
+        border-color: $grey-darker !important;
+    }
+
+    .summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

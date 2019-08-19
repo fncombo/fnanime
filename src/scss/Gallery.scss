@@ -1,0 +1,128 @@
+@import '_base';
+
+$img-width: 148px;
+$img-height: round($img-width * 1.4);
+$gap: 5px;
+
+// Placeholder when the gallery is off screen
+.gallery-placeholder {
+    height: 490rem;
+}
+
+// Gallery container
+.gallery {
+    padding: 0 $column-gap;
+
+    .tag {
+        border-radius: 0;
+    }
+
+    img {
+        height: $img-height;
+        width: $img-width;
+        pointer-events: none;
+    }
+}
+
+.gallery-section {
+    margin-top: $section-gap;
+    position: relative;
+}
+
+// Grid of gallery items
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -$gap;
+}
+
+// Heading sentinel element
+.gallery-heading-sentinel {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+// Gallery heading
+.gallery-heading {
+    background: rgba(255, 255, 255, 0.95);
+    height: 60px;
+    position: sticky;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px !important;
+    transition: box-shadow 0.15s ease-in-out;
+    font-weight: 300;
+
+    &.is-stuck {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        z-index: 20;
+
+        @supports (backdrop-filter: blur(20px)) {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px) saturate(200%);
+        }
+    }
+
+    span {
+        opacity: 0.5;
+    }
+}
+
+// Item placeholder for when it shouldn't be rendered
+.gallery-item-placeholder {
+    flex: 0 0 $img-width;
+    width: $img-width;
+    height: calc(#{$img-height} + 2rem);
+}
+
+// Gallery item
+.gallery-item {
+    flex: 0 0 $img-width;
+    width: $img-width;
+    margin: $gap;
+    transition: z-index 0.15s ease-in-out;
+    z-index: 1;
+
+    &:hover  {
+        text-decoration: none;
+        z-index: 15;
+    }
+}
+
+// Inner container of gallery item
+.gallery-item-inner {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: opacity, box-shadow, transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+
+    .gallery-item:hover & {
+        opacity: 1;
+        color: unset;
+        box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+        transform: scale(1.5);
+    }
+
+    // Style for items which are very close to the sides
+    .gallery-item.is-left & {
+        transform-origin: left center;
+    }
+
+    .gallery-item.is-right & {
+        transform-origin: right center;
+    }
+
+    .is-not-downloaded & {
+        opacity: 0.3;
+    }
+}

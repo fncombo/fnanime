@@ -1,0 +1,31 @@
+@import '_base';
+
+@import '~bulma/sass/base/_all.sass';
+
+@import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/elements/notification.sass';
+@import '~bulma/sass/elements/other.sass';
+@import '~bulma/sass/elements/progress.sass';
+@import '~bulma/sass/elements/tag.sass';
+@import '~bulma/sass/elements/title.sass';
+
+@import '~bulma/sass/grid/columns.sass';
+
+
+html,
+body {
+    font-family: 'Open Sans', $body-family;
+}
+
+.container {
+    min-width: 1150px;
+    max-width: 1400px;
+    padding: 0 $column-gap;
+    margin: $column-gap auto;
+}
+
+.has-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

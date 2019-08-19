@@ -1,0 +1,338 @@
+@import '_base';
+
+@import '~bulma/sass/components/modal.sass';
+
+.modal {
+    img {
+        border-radius: 4px;
+    }
+}
+
+// Background overlay when the modal is open
+.modal-background {
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    left: 0;
+    right: 0;
+    transition: background 0.15s ease-in-out;
+
+    .is-active & {
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    @supports (backdrop-filter: blur(20px)) {
+        backdrop-filter: blur(0) saturate(100%);
+        transition: background 0.15s ease-in-out;
+
+        .is-active & {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px) saturate(200%);
+        }
+    }
+}
+
+.modal-card-title {
+    a {
+        color: $white-ter;
+
+        .has-background-warning & {
+            color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.modal-card {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2px;
+    border-radius: $modal-card-head-radius;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    // Animations while the modal is opening, closing, or changing anime
+    .is-active & {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .is-changing & {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    hr {
+        background: $border;
+        height: 1px;
+        margin: 0.75rem 0;
+    }
+
+    .title {
+        margin-bottom: 0.25rem;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+    .status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.75rem;
+    }
+
+    .rating {
+        margin: -0.25rem 0 0.25rem;
+        font-size: 2rem;
+    }
+}
+
+.modal-card-head {
+    background: none;
+    border: none;
+}
+
+.modal-card-body {
+    background: hsla(0, 0%, 100%, 0.95);
+    border-radius: $modal-card-head-radius $modal-card-head-radius ($modal-card-head-radius - 1px) ($modal-card-head-radius - 1px);
+}
+
+// List of related anime
+.related-list {
+    li {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.25rem 0 0.25rem 1.25rem;
+    }
+
+    .tag,
+    .tags {
+        margin-left: 0.5rem;
+    }
+
+    & + strong {
+        display: block;
+        margin-top: 0.75rem;
+    }
+}
+
+// Loading placeholder animation
+@keyframes loading-text {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40rem;
+    }
+}
+
+@keyframes loaded-paragraph {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loaded-paragraph-loaded {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Basic loading placeholder for short line and multi-line paragraphs
+.loading-text,
+.loading-paragraph .placeholders span {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.1));
+    background-size: 40rem 1rem;
+    display: block;
+    height: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 0.25rem;
+    animation: loading-text 0.75s linear infinite;
+    pointer-events: none;
+}
+
+.loading-text {
+    margin: 0.5rem 0;
+}
+
+.loading-inline {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.loading-paragraph {
+    position: relative;
+    overflow: hidden;
+
+    &.is-loading {
+        height: 4.5rem !important;
+    }
+
+    .placeholders {
+        position: absolute;
+        top: 0.3rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transition: opacity 0.15s ease-in-out;
+        pointer-events: none;
+
+        span {
+            position: relative;
+            margin: 0 0 0.5rem;
+
+            &:nth-child(1n) {
+                width: 75%;
+            }
+
+            &:nth-child(2n) {
+                width: 85%;
+            }
+
+            &:nth-child(3n) {
+                width: 60%;
+            }
+        }
+    }
+
+    &.is-loaded .placeholders {
+        opacity: 0;
+    }
+}
+
+.loading-content {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+
+    &.is-loaded {
+        opacity: 1;
+    }
+}
+
+// Slidedown animation variables
+.modal .react-slidedown {
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+// Navigation arrows
+.modal-nav {
+    padding: 3rem 0;
+    width: calc((100% - 1200px) / 2);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+    transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    cursor: pointer;
+
+    .is-active & {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    .is-changing & {
+        transform: translateY(-50%) scale(0.9);
+        opacity: 0;
+    }
+
+    img {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        transition: transform 0.15s ease-in-out;
+    }
+
+    &:hover img {
+        flex: 0 0 74px;
+        transform: scale(1.75);
+    }
+
+    svg {
+        flex: 0 0 1.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        transition: transform 0.15s ease-in-out, margin 0.15s ease-in-out;
+    }
+
+    &.prev {
+        left: 0;
+        transform-origin: left center;
+
+        svg {
+            margin-right: 0.75rem;
+            transform-origin: right center;
+        }
+
+        &:hover svg {
+            transform: translateX(-2.5rem) scale(1.25);
+        }
+    }
+
+    &.next {
+        right: 0;
+        transform-origin: right center;
+
+        svg {
+            order: 2;
+            margin-left: 0.75rem;
+            transform-origin: left center;
+        }
+
+        &:hover svg {
+            transform: translateX(2.5rem) scale(1.25);
+        }
+    }
+
+    &.placeholder {
+        width: calc(74px + 0.75rem + 1.25rem);
+        height: 100px;
+        pointer-events: none;
+    }
+
+    // SVG arrow colors
+    .fill-success polygon {
+        fill: $success;
+    }
+
+    .fill-info polygon {
+        fill: $info;
+    }
+
+    .fill-warning polygon {
+        fill: $warning;
+    }
+
+    .fill-danger polygon {
+        fill: $danger;
+    }
+
+    .fill-primary polygon {
+        fill: $primary;
+    }
+
+    .fill-dark polygon {
+        fill: $dark;
+    }
+}

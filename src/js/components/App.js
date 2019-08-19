@@ -2,8 +2,8 @@
 import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 
 // Style
-import '../../css/App.css'
-import '../../css/fn.css'
+import '../../scss/App.scss'
+import '../../scss/fn.scss'
 
 // Data
 import LocalDataUpdateTime from '../data/LocalDataUpdated.json'
@@ -152,23 +152,23 @@ function App() {
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
-            <div className="container-main">
-                <div className="container-fluid container-limited">
-                    <FilterButtons />
-                    <Table />
-                    <Suspense fallback={<Loading />}>
-                        <Statistics />
-                    </Suspense>
-                </div>
-                <Suspense fallback={<Loading />}>
-                    <Gallery />
-                </Suspense>
-                <ul className="updated-times container-fluid container-limited text-center">
-                    <li>Local anime data last updated on {localDataUpdateTime}</li>
-                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
-                    <li>All rankings are my own subjective opinion</li>
-                </ul>
+            <div className="container">
+                <FilterButtons />
             </div>
+            <Table />
+            <div className="container">
+                <Suspense fallback={<Loading />}>
+                    <Statistics />
+                </Suspense>
+            </div>
+            <Suspense fallback={<Loading />}>
+                <Gallery />
+            </Suspense>
+            <ul className="updated-times has-text-centered">
+                <li>Local anime data last updated on {localDataUpdateTime}</li>
+                <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
+                <li>All rankings are my own subjective opinion</li>
+            </ul>
             <div className={`message ${apiUpdated ? 'done' : ''}`}>
                 {updateStatusMessage}
             </div>
@@ -181,9 +181,9 @@ function App() {
  */
 function Loading() {
     return (
-        <p className="alert alert-dark alert-loading my-3 text-center">
-            Loading&hellip;
-        </p>
+        <div class="container">
+            <p className="notification">Loading&hellip;</p>
+        </div>
     )
 }
 

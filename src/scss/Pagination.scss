@@ -1,0 +1,12 @@
+@import '_base';
+
+$pagination-current-background-color: $dark;
+$pagination-current-border-color: $dark;
+
+@import '~bulma/sass/components/pagination.sass';
+
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+    cursor: pointer;
+}
