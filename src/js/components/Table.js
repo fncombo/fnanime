@@ -57,7 +57,7 @@ function Table() {
 
     if (!anime.length) {
         return (
-            <div class="container">
+            <div className="container">
                 <p className="notification is-danger">No matching anime found!</p>
             </div>
         )
