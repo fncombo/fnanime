@@ -1,3 +1,16 @@
+// Dark pastel green
+$green: hsl(138, 97%, 38%);
+
+// Amber
+$yellow: hsl(45, 100%, 50%);
+
+// True blue
+$blue: hsl(217, 63%, 47%);
+$cyan: hsl(217, 63%, 47%);
+
+// Mystic red
+$red: hsl(12, 100%, 50%);
+
 @import '~bulma/sass/utilities/_all.sass';
 
 $spacing: 0.5rem;
