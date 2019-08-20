@@ -11,13 +11,18 @@
 
 @import '~bulma/sass/grid/columns.sass';
 
-
+// Base
 html,
 body {
     font-family: 'Open Sans', $body-family;
     color: #000;
 }
 
+.title {
+    color: #000;
+}
+
+// Custom container
 .container {
     min-width: 1150px;
     max-width: 1400px;
@@ -25,14 +30,22 @@ body {
     margin: $column-gap auto;
 }
 
+// Truncating text
 .has-text-overflow {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.title {
-    color: #000;
+// Add transitions to certain elements
+.button,
+.input,
+.select,
+.table-column,
+.table-row {
+    transition-property: background-color, box-shadow, border-color, color, opacity;
+    transition-duration: $duration-fast;
+    transition-timing-function: $easing;
 }
 
 // Message box
