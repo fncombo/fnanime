@@ -49,22 +49,20 @@ function Pagination() {
     // Create the buttons and "..." between the first button, last button, and the middle button group
     let previousPage = false
 
-    pageNumbers.forEach(pageNumber => {
-        if (previousPage) {
-            if (pageNumber - previousPage === 2) {
-                buttons.push(<NumberButton key={previousPage + 1}>{previousPage + 1}</NumberButton>)
+    for (const pageNumber of pageNumbers) {
+        if (pageNumber - previousPage === 2) {
+            buttons.push(<NumberButton key={previousPage + 1}>{previousPage + 1}</NumberButton>)
 
-            // Show "..." after first page and before the last page if there are more than 2 pages
-            // in between them and adjacent buttons
-            } else if (pageNumber - previousPage !== 1) {
-                buttons.push(<span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>&hellip;</span>)
-            }
+        // Show "..." after first page and before the last page if there are more than 2 pages
+        // in between them and adjacent buttons
+        } else if (pageNumber - previousPage !== 1) {
+            buttons.push(<span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>&hellip;</span>)
         }
 
         buttons.push(<NumberButton key={pageNumber}>{pageNumber}</NumberButton>)
 
         previousPage = pageNumber
-    })
+    }
 
     // Add blank buttons at the start to ensure the current page button is always exactly in the middle
     if (page <= Defaults.pageButtons + 2) {
@@ -82,7 +80,7 @@ function Pagination() {
 
     return (
         <div className="columns pagination">
-            <div class="column">
+            <div className="column">
                 <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1}>Previous</TextButton>
             </div>
             <div className="column is-6 pagination-list">{buttons}</div>

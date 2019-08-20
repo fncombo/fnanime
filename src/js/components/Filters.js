@@ -44,9 +44,9 @@ function FilterButtons() {
     const filterCounts = makeFilterCounts()
 
     anime.forEach(cartoon => {
-        FilterNames.forEach(filterName => {
+        for (const filterName of FilterNames) {
             filterCounts[filterName][cartoon[filterName]] += 1
-        })
+        }
     })
 
     return (

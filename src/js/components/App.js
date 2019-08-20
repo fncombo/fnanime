@@ -135,14 +135,14 @@ function App() {
             }
 
             // Update each anime's data
-            newApiData.forEach(anime => {
+            for (const anime of newApiData) {
                 updateAnimeData(anime.mal_id, {
                     status: anime.watching_status,
                     rating: anime.score,
                     episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
                     episodesWatched: anime.watched_episodes,
                 })
-            })
+            }
 
             // Re-create filter defaults based on new anime data
             createFilterDefaults()
