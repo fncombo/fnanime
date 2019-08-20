@@ -19,7 +19,7 @@ import ModalContainer from './Modal'
 const imgWidth = 165
 
 // Offset of when to start showing the component and images offscreen
-const rootMargin = `${parseInt(imgWidth * 1.5, 10)}px`
+const rootMargin = '300px'
 
 // Intersection options for the component and individual items
 const galleryOptions = { rootMargin }
@@ -34,10 +34,10 @@ const galleryItemOptions = {
  */
 function Gallery() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ ref, inView ] = useInView(galleryOptions)
+    const [ ref, inView, entry ] = useInView(galleryOptions)
 
     // Do not render and do all this calculating and creating hundreds of components if not in view
-    if (!inView) {
+    if (!inView && entry && entry.boundingClientRect.y >= 0) {
         return <div className="gallery-placeholder" ref={ref} />
     }
 
@@ -83,7 +83,7 @@ function GalleryHeading({ children }) {
 
     // Check whether the heading is stuck to add additional styling
     const headerClasses = classNames('gallery-heading title is-3', {
-        'is-stuck': !(entry && inView),
+        'is-stuck': !inView && entry,
     })
 
     return (
@@ -101,7 +101,7 @@ function GalleryHeading({ children }) {
  */
 function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
-    const [ ref, inView ] = useInView(galleryItemOptions)
+    const [ ref, inView, entry ] = useInView(galleryItemOptions)
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
     const hover = ({ currentTarget }) => {
@@ -122,7 +122,7 @@ function GalleryItem(anime) {
     }
 
     // Do not render until the item is close to being visible to the user to prevent useless image loading
-    if (!inView) {
+    if (!inView && entry && entry.boundingClientRect.y >= 0) {
         return <div className="gallery-item-placeholder" ref={ref} />
     }
 
