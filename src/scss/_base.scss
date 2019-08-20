@@ -6,6 +6,8 @@ $blue: #2d68c4;
 $cyan: #2d68c4;
 $red: #ea2839;
 
+$easing: ease-in-out;
+
 @import '~bulma/sass/utilities/_all.sass';
 
 $spacing: 0.5rem;
@@ -18,3 +20,7 @@ $row-color: hsl(0, 0%, 95%);
 $row-color-hover: hsl(0, 0%, 90%);
 
 $progress-height: 4px;
+
+$duration-fast: 75ms;
+$duration-medium: 150ms;
+$duration-slow: 300ms;

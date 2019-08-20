@@ -49,47 +49,45 @@ function Pagination() {
     // Create the buttons and "..." between the first button, last button, and the middle button group
     let previousPage = false
 
-    pageNumbers.forEach(pageNumber => {
-        if (previousPage) {
-            if (pageNumber - previousPage === 2) {
-                buttons.push(
-                    <NumberButton key={previousPage + 1}>
-                        {previousPage + 1}
-                    </NumberButton>
-                )
+    for (const pageNumber of pageNumbers) {
+        if (pageNumber - previousPage === 2) {
+            buttons.push(<NumberButton key={previousPage + 1}>{previousPage + 1}</NumberButton>)
 
-            // Show "..." after first page and before the last page if there are more than 2 pages
-            // in between them and adjacent buttons
-            } else if (pageNumber - previousPage !== 1) {
-                buttons.push(
-                    <span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>
-                        &hellip;
-                    </span>
-                )
-            }
+        // Show "..." after first page and before the last page if there are more than 2 pages
+        // in between them and adjacent buttons
+        } else if (pageNumber - previousPage !== 1) {
+            buttons.push(<span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>&hellip;</span>)
         }
 
-        buttons.push(
-            <NumberButton key={pageNumber}>
-                {pageNumber}
-            </NumberButton>
-        )
+        buttons.push(<NumberButton key={pageNumber}>{pageNumber}</NumberButton>)
 
         previousPage = pageNumber
-    })
+    }
+
+    // Add blank buttons at the start to ensure the current page button is always exactly in the middle
+    if (page <= Defaults.pageButtons + 2) {
+        for (let i = 0; i <= Defaults.pageButtons + 2 - page; i += 1) {
+            buttons.unshift(<button className="button" disabled={true} key={`start-${i}-fill`} />)
+        }
+    }
+
+    // Add blank buttons at the end to ensure the current page button is always exactly in the middle
+    if (page > lastPage - Defaults.pageButtons - 2) {
+        for (let i = lastPage + 1; i <= lastPage + Defaults.pageButtons + 2 - (lastPage - page); i += 1) {
+            buttons.push(<button className="button" disabled={true} key={`end-${i}-fill`} />)
+        }
+    }
 
     return (
-        <nav className="pagination">
-            <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1} className="pagination-previous">
-                Previous
-            </TextButton>
-            <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} className="pagination-next">
-                Next
-            </TextButton>
-            <div className="pagination-list">
-                {buttons}
+        <div className="columns pagination">
+            <div className="column">
+                <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1}>Previous</TextButton>
             </div>
-        </nav>
+            <div className="column is-6 pagination-list">{buttons}</div>
+            <div className="column">
+                <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage}>Next</TextButton>
+            </div>
+        </div>
     )
 }
 
@@ -108,24 +106,16 @@ function NumberButton({ children: pageNumber }) {
 
     // Current page button does nothing and has a unique look
     if (pageNumber === page) {
-        return (
-            <span className="pagination-link is-current">
-                {pageNumber}
-            </span>
-        )
+        return <button className="button is-dark">{pageNumber}</button>
     }
 
-    return (
-        <span className="pagination-link" onClick={changePage}>
-            {pageNumber}
-        </span>
-    )
+    return <button className="button" onClick={changePage}>{pageNumber}</button>
 }
 
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-const TextButton = memo(({ action: type, disabled = false, children, ...rest }) => {
+const TextButton = memo(({ action: type, disabled = false, children }) => {
     const { dispatch } = useContext(TableState)
 
     const changePage = () => {
@@ -133,18 +123,10 @@ const TextButton = memo(({ action: type, disabled = false, children, ...rest }) 
     }
 
     if (disabled) {
-        return (
-            <span disabled={disabled} {...rest}>
-                {children}
-            </span>
-        )
+        return <button className="button" disabled={disabled}>{children}</button>
     }
 
-    return (
-        <span onClick={changePage} {...rest}>
-            {children}
-        </span>
-    )
+    return <button className="button" onClick={changePage}>{children}</button>
 })
 
 // Exports

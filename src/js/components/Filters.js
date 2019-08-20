@@ -43,11 +43,11 @@ function FilterButtons() {
     // Count how many anime match each filter
     const filterCounts = makeFilterCounts()
 
-    anime.forEach(cartoon => {
-        FilterNames.forEach(filterName => {
+    for (const cartoon of anime) {
+        for (const filterName of FilterNames) {
             filterCounts[filterName][cartoon[filterName]] += 1
-        })
-    })
+        }
+    }
 
     return (
         <div className="columns is-multiline filters">
@@ -63,7 +63,7 @@ function FilterButtons() {
                     <input
                         type="text"
                         className="input"
-                        placeholder="Search by anime title&hellip;"
+                        placeholder="Search by anime title"
                         value={searchValue}
                         onChange={search}
                         autoFocus

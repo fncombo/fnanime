@@ -38,7 +38,7 @@ const Defaults = {
 
 // Populate default filter data and filter values
 function createFilterDefaults() {
-    Object.keys(Filters).forEach(filterName => {
+    for (const filterName of Object.keys(Filters)) {
         // Populate only the filter values which have some data to them
         let filterValues = AnimeArray
             .map(anime => anime[filterName])
@@ -58,7 +58,7 @@ function createFilterDefaults() {
 
         // Populate filter values in filter data
         Filters[filterName].values = filterValues
-    })
+    }
 }
 
 createFilterDefaults()
@@ -70,22 +70,22 @@ function getFileQuality(anime) {
     let measuredStats = 0
     let totalMeasure = 0
 
-    Object.entries(anime).forEach(([ key, value ]) => {
+    for (const [ key, value ] of Object.entries(anime)) {
         if (value === false || value === null) {
-            return
+            continue
         }
 
         if (!Filters.hasOwnProperty(key)
             || !Filters[key].hasOwnProperty('fileQuality')
             || !Filters[key].fileQuality.hasOwnProperty(value)
         ) {
-            return
+            continue
         }
 
         measuredStats += 1
 
         totalMeasure += Filters[key].fileQuality[value]
-    })
+    }
 
     if (!measuredStats) {
         return 0
@@ -94,10 +94,8 @@ function getFileQuality(anime) {
     return totalMeasure / measuredStats
 }
 
-/**
- * Add data to an anime that didn't need to be downloaded because it can be calculated on the fly.
- */
-function processAnimeData(animeId) {
+// Add data to an anime that didn't need to be downloaded because it can be calculated on the fly
+for (const animeId of Object.keys(AnimeObject)) {
     // Reference back to object value
     const anime = AnimeObject[animeId]
 
@@ -106,9 +104,6 @@ function processAnimeData(animeId) {
 
     anime.fileQuality = getFileQuality(anime)
 }
-
-// Process all initial anime data
-Object.keys(AnimeObject).forEach(processAnimeData)
 
 /**
  * Update info about an anime from provided new API data.
@@ -157,10 +152,13 @@ function getAnime(searchQuery = null, sorting = Defaults.sorting, filters = Defa
     }
 
     // Go through each filter, narrowing down results each time, but don't filter when there is no value
-    Object.entries(filters).filter(([ , filterValue ]) => filterValue !== false)
-        .forEach(([ filterName, filterValue ]) => {
+    const actualFilters = Object.entries(filters).filter(([ , filterValue ]) => filterValue !== false)
+
+    if (actualFilters.length) {
+        for (const [ filterName, filterValue ] of actualFilters) {
             results = results.filter(anime => anime[filterName] === filterValue)
-        })
+        }
+    }
 
     // Perform the search query if there is one
     if (searchQuery && searchQuery.length) {

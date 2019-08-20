@@ -18,8 +18,13 @@
 
 .table-header {
     display: flex;
+    align-items: center;
     position: sticky;
+    height: 45px;
     top: 60px;
+    transition-property: height, margin-bottom;
+    transition-duration: $duration-medium;
+    transition-timing-function: $easing;
 
     // Page wide element to show the shadow when stuck
     &::before {
@@ -33,16 +38,21 @@
         left: -50%;
         z-index: 1;
         pointer-events: none;
-        transition: box-shadow 0.15s ease-in-out;
+        transition: box-shadow $duration-medium $easing;
     }
 
     // Special style when the table header is stuck
-    &.is-stuck::before {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    &.is-stuck {
+        height: 60px;
+        margin-bottom: -(60px - 45px);
 
-        @supports (backdrop-filter: blur(20px)) {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(200%);
+        &::before {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+            @supports (backdrop-filter: blur(20px)) {
+                background: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(20px) saturate(200%);
+            }
         }
     }
 
@@ -178,7 +188,7 @@
 
     &.has-highlight-warning strong {
         background-color: $warning;
-        color: rgba(0, 0, 0, 0.7);
+        color: $warning-invert;
     }
 
     &.has-highlight-danger strong {

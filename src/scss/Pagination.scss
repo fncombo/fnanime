@@ -1,12 +1,37 @@
 @import '_base';
 
-$pagination-current-background-color: $dark;
-$pagination-current-border-color: $dark;
+.pagination {
+    .column {
+        display: flex;
 
-@import '~bulma/sass/components/pagination.sass';
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
+}
 
-.pagination-link,
-.pagination-next,
-.pagination-previous {
-    cursor: pointer;
+.pagination-list {
+    display: flex;
+    justify-content: center;
+
+    .button {
+        flex: 0 0 2.25em;
+        width: 2.25em;
+        padding: 0.25rem;
+        margin: 0 0.25rem;
+
+        &[disabled] {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+.pagination-ellipsis {
+    display: flex;
+    flex: 0 0 2.25em;
+    width: 2.25em;
+    height: 2.25em;
+    justify-content: center;
+    align-items: center;
 }
