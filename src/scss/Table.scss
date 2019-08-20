@@ -22,6 +22,7 @@
     position: sticky;
     height: 45px;
     top: 60px;
+    z-index: 5;
     transition-property: height, margin-bottom;
     transition-duration: $duration-medium;
     transition-timing-function: $easing;

@@ -82,7 +82,7 @@ function GalleryHeading({ children }) {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the heading is stuck to add additional styling
-    const headerClasses = classNames('gallery-heading title is-3', {
+    const headerClasses = classNames('gallery-heading', {
         'is-stuck': !inView && entry,
     })
 
