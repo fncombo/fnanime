@@ -94,10 +94,8 @@ function getFileQuality(anime) {
     return totalMeasure / measuredStats
 }
 
-/**
- * Add data to an anime that didn't need to be downloaded because it can be calculated on the fly.
- */
-function processAnimeData(animeId) {
+// Add data to an anime that didn't need to be downloaded because it can be calculated on the fly
+for (const animeId of Object.keys(AnimeObject)) {
     // Reference back to object value
     const anime = AnimeObject[animeId]
 
@@ -106,9 +104,6 @@ function processAnimeData(animeId) {
 
     anime.fileQuality = getFileQuality(anime)
 }
-
-// Process all initial anime data
-Object.keys(AnimeObject).forEach(processAnimeData)
 
 /**
  * Update info about an anime from provided new API data.

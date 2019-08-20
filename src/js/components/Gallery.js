@@ -44,9 +44,9 @@ function Gallery() {
     // Count how many there are anime for each rating
     const ratingCounts = Array(11).fill(0)
 
-    anime.forEach(({ rating }) => {
+    for (const { rating } of anime) {
         ratingCounts[rating] += 1
-    })
+    }
 
     // Only show ratings which have anime and exclude all non-rated anime
     return (

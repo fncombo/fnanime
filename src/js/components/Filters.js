@@ -43,11 +43,11 @@ function FilterButtons() {
     // Count how many anime match each filter
     const filterCounts = makeFilterCounts()
 
-    anime.forEach(cartoon => {
+    for (const cartoon of anime) {
         for (const filterName of FilterNames) {
             filterCounts[filterName][cartoon[filterName]] += 1
         }
-    })
+    }
 
     return (
         <div className="columns is-multiline filters">
