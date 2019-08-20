@@ -41,6 +41,7 @@ body {
 .button,
 .input,
 .select,
+.select select,
 .table-column,
 .table-row {
     transition-property: background-color, box-shadow, border-color, color, opacity;
@@ -68,7 +69,7 @@ body {
     color: #fff;
     font-size: 1.5rem;
     // Weird visual bug with using opacity and backdrop filter together, so remove it before fading
-    transition: opacity 0.15s ease-in-out, backdrop-filter 0s linear;
+    transition: opacity $duration-slow $easing, backdrop-filter 0s linear;
 
     @supports (backdrop-filter: blur(20px)) {
         background: rgba(0, 0, 0, 0.5);

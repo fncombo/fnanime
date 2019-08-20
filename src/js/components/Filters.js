@@ -63,7 +63,7 @@ function FilterButtons() {
                     <input
                         type="text"
                         className="input"
-                        placeholder="Search by anime title&hellip;"
+                        placeholder="Search by anime title"
                         value={searchValue}
                         onChange={search}
                         autoFocus

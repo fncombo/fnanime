@@ -110,9 +110,9 @@ function App() {
     let updateStatusMessage
 
     if (apiUpdated) {
-        updateStatusMessage = apiError ? 'Error contacting API, update failed!' : 'Updated!'
+        updateStatusMessage = apiError ? 'Error contacting API' : 'Updated'
     } else {
-        updateStatusMessage = <>Loading latest information &hellip;</>
+        updateStatusMessage = <>Loading latest information&hellip;</>
     }
 
     useEffect(() => {
