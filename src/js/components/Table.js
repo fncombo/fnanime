@@ -268,7 +268,7 @@ function SizeColumns({ episodeSize, size }) {
         const width = parseInt(Columns.episodeSize.size, 10) + parseInt(Columns.size.size, 10)
 
         return (
-            <div className="table-column has-progress" style={{ flexBasis: `${width}%` }}>
+            <div className="table-column has-progress is-double" style={{ flexBasis: `${width}%` }}>
                 <SizeBar size={size} type="total" />
             </div>
         )

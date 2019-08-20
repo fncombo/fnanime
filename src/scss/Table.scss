@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 @import '_base';
 
 .table {
@@ -25,6 +27,10 @@
     transition-property: height, margin-bottom;
     transition-duration: $duration-medium;
     transition-timing-function: $easing;
+
+    @include mobile {
+        display: none;
+    }
 
     // Page wide element to show the shadow when stuck
     &::before {
@@ -123,19 +129,32 @@
     display: flex;
     color: unset;
 
-    &:nth-child(odd) {
-        background: $row-color;
+    @include mobile {
+        flex-wrap: wrap;
+        background: none;
+        border-bottom: 1px solid $border;
+        padding-top: 0.75rem;
+
+        &:first-child {
+            border-top: 1px solid $border;
+        }
     }
 
-    &:hover {
-        background: $row-color-hover;
-        cursor: pointer;
-        color: unset;
-        text-decoration: none;
-    }
+    @include tablet {
+        &:nth-child(odd) {
+            background: $row-color;
+        }
 
-    .table-header + &{
-        border-top: 1px solid $border;
+        &:hover {
+            background: $row-color-hover;
+            cursor: pointer;
+            color: unset;
+            text-decoration: none;
+        }
+
+        .table-header + & {
+            border-top: 1px solid $border;
+        }
     }
 }
 
@@ -153,7 +172,48 @@
         justify-content: flex-start;
         flex-grow: 1;
         flex-shrink: 1;
+        padding-right: 0.25rem
+    }
 
+    @include mobile {
+        max-width: (100% / 6);
+        flex: 1 1 auto !important;
+        position: relative;
+        height: unset;
+        padding: 0.75rem 0.25rem;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            transform: scale(2);
+            transform-origin: top left;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+            height: 45px;
+            max-width: 100%;
+            flex: 0 0 100% !important;
+            justify-content: flex-start;
+            padding: 0 0.5rem 0 calc(66px + 0.5rem);
+            overflow: visible;
+        }
+
+        &:nth-child(3) {
+            max-width: 66px;
+            flex: 0 0 66px !important;
+
+            &::after {
+                content: '★';
+            }
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            display: none;
+        }
     }
 
     .type {
@@ -204,6 +264,29 @@
         flex-direction: column;
         padding: 0 0.75rem;
         white-space: nowrap;
+
+        @include mobile {
+            max-width: 50%;
+            flex: 0 0 50% !important;
+            padding: 0 0.5rem 0.75rem;
+
+            &:nth-child(11)::after {
+                content: 'Episode Size';
+            }
+
+            &:nth-child(12)::after {
+                content: 'Total Size';
+            }
+
+            &.is-double {
+                max-width: 100%;
+                flex: 0 0 100% !important;
+
+                &::after {
+                    content: 'Total Size'
+                }
+            }
+        }
     }
 
     .progress {

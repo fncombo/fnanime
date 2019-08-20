@@ -28,6 +28,11 @@ body {
     max-width: 1400px;
     padding: 0 $column-gap;
     margin: $column-gap auto;
+
+    @include mobile {
+        min-width: unset;
+        max-width: 100%;
+    }
 }
 
 // Truncating text

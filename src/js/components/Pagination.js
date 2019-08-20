@@ -80,11 +80,11 @@ function Pagination() {
 
     return (
         <div className="columns pagination">
-            <div className="column">
+            <div className="column pagination-nav">
                 <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1}>Previous</TextButton>
             </div>
             <div className="column is-6 pagination-list">{buttons}</div>
-            <div className="column">
+            <div className="column pagination-nav">
                 <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage}>Next</TextButton>
             </div>
         </div>

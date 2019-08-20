@@ -1,6 +1,9 @@
 @import '_base';
 
 .pagination {
+    display: flex;
+    flex-wrap: wrap;
+
     .column {
         display: flex;
 
@@ -14,11 +17,20 @@
     display: flex;
     justify-content: center;
 
+    @include mobile {
+        flex: 0 0 100%;
+        order: 3;
+    }
+
     .button {
         flex: 0 0 2.25em;
         width: 2.25em;
         padding: 0.25rem;
         margin: 0 0.25rem;
+
+        @include mobile {
+            margin: 0 0.1rem;
+        }
 
         &[disabled] {
             opacity: 0;
@@ -34,4 +46,18 @@
     height: 2.25em;
     justify-content: center;
     align-items: center;
+}
+
+.pagination-nav {
+    @include mobile {
+        flex: 0 0 50%;
+
+        &:first-child {
+            order: 1;
+        }
+
+        &:last-child {
+            order: 2;
+        }
+    }
 }
