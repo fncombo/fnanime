@@ -2,7 +2,6 @@
 import React, { useContext } from 'react'
 
 // Libraries
-import fileSize from 'filesize'
 import { useInView } from 'react-intersection-observer'
 
 // Style
@@ -14,6 +13,8 @@ import { Filters } from '../data/Filters'
 
 // Helpers
 import { add, calculateTotals } from '../helpers/Statistics'
+import fileSize from '../helpers/FileSize'
+import Icon from '../helpers/Icon'
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.
@@ -79,13 +80,16 @@ function Statistics() {
                         <h6>Totals</h6>
                     </div>
                     <div className="column">
-                        Average Rating: {totals.rating.average ? Math.round(totals.rating.average * 100) / 100 : 'N/A'}
+                        Average Rating: {totals.rating.average
+                            ? (Math.round(totals.rating.average * 100) / 100).toLocaleString()
+                            : 'N/A'
+                        }
                     </div>
                     <div className="column">
                         {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
                     <div className="column">
-                        {totals.episode.sum ? totals.episode.sum : <>&mdash;</>}
+                        {totals.episode.sum ? totals.episode.sum.toLocaleString() : <>&mdash;</>}
                     </div>
                 </div>
             }
@@ -100,7 +104,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet">
-                {rating}
+                {rating} <Icon icon={['fas', 'star']} />
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
@@ -125,7 +129,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
     // Draw a part of the progress bar in the correct color for each status of anime
     return (
         <div className="column">
-            {formatFunction ? formatFunction(sum) : sum}
+            {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {

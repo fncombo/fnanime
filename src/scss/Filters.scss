@@ -49,7 +49,14 @@
                 padding: 0.25rem 0.75rem;
             }
 
-            span {
+            .icon,
+            .icon svg {
+                width: 0.75rem;
+                height: 0.75rem;
+                margin: 0;
+            }
+
+            .count {
                 opacity: 0.5;
 
                 &::before {

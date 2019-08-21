@@ -8,6 +8,9 @@ import '../../scss/Pagination.scss'
 import { TableState, ACTIONS } from '../data/GlobalState'
 import { Defaults } from '../data/Data'
 
+// Helpers
+import Icon from '../helpers/Icon'
+
 /**
  * Previous, next, and number button to control the table.
  */
@@ -81,11 +84,11 @@ function Pagination() {
     return (
         <div className="columns pagination">
             <div className="column is-3">
-                <TextButton action={ACTIONS.PREV_PAGE} disabled={page === 1}>Previous</TextButton>
+                <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
             </div>
             <div className="column is-6 pagination-list">{buttons}</div>
             <div className="column is-3">
-                <TextButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage}>Next</TextButton>
+                <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
             </div>
         </div>
     )
@@ -106,27 +109,30 @@ function NumberButton({ children: pageNumber }) {
 
     // Current page button does nothing and has a unique look
     if (pageNumber === page) {
-        return <button className="button is-dark">{pageNumber}</button>
+        return <button className="button is-dark is-rounded">{pageNumber}</button>
     }
 
-    return <button className="button" onClick={changePage}>{pageNumber}</button>
+    return <button className="button is-rounded" onClick={changePage}>{pageNumber}</button>
 }
 
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-const TextButton = memo(({ action: type, disabled = false, children }) => {
+const NavButton = memo(({ action: type, disabled = false }) => {
     const { dispatch } = useContext(TableState)
 
     const changePage = () => {
         dispatch({ type })
     }
 
+    const icon = type === ACTIONS.PREV_PAGE ? 'chevron-left' : 'chevron-right'
+    const classes = type === ACTIONS.PREV_PAGE ? 'is-left' : 'is-right'
+
     if (disabled) {
-        return <button className="button" disabled={disabled}>{children}</button>
+        return <Icon icon={icon} className={classes} />
     }
 
-    return <button className="button" onClick={changePage}>{children}</button>
+    return <Icon icon={icon} className={classes} onClick={changePage} />
 })
 
 // Exports

@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 
 // Libraries
 import classNames from 'classnames'
-import fileSize from 'filesize'
 import prettyTime from '../../lib/PrettyTime'
 import { SlideDown } from 'react-slidedown'
 
@@ -25,6 +24,7 @@ import {
     getAdjacentAnime,
     getAnimeApiData,
 } from '../helpers/Modal'
+import fileSize from '../helpers/FileSize'
 
 // Components
 import Badge from './Badge'

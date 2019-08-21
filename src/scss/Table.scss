@@ -64,8 +64,6 @@
     }
 
     .table-column {
-        --arrow-size: 6px;
-
         text-align: center;
         position: relative;
         cursor: pointer;
@@ -79,23 +77,27 @@
         }
 
         &::before {
-            content: '';
-            height: 0;
-            width: 0;
-            border: var(--arrow-size) solid transparent;
-            position: absolute;
-            left: calc(50% - var(--arrow-size));
-        }
-
-        &::after {
             content: attr(data-index);
             width: 20px;
             position: absolute;
-            left: calc(50% - (var(--arrow-size) * 5));
             top: 1px;
+            left: calc(50% + 0.5rem);
             font-size: 10px;
-            color: $info;
-            text-align: right;
+            text-align: left;
+        }
+
+        .icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &.is-asc {
+                top: 0;
+            }
+
+            &.is-desc {
+                top: -0.5rem;
+            }
         }
 
         &:first-child {
@@ -105,23 +107,12 @@
             flex-shrink: 1;
 
             &::before {
-                left: calc(40px + 1.75rem);
+                left: calc(40px + 2.5rem);
             }
 
-            &::after {
-                left: calc(40px - (var(--arrow-size) * 4) + 1.75rem);
+            .icon {
+                left: calc(40px + 2rem);
             }
-        }
-
-        &,
-        &.sort-asc::before {
-            border-bottom-color: $info;
-            top: 0;
-        }
-
-        &.sort-desc::before {
-            border-top-color: $info;
-            top: var(--arrow-size);
         }
     }
 }
@@ -298,5 +289,23 @@
         @include mobile {
             margin-top: 0.25rem;
         }
+    }
+}
+
+// No results after search
+.table-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    color: $danger;
+
+    .icon {
+        $size: 1.5rem;
+
+        width: $size;
+        height: $size;
+        margin-right: 0.5rem;
+        font-size: $size;
     }
 }

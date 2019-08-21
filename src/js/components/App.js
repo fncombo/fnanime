@@ -15,6 +15,7 @@ import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from '../da
 
 // Helpers
 import { getApiData } from '../helpers/App'
+import '../helpers/FontAwesome'
 
 // Components
 import FilterButtons from './Filters'
