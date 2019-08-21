@@ -32,7 +32,7 @@ const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {
 }).format(LocalDataUpdateTime.updated)
 
 // Toggle to stop API from being updated
-const suppressApiUpdate = true
+const suppressApiUpdate = false
 
 // Initial global state
 const initialState = {
