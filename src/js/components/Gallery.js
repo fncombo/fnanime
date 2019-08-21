@@ -34,10 +34,10 @@ const galleryItemOptions = {
  */
 function Gallery() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ ref, inView, entry ] = useInView(galleryOptions)
+    const [ ref, inView ] = useInView(galleryOptions)
 
     // Do not render and do all this calculating and creating hundreds of components if not in view
-    if (!inView && entry && entry.boundingClientRect.y >= 0) {
+    if (!inView) {
         return <div className="gallery-placeholder" ref={ref} />
     }
 
@@ -101,7 +101,12 @@ function GalleryHeading({ children }) {
  */
 function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
-    const [ ref, inView, entry ] = useInView(galleryItemOptions)
+    const [ ref, inView ] = useInView(galleryItemOptions)
+
+    // Do not render until the item is close to being visible to the user to prevent useless image loading
+    if (!inView) {
+        return <div className="gallery-item-placeholder" ref={ref} />
+    }
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
     const hover = ({ currentTarget }) => {
@@ -119,11 +124,6 @@ function GalleryItem(anime) {
         } else if (hoverClass.length) {
             setHoverClass('')
         }
-    }
-
-    // Do not render until the item is close to being visible to the user to prevent useless image loading
-    if (!inView && entry && entry.boundingClientRect.y >= 0) {
-        return <div className="gallery-item-placeholder" ref={ref} />
     }
 
     const rel = 'noopener noreferrer'
