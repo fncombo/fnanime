@@ -338,13 +338,17 @@ function Rating({ rating }) {
         <>
             <div className="rating">
                 <span className="has-text-warning">
-                    {Array(rating).fill(<Icon icon={[ 'fas', 'star' ]} />)}
+                    {Array(rating).fill(0).map((value, i) =>
+                        <Icon icon={[ 'fas', 'star' ]} key={i} />
+                    )}
                 </span>
                 <span className="has-text-grey-light">
-                    {Array(10 - rating).fill(<Icon icon={[ 'far', 'star' ]} />)}
+                    {Array(10 - rating).fill(0).map((value, i) =>
+                        <Icon icon={[ 'far', 'star' ]} key={i} />
+                    )}
                 </span>
             </div>
-            <h5 class="title is-5">{Filters.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
+            <h5 className="title is-5">{Filters.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
         </>
     )
 }
