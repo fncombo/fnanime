@@ -45,7 +45,7 @@
         left: -50%;
         z-index: 1;
         pointer-events: none;
-        transition: box-shadow $duration-medium $easing;
+        transition: box-shadow $duration-fast $easing;
     }
 
     // Special style when the table header is stuck
