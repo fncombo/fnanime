@@ -79,13 +79,16 @@ function Statistics() {
                         <h6>Totals</h6>
                     </div>
                     <div className="column">
-                        Average Rating: {totals.rating.average ? Math.round(totals.rating.average * 100) / 100 : 'N/A'}
+                        Average Rating: {totals.rating.average
+                            ? (Math.round(totals.rating.average * 100) / 100).toLocaleString()
+                            : 'N/A'
+                        }
                     </div>
                     <div className="column">
                         {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
                     <div className="column">
-                        {totals.episode.sum ? totals.episode.sum : <>&mdash;</>}
+                        {totals.episode.sum ? totals.episode.sum.toLocaleString() : <>&mdash;</>}
                     </div>
                 </div>
             }
@@ -125,7 +128,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
     // Draw a part of the progress bar in the correct color for each status of anime
     return (
         <div className="column">
-            {formatFunction ? formatFunction(sum) : sum}
+            {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {
