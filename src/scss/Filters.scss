@@ -7,16 +7,6 @@
 .filters {
     @include mobile {
         padding-bottom: $column-gap;
-
-        .select {
-            select {
-                padding-right: 2.25rem;
-            }
-
-            &::after {
-                right: 0.85em !important;
-            }
-        }
     }
 
     .buttons {

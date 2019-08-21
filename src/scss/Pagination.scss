@@ -24,11 +24,15 @@
     .icon {
         $size: 1.5rem;
 
+        background: none;
         width: $size * 1.25;
-        height: $size;
+        height: 100%;
         font-size: $size;
         color: $dark;
         cursor: pointer;
+        border: none;
+        outline: none;
+
 
         svg {
             transition: transform $duration-fast $easing;

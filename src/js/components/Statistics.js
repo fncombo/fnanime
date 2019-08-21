@@ -104,7 +104,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
-                {rating} <Icon icon={['fas', 'star']} />
+                {rating} <Icon icon={[ 'fas', 'star' ]} />
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />

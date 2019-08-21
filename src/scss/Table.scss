@@ -136,19 +136,21 @@
     }
 
     @include tablet {
-        &:nth-child(odd) {
-            background: $row-color;
-        }
+        @media (hover: hover) {
+            &:nth-child(odd) {
+                background: $row-color;
+            }
 
-        &:hover {
-            background: $row-color-hover;
-            cursor: pointer;
-            color: unset;
-            text-decoration: none;
-        }
+            &:hover {
+                background: $row-color-hover;
+                cursor: pointer;
+                color: unset;
+                text-decoration: none;
+            }
 
-        .table-header + & {
-            border-top: 1px solid $border;
+            .table-header + & {
+                border-top: 1px solid $border;
+            }
         }
     }
 }
@@ -173,8 +175,7 @@
     @include mobile {
         flex: 1 1 auto !important;
         position: relative;
-        height: unset;
-        padding: 0.75rem 0.25rem;
+        padding: 0 0.25rem;
 
         img {
             position: absolute;
@@ -191,8 +192,17 @@
             max-width: 100%;
             flex: 0 0 100% !important;
             justify-content: flex-start;
-            padding: 0 0.5rem 0 calc(66px + 0.5rem);
+            padding: 0 1rem 0 calc(66px + 1rem);
             overflow: visible;
+        }
+
+        &:first-child {
+            align-items: flex-end;
+            padding-bottom: 10px;
+        }
+
+        &:nth-child(2) {
+            align-items: flex-start;
         }
 
         &:nth-child(3) {

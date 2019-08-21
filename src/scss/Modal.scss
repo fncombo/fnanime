@@ -3,8 +3,21 @@
 @import '~bulma/sass/components/modal.sass';
 
 .modal {
+    min-width: 1200px;
+    flex-direction: row;
+
     img {
         border-radius: 4px;
+    }
+
+    .rating + h5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p + p {
+        margin-top: 0.25rem;
     }
 }
 
@@ -36,18 +49,14 @@
 }
 
 .modal-card-title {
-    a {
-        color: #fff;
-
-        .has-background-warning & {
-            color: $yellow-invert;
-        }
-    }
+    flex: 1 1 auto;
 }
 
 .modal-card {
-    width: 100%;
+    flex: 1 1 100%;
+    width: unset;
     max-width: 1200px;
+    margin: 0;
     padding: 2px;
     border-radius: $modal-card-head-radius;
     overflow: hidden;
@@ -57,6 +66,12 @@
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    @include mobile {
+        max-height: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
 
     // Animations while the modal is opening, closing, or changing anime
     .is-active & {
@@ -91,19 +106,53 @@
     }
 
     .rating {
-        margin: -0.25rem 0 0.25rem;
-        font-size: 2rem;
+        margin: 0.25rem 0;
+        font-size: 1.25rem;
     }
 }
 
 .modal-card-head {
     background: none;
     border: none;
+
+    @include mobile {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+
+    a,
+    .icon {
+        color: #fff;
+
+        .has-background-warning & {
+            color: $yellow-invert;
+        }
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .icon {
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        outline: none;
+        transition: transform $duration-fast $easing;
+
+        &:hover {
+            transform: scale(1.25);
+        }
+    }
 }
 
 .modal-card-body {
     background: hsla(0, 0%, 100%, 0.95);
     border-radius: $modal-card-head-radius $modal-card-head-radius ($modal-card-head-radius - 1px) ($modal-card-head-radius - 1px);
+
+    @include mobile {
+        border-radius: 0;
+    }
 }
 
 // List of related anime
@@ -168,7 +217,7 @@
 }
 
 .loading-text {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
 }
 
 .loading-inline {
@@ -237,25 +286,22 @@
 // Navigation arrows
 .modal-nav {
     padding: 3rem 0;
-    width: calc((100% - 1200px) / 2);
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 1 0 190px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-50%) scale(0.9);
+    transform: scale(0.9);
     opacity: 0;
     transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
     cursor: pointer;
 
     .is-active & {
-        transform: translateY(-50%) scale(1);
+        transform: scale(1);
         opacity: 1;
     }
 
     .is-changing & {
-        transform: translateY(-50%) scale(0.9);
+        transform: scale(0.9);
         opacity: 0;
     }
 
@@ -286,7 +332,7 @@
         }
 
         &:hover svg {
-            transform: translateX(-2.5rem) scale(1.25);
+            transform: translateX(-1.5rem) scale(1.5);
         }
     }
 
@@ -301,7 +347,7 @@
         }
 
         &:hover svg {
-            transform: translateX(2.5rem) scale(1.25);
+            transform: translateX(1.5rem) scale(1.5);
         }
     }
 

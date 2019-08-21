@@ -63,6 +63,11 @@ $gap: 5px;
     margin: 0 -15px !important;
     transition: box-shadow 0.15s ease-in-out;
     font-weight: 600;
+    font-size: 1.25rem;
+
+    .icon {
+        font-size: 1rem;
+    }
 
     &.is-stuck {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -90,9 +95,11 @@ $gap: 5px;
     transition: z-index 0.15s ease-in-out;
     z-index: 1;
 
-    &:hover  {
-        text-decoration: none;
-        z-index: 15;
+    @media (hover: hover) {
+        &:hover  {
+            text-decoration: none;
+            z-index: 15;
+        }
     }
 }
 
@@ -107,11 +114,13 @@ $gap: 5px;
     transition-timing-function: ease-in-out;
     overflow: hidden;
 
-    .gallery-item:hover & {
-        opacity: 1;
-        color: unset;
-        box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
-        transform: scale(1.5);
+    @media (hover: hover) {
+        .gallery-item:hover & {
+            opacity: 1;
+            color: unset;
+            box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+            transform: scale(1.5);
+        }
     }
 
     // Style for items which are very close to the sides

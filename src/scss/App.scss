@@ -53,8 +53,7 @@ body {
 .select,
 .select select,
 .table-column,
-.table-row,
-path {
+.table-row {
     transition-property: background-color, box-shadow, border-color, color, fill, opacity;
     transition-duration: $duration-fast;
     transition-timing-function: $easing;

@@ -59,23 +59,23 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-7-mobile is-3-tablet">
+                <div className="column is-6-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
-                        placeholder="Search by anime title"
+                        placeholder="Search"
                         value={searchValue}
                         onChange={search}
                         autoFocus
                     />
                 </div>
-                <div className="column is-5-mobile is-3-tablet">
+                <div className="column is-6-mobile is-3-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-7-mobile is-5-tablet summary">
+                <div className="column is-8-mobile is-5-tablet summary">
                     <Summary />
                 </div>
-                <div className="column is-5-mobile is-1-tablet">
+                <div className="column is-4-mobile is-1-tablet">
                     <button className="button is-fullwidth" onClick={reset}>
                         Reset
                     </button>
@@ -162,7 +162,7 @@ function OptionGroup({ filterName }) {
         filterValue && !filterCounts[filterName][filterValue]
     )
 
-    const separator = Array(20).fill(String.fromCharCode(9472))
+    const separator = Array(10).fill(String.fromCharCode(9472))
 
     return (
         <div className="select is-fullwidth">
