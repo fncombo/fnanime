@@ -6,6 +6,10 @@
     min-width: 1200px;
     flex-direction: row;
 
+    @include mobile {
+        min-width: unset;
+    }
+
     img {
         border-radius: 4px;
     }
@@ -162,11 +166,28 @@
         align-items: center;
         white-space: nowrap;
         padding: 0.25rem 0 0.25rem 1.25rem;
+
+        @include mobile {
+            white-space: unset;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .has-text-overflow {
+                overflow: visible;
+                text-overflow: unset;
+                white-space: unset;
+            }
+        }
     }
 
     .tag,
     .tags {
         margin-left: 0.5rem;
+
+        @include mobile {
+            margin-top: 0.25rem;
+            margin-left: 0;
+        }
     }
 
     & + strong {
@@ -304,6 +325,10 @@
     opacity: 0;
     transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
     cursor: pointer;
+
+    @include mobile {
+        display: none;
+    }
 
     .is-active & {
         transform: scale(1);

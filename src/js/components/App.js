@@ -172,11 +172,13 @@ function App() {
             <Suspense fallback={<Loading />}>
                 <Gallery />
             </Suspense>
-            <ul className="updated-times has-text-centered">
-                <li>Local anime data last updated on {localDataUpdateTime}</li>
-                <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
-                <li>All rankings are my own subjective opinion</li>
-            </ul>
+            <div className="container">
+                <ul className="updated-times has-text-centered">
+                    <li>Local anime data last updated on {localDataUpdateTime}</li>
+                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
+                    <li>All rankings are my own subjective opinion</li>
+                </ul>
+            </div>
             <div className={messageClasses}>
                 {updateStatusMessage}
             </div>

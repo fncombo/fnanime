@@ -59,6 +59,15 @@ body {
     transition-timing-function: $easing;
 }
 
+// Footer list
+.updated-times {
+    margin: $section-gap 0;
+
+    li:not(:last-child) {
+        margin-bottom: 0.25rem;
+    }
+}
+
 // Message box
 .message {
     background: rgba(0, 0, 0, 0.95);
