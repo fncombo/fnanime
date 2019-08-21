@@ -3,7 +3,6 @@ import React, { memo, useContext, useReducer } from 'react'
 
 // Libraries
 import classNames from 'classnames'
-import fileSize from 'filesize'
 import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
 
@@ -18,6 +17,7 @@ import { Filters } from '../data/Filters'
 
 // Helpers
 import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from '../helpers/Table'
+import fileSize from '../helpers/FileSize'
 import Icon from '../helpers/Icon'
 
 // Components

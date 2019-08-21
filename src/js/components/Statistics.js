@@ -2,7 +2,6 @@
 import React, { useContext } from 'react'
 
 // Libraries
-import fileSize from 'filesize'
 import { useInView } from 'react-intersection-observer'
 
 // Style
@@ -14,6 +13,7 @@ import { Filters } from '../data/Filters'
 
 // Helpers
 import { add, calculateTotals } from '../helpers/Statistics'
+import fileSize from '../helpers/FileSize'
 import Icon from '../helpers/Icon'
 
 /**
