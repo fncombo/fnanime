@@ -91,7 +91,7 @@ const Header = memo(() => {
 
     // Check whether the table header is stuck to add additional styling
     const classes = classNames('table-header', {
-        'is-stuck': !(entry && inView),
+        'is-stuck': !inView && entry,
     })
 
     return (
