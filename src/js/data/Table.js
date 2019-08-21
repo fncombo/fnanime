@@ -88,7 +88,7 @@ const Columns = {
         size: ColumnSizes.small,
     },
     episodeSize: {
-        text: 'Ep. Size',
+        text: 'Episode Size',
         defaultSorting: SortingOrders.desc,
         size: ColumnSizes.medium,
     },

@@ -15,10 +15,12 @@
 // Base
 html,
 body {
-    min-width: 1200px;
-    max-width: 1400px;
     font-family: 'Open Sans', $body-family;
     color: #000;
+
+    @include tablet {
+        min-width: 1200px;
+    }
 }
 
 .title {

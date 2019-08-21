@@ -64,13 +64,15 @@
     }
 
     .table-column {
-        text-align: center;
+        padding: 0 5px;
         position: relative;
         cursor: pointer;
         user-select: none;
         z-index: 2;
+        text-align: center;
         font-weight: 600;
-        padding: 0 5px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
 
         &:hover {
             color: $info;
@@ -90,6 +92,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            font-size: 1rem;
 
             &.is-asc {
                 top: 0;
@@ -102,16 +105,16 @@
 
         &:first-child {
             justify-content: flex-start;
-            padding-left: calc(40px + 1rem);
+            padding-left: calc(33px + 1rem);
             flex-grow: 1;
             flex-shrink: 1;
 
             &::before {
-                left: calc(40px + 2.5rem);
+                left: calc(33px + 2.5rem);
             }
 
             .icon {
-                left: calc(40px + 2rem);
+                left: calc(33px + 2rem);
             }
         }
     }
@@ -255,6 +258,7 @@
         flex-direction: column;
         padding: 0 0.75rem;
         white-space: nowrap;
+        font-size: 0.75rem;
 
         @include mobile {
             flex-direction: row;
@@ -285,6 +289,7 @@
     .progress {
         width: 100%;
         height: $progress-height;
+        margin-top: 0.25rem;
 
         @include mobile {
             margin-top: 0.25rem;

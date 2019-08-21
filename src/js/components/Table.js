@@ -204,8 +204,8 @@ function Row(anime) {
             <Column columnName="audioCodec">
                 {anime.audioCodec}
             </Column>
-            <Column columnName="fileQuality">
-                {anime.fileQuality}
+            <Column columnName="fileQuality" value={anime.fileQuality}>
+                {anime.fileQuality.toLocaleString()}
             </Column>
             <SizeColumns episodeSize={anime.episodeSize} size={anime.size} />
         </ModalContainer>
