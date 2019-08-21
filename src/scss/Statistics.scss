@@ -9,14 +9,31 @@
     padding: $column-gap;
     margin-top: $section-gap;
 
-    // Highlight every other row line in the table
-    .columns:nth-of-type(even) {
-        background-color: $row-color;
+    @include mobile {
+        font-size: 0.75rem;
     }
 
-    // Do not highlight the last totals row
-    .columns:last-child {
-        background-color: unset;
+    .columns {
+        // Highlight every other row line in the table
+        &:nth-of-type(even) {
+            background-color: $row-color;
+        }
+
+        // Do not highlight the last totals row
+        &:last-child {
+            background-color: unset;
+        }
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            padding: $column-gap 0.25rem;
+        }
     }
 
     .progress {

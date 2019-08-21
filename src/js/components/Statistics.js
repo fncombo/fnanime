@@ -55,8 +55,8 @@ function Statistics() {
 
     return (
         <div className="statistics has-text-centered" ref={ref}>
-            <div className="columns">
-                <div className="column is-1">
+            <div className="columns is-mobile">
+                <div className="column is-2-mobile is-1-tablet">
                     <h6>Rating</h6>
                 </div>
                 <div className="column">
@@ -74,8 +74,8 @@ function Statistics() {
                     <StatisticsRow rating={rating} key={rating} totals={totals} />
                 )}
             {firstNonZero !== lastNonZero &&
-                <div className="columns">
-                    <div className="column is-1">
+                <div className="columns is-mobile">
+                    <div className="column is-2-mobile is-1-tablet">
                         <h6>Totals</h6>
                     </div>
                     <div className="column">
@@ -98,8 +98,8 @@ function Statistics() {
  */
 function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode } }) {
     return (
-        <div className="columns">
-            <div className="column is-1">
+        <div className="columns is-mobile">
+            <div className="column is-2-mobile is-1-tablet">
                 {rating}
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />

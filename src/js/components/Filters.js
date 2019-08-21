@@ -50,7 +50,7 @@ function FilterButtons() {
     }
 
     return (
-        <div className="columns is-mobile is-tablet is-multiline filters">
+        <div className="columns is-mobile is-multiline filters">
             <FiltersState.Provider value={{ filterCounts }}>
                 <FilterGroup filterName="rating" fullWidth />
                 <FilterGroup filterName="type" />
