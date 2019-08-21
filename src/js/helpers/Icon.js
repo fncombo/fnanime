@@ -13,4 +13,5 @@ const Icon = memo(({ icon, className, ...rest }) => {
     )
 })
 
+// Exports
 export default Icon
