@@ -76,6 +76,13 @@ body {
     // Weird visual bug with using opacity and backdrop filter together, so remove it before fading
     transition: opacity $duration-slow $easing, backdrop-filter 0s linear;
 
+    @include mobile {
+        width: 90%;
+        font-size: 1rem;
+        left: 5%;
+        transform: none;
+    }
+
     @supports (backdrop-filter: blur(20px)) {
         background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(20px) saturate(200%);

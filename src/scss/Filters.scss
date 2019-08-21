@@ -5,9 +5,38 @@
 @import '~bulma/sass/form/select.sass';
 
 .filters {
+    @include mobile {
+        padding-bottom: $column-gap;
+
+        .select {
+            select {
+                padding-right: 2.25rem;
+            }
+
+            &::after {
+                right: 0.85em !important;
+            }
+        }
+    }
+
     .buttons {
         flex-wrap: nowrap;
+        align-items: normal;
         overflow: hidden;
+        margin: 0;
+
+        @include mobile {
+            padding-right: 0;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+
+            &::after {
+                content: '';
+                display: inline-flex;
+                min-width: $column-gap;
+                flex: 0 0 $column-gap;
+            }
+        }
 
         .button {
             flex: 1 1 auto;
@@ -15,6 +44,10 @@
             padding: 0.25rem;
             margin-bottom: -$column-gap;
             box-shadow: none !important;
+
+            @include mobile {
+                padding: 0.25rem 0.75rem;
+            }
 
             span {
                 opacity: 0.5;

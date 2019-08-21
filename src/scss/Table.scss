@@ -177,7 +177,6 @@
     }
 
     @include mobile {
-        max-width: (100% / 6);
         flex: 1 1 auto !important;
         position: relative;
         height: unset;
@@ -267,24 +266,26 @@
         white-space: nowrap;
 
         @include mobile {
+            flex-direction: row;
+            flex-wrap: wrap;
             max-width: 50%;
             flex: 0 0 50% !important;
             padding: 0 0.5rem 0.75rem;
 
-            &:nth-child(11)::after {
-                content: 'Episode Size';
+            &:nth-child(11)::before {
+                content: 'Episode Size:\00a0';
             }
 
-            &:nth-child(12)::after {
-                content: 'Total Size';
+            &:nth-child(12)::before {
+                content: 'Total Size:\00a0';
             }
 
             &.is-double {
                 max-width: 100%;
                 flex: 0 0 100% !important;
 
-                &::after {
-                    content: 'Total Size'
+                &::before {
+                    content: 'Total Size:\00a0'
                 }
             }
         }
@@ -293,5 +294,9 @@
     .progress {
         width: 100%;
         height: $progress-height;
+
+        @include mobile {
+            margin-top: 0.25rem;
+        }
     }
 }

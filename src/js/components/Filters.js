@@ -50,7 +50,7 @@ function FilterButtons() {
     }
 
     return (
-        <div className="columns is-multiline filters">
+        <div className="columns is-mobile is-tablet is-multiline filters">
             <FiltersState.Provider value={{ filterCounts }}>
                 <FilterGroup filterName="rating" fullWidth />
                 <FilterGroup filterName="type" />
@@ -59,7 +59,7 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-3">
+                <div className="column is-7-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
@@ -69,13 +69,13 @@ function FilterButtons() {
                         autoFocus
                     />
                 </div>
-                <div className="column is-3">
+                <div className="column is-5-mobile is-3-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-5 summary">
+                <div className="column is-7-mobile is-5-tablet summary">
                     <Summary />
                 </div>
-                <div className="column is-1">
+                <div className="column is-5-mobile is-1-tablet">
                     <button className="button is-fullwidth" onClick={reset}>
                         Reset
                     </button>
@@ -89,7 +89,10 @@ function FilterButtons() {
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
-    const classes = classNames('column is-flex buttons has-addons is-marginless', fullWidth ? 'is-12' : 'is-6')
+    const classes = classNames('column is-flex buttons has-addons is-12-mobile ', {
+        'is-12-tablet': fullWidth,
+        'is-6-tablet': !fullWidth,
+    })
 
     return (
         <div className={classes}>

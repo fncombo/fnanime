@@ -4,8 +4,16 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include mobile {
+        justify-content: space-between;
+    }
+
     .column {
         display: flex;
+
+        @include mobile {
+            flex: 0 1 auto;
+        }
 
         &:last-child {
             justify-content: flex-end;
@@ -18,8 +26,9 @@
     justify-content: center;
 
     @include mobile {
-        flex: 0 0 100%;
-        order: 3;
+        .button:not(.is-dark) {
+            display: none;
+        }
     }
 
     .button {
@@ -46,18 +55,8 @@
     height: 2.25em;
     justify-content: center;
     align-items: center;
-}
 
-.pagination-nav {
     @include mobile {
-        flex: 0 0 50%;
-
-        &:first-child {
-            order: 1;
-        }
-
-        &:last-child {
-            order: 2;
-        }
+        display: none;
     }
 }
