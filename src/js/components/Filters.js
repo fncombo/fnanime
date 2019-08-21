@@ -132,7 +132,7 @@ function FilterButton({ filterName, filterValue }) {
     return (
         <button className={classes} onClick={selectFilter}>
             {Filters[filterName].descriptions[filterValue]}
-            {!!count && <span className="count">{count}</span>}
+            {!!count && filterValue !== false && <span className="count">{count}</span>}
         </button>
     )
 }
