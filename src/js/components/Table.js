@@ -13,11 +13,12 @@ import '../../scss/Table.scss'
 // Data
 import { GlobalState, TableState, ACTIONS } from '../data/GlobalState'
 import { Defaults } from '../data/Data'
-import { Columns, SortingOrders } from '../data/Table'
+import { Columns, SortingOrders, SortingIcons } from '../data/Table'
 import { Filters } from '../data/Filters'
 
 // Helpers
 import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from '../helpers/Table'
+import Icon from '../helpers/Icon'
 
 // Components
 import Badge from './Badge'
@@ -58,7 +59,7 @@ function Table() {
     if (!anime.length) {
         return (
             <div className="container">
-                <p className="notification is-danger">No matching anime found!</p>
+                <p className="table-empty"><Icon icon="exclamation-circle" />No matching anime found</p>
             </div>
         )
     }
@@ -161,12 +162,12 @@ const HeaderColumn = memo(({ columnName }) => {
     title = `${title}Hold shift to sort by multiple columns.`
 
     const flexBasis = Columns[columnName].size
-    const classes = classNames('table-column', {
-        [`sort-${activeSorting[columnName]}`]: activeSorting.hasOwnProperty(columnName),
-    })
 
     return (
-        <div className={classes} style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
+        <div className="table-column" style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
+            {activeSorting.hasOwnProperty(columnName) &&
+                <Icon icon={SortingIcons[activeSorting[columnName]]} className={`is-${activeSorting[columnName]}`} />
+            }
             {Columns[columnName].text}
         </div>
     )

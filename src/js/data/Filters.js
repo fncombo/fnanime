@@ -1,3 +1,9 @@
+// React
+import React from 'react'
+
+// Helpers
+import Icon from '../helpers/Icon'
+
 // Descriptions and data related to all possible filters
 const Filters = {
     type: {
@@ -33,6 +39,15 @@ const Filters = {
             5: 'Unknown',
             6: 'Planned',
         },
+        fancyDescriptions: {
+            false: 'All Statuses',
+            1: <><Icon icon="play-circle" /> Watching</>,
+            2: <><Icon icon="check-circle" /> Completed</>,
+            3: <><Icon icon="pause-circle" /> On-Hold</>,
+            4: <><Icon icon="times-circle" /> Dropped</>,
+            5: <><Icon icon="question-circle" /> Unknown</>,
+            6: <><Icon icon="plus-circle" /> Planned</>,
+        },
         colorCodes: {
             false: '',
             null: 'dark',
@@ -48,17 +63,17 @@ const Filters = {
         descriptions: {
             false: 'All Ratings',
             null: 'black',
-            10: 'Masterpiece \u2013 10★',
-            9: 'Great \u2013 9★',
-            8: 'Very Good \u2013 8★',
-            7: 'Good \u2013 7★',
-            6: 'Fine \u2013 6★',
-            5: 'Average \u2013 5★',
-            4: 'Bad \u2013 4★',
-            3: 'Very Bad \u2013 3★',
-            2: 'Horrible \u2013 2★',
-            1: 'Appalling \u2013 1★',
-            0: 'Not Rated \u2013 0★',
+            10: <>Masterpiece &ndash; 10 <Icon icon={['fas', 'star']} /></>,
+            9: <>Great &ndash; 9 <Icon icon={['fas', 'star']} /></>,
+            8: <>Very Good &ndash; 8 <Icon icon={['fas', 'star']} /></>,
+            7: <>Good &ndash; 7 <Icon icon={['fas', 'star']} /></>,
+            6: <>Fine &ndash; 6 <Icon icon={['fas', 'star']} /></>,
+            5: <>Average &ndash; 5 <Icon icon={['fas', 'star']} /></>,
+            4: <>Bad &ndash; 4 <Icon icon={['fas', 'star']} /></>,
+            3: <>Very Bad &ndash; 3 <Icon icon={['fas', 'star']} /></>,
+            2: <>Horrible &ndash; 2 <Icon icon={['fas', 'star']} /></>,
+            1: <>Appalling &ndash; 1 <Icon icon={['fas', 'star']} /></>,
+            0: <>Not Rated &ndash; 0 <Icon icon={['fas', 'star']} /></>,
         },
         colorCodes: {
 

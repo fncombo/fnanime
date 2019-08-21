@@ -1,7 +1,19 @@
-.tags.is-link:hover {
-    cursor: pointer;
+.tags {
+    flex-wrap: nowrap;
 
-    .tag {
-        text-decoration: underline;
+    &.is-link:hover {
+        cursor: pointer;
+
+        .tag {
+            text-decoration: underline;
+        }
+    }
+}
+
+.tag {
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.25rem 0 0 !important;
     }
 }

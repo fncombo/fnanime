@@ -14,6 +14,7 @@ import { Filters } from '../data/Filters'
 
 // Helpers
 import { add, calculateTotals } from '../helpers/Statistics'
+import Icon from '../helpers/Icon'
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.
@@ -103,7 +104,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
     return (
         <div className="columns">
             <div className="column is-1">
-                {rating}
+                {rating} <Icon icon={['fas', 'star']} />
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />

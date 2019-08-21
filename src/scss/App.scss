@@ -3,6 +3,7 @@
 @import '~bulma/sass/base/_all.sass';
 
 @import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/elements/icon.sass';
 @import '~bulma/sass/elements/notification.sass';
 @import '~bulma/sass/elements/other.sass';
 @import '~bulma/sass/elements/progress.sass';
@@ -14,6 +15,8 @@
 // Base
 html,
 body {
+    min-width: 1200px;
+    max-width: 1400px;
     font-family: 'Open Sans', $body-family;
     color: #000;
 }
@@ -24,7 +27,7 @@ body {
 
 // Custom container
 .container {
-    min-width: 1150px;
+    min-width: 1200px;
     max-width: 1400px;
     padding: 0 $column-gap;
     margin: $column-gap auto;
@@ -43,8 +46,9 @@ body {
 .select,
 .select select,
 .table-column,
-.table-row {
-    transition-property: background-color, box-shadow, border-color, color, opacity;
+.table-row,
+path {
+    transition-property: background-color, box-shadow, border-color, color, fill, opacity;
     transition-duration: $duration-fast;
     transition-timing-function: $easing;
 }

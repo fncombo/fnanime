@@ -129,7 +129,7 @@ function FilterButton({ filterName, filterValue }) {
     return (
         <button className={classes} onClick={selectFilter}>
             {Filters[filterName].descriptions[filterValue]}
-            {!!count && <span>{count}</span>}
+            {!!count && <span className="count">{count}</span>}
         </button>
     )
 }
@@ -209,7 +209,7 @@ function Summary() {
 
     // Why is the anime gone!
     if (!anime.length) {
-        return <span>Found no anime</span>
+        return null
     }
 
     const downloadedCount = anime.filter(({ size }) => !!size).length.toLocaleString()

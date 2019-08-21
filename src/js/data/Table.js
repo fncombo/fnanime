@@ -20,13 +20,19 @@ const StorageSizeLimits = {
 const ColumnSizes = {
     small: '5%',
     medium: '7%',
-    large: '13%',
+    large: '15%',
 }
 
 // Sorting directions
 const SortingOrders = {
     asc: 'asc',
     desc: 'desc',
+}
+
+// Sorting icons
+const SortingIcons = {
+    asc: 'sort-up',
+    desc: 'sort-down',
 }
 
 // Columns setup
@@ -98,4 +104,5 @@ export {
     Columns,
     StorageSizeLimits,
     SortingOrders,
+    SortingIcons,
 }

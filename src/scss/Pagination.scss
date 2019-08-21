@@ -3,9 +3,32 @@
 .pagination {
     .column {
         display: flex;
+        align-items: center;
 
         &:last-child {
             justify-content: flex-end;
+        }
+    }
+
+    .icon {
+        $size: 1.5rem;
+
+        width: $size * 1.25;
+        height: $size;
+        font-size: $size;
+        color: $dark;
+        cursor: pointer;
+
+        svg {
+            transition: transform $duration-fast $easing;
+        }
+
+        &.is-left:hover svg {
+            transform: translateX(-0.25rem)
+        }
+
+        &.is-right:hover svg {
+            transform: translateX(0.25rem)
         }
     }
 }
@@ -29,9 +52,10 @@
 
 .pagination-ellipsis {
     display: flex;
-    flex: 0 0 2.25em;
-    width: 2.25em;
-    height: 2.25em;
+    flex: 0 0 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0 0.25rem;
     justify-content: center;
     align-items: center;
 }

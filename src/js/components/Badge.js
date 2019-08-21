@@ -55,7 +55,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
         return (
             <div className={mainClasses} {...attributes}>
                 <span className={classes}>
-                    {Filters.status.descriptions[anime.status]}
+                    {Filters.status.fancyDescriptions[anime.status]}
                 </span>
                 <span className={extraClasses}>
                     {extraInfo}
@@ -66,7 +66,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
 
     return (
         <span className={classes} {...attributes}>
-            {Filters.status.descriptions[anime.status]}
+            {Filters.status.fancyDescriptions[anime.status]}
         </span>
     )
 }
