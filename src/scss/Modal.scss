@@ -277,6 +277,16 @@
     }
 }
 
+// Loading error
+.modal-error {
+    display: inline-flex;
+    align-items: center;
+
+    .icon {
+        margin-right: 0.25rem;
+    }
+}
+
 // Slidedown animation variables
 .modal .react-slidedown {
     transition-duration: 0.15s;

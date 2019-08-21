@@ -36,6 +36,7 @@ const modalEl = document.getElementById('modal')
 // Initial state of the modal
 const modalInitialState = {
     isLoaded: false,
+    isError: false,
     apiData: {},
 }
 
@@ -184,9 +185,11 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 try {
                     loadingApiData = await getAnimeApiData(anime.id)
                 } catch (error) {
-                    alert('Something went wrong while fetching API data, sorry!')
-
-                    closeModal()
+                    setModalState({
+                        isLoaded: true,
+                        isError: true,
+                        apiData: {},
+                    })
 
                     return
                 }
@@ -368,7 +371,11 @@ function Episodes({ episodes }) {
  * Single-line loading placeholder.
  */
 function Loading({ children, ...rest }) {
-    const { modalState: { isLoaded } } = useContext(ModalState)
+    const { modalState: { isLoaded, isError } } = useContext(ModalState)
+
+    if (isError) {
+        return <LoadingError />
+    }
 
     return isLoaded ? children : <span {...rest} />
 }
@@ -387,11 +394,23 @@ function LoadingText({ children }) {
     return <Loading className="loading-text">{children}</Loading>
 }
 
+function LoadingError() {
+    return (
+        <span className="modal-error has-text-danger">
+            <Icon icon="exclamation-circle" className="is-small" /> An error has occurred
+        </span>
+    )
+}
+
 /**
  * A multi-line loading paragraphs placeholder which animates to the correct height when the content has loaded.
  */
 function LoadingParagraph({ children }) {
-    const { modalState: { isLoaded } } = useContext(ModalState)
+    const { modalState: { isLoaded, isError } } = useContext(ModalState)
+
+    if (isError) {
+        return <LoadingError />
+    }
 
     return (
         <SlideDown className={`loading-paragraph ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
