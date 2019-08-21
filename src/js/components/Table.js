@@ -204,8 +204,8 @@ function Row(anime) {
             <Column columnName="audioCodec">
                 {anime.audioCodec}
             </Column>
-            <Column columnName="fileQuality">
-                {anime.fileQuality}
+            <Column columnName="fileQuality" value={anime.fileQuality}>
+                {anime.fileQuality.toLocaleString()}
             </Column>
             <SizeColumns episodeSize={anime.episodeSize} size={anime.size} />
         </ModalContainer>
@@ -269,7 +269,7 @@ function SizeColumns({ episodeSize, size }) {
         const width = parseInt(Columns.episodeSize.size, 10) + parseInt(Columns.size.size, 10)
 
         return (
-            <div className="table-column has-progress" style={{ flexBasis: `${width}%` }}>
+            <div className="table-column has-progress is-double" style={{ flexBasis: `${width}%` }}>
                 <SizeBar size={size} type="total" />
             </div>
         )

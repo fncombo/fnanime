@@ -50,7 +50,7 @@ function FilterButtons() {
     }
 
     return (
-        <div className="columns is-multiline filters">
+        <div className="columns is-mobile is-multiline filters">
             <FiltersState.Provider value={{ filterCounts }}>
                 <FilterGroup filterName="rating" fullWidth />
                 <FilterGroup filterName="type" />
@@ -59,23 +59,23 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-3">
+                <div className="column is-6-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
-                        placeholder="Search by anime title"
+                        placeholder="Search"
                         value={searchValue}
                         onChange={search}
                         autoFocus
                     />
                 </div>
-                <div className="column is-3">
+                <div className="column is-6-mobile is-3-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-5 summary">
+                <div className="column is-8-mobile is-5-tablet summary">
                     <Summary />
                 </div>
-                <div className="column is-1">
+                <div className="column is-4-mobile is-1-tablet">
                     <button className="button is-fullwidth" onClick={reset}>
                         Reset
                     </button>
@@ -89,7 +89,10 @@ function FilterButtons() {
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
 function FilterGroup({ filterName, fullWidth }) {
-    const classes = classNames('column is-flex buttons has-addons is-marginless', fullWidth ? 'is-12' : 'is-6')
+    const classes = classNames('column is-flex buttons has-addons is-12-mobile ', {
+        'is-12-tablet': fullWidth,
+        'is-6-tablet': !fullWidth,
+    })
 
     return (
         <div className={classes}>
@@ -129,7 +132,7 @@ function FilterButton({ filterName, filterValue }) {
     return (
         <button className={classes} onClick={selectFilter}>
             {Filters[filterName].descriptions[filterValue]}
-            {!!count && <span className="count">{count}</span>}
+            {!!count && filterValue !== false && <span className="count">{count}</span>}
         </button>
     )
 }
@@ -159,7 +162,7 @@ function OptionGroup({ filterName }) {
         filterValue && !filterCounts[filterName][filterValue]
     )
 
-    const separator = Array(20).fill(String.fromCharCode(9472))
+    const separator = Array(10).fill(String.fromCharCode(9472))
 
     return (
         <div className="select is-fullwidth">

@@ -1,9 +1,20 @@
 @import '_base';
 
 .pagination {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+        justify-content: space-between;
+    }
+
     .column {
         display: flex;
         align-items: center;
+
+        @include mobile {
+            flex: 0 1 auto;
+        }
 
         &:last-child {
             justify-content: flex-end;
@@ -13,11 +24,15 @@
     .icon {
         $size: 1.5rem;
 
+        background: none;
         width: $size * 1.25;
-        height: $size;
+        height: 100%;
         font-size: $size;
         color: $dark;
         cursor: pointer;
+        border: none;
+        outline: none;
+
 
         svg {
             transition: transform $duration-fast $easing;
@@ -37,11 +52,21 @@
     display: flex;
     justify-content: center;
 
+    @include mobile {
+        .button:not(.is-dark) {
+            display: none;
+        }
+    }
+
     .button {
         flex: 0 0 2.25em;
         width: 2.25em;
         padding: 0.25rem;
         margin: 0 0.25rem;
+
+        @include mobile {
+            margin: 0 0.1rem;
+        }
 
         &[disabled] {
             opacity: 0;
@@ -58,4 +83,8 @@
     margin: 0 0.25rem;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+        display: none;
+    }
 }

@@ -15,10 +15,12 @@
 // Base
 html,
 body {
-    min-width: 1200px;
-    max-width: 1400px;
     font-family: 'Open Sans', $body-family;
     color: #000;
+
+    @include tablet {
+        min-width: 1200px;
+    }
 }
 
 .title {
@@ -31,6 +33,11 @@ body {
     max-width: 1400px;
     padding: 0 $column-gap;
     margin: $column-gap auto;
+
+    @include mobile {
+        min-width: unset;
+        max-width: 100%;
+    }
 }
 
 // Truncating text
@@ -46,8 +53,7 @@ body {
 .select,
 .select select,
 .table-column,
-.table-row,
-path {
+.table-row {
     transition-property: background-color, box-shadow, border-color, color, fill, opacity;
     transition-duration: $duration-fast;
     transition-timing-function: $easing;
@@ -74,6 +80,13 @@ path {
     font-size: 1.5rem;
     // Weird visual bug with using opacity and backdrop filter together, so remove it before fading
     transition: opacity $duration-slow $easing, backdrop-filter 0s linear;
+
+    @include mobile {
+        width: 90%;
+        font-size: 1rem;
+        left: 5%;
+        transform: none;
+    }
 
     @supports (backdrop-filter: blur(20px)) {
         background: rgba(0, 0, 0, 0.5);

@@ -25,6 +25,7 @@ import {
     getAnimeApiData,
 } from '../helpers/Modal'
 import fileSize from '../helpers/FileSize'
+import Icon from '../helpers/Icon'
 
 // Components
 import Badge from './Badge'
@@ -145,11 +146,6 @@ function Modal({ closeModal: closeCallback, ...props }) {
                 changeAnime={changeAnime}
                 currentAnimeId={anime.id}
             />
-            <NavigationButton
-                direction={ACTIONS.NEXT_ANIME}
-                changeAnime={changeAnime}
-                currentAnimeId={anime.id}
-            />
             <div className={`modal-card has-background-${Filters.status.colorCodes[anime.status]}`}>
                 <div className="modal-card-head">
                     <h5 className="modal-card-title">
@@ -157,12 +153,17 @@ function Modal({ closeModal: closeCallback, ...props }) {
                             {anime.title}
                         </a>
                     </h5>
-                    <button className="delete" onClick={closeModal}></button>
+                    <Icon as="button" icon="times-circle" onClick={closeModal} />
                 </div>
                 <div className="modal-card-body">
                     <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
                 </div>
             </div>
+            <NavigationButton
+                direction={ACTIONS.NEXT_ANIME}
+                changeAnime={changeAnime}
+                currentAnimeId={anime.id}
+            />
         </div>
     )
 }
@@ -237,7 +238,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         View on MyAnimeList.net
                     </a>
                 </div>
-                <div className="column">
+                <div className="column is-9">
                     <ul>
                         <li>
                             <strong>English Title: </strong>
@@ -337,13 +338,13 @@ function Rating({ rating }) {
         <>
             <div className="rating">
                 <span className="has-text-warning">
-                    {Array(rating).fill('★')}
+                    {Array(rating).fill(<Icon icon={[ 'fas', 'star' ]} />)}
                 </span>
                 <span className="has-text-grey-light">
-                    {Array(10 - rating).fill('★')}
+                    {Array(10 - rating).fill(<Icon icon={[ 'far', 'star' ]} />)}
                 </span>
             </div>
-            <h5>{Filters.rating.descriptions[rating]}</h5>
+            <h5 class="title is-5">{Filters.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
         </>
     )
 }

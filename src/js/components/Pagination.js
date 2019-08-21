@@ -83,11 +83,11 @@ function Pagination() {
 
     return (
         <div className="columns pagination">
-            <div className="column">
+            <div className="column is-3">
                 <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
             </div>
             <div className="column is-6 pagination-list">{buttons}</div>
-            <div className="column">
+            <div className="column is-3">
                 <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
             </div>
         </div>
@@ -129,10 +129,10 @@ const NavButton = memo(({ action: type, disabled = false }) => {
     const classes = type === ACTIONS.PREV_PAGE ? 'is-left' : 'is-right'
 
     if (disabled) {
-        return <Icon icon={icon} className={classes} />
+        return <Icon as="button" icon={icon} className={classes} />
     }
 
-    return <Icon icon={icon} className={classes} onClick={changePage} />
+    return <Icon as="button" icon={icon} className={classes} onClick={changePage} />
 })
 
 // Exports

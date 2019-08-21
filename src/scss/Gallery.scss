@@ -1,7 +1,5 @@
 @import '_base';
 
-$img-width: 148px;
-$img-height: round($img-width * 1.4);
 $gap: 5px;
 
 // Placeholder when the gallery is off screen
@@ -11,6 +9,13 @@ $gap: 5px;
 
 // Gallery container
 .gallery {
+    --img-width: 148px;
+    --img-height: calc(var(--img-width) * 1.4);
+
+    @include mobile {
+        --img-width: 110px;
+    }
+
     padding: 0 $column-gap;
 
     .tag {
@@ -18,8 +23,8 @@ $gap: 5px;
     }
 
     img {
-        height: $img-height;
-        width: $img-width;
+        height: var(--img-height);
+        width: var(--img-width);
         pointer-events: none;
     }
 }
@@ -58,6 +63,11 @@ $gap: 5px;
     margin: 0 -15px !important;
     transition: box-shadow 0.15s ease-in-out;
     font-weight: 600;
+    font-size: 1.25rem;
+
+    .icon {
+        font-size: 1rem;
+    }
 
     &.is-stuck {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -72,22 +82,24 @@ $gap: 5px;
 
 // Item placeholder for when it shouldn't be rendered
 .gallery-item-placeholder {
-    flex: 0 0 $img-width;
-    width: $img-width;
-    height: calc(#{$img-height} + 2rem);
+    flex: 0 0 var(--img-width);
+    width: var(--img-width);
+    height: calc(var(--img-height) + 2rem);
 }
 
 // Gallery item
 .gallery-item {
-    flex: 0 0 $img-width;
-    width: $img-width;
+    flex: 0 0 var(--img-width);
+    width: var(--img-width);
     margin: $gap;
     transition: z-index 0.15s ease-in-out;
     z-index: 1;
 
-    &:hover  {
-        text-decoration: none;
-        z-index: 15;
+    @media (hover: hover) {
+        &:hover  {
+            text-decoration: none;
+            z-index: 15;
+        }
     }
 }
 
@@ -102,11 +114,13 @@ $gap: 5px;
     transition-timing-function: ease-in-out;
     overflow: hidden;
 
-    .gallery-item:hover & {
-        opacity: 1;
-        color: unset;
-        box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
-        transform: scale(1.5);
+    @media (hover: hover) {
+        .gallery-item:hover & {
+            opacity: 1;
+            color: unset;
+            box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+            transform: scale(1.5);
+        }
     }
 
     // Style for items which are very close to the sides
