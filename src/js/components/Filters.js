@@ -66,7 +66,6 @@ function FilterButtons() {
                         placeholder="Search"
                         value={searchValue}
                         onChange={search}
-                        autoFocus
                     />
                 </div>
                 <div className="column is-6-mobile is-3-tablet">
