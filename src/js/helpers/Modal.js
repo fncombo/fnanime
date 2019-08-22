@@ -2,7 +2,7 @@
 import { ACTIONS } from '../data/GlobalState'
 
 // Object to cache API data to avoid fetching the same thing multiple times
-const cachedApiData = {}
+const cachedApiData = new Map()
 
 /**
  * Attempt to retrieve a deeply nested property from an object. Returns the value if found or false.
@@ -78,8 +78,8 @@ function getAdjacentAnime(allAnime, animeId, direction) {
  */
 async function getAnimeApiData(animeId, isRetry = false) {
     // Return cached data
-    if (cachedApiData.hasOwnProperty(animeId)) {
-        return cachedApiData[animeId]
+    if (cachedApiData.has(animeId)) {
+        return cachedApiData.get(animeId)
     }
 
     // Wait at least 2 seconds between API requests, increasing with each retry
@@ -118,7 +118,7 @@ async function getAnimeApiData(animeId, isRetry = false) {
     }
 
     // Save this anime's data so we don't have to fetch it in the future
-    cachedApiData[animeId] = apiData
+    cachedApiData.set(animeId, apiData)
 
     return apiData
 }

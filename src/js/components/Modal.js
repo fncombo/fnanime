@@ -42,6 +42,11 @@ const modalInitialState = {
 
 // Function to process title synonyms
 function formatSynonyms(synonyms) {
+    // Fallback if for some reason this isn't an array as it should be
+    if (!Array.isArray(synonyms) || !synonyms.length) {
+        return <>&mdash;</>
+    }
+
     return synonyms.join(', ')
 }
 
