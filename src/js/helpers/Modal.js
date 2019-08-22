@@ -82,6 +82,11 @@ async function getAnimeApiData(animeId, isRetry = false) {
         return cachedApiData.get(animeId)
     }
 
+    // Stop after too many retries
+    if (isRetry > 5) {
+        throw new Error('Too many API retries')
+    }
+
     // Wait at least 2 seconds between API requests, increasing with each retry
     if (isRetry) {
         await new Promise(resolve => {
