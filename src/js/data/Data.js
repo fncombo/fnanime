@@ -162,10 +162,9 @@ function getAnime(searchQuery = null, sorting = Defaults.sorting, filters = Defa
 
     // Perform the search query if there is one
     if (searchQuery && searchQuery.length) {
-        results = new Fuse(results, FuseOptions).search(searchQuery).map(({ item, matches }) => ({
-            ...item,
-            highlight: matches && matches.length ? matches[0].indices : false,
-        }))
+        results = new Fuse(results, FuseOptions).search(searchQuery).map(({ item, matches: [
+            { indices: highlight } = { indices: false },
+        ] }) => ({ ...item, highlight }))
     }
 
     // Finally apply all sorting

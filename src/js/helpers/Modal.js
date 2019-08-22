@@ -32,9 +32,9 @@ function replaceSpecialChars(string) {
 function convertDuration(duration) {
     // Convert hours into minutes
     if (/hr/i.test(duration)) {
-        const match = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
+        const [ hours, minutes ] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
 
-        return (parseInt(match[1], 10) * 60) + (match[2] ? parseInt(match[2], 10) : 0)
+        return (parseInt(hours, 10) * 60) + (minutes ? parseInt(minutes, 10) : 0)
     }
 
     return parseInt(duration, 10)
