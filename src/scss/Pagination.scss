@@ -32,6 +32,7 @@
         cursor: pointer;
         border: none;
         outline: none;
+        transition: color $duration-fast $easing;
 
         svg {
             transition: transform $duration-fast $easing;
@@ -51,6 +52,7 @@
 
         &.is-disabled {
             color: $border;
+            pointer-events: none;
         }
     }
 }
