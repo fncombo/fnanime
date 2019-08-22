@@ -48,6 +48,10 @@
         &.is-right svg {
             transform-origin: center left;
         }
+
+        &.is-disabled {
+            color: $border;
+        }
     }
 }
 

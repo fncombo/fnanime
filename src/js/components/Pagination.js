@@ -1,6 +1,9 @@
 // React
 import React, { memo, useContext } from 'react'
 
+// Libraries
+import classNames from 'classnames'
+
 // Style
 import '../../scss/Pagination.scss'
 
@@ -126,7 +129,9 @@ const NavButton = memo(({ action: type, disabled = false }) => {
     }
 
     const icon = type === ACTIONS.PREV_PAGE ? 'chevron-left' : 'chevron-right'
-    const classes = type === ACTIONS.PREV_PAGE ? 'is-left' : 'is-right'
+    const classes = classNames(type === ACTIONS.PREV_PAGE ? 'is-left' : 'is-right', {
+        'is-disabled': disabled,
+    })
 
     if (disabled) {
         return <Icon as="button" icon={icon} className={classes} />
