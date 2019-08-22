@@ -154,7 +154,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                             {anime.title}
                         </a>
                     </h5>
-                    <Icon as="button" icon="times-circle" onClick={closeModal} />
+                    <Icon as="button" icon="times-circle" size="lg" onClick={closeModal} />
                 </div>
                 <div className="modal-card-body">
                     <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
@@ -306,24 +306,21 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
     const navAnime = getAdjacentAnime(allAnime, currentAnimeId, direction)
-    const classes = classNames('modal-nav', {
-        placeholder: !navAnime,
-        next: direction === ACTIONS.NEXT_ANIME,
-        prev: direction !== ACTIONS.NEXT_ANIME,
+    const classes = classNames('modal-nav', `has-text-${Filters.status.colorCodes[navAnime.status]}`, {
+        'is-placeholder': !navAnime,
+        'is-next': direction === ACTIONS.NEXT_ANIME,
+        'is-prev': direction !== ACTIONS.NEXT_ANIME,
     })
 
     if (!navAnime) {
         return <div className={classes} />
     }
 
+    const icon = direction === ACTIONS.NEXT_ANIME ? 'chevron-right' : 'chevron-left'
+
     return (
         <div className={classes} title={navAnime.title} onClick={() => changeAnime(navAnime)}>
-            <svg viewBox="0 0 10 10" className={`fill-${Filters.status.colorCodes[navAnime.status]}`}>
-                {direction === ACTIONS.NEXT_ANIME
-                    ? <polygon points="0,0 10,5 0,10" />
-                    : <polygon points="0,5 10,0 10,10" />
-                }
-            </svg>
+            {<Icon icon={icon} className="is-medium" size="2x" />}
             <img className="rounded" width="74" height="100" src={navAnime.img} alt={navAnime.title} />
         </div>
     )
@@ -397,7 +394,7 @@ function LoadingText({ children }) {
 function LoadingError() {
     return (
         <span className="modal-error has-text-danger">
-            <Icon icon="exclamation-circle" className="is-small" /> An error has occurred
+            <Icon icon="exclamation-circle" /> An error has occurred
         </span>
     )
 }

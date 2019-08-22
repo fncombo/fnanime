@@ -27,7 +27,7 @@
 
 // Background overlay when the modal is open
 .modal-background {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.95);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -35,19 +35,10 @@
     left: 0;
     left: 0;
     right: 0;
-    transition: background $duration-medium $easing;
-
-    .is-active & {
-        background: rgba(255, 255, 255, 0.95);
-    }
 
     @supports (backdrop-filter: blur(20px)) {
-        backdrop-filter: blur(0) saturate(100%);
-
-        .is-active & {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(200%);
-        }
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(20px) saturate(200%);
     }
 }
 
@@ -138,7 +129,6 @@
     .icon {
         background: none;
         border: none;
-        font-size: 1.25rem;
         cursor: pointer;
         outline: none;
         transition: opacity $duration-fast $easing;
@@ -302,10 +292,6 @@
 .modal-error {
     display: inline-flex;
     align-items: center;
-
-    .icon {
-        margin-right: 0.25rem;
-    }
 }
 
 // Slidedown animation variables
@@ -350,70 +336,40 @@
         transform: scale(1.75);
     }
 
-    svg {
-        flex: 0 0 1.25rem;
-        width: 1.25rem;
-        height: 1.25rem;
+    .icon {
         transition: transform $duration-medium $easing, margin $duration-fast $easing;
     }
 
-    &.prev {
+    &.is-prev {
         left: 0;
         transform-origin: left center;
 
-        svg {
-            margin-right: 0.75rem;
+        .icon {
             transform-origin: right center;
         }
 
-        &:hover svg {
-            transform: translateX(-1.5rem) scale(1.5);
+        &:hover .icon {
+            transform: translateX(-1.75rem) scale(1.5);
         }
     }
 
-    &.next {
+    &.is-next {
         right: 0;
         transform-origin: right center;
 
-        svg {
+        .icon {
             order: 2;
-            margin-left: 0.75rem;
             transform-origin: left center;
         }
 
-        &:hover svg {
-            transform: translateX(1.5rem) scale(1.5);
+        &:hover .icon {
+            transform: translateX(1.75rem) scale(1.5);
         }
     }
 
-    &.placeholder {
+    &.is-placeholder {
         width: calc(74px + 0.75rem + 1.25rem);
         height: 100px;
         pointer-events: none;
-    }
-
-    // SVG arrow colors
-    .fill-success polygon {
-        fill: $success;
-    }
-
-    .fill-info polygon {
-        fill: $info;
-    }
-
-    .fill-warning polygon {
-        fill: $warning;
-    }
-
-    .fill-danger polygon {
-        fill: $danger;
-    }
-
-    .fill-primary polygon {
-        fill: $primary;
-    }
-
-    .fill-dark polygon {
-        fill: $dark;
     }
 }

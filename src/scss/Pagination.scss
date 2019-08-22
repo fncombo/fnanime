@@ -33,17 +33,20 @@
         border: none;
         outline: none;
 
-
         svg {
             transition: transform $duration-fast $easing;
         }
 
-        &.is-left:hover svg {
-            transform: translateX(-0.25rem)
+        &:hover svg {
+            transform: scale(1.5);
         }
 
-        &.is-right:hover svg {
-            transform: translateX(0.25rem)
+        &.is-left svg {
+            transform-origin: center right;
+        }
+
+        &.is-right svg {
+            transform-origin: center left;
         }
     }
 }
