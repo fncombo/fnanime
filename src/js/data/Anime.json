@@ -5179,12 +5179,12 @@
         "rewatchCount": 0,
         "url": "https://myanimelist.net/anime/25649/Junjou_Romantica_3",
         "subs": "HorribleSubs",
-        "resolution": 720,
-        "source": "TV",
+        "resolution": 1080,
+        "source": "Web",
         "videoCodec": "H.264",
         "bits": "8",
         "audioCodec": "AAC",
-        "size": 5547280457
+        "size": 8991668895
     },
     "25777": {
         "id": 25777,
@@ -5216,13 +5216,13 @@
         "rating": 8,
         "rewatchCount": 0,
         "url": "https://myanimelist.net/anime/25835/Shirobako",
-        "subs": "Cthuko",
-        "resolution": 720,
-        "source": "TV",
-        "videoCodec": "H.264",
+        "subs": "Spectrum",
+        "resolution": 1080,
+        "source": "BD",
+        "videoCodec": "H.265",
         "bits": "10",
-        "audioCodec": "AAC",
-        "size": 5308574781
+        "audioCodec": "FLAC",
+        "size": 15235333968
     },
     "27631": {
         "id": 27631,
@@ -6812,13 +6812,13 @@
         "rating": 9,
         "rewatchCount": 0,
         "url": "https://myanimelist.net/anime/37349/Goblin_Slayer",
-        "subs": "SmugCat",
-        "resolution": 720,
-        "source": "Web",
-        "videoCodec": "H.264",
-        "bits": "10",
+        "subs": "Kaya",
+        "resolution": 1080,
+        "source": "BD",
+        "videoCodec": "H.265",
+        "bits": "8",
         "audioCodec": "AAC",
-        "size": 9504604037
+        "size": 8963168632
     },
     "37430": {
         "id": 37430,
