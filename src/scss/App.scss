@@ -68,6 +68,16 @@ body {
     }
 }
 
+// Loading message animation
+@keyframes loading-message {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40rem;
+    }
+}
+
 // Message box
 .message {
     background: rgba(0, 0, 0, 0.95);
@@ -86,13 +96,11 @@ body {
     pointer-events: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
-    font-size: 1.5rem;
     // Weird visual bug with using opacity and backdrop filter together, so remove it before fading
     transition: opacity $duration-slow $easing, backdrop-filter 0s linear;
 
     @include mobile {
         width: 90%;
-        font-size: 1rem;
         left: 5%;
         transform: none;
     }
@@ -102,9 +110,19 @@ body {
         backdrop-filter: blur(20px) saturate(200%);
     }
 
+    &.is-loading {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+        background-size: 40rem 1rem;
+        animation: loading-message 2s linear infinite;
+    }
+
     &.is-done {
         transition-delay: 3s;
         opacity: 0;
         backdrop-filter: none;
+    }
+
+    .icon {
+        margin-left: -0.25em;
     }
 }

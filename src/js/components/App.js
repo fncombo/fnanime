@@ -16,6 +16,7 @@ import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from '../da
 // Helpers
 import { getApiData } from '../helpers/App'
 import '../helpers/FontAwesome'
+import Icon from '../helpers/Icon'
 
 // Components
 import FilterButtons from './Filters'
@@ -111,9 +112,11 @@ function App() {
     let updateStatusMessage
 
     if (apiUpdated) {
-        updateStatusMessage = apiError ? 'Error contacting API' : 'Updated'
+        updateStatusMessage = apiError
+            ? <><Icon icon="times-circle" /> Error contacting API</>
+            : <><Icon icon="check-circle" /> Updated</>
     } else {
-        updateStatusMessage = <>Loading latest information&hellip;</>
+        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
     }
 
     useEffect(() => {
@@ -154,9 +157,7 @@ function App() {
         fetchData()
     }, [ apiUpdated ])
 
-    const messageClasses = classNames('message', {
-        'is-done': apiUpdated,
-    })
+    const messageClasses = classNames('message', apiUpdated ? 'is-done' : 'is-loading')
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
