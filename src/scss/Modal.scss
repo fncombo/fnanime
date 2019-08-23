@@ -338,7 +338,7 @@
     }
 
     .icon {
-        transition: transform $duration-medium $easing, margin $duration-fast $easing;
+        transition: transform $duration-medium $easing, margin $duration-medium $easing;
     }
 
     &.is-prev {

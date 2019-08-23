@@ -35,7 +35,7 @@
         transition: color $duration-fast $easing;
 
         svg {
-            transition: transform $duration-fast $easing;
+            transition: transform $duration-medium $easing;
         }
 
         &:hover svg {

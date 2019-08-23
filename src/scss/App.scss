@@ -78,6 +78,16 @@ body {
     }
 }
 
+// Done message animation
+@keyframes done-message {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    100% {
+        transform: translate(-50%, calc(100% + 2rem));
+    }
+}
+
 // Message box
 .message {
     background: rgba(0, 0, 0, 0.95);
@@ -85,25 +95,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.25rem;
+    border-radius: 10rem;
     position: fixed;
-    bottom: 1rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 300;
-    white-space: pre-wrap;
+    white-space: pre;
     text-align: center;
     pointer-events: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
-    // Weird visual bug with using opacity and backdrop filter together, so remove it before fading
-    transition: opacity $duration-slow $easing, backdrop-filter 0s linear;
-
-    @include mobile {
-        width: 90%;
-        left: 5%;
-        transform: none;
-    }
 
     @supports (backdrop-filter: blur(20px)) {
         background: rgba(0, 0, 0, 0.5);
@@ -111,15 +113,13 @@ body {
     }
 
     &.is-loading {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
         background-size: 40rem 1rem;
-        animation: loading-message 2s linear infinite;
+        animation: loading-message 1.5s linear infinite;
     }
 
     &.is-done {
-        transition-delay: 3s;
-        opacity: 0;
-        backdrop-filter: none;
+        animation: $duration-slow cubic-bezier(0.5, -0.5, 0.75, 0.05) 3s done-message forwards;
     }
 
     .icon {

@@ -26,7 +26,7 @@
     top: 60px;
     z-index: 5;
     transition-property: height, margin-bottom;
-    transition-duration: $duration-medium;
+    transition-duration: $duration-fast;
     transition-timing-function: $easing;
 
     @include mobile {
