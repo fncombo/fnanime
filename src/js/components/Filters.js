@@ -122,7 +122,6 @@ function FilterButton({ filterName, filterValue }) {
     const isSelected = activeFilters[filterName] === filterValue
     const count = filterCounts[filterName][filterValue]
     const classes = classNames('button', {
-        'is-active': isSelected,
         'is-outlined': !isSelected,
         'is-faded': filterValue && !count,
         'is-dark': !(filterValue && !count),

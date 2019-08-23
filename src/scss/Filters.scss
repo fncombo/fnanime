@@ -64,7 +64,11 @@
             }
 
             &.is-faded {
-                color: fade-out($dark, 0.5);
+                color: $border;
+
+                &:hover {
+                    color: $border-hover;
+                }
             }
         }
     }
