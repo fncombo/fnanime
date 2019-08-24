@@ -88,7 +88,7 @@ function getFileQuality(anime) {
     }
 
     if (!measuredStats) {
-        return 0
+        return false
     }
 
     return totalMeasure / measuredStats
