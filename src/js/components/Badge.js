@@ -30,7 +30,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
 
     // Show episode progress if number of watched episodes is different from total and not zero
     if ((anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) || anime.status === 1) {
-        extraInfo = <>{anime.episodesWatched}/{anime.episodes || '?'}</>
+        extraInfo = <>{anime.episodesWatched}&nbsp;&frasl;&nbsp;{anime.episodes || '?'}</>
     }
 
     // Optionally show anime rating
