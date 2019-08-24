@@ -1,7 +1,9 @@
 @import '_base';
 
+// Bulma base
 @import '~bulma/sass/base/_all.sass';
 
+// Bulma elements
 @import '~bulma/sass/elements/button.sass';
 @import '~bulma/sass/elements/icon.sass';
 @import '~bulma/sass/elements/notification.sass';
@@ -10,6 +12,7 @@
 @import '~bulma/sass/elements/tag.sass';
 @import '~bulma/sass/elements/title.sass';
 
+// Bulma grid
 @import '~bulma/sass/grid/columns.sass';
 
 // Base
@@ -73,6 +76,7 @@ body {
     0% {
         background-position: 0;
     }
+
     100% {
         background-position: 40rem;
     }
@@ -83,6 +87,7 @@ body {
     0% {
         transform: translate(-50%, 0);
     }
+
     100% {
         transform: translate(-50%, calc(100% + 2rem));
     }

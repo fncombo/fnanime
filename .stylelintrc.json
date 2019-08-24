@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "stylelint-config-recommended",
+        "stylelint-config-standard"
+    ],
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "indentation": 4,
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "no-descending-specificity": null
+    },
+    "syntax": "scss"
+}

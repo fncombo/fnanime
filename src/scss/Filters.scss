@@ -1,5 +1,6 @@
 @import '_base';
 
+// Bulma form
 @import '~bulma/sass/form/shared.sass';
 @import '~bulma/sass/form/input-textarea.sass';
 @import '~bulma/sass/form/select.sass';
@@ -55,7 +56,7 @@
                 }
 
                 &::after {
-                    content: ')'
+                    content: ')';
                 }
             }
 

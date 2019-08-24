@@ -96,7 +96,7 @@ $gap: 5px;
     z-index: 1;
 
     @media (hover: hover) {
-        &:hover  {
+        &:hover {
             text-decoration: none;
             z-index: 15;
         }
@@ -123,6 +123,11 @@ $gap: 5px;
         }
     }
 
+    // Style for not downloaded anime
+    .is-not-downloaded & {
+        opacity: 0.5;
+    }
+
     // Style for items which are very close to the sides
     .gallery-item.is-left & {
         transform-origin: left center;
@@ -130,9 +135,5 @@ $gap: 5px;
 
     .gallery-item.is-right & {
         transform-origin: right center;
-    }
-
-    .is-not-downloaded & {
-        opacity: 0.5;
     }
 }

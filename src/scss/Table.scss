@@ -169,7 +169,7 @@
         justify-content: flex-start;
         flex-grow: 1;
         flex-shrink: 1;
-        padding-right: 0.25rem
+        padding-right: 0.25rem;
     }
 
     @include mobile {
@@ -290,7 +290,7 @@
                 flex: 0 0 100% !important;
 
                 &::before {
-                    content: 'Total Size:\00a0'
+                    content: 'Total Size:\00a0';
                 }
             }
         }
