@@ -115,7 +115,14 @@ body {
     &.is-loading {
         background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
         background-size: 40rem 1rem;
-        animation: loading-message 1.5s linear infinite;
+        transform: translate(-50%, calc(100% + 2rem));
+        animation-name: loading-message, done-message;
+        animation-duration: 1.25s, $duration-slow;
+        animation-direction: normal, reverse;
+        animation-timing-function: linear, cubic-bezier(0.5, -0.5, 0.75, 0.05);
+        animation-fill-mode: none, forwards;
+        animation-iteration-count: infinite, 1;
+        animation-delay: 0s, 0.5s;
     }
 
     &.is-done {
