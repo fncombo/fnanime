@@ -22,6 +22,8 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
 
     let extraInfo
     let attributes = {}
+    let showEpisodes = (anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) || anime.status === 1
+
     const classes = classNames(
         'tag is-rounded',
         isSmall ? 'is-normal' : 'is-medium',
@@ -29,12 +31,20 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
     )
 
     // Show episode progress if number of watched episodes is different from total and not zero
-    if ((anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) || anime.status === 1) {
-        extraInfo = <>{anime.episodesWatched}&nbsp;&frasl;&nbsp;{anime.episodes || '?'}</>
+    if (showEpisodes) {
+        extraInfo = <>
+            <span className={`tag-part is-current has-background-${Filters.status.colorCodes[anime.status]}`}>
+                {anime.episodesWatched}
+            </span>
+            <span className="tag-part is-total">{anime.episodes || '?'}</span>
+        </>
     }
 
     // Optionally show anime rating
     if (showRating && !!anime.rating) {
+        // In which case, no longer show episodes
+        showEpisodes = false
+
         extraInfo = <>Rated {anime.rating}</>
     }
 
@@ -50,7 +60,9 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
         const mainClasses = classNames('tags has-addons', {
             'is-link': onClick,
         })
-        const extraClasses = classNames('tag is-rounded is-dark', isSmall ? 'is-normal' : 'is-medium')
+        const extraClasses = classNames('tag is-rounded is-dark', isSmall ? 'is-normal' : 'is-medium', {
+            'is-parted': showEpisodes,
+        })
 
         return (
             <div className={mainClasses} {...attributes}>
