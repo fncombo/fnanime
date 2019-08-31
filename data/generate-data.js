@@ -32,6 +32,7 @@ const typeLookup = {
     ONA: 5,
     Music: 6,
     Other: 7,
+    Unknown: 8,
 }
 
 // Collected anime data from API and local files

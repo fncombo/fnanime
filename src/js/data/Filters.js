@@ -16,17 +16,10 @@ const Filters = {
             5: 'ONA',
             6: 'Music',
             7: 'Other',
+            8: 'Unknown',
         },
         colorCodes: {
-            false: '',
-            null: 'black',
-            1: 'TV',
-            2: 'OVA',
-            3: 'Movie',
-            4: 'Special',
-            5: 'ONA',
-            6: 'Music',
-            7: 'Other',
+
         },
     },
     status: {
