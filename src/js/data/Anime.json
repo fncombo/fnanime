@@ -5091,25 +5091,6 @@
         "audioCodec": "FLAC",
         "size": 9024719800
     },
-    "23673": {
-        "id": 23673,
-        "title": "Ookami Shoujo to Kuro Ouji",
-        "type": 1,
-        "episodes": 12,
-        "episodesWatched": 0,
-        "img": "https://cdn.myanimelist.net/images/anime/4/67805.jpg",
-        "status": 6,
-        "rating": 0,
-        "rewatchCount": 0,
-        "url": "https://myanimelist.net/anime/23673/Ookami_Shoujo_to_Kuro_Ouji",
-        "subs": false,
-        "resolution": false,
-        "source": false,
-        "videoCodec": false,
-        "bits": false,
-        "audioCodec": false,
-        "size": false
-    },
     "24459": {
         "id": 24459,
         "title": "Tales of Zestiria: Doushi no Yoake",
@@ -6299,13 +6280,13 @@
         "rating": 8,
         "rewatchCount": 0,
         "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
-        "subs": "Vivid-Asenshi",
+        "subs": "Komorebi",
         "resolution": 1080,
-        "source": "TV",
+        "source": "BD",
         "videoCodec": "H.264",
         "bits": "10",
-        "audioCodec": "AAC",
-        "size": 7022038186
+        "audioCodec": "FLAC",
+        "size": 18508029662
     },
     "33417": {
         "id": 33417,
@@ -6635,7 +6616,7 @@
         "title": "Tate no Yuusha no Nariagari",
         "type": 1,
         "episodes": 25,
-        "episodesWatched": 3,
+        "episodesWatched": 7,
         "img": "https://cdn.myanimelist.net/images/anime/1490/101365.jpg",
         "status": 1,
         "rating": 0,
@@ -6831,13 +6812,13 @@
         "rating": 0,
         "rewatchCount": 0,
         "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
-        "subs": false,
-        "resolution": false,
-        "source": false,
-        "videoCodec": false,
-        "bits": false,
-        "audioCodec": false,
-        "size": false
+        "subs": "Komorebi",
+        "resolution": 1080,
+        "source": "BD",
+        "videoCodec": "H.264",
+        "bits": "10",
+        "audioCodec": "FLAC",
+        "size": 1728594411
     },
     "37141": {
         "id": 37141,
