@@ -9,10 +9,7 @@ import '../../scss/Filters.scss'
 
 // Data
 import { GlobalState, FiltersState, ACTIONS } from '../data/GlobalState'
-import { Filters, FilterNames } from '../data/Filters'
-
-// Helpers
-import { makeFilterCounts } from '../helpers/Filters'
+import { Filters } from '../data/Filters'
 
 /**
  * Groups of filters, search input, summary, and reset button.
@@ -41,13 +38,7 @@ function FilterButtons() {
     }
 
     // Count how many anime match each filter
-    const filterCounts = makeFilterCounts()
-
-    for (const cartoon of anime) {
-        for (const filterName of FilterNames) {
-            filterCounts[filterName][cartoon[filterName]] += 1
-        }
-    }
+    const filterCounts = Filters.makeCounts(anime)
 
     return (
         <div className="columns is-mobile is-multiline filters">
