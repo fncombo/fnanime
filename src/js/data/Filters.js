@@ -204,34 +204,36 @@ const Filters = {
     },
 }
 
-/**
- * Non-enumerable property which returns an object with counts of
- * how many anime match each filter name and filter value.
- */
-Object.defineProperty(Filters, 'makeCounts', {
-    value: anime => {
-        // Get all filter names
-        const filterNames = Object.keys(Filters)
+// Additional non-enumerable properties
+Object.defineProperties(Filters, {
+    /**
+     * Returns an object with counts of how many anime match each filter name and filter value.
+     */
+    makeCounts: {
+        value: anime => {
+            // Get all filter names
+            const filterNames = Object.keys(Filters)
 
-        // Make a nested blank object of filter names and values
-        const filterCounts = filterNames.reduce((filterNamesObject, filterName) => {
-            filterNamesObject[filterName] = Filters[filterName].values.reduce((filterValuesObject, filterValue) => {
-                filterValuesObject[filterValue] = 0
+            // Make a nested blank object of filter names and values
+            const filterCounts = filterNames.reduce((filterNamesObject, filterName) => {
+                filterNamesObject[filterName] = Filters[filterName].values.reduce((filterValuesObject, filterValue) => {
+                    filterValuesObject[filterValue] = 0
 
-                return filterValuesObject
+                    return filterValuesObject
+                }, {})
+
+                return filterNamesObject
             }, {})
 
-            return filterNamesObject
-        }, {})
-
-        // Loop through all anime and increment related filter value counts
-        for (const cartoon of anime) {
-            for (const filterName of filterNames) {
-                filterCounts[filterName][cartoon[filterName]] += 1
+            // Loop through all anime and increment related filter value counts
+            for (const cartoon of anime) {
+                for (const filterName of filterNames) {
+                    filterCounts[filterName][cartoon[filterName]] += 1
+                }
             }
-        }
 
-        return filterCounts
+            return filterCounts
+        },
     },
 })
 
