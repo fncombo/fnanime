@@ -232,7 +232,7 @@ Object.defineProperty(Filters, 'makeCounts', {
         }
 
         return filterCounts
-    }
+    },
 })
 
 // Exports
