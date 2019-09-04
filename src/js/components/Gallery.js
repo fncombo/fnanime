@@ -6,14 +6,14 @@ import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../scss/Gallery.scss'
+import 'scss/Gallery.scss'
 
 // Data
-import { GlobalState } from '../data/GlobalState'
-import { Filters } from '../data/Filters'
+import { GlobalState } from 'js/data/GlobalState'
+import { Filters } from 'js/data/Filters'
 
 // Components
-import ModalContainer from './Modal'
+import ModalContainer from 'js/components/Modal'
 
 // Width of the gallery item
 const imgWidth = 165

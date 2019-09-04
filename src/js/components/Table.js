@@ -7,23 +7,23 @@ import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../scss/Table.scss'
+import 'scss/Table.scss'
 
 // Data
-import { GlobalState, TableState, ACTIONS } from '../data/GlobalState'
-import { Defaults } from '../data/Data'
-import { Columns, SortingOrders, SortingIcons } from '../data/Table'
-import { Filters } from '../data/Filters'
+import { GlobalState, TableState, ACTIONS } from 'js/data/GlobalState'
+import { Defaults } from 'js/data/Data'
+import { Columns, SortingOrders, SortingIcons } from 'js/data/Table'
+import { Filters } from 'js/data/Filters'
 
 // Helpers
-import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from '../helpers/Table'
-import fileSize from '../helpers/FileSize'
-import Icon from '../helpers/Icon'
+import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from 'js/helpers/Table'
+import fileSize from 'js/helpers/FileSize'
+import Icon from 'js/helpers/Icon'
 
 // Components
-import Badge from './Badge'
-import Pagination from './Pagination'
-import ModalContainer from './Modal'
+import Badge from 'js/components/Badge'
+import Pagination from 'js/components/Pagination'
+import ModalContainer from 'js/components/Modal'
 
 // Default table state
 const initialTableState = {

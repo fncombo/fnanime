@@ -1,5 +1,5 @@
 // Data
-import { ACTIONS } from '../data/GlobalState'
+import { ACTIONS } from 'js/data/GlobalState'
 
 // Object to cache API data to avoid fetching the same thing multiple times
 const cachedApiData = new Map()

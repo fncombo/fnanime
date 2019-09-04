@@ -3,10 +3,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Components
-import App from './js/components/App'
+import App from 'js/components/App'
 
 // Service worker
-import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from 'serviceWorker'
 
 // Go!
 ReactDOM.render(<App />, document.getElementById('root'))

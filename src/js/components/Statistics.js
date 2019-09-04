@@ -5,16 +5,16 @@ import React, { useContext } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 // Style
-import '../../scss/Statistics.scss'
+import 'scss/Statistics.scss'
 
 // Data
-import { GlobalState } from '../data/GlobalState'
-import { Filters } from '../data/Filters'
+import { GlobalState } from 'js/data/GlobalState'
+import { Filters } from 'js/data/Filters'
 
 // Helpers
-import { add, calculateTotals } from '../helpers/Statistics'
-import fileSize from '../helpers/FileSize'
-import Icon from '../helpers/Icon'
+import { add, calculateTotals } from 'js/helpers/Statistics'
+import fileSize from 'js/helpers/FileSize'
+import Icon from 'js/helpers/Icon'
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.

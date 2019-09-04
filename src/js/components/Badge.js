@@ -5,10 +5,10 @@ import React from 'react'
 import classNames from 'classnames'
 
 // Style
-import '../../scss/Badge.scss'
+import 'scss/Badge.scss'
 
 // Data
-import { Filters } from '../data/Filters'
+import { Filters } from 'js/data/Filters'
 
 /**
  * A badge for an anime display the watch status with episode count if watching. Optionally can display

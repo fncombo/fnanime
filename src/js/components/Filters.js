@@ -5,11 +5,11 @@ import React, { useContext, useState } from 'react'
 import classNames from 'classnames'
 
 // Style
-import '../../scss/Filters.scss'
+import 'scss/Filters.scss'
 
 // Data
-import { GlobalState, FiltersState, ACTIONS } from '../data/GlobalState'
-import { Filters } from '../data/Filters'
+import { GlobalState, FiltersState, ACTIONS } from 'js/data/GlobalState'
+import { Filters } from 'js/data/Filters'
 
 /**
  * Groups of filters, search input, summary, and reset button.

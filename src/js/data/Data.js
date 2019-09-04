@@ -3,9 +3,9 @@ import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
 // Data
-import AnimeObject from './Anime.json'
-import { SortingOrders } from './Table'
-import { Filters } from './Filters'
+import AnimeObject from 'js/data/Anime.json'
+import { SortingOrders } from 'js/data/Table'
+import { Filters } from 'js/data/Filters'
 
 // Only the anime object's entries in an array
 let AnimeArray = Object.values(AnimeObject)

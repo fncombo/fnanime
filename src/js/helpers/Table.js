@@ -1,5 +1,5 @@
-import { Filters } from '../data/Filters'
-import { StorageSizeLimits } from '../data/Table'
+import { Filters } from 'js/data/Filters'
+import { StorageSizeLimits } from 'js/data/Table'
 
 /**
  * Returns the colour for a given file quality.

@@ -5,14 +5,14 @@ import React, { memo, useContext } from 'react'
 import classNames from 'classnames'
 
 // Style
-import '../../scss/Pagination.scss'
+import 'scss/Pagination.scss'
 
 // Data
-import { TableState, ACTIONS } from '../data/GlobalState'
-import { Defaults } from '../data/Data'
+import { TableState, ACTIONS } from 'js/data/GlobalState'
+import { Defaults } from 'js/data/Data'
 
 // Helpers
-import Icon from '../helpers/Icon'
+import Icon from 'js/helpers/Icon'
 
 /**
  * Previous, next, and number button to control the table.

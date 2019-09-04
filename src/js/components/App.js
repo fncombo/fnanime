@@ -5,24 +5,24 @@ import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 import classNames from 'classnames'
 
 // Style
-import '../../scss/App.scss'
-import '../../scss/fn.scss'
+import 'scss/App.scss'
+import 'scss/fn.scss'
 
 // Data
-import LocalDataUpdateTime from '../data/LocalDataUpdated.json'
-import { GlobalState, ACTIONS } from '../data/GlobalState'
-import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from '../data/Data'
+import LocalDataUpdateTime from 'js/data/LocalDataUpdated.json'
+import { GlobalState, ACTIONS } from 'js/data/GlobalState'
+import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
 
 // Helpers
-import { getApiData } from '../helpers/App'
-import '../helpers/FontAwesome'
-import Icon from '../helpers/Icon'
+import { getApiData } from 'js/helpers/App'
+import 'js/helpers/FontAwesome'
+import Icon from 'js/helpers/Icon'
 
 // Components
-import FilterButtons from './Filters'
-import Table from './Table'
-const Statistics = lazy(() => import('./Statistics'))
-const Gallery = lazy(() => import('./Gallery'))
+import FilterButtons from 'js/components/Filters'
+import Table from 'js/components/Table'
+const Statistics = lazy(() => import('js/components/Statistics'))
+const Gallery = lazy(() => import('js/components/Gallery'))
 
 // Local data last update time
 const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {

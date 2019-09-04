@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Helpers
-import Icon from '../helpers/Icon'
+import Icon from 'js/helpers/Icon'
 
 // Descriptions and data related to all possible filters
 const Filters = {

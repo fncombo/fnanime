@@ -8,13 +8,13 @@ import prettyMilliseconds from 'pretty-ms'
 import { SlideDown } from 'react-slidedown'
 
 // Style
-import '../../scss/Modal.scss'
+import 'scss/Modal.scss'
 import 'react-slidedown/lib/slidedown.css'
 
 // Data
-import { ModalState, GlobalState, ACTIONS } from '../data/GlobalState'
-import { AnimeObject } from '../data/Data'
-import { Filters } from '../data/Filters'
+import { ModalState, GlobalState, ACTIONS } from 'js/data/GlobalState'
+import { AnimeObject } from 'js/data/Data'
+import { Filters } from 'js/data/Filters'
 
 // Helpers
 import {
@@ -23,12 +23,12 @@ import {
     convertDuration,
     getAdjacentAnime,
     getAnimeApiData,
-} from '../helpers/Modal'
-import fileSize from '../helpers/FileSize'
-import Icon from '../helpers/Icon'
+} from 'js/helpers/Modal'
+import fileSize from 'js/helpers/FileSize'
+import Icon from 'js/helpers/Icon'
 
 // Components
-import Badge from './Badge'
+import Badge from 'js/components/Badge'
 
 // DOM element into which to portal the modal
 const modalEl = document.getElementById('modal')
