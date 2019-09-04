@@ -36,7 +36,9 @@ const Defaults = {
     pageButtons: 2,
 }
 
-// Populate default filter data and filter values
+/**
+ * Populate default filter data and filter values.
+ */
 function createFilterDefaults() {
     for (const filterName of Object.keys(Filters)) {
         // Populate only the filter values which have some data to them
