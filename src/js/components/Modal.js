@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 // Libraries
 import classNames from 'classnames'
-import prettyTime from '../../lib/PrettyTime'
+import prettyMilliseconds from 'pretty-ms'
 import { SlideDown } from 'react-slidedown'
 
 // Style
@@ -454,7 +454,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         return 'Unknown'
     }
 
-    const watchTime = prettyTime(convertedDuration * episodesWatched * (rewatchCount + 1))
+    const watchTime = prettyMilliseconds(convertedDuration * episodesWatched * (rewatchCount + 1), { verbose: true })
 
     // If rewatched anime or it's a movie, say how many total times watched
     if (rewatchCount || (episodesWatched && episodes === 1)) {
@@ -509,8 +509,8 @@ function Duration({ duration, episodes }) {
         return 'Unknown'
     }
 
-    const totalDuration = prettyTime(convertedDuration * episodes, 'm')
-    const episodeDuration = prettyTime(convertedDuration, 'm')
+    const totalDuration = prettyMilliseconds(convertedDuration * episodes, { verbose: true })
+    const episodeDuration = prettyMilliseconds(convertedDuration, { verbose: true })
 
     return (
         <>
