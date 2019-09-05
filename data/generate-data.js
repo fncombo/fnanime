@@ -13,8 +13,8 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Parameters
-const animeJsonLocation = 'js/src/js/data/Anime.json'
-const saveTimeJsonLocation = 'js/src/js/data/LocalDataUpdated.json'
+const animeJsonLocation = '../src/js/data/Anime.json'
+const saveTimeJsonLocation = '../src/js/data/LocalDataUpdated.json'
 const malUsername = 'fncombo'
 const animeFolders = [
     'E:/Anime/Series',
