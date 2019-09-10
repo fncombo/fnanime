@@ -80,7 +80,7 @@ function Statistics() {
                         <h6>Totals</h6>
                     </div>
                     <div className="column">
-                        Average Rating: {totals.rating.average
+                        Mean Rating: {totals.rating.average
                             ? (Math.round(totals.rating.average * 100) / 100).toLocaleString()
                             : 'N/A'
                         }
