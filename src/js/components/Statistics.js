@@ -106,7 +106,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
             <div className="column is-2-mobile is-1-tablet is-rating">
                 <span>{rating}<Icon icon={[ 'fas', 'star' ]} className="is-small" /></span>
             </div>
-            <StatisticsColumn rating={rating} data={ratingTotals} />
+            <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
             <StatisticsColumn rating={rating} data={episode} />
         </div>
@@ -116,7 +116,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
 /**
  * Column of statistics for specific data within a rating. Accepts a format function to modify output.
  */
-function StatisticsColumn({ rating, data, formatFunction }) {
+function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
     // Total of this data for this rating
     const ratingData = data.totals[rating]
     const sum = ratingData.reduce(add)
@@ -130,6 +130,7 @@ function StatisticsColumn({ rating, data, formatFunction }) {
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
+            {!!showPercentage && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {
