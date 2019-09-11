@@ -100,6 +100,7 @@ $gap: 5px;
     margin: $gap;
     transition: z-index $duration-medium $easing;
     z-index: 1;
+    position: relative;
 
     @media (hover: hover) {
         &:hover {
@@ -113,18 +114,20 @@ $gap: 5px;
 .gallery-item-inner {
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition-property: opacity, box-shadow, transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease-in-out;
+    transition-duration: $duration-medium;
+    transition-timing-function: $easing;
     overflow: hidden;
+    position: relative;
+    z-index: 14;
 
     @media (hover: hover) {
         .gallery-item:hover & {
             opacity: 1;
             color: unset;
-            box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             transform: scale(1.5);
         }
     }
@@ -141,5 +144,49 @@ $gap: 5px;
 
     .gallery-item.is-right & {
         transform-origin: right center;
+    }
+}
+
+// Hover tooltip
+.gallery-item-tooltip {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: -25%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 150%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem) scale(0.75);
+    transition-property: visibility, opacity, transform;
+    transition-duration: $duration-medium;
+    transition-timing-function: $easing;
+    z-index: 13;
+    pointer-events: none;
+
+    .gallery-item:hover & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(4rem) scale(1);
+    }
+
+    .gallery-item.is-left & {
+        transform-origin: left top;
+        left: 0;
+    }
+
+    .gallery-item.is-right & {
+        transform-origin: right top;
+        left: -50%;
+    }
+
+    @supports (backdrop-filter: blur(20px)) {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(20px) saturate(200%);
     }
 }

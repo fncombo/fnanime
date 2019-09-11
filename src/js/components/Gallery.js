@@ -146,6 +146,7 @@ function GalleryItem(anime) {
                     }
                 </span>
             </div>
+            <div className="gallery-item-tooltip">{title}</div>
         </ModalContainer>
     )
 }
