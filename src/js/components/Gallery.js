@@ -63,6 +63,9 @@ function Gallery() {
                         <GalleryHeading>
                             {Filters.rating.descriptions[actualRating]}
                         </GalleryHeading>
+                        <p className="gallery-detailed-description">
+                            {Filters.rating.detailedDescriptions[actualRating]}
+                        </p>
                         <div className="gallery-grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
                                 <GalleryItem key={cartoon.id} {...cartoon} />

@@ -83,6 +83,19 @@ const Filters = {
             1: 'Appalling',
             0: 'Not Rated',
         },
+        detailedDescriptions: {
+            10: 'My favourite anime. Unique, unforgettable, entertaining, and captivating. Definitely shaped the person I am today and affected my life.',
+            9: 'The best anime which were super enjoyable and interesting to watch. All contain my favourite themes and characters. Still very memorable.',
+            8: 'Overall very enjoyable anime which were a great pleasure to watch. Relevant to my interests, have nice themes, and maybe were emotional.',
+            7: 'Nice anime to pass the time, however nothing too special or impressive. These are average anime which I did not dislike watching.',
+            6: 'Just fine. Not terrible but not that good either that I\'d want to watch again. Starting to maybe not remember what these were about.',
+            5: 'Low effort recaps, confusing shorts, or bad movies. Might have made me question why I\'m still watching it.',
+            4: 'Boring and not interesting. Only reason I probably didn\'t drop these is because 20 minutes a week was just about bearable.',
+            3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
+            2: '',
+            1: '',
+            0: '',
+        },
         colorCodes: {
 
         },

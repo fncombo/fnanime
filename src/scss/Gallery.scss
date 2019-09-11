@@ -80,6 +80,12 @@ $gap: 5px;
     }
 }
 
+// Detailed description text for each rating
+.gallery-detailed-description {
+    text-align: center;
+    padding: 0 0 20px;
+}
+
 // Item placeholder for when it shouldn't be rendered
 .gallery-item-placeholder {
     flex: 0 0 var(--img-width);
