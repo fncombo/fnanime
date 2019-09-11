@@ -1,5 +1,7 @@
+@import '_base';
+
 .fnheader {
-    background: rgba(255, 255, 255, 0.95);
+    background: $backdrop-background-light-fallback;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -12,8 +14,8 @@
 
 @supports (backdrop-filter: blur(20px)) {
     .fnheader {
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(20px) saturate(200%);
+        background: $backdrop-background-light;
+        backdrop-filter: $backdrop-filter;
     }
 
     .modal-open .fnheader::after {

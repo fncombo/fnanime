@@ -53,7 +53,7 @@ $gap: 5px;
 
 // Gallery heading
 .gallery-heading {
-    background: rgba(255, 255, 255, 0.95);
+    background: $backdrop-background-light-fallback;
     height: 60px;
     position: sticky;
     top: 60px;
@@ -74,8 +74,8 @@ $gap: 5px;
         z-index: 20;
 
         @supports (backdrop-filter: blur(20px)) {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px) saturate(200%);
+            background: $backdrop-background-light;
+            backdrop-filter: $backdrop-filter;
         }
     }
 }
@@ -148,7 +148,8 @@ $gap: 5px;
 
 // Hover tooltip
 .gallery-item-tooltip {
-    background: rgba(0, 0, 0, 0.95);
+    background: $backdrop-background-dark-fallback;
+    max-width: 30rem;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     position: absolute;
@@ -180,7 +181,7 @@ $gap: 5px;
     }
 
     @supports (backdrop-filter: blur(20px)) {
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(20px) saturate(200%);
+        background: $backdrop-background-dark;
+        backdrop-filter: $backdrop-filter;
     }
 }

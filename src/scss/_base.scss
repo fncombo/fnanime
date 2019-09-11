@@ -24,3 +24,10 @@ $progress-height: 4px;
 $duration-fast: 75ms;
 $duration-medium: 150ms;
 $duration-slow: 300ms;
+
+$backdrop-filter: blur(20px) saturate(200%);
+$backdrop-background-dark: rgba(0, 0, 0, 0.666);
+$backdrop-background-light: rgba(255, 255, 255, 0.666);
+
+$backdrop-background-dark-fallback: rgba(0, 0, 0, 0.95);
+$backdrop-background-light-fallback: rgba(255, 255, 255, 0.95);

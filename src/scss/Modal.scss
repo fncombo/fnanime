@@ -28,7 +28,7 @@
 
 // Background overlay when the modal is open
 .modal-background {
-    background: rgba(255, 255, 255, 0.95);
+    background: $backdrop-background-light-fallback;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -37,8 +37,8 @@
     right: 0;
 
     @supports (backdrop-filter: blur(20px)) {
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(20px) saturate(200%);
+        background: $backdrop-background-light;
+        backdrop-filter: $backdrop-filter;
     }
 }
 

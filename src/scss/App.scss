@@ -95,7 +95,7 @@ body {
 
 // Message box
 .message {
-    background: rgba(0, 0, 0, 0.95);
+    background: $backdrop-background-dark-fallback;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
@@ -113,8 +113,8 @@ body {
     color: #fff;
 
     @supports (backdrop-filter: blur(20px)) {
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(20px) saturate(200%);
+        background: $backdrop-background-dark;
+        backdrop-filter: $backdrop-filter;
     }
 
     &.is-loading {
