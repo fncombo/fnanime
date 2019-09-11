@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 
 // Libraries
 import classNames from 'classnames'
@@ -104,29 +104,46 @@ function GalleryHeading({ children }) {
  */
 function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
-    const [ ref, inView ] = useInView(galleryItemOptions)
+    const [ tooltipStyle, setTooltipStyle ] = useState({})
+    const [ itemRef, inView ] = useInView(galleryItemOptions)
+    const tooltipRef = useRef(null)
 
     // Do not render until the item is close to being visible to the user to prevent useless image loading
     if (!inView) {
-        return <div className="gallery-item-placeholder" ref={ref} />
+        return <div className="gallery-item-placeholder" ref={itemRef} />
     }
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
     const hover = ({ currentTarget }) => {
-        const bounds = currentTarget.getBoundingClientRect()
+        const itemBounds = currentTarget.getBoundingClientRect()
+        const gallerySectionBounds = currentTarget.parentNode.parentNode.getBoundingClientRect()
+        const tooltipBounds = tooltipRef.current.getBoundingClientRect()
+        const style = {
+            bottom: gallerySectionBounds.height - currentTarget.offsetTop,
+        }
 
         // Close to the left
-        if (bounds.x <= (imgWidth / 4)) {
+        if (itemBounds.x <= (imgWidth / 4)) {
             setHoverClass('is-left')
 
+            style.left = currentTarget.offsetLeft
+
         // Close to the right
-        } else if (bounds.x + imgWidth + (imgWidth / 4) >= window.innerWidth) {
+        } else if (itemBounds.x + imgWidth + (imgWidth / 8) >= window.innerWidth) {
             setHoverClass('is-right')
+
+            style.right = gallerySectionBounds.width - currentTarget.offsetLeft - itemBounds.width
 
         // Reset previous class
         } else if (hoverClass.length) {
             setHoverClass('')
         }
+
+        if (!style.hasOwnProperty('left') && !style.hasOwnProperty('right')) {
+            style.left = itemBounds.x - gallerySectionBounds.x + ((itemBounds.width - tooltipBounds.width) / 2)
+        }
+
+        setTooltipStyle(style)
     }
 
     const rel = 'noopener noreferrer'
@@ -137,7 +154,7 @@ function GalleryItem(anime) {
 
     return (
         <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
-            <div className="gallery-item-inner" ref={ref}>
+            <div className="gallery-item-inner" ref={itemRef}>
                 <img src={img} alt={title} />
                 <span className={`tag is-medium is-${Filters.status.colorCodes[status]}`}>
                     {episodes > 1
@@ -146,7 +163,7 @@ function GalleryItem(anime) {
                     }
                 </span>
             </div>
-            <div className="gallery-item-tooltip">{title}</div>
+            <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>{title}</div>
         </ModalContainer>
     )
 }

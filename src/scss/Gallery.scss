@@ -100,7 +100,6 @@ $gap: 5px;
     margin: $gap;
     transition: z-index $duration-medium $easing;
     z-index: 1;
-    position: relative;
 
     @media (hover: hover) {
         &:hover {
@@ -121,7 +120,7 @@ $gap: 5px;
     transition-timing-function: $easing;
     overflow: hidden;
     position: relative;
-    z-index: 14;
+    z-index: 10;
 
     @media (hover: hover) {
         .gallery-item:hover & {
@@ -153,36 +152,31 @@ $gap: 5px;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     position: absolute;
-    top: 100%;
-    left: -25%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
-    width: 150%;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(1rem) scale(0.75);
+    transform: translateY(0);
     transition-property: visibility, opacity, transform;
     transition-duration: $duration-medium;
     transition-timing-function: $easing;
-    z-index: 13;
+    z-index: 5;
     pointer-events: none;
 
     .gallery-item:hover & {
         opacity: 1;
         visibility: visible;
-        transform: translateY(4rem) scale(1);
+        transform: translateY(-4.25rem);
     }
 
     .gallery-item.is-left & {
         transform-origin: left top;
-        left: 0;
     }
 
     .gallery-item.is-right & {
         transform-origin: right top;
-        left: -50%;
     }
 
     @supports (backdrop-filter: blur(20px)) {
