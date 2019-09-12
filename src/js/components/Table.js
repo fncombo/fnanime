@@ -76,10 +76,8 @@ function Table() {
                     {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
                         <Row key={cartoon.id} {...cartoon} />
                     )}
+                    <Pagination />
                 </div>
-            </div>
-            <div className="container">
-                <Pagination />
             </div>
         </TableState.Provider>
     )

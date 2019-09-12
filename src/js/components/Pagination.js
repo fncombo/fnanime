@@ -3,6 +3,7 @@ import React, { memo, useContext } from 'react'
 
 // Libraries
 import classNames from 'classnames'
+import { useInView } from 'react-intersection-observer'
 
 // Style
 import 'scss/Pagination.scss'
@@ -19,6 +20,12 @@ import Icon from 'js/helpers/Icon'
  */
 function Pagination() {
     const { state: { page }, dispatch, lastPage } = useContext(TableState)
+    const [ ref, inView, entry ] = useInView()
+
+    // Check whether the pagination is stuck to add additional styling
+    const classes = classNames('columns pagination', {
+        'is-stuck': !inView && entry,
+    })
 
     // If the anime updated and the table is now over the last possible page,
     // switch to the new last page instead
@@ -85,15 +92,18 @@ function Pagination() {
     }
 
     return (
-        <div className="columns pagination">
-            <div className="column is-3">
-                <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
+        <>
+            <div className="pagination-sentinel" ref={ref} />
+            <div className={classes}>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
+                </div>
+                <div className="column is-6 pagination-list">{buttons}</div>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
+                </div>
             </div>
-            <div className="column is-6 pagination-list">{buttons}</div>
-            <div className="column is-3">
-                <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
-            </div>
-        </div>
+        </>
     )
 }
 
