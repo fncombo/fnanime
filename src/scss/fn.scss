@@ -10,24 +10,17 @@
     top: 0;
     z-index: 30;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+    @supports (backdrop-filter: blur(20px)) {
+        background: $backdrop-background-light;
+        backdrop-filter: $backdrop-filter;
+    }
 }
 
 @supports (backdrop-filter: blur(20px)) {
     .fnheader {
         background: $backdrop-background-light;
         backdrop-filter: $backdrop-filter;
-    }
-
-    .modal-open .fnheader::after {
-        background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
-        content: '';
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        z-index: 1000;
     }
 }
 
