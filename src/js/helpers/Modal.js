@@ -1,3 +1,6 @@
+// Libraries
+import has from 'has'
+
 // Data
 import { ACTIONS } from 'js/data/GlobalState'
 
@@ -12,7 +15,7 @@ function getNestedProperty(object, property, ...rest) {
         return false
     }
 
-    if (rest.length === 0 && object.hasOwnProperty(property)) {
+    if (rest.length === 0 && has(object, property)) {
         return object[property]
     }
 
@@ -118,7 +121,7 @@ async function getAnimeApiData(animeId, isRetry = false) {
     }
 
     // Handle other errors returned by the API
-    if (apiData.hasOwnProperty('error')) {
+    if (has(apiData, 'error')) {
         throw new Error('API responded with an error')
     }
 

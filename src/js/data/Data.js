@@ -1,4 +1,5 @@
 // Libraries
+import has from 'has'
 import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
@@ -48,7 +49,7 @@ function createFilterDefaults() {
             .sort()
 
         // Apply any special processing for this filter
-        if (Filters[filterName].hasOwnProperty('specialValuesProcess')) {
+        if (has(Filters[filterName], 'specialValuesProcess')) {
             filterValues = Filters[filterName].specialValuesProcess(filterValues)
         }
 
@@ -77,10 +78,7 @@ function getFileQuality(anime) {
             continue
         }
 
-        if (!Filters.hasOwnProperty(key)
-            || !Filters[key].hasOwnProperty('fileQuality')
-            || !Filters[key].fileQuality.hasOwnProperty(value)
-        ) {
+        if (!has(Filters, key) || !has(Filters[key], 'fileQuality') || !has(Filters[key].fileQuality, value)) {
             continue
         }
 
@@ -112,7 +110,7 @@ for (const animeId of Object.keys(AnimeObject)) {
  */
 function updateAnimeData(animeId, newData) {
     // Don't update if anime doesn't exist
-    if (!AnimeObject.hasOwnProperty(animeId)) {
+    if (!has(AnimeObject, animeId)) {
         return
     }
 
@@ -145,7 +143,7 @@ function getAnime(searchQuery = null, sorting = Defaults.sorting, filters = Defa
     let actualSorting = sorting
 
     // Add sorting alphabetically by title if not already, to make it more consistent and predictable
-    if (!sorting.hasOwnProperty('title')) {
+    if (!has(sorting, 'title')) {
         // Copy to not modify actual sorting settings
         actualSorting = {
             ...sorting,

@@ -3,6 +3,7 @@ import React, { Fragment, useState, useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 // Libraries
+import has from 'has'
 import classNames from 'classnames'
 import prettyMilliseconds from 'pretty-ms'
 import { SlideDown } from 'react-slidedown'
@@ -582,7 +583,7 @@ function RelatedListItem({ ...anime }) {
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
-            {AnimeObject.hasOwnProperty(anime.mal_id) &&
+            {has(AnimeObject, anime.mal_id) &&
                 <Badge showRating isSmall onClick={onClick} {...AnimeObject[anime.mal_id]} />
             }
         </li>

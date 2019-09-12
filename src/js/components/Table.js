@@ -2,6 +2,7 @@
 import React, { memo, useContext, useReducer } from 'react'
 
 // Libraries
+import has from 'has'
 import classNames from 'classnames'
 import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
@@ -120,12 +121,12 @@ const HeaderColumn = memo(({ columnName }) => {
         // Amending current sorting (holding shift) or sorting only the currently sorted column modifies existing
         // sorting settings, otherwise create new settings
         const newSorting = shiftKey || (
-            activeSortingKeys.length === 1 && activeSorting.hasOwnProperty(columnName)
+            activeSortingKeys.length === 1 && has(activeSorting, columnName)
         ) ? { ...activeSorting } : {}
 
         // Check if this column is already being sorted, in which case reverse it,
         // otherwise use the default sorting for it
-        if (newSorting.hasOwnProperty(columnName)) {
+        if (has(newSorting, columnName)) {
             newSorting[columnName] = newSorting[columnName] === SortingOrders.asc
                 ? SortingOrders.desc
                 : SortingOrders.asc
@@ -146,7 +147,7 @@ const HeaderColumn = memo(({ columnName }) => {
     let title = ''
 
     // If this column is being sorted, say so and the order of the sort
-    if (activeSorting.hasOwnProperty(columnName)) {
+    if (has(activeSorting, columnName)) {
         // If there are multiple sorting columns, get the index this one was activated at
         if (activeSortingKeys.length > 1) {
             index = activeSortingKeys.indexOf(columnName) + 1
@@ -165,7 +166,7 @@ const HeaderColumn = memo(({ columnName }) => {
 
     return (
         <div className="table-column" style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
-            {activeSorting.hasOwnProperty(columnName) &&
+            {has(activeSorting, columnName) &&
                 <Icon icon={SortingIcons[activeSorting[columnName]]} className={`is-${activeSorting[columnName]}`} />
             }
             {Columns[columnName].text}

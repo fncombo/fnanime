@@ -1,3 +1,6 @@
+// Libraries
+import has from 'has'
+
 /**
  * Get updated API date to display the latest info such as episode watch progress.
  */
@@ -44,7 +47,7 @@ async function getApiData(page = 1, isRetry = false) {
         throw new Error('Could not parse API data')
     }
 
-    if (!responseJson.hasOwnProperty('anime') || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
+    if (!has(responseJson, 'anime') || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
         throw new Error('Anime data not found in API data')
     }
 

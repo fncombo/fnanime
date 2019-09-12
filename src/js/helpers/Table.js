@@ -1,3 +1,7 @@
+// Libraries
+import has from 'has'
+
+// Helpers
 import { Filters } from 'js/data/Filters'
 import { StorageSizeLimits } from 'js/data/Table'
 
@@ -30,7 +34,7 @@ function getColumnTextColor(columnName, value) {
     }
 
     // If color codes mapping exists for this column
-    if (Filters.hasOwnProperty(columnName) && Filters[columnName].hasOwnProperty('colorCodes')) {
+    if (has(Filters, columnName) && has(Filters[columnName], 'colorCodes')) {
         return Filters[columnName].colorCodes[value]
     }
 
