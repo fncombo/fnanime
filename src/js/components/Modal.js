@@ -146,7 +146,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     })
 
     return (
-        <div className="modal is-flex">
+        <div className="modal">
             <div className="modal-background" onClick={closeModal} />
             <NavigationButton
                 direction={ACTIONS.PREV_ANIME}
