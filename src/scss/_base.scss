@@ -6,7 +6,8 @@ $blue: #2d68c4;
 $cyan: #2d68c4;
 $red: #ea2839;
 
-$easing: cubic-bezier(0.39, 0.575, 0.565, 1);
+// easeInOutSine
+$easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 @import '~bulma/sass/utilities/_all.sass';
 
