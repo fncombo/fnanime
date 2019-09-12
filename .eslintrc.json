@@ -32,7 +32,7 @@
         "array-callback-return": "error",
         "complexity": [
             "error",
-            15
+            20
         ],
         "consistent-return": [
             "error", {
