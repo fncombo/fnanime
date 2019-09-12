@@ -90,12 +90,10 @@ body {
 @keyframes done-message {
     0% {
         opacity: 1;
-        transform: translate(-50%, 0);
     }
 
     100% {
         opacity: 0;
-        transform: translate(-50%, 0.75rem);
     }
 }
 
@@ -110,7 +108,7 @@ body {
     position: fixed;
     bottom: calc(60px + 0.75rem);
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     z-index: 300;
     white-space: pre;
     text-align: center;
