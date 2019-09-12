@@ -95,7 +95,7 @@ body {
 
     100% {
         opacity: 0;
-        transform: translate(-50%, calc(40px + 60px + 1rem));
+        transform: translate(-50%, 0.75rem);
     }
 }
 
@@ -108,9 +108,9 @@ body {
     align-items: center;
     border-radius: 10rem;
     position: fixed;
-    bottom: calc(60px + 1rem);
+    bottom: calc(60px + 0.75rem);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     z-index: 300;
     white-space: pre;
     text-align: center;
