@@ -52,6 +52,16 @@ const Filters = {
             6: 'dark',
         },
     },
+    airStatus: {
+        descriptions: {
+            1: 'Airing',
+            2: 'Completed',
+            3: 'Not Yet Aired',
+        },
+        colorCodes: {
+
+        },
+    },
     rating: {
         descriptions: {
             false: 'All Ratings',

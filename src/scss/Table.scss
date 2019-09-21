@@ -225,6 +225,16 @@
         color: $grey-light;
     }
 
+    .air-status {
+        margin-right: $spacing;
+        color: $white-ter;
+        white-space: nowrap;
+        background: rgba($dark, 0.5);
+        border-radius: 100px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
     img {
         flex: 0 0 33px;
         width: 33px;

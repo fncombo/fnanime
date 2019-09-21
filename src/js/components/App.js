@@ -142,6 +142,7 @@ function App() {
             for (const anime of newApiData) {
                 updateAnimeData(anime.mal_id, {
                     status: anime.watching_status,
+                    airStatus: anime.airing_status,
                     rating: anime.score,
                     episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
                     episodesWatched: anime.watched_episodes,

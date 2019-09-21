@@ -72,6 +72,7 @@ function processApiData(anime) {
             episodesWatched: cartoon.watched_episodes,
             img: cartoon.image_url.match(/^[^?]+/)[0],
             status: cartoon.watching_status,
+            airStatus: cartoon.airing_status,
             rating: cartoon.score,
             rewatchCount: getRewatchCount(cartoon.tags),
             url: cartoon.url,
