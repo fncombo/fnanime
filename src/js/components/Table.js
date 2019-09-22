@@ -180,7 +180,7 @@ function Row(anime) {
         <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
             <TitleColumn {...anime} />
             <Column columnName="status">
-                <Badge {...anime} />
+                <Badge includeAirStatus {...anime} />
             </Column>
             <Column columnName="rating">
                 {anime.rating}
@@ -215,7 +215,7 @@ function Row(anime) {
  * Title column for an anime which contains the image, title, and anime type. If a search query is present,
  * it gets highlighted using the anime status color.
  */
-function TitleColumn({ title, img, status, airStatus, type, highlight }) {
+function TitleColumn({ title, img, status, type, highlight }) {
     // If there was a search query and highlight indices have been provided, highlight matches results using them
     const highlightTitle = () => {
         // Get unique parts of the title to highlight, sorted from longest to shortest
@@ -233,9 +233,6 @@ function TitleColumn({ title, img, status, airStatus, type, highlight }) {
     return (
         <div className={classes} style={{ flexBasis: Columns.title.size }}>
             <img width="37" height="50" src={img} alt={title} />
-            {airStatus !== 2 && has(Filters.airStatus.descriptions, airStatus) &&
-                <span className="air-status">{Filters.airStatus.descriptions[airStatus]}</span>
-            }
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle() : title}
             </span>

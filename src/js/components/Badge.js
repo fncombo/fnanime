@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Libraries
+import has from 'has'
 import classNames from 'classnames'
 
 // Style
@@ -14,11 +15,17 @@ import { Filters } from 'js/data/Filters'
  * A badge for an anime display the watch status with episode count if watching. Optionally can display
  * the anime rating and link to open an anime's info box.
  */
-function Badge({ showRating, isSmall, onClick, ...anime }) {
+function Badge({ showRating, isSmall, includeAirStatus, onClick, ...anime }) {
     // Anime wasn't found
     if (!anime) {
         return null
     }
+
+    const showAirStatus = includeAirStatus
+        ? anime.airStatus !== 2 && has(Filters.airStatus.descriptions, anime.airStatus)
+        : false
+
+    const isSmallClass = isSmall || showAirStatus
 
     let extraInfo
     let attributes = {}
@@ -26,7 +33,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
 
     const classes = classNames(
         'tag is-rounded',
-        isSmall ? 'is-normal' : 'is-medium',
+        isSmallClass ? 'is-normal' : 'is-medium',
         `is-${Filters.status.colorCodes[anime.status]}`,
     )
 
@@ -60,7 +67,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
         const mainClasses = classNames('tags has-addons', {
             'is-link': onClick,
         })
-        const extraClasses = classNames('tag is-rounded is-dark', isSmall ? 'is-normal' : 'is-medium', {
+        const extraClasses = classNames('tag is-rounded is-dark', isSmallClass ? 'is-normal' : 'is-medium', {
             'is-parted': showEpisodes,
         })
 
@@ -68,6 +75,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
             <div className={mainClasses} {...attributes}>
                 <span className={classes}>
                     {Filters.status.fancyDescriptions[anime.status]}
+                    {showAirStatus && `, ${Filters.airStatus.descriptions[anime.airStatus]}`}
                 </span>
                 <span className={extraClasses}>
                     {extraInfo}
@@ -79,6 +87,7 @@ function Badge({ showRating, isSmall, onClick, ...anime }) {
     return (
         <span className={classes} {...attributes}>
             {Filters.status.fancyDescriptions[anime.status]}
+            {showAirStatus && `, ${Filters.airStatus.descriptions[anime.airStatus]}`}
         </span>
     )
 }

@@ -65,8 +65,8 @@
 
     &.is-current {
         background-image: linear-gradient(to left, rgba($dark, 0.5), rgba($dark, 0.5));
-        margin: 0 0.75rem 0 -0.75rem;
-        padding: 0 1rem 0 0.25rem;
+        margin: 0 0.75em 0 -0.75em;
+        padding: 0 1em 0 0.25em;
 
         &::before {
             opacity: 0.5;
@@ -74,7 +74,7 @@
     }
 
     &.is-total {
-        margin-left: -0.75rem;
-        padding-left: 0.25rem;
+        margin-left: -0.75em;
+        padding-left: 0.25em;
     }
 }
