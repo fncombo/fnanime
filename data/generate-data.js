@@ -83,7 +83,7 @@ function processApiData(anime) {
             videoCodec: false,
             bits: false,
             audioCodec: false,
-            size: false,
+            size: 0,
         })
     })
 }
@@ -133,7 +133,7 @@ function processLocalData(filename, size) {
         resolution: parseInt(resolution, 10),
         source,
         videoCodec,
-        bits,
+        bits: parseInt(bits, 10),
         audioCodec,
         size,
     })

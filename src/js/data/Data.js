@@ -100,7 +100,7 @@ for (const animeId of Object.keys(AnimeObject)) {
     const anime = AnimeObject[animeId]
 
     // Calculate values on the fly
-    anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : null
+    anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : 0
 
     anime.fileQuality = getFileQuality(anime)
 }
