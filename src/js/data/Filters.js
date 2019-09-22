@@ -5,6 +5,11 @@ import React from 'react'
 import Icon from 'js/helpers/Icon'
 
 // Descriptions and data related to all possible filters
+/**
+ * Key:
+ * `false` is "All" value for filtering purposes
+ * `nul` is when anime is present locally, but has unknown values (e.g. no codec info)
+ */
 const Filters = {
     type: {
         descriptions: {
@@ -39,7 +44,6 @@ const Filters = {
             6: <><Icon icon="plus-circle" /> Planned</>,
         },
         colorCodes: {
-            null: 'dark',
             1: 'success',
             2: 'info',
             3: 'warning',
@@ -146,14 +150,14 @@ const Filters = {
             DVD: 'DVD',
         },
         colorCodes: {
-            null: 'default',
+            null: 'black',
             BD: 'green',
             TV: 'orange',
             Web: 'yellow',
             DVD: 'red',
         },
         fileQuality: {
-            null: 1,
+            null: 0,
             BD: 5,
             TV: 3,
             Web: 4,
@@ -168,7 +172,7 @@ const Filters = {
             'H.264': 'AVC H.264',
         },
         colorCodes: {
-            null: 'default',
+            null: 'black',
             'H.265': 'green',
             'H.264': 'yellow',
         },
@@ -188,14 +192,14 @@ const Filters = {
             AC3: 'AC3',
         },
         colorCodes: {
-            null: 'default',
+            null: 'black',
             FLAC: 'green',
             DTS: 'green',
             AAC: 'yellow',
             AC3: 'orange',
         },
         fileQuality: {
-            null: 1,
+            null: 0,
             FLAC: 5,
             DTS: 5,
             AAC: 4,
