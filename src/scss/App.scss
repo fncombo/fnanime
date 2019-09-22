@@ -30,6 +30,88 @@ body {
     color: #000;
 }
 
+// Text colors
+.has-text-green {
+    color: $green;
+}
+
+.has-text-yellow {
+    color: $yellow;
+}
+
+.has-text-orange {
+    color: $orange;
+}
+
+.has-text-red {
+    color: $red;
+}
+
+// Background colours
+.is-green {
+    background-color: $green;
+
+    &::-webkit-progress-value {
+        background-color: $green;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $green;
+    }
+
+    &::-ms-fill {
+        background-color: $green;
+    }
+}
+
+.is-yellow {
+    background-color: $yellow;
+
+    &::-webkit-progress-value {
+        background-color: $yellow;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $yellow;
+    }
+
+    &::-ms-fill {
+        background-color: $yellow;
+    }
+}
+
+.is-orange {
+    background-color: $orange;
+
+    &::-webkit-progress-value {
+        background-color: $orange;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $orange;
+    }
+
+    &::-ms-fill {
+        background-color: $orange;
+    }
+}
+
+.is-red {
+    background-color: $red;
+
+    &::-webkit-progress-value {
+        background-color: $red;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $red;
+    }
+
+    &::-ms-fill {
+        background-color: $red;
+    }
+}
+
 // Custom container
 .container {
     min-width: 1200px;

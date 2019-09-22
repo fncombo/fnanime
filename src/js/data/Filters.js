@@ -18,9 +18,6 @@ const Filters = {
             7: 'Other',
             8: 'Unknown',
         },
-        colorCodes: {
-
-        },
     },
     status: {
         descriptions: {
@@ -42,7 +39,6 @@ const Filters = {
             6: <><Icon icon="plus-circle" /> Planned</>,
         },
         colorCodes: {
-            false: '',
             null: 'dark',
             1: 'success',
             2: 'info',
@@ -58,14 +54,10 @@ const Filters = {
             2: 'Completed',
             3: 'Not Yet Aired',
         },
-        colorCodes: {
-
-        },
     },
     rating: {
         descriptions: {
             false: 'All Ratings',
-            null: 'black',
             10: <>Masterpiece &ndash; 10<Icon icon={[ 'fas', 'star' ]} /></>,
             9: <>Great &ndash; 9<Icon icon={[ 'fas', 'star' ]} /></>,
             8: <>Very Good &ndash; 8<Icon icon={[ 'fas', 'star' ]} /></>,
@@ -80,7 +72,6 @@ const Filters = {
         },
         simpleDescriptions: {
             false: 'All Ratings',
-            null: 'black',
             10: 'Masterpiece',
             9: 'Great',
             8: 'Very Good',
@@ -106,9 +97,6 @@ const Filters = {
             1: '',
             0: '',
         },
-        colorCodes: {
-
-        },
         // Exclude blank values and reverse sort
         specialValuesProcess: values => values.filter(value => !!value).sort((a, b) => b - a),
     },
@@ -130,16 +118,14 @@ const Filters = {
             360: '360p',
         },
         colorCodes: {
-            false: '',
             null: 'black',
-            1080: 'success',
-            720: 'warning',
-            576: 'warning',
-            480: 'danger',
-            360: 'danger',
+            1080: 'green',
+            720: 'yellow',
+            576: 'orange',
+            480: 'red',
+            360: 'red',
         },
         fileQuality: {
-            false: 0,
             null: 0,
             1080: 5,
             720: 4,
@@ -160,18 +146,16 @@ const Filters = {
             DVD: 'DVD',
         },
         colorCodes: {
-            false: '',
-            null: 'black',
-            BD: 'success',
-            TV: 'warning',
-            Web: 'warning',
-            DVD: 'danger',
+            null: 'default',
+            BD: 'green',
+            TV: 'orange',
+            Web: 'yellow',
+            DVD: 'red',
         },
         fileQuality: {
-            false: 0,
-            null: 0,
+            null: 1,
             BD: 5,
-            TV: 4,
+            TV: 3,
             Web: 4,
             DVD: 1,
         },
@@ -184,13 +168,11 @@ const Filters = {
             'H.264': 'AVC H.264',
         },
         colorCodes: {
-            false: '',
-            null: 'black',
-            'H.265': 'success',
-            'H.264': 'warning',
+            null: 'default',
+            'H.265': 'green',
+            'H.264': 'yellow',
         },
         fileQuality: {
-            false: 0,
             null: 0,
             'H.265': 5,
             'H.264': 4,
@@ -204,25 +186,20 @@ const Filters = {
             DTS: 'DTS',
             AAC: 'AAC',
             AC3: 'AC3',
-            MPEG: 'MPEG',
         },
         colorCodes: {
-            false: '',
-            null: 'black',
-            FLAC: 'success',
-            DTS: 'success',
-            AAC: 'warning',
-            AC3: 'warning',
-            MPEG: 'warning',
+            null: 'default',
+            FLAC: 'green',
+            DTS: 'green',
+            AAC: 'yellow',
+            AC3: 'orange',
         },
         fileQuality: {
-            false: 0,
-            null: 0,
+            null: 1,
             FLAC: 5,
             DTS: 5,
             AAC: 4,
             AC3: 3,
-            MPEG: 3,
         },
     },
 }

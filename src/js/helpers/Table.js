@@ -13,15 +13,19 @@ function getFileQualityColor(fileQuality) {
         return 'default'
     }
 
-    if (fileQuality <= 3) {
-        return 'danger'
+    if (fileQuality < 2.75) {
+        return 'red'
     }
 
-    if (fileQuality <= 4.5) {
-        return 'warning'
+    if (fileQuality < 3.75) {
+        return 'orange'
     }
 
-    return 'success'
+    if (fileQuality < 4.75) {
+        return 'yellow'
+    }
+
+    return 'green'
 }
 
 /**
@@ -53,14 +57,18 @@ function getSizeBarWidth(size, type) {
  */
 function getSizeBarColor(size, type) {
     if (size > StorageSizeLimits[type].large) {
-        return 'danger'
+        return 'red'
     }
 
     if (size > StorageSizeLimits[type].medium) {
-        return 'warning'
+        return 'orange'
     }
 
-    return 'success'
+    if (size > StorageSizeLimits[type].small) {
+        return 'yellow'
+    }
+
+    return 'green'
 }
 
 /**
