@@ -192,7 +192,7 @@ function Row(anime) {
                 <span className="has-text-overflow">{anime.subs}</span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
-                {anime.resolution}p
+                {Filters.resolution.descriptions[anime.resolution]}
             </Column>
             <Column columnName="source">
                 {anime.source}
