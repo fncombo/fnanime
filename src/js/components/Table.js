@@ -189,7 +189,7 @@ function Row(anime) {
                 {anime.rewatchCount}
             </Column>
             <Column columnName="subs" value={anime.subs}>
-                <span className="has-text-overflow">{anime.subs}</span>
+                <span className="has-text-overflow">{anime.subs.join(', ')}</span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
                 {FILTERS.resolution.descriptions[anime.resolution]}
