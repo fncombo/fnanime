@@ -127,7 +127,7 @@ function App() {
             return
         }
 
-        // Update certain cached data from live API
+        // Update certain data from live API
         async function fetchData() {
             let newApiData
 
