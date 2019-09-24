@@ -35,6 +35,23 @@ const typeLookup = {
     Unknown: 8,
 }
 
+// Type to folder mapping
+const typeFolderLookup = {
+    TV: 'Series',
+    OVA: 'OVA',
+    Movie: 'Movies',
+    Special: 'Specials',
+    ONA: 'Series',
+    Music: 'Other',
+    Other: 'Other',
+    Unknown: 'Other',
+}
+
+// Folders to ignore when checking against type
+const ignoreFolders = [
+    'Ghibli Movies',
+]
+
 // Collected anime data from API and local files
 const allAnime = new Map()
 
@@ -89,7 +106,7 @@ function processApiData(anime) {
 }
 
 // Save data from local folders and files
-function processLocalData(filename, size) {
+function processLocalData(filename, size, folder) {
     // Ignore rubbish
     if (/\.ini/.test(filename)) {
         return
@@ -106,6 +123,15 @@ function processLocalData(filename, size) {
     // Check if this anime is a duplicate if it already has a local size saved
     if (allAnime.get(title).size > 0) {
         throw new Error(`Duplicate entry found for anime ${yellow(title)}`)
+    }
+
+    // Check that this anime is in the correct folder based on type
+    const [ actualFolderName ] = folder.match(/[\s\w]+$/)
+    const expectedFolderName = typeFolderLookup[allAnime.get(title).type]
+
+    // Only check if the folder is not ignored
+    if (!ignoreFolders.includes(actualFolderName) && actualFolderName !== expectedFolderName) {
+        throw new Error(`Expected anime ${yellow(title)} to be in folder ${yellow(expectedFolderName)}, but it's in ${yellow(actualFolderName)}`)
     }
 
     // Check to see if the filename has all the data tags
@@ -230,7 +256,7 @@ getApiData().then(async () => {
             }
 
             // Save data about this local anime
-            processLocalData(name, totalSize)
+            processLocalData(name, totalSize, animeFolder)
         })
 
         // Empty log to separate single line logs between anime folders
