@@ -105,8 +105,8 @@ async function loadCache() {
         cache = JSON.parse(cache)
 
         // Check if the cache is too old
-        if (Date.now() - cache.updated > 6.048e8) {
-            console.log(`Cache is over a week old, update by passing the ${yellow('cache')} argument`)
+        if (Date.now() - cache.updated > 2.628e9) {
+            console.log(`Cache is over a month old, update by passing the ${yellow('cache')} argument`)
         } else {
             console.log('Successfully loaded cache')
         }
