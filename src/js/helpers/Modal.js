@@ -5,7 +5,7 @@ import has from 'has'
 import { ACTIONS } from 'js/data/GlobalState'
 
 // Object to cache API data to avoid fetching the same thing multiple times
-const cachedApiData = new Map()
+const CACHED_API_DATA = new Map()
 
 /**
  * Attempt to retrieve a deeply nested property from an object. Returns the value if found or false.
@@ -81,8 +81,8 @@ function getAdjacentAnime(allAnime, animeId, direction) {
  */
 async function getAnimeApiData(animeId, isRetry = false) {
     // Return cached data
-    if (cachedApiData.has(animeId)) {
-        return cachedApiData.get(animeId)
+    if (CACHED_API_DATA.has(animeId)) {
+        return CACHED_API_DATA.get(animeId)
     }
 
     // Stop after too many retries
@@ -126,7 +126,7 @@ async function getAnimeApiData(animeId, isRetry = false) {
     }
 
     // Save this anime's data so we don't have to fetch it in the future
-    cachedApiData.set(animeId, apiData)
+    CACHED_API_DATA.set(animeId, apiData)
 
     return apiData
 }
