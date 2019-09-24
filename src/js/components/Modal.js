@@ -287,7 +287,10 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                                 <WatchTime {...apiData} {...anime} />
                             </LoadingInline>
                         </li>
-                        {!!anime.subs.length && <li><strong>Release:</strong> {anime.subs.join(', ')}</li>}
+                        <li>
+                            <strong>Release: </strong>
+                            {anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}
+                        </li>
                     </ul>
                     <hr />
                     <h5 className="title is-5">Synopsis</h5>
