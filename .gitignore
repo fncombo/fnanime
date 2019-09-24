@@ -1,7 +1,10 @@
+# cache
+cache.json
+
 # dependencies
 /node_modules
 
-#build
+# build
 /build
 
 # testing
