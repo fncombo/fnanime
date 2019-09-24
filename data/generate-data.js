@@ -322,18 +322,18 @@ getApiData().then(async () => {
 
     try {
         currentAnimeData = await readFile(ANIME_JSON_LOCATION, 'utf8')
+
+        currentAnimeData = JSON.parse(currentAnimeData)
+
+        currentAnimeData = JSON.stringify(currentAnimeData.anime)
+
+        if (currentAnimeData === JSON.stringify(ALL_ANIME.anime)) {
+            console.log(green('Anime data JSON is already up-to-date!'))
+
+            return
+        }
     } catch (error) {
         console.log(red('Could not read existing anime data JSON to compare changes'))
-    }
-
-    currentAnimeData = JSON.parse(currentAnimeData)
-
-    currentAnimeData = JSON.stringify(currentAnimeData.anime)
-
-    if (currentAnimeData === JSON.stringify(ALL_ANIME.anime)) {
-        console.log(green('Anime data JSON is already up-to-date!'))
-
-        return
     }
 
     // Save all anime data
