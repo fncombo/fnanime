@@ -1,9 +1,7 @@
 // Libraries
-import fileSizeOriginal from 'filesize'
+import fileSize from 'filesize'
 
-const fileSize = fileSizeOriginal.partial({
+// Export library with default options
+export default fileSize.partial({
     locale: true,
 })
-
-// Exports
-export default fileSize

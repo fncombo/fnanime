@@ -10,7 +10,7 @@ import Icon from 'js/helpers/Icon'
  * `false` is "All" value for filtering purposes
  * `nul` is when anime is present locally, but has unknown values (e.g. no codec info)
  */
-const Filters = {
+const FILTERS = {
     type: {
         descriptions: {
             false: 'All Types',
@@ -262,14 +262,14 @@ const Filters = {
  * Non-enumerable property which returns an object with counts of
  * how many anime match each filter name and filter value.
  */
-Object.defineProperty(Filters, 'makeCounts', {
+Object.defineProperty(FILTERS, 'makeCounts', {
     value: anime => {
         // Get all filter names
-        const filterNames = Object.keys(Filters)
+        const filterNames = Object.keys(FILTERS)
 
         // Make a nested blank object of filter names and values
         const filterCounts = filterNames.reduce((filterNamesObject, filterName) => {
-            filterNamesObject[filterName] = Filters[filterName].values.reduce((filterValuesObject, filterValue) => {
+            filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
                 filterValuesObject[filterValue] = 0
 
                 return filterValuesObject
@@ -302,5 +302,5 @@ Object.defineProperty(Filters, 'makeCounts', {
 
 // Exports
 export {
-    Filters,
+    FILTERS,
 }

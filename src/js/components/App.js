@@ -11,7 +11,7 @@ import 'scss/fn.scss'
 // Data
 import { updated as LocalDataUpdateTime } from 'js/data/Data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
+import { DEFAULTS, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
 
 // Helpers
 import { getApiData } from 'js/helpers/App'
@@ -39,8 +39,8 @@ const suppressApiUpdate = false
 const initialState = {
     anime: getAnime(),
     searchQuery: '',
-    activeSorting: { ...Defaults.sorting },
-    activeFilters: { ...Defaults.filters },
+    activeSorting: { ...DEFAULTS.sorting },
+    activeFilters: { ...DEFAULTS.filters },
     apiUpdated: suppressApiUpdate,
     apiError: false,
 }

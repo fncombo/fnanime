@@ -12,9 +12,9 @@ import 'scss/Table.scss'
 
 // Data
 import { GlobalState, TableState, ACTIONS } from 'js/data/GlobalState'
-import { Defaults } from 'js/data/Data'
-import { Columns, SortingOrders, SortingIcons } from 'js/data/Table'
-import { Filters } from 'js/data/Filters'
+import { DEFAULTS } from 'js/data/Data'
+import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
+import { FILTERS } from 'js/data/Filters'
 
 // Helpers
 import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from 'js/helpers/Table'
@@ -66,14 +66,14 @@ function Table() {
     }
 
     // Calculate the last possible page number
-    const lastPage = Math.ceil(anime.length / Defaults.perPage)
+    const lastPage = Math.ceil(anime.length / DEFAULTS.perPage)
 
     return (
         <TableState.Provider value={{ state, dispatch, lastPage }}>
             <div className="container">
                 <div className="table">
                     <Header />
-                    {anime.slice((state.page - 1) * Defaults.perPage, state.page * Defaults.perPage).map(cartoon =>
+                    {anime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map(cartoon =>
                         <Row key={cartoon.id} {...cartoon} />
                     )}
                     <Pagination />
@@ -98,7 +98,7 @@ const Header = memo(() => {
         <>
             <div className="table-sentinel" ref={ref} />
             <div className={classes}>
-                {Object.keys(Columns).map(columnName =>
+                {Object.keys(TABLE_COLUMNS).map(columnName =>
                     <HeaderColumn columnName={columnName} key={columnName} />
                 )}
             </div>
@@ -125,13 +125,13 @@ const HeaderColumn = memo(({ columnName }) => {
         // Check if this column is already being sorted, in which case reverse it,
         // otherwise use the default sorting for it
         if (has(newSorting, columnName)) {
-            newSorting[columnName] = newSorting[columnName] === SortingOrders.asc
-                ? SortingOrders.desc
-                : SortingOrders.asc
+            newSorting[columnName] = newSorting[columnName] === SORTING_ORDERS.asc
+                ? SORTING_ORDERS.desc
+                : SORTING_ORDERS.asc
 
         // Add new sorting for this column because it isn't being sorted yet
         } else {
-            newSorting[columnName] = Columns[columnName].defaultSorting
+            newSorting[columnName] = TABLE_COLUMNS[columnName].defaultSorting
         }
 
         dispatch({
@@ -160,14 +160,14 @@ const HeaderColumn = memo(({ columnName }) => {
 
     title = `${title}Hold shift to sort by multiple columns.`
 
-    const flexBasis = Columns[columnName].size
+    const flexBasis = TABLE_COLUMNS[columnName].size
 
     return (
         <div className="table-column" style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
             {has(activeSorting, columnName) &&
-                <Icon icon={SortingIcons[activeSorting[columnName]]} className={`is-${activeSorting[columnName]}`} />
+                <Icon icon={SORTING_ICONS[activeSorting[columnName]]} className={`is-${activeSorting[columnName]}`} />
             }
-            {Columns[columnName].text}
+            {TABLE_COLUMNS[columnName].text}
         </div>
     )
 })
@@ -192,7 +192,7 @@ function Row(anime) {
                 <span className="has-text-overflow">{anime.subs}</span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
-                {Filters.resolution.descriptions[anime.resolution]}
+                {FILTERS.resolution.descriptions[anime.resolution]}
             </Column>
             <Column columnName="source">
                 {anime.source}
@@ -228,16 +228,16 @@ function TitleColumn({ title, img, status, type, highlight }) {
         return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
     }
 
-    const classes = classNames('table-column', `has-highlight-${Filters.status.colorCodes[status]}`)
+    const classes = classNames('table-column', `has-highlight-${FILTERS.status.colorCodes[status]}`)
 
     return (
-        <div className={classes} style={{ flexBasis: Columns.title.size }}>
+        <div className={classes} style={{ flexBasis: TABLE_COLUMNS.title.size }}>
             <img width="37" height="50" src={img} alt={title} />
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle() : title}
             </span>
             <span className="type">
-                {Filters.type.descriptions[type]}
+                {FILTERS.type.descriptions[type]}
             </span>
         </div>
     )
@@ -251,7 +251,7 @@ function Column({ value, columnName, children }) {
 
     // Fallback to a dash if there are no children or value
     return (
-        <div className={`table-column has-text-${textColor}`} style={{ flexBasis: Columns[columnName].size }}>
+        <div className={`table-column has-text-${textColor}`} style={{ flexBasis: TABLE_COLUMNS[columnName].size }}>
             {(value === undefined ? children : value) ? children || value : <>&mdash;</>}
         </div>
     )
@@ -265,7 +265,7 @@ function SizeColumns({ episodeSize, size }) {
     // If the size is the same, only create one column
     if (size === episodeSize) {
         // Add the widths of both columns
-        const width = parseInt(Columns.episodeSize.size, 10) + parseInt(Columns.size.size, 10)
+        const width = parseInt(TABLE_COLUMNS.episodeSize.size, 10) + parseInt(TABLE_COLUMNS.size.size, 10)
 
         return (
             <div className="table-column has-progress is-double" style={{ flexBasis: `${width}%` }}>
@@ -276,10 +276,10 @@ function SizeColumns({ episodeSize, size }) {
 
     return (
         <>
-            <div className="table-column has-progress" style={{ flexBasis: Columns.episodeSize.size }}>
+            <div className="table-column has-progress" style={{ flexBasis: TABLE_COLUMNS.episodeSize.size }}>
                 <SizeBar size={episodeSize} type="episode" />
             </div>
-            <div className="table-column has-progress" style={{ flexBasis: Columns.size.size }}>
+            <div className="table-column has-progress" style={{ flexBasis: TABLE_COLUMNS.size.size }}>
                 <SizeBar size={size} type="total" />
             </div>
         </>

@@ -10,7 +10,7 @@ import 'scss/Pagination.scss'
 
 // Data
 import { TableState, ACTIONS } from 'js/data/GlobalState'
-import { Defaults } from 'js/data/Data'
+import { DEFAULTS } from 'js/data/Data'
 
 // Helpers
 import Icon from 'js/helpers/Icon'
@@ -44,8 +44,8 @@ function Pagination() {
     }
 
     // The lowest and highest page button numbers on either side of the current page
-    const leftPage = page - Defaults.pageButtons
-    const rightPage = page + Defaults.pageButtons + 1
+    const leftPage = page - DEFAULTS.pageButtons
+    const rightPage = page + DEFAULTS.pageButtons + 1
 
     // All pages to display
     const pageNumbers = []
@@ -78,15 +78,15 @@ function Pagination() {
     }
 
     // Add blank buttons at the start to ensure the current page button is always exactly in the middle
-    if (page <= Defaults.pageButtons + 2) {
-        for (let i = 0; i <= Defaults.pageButtons + 2 - page; i += 1) {
+    if (page <= DEFAULTS.pageButtons + 2) {
+        for (let i = 0; i <= DEFAULTS.pageButtons + 2 - page; i += 1) {
             buttons.unshift(<button className="button" disabled={true} key={`start-${i}-fill`} />)
         }
     }
 
     // Add blank buttons at the end to ensure the current page button is always exactly in the middle
-    if (page > lastPage - Defaults.pageButtons - 2) {
-        for (let i = lastPage + 1; i <= lastPage + Defaults.pageButtons + 2 - (lastPage - page); i += 1) {
+    if (page > lastPage - DEFAULTS.pageButtons - 2) {
+        for (let i = lastPage + 1; i <= lastPage + DEFAULTS.pageButtons + 2 - (lastPage - page); i += 1) {
             buttons.push(<button className="button" disabled={true} key={`end-${i}-fill`} />)
         }
     }

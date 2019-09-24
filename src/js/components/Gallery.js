@@ -11,7 +11,7 @@ import 'scss/Gallery.scss'
 
 // Data
 import { GlobalState } from 'js/data/GlobalState'
-import { Filters } from 'js/data/Filters'
+import { FILTERS } from 'js/data/Filters'
 
 // Components
 import ModalContainer from 'js/components/Modal'
@@ -62,10 +62,10 @@ function Gallery() {
                 return (
                     <div className="gallery-section" key={actualRating}>
                         <GalleryHeading>
-                            {Filters.rating.descriptions[actualRating]}
+                            {FILTERS.rating.descriptions[actualRating]}
                         </GalleryHeading>
                         <p className="gallery-detailed-description">
-                            {Filters.rating.detailedDescriptions[actualRating]}
+                            {FILTERS.rating.detailedDescriptions[actualRating]}
                         </p>
                         <div className="gallery-grid">
                             {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
@@ -157,10 +157,10 @@ function GalleryItem(anime) {
         <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
             <div className="gallery-item-inner" ref={itemRef}>
                 <img src={img} alt={title} />
-                <span className={`tag is-medium is-${Filters.status.colorCodes[status]}`}>
+                <span className={`tag is-medium is-${FILTERS.status.colorCodes[status]}`}>
                     {episodes > 1
-                        ? <>{Filters.type.descriptions[type]} &ndash; {episodes} ep</>
-                        : Filters.type.descriptions[type]
+                        ? <>{FILTERS.type.descriptions[type]} &ndash; {episodes} ep</>
+                        : FILTERS.type.descriptions[type]
                     }
                 </span>
             </div>

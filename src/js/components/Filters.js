@@ -9,7 +9,7 @@ import 'scss/Filters.scss'
 
 // Data
 import { GlobalState, FiltersState, ACTIONS } from 'js/data/GlobalState'
-import { Filters } from 'js/data/Filters'
+import { FILTERS } from 'js/data/Filters'
 
 /**
  * Groups of filters, search input, summary, and reset button.
@@ -38,7 +38,7 @@ function FilterButtons() {
     }
 
     // Count how many anime match each filter
-    const filterCounts = Filters.makeCounts(anime)
+    const filterCounts = FILTERS.makeCounts(anime)
 
     return (
         <div className="columns is-mobile is-multiline filters">
@@ -89,7 +89,7 @@ function FilterGroup({ filterName, fullWidth }) {
 
     return (
         <div className={classes}>
-            {Filters[filterName].values.map(filterValue =>
+            {FILTERS[filterName].values.map(filterValue =>
                 <FilterButton filterName={filterName} filterValue={filterValue} key={filterValue} />
             )}
         </div>
@@ -123,7 +123,7 @@ function FilterButton({ filterName, filterValue }) {
 
     return (
         <button className={classes} onClick={selectFilter}>
-            {Filters[filterName].descriptions[filterValue]}
+            {FILTERS[filterName].descriptions[filterValue]}
             {!!count && filterValue !== false && <span className="count">{count}</span>}
         </button>
     )
@@ -153,11 +153,11 @@ function OptionGroup({ filterName }) {
         })
     }
 
-    const withCount = Filters[filterName].values.filter(filterValue =>
+    const withCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && filterCounts[filterName][filterValue]
     )
 
-    const withoutCount = Filters[filterName].values.filter(filterValue =>
+    const withoutCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && !filterCounts[filterName][filterValue]
     )
 
@@ -189,7 +189,7 @@ function Option({ filterName, filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Use the filter value, otherwise look up the definition
-    const value = typeof filterValue === 'string' ? filterValue : Filters[filterName].descriptions[filterValue]
+    const value = typeof filterValue === 'string' ? filterValue : FILTERS[filterName].descriptions[filterValue]
 
     // How many anime match this filter
     const count = filterCounts[filterName][filterValue]

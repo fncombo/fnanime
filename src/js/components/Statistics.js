@@ -9,7 +9,7 @@ import 'scss/Statistics.scss'
 
 // Data
 import { GlobalState } from 'js/data/GlobalState'
-import { Filters } from 'js/data/Filters'
+import { FILTERS } from 'js/data/Filters'
 
 // Helpers
 import { add, calculateTotals } from 'js/helpers/Statistics'
@@ -141,8 +141,8 @@ function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
 
                     return (
                         <div
-                            title={`${Filters.status.descriptions[status]} (${count})`}
-                            className={`has-background-${Filters.status.colorCodes[status]}`}
+                            title={`${FILTERS.status.descriptions[status]} (${count})`}
+                            className={`has-background-${FILTERS.status.colorCodes[status]}`}
                             style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
                             key={`${rating}-${status}`}
                         />

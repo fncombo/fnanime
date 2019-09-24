@@ -1,5 +1,5 @@
 // Storage size limits
-const StorageSizeLimits = {
+const STORAGE_SIZE_LIMITS = {
     total: {
         // 1GB
         min: 1 * 1e9,
@@ -27,92 +27,92 @@ const StorageSizeLimits = {
 }
 
 // Column sizes
-const ColumnSizes = {
+const COLUMN_SIZES = {
     small: '5%',
     medium: '7%',
     large: '15%',
 }
 
 // Sorting directions
-const SortingOrders = {
+const SORTING_ORDERS = {
     asc: 'asc',
     desc: 'desc',
 }
 
 // Sorting icons
-const SortingIcons = {
+const SORTING_ICONS = {
     asc: 'sort-up',
     desc: 'sort-down',
 }
 
 // Columns setup
-const Columns = {
+const TABLE_COLUMNS = {
     title: {
         text: 'Title',
-        defaultSorting: SortingOrders.asc,
+        defaultSorting: SORTING_ORDERS.asc,
         size: 'auto',
     },
     status: {
         text: 'Status',
-        defaultSorting: SortingOrders.asc,
-        size: ColumnSizes.large,
+        defaultSorting: SORTING_ORDERS.asc,
+        size: COLUMN_SIZES.large,
     },
     rating: {
         text: 'Rating',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.small,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
     },
     rewatchCount: {
         text: 'Rewatched',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.medium,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
     },
     subs: {
         text: 'Release',
-        defaultSorting: SortingOrders.asc,
-        size: ColumnSizes.medium,
+        defaultSorting: SORTING_ORDERS.asc,
+        size: COLUMN_SIZES.medium,
     },
     resolution: {
         text: 'Resolution',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.medium,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
     },
     source: {
         text: 'Source',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.small,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
     },
     videoCodec: {
         text: 'Video',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.small,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
     },
     audioCodec: {
         text: 'Audio',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.small,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
     },
     fileQuality: {
         text: 'Quality',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.small,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
     },
     episodeSize: {
         text: 'Episode Size',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.medium,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
     },
     size: {
         text: 'Total Size',
-        defaultSorting: SortingOrders.desc,
-        size: ColumnSizes.medium,
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
     },
 }
 
 // Exports
 export {
-    Columns,
-    StorageSizeLimits,
-    SortingOrders,
-    SortingIcons,
+    TABLE_COLUMNS,
+    STORAGE_SIZE_LIMITS,
+    SORTING_ORDERS,
+    SORTING_ICONS,
 }
