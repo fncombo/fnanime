@@ -3,6 +3,7 @@ const { readdir, stat, readFile, writeFile } = require('fs').promises
 const { promisify } = require('util')
 
 // Libraries
+const has = require('has')
 const { eachSeries } = require('async')
 const beautify = require('js-beautify')
 const { green, magenta, red, yellow } = require('chalk')
@@ -12,11 +13,14 @@ const git = require('simple-git/promise')
 const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
-// Parameters
-const animeJsonLocation = '../src/js/data/Anime.json'
-const saveTimeJsonLocation = '../src/js/data/LocalDataUpdated.json'
-const malUsername = 'fncombo'
-const animeFolders = [
+// Helpers
+const { removeInvalidChars, getRewatchCount } = require('helpers.js')
+const { generateCache, updateCache, loadCache, saveCache } = require('cache.js')
+
+// Constants
+const ANIME_JSON_LOCATION = '../src/js/data/Anime.json'
+const MAL_USERNAME = 'fncombo'
+const ANIME_FOLDERS = [
     'E:/Anime/Series',
     'E:/Anime/Movies',
     'E:/Anime/Ghibli Movies',
@@ -24,7 +28,7 @@ const animeFolders = [
 ]
 
 // Type lookup
-const typeLookup = {
+const TYPE_LOOKUP = {
     TV: 1,
     OVA: 2,
     Movie: 3,
@@ -36,7 +40,7 @@ const typeLookup = {
 }
 
 // Type to folder mapping
-const typeFolderLookup = {
+const TYPE_FOLDER_LOOKUP = {
     TV: 'Series',
     OVA: 'OVA',
     Movie: 'Movies',
@@ -48,43 +52,38 @@ const typeFolderLookup = {
 }
 
 // Folders to ignore when checking against type
-const ignoreFolders = [
+const IGNORED_FOLDERS = [
     'Ghibli Movies',
 ]
 
 // Collected anime data from API and local files
-const allAnime = new Map()
+const ALL_ANIME = {
+    updated: Date.now(),
+    anime: {},
+}
+
+// Detached cached data about each anime
+let CACHE
 
 // Regular expression to match all the data tags in the anime file/folder name
-const tagsRegexp = RegExp(/\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2})bit\s(\w{3,4})\]/)
+const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2})bit\s(\w{3,4})\]/
 
-// Replace or remove characters that cannot be used in folder and file names
-function removeInvalidChars(string) {
-    return string.replace(/[√:?]/g, '').replace(/[★/]/g, ' ')
-}
-
-// Get the rewatch count from the anime's tags
-function getRewatchCount(tags) {
-    if (!tags) {
-        return 0
-    }
-
-    const match = tags.match(/re-watched:\s(\d+)/i)
-
-    return match ? parseInt(match[1], 10) : 0
-}
-
-// Save data from API
+/**
+ * Update anime data from the API.
+ */
 function processApiData(anime) {
     anime.forEach(cartoon => {
         // Remove diacritics and other unwanted characters from the title
         const title = removeDiacritics(cartoon.title).replace(/["]/g, '')
 
+        // Create an array of all anime genre IDs for this anime
+        const genres = CACHE[cartoon.mal_id].genres.filter(({ type }) => type === 'anime').map(({ id }) => id)
+
         // Start compiling clean data that we need
-        allAnime.set(removeInvalidChars(title), {
+        ALL_ANIME.anime[removeInvalidChars(title)] = {
             id: cartoon.mal_id,
             title,
-            type: typeLookup[cartoon.type],
+            type: TYPE_LOOKUP[cartoon.type],
             episodes: cartoon.total_episodes > 0 ? cartoon.total_episodes : null,
             episodesWatched: cartoon.watched_episodes,
             img: cartoon.image_url.match(/^[^?]+/)[0],
@@ -93,6 +92,7 @@ function processApiData(anime) {
             rating: cartoon.score,
             rewatchCount: getRewatchCount(cartoon.tags),
             url: cartoon.url,
+            genres,
             // The following data will be replaced if the anime is downloaded locally
             subs: false,
             resolution: false,
@@ -101,11 +101,13 @@ function processApiData(anime) {
             bits: false,
             audioCodec: false,
             size: 0,
-        })
+        }
     })
 }
 
-// Save data from local folders and files
+/**
+ * Save anime data from local folders and files.
+ */
 function processLocalData(filename, size, folder) {
     // Ignore rubbish
     if (/\.ini/.test(filename)) {
@@ -116,28 +118,31 @@ function processLocalData(filename, size, folder) {
     const [ title ] = filename.match(/.+(?=\s\[)/)
 
     // Check if this anime name exists in the API data first
-    if (!allAnime.has(title)) {
+    if (!has(ALL_ANIME.anime, title)) {
         throw new Error(`Local anime ${yellow(title)} was not found in API data`)
     }
 
     // Check if this anime is a duplicate if it already has a local size saved
-    if (allAnime.get(title).size > 0) {
+    if (ALL_ANIME.anime[title].size > 0) {
         throw new Error(`Duplicate entry found for anime ${yellow(title)}`)
     }
 
     // Check that this anime is in the correct folder based on type
     const [ actualFolderName ] = folder.match(/[\s\w]+$/)
-    const expectedFolderName = typeFolderLookup[allAnime.get(title).type]
+    const expectedFolderName = TYPE_FOLDER_LOOKUP[ALL_ANIME.anime[title].type]
 
     // Only check if the folder is not ignored
-    if (!ignoreFolders.includes(actualFolderName) && actualFolderName !== expectedFolderName) {
-        throw new Error(`Expected anime ${yellow(title)} to be in folder ${yellow(expectedFolderName)}, but it's in ${yellow(actualFolderName)}`)
+    if (!IGNORED_FOLDERS.includes(actualFolderName) && actualFolderName !== expectedFolderName) {
+        throw new Error(`Expected anime ${yellow(title)} to be in folder ${
+            yellow(expectedFolderName)}, but it's in ${
+            yellow(actualFolderName)}`
+        )
     }
 
     // Check to see if the filename has all the data tags
-    if (!tagsRegexp.test(filename)) {
-        allAnime.set(title, {
-            ...allAnime.get(title),
+    if (!TAGS_REGEXP.test(filename)) {
+        ALL_ANIME.anime[title] = {
+            ...ALL_ANIME.anime[title],
             subs: null,
             resolution: null,
             source: null,
@@ -145,16 +150,16 @@ function processLocalData(filename, size, folder) {
             bits: null,
             audioCodec: null,
             size,
-        })
+        }
 
         return
     }
 
     // Get all data tags
-    const [ , subs, resolution, source, videoCodec, bits, audioCodec ] = filename.match(tagsRegexp)
+    const [ , subs, resolution, source, videoCodec, bits, audioCodec ] = filename.match(TAGS_REGEXP)
 
-    allAnime.set(title, {
-        ...allAnime.get(title),
+    ALL_ANIME.anime[title] = {
+        ...ALL_ANIME.anime[title],
         subs: subs.split(', '),
         resolution: parseInt(resolution, 10),
         source,
@@ -165,7 +170,9 @@ function processLocalData(filename, size, folder) {
     })
 }
 
-// Get my anime list API data
+/**
+ * Get anime list API data.
+ */
 async function getApiData(page = 1, isRetry = false) {
     // Stop after too many retries
     if (isRetry > 5) {
@@ -185,7 +192,7 @@ async function getApiData(page = 1, isRetry = false) {
     let response
 
     try {
-        response = await fetch(`https://api.jikan.moe/v3/user/${malUsername}/animelist/all/${page}`)
+        response = await fetch(`https://api.jikan.moe/v3/user/${MAL_USERNAME}/animelist/all/${page}`)
     } catch (error) {
         console.log(magenta('Error occurred while fetching API, retrying'))
 
@@ -213,9 +220,37 @@ async function getApiData(page = 1, isRetry = false) {
     return true
 }
 
+/**
+ * Monolith incoming.
+ */
 getApiData().then(async () => {
-    // Go through each anime folder
-    await eachSeries(animeFolders, async animeFolder => {
+    // Generate new cache if the argument has been passed, then save it
+    if (process.argv.includes('cache')) {
+        CACHE = await generateCache()
+
+        await saveCache(CACHE)
+
+    // Load existing cache
+    } else {
+        CACHE = await loadCache()
+
+        // Attempt to update cache with any missing anime
+        const animeIds = []
+
+        for (const { id } of Object.values(ALL_ANIME.anime)) {
+            animeIds.push(id)
+        }
+
+        const hasUpdatedCache = await updateCache(CACHE, animeIds)
+
+        // If the cache was indeed updated with new anime, save it
+        if (hasUpdatedCache) {
+            await saveCache(CACHE)
+        }
+    }
+
+    // Go through each main anime folder
+    await eachSeries(ANIME_FOLDERS, async animeFolder => {
         // Read this folder's contents
         let contents
 
@@ -263,66 +298,46 @@ getApiData().then(async () => {
         console.log()
     })
 
-    // Convert anime map to a plain object for saving
-    const allAnimeObject = {}
-
-    for (const [ , animeData ] of allAnime) {
-        allAnimeObject[animeData.id] = animeData
-    }
-
     // Get the current anime data to compare if it has been updated
     let currentAnimeData
 
     try {
-        currentAnimeData = await readFile(animeJsonLocation, 'utf8')
+        currentAnimeData = await readFile(ANIME_JSON_LOCATION, 'utf8')
     } catch (error) {
-        console.log(yellow('Could not read existing anime data JSON to compare changes'))
+        console.log(red('Could not read existing anime data JSON to compare changes'))
     }
 
-    const allAnimeData = beautify(JSON.stringify(allAnimeObject))
+    currentAnimeData = JSON.parse(currentAnimeData)
+    currentAnimeData = JSON.stringify(currentAnimeData.anime)
 
-    if (currentAnimeData === allAnimeData) {
+    if (currentAnimeData === JSON.stringify(ALL_ANIME.anime)) {
         console.log(green('Anime data JSON is already up-to-date!'))
 
         return
     }
 
-    const saveTimeData = beautify(JSON.stringify({ updated: Date.now() }))
-
     // Save all anime data
     try {
-        await writeFile(animeJsonLocation, allAnimeData)
+        await writeFile(ANIME_JSON_LOCATION, beautify(JSON.stringify(ALL_ANIME)))
     } catch (error) {
         throw new Error('Could not save anime data JSON')
     }
 
     console.log('Anime data saved as JSON')
 
-    // Save the time this script was last run
-    try {
-        await writeFile(saveTimeJsonLocation, saveTimeData)
-    } catch (error) {
-        throw new Error('Could not save last save time JSON')
-    }
-
-    console.log('Last save time data saved as JSON')
-
     // Do not commit if the "commit" argument was not passed
-    if (process.argv.length !== 3 || process.argv[2] !== 'commit') {
+    if (!process.argv.includes('commit')) {
         console.log(green('All done, have fun!'))
 
         return
     }
 
     // Commit and push data if the "commit" argument was passed
-    console.log(magenta('Committing data to repository'))
+    console.log('Committing data to repository')
 
-    await git().commit('Anime data JSON update', [
-        animeJsonLocation,
-        saveTimeJsonLocation,
-    ])
+    await git().commit('Anime data JSON update', ANIME_JSON_LOCATION)
 
-    console.log(magenta('Pushing master to origin'))
+    console.log('Pushing master to origin')
 
     await git().push('origin', 'master')
 
