@@ -1,4 +1,5 @@
 // Libraries
+import clone from 'clone'
 import has from 'has'
 import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
@@ -176,8 +177,35 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
         ] }) => ({ ...item, highlight }))
     }
 
-    // Finally apply all sorting
-    fastSort(results).by(Object.entries(actualSorting).map(([ column, direction ]) => ({ [direction]: column })))
+    // Make a copy of results and map all false values to null so that they are always sorted to the bottom
+    let sortResults = clone(results)
+
+    for (const anime of sortResults) {
+        for (const [ prop, value ] of Object.entries(anime)) {
+            if (value === false) {
+                anime[prop] = null
+            }
+        }
+    }
+
+    // Apply sorting with correct options
+    const fastSortOptions = Object.entries(actualSorting).map(([ column, direction ]) => ({ [direction]: column }))
+
+    fastSort(sortResults).by(fastSortOptions)
+
+    // Map which anime ID should be in which order
+    sortResults = sortResults.reduce((object, anime, index) => {
+        object[anime.id] = index
+
+        return object
+    }, {})
+
+    // Sort the real results based on the sorting outcome, to preserve difference between false and null values
+    for (const anime of results) {
+        anime.index = sortResults[anime.id]
+    }
+
+    fastSort(results).asc('index')
 
     return results
 }
