@@ -8,6 +8,16 @@ import AnimeObject from 'js/data/Anime.json'
 import { SortingOrders } from 'js/data/Table'
 import { Filters } from 'js/data/Filters'
 
+for (const animeId of Object.keys(AnimeObject)) {
+    AnimeObject[animeId].genres = [
+        2,
+        10,
+        23,
+    ]
+
+    AnimeObject[animeId].subs = [ AnimeObject[animeId].subs ]
+}
+
 // Only the anime object's entries in an array
 let AnimeArray = Object.values(AnimeObject)
 
@@ -45,6 +55,7 @@ function createFilterDefaults() {
         // Populate only the filter values which have some data to them
         let filterValues = AnimeArray
             .map(anime => anime[filterName])
+            .flat()
             .filter((value, index, self) => self.indexOf(value) === index && value !== false)
             .sort()
 
@@ -156,7 +167,15 @@ function getAnime(searchQuery = null, sorting = Defaults.sorting, filters = Defa
 
     if (actualFilters.length) {
         for (const [ filterName, filterValue ] of actualFilters) {
-            results = results.filter(anime => anime[filterName] === filterValue)
+            results = results.filter(anime => {
+                // If it's an array of filter values, check if this filter value is present
+                if (Array.isArray(anime[filterName])) {
+                    return anime[filterName].includes(filterValue)
+                }
+
+                // Otherwise check if this filter value matches anime's value exactly
+                return anime[filterName] === filterValue
+            })
         }
     }
 

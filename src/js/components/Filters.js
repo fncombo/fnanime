@@ -50,7 +50,7 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-6-mobile is-3-tablet">
+                <div className="column is-12-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
@@ -62,7 +62,10 @@ function FilterButtons() {
                 <div className="column is-6-mobile is-3-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-8-mobile is-5-tablet summary">
+                <div className="column is-6-mobile is-3-tablet">
+                    <OptionGroup filterName="genres" />
+                </div>
+                <div className="column is-8-mobile is-2-tablet summary">
                     <Summary />
                 </div>
                 <div className="column is-4-mobile is-1-tablet">
@@ -179,7 +182,7 @@ function Option({ filterName, filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Use the filter value, otherwise look up the definition
-    const value = filterValue || Filters[filterName].descriptions[filterValue]
+    const value = typeof filterValue === 'string' ? filterValue : Filters[filterName].descriptions[filterValue]
 
     // How many anime match this filter
     const count = filterCounts[filterName][filterValue]
