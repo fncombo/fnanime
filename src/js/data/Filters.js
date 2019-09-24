@@ -10,7 +10,7 @@ import Icon from 'js/helpers/Icon'
  * `false` is "All" value for filtering purposes
  * `nul` is when anime is present locally, but has unknown values (e.g. no codec info)
  */
-const Filters = {
+const FILTERS = {
     type: {
         descriptions: {
             false: 'All Types',
@@ -107,6 +107,56 @@ const Filters = {
     subs: {
         descriptions: {
             false: 'All Releases',
+        },
+        // Exclude blank values
+        specialValuesProcess: values => values.filter(value => !!value),
+    },
+    genres: {
+        descriptions: {
+            false: 'All Genres',
+            1: 'Action',
+            2: 'Adventure',
+            3: 'Cars',
+            4: 'Comedy',
+            5: 'Dementia',
+            6: 'Demons',
+            7: 'Mystery',
+            8: 'Drama',
+            9: 'Ecchi',
+            10: 'Fantasy',
+            11: 'Game',
+            12: 'Hentai',
+            13: 'Historical',
+            14: 'Horror',
+            15: 'Kids',
+            16: 'Magic',
+            17: 'Martial Arts',
+            18: 'Mecha',
+            19: 'Music',
+            20: 'Parody',
+            21: 'Samurai',
+            22: 'Romance',
+            23: 'School',
+            24: 'Sci Fi',
+            25: 'Shoujo',
+            26: 'Shoujo Ai',
+            27: 'Shounen',
+            28: 'Shounen Ai',
+            29: 'Space',
+            30: 'Sports',
+            31: 'Super Power',
+            32: 'Vampire',
+            33: 'Yaoi',
+            34: 'Yuri',
+            35: 'Harem',
+            36: 'Slice Of Life',
+            37: 'Supernatural',
+            38: 'Military',
+            39: 'Police',
+            40: 'Psychological',
+            41: 'Thriller',
+            42: 'Seinen',
+            43: 'Josei',
         },
         // Exclude blank values
         specialValuesProcess: values => values.filter(value => !!value),
@@ -212,14 +262,14 @@ const Filters = {
  * Non-enumerable property which returns an object with counts of
  * how many anime match each filter name and filter value.
  */
-Object.defineProperty(Filters, 'makeCounts', {
+Object.defineProperty(FILTERS, 'makeCounts', {
     value: anime => {
         // Get all filter names
-        const filterNames = Object.keys(Filters)
+        const filterNames = Object.keys(FILTERS)
 
         // Make a nested blank object of filter names and values
         const filterCounts = filterNames.reduce((filterNamesObject, filterName) => {
-            filterNamesObject[filterName] = Filters[filterName].values.reduce((filterValuesObject, filterValue) => {
+            filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
                 filterValuesObject[filterValue] = 0
 
                 return filterValuesObject
@@ -231,7 +281,18 @@ Object.defineProperty(Filters, 'makeCounts', {
         // Loop through all anime and increment related filter value counts
         for (const cartoon of anime) {
             for (const filterName of filterNames) {
-                filterCounts[filterName][cartoon[filterName]] += 1
+                // If it's an array of filter values, go through each filter value inside and increment it
+                if (Array.isArray(cartoon[filterName])) {
+                    for (const singleFilterValue of cartoon[filterName]) {
+                        filterCounts[filterName][singleFilterValue] += 1
+                    }
+
+                // Otherwise increment the count for this filter value normally
+                } else {
+                    const filterValue = cartoon[filterName]
+
+                    filterCounts[filterName][filterValue] += 1
+                }
             }
         }
 
@@ -241,5 +302,5 @@ Object.defineProperty(Filters, 'makeCounts', {
 
 // Exports
 export {
-    Filters,
+    FILTERS,
 }

@@ -2,8 +2,8 @@
 import has from 'has'
 
 // Helpers
-import { Filters } from 'js/data/Filters'
-import { StorageSizeLimits } from 'js/data/Table'
+import { FILTERS } from 'js/data/Filters'
+import { STORAGE_SIZE_LIMITS } from 'js/data/Table'
 
 /**
  * Returns the colour for a given file quality.
@@ -38,8 +38,8 @@ function getColumnTextColor(columnName, value) {
     }
 
     // If color codes mapping exists for this column
-    if (has(Filters, columnName) && has(Filters[columnName], 'colorCodes')) {
-        return Filters[columnName].colorCodes[value]
+    if (has(FILTERS, columnName) && has(FILTERS[columnName], 'colorCodes')) {
+        return FILTERS[columnName].colorCodes[value]
     }
 
     return 'default'
@@ -49,22 +49,22 @@ function getColumnTextColor(columnName, value) {
  * Returns the width for a size bar based on the min and max sizes for that type.
  */
 function getSizeBarWidth(size, type) {
-    return ((size - StorageSizeLimits[type].min) / StorageSizeLimits[type].max) * 100
+    return ((size - STORAGE_SIZE_LIMITS[type].min) / STORAGE_SIZE_LIMITS[type].max) * 100
 }
 
 /**
  * Returns the colour for a size bar based on the size and the type (episode or whole anime).
  */
 function getSizeBarColor(size, type) {
-    if (size > StorageSizeLimits[type].large) {
+    if (size > STORAGE_SIZE_LIMITS[type].large) {
         return 'red'
     }
 
-    if (size > StorageSizeLimits[type].medium) {
+    if (size > STORAGE_SIZE_LIMITS[type].medium) {
         return 'orange'
     }
 
-    if (size > StorageSizeLimits[type].small) {
+    if (size > STORAGE_SIZE_LIMITS[type].small) {
         return 'yellow'
     }
 

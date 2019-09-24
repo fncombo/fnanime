@@ -22,13 +22,11 @@ const ACTIONS = {
     NEXT_ANIME: Symbol(),
 }
 
-Object.freeze(ACTIONS)
-
 // Exports
 export {
+    ACTIONS,
     GlobalState,
     FiltersState,
     TableState,
     ModalState,
-    ACTIONS,
 }

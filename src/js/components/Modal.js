@@ -14,8 +14,8 @@ import 'react-slidedown/lib/slidedown.css'
 
 // Data
 import { ModalState, GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { AnimeObject } from 'js/data/Data'
-import { Filters } from 'js/data/Filters'
+import { ANIME_OBJECT } from 'js/data/Data'
+import { FILTERS } from 'js/data/Filters'
 
 // Helpers
 import {
@@ -32,10 +32,10 @@ import Icon from 'js/helpers/Icon'
 import Badge from 'js/components/Badge'
 
 // DOM element into which to portal the modal
-const modalEl = document.getElementById('modal')
+const MODAL_ELEMENT = document.getElementById('modal')
 
 // Initial state of the modal
-const modalInitialState = {
+const INITIAL_MODAL_STATE = {
     isLoaded: false,
     isError: false,
     apiData: {},
@@ -77,7 +77,7 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
                 {children}
             </Element>
             {isModalOpen &&
-                ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, modalEl)
+                ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)
             }
         </>
     )
@@ -153,7 +153,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                 changeAnime={changeAnime}
                 currentAnimeId={anime.id}
             />
-            <div className={`modal-card has-background-${Filters.status.colorCodes[anime.status]}`}>
+            <div className={`modal-card has-background-${FILTERS.status.colorCodes[anime.status]}`}>
                 <div className="modal-card-head">
                     <h5 className="modal-card-title">
                         <a href={anime.url} target="_blank" rel="noopener noreferrer">
@@ -179,7 +179,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
  * Body of the modal which contains all the information about the anime.
  */
 function ModalBody({ closeModal, changeAnime, ...anime }) {
-    const [ modalState, setModalState ] = useState(modalInitialState)
+    const [ modalState, setModalState ] = useState(INITIAL_MODAL_STATE)
     const { isLoaded, apiData } = modalState
 
     useEffect(() => {
@@ -233,7 +233,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     </LoadingText>
                     <hr />
                     <p>
-                        {Filters.type.descriptions[anime.type]}
+                        {FILTERS.type.descriptions[anime.type]}
                         <Episodes episodes={anime.episodes} />
                     </p>
                     <LoadingText>
@@ -287,7 +287,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                                 <WatchTime {...apiData} {...anime} />
                             </LoadingInline>
                         </li>
-                        {!!anime.subs && <li><strong>Release:</strong> {anime.subs}</li>}
+                        {!!anime.subs.length && <li><strong>Release:</strong> {anime.subs.join(', ')}</li>}
                     </ul>
                     <hr />
                     <h5 className="title is-5">Synopsis</h5>
@@ -312,7 +312,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
     const navAnime = getAdjacentAnime(allAnime, currentAnimeId, direction)
-    const classes = classNames('modal-nav', `has-text-${Filters.status.colorCodes[navAnime.status]}`, {
+    const classes = classNames('modal-nav', `has-text-${FILTERS.status.colorCodes[navAnime.status]}`, {
         'is-placeholder': !navAnime,
         'is-next': direction === ACTIONS.NEXT_ANIME,
         'is-prev': direction !== ACTIONS.NEXT_ANIME,
@@ -354,7 +354,7 @@ function Rating({ rating }) {
                     )}
                 </span>
             </div>
-            <h5 className="title is-5">{Filters.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
+            <h5 className="title is-5">{FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
         </>
     )
 }
@@ -363,7 +363,7 @@ function Rating({ rating }) {
  * Shows the number of episodes the anime has, if any?
  */
 function Episodes({ episodes }) {
-    if (!Number.isFinite(episodes)) {
+    if (!episodes) {
         return <> &ndash; ? episodes</>
     }
 
@@ -491,7 +491,7 @@ function Size({ size, episodes }) {
     return (
         <>
             {size ? fileSize(size) : 'Not Downloaded'}
-            {(size && episodes > 1) &&
+            {!!(size && episodes > 1) &&
                 <span className="has-text-grey">
                     &nbsp;&ndash; average {fileSize(size / episodes)} per episode
                 </span>
@@ -575,7 +575,7 @@ function RelatedListItem({ ...anime }) {
     const { changeAnime } = useContext(ModalState)
 
     const onClick = () => {
-        changeAnime(AnimeObject[anime.mal_id])
+        changeAnime(ANIME_OBJECT[anime.mal_id])
     }
 
     return (
@@ -583,8 +583,8 @@ function RelatedListItem({ ...anime }) {
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
-            {has(AnimeObject, anime.mal_id) &&
-                <Badge showRating isSmall onClick={onClick} {...AnimeObject[anime.mal_id]} />
+            {has(ANIME_OBJECT, anime.mal_id) &&
+                <Badge showRating isSmall onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
             }
         </li>
     )

@@ -9,7 +9,7 @@ import 'scss/Filters.scss'
 
 // Data
 import { GlobalState, FiltersState, ACTIONS } from 'js/data/GlobalState'
-import { Filters } from 'js/data/Filters'
+import { FILTERS } from 'js/data/Filters'
 
 /**
  * Groups of filters, search input, summary, and reset button.
@@ -38,7 +38,7 @@ function FilterButtons() {
     }
 
     // Count how many anime match each filter
-    const filterCounts = Filters.makeCounts(anime)
+    const filterCounts = FILTERS.makeCounts(anime)
 
     return (
         <div className="columns is-mobile is-multiline filters">
@@ -50,7 +50,7 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-6-mobile is-3-tablet">
+                <div className="column is-12-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
@@ -62,7 +62,10 @@ function FilterButtons() {
                 <div className="column is-6-mobile is-3-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-8-mobile is-5-tablet summary">
+                <div className="column is-6-mobile is-3-tablet">
+                    <OptionGroup filterName="genres" />
+                </div>
+                <div className="column is-8-mobile is-2-tablet summary">
                     <Summary />
                 </div>
                 <div className="column is-4-mobile is-1-tablet">
@@ -86,7 +89,7 @@ function FilterGroup({ filterName, fullWidth }) {
 
     return (
         <div className={classes}>
-            {Filters[filterName].values.map(filterValue =>
+            {FILTERS[filterName].values.map(filterValue =>
                 <FilterButton filterName={filterName} filterValue={filterValue} key={filterValue} />
             )}
         </div>
@@ -120,7 +123,7 @@ function FilterButton({ filterName, filterValue }) {
 
     return (
         <button className={classes} onClick={selectFilter}>
-            {Filters[filterName].descriptions[filterValue]}
+            {FILTERS[filterName].descriptions[filterValue]}
             {!!count && filterValue !== false && <span className="count">{count}</span>}
         </button>
     )
@@ -130,24 +133,30 @@ function FilterButton({ filterName, filterValue }) {
  * Select input for a filter. Updates global filtering.
  */
 function OptionGroup({ filterName }) {
-    const { state: { activeFilters: { [filterName]: activeFilterValues } }, dispatch } = useContext(GlobalState)
+    const { state: { activeFilters: { [filterName]: value } }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
-    const { value } = useState(activeFilterValues)
 
     // Callback to update the anime list when selecting this filter
     const selectFilter = ({ target: { value: filterValue } }) => {
+        let actualFilterValue = filterValue
+
+        // Check if the option value is potentially a valid number, and it if it is
+        if (!Number.isNaN(parseInt(filterValue, 10))) {
+            actualFilterValue = parseInt(filterValue, 10)
+        }
+
         dispatch({
             type: ACTIONS.SELECT_FILTER,
             filterName,
-            filterValue,
+            filterValue: actualFilterValue,
         })
     }
 
-    const withCount = Filters[filterName].values.filter(filterValue =>
+    const withCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && filterCounts[filterName][filterValue]
     )
 
-    const withoutCount = Filters[filterName].values.filter(filterValue =>
+    const withoutCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && !filterCounts[filterName][filterValue]
     )
 
@@ -179,7 +188,7 @@ function Option({ filterName, filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Use the filter value, otherwise look up the definition
-    const value = filterValue || Filters[filterName].descriptions[filterValue]
+    const value = typeof filterValue === 'string' ? filterValue : FILTERS[filterName].descriptions[filterValue]
 
     // How many anime match this filter
     const count = filterCounts[filterName][filterValue]
@@ -208,7 +217,7 @@ function Summary() {
     const notDownloadedCount = (anime.length - downloadedCount).toLocaleString()
 
     if (downloadedCount && notDownloadedCount) {
-        return <span>Found <strong>{downloadedCount}</strong> +{notDownloadedCount} anime</span>
+        return <span>Found <strong>{downloadedCount}</strong> + {notDownloadedCount} anime</span>
     } else if (downloadedCount && !notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> anime</span>
     } else if (!downloadedCount && notDownloadedCount) {

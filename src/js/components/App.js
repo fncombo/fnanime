@@ -2,6 +2,7 @@
 import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 
 // Libraries
+import clone from 'clone'
 import classNames from 'classnames'
 
 // Style
@@ -9,9 +10,9 @@ import 'scss/App.scss'
 import 'scss/fn.scss'
 
 // Data
-import LocalDataUpdateTime from 'js/data/LocalDataUpdated.json'
+import { updated as updateTime } from 'js/data/data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
+import { DEFAULTS, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
 
 // Helpers
 import { getApiData } from 'js/helpers/App'
@@ -25,23 +26,23 @@ const Statistics = lazy(() => import('js/components/Statistics'))
 const Gallery = lazy(() => import('js/components/Gallery'))
 
 // Local data last update time
-const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {
+const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-}).format(LocalDataUpdateTime.updated)
+}).format(updateTime)
 
 // Toggle to stop API from being updated
-const suppressApiUpdate = false
+const SUPPRESS_API_UPDATE = false
 
 // Initial global state
-const initialState = {
+const INITIAL_STATE = {
     anime: getAnime(),
     searchQuery: '',
-    activeSorting: { ...Defaults.sorting },
-    activeFilters: { ...Defaults.filters },
-    apiUpdated: suppressApiUpdate,
+    activeSorting: clone(DEFAULTS.sorting),
+    activeFilters: clone(DEFAULTS.filters),
+    apiUpdated: SUPPRESS_API_UPDATE,
     apiError: false,
 }
 
@@ -93,9 +94,11 @@ function globalReducer(state, action) {
 
     case ACTIONS.RESET:
         return {
-            ...initialState,
+            ...state,
             anime: getAnime(),
-            apiUpdated: state.apiUpdated,
+            searchQuery: '',
+            activeSorting: clone(DEFAULTS.sorting),
+            activeFilters: clone(DEFAULTS.filters),
         }
 
     default:
@@ -107,7 +110,7 @@ function globalReducer(state, action) {
  * ZA WARUDO
  */
 function App() {
-    const [ state, dispatch ] = useReducer(globalReducer, initialState)
+    const [ state, dispatch ] = useReducer(globalReducer, INITIAL_STATE)
     const { apiUpdated, apiError } = state
     let updateStatusMessage
 
@@ -120,7 +123,7 @@ function App() {
     }
 
     useEffect(() => {
-        if (apiUpdated || suppressApiUpdate) {
+        if (apiUpdated || SUPPRESS_API_UPDATE) {
             return
         }
 
@@ -144,7 +147,7 @@ function App() {
                     status: anime.watching_status,
                     airStatus: anime.airing_status,
                     rating: anime.score,
-                    episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
+                    episodes: anime.total_episodes,
                     episodesWatched: anime.watched_episodes,
                 })
             }
@@ -176,8 +179,8 @@ function App() {
             </Suspense>
             <div className="container">
                 <ul className="updated-times has-text-centered">
-                    <li>Local anime data last updated on {localDataUpdateTime}</li>
-                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
+                    <li>Local anime data last updated on {UPDATE_TIME}</li>
+                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${UPDATE_TIME}`}</li>
                     <li>All rankings are my own subjective opinion</li>
                 </ul>
             </div>
