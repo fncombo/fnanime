@@ -1,5 +1,5 @@
 {
-    "updated": 1569364455415,
+    "updated": 1569364903070,
     "anime": {
         "Bungaku Shoujo Movie": {
             "id": 6408,
@@ -7472,12 +7472,12 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/121/Fullmetal_Alchemist",
             "genres": [1, 2, 4, 8, 10, 16, 38, 27],
-            "subs": null,
-            "resolution": null,
-            "source": null,
-            "videoCodec": null,
-            "bits": null,
-            "audioCodec": null,
+            "subs": ["BlackStrat"],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.264",
+            "bits": 10,
+            "audioCodec": "FLAC",
             "size": 37434136298,
             "studios": ["Bones"]
         },
