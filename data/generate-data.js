@@ -89,7 +89,7 @@ function processApiData(anime) {
             id: cartoon.mal_id,
             title,
             type: TYPE_LOOKUP[cartoon.type],
-            episodes: cartoon.total_episodes > 0 ? cartoon.total_episodes : null,
+            episodes: cartoon.total_episodes,
             episodesWatched: cartoon.watched_episodes,
             img: cartoon.image_url.match(/^[^?]+/)[0],
             status: cartoon.watching_status,

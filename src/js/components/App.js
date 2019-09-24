@@ -144,7 +144,7 @@ function App() {
                     status: anime.watching_status,
                     airStatus: anime.airing_status,
                     rating: anime.score,
-                    episodes: anime.total_episodes > 0 ? anime.total_episodes : null,
+                    episodes: anime.total_episodes,
                     episodesWatched: anime.watched_episodes,
                 })
             }

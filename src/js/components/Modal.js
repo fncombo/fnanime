@@ -363,7 +363,7 @@ function Rating({ rating }) {
  * Shows the number of episodes the anime has, if any?
  */
 function Episodes({ episodes }) {
-    if (!Number.isFinite(episodes)) {
+    if (!episodes) {
         return <> &ndash; ? episodes</>
     }
 
@@ -491,7 +491,7 @@ function Size({ size, episodes }) {
     return (
         <>
             {size ? fileSize(size) : 'Not Downloaded'}
-            {(size && episodes > 1) &&
+            {!!(size && episodes > 1) &&
                 <span className="has-text-grey">
                     &nbsp;&ndash; average {fileSize(size / episodes)} per episode
                 </span>
