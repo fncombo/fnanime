@@ -4,7 +4,7 @@ import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
 // Data
-import AnimeObject from 'js/data/Anime.json'
+import { anime as AnimeObject} from 'js/data/Data.json'
 import { SortingOrders } from 'js/data/Table'
 import { Filters } from 'js/data/Filters'
 

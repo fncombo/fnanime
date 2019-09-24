@@ -9,7 +9,7 @@ import 'scss/App.scss'
 import 'scss/fn.scss'
 
 // Data
-import LocalDataUpdateTime from 'js/data/LocalDataUpdated.json'
+import { updated as LocalDataUpdateTime } from 'js/data/Data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
 import { Defaults, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
 
