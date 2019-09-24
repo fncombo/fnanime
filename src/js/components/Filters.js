@@ -133,9 +133,8 @@ function FilterButton({ filterName, filterValue }) {
  * Select input for a filter. Updates global filtering.
  */
 function OptionGroup({ filterName }) {
-    const { state: { activeFilters: { [filterName]: activeFilterValues } }, dispatch } = useContext(GlobalState)
+    const { state: { activeFilters: { [filterName]: value } }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
-    const { value } = useState(activeFilterValues)
 
     // Callback to update the anime list when selecting this filter
     const selectFilter = ({ target: { value: filterValue } }) => {

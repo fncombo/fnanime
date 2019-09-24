@@ -2,6 +2,7 @@
 import React, { Suspense, lazy, useReducer, useEffect } from 'react'
 
 // Libraries
+import clone from 'clone'
 import classNames from 'classnames'
 
 // Style
@@ -39,8 +40,8 @@ const SUPPRESS_API_UPDATE = false
 const INITIAL_STATE = {
     anime: getAnime(),
     searchQuery: '',
-    activeSorting: { ...DEFAULTS.sorting },
-    activeFilters: { ...DEFAULTS.filters },
+    activeSorting: clone(DEFAULTS.sorting),
+    activeFilters: clone(DEFAULTS.filters),
     apiUpdated: SUPPRESS_API_UPDATE,
     apiError: false,
 }
@@ -93,9 +94,11 @@ function globalReducer(state, action) {
 
     case ACTIONS.RESET:
         return {
-            ...INITIAL_STATE,
+            ...state,
             anime: getAnime(),
-            apiUpdated: state.apiUpdated,
+            searchQuery: '',
+            activeSorting: clone(DEFAULTS.sorting),
+            activeFilters: clone(DEFAULTS.filters),
         }
 
     default:
