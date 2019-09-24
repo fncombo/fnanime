@@ -333,7 +333,7 @@ getApiData().then(async () => {
             return
         }
     } catch (error) {
-        console.log(red('Could not read existing anime data JSON to compare changes'))
+        console.log(magenta('Could not read existing anime data JSON to compare changes'))
     }
 
     // Save all anime data
