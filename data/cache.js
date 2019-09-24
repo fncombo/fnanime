@@ -133,7 +133,7 @@ async function saveCache(data, isUpdate = false) {
         throw new Error('Could not save cache')
     }
 
-    console.log(isUpdate ? 'Check updated' : 'Cache saved')
+    console.log(isUpdate ? 'Cache updated' : 'Cache saved')
 
     return true
 }
