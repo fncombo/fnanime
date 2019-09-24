@@ -2,27 +2,27 @@
 const STORAGE_SIZE_LIMITS = {
     total: {
         // 1GB
-        min: 1 * 1e9,
+        min: 1073741824,
         // 50 GB
-        max: 50 * 1e9,
-        // 10 GB
-        small: 10 * 1e9,
+        max: 53687091200,
+        // 12.5 GB
+        small: 13421772800,
         // 25 GB
-        medium: 25 * 1e9,
+        medium: 26843545600,
         // 50 GB
-        large: 50 * 1e9,
+        large: 53687091200,
     },
     episode: {
         // 100 MB
-        min: 100 * 1e6,
+        min: 104857600,
         // 2 GB
-        max: 2 * 1e9,
+        max: 2147483648,
         // 500 MB
-        small: 500 * 1e6,
+        small: 524288000,
         // 1 GB
-        medium: 1 * 1e9,
+        medium: 1073741824,
         // 2BG
-        large: 2 * 1e9,
+        large: 2147483648,
     },
 }
 
