@@ -59,11 +59,14 @@ function FilterButtons() {
                         onChange={search}
                     />
                 </div>
-                <div className="column is-6-mobile is-3-tablet">
+                <div className="column is-6-mobile is-2-tablet">
                     <OptionGroup filterName="subs" />
                 </div>
-                <div className="column is-6-mobile is-3-tablet">
+                <div className="column is-6-mobile is-2-tablet">
                     <OptionGroup filterName="genres" />
+                </div>
+                <div className="column is-6-mobile is-2-tablet">
+                    <OptionGroup filterName="studios" />
                 </div>
                 <div className="column is-8-mobile is-2-tablet summary">
                     <Summary />
@@ -141,7 +144,7 @@ function OptionGroup({ filterName }) {
         let actualFilterValue = filterValue
 
         // Check if the option value is potentially a valid number, and it if it is
-        if (!Number.isNaN(parseInt(filterValue, 10))) {
+        if (/^\d+$/.test(filterValue)) {
             actualFilterValue = parseInt(filterValue, 10)
         }
 
@@ -154,28 +157,35 @@ function OptionGroup({ filterName }) {
 
     const withCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && filterCounts[filterName][filterValue]
+    ).sort((filterValueA, filterValueB) =>
+        // Sort options by how many matches they have to them
+        filterCounts[filterName][filterValueB] - filterCounts[filterName][filterValueA]
+        // If the same number of matches, sort alphabetically
+        || (typeof filterValueA === 'string' && filterValueA.localeCompare(filterValueB))
     )
 
     const withoutCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && !filterCounts[filterName][filterValue]
     )
 
-    const separator = Array(10).fill(String.fromCharCode(9472))
-
     return (
         <div className="select is-fullwidth">
             <select value={value} onChange={selectFilter}>
                 <Option filterName={filterName} filterValue={false} />
-                <option disabled>{separator}</option>
-                {withCount.map(filterValue =>
-                    <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
-                )}
-                {withCount.length && withoutCount.length &&
-                    <option disabled>{separator}</option>
+                {!!withCount.length &&
+                    <optgroup label="Have matching anime">
+                        {withCount.map(filterValue =>
+                            <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
+                        )}
+                    </optgroup>
                 }
-                {withoutCount.map(filterValue =>
-                    <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
-                )}
+                {!!withoutCount.length &&
+                    <optgroup label="No matching anime">
+                        {withoutCount.map(filterValue =>
+                            <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
+                        )}
+                    </optgroup>
+                }
             </select>
         </div>
     )

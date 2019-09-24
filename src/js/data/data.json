@@ -1,5 +1,5 @@
 {
-    "updated": 1569348546632,
+    "updated": 1569355511144,
     "anime": {
         "Kimi to Boku.": {
             "id": 10460,
@@ -20,7 +20,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8612875613
+            "size": 8612875613,
+            "studios": ["J.C.Staff"]
         },
         "Mo Dao Zu Shi 2": {
             "id": 38450,
@@ -41,7 +42,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 1402475401
+            "size": 1402475401,
+            "studios": ["G.CMay Animation & Film"]
         },
         "Bungaku Shoujo Movie": {
             "id": 6408,
@@ -62,7 +64,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1750952489
+            "size": 1750952489,
+            "studios": ["Production I.G"]
         },
         "Accel World": {
             "id": 11759,
@@ -83,7 +86,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7812038843
+            "size": 7812038843,
+            "studios": ["Sunrise"]
         },
         "Ajin": {
             "id": 31580,
@@ -104,7 +108,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 30196754781
+            "size": 30196754781,
+            "studios": ["Polygon Pictures"]
         },
         "Ajin 2nd Season": {
             "id": 33253,
@@ -125,7 +130,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 29489848386
+            "size": 29489848386,
+            "studios": ["Polygon Pictures"]
         },
         "Akame ga Kill!": {
             "id": 22199,
@@ -146,7 +152,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 17803931352
+            "size": 17803931352,
+            "studios": ["White Fox"]
         },
         "Aku no Hana": {
             "id": 16201,
@@ -167,7 +174,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7871442833
+            "size": 7871442833,
+            "studios": ["Zexcs"]
         },
         "Aldnoah.Zero": {
             "id": 22729,
@@ -188,7 +196,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 16871504591
+            "size": 16871504591,
+            "studios": ["A-1 Pictures", "TROYCA"]
         },
         "Aldnoah.Zero 2nd Season": {
             "id": 27655,
@@ -209,7 +218,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 15390239482
+            "size": 15390239482,
+            "studios": ["A-1 Pictures", "TROYCA"]
         },
         "Amagi Brilliant Park": {
             "id": 22147,
@@ -230,7 +240,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 16849637907
+            "size": 16849637907,
+            "studios": ["Kyoto Animation"]
         },
         "Angel Beats!": {
             "id": 6547,
@@ -251,7 +262,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12501079431
+            "size": 12501079431,
+            "studios": ["P.A. Works"]
         },
         "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.": {
             "id": 9989,
@@ -272,7 +284,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2673678873
+            "size": 2673678873,
+            "studios": ["A-1 Pictures"]
         },
         "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai. Movie": {
             "id": 15039,
@@ -293,7 +306,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4569310323
+            "size": 4569310323,
+            "studios": ["A-1 Pictures"]
         },
         "Ano Natsu de Matteru": {
             "id": 11433,
@@ -314,7 +328,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8617861443
+            "size": 8617861443,
+            "studios": ["J.C.Staff"]
         },
         "Ano Natsu de Matteru Bokutachi wa Koukou Saigo no Natsu wo Sugoshinagara, Ano Natsu de Matteiru.": {
             "id": 23447,
@@ -335,7 +350,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1163047485
+            "size": 1163047485,
+            "studios": ["J.C.Staff"]
         },
         "Another": {
             "id": 11111,
@@ -356,7 +372,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 12722466428
+            "size": 12722466428,
+            "studios": ["P.A. Works"]
         },
         "Another The Other - Inga": {
             "id": 11701,
@@ -377,7 +394,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 988744067
+            "size": 988744067,
+            "studios": ["P.A. Works"]
         },
         "Ao no Exorcist": {
             "id": 9919,
@@ -398,7 +416,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 11201498833
+            "size": 11201498833,
+            "studios": ["A-1 Pictures"]
         },
         "Ao no Exorcist Movie": {
             "id": 11737,
@@ -419,7 +438,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 10259091174
+            "size": 10259091174,
+            "studios": ["A-1 Pictures"]
         },
         "Ao no Exorcist Kyoto Fujouou-hen": {
             "id": 33506,
@@ -440,7 +460,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 27388385719
+            "size": 27388385719,
+            "studios": ["A-1 Pictures"]
         },
         "Aoi Bungaku Series": {
             "id": 7193,
@@ -461,7 +482,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 7465050908
+            "size": 7465050908,
+            "studios": ["Madhouse"]
         },
         "Bakemono no Ko": {
             "id": 28805,
@@ -482,7 +504,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 5178142400
+            "size": 5178142400,
+            "studios": ["Studio Chizu"]
         },
         "Barakamon": {
             "id": 22789,
@@ -503,7 +526,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12074371406
+            "size": 12074371406,
+            "studios": ["Kinema Citrus"]
         },
         "Bishoujo Senshi Sailor Moon Crystal": {
             "id": 14751,
@@ -524,7 +548,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 11213627311
+            "size": 11213627311,
+            "studios": ["Toei Animation"]
         },
         "Black Rock Shooter (OVA)": {
             "id": 7059,
@@ -545,7 +570,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 3748398902
+            "size": 3748398902,
+            "studios": ["Ordet"]
         },
         "Black Rock Shooter (TV)": {
             "id": 11285,
@@ -566,7 +592,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2631726104
+            "size": 2631726104,
+            "studios": ["Ordet", "SANZIGEN"]
         },
         "Boku dake ga Inai Machi": {
             "id": 31043,
@@ -587,7 +614,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 17236651400
+            "size": 17236651400,
+            "studios": ["A-1 Pictures"]
         },
         "Boku no Hero Academia": {
             "id": 31964,
@@ -602,13 +630,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/31964/Boku_no_Hero_Academia",
             "genres": [1, 4, 23, 27, 31],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 28812921707
+            "size": 28812921707,
+            "studios": ["Bones"]
         },
         "Boku no Hero Academia 2nd Season": {
             "id": 33486,
@@ -623,13 +652,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/33486/Boku_no_Hero_Academia_2nd_Season",
             "genres": [1, 4, 31, 23, 27],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 55263621017
+            "size": 55263621017,
+            "studios": ["Bones"]
         },
         "Boku no Hero Academia 2nd Season Hero Note": {
             "id": 35262,
@@ -644,13 +674,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/35262/Boku_no_Hero_Academia_2nd_Season__Hero_Note",
             "genres": [1, 4, 31],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 3387115654
+            "size": 3387115654,
+            "studios": ["Bones"]
         },
         "Boku no Hero Academia 3rd Season": {
             "id": 36456,
@@ -671,7 +702,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 24091509450
+            "size": 24091509450,
+            "studios": ["Bones"]
         },
         "Boruto Naruto the Movie": {
             "id": 28755,
@@ -692,7 +724,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 12914945450
+            "size": 12914945450,
+            "studios": ["Studio Pierrot"]
         },
         "Byousoku 5 Centimeter": {
             "id": 1689,
@@ -713,7 +746,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4896680353
+            "size": 4896680353,
+            "studios": ["CoMix Wave Films"]
         },
         "Captain Herlock": {
             "id": 17269,
@@ -734,7 +768,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 8342598613
+            "size": 8342598613,
+            "studios": ["Toei Animation"]
         },
         "Cencoroll": {
             "id": 3087,
@@ -755,7 +790,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 610652905
+            "size": 610652905,
+            "studios": ["Think Corporation"]
         },
         "Chihayafuru": {
             "id": 10800,
@@ -776,7 +812,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5665229520
+            "size": 5665229520,
+            "studios": ["Madhouse"]
         },
         "Chihayafuru 2": {
             "id": 14397,
@@ -797,7 +834,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7151053479
+            "size": 7151053479,
+            "studios": ["Madhouse"]
         },
         "Chihayafuru 2 Waga Miyo ni Furu Nagame Shima ni": {
             "id": 18745,
@@ -818,7 +856,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Madhouse"]
         },
         "Chuunibyou demo Koi ga Shitai!": {
             "id": 14741,
@@ -839,7 +878,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 14816595919
+            "size": 14816595919,
+            "studios": ["Kyoto Animation"]
         },
         "Chuunibyou demo Koi ga Shitai! Ren": {
             "id": 18671,
@@ -860,7 +900,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5800000870
+            "size": 5800000870,
+            "studios": ["Kyoto Animation"]
         },
         "Chuunibyou demo Koi ga Shitai! Kirameki no... Slapstick Noel": {
             "id": 16934,
@@ -881,7 +922,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kyoto Animation"]
         },
         "Clannad": {
             "id": 2167,
@@ -902,7 +944,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 20522099613
+            "size": 20522099613,
+            "studios": ["Kyoto Animation"]
         },
         "Clannad After Story": {
             "id": 4181,
@@ -923,7 +966,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 21152961671
+            "size": 21152961671,
+            "studios": ["Kyoto Animation"]
         },
         "Clannad After Story - Mou Hitotsu no Sekai, Kyou-hen": {
             "id": 6351,
@@ -944,7 +988,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 794774646
+            "size": 794774646,
+            "studios": ["Kyoto Animation"]
         },
         "Clannad Mou Hitotsu no Sekai, Tomoyo-hen": {
             "id": 4059,
@@ -965,7 +1010,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 665775094
+            "size": 665775094,
+            "studios": ["Kyoto Animation"]
         },
         "Claymore": {
             "id": 1818,
@@ -986,7 +1032,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 11619359184
+            "size": 11619359184,
+            "studios": ["Madhouse"]
         },
         "Colorful (Movie)": {
             "id": 8142,
@@ -1007,7 +1054,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 2716308084
+            "size": 2716308084,
+            "studios": ["Sunrise", "Ascension"]
         },
         "Coppelion": {
             "id": 9479,
@@ -1028,7 +1076,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 11625745300
+            "size": 11625745300,
+            "studios": ["GoHands"]
         },
         "Danganronpa Kibou no Gakuen to Zetsubou no Koukousei The Animation": {
             "id": 16592,
@@ -1049,7 +1098,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 6658747628
+            "size": 6658747628,
+            "studios": ["Lerche"]
         },
         "Dantalian no Shoka": {
             "id": 8915,
@@ -1070,7 +1120,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 9694511740
+            "size": 9694511740,
+            "studios": ["Gainax"]
         },
         "Dantalian no Shoka Ibarahime": {
             "id": 12879,
@@ -1091,7 +1142,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 336930007
+            "size": 336930007,
+            "studios": ["Gainax"]
         },
         "Dareka no Manazashi": {
             "id": 17121,
@@ -1112,7 +1164,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 244628128
+            "size": 244628128,
+            "studios": ["CoMix Wave Films"]
         },
         "Death Billiards": {
             "id": 14353,
@@ -1133,7 +1186,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 939123407
+            "size": 939123407,
+            "studios": ["Madhouse"]
         },
         "Death Note": {
             "id": 1535,
@@ -1154,7 +1208,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 20530122565
+            "size": 20530122565,
+            "studios": ["Madhouse"]
         },
         "Death Parade": {
             "id": 28223,
@@ -1175,7 +1230,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 10316928193
+            "size": 10316928193,
+            "studios": ["Madhouse"]
         },
         "Devilman Crybaby": {
             "id": 35120,
@@ -1196,7 +1252,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2094144996
+            "size": 2094144996,
+            "studios": ["Science SARU"]
         },
         "Dororo": {
             "id": 37520,
@@ -1217,7 +1274,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7009170488
+            "size": 7009170488,
+            "studios": ["Tezuka Productions", "MAPPA"]
         },
         "Doukyuusei (Movie)": {
             "id": 30346,
@@ -1238,7 +1296,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 630003155
+            "size": 630003155,
+            "studios": ["A-1 Pictures"]
         },
         "Dragon Age Blood Mage no Seisen": {
             "id": 11705,
@@ -1259,7 +1318,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 3554263096
+            "size": 3554263096,
+            "studios": ["Oxybot"]
         },
         "ef A Tale of Melodies.": {
             "id": 4789,
@@ -1280,7 +1340,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 16090342056
+            "size": 16090342056,
+            "studios": ["Shaft"]
         },
         "ef A Tale of Melodies. - Prologue": {
             "id": 6401,
@@ -1301,7 +1362,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 166007752
+            "size": 166007752,
+            "studios": ["Shaft"]
         },
         "ef A Tale of Memories.": {
             "id": 2924,
@@ -1322,7 +1384,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12456083878
+            "size": 12456083878,
+            "studios": ["Shaft"]
         },
         "ef A Tale of Memories. - Prologue": {
             "id": 6361,
@@ -1343,7 +1406,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 199776155
+            "size": 199776155,
+            "studios": ["Shaft"]
         },
         "Elfen Lied": {
             "id": 226,
@@ -1364,7 +1428,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 10880495441
+            "size": 10880495441,
+            "studios": ["Arms"]
         },
         "Elfen Lied Tooriame nite Arui wa, Shoujo wa Ikani Shite Sono Shinjou ni Itatta ka - Regenschauer": {
             "id": 376,
@@ -1385,7 +1450,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 658385815
+            "size": 658385815,
+            "studios": ["Arms"]
         },
         "Evangelion 1.0 You Are (Not) Alone": {
             "id": 2759,
@@ -1406,7 +1472,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1896509344
+            "size": 1896509344,
+            "studios": ["Khara"]
         },
         "Evangelion 2.0 You Can (Not) Advance": {
             "id": 3784,
@@ -1427,7 +1494,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1930113996
+            "size": 1930113996,
+            "studios": ["Khara"]
         },
         "Eve no Jikan (Movie)": {
             "id": 7465,
@@ -1448,7 +1516,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10789095103
+            "size": 10789095103,
+            "studios": ["Studio Rikka"]
         },
         "Fate Grand Order First Order": {
             "id": 34321,
@@ -1469,7 +1538,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6712264663
+            "size": 6712264663,
+            "studios": ["Lay-duce"]
         },
         "Fate Grand Order Moonlight Lostroom": {
             "id": 36915,
@@ -1490,7 +1560,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 4744387232
+            "size": 4744387232,
+            "studios": ["Lay-duce"]
         },
         "Fate Prototype": {
             "id": 12565,
@@ -1511,7 +1582,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 316610704
+            "size": 316610704,
+            "studios": ["Lerche"]
         },
         "Fate stay night": {
             "id": 356,
@@ -1532,7 +1604,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 16134136428
+            "size": 16134136428,
+            "studios": ["Studio Deen"]
         },
         "Fate stay night Movie Unlimited Blade Works": {
             "id": 6922,
@@ -1553,7 +1626,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10410148036
+            "size": 10410148036,
+            "studios": ["Studio Deen"]
         },
         "Fate stay night Unlimited Blade Works": {
             "id": 22297,
@@ -1574,7 +1648,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 21334402618
+            "size": 21334402618,
+            "studios": ["ufotable"]
         },
         "Fate stay night Unlimited Blade Works 2nd Season": {
             "id": 28701,
@@ -1595,7 +1670,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5196552354
+            "size": 5196552354,
+            "studios": ["ufotable"]
         },
         "Fate stay night Unlimited Blade Works Prologue": {
             "id": 27821,
@@ -1616,7 +1692,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 3338180225
+            "size": 3338180225,
+            "studios": ["ufotable"]
         },
         "Fate Zero": {
             "id": 10087,
@@ -1637,7 +1714,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 27108900616
+            "size": 27108900616,
+            "studios": ["ufotable"]
         },
         "Fate Zero 2nd Season": {
             "id": 11741,
@@ -1658,7 +1736,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 22609419005
+            "size": 22609419005,
+            "studios": ["ufotable"]
         },
         "Final Fantasy VII Advent Children": {
             "id": 317,
@@ -1679,7 +1758,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Square Enix"]
         },
         "Fullmetal Alchemist Brotherhood": {
             "id": 5114,
@@ -1700,7 +1780,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 23267914487
+            "size": 23267914487,
+            "studios": ["Bones"]
         },
         "Gake no Ue no Ponyo": {
             "id": 2890,
@@ -1721,7 +1802,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 9386128719
+            "size": 9386128719,
+            "studios": ["Studio Ghibli"]
         },
         "Gedo Senki": {
             "id": 1829,
@@ -1742,7 +1824,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8490565551
+            "size": 8490565551,
+            "studios": ["Studio Ghibli"]
         },
         "Gin no Saji": {
             "id": 16918,
@@ -1763,7 +1846,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 9189491759
+            "size": 9189491759,
+            "studios": ["A-1 Pictures"]
         },
         "Gin no Saji 2nd Season": {
             "id": 19363,
@@ -1784,7 +1868,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 14959981122
+            "size": 14959981122,
+            "studios": ["A-1 Pictures"]
         },
         "Gingitsune": {
             "id": 18411,
@@ -1805,7 +1890,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3922815967
+            "size": 3922815967,
+            "studios": ["Diomedea"]
         },
         "Giniro no Kami no Agito": {
             "id": 1140,
@@ -1826,7 +1912,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 5646568985
+            "size": 5646568985,
+            "studios": ["Gonzo"]
         },
         "Given": {
             "id": 39533,
@@ -1847,7 +1934,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 11693802235
+            "size": 11693802235,
+            "studios": ["Lerche"]
         },
         "Goblin Slayer": {
             "id": 37349,
@@ -1868,7 +1956,8 @@
             "videoCodec": "H.265",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 8963168632
+            "size": 8963168632,
+            "studios": ["White Fox"]
         },
         "God Eater": {
             "id": 27631,
@@ -1889,7 +1978,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 6601377751
+            "size": 6601377751,
+            "studios": ["ufotable"]
         },
         "Golden Time": {
             "id": 17895,
@@ -1910,7 +2000,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 26476982860
+            "size": 26476982860,
+            "studios": ["J.C.Staff"]
         },
         "Gosick": {
             "id": 8425,
@@ -1931,7 +2022,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 18348773263
+            "size": 18348773263,
+            "studios": ["Bones"]
         },
         "Guilty Crown": {
             "id": 10793,
@@ -1952,7 +2044,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 15224748357
+            "size": 15224748357,
+            "studios": ["Production I.G"]
         },
         "Guilty Crown Lost Christmas - An Episode of Port Town": {
             "id": 13411,
@@ -1973,7 +2066,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 249132526
+            "size": 249132526,
+            "studios": ["Production I.G"]
         },
         "Gunslinger Girl": {
             "id": 134,
@@ -1994,7 +2088,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 11637710491
+            "size": 11637710491,
+            "studios": ["Madhouse"]
         },
         "Gunslinger Girl Il Teatrino": {
             "id": 3231,
@@ -2015,7 +2110,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 11274537453
+            "size": 11274537453,
+            "studios": ["Artland"]
         },
         "Hai to Gensou no Grimgar": {
             "id": 31859,
@@ -2036,7 +2132,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11891046643
+            "size": 11891046643,
+            "studios": ["A-1 Pictures"]
         },
         "Hai to Gensou no Grimgar Furoagari no Kabe ni Kaketa Seishun - One More Centimeter": {
             "id": 32561,
@@ -2057,7 +2154,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 491744830
+            "size": 491744830,
+            "studios": ["A-1 Pictures"]
         },
         "Hal": {
             "id": 16528,
@@ -2078,7 +2176,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 3596471695
+            "size": 3596471695,
+            "studios": ["Wit Studio"]
         },
         "Hana to Alice Satsujin Jiken": {
             "id": 27969,
@@ -2099,7 +2198,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3084465062
+            "size": 3084465062,
+            "studios": ["Steve N' Steven", "Rockwell Eyes"]
         },
         "Hanasaku Iroha Home Sweet Home": {
             "id": 14175,
@@ -2120,7 +2220,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2721694432
+            "size": 2721694432,
+            "studios": ["P.A. Works"]
         },
         "Harmonie": {
             "id": 20903,
@@ -2141,7 +2242,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 2382242947
+            "size": 2382242947,
+            "studios": ["Studio Rikka"]
         },
         "Hellsing": {
             "id": 270,
@@ -2162,7 +2264,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 2979449789
+            "size": 2979449789,
+            "studios": ["Gonzo"]
         },
         "Hellsing Ultimate": {
             "id": 777,
@@ -2183,7 +2286,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 24859459438
+            "size": 24859459438,
+            "studios": ["Madhouse", "Satelight", "Graphinica"]
         },
         "Higurashi no Naku Koro ni": {
             "id": 934,
@@ -2204,7 +2308,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 11443674611
+            "size": 11443674611,
+            "studios": ["Studio Deen"]
         },
         "Higurashi no Naku Koro ni Kai": {
             "id": 1889,
@@ -2225,7 +2330,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 10179301435
+            "size": 10179301435,
+            "studios": ["Studio Deen"]
         },
         "Higurashi no Naku Koro ni Kaku Outbreak": {
             "id": 16700,
@@ -2246,7 +2352,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 476256169
+            "size": 476256169,
+            "studios": ["Studio Deen"]
         },
         "Higurashi no Naku Koro ni Rei": {
             "id": 3652,
@@ -2267,7 +2374,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5541396151
+            "size": 5541396151,
+            "studios": ["Studio Deen"]
         },
         "Hori-san to Miyamura-kun": {
             "id": 14753,
@@ -2288,7 +2396,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 367702488
+            "size": 367702488,
+            "studios": ["Gonzo", "Hoods Entertainment"]
         },
         "Hoshi no Koe": {
             "id": 256,
@@ -2309,7 +2418,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 544861096
+            "size": 544861096,
+            "studios": ["CoMix Wave Films"]
         },
         "Hoshi wo Ou Kodomo": {
             "id": 9760,
@@ -2330,7 +2440,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7526646706
+            "size": 7526646706,
+            "studios": ["CoMix Wave Films"]
         },
         "Hotaru no Haka": {
             "id": 578,
@@ -2351,7 +2462,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 10116974427
+            "size": 10116974427,
+            "studios": ["Studio Ghibli"]
         },
         "Hotarubi no Mori e": {
             "id": 10408,
@@ -2372,7 +2484,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 945932816
+            "size": 945932816,
+            "studios": ["Brain's Base"]
         },
         "Howl no Ugoku Shiro": {
             "id": 431,
@@ -2393,7 +2506,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 10736530199
+            "size": 10736530199,
+            "studios": ["Studio Ghibli"]
         },
         "Hyouka": {
             "id": 12189,
@@ -2414,7 +2528,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 38583385417
+            "size": 38583385417,
+            "studios": ["Kyoto Animation"]
         },
         "Hyouka Motsubeki Mono wa": {
             "id": 13469,
@@ -2435,7 +2550,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1562361737
+            "size": 1562361737,
+            "studios": ["Kyoto Animation"]
         },
         "Ikoku Meiro no Croisee The Animation": {
             "id": 9938,
@@ -2456,7 +2572,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 2910679677
+            "size": 2910679677,
+            "studios": ["Satelight"]
         },
         "Jinrui wa Suitai Shimashita": {
             "id": 10357,
@@ -2477,7 +2594,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 5669904880
+            "size": 5669904880,
+            "studios": ["AIC A.S.T.A."]
         },
         "Jinrui wa Suitai Shimashita Specials": {
             "id": 15617,
@@ -2498,7 +2616,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 448365776
+            "size": 448365776,
+            "studios": ["AIC A.S.T.A."]
         },
         "Junjou Romantica": {
             "id": 3092,
@@ -2519,7 +2638,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7114691795
+            "size": 7114691795,
+            "studios": ["Studio Deen"]
         },
         "Junjou Romantica 2": {
             "id": 4814,
@@ -2540,7 +2660,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 5529533231
+            "size": 5529533231,
+            "studios": ["Studio Deen"]
         },
         "Junjou Romantica 3": {
             "id": 25649,
@@ -2561,7 +2682,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 8991668895
+            "size": 8991668895,
+            "studios": ["Studio Deen"]
         },
         "Kara no Kyoukai 1 Fukan Fuukei": {
             "id": 2593,
@@ -2582,7 +2704,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 2290367432
+            "size": 2290367432,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 2 Satsujin Kousatsu (Zen)": {
             "id": 3782,
@@ -2603,7 +2726,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 2673627923
+            "size": 2673627923,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 3 Tsuukaku Zanryuu": {
             "id": 3783,
@@ -2624,7 +2748,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 3201640558
+            "size": 3201640558,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 4 Garan no Dou": {
             "id": 4280,
@@ -2645,7 +2770,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 2519810462
+            "size": 2519810462,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 5 Mujun Rasen": {
             "id": 4282,
@@ -2666,7 +2792,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 25069588450
+            "size": 25069588450,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 6 Boukyaku Rokuon": {
             "id": 5204,
@@ -2687,7 +2814,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 2378304423
+            "size": 2378304423,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 7 Satsujin Kousatsu (Kou)": {
             "id": 5205,
@@ -2708,7 +2836,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10138904729
+            "size": 10138904729,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai 8 Shuushou": {
             "id": 6954,
@@ -2729,7 +2858,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 3332387434
+            "size": 3332387434,
+            "studios": ["ufotable"]
         },
         "Kara no Kyoukai Mirai Fukuin": {
             "id": 14807,
@@ -2750,7 +2880,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11665231438
+            "size": 11665231438,
+            "studios": ["ufotable"]
         },
         "Karigurashi no Arrietty": {
             "id": 7711,
@@ -2771,7 +2902,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 7542068328
+            "size": 7542068328,
+            "studios": ["Studio Ghibli"]
         },
         "Katanagatari": {
             "id": 6594,
@@ -2792,7 +2924,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7699615671
+            "size": 7699615671,
+            "studios": ["White Fox"]
         },
         "Kaze no Tani no Nausicaa": {
             "id": 572,
@@ -2813,7 +2946,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 13926822623
+            "size": 13926822623,
+            "studios": ["Studio Hibari", "Topcraft"]
         },
         "Kaze Tachinu": {
             "id": 16662,
@@ -2834,7 +2968,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8502786141
+            "size": 8502786141,
+            "studios": ["Studio Ghibli"]
         },
         "Kampfer": {
             "id": 6205,
@@ -2855,7 +2990,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Nomad"]
         },
         "Kill la Kill": {
             "id": 18679,
@@ -2876,7 +3012,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7650954568
+            "size": 7650954568,
+            "studios": ["Trigger"]
         },
         "Kill la Kill Specials": {
             "id": 21659,
@@ -2897,7 +3034,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 391017708
+            "size": 391017708,
+            "studios": ["Trigger"]
         },
         "Kimi ni Todoke": {
             "id": 6045,
@@ -2918,7 +3056,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 20575658620
+            "size": 20575658620,
+            "studios": ["Production I.G"]
         },
         "Kimi ni Todoke 2nd Season": {
             "id": 9656,
@@ -2939,7 +3078,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8966455059
+            "size": 8966455059,
+            "studios": ["Production I.G"]
         },
         "Kimi ni Todoke 2nd Season Kataomoi": {
             "id": 10152,
@@ -2960,7 +3100,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 793398577
+            "size": 793398577,
+            "studios": ["Production I.G"]
         },
         "Kimi no Na wa.": {
             "id": 32281,
@@ -2981,7 +3122,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2570296969
+            "size": 2570296969,
+            "studios": ["CoMix Wave Films"]
         },
         "Kino no Tabi The Beautiful World - Tou no Kuni": {
             "id": 3466,
@@ -3002,7 +3144,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["A.C.G.T."]
         },
         "Kiseijuu Sei no Kakuritsu": {
             "id": 22535,
@@ -3023,7 +3166,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11927301709
+            "size": 11927301709,
+            "studios": ["Madhouse"]
         },
         "Kiznaiver": {
             "id": 31798,
@@ -3044,7 +3188,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4113600182
+            "size": 4113600182,
+            "studios": ["Trigger"]
         },
         "Koe no Katachi": {
             "id": 28851,
@@ -3065,7 +3210,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4533301467
+            "size": 4533301467,
+            "studios": ["Kyoto Animation"]
         },
         "Koitabi True Tours Nanto": {
             "id": 17635,
@@ -3086,7 +3232,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 274774396
+            "size": 274774396,
+            "studios": ["P.A. Works"]
         },
         "Kokoro Connect": {
             "id": 11887,
@@ -3107,7 +3254,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 5799877837
+            "size": 5799877837,
+            "studios": ["Silver Link."]
         },
         "Kokoro Connect Michi Random": {
             "id": 16001,
@@ -3128,7 +3276,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1675326582
+            "size": 1675326582,
+            "studios": ["Silver Link."]
         },
         "Kokoro ga Sakebitagatterunda.": {
             "id": 28725,
@@ -3149,7 +3298,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 5910913082
+            "size": 5910913082,
+            "studios": ["A-1 Pictures"]
         },
         "Kokurikozaka kara": {
             "id": 10029,
@@ -3170,7 +3320,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6898148442
+            "size": 6898148442,
+            "studios": ["Studio Ghibli"]
         },
         "Kotonoha no Niwa": {
             "id": 16782,
@@ -3191,7 +3342,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 3427746536
+            "size": 3427746536,
+            "studios": ["CoMix Wave Films"]
         },
         "Koukaku Kidoutai": {
             "id": 43,
@@ -3212,7 +3364,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Production I.G"]
         },
         "Kujira no Kora wa Sajou ni Utau": {
             "id": 34712,
@@ -3233,7 +3386,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 11724247594
+            "size": 11724247594,
+            "studios": ["J.C.Staff"]
         },
         "Kumo no Mukou, Yakusoku no Basho": {
             "id": 433,
@@ -3254,7 +3408,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 6386773182
+            "size": 6386773182,
+            "studios": ["CoMix Wave Films"]
         },
         "Kurenai no Buta": {
             "id": 416,
@@ -3275,7 +3430,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Ghibli"]
         },
         "Kuroshitsuji": {
             "id": 4898,
@@ -3296,7 +3452,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5275544818
+            "size": 5275544818,
+            "studios": ["A-1 Pictures"]
         },
         "Kuroshitsuji II": {
             "id": 6707,
@@ -3317,7 +3474,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3455168195
+            "size": 3455168195,
+            "studios": ["A-1 Pictures"]
         },
         "Kuroshitsuji Movie Book of the Atlantic": {
             "id": 31812,
@@ -3332,13 +3490,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/31812/Kuroshitsuji_Movie__Book_of_the_Atlantic",
             "genres": [1, 7, 4, 13, 6, 37, 27],
-            "subs": ["BeatriceRaws-sunny49joyee"],
+            "subs": ["BeatriceRaws", "sunny49joyee"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8501227765
+            "size": 8501227765,
+            "studios": ["A-1 Pictures"]
         },
         "Kuroshitsuji Book of Circus": {
             "id": 22145,
@@ -3359,7 +3518,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3213009671
+            "size": 3213009671,
+            "studios": ["A-1 Pictures"]
         },
         "Kuroshitsuji Book of Murder": {
             "id": 23317,
@@ -3380,7 +3540,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 1435054779
+            "size": 1435054779,
+            "studios": ["A-1 Pictures"]
         },
         "Kuroshitsuji Sono Shitsuji, Kougyou": {
             "id": 6793,
@@ -3401,7 +3562,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 243850177
+            "size": 243850177,
+            "studios": ["A-1 Pictures"]
         },
         "Kyoukai no Kanata": {
             "id": 18153,
@@ -3422,7 +3584,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 3869817844
+            "size": 3869817844,
+            "studios": ["Kyoto Animation"]
         },
         "Kyoukai no Kanata Movie 1 I'll Be Here - Kako-hen": {
             "id": 25015,
@@ -3443,7 +3606,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6414561147
+            "size": 6414561147,
+            "studios": ["Kyoto Animation"]
         },
         "Kyoukai no Kanata Movie 2 I'll Be Here - Mirai-hen": {
             "id": 28675,
@@ -3464,7 +3628,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7659003336
+            "size": 7659003336,
+            "studios": ["Kyoto Animation"]
         },
         "Little Witch Academia": {
             "id": 14349,
@@ -3485,7 +3650,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 980531709
+            "size": 980531709,
+            "studios": ["Trigger"]
         },
         "Little Witch Academia Mahoujikake no Parade": {
             "id": 19489,
@@ -3500,13 +3666,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/19489/Little_Witch_Academia__Mahoujikake_no_Parade",
             "genres": [2, 4, 16, 10, 23],
-            "subs": ["UCCUSS-UBW"],
+            "subs": ["UCCUSS", "UBW"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 4513807689
+            "size": 4513807689,
+            "studios": ["Trigger"]
         },
         "Log Horizon": {
             "id": 17265,
@@ -3527,7 +3694,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 25427893550
+            "size": 25427893550,
+            "studios": ["Satelight"]
         },
         "Log Horizon 2nd Season": {
             "id": 23321,
@@ -3548,7 +3716,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 36762388571
+            "size": 36762388571,
+            "studios": ["Studio Deen"]
         },
         "Machine-Doll wa Kizutsukanai": {
             "id": 17247,
@@ -3569,7 +3738,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5784678137
+            "size": 5784678137,
+            "studios": ["Lerche"]
         },
         "Made in Abyss": {
             "id": 34599,
@@ -3584,13 +3754,14 @@
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
             "genres": [24, 2, 7, 8, 10],
-            "subs": ["Asenshi-PAS"],
+            "subs": ["Asenshi", "PAS"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 12261681343
+            "size": 12261681343,
+            "studios": ["Kinema Citrus"]
         },
         "Magi Sinbad no Bouken (TV)": {
             "id": 31741,
@@ -3611,7 +3782,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 9600544204
+            "size": 9600544204,
+            "studios": ["Lay-duce"]
         },
         "Magi The Kingdom of Magic": {
             "id": 18115,
@@ -3632,7 +3804,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 35802934821
+            "size": 35802934821,
+            "studios": ["A-1 Pictures"]
         },
         "Magi The Labyrinth of Magic": {
             "id": 14513,
@@ -3653,7 +3826,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 48477013476
+            "size": 48477013476,
+            "studios": ["A-1 Pictures"]
         },
         "Mahou Shoujo Madoka Magica": {
             "id": 9756,
@@ -3674,7 +3848,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 25502449569
+            "size": 25502449569,
+            "studios": ["Shaft"]
         },
         "Mahou Shoujo Madoka Magica Movie 1 Hajimari no Monogatari": {
             "id": 11977,
@@ -3695,7 +3870,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8092673281
+            "size": 8092673281,
+            "studios": ["Shaft"]
         },
         "Mahou Shoujo Madoka Magica Movie 2 Eien no Monogatari": {
             "id": 11979,
@@ -3716,7 +3892,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8418304686
+            "size": 8418304686,
+            "studios": ["Shaft"]
         },
         "Mahou Shoujo Madoka Magica Movie 3 Hangyaku no Monogatari": {
             "id": 11981,
@@ -3737,7 +3914,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 9675511447
+            "size": 9675511447,
+            "studios": ["Shaft"]
         },
         "Mahoutsukai no Yome": {
             "id": 35062,
@@ -3758,7 +3936,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 48370217692
+            "size": 48370217692,
+            "studios": ["Wit Studio"]
         },
         "Mahoutsukai no Yome Hoshi Matsu Hito": {
             "id": 32902,
@@ -3779,7 +3958,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 723895607
+            "size": 723895607,
+            "studios": ["Wit Studio"]
         },
         "Mai Mai Shinko to Sennen no Mahou": {
             "id": 5084,
@@ -3800,7 +3980,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 4692060976
+            "size": 4692060976,
+            "studios": ["Madhouse"]
         },
         "Majo no Takkyuubin": {
             "id": 512,
@@ -3821,7 +4002,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 14433777095
+            "size": 14433777095,
+            "studios": ["Studio Ghibli", "Studio Hibari"]
         },
         "Maoyuu Maou Yuusha": {
             "id": 14833,
@@ -3842,7 +4024,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 13062585775
+            "size": 13062585775,
+            "studios": ["Arms"]
         },
         "Mardock Scramble The First Compression": {
             "id": 8100,
@@ -3863,7 +4046,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10735421519
+            "size": 10735421519,
+            "studios": ["GoHands"]
         },
         "Mardock Scramble The Second Combustion": {
             "id": 10624,
@@ -3884,7 +4068,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10225643856
+            "size": 10225643856,
+            "studios": ["GoHands"]
         },
         "Mardock Scramble The Third Exhaust": {
             "id": 12053,
@@ -3905,7 +4090,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10352700755
+            "size": 10352700755,
+            "studios": ["GoHands"]
         },
         "Mayoiga": {
             "id": 32438,
@@ -3926,7 +4112,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3383186626
+            "size": 3383186626,
+            "studios": ["Diomedea"]
         },
         "Mekakucity Actors": {
             "id": 21603,
@@ -3947,7 +4134,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2616455803
+            "size": 2616455803,
+            "studios": ["Shaft"]
         },
         "Mimi wo Sumaseba": {
             "id": 585,
@@ -3968,7 +4156,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11820441897
+            "size": 11820441897,
+            "studios": ["Studio Ghibli"]
         },
         "Mirai Nikki": {
             "id": 10620,
@@ -3989,7 +4178,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 8177840259
+            "size": 8177840259,
+            "studios": ["Asread"]
         },
         "Mirai Nikki Redial": {
             "id": 16762,
@@ -4010,7 +4200,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 285588289
+            "size": 285588289,
+            "studios": ["Asread"]
         },
         "Mo Dao Zu Shi": {
             "id": 37208,
@@ -4031,7 +4222,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 4046218499
+            "size": 4046218499,
+            "studios": ["G.CMay Animation & Film"]
         },
         "Momo e no Tegami": {
             "id": 10389,
@@ -4052,7 +4244,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3533518868
+            "size": 3533518868,
+            "studios": ["Production I.G"]
         },
         "Mononoke": {
             "id": 2246,
@@ -4073,7 +4266,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 9385164478
+            "size": 9385164478,
+            "studios": ["Toei Animation"]
         },
         "Mononoke Hime": {
             "id": 164,
@@ -4094,7 +4288,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 19875018583
+            "size": 19875018583,
+            "studios": ["Studio Ghibli"]
         },
         "Mushishi": {
             "id": 457,
@@ -4115,7 +4310,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 15221150917
+            "size": 15221150917,
+            "studios": ["Artland"]
         },
         "Mushishi Zoku Shou": {
             "id": 21939,
@@ -4136,7 +4332,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3218320401
+            "size": 3218320401,
+            "studios": ["Artland"]
         },
         "Mushishi Zoku Shou 2nd Season": {
             "id": 24701,
@@ -4157,7 +4354,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2401820836
+            "size": 2401820836,
+            "studios": ["Artland"]
         },
         "Mushishi Zoku Shou Odoro no Michi": {
             "id": 24687,
@@ -4178,7 +4376,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 592342639
+            "size": 592342639,
+            "studios": ["Artland"]
         },
         "Mushishi Zoku Shou Suzu no Shizuku": {
             "id": 28957,
@@ -4199,7 +4398,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 2949686358
+            "size": 2949686358,
+            "studios": ["Artland"]
         },
         "Mushishi Hihamukage": {
             "id": 21329,
@@ -4220,7 +4420,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 394967642
+            "size": 394967642,
+            "studios": ["Artland"]
         },
         "Nagi no Asu kara": {
             "id": 16067,
@@ -4235,13 +4436,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/16067/Nagi_no_Asu_kara",
             "genres": [8, 10, 22],
-            "subs": ["Underwater-Vivid"],
+            "subs": ["Underwater", "Vivid"],
             "resolution": 720,
             "source": "TV",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 12620869170
+            "size": 12620869170,
+            "studios": ["P.A. Works"]
         },
         "Naruto": {
             "id": 20,
@@ -4262,7 +4464,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden": {
             "id": 1735,
@@ -4283,7 +4486,8 @@
             "videoCodec": "H.265",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 109441903621
+            "size": 109441903621,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden Movie 1": {
             "id": 2472,
@@ -4304,7 +4508,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 9602323514
+            "size": 9602323514,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden Movie 2 - Kizuna": {
             "id": 4437,
@@ -4325,7 +4530,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 10904352239
+            "size": 10904352239,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono": {
             "id": 6325,
@@ -4346,7 +4552,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 7748382666
+            "size": 7748382666,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden Movie 4 - The Lost Tower": {
             "id": 8246,
@@ -4367,7 +4574,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 7125017151
+            "size": 7125017151,
+            "studios": ["Studio Pierrot"]
         },
         "Natsume Yuujinchou": {
             "id": 4081,
@@ -4388,7 +4596,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 3995886140
+            "size": 3995886140,
+            "studios": ["Brain's Base"]
         },
         "Neko no Ongaeshi": {
             "id": 597,
@@ -4409,7 +4618,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 8756768313
+            "size": 8756768313,
+            "studios": ["Studio Ghibli"]
         },
         "Neo Angelique Abyss": {
             "id": 3615,
@@ -4430,7 +4640,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Yumeta Company"]
         },
         "Neo Angelique Abyss Second Age": {
             "id": 4662,
@@ -4451,7 +4662,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Neon Genesis Evangelion": {
             "id": 30,
@@ -4472,7 +4684,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 9066317735
+            "size": 9066317735,
+            "studios": ["Gainax", "Tatsunoko Production"]
         },
         "Neon Genesis Evangelion The End of Evangelion": {
             "id": 32,
@@ -4493,7 +4706,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 9353309336
+            "size": 9353309336,
+            "studios": ["Gainax", "Production I.G"]
         },
         "Net-juu no Susume": {
             "id": 36038,
@@ -4514,7 +4728,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11867211086
+            "size": 11867211086,
+            "studios": ["Signal.MD"]
         },
         "Net-juu no Susume Special": {
             "id": 36043,
@@ -4535,7 +4750,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 315638179
+            "size": 315638179,
+            "studios": ["Signal.MD"]
         },
         "Nichijou": {
             "id": 10165,
@@ -4556,7 +4772,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 20966394096
+            "size": 20966394096,
+            "studios": ["Kyoto Animation"]
         },
         "Nichijou Nichijou no 0-wa": {
             "id": 8857,
@@ -4577,7 +4794,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 464904993
+            "size": 464904993,
+            "studios": ["Kyoto Animation"]
         },
         "No Game No Life": {
             "id": 19815,
@@ -4598,7 +4816,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 13106185625
+            "size": 13106185625,
+            "studios": ["Madhouse"]
         },
         "No Game No Life Zero": {
             "id": 33674,
@@ -4619,7 +4838,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6791547325
+            "size": 6791547325,
+            "studios": ["Madhouse"]
         },
         "No.6": {
             "id": 10161,
@@ -4640,7 +4860,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3456261069
+            "size": 3456261069,
+            "studios": ["Bones"]
         },
         "Non Non Biyori": {
             "id": 17549,
@@ -4661,7 +4882,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6281021390
+            "size": 6281021390,
+            "studios": ["Silver Link."]
         },
         "Non Non Biyori Repeat": {
             "id": 23623,
@@ -4682,7 +4904,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 9024719800
+            "size": 9024719800,
+            "studios": ["Silver Link."]
         },
         "Omoide no Marnie": {
             "id": 21557,
@@ -4703,7 +4926,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7481890701
+            "size": 7481890701,
+            "studios": ["Studio Ghibli"]
         },
         "Ookami Kodomo no Ame to Yuki": {
             "id": 12355,
@@ -4724,7 +4948,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8378535951
+            "size": 8378535951,
+            "studios": ["Studio Chizu"]
         },
         "Ookami to Koushinryou": {
             "id": 2966,
@@ -4745,7 +4970,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 18156949902
+            "size": 18156949902,
+            "studios": ["Imagin"]
         },
         "Ookami to Koushinryou II": {
             "id": 5341,
@@ -4766,7 +4992,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 10760715806
+            "size": 10760715806,
+            "studios": ["Brain's Base", "Marvy Jack"]
         },
         "Ookami to Koushinryou II Ookami to Kohakuiro no Yuuutsu": {
             "id": 6007,
@@ -4787,7 +5014,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 943486991
+            "size": 943486991,
+            "studios": ["Brain's Base", "Marvy Jack"]
         },
         "Outbreak Company": {
             "id": 19369,
@@ -4808,7 +5036,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3963326895
+            "size": 3963326895,
+            "studios": ["feel."]
         },
         "Overlord": {
             "id": 29803,
@@ -4829,7 +5058,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 7424528473
+            "size": 7424528473,
+            "studios": ["Madhouse"]
         },
         "Overlord II": {
             "id": 35073,
@@ -4844,13 +5074,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/35073/Overlord_II",
             "genres": [1, 11, 2, 37, 16, 10],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 13245866120
+            "size": 13245866120,
+            "studios": ["Madhouse"]
         },
         "Overlord III": {
             "id": 37675,
@@ -4871,7 +5102,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 14151202456
+            "size": 14151202456,
+            "studios": ["Madhouse"]
         },
         "Paprika": {
             "id": 1943,
@@ -4892,7 +5124,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 7088983832
+            "size": 7088983832,
+            "studios": ["Madhouse"]
         },
         "Perfect Blue": {
             "id": 437,
@@ -4913,7 +5146,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 8487454485
+            "size": 8487454485,
+            "studios": ["Madhouse"]
         },
         "Phi Brain Kami no Puzzle": {
             "id": 9981,
@@ -4934,7 +5168,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7301611140
+            "size": 7301611140,
+            "studios": ["Sunrise"]
         },
         "Phi Brain Kami no Puzzle - Orpheus Order-hen": {
             "id": 12753,
@@ -4955,7 +5190,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 7606243249
+            "size": 7606243249,
+            "studios": ["Sunrise"]
         },
         "Phi Brain Kami no Puzzle - Shukuteki! Ratsel-hen": {
             "id": 15651,
@@ -4976,7 +5212,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 10078866739
+            "size": 10078866739,
+            "studios": ["Sunrise"]
         },
         "Piano no Mori": {
             "id": 2594,
@@ -4997,7 +5234,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "DTS",
-            "size": 4197381674
+            "size": 4197381674,
+            "studios": ["Madhouse"]
         },
         "ReZero kara Hajimeru Isekai Seikatsu": {
             "id": 31240,
@@ -5018,7 +5256,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 21069809708
+            "size": 21069809708,
+            "studios": ["White Fox"]
         },
         "ReLIFE": {
             "id": 30015,
@@ -5039,7 +5278,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4416098699
+            "size": 4416098699,
+            "studios": ["TMS Entertainment"]
         },
         "ReLIFE Kanketsu-hen": {
             "id": 35466,
@@ -5060,7 +5300,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 3053501941
+            "size": 3053501941,
+            "studios": ["TMS Entertainment"]
         },
         "Sakasama no Patema": {
             "id": 12477,
@@ -5081,7 +5322,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5607456494
+            "size": 5607456494,
+            "studios": ["Studio Rikka", "Purple Cow Studio Japan"]
         },
         "Sakurako-san no Ashimoto ni wa Shitai ga Umatteiru": {
             "id": 30187,
@@ -5096,13 +5338,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/30187/Sakurako-san_no_Ashimoto_ni_wa_Shitai_ga_Umatteiru",
             "genres": [7],
-            "subs": ["GJM-FFF"],
+            "subs": ["GJM", "FFF"],
             "resolution": 720,
             "source": "TV",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3174259526
+            "size": 3174259526,
+            "studios": ["TROYCA"]
         },
         "Sekai Seifuku Bouryaku no Zvezda": {
             "id": 20973,
@@ -5123,7 +5366,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4538311753
+            "size": 4538311753,
+            "studios": ["A-1 Pictures"]
         },
         "Sekaiichi Hatsukoi": {
             "id": 9926,
@@ -5144,7 +5388,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 6796856720
+            "size": 6796856720,
+            "studios": ["Studio Deen"]
         },
         "Sen to Chihiro no Kamikakushi": {
             "id": 199,
@@ -5165,7 +5410,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 14918758264
+            "size": 14918758264,
+            "studios": ["Studio Ghibli"]
         },
         "Sennen Joyuu": {
             "id": 1033,
@@ -5186,7 +5432,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1760352084
+            "size": 1760352084,
+            "studios": ["Madhouse"]
         },
         "Serial Experiments Lain": {
             "id": 339,
@@ -5207,7 +5454,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4237316892
+            "size": 4237316892,
+            "studios": ["Triangle Staff"]
         },
         "Servant x Service": {
             "id": 18119,
@@ -5228,7 +5476,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 9761430612
+            "size": 9761430612,
+            "studios": ["A-1 Pictures"]
         },
         "Shaman King": {
             "id": 154,
@@ -5249,7 +5498,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 56017771326
+            "size": 56017771326,
+            "studios": ["Xebec"]
         },
         "Shigatsu wa Kimi no Uso": {
             "id": 23273,
@@ -5270,7 +5520,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 33794776562
+            "size": 33794776562,
+            "studios": ["A-1 Pictures"]
         },
         "Shingeki no Kyojin": {
             "id": 16498,
@@ -5291,7 +5542,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 57829327210
+            "size": 57829327210,
+            "studios": ["Wit Studio"]
         },
         "Shingeki no Kyojin Season 2": {
             "id": 25777,
@@ -5306,13 +5558,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
             "genres": [1, 8, 10, 38, 7, 27, 31],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 34178747878
+            "size": 34178747878,
+            "studios": ["Wit Studio"]
         },
         "Shingeki no Kyojin Season 3": {
             "id": 35760,
@@ -5327,13 +5580,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
             "genres": [1, 8, 10, 38, 7, 27, 31],
-            "subs": ["neko-kBaraka"],
+            "subs": ["kBaraka", "neko-raws"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 30636781171
+            "size": 30636781171,
+            "studios": ["Wit Studio"]
         },
         "Shingeki no Kyojin Season 3 Part 2": {
             "id": 38524,
@@ -5354,7 +5608,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 11032654822
+            "size": 11032654822,
+            "studios": ["Wit Studio"]
         },
         "Shinsekai yori": {
             "id": 13125,
@@ -5375,7 +5630,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 43727399637
+            "size": 43727399637,
+            "studios": ["A-1 Pictures"]
         },
         "Shirobako": {
             "id": 25835,
@@ -5396,7 +5652,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 15235333968
+            "size": 15235333968,
+            "studios": ["P.A. Works"]
         },
         "Shisha no Teikoku": {
             "id": 28625,
@@ -5417,7 +5674,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Wit Studio"]
         },
         "Soul Eater": {
             "id": 3588,
@@ -5438,7 +5696,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 6719930738
+            "size": 6719930738,
+            "studios": ["Bones"]
         },
         "Steins;Gate": {
             "id": 9253,
@@ -5459,7 +5718,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4883888558
+            "size": 4883888558,
+            "studios": ["White Fox"]
         },
         "Steins;Gate Movie Fuka Ryouiki no Deja vu": {
             "id": 11577,
@@ -5480,7 +5740,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 442077329
+            "size": 442077329,
+            "studios": ["White Fox"]
         },
         "Steins;Gate Oukoubakko no Poriomania": {
             "id": 10863,
@@ -5501,7 +5762,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 138196311
+            "size": 138196311,
+            "studios": ["White Fox"]
         },
         "Stranger Mukou Hadan": {
             "id": 2418,
@@ -5516,13 +5778,14 @@
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/2418/Stranger__Mukou_Hadan",
             "genres": [1, 2, 13, 21],
-            "subs": ["THORA-Yoroshiku"],
+            "subs": ["THORA", "Yoroshiku"],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 8941639030
+            "size": 8941639030,
+            "studios": ["Bones"]
         },
         "Sukitte Ii na yo.": {
             "id": 14289,
@@ -5543,7 +5806,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11224613499
+            "size": 11224613499,
+            "studios": ["Zexcs"]
         },
         "Sukitte Ii na yo. Mei and Marshmallow": {
             "id": 17409,
@@ -5564,7 +5828,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 299025939
+            "size": 299025939,
+            "studios": ["Zexcs"]
         },
         "Summer Wars": {
             "id": 5681,
@@ -5585,7 +5850,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 6084499322
+            "size": 6084499322,
+            "studios": ["Madhouse"]
         },
         "Super Lovers": {
             "id": 31680,
@@ -5606,7 +5872,8 @@
             "videoCodec": "H.265",
             "bits": 12,
             "audioCodec": "AAC",
-            "size": 1705523266
+            "size": 1705523266,
+            "studios": ["Studio Deen"]
         },
         "Super Lovers 2": {
             "id": 33417,
@@ -5627,7 +5894,8 @@
             "videoCodec": "H.265",
             "bits": 12,
             "audioCodec": "AAC",
-            "size": 1445409624
+            "size": 1445409624,
+            "studios": ["Studio Deen"]
         },
         "Sword Art Online": {
             "id": 11757,
@@ -5648,7 +5916,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 30491415205
+            "size": 30491415205,
+            "studios": ["A-1 Pictures"]
         },
         "Sword Art Online II": {
             "id": 21881,
@@ -5669,7 +5938,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12581273804
+            "size": 12581273804,
+            "studios": ["A-1 Pictures"]
         },
         "Sword Art Online Movie Ordinal Scale": {
             "id": 31765,
@@ -5690,7 +5960,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1998790703
+            "size": 1998790703,
+            "studios": ["A-1 Pictures"]
         },
         "Sword Art Online Alicization": {
             "id": 36474,
@@ -5711,7 +5982,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 26937257226
+            "size": 26937257226,
+            "studios": ["A-1 Pictures"]
         },
         "Sword Art Online Alicization - Recollection": {
             "id": 39239,
@@ -5732,7 +6004,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 1063691482
+            "size": 1063691482,
+            "studios": ["A-1 Pictures"]
         },
         "Takanashi Rikka Kai Chuunibyou demo Koi ga Shitai! Movie": {
             "id": 19021,
@@ -5753,7 +6026,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 6751743922
+            "size": 6751743922,
+            "studios": ["Kyoto Animation"]
         },
         "Tales of Vesperia The First Strike": {
             "id": 6046,
@@ -5774,7 +6048,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 3403707259
+            "size": 3403707259,
+            "studios": ["Production I.G"]
         },
         "Tales of Zestiria the Cross Saiyaku no Jidai": {
             "id": 33558,
@@ -5795,7 +6070,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["ufotable"]
         },
         "Tales of Zestiria Doushi no Yoake": {
             "id": 24459,
@@ -5816,7 +6092,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 751953846
+            "size": 751953846,
+            "studios": ["ufotable"]
         },
         "Tamayura": {
             "id": 9055,
@@ -5837,7 +6114,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 1971720426
+            "size": 1971720426,
+            "studios": ["Hal Film Maker"]
         },
         "Tanaka-kun wa Itsumo Kedaruge": {
             "id": 32093,
@@ -5858,7 +6136,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 14566341814
+            "size": 14566341814,
+            "studios": ["Silver Link."]
         },
         "Tasogare Otome x Amnesia": {
             "id": 12445,
@@ -5879,7 +6158,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12762801426
+            "size": 12762801426,
+            "studios": ["Silver Link."]
         },
         "Tasogare Otome x Amnesia Taima Otome": {
             "id": 14189,
@@ -5900,7 +6180,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 888675573
+            "size": 888675573,
+            "studios": ["Silver Link."]
         },
         "Tate no Yuusha no Nariagari": {
             "id": 35790,
@@ -5921,7 +6202,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 46029438250
+            "size": 46029438250,
+            "studios": ["Kinema Citrus"]
         },
         "Tengen Toppa Gurren Lagann": {
             "id": 2001,
@@ -5942,7 +6224,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 10022263888
+            "size": 10022263888,
+            "studios": ["Gainax"]
         },
         "Tenkuu no Shiro Laputa": {
             "id": 513,
@@ -5963,7 +6246,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 18261736303
+            "size": 18261736303,
+            "studios": ["Studio Ghibli"]
         },
         "Toki wo Kakeru Shoujo": {
             "id": 2236,
@@ -5984,7 +6268,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8190181276
+            "size": 8190181276,
+            "studios": ["Madhouse"]
         },
         "Tokyo Ghoul": {
             "id": 22319,
@@ -6005,7 +6290,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12737138776
+            "size": 12737138776,
+            "studios": ["Studio Pierrot"]
         },
         "Tokyo Ghoul A": {
             "id": 27899,
@@ -6026,7 +6312,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 11502068641
+            "size": 11502068641,
+            "studios": ["Studio Pierrot"]
         },
         "Tokyo Godfathers": {
             "id": 759,
@@ -6047,7 +6334,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Madhouse"]
         },
         "Tokyo Magnitude 8.0": {
             "id": 6211,
@@ -6068,7 +6356,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 3900405215
+            "size": 3900405215,
+            "studios": ["Bones", "Kinema Citrus"]
         },
         "Tonari no Totoro": {
             "id": 523,
@@ -6089,7 +6378,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 9564405976
+            "size": 9564405976,
+            "studios": ["Studio Ghibli"]
         },
         "Tsumiki no Ie": {
             "id": 5365,
@@ -6110,7 +6400,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 251122130
+            "size": 251122130,
+            "studios": ["Oh! Production"]
         },
         "Uchuu Show e Youkoso": {
             "id": 8115,
@@ -6131,7 +6422,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 9213454214
+            "size": 9213454214,
+            "studios": ["A-1 Pictures"]
         },
         "Umineko no Naku Koro ni": {
             "id": 4896,
@@ -6152,7 +6444,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 16492610536
+            "size": 16492610536,
+            "studios": ["Studio Deen"]
         },
         "Usagi Drop": {
             "id": 10162,
@@ -6173,7 +6466,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12423177771
+            "size": 12423177771,
+            "studios": ["Production I.G"]
         },
         "Violet Evergarden": {
             "id": 33352,
@@ -6194,7 +6488,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 18508029662
+            "size": 18508029662,
+            "studios": ["Kyoto Animation"]
         },
         "Yakusoku no Neverland": {
             "id": 37779,
@@ -6215,7 +6510,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 5403627012
+            "size": 5403627012,
+            "studios": ["CloverWorks"]
         },
         "Yamiyo": {
             "id": 39989,
@@ -6236,7 +6532,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Twin Engine"]
         },
         "Yozakura Quartet Hana no Uta": {
             "id": 18497,
@@ -6257,7 +6554,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4252455463
+            "size": 4252455463,
+            "studios": ["Tatsunoko Production"]
         },
         "Zankyou no Terror": {
             "id": 23283,
@@ -6278,7 +6576,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 15209971771
+            "size": 15209971771,
+            "studios": ["MAPPA"]
         },
         "Sekaiichi Hatsukoi 2": {
             "id": 11123,
@@ -6299,7 +6598,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 6805855998
+            "size": 6805855998,
+            "studios": ["Studio Deen"]
         },
         "Tales of Zestiria the Cross": {
             "id": 30911,
@@ -6320,7 +6620,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 31991388217
+            "size": 31991388217,
+            "studios": ["ufotable"]
         },
         "Ayakashi Japanese Classic Horror": {
             "id": 586,
@@ -6341,7 +6642,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AC3",
-            "size": 4410241584
+            "size": 4410241584,
+            "studios": ["Toei Animation"]
         },
         "Bakemonogatari": {
             "id": 5081,
@@ -6362,7 +6664,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Shaft"]
         },
         "Binan Koukou Chikyuu Boueibu LOVE!": {
             "id": 27727,
@@ -6383,7 +6686,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Diomedea"]
         },
         "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka": {
             "id": 28121,
@@ -6404,7 +6708,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["J.C.Staff"]
         },
         "Durarara!!": {
             "id": 6746,
@@ -6425,7 +6730,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         },
         "Psycho-Pass": {
             "id": 13601,
@@ -6446,7 +6752,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Production I.G"]
         },
         "Sakamoto Desu ga": {
             "id": 32542,
@@ -6467,7 +6774,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Deen"]
         },
         "Sanzoku no Musume Ronja": {
             "id": 22359,
@@ -6488,7 +6796,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Ghibli", "Polygon Pictures"]
         },
         "Shoujo-tachi wa Kouya wo Mezasu": {
             "id": 31914,
@@ -6509,7 +6818,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Barnum Studio", "Project No.9"]
         },
         "Space☆Dandy": {
             "id": 20057,
@@ -6530,7 +6840,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Bones"]
         },
         "Strike the Blood": {
             "id": 18277,
@@ -6551,7 +6862,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Silver Link.", "Connect"]
         },
         "Amaama to Inazuma": {
             "id": 32828,
@@ -6572,7 +6884,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 7821389710
+            "size": 7821389710,
+            "studios": ["TMS Entertainment"]
         },
         "Arslan Senki (TV)": {
             "id": 28249,
@@ -6593,7 +6906,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["SANZIGEN", "LIDENFILMS"]
         },
         "Assassins Pride": {
             "id": 38572,
@@ -6614,7 +6928,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["EMT Squared"]
         },
         "Bartender": {
             "id": 1589,
@@ -6635,7 +6950,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 1367749162
+            "size": 1367749162,
+            "studios": ["Palm Studio"]
         },
         "Beastars": {
             "id": 39195,
@@ -6656,7 +6972,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Orange"]
         },
         "Bishoujo Senshi Sailor Moon Crystal Season III": {
             "id": 31733,
@@ -6677,7 +6994,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 4516286363
+            "size": 4516286363,
+            "studios": ["Toei Animation"]
         },
         "Boku no Hero Academia 4th Season": {
             "id": 38408,
@@ -6698,7 +7016,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Bones"]
         },
         "Boku no Hero Academia the Movie 1 Futari no Hero": {
             "id": 36896,
@@ -6719,7 +7038,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Bones"]
         },
         "Boku no Hero Academia the Movie 2 HeroesRising": {
             "id": 39565,
@@ -6740,7 +7060,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Bones"]
         },
         "Cencoroll 2": {
             "id": 9488,
@@ -6761,7 +7082,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Cencoroll 3": {
             "id": 40020,
@@ -6782,7 +7104,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Chihayafuru 3": {
             "id": 37379,
@@ -6803,7 +7126,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Madhouse"]
         },
         "Chuunibyou demo Koi ga Shitai! Movie Take On Me": {
             "id": 35608,
@@ -6824,7 +7148,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kyoto Animation"]
         },
         "Dakaretai Otoko 1-i ni Odosarete Imasu.": {
             "id": 37597,
@@ -6845,7 +7170,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["CloverWorks"]
         },
         "Doukyonin wa Hiza, Tokidoki, Atama no Ue.": {
             "id": 38145,
@@ -6866,7 +7192,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Zero-G"]
         },
         "Ergo Proxy": {
             "id": 790,
@@ -6887,7 +7214,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 8386016644
+            "size": 8386016644,
+            "studios": ["Manglobe"]
         },
         "Evangelion 3.0 You Can (Not) Redo": {
             "id": 3785,
@@ -6908,7 +7236,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1549911397
+            "size": 1549911397,
+            "studios": ["Khara"]
         },
         "Evangelion 3.0+1.0": {
             "id": 3786,
@@ -6929,7 +7258,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Khara"]
         },
         "Fate Grand Order Shinsei Entaku Ryouiki Camelot 1 - Wandering; Agateram": {
             "id": 38085,
@@ -6950,7 +7280,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Signal.MD"]
         },
         "Fate Grand Order Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram": {
             "id": 38086,
@@ -6971,7 +7302,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Production I.G"]
         },
         "Fate Grand Order Zettai Majuu Sensen Babylonia": {
             "id": 38084,
@@ -6992,7 +7324,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["CloverWorks"]
         },
         "Fate Grand Order Zettai Majuu Sensen Babylonia - Initium Iter": {
             "id": 40206,
@@ -7013,7 +7346,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["CloverWorks"]
         },
         "Fate stay night Movie Heaven's Feel - I. Presage Flower": {
             "id": 25537,
@@ -7034,7 +7368,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["ufotable"]
         },
         "Fate stay night Movie Heaven's Feel - II. Lost Butterfly": {
             "id": 33049,
@@ -7055,7 +7390,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["ufotable"]
         },
         "Fate stay night Movie Heaven's Feel - III. Spring Song": {
             "id": 33050,
@@ -7076,7 +7412,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["ufotable"]
         },
         "Free!": {
             "id": 18507,
@@ -7097,7 +7434,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kyoto Animation", "Animation Do"]
         },
         "Free! Eternal Summer": {
             "id": 22265,
@@ -7118,7 +7456,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kyoto Animation", "Animation Do"]
         },
         "Fullmetal Alchemist": {
             "id": 121,
@@ -7139,7 +7478,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 4088973982
+            "size": 4088973982,
+            "studios": ["Bones"]
         },
         "Fullmetal Alchemist Brotherhood Specials": {
             "id": 6421,
@@ -7160,7 +7500,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 764269091
+            "size": 764269091,
+            "studios": ["Bones"]
         },
         "Given Movie": {
             "id": 40421,
@@ -7181,7 +7522,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Lerche"]
         },
         "Goblin Slayer Goblin's Crown": {
             "id": 39576,
@@ -7202,7 +7544,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["White Fox"]
         },
         "Haibane Renmei": {
             "id": 387,
@@ -7223,7 +7566,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 8919621735
+            "size": 8919621735,
+            "studios": ["Radix"]
         },
         "Hakuouki Hekketsuroku": {
             "id": 9065,
@@ -7244,7 +7588,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Deen"]
         },
         "Handa-kun": {
             "id": 32648,
@@ -7265,7 +7610,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Diomedea"]
         },
         "Hataraku Saibou": {
             "id": 37141,
@@ -7286,7 +7632,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["David Production"]
         },
         "Higashi no Eden": {
             "id": 5630,
@@ -7307,7 +7654,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 19595721216
+            "size": 19595721216,
+            "studios": ["Production I.G"]
         },
         "Higashi no Eden Movie I The King of Eden": {
             "id": 6372,
@@ -7328,7 +7676,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 4220527417
+            "size": 4220527417,
+            "studios": ["Production I.G"]
         },
         "Higashi no Eden Movie II Paradise Lost": {
             "id": 6637,
@@ -7349,7 +7698,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 5791086258
+            "size": 5791086258,
+            "studios": ["Production I.G"]
         },
         "Houseki no Kuni": {
             "id": 35557,
@@ -7370,7 +7720,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Orange"]
         },
         "Hunter x Hunter (2011)": {
             "id": 11061,
@@ -7391,7 +7742,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 36147442876
+            "size": 36147442876,
+            "studios": ["Madhouse"]
         },
         "Hybrid Child": {
             "id": 11135,
@@ -7412,7 +7764,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Deen"]
         },
         "Junjou Romantica OVA": {
             "id": 13767,
@@ -7433,7 +7786,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 347483286
+            "size": 347483286,
+            "studios": ["Studio Deen"]
         },
         "Kara no Kyoukai Remix Gate of Seventh Heaven": {
             "id": 6624,
@@ -7454,7 +7808,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 6054780409
+            "size": 6054780409,
+            "studios": ["ufotable"]
         },
         "Kimetsu no Yaiba": {
             "id": 38000,
@@ -7475,7 +7830,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["ufotable"]
         },
         "Kimi to Boku. 2": {
             "id": 11739,
@@ -7496,7 +7852,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12133412704
+            "size": 12133412704,
+            "studios": ["J.C.Staff"]
         },
         "Kino no Tabi The Beautiful World": {
             "id": 486,
@@ -7517,7 +7874,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "FLAC",
-            "size": 4699010087
+            "size": 4699010087,
+            "studios": ["A.C.G.T."]
         },
         "Kino no Tabi The Beautiful World - Nanika wo Suru Tame ni - Life Goes On.": {
             "id": 1379,
@@ -7538,7 +7896,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["A.C.G.T."]
         },
         "Kino no Tabi The Beautiful World - The Animated Series": {
             "id": 35079,
@@ -7559,7 +7918,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Lerche"]
         },
         "Kyoukai no Kanata Shinonome": {
             "id": 23385,
@@ -7580,7 +7940,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AC3",
-            "size": 310861554
+            "size": 310861554,
+            "studios": ["Kyoto Animation"]
         },
         "Lovely Complex": {
             "id": 2034,
@@ -7601,7 +7962,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Toei Animation"]
         },
         "Made in Abyss Movie 1 Tabidachi no Yoake": {
             "id": 37514,
@@ -7622,7 +7984,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kinema Citrus"]
         },
         "Made in Abyss Movie 2 Hourou Suru Tasogare": {
             "id": 37515,
@@ -7643,7 +8006,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Kinema Citrus"]
         },
         "Made in Abyss Movie 3 Fukaki Tamashii no Reimei": {
             "id": 36862,
@@ -7664,7 +8028,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Magi Sinbad no Bouken": {
             "id": 22097,
@@ -7685,7 +8050,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Lay-duce"]
         },
         "Mirai no Mirai": {
             "id": 36936,
@@ -7706,7 +8072,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Chizu"]
         },
         "Naruto Shippuuden Movie 5 - Blood Prison": {
             "id": 10589,
@@ -7727,7 +8094,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 7439060280
+            "size": 7439060280,
+            "studios": ["Studio Pierrot"]
         },
         "Naruto Shippuuden Movie 6 - Road to Ninja": {
             "id": 13667,
@@ -7748,7 +8116,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 7495657699
+            "size": 7495657699,
+            "studios": ["Studio Pierrot"]
         },
         "Natsume Yuujinchou Go": {
             "id": 32983,
@@ -7769,7 +8138,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Shuka"]
         },
         "Natsume Yuujinchou San": {
             "id": 10379,
@@ -7790,7 +8160,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         },
         "Natsume Yuujinchou Shi": {
             "id": 11665,
@@ -7811,7 +8182,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         },
         "Natsume Yuujinchou Itsuka Yuki no Hi ni": {
             "id": 20651,
@@ -7832,7 +8204,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         },
         "Non Non Biyori 3rd Season": {
             "id": 39808,
@@ -7853,7 +8226,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Non Non Biyori Movie Vacation": {
             "id": 36990,
@@ -7874,7 +8248,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Silver Link."]
         },
         "Non Non Biyori Repeat Hotaru ga Tanoshinda": {
             "id": 32547,
@@ -7895,7 +8270,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 409093296
+            "size": 409093296,
+            "studios": ["Silver Link."]
         },
         "Non Non Biyori Okinawa e Ikukoto ni Natta": {
             "id": 21667,
@@ -7916,7 +8292,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 324456751
+            "size": 324456751,
+            "studios": ["Silver Link."]
         },
         "One Punch Man": {
             "id": 30276,
@@ -7937,7 +8314,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 3085429856
+            "size": 3085429856,
+            "studios": ["Madhouse"]
         },
         "Ouran Koukou Host Club": {
             "id": 853,
@@ -7958,7 +8336,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 5220985462
+            "size": 5220985462,
+            "studios": ["Bones"]
         },
         "Quanzhi Gaoshou": {
             "id": 33926,
@@ -7979,7 +8358,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["G.CMay Animation & Film"]
         },
         "ReZero kara Hajimeru Isekai Seikatsu 2nd Season": {
             "id": 39587,
@@ -8000,7 +8380,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Seirei no Moribito": {
             "id": 1827,
@@ -8021,7 +8402,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Production I.G"]
         },
         "Sekaiichi Hatsukoi Propose-hen": {
             "id": 40314,
@@ -8042,7 +8424,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Shikioriori": {
             "id": 37396,
@@ -8063,7 +8446,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["CoMix Wave Films"]
         },
         "Shingeki no Kyojin The Final Season": {
             "id": 40028,
@@ -8084,7 +8468,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Shirobako Movie": {
             "id": 37804,
@@ -8105,7 +8490,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["P.A. Works"]
         },
         "Shounen Maid": {
             "id": 32175,
@@ -8126,7 +8512,8 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 5686952641
+            "size": 5686952641,
+            "studios": ["8bit"]
         },
         "Steins;Gate 0": {
             "id": 30484,
@@ -8147,7 +8534,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 4106560382
+            "size": 4106560382,
+            "studios": ["White Fox"]
         },
         "Steins;Gate 0 Kesshou Takei no Valentine - Bittersweet Intermedio": {
             "id": 37492,
@@ -8168,7 +8556,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 272790048
+            "size": 272790048,
+            "studios": ["White Fox"]
         },
         "Steins;Gate Kyoukaimenjou no Missing Link - Divide By Zero": {
             "id": 32188,
@@ -8189,7 +8578,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 191471538
+            "size": 191471538,
+            "studios": ["White Fox"]
         },
         "Subete ga F ni Naru": {
             "id": 28621,
@@ -8210,7 +8600,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["A-1 Pictures"]
         },
         "Super Lovers OVA": {
             "id": 33013,
@@ -8231,7 +8622,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Studio Deen"]
         },
         "Sword Art Online Alicization - War of Underworld": {
             "id": 39597,
@@ -8252,7 +8644,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["A-1 Pictures"]
         },
         "Tales of Zestiria the Cross 2nd Season": {
             "id": 34086,
@@ -8273,7 +8666,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 35793104053
+            "size": 35793104053,
+            "studios": ["ufotable"]
         },
         "Tanaka-kun wa Itsumo Kedaruge Specials": {
             "id": 33157,
@@ -8294,7 +8688,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1318628731
+            "size": 1318628731,
+            "studios": ["Silver Link."]
         },
         "Tanoshii Muumin Ikka": {
             "id": 2150,
@@ -8315,7 +8710,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Telescreen"]
         },
         "Tate no Yuusha no Nariagari 2nd Season": {
             "id": 40356,
@@ -8336,7 +8732,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Tate no Yuusha no Nariagari 3rd Season": {
             "id": 40357,
@@ -8357,7 +8754,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Tengen Toppa Gurren Lagann Movie 1 Gurren-hen": {
             "id": 4107,
@@ -8378,7 +8776,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 1500498646
+            "size": 1500498646,
+            "studios": ["Gainax"]
         },
         "Tengen Toppa Gurren Lagann Movie 2 Lagann-hen": {
             "id": 4565,
@@ -8399,7 +8798,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 2179727124
+            "size": 2179727124,
+            "studios": ["Gainax"]
         },
         "Tenki no Ko": {
             "id": 38826,
@@ -8420,7 +8820,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["CoMix Wave Films"]
         },
         "Tensei shitara Slime Datta Ken": {
             "id": 37430,
@@ -8441,7 +8842,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["8bit"]
         },
         "The Last Naruto the Movie": {
             "id": 16870,
@@ -8462,7 +8864,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "DTS",
-            "size": 14006080121
+            "size": 14006080121,
+            "studios": ["Studio Pierrot"]
         },
         "Tonari no Kaibutsu-kun": {
             "id": 14227,
@@ -8483,7 +8886,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         },
         "Vinland Saga": {
             "id": 37521,
@@ -8504,7 +8908,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Wit Studio"]
         },
         "Violet Evergarden Kitto Ai wo Shiru Hi ga Kuru no Darou": {
             "id": 37095,
@@ -8525,7 +8930,8 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 1728594411
+            "size": 1728594411,
+            "studios": ["Kyoto Animation"]
         },
         "Yakusoku no Neverland 2nd Season": {
             "id": 39617,
@@ -8546,7 +8952,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": []
         },
         "Zoku Natsume Yuujinchou": {
             "id": 5300,
@@ -8567,7 +8974,8 @@
             "videoCodec": false,
             "bits": false,
             "audioCodec": false,
-            "size": 0
+            "size": 0,
+            "studios": ["Brain's Base"]
         }
     }
 }

@@ -161,6 +161,13 @@ const FILTERS = {
         // Exclude blank values
         specialValuesProcess: values => values.filter(value => !!value),
     },
+    studios: {
+        descriptions: {
+            false: 'All Studios',
+        },
+        // Exclude blank values
+        specialValuesProcess: values => values.filter(value => !!value),
+    },
     resolution: {
         descriptions: {
             false: 'All Resolutions',

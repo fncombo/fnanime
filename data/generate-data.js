@@ -182,9 +182,12 @@ function processLocalData(filename, size, folder) {
 function processCacheData() {
     for (const title of Object.keys(ALL_ANIME.anime)) {
         const anime = ALL_ANIME.anime[title]
+        const cachedAnime = CACHE.anime[anime.id]
 
         // eslint-disable-next-line camelcase
-        anime.genres = CACHE.anime[anime.id].genres.filter(({ type }) => type === 'anime').map(({ mal_id }) => mal_id)
+        anime.genres = cachedAnime.genres.filter(({ type }) => type === 'anime').map(({ mal_id }) => mal_id)
+
+        anime.studios = cachedAnime.studios.map(({ name }) => name)
     }
 }
 
