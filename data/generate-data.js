@@ -69,7 +69,7 @@ const ALL_ANIME = {
     anime: {},
 }
 
-// Detached cached data about each anime
+// Detailed cached data about each anime
 let CACHE
 
 // Regular expression to match all the data tags in the anime file/folder name
