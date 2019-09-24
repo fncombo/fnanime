@@ -6,9 +6,10 @@ const has = require('has')
 const { eachSeries } = require('async')
 const beautify = require('js-beautify')
 const { magenta, yellow } = require('chalk')
+const fetch = require('node-fetch')
 
 // Cache location
-const CACHE_LOCATION = 'CachedAnime.js'
+const CACHE_LOCATION = 'cache.json'
 
 /**
  * Get detailed data (for use in cache) about a single anime.
@@ -70,8 +71,6 @@ async function generateCache(animeIds) {
         cache.anime[animeId] = data
     })
 
-    console.log('New cache generated successfully')
-
     return cache
 }
 
@@ -101,7 +100,9 @@ async function loadCache() {
     let cache
 
     try {
-        cache = await readFile(location, 'utf8')
+        cache = await readFile(CACHE_LOCATION, 'utf8')
+
+        cache = JSON.parse(cache)
 
         // Check if the cache is too old
         if (Date.now() - cache.updated > 6.048e8) {
@@ -123,7 +124,7 @@ async function loadCache() {
 /**
  * Save cache data to file.
  */
-async function saveCache(data) {
+async function saveCache(data, isUpdate = false) {
     const saveData = beautify(JSON.stringify(data))
 
     try {
@@ -132,7 +133,7 @@ async function saveCache(data) {
         throw new Error('Could not save cache')
     }
 
-    console.log('Cache saved')
+    console.log(isUpdate ? 'Check updated' : 'Cache saved')
 
     return true
 }

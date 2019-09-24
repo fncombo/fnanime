@@ -14,11 +14,11 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Helpers
-const { removeInvalidChars, getRewatchCount } = require('helpers.js')
-const { generateCache, updateCache, loadCache, saveCache } = require('cache.js')
+const { removeInvalidChars, getRewatchCount } = require('./helpers.js')
+const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
 
 // Location of the file to save data to
-const ANIME_JSON_LOCATION = '../src/js/data/Data.json'
+const ANIME_JSON_LOCATION = '../src/js/data/data.json'
 
 // MyAnimeList.net username
 const MAL_USERNAME = 'fncombo'
@@ -27,9 +27,11 @@ const MAL_USERNAME = 'fncombo'
 const ROOT_LOCATION = 'E:/Anime/'
 const ANIME_FOLDERS = [
     `${ROOT_LOCATION}Series`,
+    `${ROOT_LOCATION}OVA`,
     `${ROOT_LOCATION}Movies`,
+    `${ROOT_LOCATION}Specials`,
+    `${ROOT_LOCATION}Other`,
     `${ROOT_LOCATION}Ghibli Movies`,
-    `${ROOT_LOCATION}Special and OVA`,
 ]
 
 // Type lookup
@@ -46,14 +48,14 @@ const TYPE_LOOKUP = {
 
 // Type to folder mapping
 const TYPE_FOLDER_LOOKUP = {
-    TV: 'Series',
-    OVA: 'OVA',
-    Movie: 'Movies',
-    Special: 'Specials',
-    ONA: 'Series',
-    Music: 'Other',
-    Other: 'Other',
-    Unknown: 'Other',
+    1: 'Series',
+    2: 'OVA',
+    3: 'Movies',
+    4: 'Specials',
+    5: 'Series',
+    6: 'Other',
+    7: 'Other',
+    8: 'Other',
 }
 
 // Folders to ignore when checking against type
@@ -82,7 +84,6 @@ function processApiData(anime) {
         const title = removeDiacritics(cartoon.title).replace(/["]/g, '')
 
         // Create an array of all anime genre IDs for this anime
-        const genres = CACHE[cartoon.mal_id].genres.filter(({ type }) => type === 'anime').map(({ id }) => id)
 
         // Start compiling clean data that we need
         ALL_ANIME.anime[removeInvalidChars(title)] = {
@@ -97,9 +98,9 @@ function processApiData(anime) {
             rating: cartoon.score,
             rewatchCount: getRewatchCount(cartoon.tags),
             url: cartoon.url,
-            genres,
             // The following data will be replaced if the anime is downloaded locally
-            subs: false,
+            genres: [],
+            subs: [],
             resolution: false,
             source: false,
             videoCodec: false,
@@ -172,7 +173,19 @@ function processLocalData(filename, size, folder) {
         bits: parseInt(bits, 10),
         audioCodec,
         size,
-    })
+    }
+}
+
+/**
+ * Process all anime from the API by adding data from the cache to them.
+ */
+function processCacheData() {
+    for (const title of Object.keys(ALL_ANIME.anime)) {
+        const anime = ALL_ANIME.anime[title]
+
+        // eslint-disable-next-line camelcase
+        anime.genres = CACHE.anime[anime.id].genres.filter(({ type }) => type === 'anime').map(({ mal_id }) => mal_id)
+    }
 }
 
 /**
@@ -246,13 +259,12 @@ getApiData().then(async () => {
             animeIds.push(id)
         }
 
-        const hasUpdatedCache = await updateCache(CACHE, animeIds)
+        await updateCache(CACHE, animeIds)
 
-        // If the cache was indeed updated with new anime, save it
-        if (hasUpdatedCache) {
-            await saveCache(CACHE)
-        }
+        await saveCache(CACHE, true)
     }
+
+    processCacheData()
 
     // Go through each main anime folder
     await eachSeries(ANIME_FOLDERS, async animeFolder => {
@@ -300,7 +312,9 @@ getApiData().then(async () => {
         })
 
         // Empty log to separate single line logs between anime folders
-        console.log()
+        if (contents.length) {
+            console.log()
+        }
     })
 
     // Get the current anime data to compare if it has been updated
@@ -313,6 +327,7 @@ getApiData().then(async () => {
     }
 
     currentAnimeData = JSON.parse(currentAnimeData)
+
     currentAnimeData = JSON.stringify(currentAnimeData.anime)
 
     if (currentAnimeData === JSON.stringify(ALL_ANIME.anime)) {
