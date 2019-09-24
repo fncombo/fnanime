@@ -17,16 +17,16 @@ import { FILTERS } from 'js/data/Filters'
 import ModalContainer from 'js/components/Modal'
 
 // Width of the gallery item
-const imgWidth = 165
+const IMG_WIDTH = 165
 
 // Offset of when to start showing the component and images offscreen
-const rootMargin = '300px'
+const ROOT_MARGIN = '300px'
 
 // Intersection options for the component and individual items
-const galleryOptions = { rootMargin }
+const GALLERY_OPTIONS = { rootMargin: ROOT_MARGIN }
 
-const galleryItemOptions = {
-    rootMargin,
+const GALLERY_ITEM_OPTIONS = {
+    rootMargin: ROOT_MARGIN,
     triggerOnce: true,
 }
 
@@ -35,7 +35,7 @@ const galleryItemOptions = {
  */
 function Gallery() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ ref, inView ] = useInView(galleryOptions)
+    const [ ref, inView ] = useInView(GALLERY_OPTIONS)
 
     // Do not render and do all this calculating and creating hundreds of components if not in view
     if (!inView) {
@@ -106,7 +106,7 @@ function GalleryHeading({ children }) {
 function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
     const [ tooltipStyle, setTooltipStyle ] = useState({})
-    const [ itemRef, inView ] = useInView(galleryItemOptions)
+    const [ itemRef, inView ] = useInView(GALLERY_ITEM_OPTIONS)
     const tooltipRef = useRef(null)
 
     // Do not render until the item is close to being visible to the user to prevent useless image loading
@@ -124,13 +124,13 @@ function GalleryItem(anime) {
         }
 
         // Close to the left
-        if (itemBounds.x <= (imgWidth / 4)) {
+        if (itemBounds.x <= (IMG_WIDTH / 4)) {
             setHoverClass('is-left')
 
             style.left = currentTarget.offsetLeft
 
         // Close to the right
-        } else if (itemBounds.x + imgWidth + (imgWidth / 8) >= window.innerWidth) {
+        } else if (itemBounds.x + IMG_WIDTH + (IMG_WIDTH / 8) >= window.innerWidth) {
             setHoverClass('is-right')
 
             style.right = gallerySectionBounds.width - currentTarget.offsetLeft - itemBounds.width

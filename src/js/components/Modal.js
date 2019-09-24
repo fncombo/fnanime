@@ -32,10 +32,10 @@ import Icon from 'js/helpers/Icon'
 import Badge from 'js/components/Badge'
 
 // DOM element into which to portal the modal
-const modalEl = document.getElementById('modal')
+const MODAL_ELEMENT = document.getElementById('modal')
 
 // Initial state of the modal
-const modalInitialState = {
+const INITIAL_MODAL_STATE = {
     isLoaded: false,
     isError: false,
     apiData: {},
@@ -77,7 +77,7 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
                 {children}
             </Element>
             {isModalOpen &&
-                ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, modalEl)
+                ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)
             }
         </>
     )
@@ -179,7 +179,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
  * Body of the modal which contains all the information about the anime.
  */
 function ModalBody({ closeModal, changeAnime, ...anime }) {
-    const [ modalState, setModalState ] = useState(modalInitialState)
+    const [ modalState, setModalState ] = useState(INITIAL_MODAL_STATE)
     const { isLoaded, apiData } = modalState
 
     useEffect(() => {

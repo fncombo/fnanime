@@ -27,7 +27,7 @@ import Pagination from 'js/components/Pagination'
 import ModalContainer from 'js/components/Modal'
 
 // Default table state
-const initialTableState = {
+const INITIAL_TABLE_STATE = {
     page: 1,
 }
 
@@ -55,7 +55,7 @@ function tablePageReducer(state, action) {
  */
 function Table() {
     const { state: { anime } } = useContext(GlobalState)
-    const [ state, dispatch ] = useReducer(tablePageReducer, initialTableState)
+    const [ state, dispatch ] = useReducer(tablePageReducer, INITIAL_TABLE_STATE)
 
     if (!anime.length) {
         return (

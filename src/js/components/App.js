@@ -9,7 +9,7 @@ import 'scss/App.scss'
 import 'scss/fn.scss'
 
 // Data
-import { updated as LocalDataUpdateTime } from 'js/data/Data.json'
+import { updated as updateTime } from 'js/data/Data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
 import { DEFAULTS, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
 
@@ -25,23 +25,23 @@ const Statistics = lazy(() => import('js/components/Statistics'))
 const Gallery = lazy(() => import('js/components/Gallery'))
 
 // Local data last update time
-const localDataUpdateTime = new Intl.DateTimeFormat('en-GB', {
+const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-}).format(LocalDataUpdateTime.updated)
+}).format(updateTime)
 
 // Toggle to stop API from being updated
-const suppressApiUpdate = false
+const SUPPRESS_API_UPDATE = false
 
 // Initial global state
-const initialState = {
+const INITIAL_STATE = {
     anime: getAnime(),
     searchQuery: '',
     activeSorting: { ...DEFAULTS.sorting },
     activeFilters: { ...DEFAULTS.filters },
-    apiUpdated: suppressApiUpdate,
+    apiUpdated: SUPPRESS_API_UPDATE,
     apiError: false,
 }
 
@@ -93,7 +93,7 @@ function globalReducer(state, action) {
 
     case ACTIONS.RESET:
         return {
-            ...initialState,
+            ...INITIAL_STATE,
             anime: getAnime(),
             apiUpdated: state.apiUpdated,
         }
@@ -107,7 +107,7 @@ function globalReducer(state, action) {
  * ZA WARUDO
  */
 function App() {
-    const [ state, dispatch ] = useReducer(globalReducer, initialState)
+    const [ state, dispatch ] = useReducer(globalReducer, INITIAL_STATE)
     const { apiUpdated, apiError } = state
     let updateStatusMessage
 
@@ -120,7 +120,7 @@ function App() {
     }
 
     useEffect(() => {
-        if (apiUpdated || suppressApiUpdate) {
+        if (apiUpdated || SUPPRESS_API_UPDATE) {
             return
         }
 
@@ -176,8 +176,8 @@ function App() {
             </Suspense>
             <div className="container">
                 <ul className="updated-times has-text-centered">
-                    <li>Local anime data last updated on {localDataUpdateTime}</li>
-                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${localDataUpdateTime}`}</li>
+                    <li>Local anime data last updated on {UPDATE_TIME}</li>
+                    <li>MyAnimeList.net API data last updated {apiUpdated ? 'now' : `on ${UPDATE_TIME}`}</li>
                     <li>All rankings are my own subjective opinion</li>
                 </ul>
             </div>
