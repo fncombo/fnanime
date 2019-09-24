@@ -17,14 +17,19 @@ const singleLineLog = require('single-line-log').stdout
 const { removeInvalidChars, getRewatchCount } = require('helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('cache.js')
 
-// Constants
-const ANIME_JSON_LOCATION = '../src/js/data/Anime.json'
+// Location of the file to save data to
+const ANIME_JSON_LOCATION = '../src/js/data/Data.json'
+
+// MyAnimeList.net username
 const MAL_USERNAME = 'fncombo'
+
+// Location of all the anime
+const ROOT_LOCATION = 'E:/Anime/'
 const ANIME_FOLDERS = [
-    'E:/Anime/Series',
-    'E:/Anime/Movies',
-    'E:/Anime/Ghibli Movies',
-    'E:/Anime/Special and OVA',
+    `${ROOT_LOCATION}Series`,
+    `${ROOT_LOCATION}Movies`,
+    `${ROOT_LOCATION}Ghibli Movies`,
+    `${ROOT_LOCATION}Special and OVA`,
 ]
 
 // Type lookup
