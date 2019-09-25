@@ -64,10 +64,7 @@ const IGNORED_FOLDERS = [
 ]
 
 // Collected anime data from API and local files
-const ALL_ANIME = {
-    updated: Date.now(),
-    anime: {},
-}
+const ALL_ANIME = {}
 
 // Detailed cached data about each anime
 let CACHE
@@ -86,7 +83,7 @@ function processApiData(anime) {
         // Create an array of all anime genre IDs for this anime
 
         // Start compiling clean data that we need
-        ALL_ANIME.anime[removeInvalidChars(title)] = {
+        ALL_ANIME[removeInvalidChars(title)] = {
             id: cartoon.mal_id,
             title,
             type: TYPE_LOOKUP[cartoon.type],
@@ -124,18 +121,18 @@ function processLocalData(filename, size, folder) {
     const [ title ] = filename.match(/.+(?=\s\[)/)
 
     // Check if this anime name exists in the API data first
-    if (!has(ALL_ANIME.anime, title)) {
+    if (!has(ALL_ANIME, title)) {
         throw new Error(`Local anime ${yellow(title)} was not found in API data`)
     }
 
     // Check if this anime is a duplicate if it already has a local size saved
-    if (ALL_ANIME.anime[title].size > 0) {
+    if (ALL_ANIME[title].size > 0) {
         throw new Error(`Duplicate entry found for anime ${yellow(title)}`)
     }
 
     // Check that this anime is in the correct folder based on type
     const [ actualFolderName ] = folder.match(/[\s\w]+$/)
-    const expectedFolderName = TYPE_FOLDER_LOOKUP[ALL_ANIME.anime[title].type]
+    const expectedFolderName = TYPE_FOLDER_LOOKUP[ALL_ANIME[title].type]
 
     // Only check if the folder is not ignored
     if (!IGNORED_FOLDERS.includes(actualFolderName) && actualFolderName !== expectedFolderName) {
@@ -147,8 +144,8 @@ function processLocalData(filename, size, folder) {
 
     // Check to see if the filename has all the data tags
     if (!TAGS_REGEXP.test(filename)) {
-        ALL_ANIME.anime[title] = {
-            ...ALL_ANIME.anime[title],
+        ALL_ANIME[title] = {
+            ...ALL_ANIME[title],
             subs: null,
             resolution: null,
             source: null,
@@ -164,8 +161,8 @@ function processLocalData(filename, size, folder) {
     // Get all data tags
     const [ , subs, resolution, source, videoCodec, bits, audioCodec ] = filename.match(TAGS_REGEXP)
 
-    ALL_ANIME.anime[title] = {
-        ...ALL_ANIME.anime[title],
+    ALL_ANIME[title] = {
+        ...ALL_ANIME[title],
         subs: subs.split(', '),
         resolution: parseInt(resolution, 10),
         source,
@@ -180,8 +177,8 @@ function processLocalData(filename, size, folder) {
  * Process all anime from the API by adding data from the cache to them.
  */
 function processCacheData() {
-    for (const title of Object.keys(ALL_ANIME.anime)) {
-        const anime = ALL_ANIME.anime[title]
+    for (const title of Object.keys(ALL_ANIME)) {
+        const anime = ALL_ANIME[title]
         const cachedAnime = CACHE.anime[anime.id]
 
         // eslint-disable-next-line camelcase
@@ -258,7 +255,7 @@ getApiData().then(async () => {
         // Attempt to update cache with any missing anime
         const animeIds = []
 
-        for (const { id } of Object.values(ALL_ANIME.anime)) {
+        for (const { id } of Object.values(ALL_ANIME)) {
             animeIds.push(id)
         }
 
@@ -322,12 +319,12 @@ getApiData().then(async () => {
 
     // Create object of all anime data
     const saveData = {
-        updated: ALL_ANIME.updated,
+        updated: Date.now(),
         anime: {},
     }
 
-    for (const title of Object.keys(ALL_ANIME.anime)) {
-        const anime = ALL_ANIME.anime[title]
+    for (const title of Object.keys(ALL_ANIME)) {
+        const anime = ALL_ANIME[title]
 
         saveData.anime[anime.id] = anime
     }
