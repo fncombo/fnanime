@@ -223,8 +223,8 @@ function Summary() {
         return null
     }
 
-    const downloadedCount = anime.filter(({ size }) => !!size).length.toLocaleString()
-    const notDownloadedCount = (anime.length - downloadedCount).toLocaleString()
+    const downloadedCount = anime.filter(({ size }) => !!size).length
+    const notDownloadedCount = anime.length - downloadedCount
 
     if (downloadedCount && notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> + {notDownloadedCount} anime</span>
