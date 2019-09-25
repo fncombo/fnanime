@@ -177,13 +177,25 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
         ] }) => ({ ...item, highlight }))
     }
 
-    // Make a copy of results and map all false values to null so that they are always sorted to the bottom
+    // Make a copy of results and re-map certain data without affecting current data to improve sorting
     let sortResults = clone(results)
 
     for (const anime of sortResults) {
         for (const [ prop, value ] of Object.entries(anime)) {
-            if (value === false) {
-                anime[prop] = null
+            // Replace false and 0 values with undefined so that they are always sorted to the bottom
+            if (value === false || value === 0) {
+                anime[prop] = undefined
+            } else if (Array.isArray(value)) {
+                // Extract value from array with 1 item
+                if (value.length === 1) {
+                    [ anime[prop] ] = value
+
+                // For arrays with more than one value, sort it alphabetically and get the first one
+                } else {
+                    fastSort(value)
+
+                    anime[prop] = value.shift()
+                }
             }
         }
     }
