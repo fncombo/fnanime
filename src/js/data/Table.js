@@ -79,7 +79,7 @@ const TABLE_COLUMNS = {
     },
     source: {
         text: 'Source',
-        defaultSorting: SORTING_ORDERS.desc,
+        defaultSorting: SORTING_ORDERS.asc,
         size: COLUMN_SIZES.small,
     },
     videoCodec: {
