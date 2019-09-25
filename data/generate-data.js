@@ -320,6 +320,18 @@ getApiData().then(async () => {
         }
     })
 
+    // Create object of all anime data
+    const saveData = {
+        updated: ALL_ANIME.updated,
+        anime: {},
+    }
+
+    for (const title of Object.keys(ALL_ANIME.anime)) {
+        const anime = ALL_ANIME.anime[title]
+
+        saveData.anime[anime.id] = anime
+    }
+
     // Get the current anime data to compare if it has been updated
     let currentAnimeData
 
@@ -330,7 +342,7 @@ getApiData().then(async () => {
 
         currentAnimeData = JSON.stringify(currentAnimeData.anime)
 
-        if (currentAnimeData === JSON.stringify(ALL_ANIME.anime)) {
+        if (currentAnimeData === JSON.stringify(saveData.anime)) {
             console.log(green('Anime data JSON is already up-to-date!'))
 
             return
@@ -341,7 +353,7 @@ getApiData().then(async () => {
 
     // Save all anime data
     try {
-        await writeFile(ANIME_JSON_LOCATION, beautify(JSON.stringify(ALL_ANIME)))
+        await writeFile(ANIME_JSON_LOCATION, beautify(JSON.stringify(saveData)))
     } catch (error) {
         throw new Error('Could not save anime data JSON')
     }
