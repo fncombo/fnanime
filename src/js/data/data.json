@@ -1,5 +1,5 @@
 {
-    "updated": 1569527344940,
+    "updated": 1569536942848,
     "anime": {
         "20": {
             "id": 20,
@@ -4847,7 +4847,7 @@
             "subs": ["FFF"],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.254",
+            "videoCodec": "H.256",
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 35629183173,
@@ -5043,11 +5043,11 @@
             "title": "The Last: Naruto the Movie",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/10/67631.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": 0,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/16870/The_Last__Naruto_the_Movie",
             "genres": [1, 31, 22, 17, 27],
