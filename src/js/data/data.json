@@ -1,5 +1,5 @@
 {
-    "updated": 1569536942848,
+    "updated": 1569537412317,
     "anime": {
         "20": {
             "id": 20,
@@ -4847,7 +4847,7 @@
             "subs": ["FFF"],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.256",
+            "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 35629183173,
