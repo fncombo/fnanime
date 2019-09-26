@@ -1,3 +1,6 @@
+// Libraries
+import prettyMilliseconds from 'pretty-ms'
+
 /**
  * Addition reducer.
  */
@@ -45,8 +48,16 @@ function calculateTotals(anime, property, countOnly) {
     }
 }
 
+/**
+ * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
+ */
+function formatDuration(duration) {
+    return prettyMilliseconds(duration * 60000, { verbose: true })
+}
+
 // Exports
 export {
     add,
     calculateTotals,
+    formatDuration,
 }

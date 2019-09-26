@@ -13,16 +13,9 @@ import { GlobalState } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
-import { add, calculateTotals } from 'js/helpers/Statistics'
+import { add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
-
-/**
- * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
- */
-function formatDuration(duration) {
-    return prettyMilliseconds(duration * 60000, { verbose: true })
-}
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.
