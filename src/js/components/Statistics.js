@@ -69,6 +69,12 @@ function Statistics() {
                 <div className="column">
                     <h6>Total Number of Episodes</h6>
                 </div>
+                <div className="column">
+                    <h6>Total Duration</h6>
+                </div>
+                <div className="column">
+                    <h6>Total Watch Time</h6>
+                </div>
             </div>
             {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
                 .map(rating =>
@@ -91,6 +97,12 @@ function Statistics() {
                     <div className="column">
                         {totals.episode.sum ? totals.episode.sum.toLocaleString() : <>&mdash;</>}
                     </div>
+                    <div className="column">
+                        {totals.totalDuration.sum ? formatDuration(totals.totalDuration.sum) : <>&mdash;</>}
+                    </div>
+                    <div className="column">
+                        {totals.watchTime.sum ? formatDuration(totals.watchTime.sum) : <>&mdash;</>}
+                    </div>
                 </div>
             }
         </div>
@@ -100,7 +112,7 @@ function Statistics() {
 /**
  * Row of statistics for a single rating.
  */
-function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode } }) {
+function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode, totalDuration, watchTime } }) {
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
@@ -109,6 +121,8 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
             <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
             <StatisticsColumn rating={rating} data={episode} />
+            <StatisticsColumn rating={rating} data={totalDuration} formatFunction={formatDuration} />
+            <StatisticsColumn rating={rating} data={watchTime} formatFunction={formatDuration} />
         </div>
     )
 }
