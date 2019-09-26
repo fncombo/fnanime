@@ -400,6 +400,9 @@ function LoadingText({ children }) {
     return <Loading className="loading-text">{children}</Loading>
 }
 
+/**
+ * Message for when an error has occurred while fetching data and it can't be displayed.
+ */
 function LoadingError() {
     return (
         <span className="modal-error has-text-danger">
