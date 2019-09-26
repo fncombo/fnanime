@@ -138,11 +138,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     return (
         <div className="modal">
             <div className="modal-background" onClick={closeModal} />
-            <NavigationButton
-                direction={ACTIONS.PREV_ANIME}
-                changeAnime={changeAnime}
-                currentAnimeId={anime.id}
-            />
+            <NavigationButton direction={ACTIONS.PREV_ANIME} changeAnime={changeAnime} currentAnimeId={anime.id} />
             <div className={`modal-card has-background-${FILTERS.status.colorCodes[anime.status]}`}>
                 <div className="modal-card-head">
                     <h5 className="modal-card-title">
@@ -156,11 +152,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                     <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
                 </div>
             </div>
-            <NavigationButton
-                direction={ACTIONS.NEXT_ANIME}
-                changeAnime={changeAnime}
-                currentAnimeId={anime.id}
-            />
+            <NavigationButton direction={ACTIONS.NEXT_ANIME} changeAnime={changeAnime} currentAnimeId={anime.id} />
         </div>
     )
 }
