@@ -21,7 +21,6 @@ import { FILTERS } from 'js/data/Filters'
 import {
     getNestedProperty,
     replaceSpecialChars,
-    convertDuration,
     getAdjacentAnime,
     getAnimeApiData,
 } from 'js/helpers/Modal'

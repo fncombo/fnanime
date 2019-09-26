@@ -30,20 +30,6 @@ function replaceSpecialChars(string) {
 }
 
 /**
- * Convert duration returned by the API into milliseconds.
- */
-function convertDuration(duration) {
-    // Convert hours into minutes
-    if (/hr/i.test(duration)) {
-        const [ hours, minutes ] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
-
-        return ((parseInt(hours, 10) * 60) + (minutes ? parseInt(minutes, 10) : 0)) * 60000
-    }
-
-    return parseInt(duration, 10) * 60000
-}
-
-/**
  * Get the previous or next anime in the current table.
  */
 function getAdjacentAnime(allAnime, animeId, direction) {
@@ -135,7 +121,6 @@ async function getAnimeApiData(animeId, isRetry = false) {
 export {
     getNestedProperty,
     replaceSpecialChars,
-    convertDuration,
     getAdjacentAnime,
     getAnimeApiData,
 }
