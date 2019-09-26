@@ -217,9 +217,10 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         {FILTERS.type.descriptions[anime.type]}
                         <Episodes episodes={anime.episodes} />
                     </p>
-                    <LoadingText>
-                        <p>Aired: <ApiData property="aired.string" fallback="N/A" /></p>
-                    </LoadingText>
+                    {anime.airStatus === 2
+                        ? <LoadingText><p>Aired: <ApiData property="aired.string" fallback="N/A" /></p></LoadingText>
+                        : <p>{FILTERS.airStatus.descriptions[anime.airStatus]}</p>
+                    }
                     <div className="status">
                         <Badge {...anime} />
                     </div>
