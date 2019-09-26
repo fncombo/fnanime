@@ -12,7 +12,7 @@ import { GlobalState } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
-import { add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
+import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
@@ -30,18 +30,20 @@ function Statistics() {
         return <div className="statistics-placeholder" ref={ref} />
     }
 
+    const allAnime = statisticsAnime(anime)
+
     // No anime to display
-    if (!anime.length) {
+    if (!allAnime.length) {
         return null
     }
 
     // How many anime there are for each of these data points
     const totals = {
-        rating: calculateTotals(anime, 'rating', true),
-        size: calculateTotals(anime, 'size'),
-        episodes: calculateTotals(anime, 'episodes'),
-        totalDuration: calculateTotals(anime, 'totalDuration'),
-        watchTime: calculateTotals(anime, 'watchTime'),
+        rating: calculateTotals(allAnime, 'rating', true),
+        size: calculateTotals(allAnime, 'size'),
+        episodes: calculateTotals(allAnime, 'episodes'),
+        totalDuration: calculateTotals(allAnime, 'totalDuration'),
+        watchTime: calculateTotals(allAnime, 'watchTime'),
     }
 
     // First and last non-zero values to exclude them from being shown

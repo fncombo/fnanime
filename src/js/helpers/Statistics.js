@@ -2,6 +2,13 @@
 import prettyMilliseconds from 'pretty-ms'
 
 /**
+ * Only include watching, completed, on-hold, and dropped anime in statistics.
+ */
+function statisticsAnime(anime) {
+    return anime.filter(({ status }) => status < 5)
+}
+
+/**
  * Addition reducer.
  */
 function add(a, b) {
@@ -12,10 +19,7 @@ function add(a, b) {
  * Returns a 2D array of each anime status within each rating, populated with either count
  * of matched anime or total of all data.
  */
-function calculateTotals(allAnime, property, countOnly) {
-    // Only include watching, completed, on-hold, and dropped anime
-    const anime = allAnime.filter(({ status }) => status < 5)
-
+function calculateTotals(anime, property, countOnly) {
     // Create the 2D array to populate
     const totals = [ ...Array(11) ].map(() => Array(7).fill(0))
 
@@ -60,6 +64,7 @@ function formatDuration(duration) {
 
 // Exports
 export {
+    statisticsAnime,
     add,
     calculateTotals,
     formatDuration,
