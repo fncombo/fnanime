@@ -41,16 +41,6 @@ const INITIAL_MODAL_STATE = {
     apiData: {},
 }
 
-// Function to process title synonyms
-function formatSynonyms(synonyms) {
-    // Fallback if for some reason this isn't an array as it should be
-    if (!Array.isArray(synonyms) || !synonyms.length) {
-        return <>&mdash;</>
-    }
-
-    return synonyms.join(', ')
-}
-
 /**
  * Makes any element a button to open a portal to a modal.
  */
@@ -264,7 +254,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <li>
                             <strong>Synonyms: </strong>
                             <LoadingInline>
-                                <ApiData property="title_synonyms" process={formatSynonyms} />
+                                <ApiData property="title_synonyms" />
                             </LoadingInline>
                         </li>
                     </ul>
@@ -448,11 +438,11 @@ function LoadingParagraph({ children }) {
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data or the fallback.
  */
-function ApiData({ property, fallback = <>&mdash;</>, process }) {
+function ApiData({ property, fallback = <>&mdash;</> }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
-    return (process ? process(data) : data) || fallback
+    return (Array.isArray(data) ? data.join(', ') : data) || fallback
 }
 
 /**
