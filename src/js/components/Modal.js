@@ -212,6 +212,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     <LoadingText>
                         <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
+                    <LoadingText>
+                        <p>Rank: <ApiData property="rank" fallback="N/A">{rank => `#${rank}`}</ApiData></p>
+                    </LoadingText>
                     <hr />
                     <p>
                         {FILTERS.type.descriptions[anime.type]}
@@ -246,7 +249,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <li>
                             <strong>Synonyms: </strong>
                             <LoadingInline>
-                                <ApiData property="title_synonyms" />
+                                <ApiData property="title_synonyms">
+                                    {synonyms => <MultiValueData data={synonyms} />}
+                                </ApiData>
                             </LoadingInline>
                         </li>
                     </ul>
@@ -426,11 +431,19 @@ function LoadingParagraph({ children }) {
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data or the fallback.
  */
-function ApiData({ property, fallback = <>&mdash;</> }) {
+function ApiData({ property, fallback = <>&mdash;</>, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
-    return (Array.isArray(data) ? data.join(', ') : data) || fallback
+    if (!data) {
+        return fallback
+    }
+
+    if (typeof children === 'function') {
+        return children(data)
+    }
+
+    return data
 }
 
 /**
@@ -506,7 +519,15 @@ function Duration({ episodeDuration, episodes }) {
  * Array of values which should be comma-separated. Can look up description from filters.
  */
 function MultiValueData({ data, ...anime }) {
-    if (!data || !has(anime, data) || !Array.isArray(anime[data]) || !anime[data].length) {
+    if (!data) {
+        return <>&mdash;</>
+    }
+
+    if (Array.isArray(data) && data.length) {
+        return data.join(', ')
+    }
+
+    if (!has(anime, data) || !Array.isArray(anime[data]) || !anime[data].length) {
         return <>&mdash;</>
     }
 
