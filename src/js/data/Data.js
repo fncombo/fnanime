@@ -105,6 +105,10 @@ for (const animeId of Object.keys(ANIME_OBJECT)) {
     anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : 0
 
     anime.fileQuality = getFileQuality(anime)
+
+    anime.totalDuration = anime.episodeDuration * anime.episodes
+
+    anime.watchTime = anime.episodeDuration * anime.episodesWatched * (anime.rewatchCount + 1)
 }
 
 /**

@@ -12,7 +12,7 @@ import { GlobalState } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
-import { add, calculateTotals } from 'js/helpers/Statistics'
+import { add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
@@ -39,7 +39,9 @@ function Statistics() {
     const totals = {
         rating: calculateTotals(anime, 'rating', true),
         size: calculateTotals(anime, 'size'),
-        episode: calculateTotals(anime, 'episodes'),
+        episodes: calculateTotals(anime, 'episodes'),
+        totalDuration: calculateTotals(anime, 'totalDuration'),
+        watchTime: calculateTotals(anime, 'watchTime'),
     }
 
     // First and last non-zero values to exclude them from being shown
@@ -69,6 +71,12 @@ function Statistics() {
                 <div className="column">
                     <h6>Total Number of Episodes</h6>
                 </div>
+                <div className="column">
+                    <h6>Total Duration</h6>
+                </div>
+                <div className="column">
+                    <h6>Total Watch Time</h6>
+                </div>
             </div>
             {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
                 .map(rating =>
@@ -89,7 +97,13 @@ function Statistics() {
                         {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
                     <div className="column">
-                        {totals.episode.sum ? totals.episode.sum.toLocaleString() : <>&mdash;</>}
+                        {totals.episodes.sum ? totals.episodes.sum.toLocaleString() : <>&mdash;</>}
+                    </div>
+                    <div className="column">
+                        {totals.totalDuration.sum ? formatDuration(totals.totalDuration.sum) : <>&mdash;</>}
+                    </div>
+                    <div className="column">
+                        {totals.watchTime.sum ? formatDuration(totals.watchTime.sum) : <>&mdash;</>}
                     </div>
                 </div>
             }
@@ -100,7 +114,7 @@ function Statistics() {
 /**
  * Row of statistics for a single rating.
  */
-function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode } }) {
+function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes, totalDuration, watchTime } }) {
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
@@ -108,7 +122,9 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode }
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
-            <StatisticsColumn rating={rating} data={episode} />
+            <StatisticsColumn rating={rating} data={episodes} />
+            <StatisticsColumn rating={rating} data={totalDuration} formatFunction={formatDuration} />
+            <StatisticsColumn rating={rating} data={watchTime} formatFunction={formatDuration} />
         </div>
     )
 }
@@ -130,7 +146,7 @@ function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
-            {!!showPercentage && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
+            {!!showPercentage && sum !== data.count && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {

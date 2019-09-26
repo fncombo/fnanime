@@ -1,3 +1,6 @@
+// Libraries
+import prettyMilliseconds from 'pretty-ms'
+
 /**
  * Addition reducer.
  */
@@ -15,11 +18,11 @@ function calculateTotals(anime, property, countOnly) {
 
     // Increment the number of matched anime or add up the data
     if (countOnly) {
-        for ( const { rating, status } of anime) {
+        for (const { rating, status } of anime) {
             totals[rating][status] += 1
         }
     } else {
-        for ( const { rating, status, [property]: value } of anime) {
+        for (const { rating, status, [property]: value } of anime) {
             totals[rating][status] += value
         }
     }
@@ -45,8 +48,16 @@ function calculateTotals(anime, property, countOnly) {
     }
 }
 
+/**
+ * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
+ */
+function formatDuration(duration) {
+    return prettyMilliseconds(duration * 60000, { verbose: true })
+}
+
 // Exports
 export {
     add,
     calculateTotals,
+    formatDuration,
 }

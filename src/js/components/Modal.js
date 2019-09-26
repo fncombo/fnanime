@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom'
 // Libraries
 import has from 'has'
 import classNames from 'classnames'
-import prettyMilliseconds from 'pretty-ms'
 import { SlideDown } from 'react-slidedown'
 
 // Style
@@ -21,10 +20,10 @@ import { FILTERS } from 'js/data/Filters'
 import {
     getNestedProperty,
     replaceSpecialChars,
-    convertDuration,
     getAdjacentAnime,
     getAnimeApiData,
 } from 'js/helpers/Modal'
+import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
@@ -39,16 +38,6 @@ const INITIAL_MODAL_STATE = {
     isLoaded: false,
     isError: false,
     apiData: {},
-}
-
-// Function to process title synonyms
-function formatSynonyms(synonyms) {
-    // Fallback if for some reason this isn't an array as it should be
-    if (!Array.isArray(synonyms) || !synonyms.length) {
-        return <>&mdash;</>
-    }
-
-    return synonyms.join(', ')
 }
 
 /**
@@ -148,11 +137,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     return (
         <div className="modal">
             <div className="modal-background" onClick={closeModal} />
-            <NavigationButton
-                direction={ACTIONS.PREV_ANIME}
-                changeAnime={changeAnime}
-                currentAnimeId={anime.id}
-            />
+            <NavigationButton direction={ACTIONS.PREV_ANIME} changeAnime={changeAnime} currentAnimeId={anime.id} />
             <div className={`modal-card has-background-${FILTERS.status.colorCodes[anime.status]}`}>
                 <div className="modal-card-head">
                     <h5 className="modal-card-title">
@@ -166,11 +151,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
                     <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
                 </div>
             </div>
-            <NavigationButton
-                direction={ACTIONS.NEXT_ANIME}
-                changeAnime={changeAnime}
-                currentAnimeId={anime.id}
-            />
+            <NavigationButton direction={ACTIONS.NEXT_ANIME} changeAnime={changeAnime} currentAnimeId={anime.id} />
         </div>
     )
 }
@@ -231,14 +212,18 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     <LoadingText>
                         <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
+                    <LoadingText>
+                        <p>Rank: <ApiData property="rank" fallback="N/A">{rank => `#${rank}`}</ApiData></p>
+                    </LoadingText>
                     <hr />
                     <p>
                         {FILTERS.type.descriptions[anime.type]}
                         <Episodes episodes={anime.episodes} />
                     </p>
-                    <LoadingText>
-                        <p>Aired: <ApiData property="aired.string" fallback="N/A" /></p>
-                    </LoadingText>
+                    {anime.airStatus === 2
+                        ? <LoadingText><p>Aired: <ApiData property="aired.string" fallback="N/A" /></p></LoadingText>
+                        : <p>{FILTERS.airStatus.descriptions[anime.airStatus]}</p>
+                    }
                     <div className="status">
                         <Badge {...anime} />
                     </div>
@@ -264,7 +249,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <li>
                             <strong>Synonyms: </strong>
                             <LoadingInline>
-                                <ApiData property="title_synonyms" process={formatSynonyms} />
+                                <ApiData property="title_synonyms">
+                                    {synonyms => <MultiValueData data={synonyms} />}
+                                </ApiData>
                             </LoadingInline>
                         </li>
                     </ul>
@@ -277,19 +264,23 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                         <li>
                             <strong>Duration: </strong>
-                            <LoadingInline>
-                                <Duration {...apiData} {...anime} />
-                            </LoadingInline>
+                            <Duration {...anime} />
                         </li>
                         <li>
                             <strong>Watch Time: </strong>
-                            <LoadingInline>
-                                <WatchTime {...apiData} {...anime} />
-                            </LoadingInline>
+                            <WatchTime {...anime} />
                         </li>
                         <li>
                             <strong>Release: </strong>
-                            {anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}
+                            <MultiValueData data="subs" {...anime} />
+                        </li>
+                        <li>
+                            <strong>Genres: </strong>
+                            <MultiValueData data="genres" {...anime} />
+                        </li>
+                        <li>
+                            <strong>Studios: </strong>
+                            <MultiValueData data="studios" {...anime} />
                         </li>
                     </ul>
                     <hr />
@@ -400,6 +391,9 @@ function LoadingText({ children }) {
     return <Loading className="loading-text">{children}</Loading>
 }
 
+/**
+ * Message for when an error has occurred while fetching data and it can't be displayed.
+ */
 function LoadingError() {
     return (
         <span className="modal-error has-text-danger">
@@ -437,34 +431,34 @@ function LoadingParagraph({ children }) {
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data or the fallback.
  */
-function ApiData({ property, fallback = <>&mdash;</>, process }) {
+function ApiData({ property, fallback = <>&mdash;</>, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
-    return (process ? process(data) : data) || fallback
+    if (!data) {
+        return fallback
+    }
+
+    if (typeof children === 'function') {
+        return children(data)
+    }
+
+    return data
 }
 
 /**
  * Display the total watch time of this anime based on episode duration and number of episodes watched.
  */
-function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
-    if (!episodesWatched) {
+function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewatchCount }) {
+    if (!episodeDuration || !episodesWatched) {
         return 'None'
     }
-
-    const convertedDuration = convertDuration(duration)
-
-    if (!convertedDuration) {
-        return 'Unknown'
-    }
-
-    const watchTime = prettyMilliseconds(convertedDuration * episodesWatched * (rewatchCount + 1), { verbose: true })
 
     // If rewatched anime or it's a movie, say how many total times watched
     if (rewatchCount || (episodesWatched && episodes === 1)) {
         return (
             <>
-                {watchTime}
+                {formatDuration(watchTime)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
@@ -476,7 +470,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
     if (episodesWatched) {
         return (
             <>
-                {watchTime}
+                {formatDuration(watchTime)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
                 </span>
@@ -484,7 +478,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         )
     }
 
-    return watchTime
+    return formatDuration(watchTime)
 }
 
 /**
@@ -506,22 +500,44 @@ function Size({ size, episodes }) {
 /**
  * Display the total duration of the anime, and the duration per episode.
  */
-function Duration({ duration, episodes }) {
-    const convertedDuration = convertDuration(duration)
-
-    if (!convertedDuration || !episodes) {
+function Duration({ episodeDuration, episodes }) {
+    if (!episodeDuration || !episodes) {
         return 'Unknown'
     }
 
-    const totalDuration = prettyMilliseconds(convertedDuration * episodes, { verbose: true })
-    const episodeDuration = prettyMilliseconds(convertedDuration, { verbose: true })
-
     return (
         <>
-            {totalDuration}
-            {episodes > 1 && <span className="has-text-grey"> &ndash; {episodeDuration} per episode</span>}
+            {formatDuration(episodeDuration * episodes)}
+            {episodes > 1 &&
+                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration)} per episode</span>
+            }
         </>
     )
+}
+
+/**
+ * Array of values which should be comma-separated. Can look up description from filters.
+ */
+function MultiValueData({ data, ...anime }) {
+    if (!data) {
+        return <>&mdash;</>
+    }
+
+    if (Array.isArray(data) && data.length) {
+        return data.join(', ')
+    }
+
+    if (!has(anime, data) || !Array.isArray(anime[data]) || !anime[data].length) {
+        return <>&mdash;</>
+    }
+
+    return anime[data].map(value => {
+        if (has(FILTERS, data) && has(FILTERS[data].descriptions, value)) {
+            return FILTERS[data].descriptions[value]
+        }
+
+        return value
+    }).join(', ')
 }
 
 /**
