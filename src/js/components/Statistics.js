@@ -53,7 +53,7 @@ function Statistics() {
     const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
         .reverse().map(row => row.reduce(add)).findIndex(index => !!index) - 1
 
-    // Don't show stats if all shown anime are "planned"
+    // Don't show stats if all shown anime aren't rated
     if (firstNonZero + lastNonZero === 0) {
         return null
     }
