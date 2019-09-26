@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 
 // Libraries
 import { useInView } from 'react-intersection-observer'
-import prettyMilliseconds from 'pretty-ms'
 
 // Style
 import 'scss/Statistics.scss'
