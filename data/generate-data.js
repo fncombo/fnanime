@@ -14,7 +14,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Helpers
-const { removeInvalidChars, getRewatchCount } = require('./helpers.js')
+const { removeInvalidChars, getRewatchCount, getDuration } = require('./helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
 
 // Location of the file to save data to
@@ -185,6 +185,8 @@ function processCacheData() {
         anime.genres = cachedAnime.genres.filter(({ type }) => type === 'anime').map(({ mal_id }) => mal_id)
 
         anime.studios = cachedAnime.studios.map(({ name }) => name)
+
+        anime.episodeDuration = getDuration(cachedAnime.duration)
     }
 }
 

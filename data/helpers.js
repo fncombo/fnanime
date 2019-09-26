@@ -48,4 +48,5 @@ function getDuration(duration) {
 module.exports = {
     removeInvalidChars,
     getRewatchCount,
+    getDuration,
 }
