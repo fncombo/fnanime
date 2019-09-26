@@ -270,7 +270,7 @@ const FILTERS = {
  * how many anime match each filter name and filter value.
  */
 Object.defineProperty(FILTERS, 'makeCounts', {
-    value: anime => {
+    value: allAnime => {
         // Get all filter names
         const filterNames = Object.keys(FILTERS)
 
@@ -286,17 +286,17 @@ Object.defineProperty(FILTERS, 'makeCounts', {
         }, {})
 
         // Loop through all anime and increment related filter value counts
-        for (const cartoon of anime) {
+        for (const anime of allAnime) {
             for (const filterName of filterNames) {
                 // If it's an array of filter values, go through each filter value inside and increment it
-                if (Array.isArray(cartoon[filterName])) {
-                    for (const singleFilterValue of cartoon[filterName]) {
+                if (Array.isArray(anime[filterName])) {
+                    for (const singleFilterValue of anime[filterName]) {
                         filterCounts[filterName][singleFilterValue] += 1
                     }
 
                 // Otherwise increment the count for this filter value normally
                 } else {
-                    const filterValue = cartoon[filterName]
+                    const filterValue = anime[filterName]
 
                     filterCounts[filterName][filterValue] += 1
                 }
