@@ -279,15 +279,15 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                         <li>
                             <strong>Release: </strong>
-                            <MultiValueData data={'subs'} {...anime} />
+                            <MultiValueData data="subs" {...anime} />
                         </li>
                         <li>
                             <strong>Genres: </strong>
-                            <MultiValueData data={'genres'} {...anime} />
+                            <MultiValueData data="genres" {...anime} />
                         </li>
                         <li>
                             <strong>Studios: </strong>
-                            <MultiValueData data={'studios'} {...anime} />
+                            <MultiValueData data="studios" {...anime} />
                         </li>
                     </ul>
                     <hr />
