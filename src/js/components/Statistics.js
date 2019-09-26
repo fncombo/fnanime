@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 
 // Libraries
 import { useInView } from 'react-intersection-observer'
+import prettyMilliseconds from 'pretty-ms'
 
 // Style
 import 'scss/Statistics.scss'
@@ -46,7 +47,9 @@ function Statistics() {
     const totals = {
         rating: calculateTotals(anime, 'rating', true),
         size: calculateTotals(anime, 'size'),
-        episode: calculateTotals(anime, 'episodes'),
+        episodes: calculateTotals(anime, 'episodes'),
+        totalDuration: calculateTotals(anime, 'totalDuration'),
+        watchTime: calculateTotals(anime, 'watchTime'),
     }
 
     // First and last non-zero values to exclude them from being shown
@@ -102,7 +105,7 @@ function Statistics() {
                         {totals.size.sum ? fileSize(totals.size.sum) : <>&mdash;</>}
                     </div>
                     <div className="column">
-                        {totals.episode.sum ? totals.episode.sum.toLocaleString() : <>&mdash;</>}
+                        {totals.episodes.sum ? totals.episodes.sum.toLocaleString() : <>&mdash;</>}
                     </div>
                     <div className="column">
                         {totals.totalDuration.sum ? formatDuration(totals.totalDuration.sum) : <>&mdash;</>}
@@ -119,7 +122,7 @@ function Statistics() {
 /**
  * Row of statistics for a single rating.
  */
-function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode, totalDuration, watchTime } }) {
+function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes, totalDuration, watchTime } }) {
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
@@ -127,7 +130,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episode, 
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
-            <StatisticsColumn rating={rating} data={episode} />
+            <StatisticsColumn rating={rating} data={episodes} />
             <StatisticsColumn rating={rating} data={totalDuration} formatFunction={formatDuration} />
             <StatisticsColumn rating={rating} data={watchTime} formatFunction={formatDuration} />
         </div>
