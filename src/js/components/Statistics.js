@@ -17,6 +17,13 @@ import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
 /**
+ * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
+ */
+function formatDuration(duration) {
+    return prettyMilliseconds(duration * 60000, { verbose: true })
+}
+
+/**
  * Show all the ratings, number of anime per rating, and other totals.
  */
 function Statistics() {
