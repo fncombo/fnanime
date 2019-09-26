@@ -154,7 +154,7 @@ function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
-            {!!showPercentage && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
+            {!!showPercentage && sum !== data.count && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {
