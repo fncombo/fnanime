@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom'
 // Libraries
 import has from 'has'
 import classNames from 'classnames'
-import prettyMilliseconds from 'pretty-ms'
 import { SlideDown } from 'react-slidedown'
 
 // Style
