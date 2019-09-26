@@ -25,6 +25,7 @@ import {
     getAdjacentAnime,
     getAnimeApiData,
 } from 'js/helpers/Modal'
+import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
@@ -267,15 +268,11 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                         <li>
                             <strong>Duration: </strong>
-                            <LoadingInline>
-                                <Duration {...apiData} {...anime} />
-                            </LoadingInline>
+                            <Duration {...anime} />
                         </li>
                         <li>
                             <strong>Watch Time: </strong>
-                            <LoadingInline>
-                                <WatchTime {...apiData} {...anime} />
-                            </LoadingInline>
+                            <WatchTime {...anime} />
                         </li>
                         <li>
                             <strong>Release: </strong>
@@ -448,24 +445,16 @@ function ApiData({ property, fallback = <>&mdash;</> }) {
 /**
  * Display the total watch time of this anime based on episode duration and number of episodes watched.
  */
-function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
-    if (!episodesWatched) {
+function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewatchCount }) {
+    if (!episodeDuration || !episodesWatched) {
         return 'None'
     }
-
-    const convertedDuration = convertDuration(duration)
-
-    if (!convertedDuration) {
-        return 'Unknown'
-    }
-
-    const watchTime = prettyMilliseconds(convertedDuration * episodesWatched * (rewatchCount + 1), { verbose: true })
 
     // If rewatched anime or it's a movie, say how many total times watched
     if (rewatchCount || (episodesWatched && episodes === 1)) {
         return (
             <>
-                {watchTime}
+                {formatDuration(watchTime)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
@@ -477,7 +466,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
     if (episodesWatched) {
         return (
             <>
-                {watchTime}
+                {formatDuration(watchTime)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
                 </span>
@@ -485,7 +474,7 @@ function WatchTime({ duration, episodes, episodesWatched, rewatchCount }) {
         )
     }
 
-    return watchTime
+    return formatDuration(watchTime)
 }
 
 /**
@@ -507,20 +496,17 @@ function Size({ size, episodes }) {
 /**
  * Display the total duration of the anime, and the duration per episode.
  */
-function Duration({ duration, episodes }) {
-    const convertedDuration = convertDuration(duration)
-
-    if (!convertedDuration || !episodes) {
+function Duration({ episodeDuration, episodes }) {
+    if (!episodeDuration || !episodes) {
         return 'Unknown'
     }
 
-    const totalDuration = prettyMilliseconds(convertedDuration * episodes, { verbose: true })
-    const episodeDuration = prettyMilliseconds(convertedDuration, { verbose: true })
-
     return (
         <>
-            {totalDuration}
-            {episodes > 1 && <span className="has-text-grey"> &ndash; {episodeDuration} per episode</span>}
+            {formatDuration(episodeDuration * episodes)}
+            {episodes > 1 &&
+                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration)} per episode</span>
+            }
         </>
     )
 }
