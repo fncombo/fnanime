@@ -9,10 +9,6 @@ import { anime as ANIME_OBJECT } from 'js/data/data.json'
 import { SORTING_ORDERS } from 'js/data/Table'
 import { FILTERS } from 'js/data/Filters'
 
-for (const animeId of Object.keys(ANIME_OBJECT)) {
-    ANIME_OBJECT[animeId].episodeDuration = ANIME_OBJECT[animeId].type === 1 ? 24 : 120
-}
-
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
