@@ -18,6 +18,32 @@ function getRewatchCount(tags) {
     return match ? parseInt(match[1], 10) : 0
 }
 
+/**
+ * Extract the total duration in minutes from API data.
+ */
+function getDuration(duration) {
+    if (!duration) {
+        return 0
+    }
+
+    // Convert hours into minutes
+    if (/hr/i.test(duration)) {
+        const [ , hours, minutes ] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
+
+        return (parseInt(hours, 10) * 60) + (minutes ? parseInt(minutes, 10) : 0)
+    }
+
+    if (/\d+/.test(duration)) {
+        const [ digits ] = duration.match(/\d+/)
+
+        if (digits) {
+            return parseInt(digits, 10)
+        }
+    }
+
+    return 0
+}
+
 // Exports
 module.exports = {
     removeInvalidChars,
