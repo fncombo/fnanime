@@ -289,7 +289,15 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                         <li>
                             <strong>Release: </strong>
-                            {anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}
+                            <MultiValueData data={'subs'} {...anime} />
+                        </li>
+                        <li>
+                            <strong>Genres: </strong>
+                            <MultiValueData data={'genres'} {...anime} />
+                        </li>
+                        <li>
+                            <strong>Studios: </strong>
+                            <MultiValueData data={'studios'} {...anime} />
                         </li>
                     </ul>
                     <hr />
@@ -525,6 +533,23 @@ function Duration({ duration, episodes }) {
             {episodes > 1 && <span className="has-text-grey"> &ndash; {episodeDuration} per episode</span>}
         </>
     )
+}
+
+/**
+ * Array of values which should be comma-separated. Can look up description from filters.
+ */
+function MultiValueData({ data, ...anime }) {
+    if (!data || !has(anime, data) || !Array.isArray(anime[data]) || !anime[data].length) {
+        return <>&mdash;</>
+    }
+
+    return anime[data].map(value => {
+        if (has(FILTERS, data) && has(FILTERS[data].descriptions, value)) {
+            return FILTERS[data].descriptions[value]
+        }
+
+        return value
+    }).join(', ')
 }
 
 /**
