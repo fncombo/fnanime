@@ -12,7 +12,10 @@ function add(a, b) {
  * Returns a 2D array of each anime status within each rating, populated with either count
  * of matched anime or total of all data.
  */
-function calculateTotals(anime, property, countOnly) {
+function calculateTotals(allAnime, property, countOnly) {
+    // Only include watching, completed, on-hold, and dropped anime
+    const anime = allAnime.filter(({ status }) => status < 5)
+
     // Create the 2D array to populate
     const totals = [ ...Array(11) ].map(() => Array(7).fill(0))
 
