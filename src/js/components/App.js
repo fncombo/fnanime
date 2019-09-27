@@ -169,7 +169,7 @@ function App() {
                 <FilterButtons />
             </div>
             <Table />
-            <div className="container">
+            <div className="container statistics-container">
                 <Suspense fallback={<Loading />}>
                     <Statistics />
                 </Suspense>
