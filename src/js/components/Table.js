@@ -232,7 +232,7 @@ function TitleColumn({ title, img, status, type, highlight }) {
 
     return (
         <div className={classes} style={{ flexBasis: TABLE_COLUMNS.title.size }}>
-            <img width="37" height="50" src={img} alt={title} />
+            <img width="37" height="50" src={img} alt={title} loading="lazy" />
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle() : title}
             </span>

@@ -161,7 +161,7 @@ function GalleryItem(anime) {
     return (
         <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
             <div className="gallery-item-inner" ref={itemRef}>
-                <img src={img} alt={title} />
+                <img src={img} alt={title} loading="lazy" />
                 <span className={`tag is-medium is-${FILTERS.status.colorCodes[status]}`}>
                     {episodes > 1
                         ? <>{FILTERS.type.descriptions[type]} &ndash; {episodes} ep</>
