@@ -45,8 +45,8 @@ function Statistics() {
         watchTime: calculateTotals(allAnime, 'watchTime'),
     }
 
-    // First and last non-zero values to exclude them from being shown
-    // e.g. [0, 0, 1, 2, 0, 3, 4, 0] turns into [1, 2, 0, 3, 4]
+    // First and last ratings which have anime to them
+    // e.g. [0, 0, x, x, 0, x, x, 0] turns into [x, x, 0, x, x]
     const firstNonZero = totals.rating.totals.map(row => row.reduce(add)).findIndex(index => !!index)
 
     const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
@@ -56,6 +56,8 @@ function Statistics() {
     if (firstNonZero + lastNonZero === 0) {
         return null
     }
+
+    let previousHadCount = false
 
     return (
         <div className="statistics has-text-centered" ref={ref}>
@@ -79,10 +81,20 @@ function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {[ ...Array(11) ].map((value, index) => index).slice(firstNonZero, lastNonZero).reverse()
-                .map(rating =>
-                    <StatisticsRow rating={rating} key={rating} totals={totals} />
-                )}
+            {[ ...Array(11) ].map((value, index) => index).slice(firstNonZero, lastNonZero).map(rating => {
+                // If the first rating is "not rated", skip ratings without entries between it
+                // and when ratings with anime start, e.g.:
+                // ["not rated", 0, 0, x, x, 0, 0, x, x] turns into ["not rated", x, x, 0, 0, x, x]
+                if (!previousHadCount && firstNonZero === 0 && !totals.rating.totals[rating].reduce(add)) {
+                    return null
+                }
+
+                if (rating) {
+                    previousHadCount = true
+                }
+
+                return <StatisticsRow rating={rating} key={rating} totals={totals} />
+            }).reverse()}
             {firstNonZero !== lastNonZero &&
                 <div className="columns is-mobile">
                     <div className="column is-2-mobile is-1-tablet is-rating">
