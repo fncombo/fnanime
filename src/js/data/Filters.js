@@ -18,8 +18,8 @@ function excludeBlankValues(values) {
     return values.filter(value => !!value)
 }
 
-// Descriptions and data related to all possible filters
 /**
+ * Descriptions and data related to all possible filters
  * Key:
  * `false` is "All" value for filtering purposes
  * `nul` is when anime is present locally, but has unknown values (e.g. no codec info)
