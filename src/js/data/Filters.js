@@ -308,7 +308,7 @@ const FILTERS = {
  * how many anime match each filter name and filter value.
  */
 Object.defineProperty(FILTERS, 'makeCounts', {
-    value: allAnime => {
+    value(allAnime) {
         // Get all filter names
         const filterNames = Object.keys(FILTERS)
 
