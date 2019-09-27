@@ -348,7 +348,9 @@ function Rating({ rating }) {
                     )}
                 </span>
             </div>
-            <h5 className="title is-5">{FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
+            <h5 className="title is-5">
+                {FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}
+            </h5>
         </>
     )
 }

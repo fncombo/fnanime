@@ -60,7 +60,9 @@ function Table() {
     if (!allAnime.length) {
         return (
             <div className="container">
-                <p className="table-empty"><Icon icon="exclamation-circle" />No matching anime found</p>
+                <p className="table-empty">
+                    <Icon icon="exclamation-circle" />No matching anime found
+                </p>
             </div>
         )
     }
@@ -189,7 +191,9 @@ function Row(anime) {
                 {anime.rewatchCount}
             </Column>
             <Column columnName="subs" value={anime.subs}>
-                <span className="has-text-overflow">{anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}</span>
+                <span className="has-text-overflow">
+                    {anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}
+                </span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
                 {FILTERS.resolution.descriptions[anime.resolution]}
