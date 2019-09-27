@@ -28,7 +28,7 @@ function rowReducer(row) {
  */
 function calculateTotals(anime, property, countOnly) {
     // Create the 2D array to populate
-    const totals = Array(11).fill().map(() => Array(7).fill(0))
+    const totals = Array.from({ length: 11 }, () => Array(7).fill(0))
 
     // Increment the number of matched anime or add up the data, if the rating is false or null, use 0
     if (countOnly) {

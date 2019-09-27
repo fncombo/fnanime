@@ -338,12 +338,12 @@ function Rating({ rating }) {
         <>
             <div className="rating">
                 <span className="has-text-warning">
-                    {Array(rating).fill(0).map((value, i) =>
+                    {Array.from({ length: rating }, (value, i) =>
                         <Icon icon={fasStar} key={i} />
                     )}
                 </span>
                 <span className="has-text-grey-light">
-                    {Array(10 - rating).fill(0).map((value, i) =>
+                    {Array.from({ length: 10 - rating }, (value, i) =>
                         <Icon icon={[ 'far', 'star' ]} key={i} />
                     )}
                 </span>
