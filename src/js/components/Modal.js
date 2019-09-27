@@ -575,12 +575,12 @@ function RelatedList({ data }) {
     }
 
     // Sub list for every relation type
-    return relatedAnime.map(([ type, anime ]) =>
+    return relatedAnime.map(([ type, allAnime ]) =>
         <Fragment key={type}>
             <strong>{type}</strong>
             <ul className="related-list">
-                {anime.map(cartoon =>
-                    <RelatedListItem {...cartoon} key={cartoon.mal_id} />
+                {allAnime.map(anime =>
+                    <RelatedListItem {...anime} key={anime.mal_id} />
                 )}
             </ul>
         </Fragment>

@@ -54,10 +54,10 @@ function tablePageReducer(state, action) {
  * Table showing current anime with pagination.
  */
 function Table() {
-    const { state: { anime } } = useContext(GlobalState)
+    const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ state, dispatch ] = useReducer(tablePageReducer, INITIAL_TABLE_STATE)
 
-    if (!anime.length) {
+    if (!allAnime.length) {
         return (
             <div className="container">
                 <p className="table-empty"><Icon icon="exclamation-circle" />No matching anime found</p>
@@ -66,15 +66,15 @@ function Table() {
     }
 
     // Calculate the last possible page number
-    const lastPage = Math.ceil(anime.length / DEFAULTS.perPage)
+    const lastPage = Math.ceil(allAnime.length / DEFAULTS.perPage)
 
     return (
         <TableState.Provider value={{ state, dispatch, lastPage }}>
             <div className="container">
                 <div className="table">
                     <Header />
-                    {anime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map(cartoon =>
-                        <Row key={cartoon.id} {...cartoon} />
+                    {allAnime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map(anime =>
+                        <Row key={anime.id} {...anime} />
                     )}
                     <Pagination />
                 </div>
