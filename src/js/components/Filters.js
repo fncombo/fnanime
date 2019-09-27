@@ -141,12 +141,8 @@ function OptionGroup({ filterName }) {
 
     // Callback to update the anime list when selecting this filter
     const selectFilter = ({ target: { value: filterValue } }) => {
-        let actualFilterValue = filterValue
-
         // Check if the option value is potentially a valid number, and it if it is
-        if (/^\d+$/.test(filterValue)) {
-            actualFilterValue = parseInt(filterValue, 10)
-        }
+        const actualFilterValue = /^\d+$/.test(filterValue) ? parseInt(filterValue, 10) : filterValue
 
         dispatch({
             type: ACTIONS.SELECT_FILTER,
