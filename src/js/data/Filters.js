@@ -303,17 +303,17 @@ const FILTERS = {
     },
 }
 
+// All filter names
+const FILTER_NAMES = Object.keys(FILTERS)
+
 /**
  * Non-enumerable property which returns an object with counts of
  * how many anime match each filter name and filter value.
  */
 Object.defineProperty(FILTERS, 'makeCounts', {
     value(allAnime) {
-        // Get all filter names
-        const filterNames = Object.keys(FILTERS)
-
         // Make a nested blank object of filter names and values
-        const filterCounts = filterNames.reduce((filterNamesObject, filterName) => {
+        const filterCounts = FILTER_NAMES.reduce((filterNamesObject, filterName) => {
             filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
                 filterValuesObject[filterValue] = 0
 
@@ -325,7 +325,7 @@ Object.defineProperty(FILTERS, 'makeCounts', {
 
         // Loop through all anime and increment related filter value counts
         for (const anime of allAnime) {
-            for (const filterName of filterNames) {
+            for (const filterName of FILTER_NAMES) {
                 // If it's an array of filter values, go through each filter value inside and increment it
                 if (Array.isArray(anime[filterName])) {
                     for (const singleFilterValue of anime[filterName]) {
