@@ -42,10 +42,15 @@ function Gallery() {
         return <div className="gallery-placeholder" ref={ref} />
     }
 
-    // Count how many there are anime for each rating, if the rating is false or null, use 0
+    // Count how many there are anime for each rating, if the rating is null (not planned, not rated), use 0,
+    // if the rating is false (planned, not rated), skip that anime
     const ratingCounts = Array(11).fill(0)
 
     for (const { rating } of allAnime) {
+        if (rating === false) {
+            continue
+        }
+
         ratingCounts[rating || 0] += 1
     }
 
