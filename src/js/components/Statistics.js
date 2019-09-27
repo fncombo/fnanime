@@ -81,7 +81,7 @@ function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {[ ...Array(11) ].map((value, index) => index).slice(firstNonZero, lastNonZero).map(rating => {
+            {Array(11).fill(0).map((value, index) => index).slice(firstNonZero, lastNonZero).map(rating => {
                 // If the first rating is "not rated", skip ratings without entries between it
                 // and when ratings with anime start, e.g.:
                 // ["not rated", 0, 0, x, x, 0, 0, x, x] turns into ["not rated", x, x, 0, 0, x, x]
