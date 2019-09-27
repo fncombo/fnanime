@@ -14,7 +14,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Helpers
-const { removeInvalidChars, getRewatchCount, getDuration } = require('./helpers.js')
+const { removeInvalidChars, getRewatchCount, getDuration, animeProxy } = require('./helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
 
 // Location of the file to save data to
@@ -83,7 +83,7 @@ function processApiData(allAnime) {
         // Create an array of all anime genre IDs for this anime
 
         // Start compiling clean data that we need
-        ALL_ANIME[removeInvalidChars(title)] = {
+        ALL_ANIME[removeInvalidChars(title)] = new Proxy({
             id: anime.mal_id,
             title,
             type: TYPE_LOOKUP[anime.type],
@@ -104,7 +104,7 @@ function processApiData(allAnime) {
             bits: false,
             audioCodec: false,
             size: 0,
-        }
+        }, animeProxy)
     })
 }
 

@@ -1,3 +1,32 @@
+// Libraries
+const has = require('has')
+
+// Valid values for different types of data
+const TYPES = {
+    resolution: [ 1080, 720, 576, 480, 360 ],
+    source: [ 'BD', 'TV', 'Web', 'DVD' ],
+    videoCodec: [ 'H.265', 'H.264' ],
+    audioCodec: [ 'FLAC', 'DTS', 'AAC', 'AC3' ],
+    bits: [ 10, 8 ],
+}
+
+/**
+ * Checks whether a given type has a valid value.
+ */
+function validateType(type, value, animeTitle) {
+    if (!has(TYPES, type)) {
+        throw new Error(`Trying to validate an unknown type "${type}"`)
+    }
+
+    if (!value || !value.length) {
+        throw new Error(`Trying to validate an empty type "${type}" value "${type}" for anime "${animeTitle}`)
+    }
+
+    if (!TYPES[type].includes(value)) {
+        throw new Error(`Unknown value "${value}" for type "${type}"`)
+    }
+}
+
 /**
  * Replace or remove characters which cannot be used in folder and file names.
  */
@@ -44,9 +73,22 @@ function getDuration(duration) {
     return 0
 }
 
+// Proxy for the generated anime object to check certain set values
+const animeProxy = {
+    set(object, prop, value) {
+        if (has(TYPES, prop) && value !== false && value !== null) {
+            validateType(prop, value, object.title)
+        }
+
+        return Reflect.set(object, prop, value)
+    },
+}
+
 // Exports
 module.exports = {
+    validateType,
     removeInvalidChars,
     getRewatchCount,
     getDuration,
+    animeProxy,
 }
