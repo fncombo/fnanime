@@ -50,7 +50,7 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-12-mobile is-3-tablet">
+                <div className="column is-6-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
