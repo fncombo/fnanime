@@ -119,6 +119,9 @@ for (const animeId of Object.keys(ANIME_OBJECT)) {
     anime.watchTime = anime.episodeDuration * anime.episodesWatched * (anime.rewatchCount + 1)
 }
 
+// Array of all props an anime has
+const ANIME_PROPS = Object.keys(ANIME_ARRAY[0])
+
 /**
  * Update info about an anime from provided new API data.
  */
@@ -171,20 +174,21 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     }
 
     // Go through each filter, narrowing down results each time, but don't filter when there is no value
-    const actualFilters = Object.entries(filters).filter(([ , filterValue ]) => filterValue !== false)
-
-    if (actualFilters.length) {
-        for (const [ filterName, filterValue ] of actualFilters) {
-            results = results.filter(anime => {
-                // If it's an array of filter values, check if this filter value is present
-                if (Array.isArray(anime[filterName])) {
-                    return anime[filterName].includes(filterValue)
-                }
-
-                // Otherwise check if this filter value matches anime's value exactly
-                return anime[filterName] === filterValue
-            })
+    for (const [ filterName, filterValue ] of Object.entries(filters)) {
+        // Ignore "all" filter values
+        if (filterValue === false) {
+            continue
         }
+
+        results = results.filter(anime => {
+            // If it's an array of filter values, check if this filter value is present
+            if (Array.isArray(anime[filterName])) {
+                return anime[filterName].includes(filterValue)
+            }
+
+            // Otherwise check if this filter value matches anime's value exactly
+            return anime[filterName] === filterValue
+        })
     }
 
     // Perform the search query if there is one
@@ -199,11 +203,11 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
 
     for (const anime of sortResults) {
         // This is better performance than doing Object.entries()
-        for (const prop of Object.keys(anime)) {
+        for (const prop of ANIME_PROPS) {
             const value = anime[prop]
 
-            // Replace false and 0 values with undefined so that they are always sorted to the bottom
-            if (value === false || value === null || value === 0) {
+            // Replace false, null, and 0 values with undefined so that they are always sorted to the bottom
+            if (!value) {
                 anime[prop] = undefined
             } else if (Array.isArray(value)) {
                 // Extract value from array with 1 item
