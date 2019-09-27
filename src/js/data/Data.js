@@ -203,7 +203,7 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
             const value = anime[prop]
 
             // Replace false and 0 values with undefined so that they are always sorted to the bottom
-            if (value === false || value === 0) {
+            if (value === false || value === null || value === 0) {
                 anime[prop] = undefined
             } else if (Array.isArray(value)) {
                 // Extract value from array with 1 item
