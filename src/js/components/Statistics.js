@@ -14,7 +14,6 @@ import { FILTERS } from 'js/data/Filters'
 // Helpers
 import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.
@@ -46,22 +45,24 @@ function Statistics() {
         watchTime: calculateTotals(allAnime, 'watchTime'),
     }
 
-    // First and last non-zero values to exclude them from being shown
-    // e.g. [0, 0, 1, 2, 0, 3, 4, 0] turns into [1, 2, 0, 3, 4]
-    const firstNonZero = totals.rating.totals.slice(1).map(row => row.reduce(add)).findIndex(index => !!index) + 1
+    // First and last ratings which have anime to them
+    // e.g. [0, 0, x, x, 0, x, x, 0] turns into [x, x, 0, x, x]
+    const firstNonZero = totals.rating.totals.map(row => row.reduce(add)).findIndex(index => !!index)
 
     const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
-        .reverse().map(row => row.reduce(add)).findIndex(index => !!index) - 1
+        .reverse().map(row => row.reduce(add)).findIndex(index => !!index)
 
     // Don't show stats if all shown anime aren't rated
     if (firstNonZero + lastNonZero === 0) {
         return null
     }
 
+    let previousHadCount = false
+
     return (
         <div className="statistics has-text-centered" ref={ref}>
-            <div className="columns is-mobile">
-                <div className="column is-2-mobile is-1-tablet is-rating">
+            <div className="columns is-mobile is-not-progress">
+                <div className="column is-1-tablet is-rating">
                     <h6>Rating</h6>
                 </div>
                 <div className="column">
@@ -80,12 +81,22 @@ function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
-                .map(rating =>
-                    <StatisticsRow rating={rating} key={rating} totals={totals} />
-                )}
+            {Array.from({ length: 11 }, (value, index) => index).slice(firstNonZero, lastNonZero).map(rating => {
+                // If the first rating is "not rated", skip ratings without entries between it
+                // and when ratings with anime start, e.g.:
+                // ["not rated", 0, 0, x, x, 0, 0, x, x] turns into ["not rated", x, x, 0, 0, x, x]
+                if (!previousHadCount && firstNonZero === 0 && !totals.rating.totals[rating].reduce(add)) {
+                    return null
+                }
+
+                if (rating) {
+                    previousHadCount = true
+                }
+
+                return <StatisticsRow rating={rating} key={rating} totals={totals} />
+            }).reverse()}
             {firstNonZero !== lastNonZero &&
-                <div className="columns is-mobile">
+                <div className="columns is-mobile is-not-progress">
                     <div className="column is-2-mobile is-1-tablet is-rating">
                         <h6>Totals</h6>
                     </div>
@@ -120,7 +131,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes,
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
-                <span>{rating}<Icon icon={[ 'fas', 'star' ]} className="is-small" /></span>
+                <span>{FILTERS.rating.tinyDescriptions[rating]}</span>
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
@@ -148,7 +159,9 @@ function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
-            {!!showPercentage && sum !== data.count && ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
+            {!!showPercentage && sum !== data.count && !!rating &&
+                ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`
+            }
             <div className="progress is-flex has-background-grey-lighter">
                 {ratingData.map((singleData, status) => {
                     if (!singleData) {

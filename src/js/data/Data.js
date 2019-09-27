@@ -12,6 +12,14 @@ import { FILTERS } from 'js/data/Filters'
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
+for (const anime of ANIME_ARRAY) {
+    if (anime.status < 5 && !anime.rating) {
+        anime.rating = null
+    } else if (!anime.rating) {
+        anime.rating = false
+    }
+}
+
 // Fuzzy search options
 const FUSE_OPTIONS = {
     includeMatches: true,
@@ -111,6 +119,9 @@ for (const animeId of Object.keys(ANIME_OBJECT)) {
     anime.watchTime = anime.episodeDuration * anime.episodesWatched * (anime.rewatchCount + 1)
 }
 
+// Array of all props an anime has
+const ANIME_PROPS = Object.keys(ANIME_ARRAY[0])
+
 /**
  * Update info about an anime from provided new API data.
  */
@@ -118,6 +129,11 @@ function updateAnimeData(animeId, newData) {
     // Don't update if anime doesn't exist
     if (!has(ANIME_OBJECT, animeId)) {
         return
+    }
+
+    // Check that the rating is non-0
+    if (!newData.rating) {
+        delete newData.rating
     }
 
     // Figure out if any data for this anime has changed
@@ -158,20 +174,21 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     }
 
     // Go through each filter, narrowing down results each time, but don't filter when there is no value
-    const actualFilters = Object.entries(filters).filter(([ , filterValue ]) => filterValue !== false)
-
-    if (actualFilters.length) {
-        for (const [ filterName, filterValue ] of actualFilters) {
-            results = results.filter(anime => {
-                // If it's an array of filter values, check if this filter value is present
-                if (Array.isArray(anime[filterName])) {
-                    return anime[filterName].includes(filterValue)
-                }
-
-                // Otherwise check if this filter value matches anime's value exactly
-                return anime[filterName] === filterValue
-            })
+    for (const [ filterName, filterValue ] of Object.entries(filters)) {
+        // Ignore "all" filter values
+        if (filterValue === false) {
+            continue
         }
+
+        results = results.filter(anime => {
+            // If it's an array of filter values, check if this filter value is present
+            if (Array.isArray(anime[filterName])) {
+                return anime[filterName].includes(filterValue)
+            }
+
+            // Otherwise check if this filter value matches anime's value exactly
+            return anime[filterName] === filterValue
+        })
     }
 
     // Perform the search query if there is one
@@ -185,9 +202,12 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     let sortResults = clone(results)
 
     for (const anime of sortResults) {
-        for (const [ prop, value ] of Object.entries(anime)) {
-            // Replace false and 0 values with undefined so that they are always sorted to the bottom
-            if (value === false || value === 0) {
+        // This is better performance than doing Object.entries()
+        for (const prop of ANIME_PROPS) {
+            const value = anime[prop]
+
+            // Replace false, null, and 0 values with undefined so that they are always sorted to the bottom
+            if (!value) {
                 anime[prop] = undefined
             } else if (Array.isArray(value)) {
                 // Extract value from array with 1 item
@@ -195,10 +215,14 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
                     [ anime[prop] ] = value
 
                 // For arrays with more than one value, sort it alphabetically and get the first one
-                } else {
+                } else if (value.length) {
                     fastSort(value)
 
                     anime[prop] = value.shift()
+
+                // For empty arrays, sort to the bottom
+                } else {
+                    anime[prop] = undefined
                 }
             }
         }

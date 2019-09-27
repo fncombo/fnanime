@@ -2,16 +2,24 @@
 
 // Placeholder when statistics are off screen
 .statistics-placeholder {
-    height: 34rem;
+    height: 36rem;
+    padding: 0.75rem;
+    margin-top: 2.75rem;
 }
 
+// Statistics container
+.statistics-container {
+    @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.75rem;
+    }
+}
+
+// Statistics table
 .statistics {
     padding: $column-gap;
     margin-top: $section-gap;
-
-    @include mobile {
-        font-size: 0.75rem;
-    }
 
     .columns {
         // Highlight every other row line in the table
@@ -22,6 +30,10 @@
         // Do not highlight the last totals row
         &:last-child {
             background-color: unset;
+        }
+
+        &.is-not-progress .column {
+            justify-content: center !important;
         }
     }
 
@@ -37,6 +49,10 @@
 
         @include mobile {
             padding: $column-gap 0.25rem;
+
+            &:not(:first-child) {
+                justify-content: flex-end;
+            }
         }
     }
 

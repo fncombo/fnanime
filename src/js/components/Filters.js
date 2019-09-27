@@ -50,7 +50,7 @@ function FilterButtons() {
                 <FilterGroup filterName="videoCodec" />
                 <FilterGroup filterName="source" />
                 <FilterGroup filterName="audioCodec" />
-                <div className="column is-12-mobile is-3-tablet">
+                <div className="column is-6-mobile is-3-tablet">
                     <input
                         type="text"
                         className="input"
@@ -117,17 +117,18 @@ function FilterButton({ filterName, filterValue }) {
 
     // Whether this filter is currently selected and a count of how many anime match it
     const isSelected = activeFilters[filterName] === filterValue
+    const notAllFilterValue = filterValue !== false
     const count = filterCounts[filterName][filterValue]
     const classes = classNames('button', {
         'is-outlined': !isSelected,
-        'is-faded': filterValue && !count,
-        'is-dark': !(filterValue && !count),
+        'is-faded': notAllFilterValue && !count,
+        'is-dark': !(notAllFilterValue && !count),
     })
 
     return (
         <button className={classes} onClick={selectFilter}>
             {FILTERS[filterName].descriptions[filterValue]}
-            {!!count && filterValue !== false && <span className="count">{count}</span>}
+            {!!count && notAllFilterValue && <span className="count">{count}</span>}
         </button>
     )
 }
@@ -141,12 +142,8 @@ function OptionGroup({ filterName }) {
 
     // Callback to update the anime list when selecting this filter
     const selectFilter = ({ target: { value: filterValue } }) => {
-        let actualFilterValue = filterValue
-
         // Check if the option value is potentially a valid number, and it if it is
-        if (/^\d+$/.test(filterValue)) {
-            actualFilterValue = parseInt(filterValue, 10)
-        }
+        const actualFilterValue = /^\d+$/.test(filterValue) ? parseInt(filterValue, 10) : filterValue
 
         dispatch({
             type: ACTIONS.SELECT_FILTER,

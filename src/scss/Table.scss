@@ -208,10 +208,6 @@
         &:nth-child(3) {
             max-width: 66px;
             flex: 0 0 66px !important;
-
-            &::after {
-                content: '★';
-            }
         }
 
         &:nth-child(4),

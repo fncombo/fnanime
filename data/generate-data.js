@@ -14,7 +14,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Helpers
-const { removeInvalidChars, getRewatchCount, getDuration } = require('./helpers.js')
+const { removeInvalidChars, getRewatchCount, getDuration, animeProxy } = require('./helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
 
 // Location of the file to save data to
@@ -75,26 +75,26 @@ const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2
 /**
  * Update anime data from the API.
  */
-function processApiData(anime) {
-    anime.forEach(cartoon => {
+function processApiData(allAnime) {
+    allAnime.forEach(anime => {
         // Remove diacritics and other unwanted characters from the title
-        const title = removeDiacritics(cartoon.title).replace(/["]/g, '')
+        const title = removeDiacritics(anime.title).replace(/["]/g, '')
 
         // Create an array of all anime genre IDs for this anime
 
         // Start compiling clean data that we need
-        ALL_ANIME[removeInvalidChars(title)] = {
-            id: cartoon.mal_id,
+        ALL_ANIME[removeInvalidChars(title)] = new Proxy({
+            id: anime.mal_id,
             title,
-            type: TYPE_LOOKUP[cartoon.type],
-            episodes: cartoon.total_episodes,
-            episodesWatched: cartoon.watched_episodes,
-            img: cartoon.image_url.match(/^[^?]+/)[0],
-            status: cartoon.watching_status,
-            airStatus: cartoon.airing_status,
-            rating: cartoon.score,
-            rewatchCount: getRewatchCount(cartoon.tags),
-            url: cartoon.url,
+            type: TYPE_LOOKUP[anime.type],
+            episodes: anime.total_episodes,
+            episodesWatched: anime.watched_episodes,
+            img: anime.image_url.match(/^[^?]+/)[0],
+            status: anime.watching_status,
+            airStatus: anime.airing_status,
+            rating: anime.score || (anime.status < 5 ? null : false),
+            rewatchCount: getRewatchCount(anime.tags),
+            url: anime.url,
             // The following data will be replaced if the anime is downloaded locally
             genres: [],
             subs: [],
@@ -104,7 +104,7 @@ function processApiData(anime) {
             bits: false,
             audioCodec: false,
             size: 0,
-        }
+        }, animeProxy)
     })
 }
 

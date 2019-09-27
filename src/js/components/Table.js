@@ -4,7 +4,6 @@ import React, { memo, useContext, useReducer } from 'react'
 // Libraries
 import has from 'has'
 import classNames from 'classnames'
-import reactStringReplace from 'react-string-replace'
 import { useInView } from 'react-intersection-observer'
 
 // Style
@@ -17,7 +16,7 @@ import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
-import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor } from 'js/helpers/Table'
+import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor, highlightTitle } from 'js/helpers/Table'
 import fileSize from 'js/helpers/FileSize'
 import Icon from 'js/helpers/Icon'
 
@@ -54,27 +53,29 @@ function tablePageReducer(state, action) {
  * Table showing current anime with pagination.
  */
 function Table() {
-    const { state: { anime } } = useContext(GlobalState)
+    const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ state, dispatch ] = useReducer(tablePageReducer, INITIAL_TABLE_STATE)
 
-    if (!anime.length) {
+    if (!allAnime.length) {
         return (
             <div className="container">
-                <p className="table-empty"><Icon icon="exclamation-circle" />No matching anime found</p>
+                <p className="table-empty">
+                    <Icon icon="exclamation-circle" />No matching anime found
+                </p>
             </div>
         )
     }
 
     // Calculate the last possible page number
-    const lastPage = Math.ceil(anime.length / DEFAULTS.perPage)
+    const lastPage = Math.ceil(allAnime.length / DEFAULTS.perPage)
 
     return (
         <TableState.Provider value={{ state, dispatch, lastPage }}>
             <div className="container">
                 <div className="table">
                     <Header />
-                    {anime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map(cartoon =>
-                        <Row key={cartoon.id} {...cartoon} />
+                    {allAnime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map(anime =>
+                        <Row key={anime.id} {...anime} />
                     )}
                     <Pagination />
                 </div>
@@ -189,7 +190,9 @@ function Row(anime) {
                 {anime.rewatchCount}
             </Column>
             <Column columnName="subs" value={anime.subs}>
-                <span className="has-text-overflow">{anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}</span>
+                <span className="has-text-overflow">
+                    {anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}
+                </span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
                 {FILTERS.resolution.descriptions[anime.resolution]}
@@ -216,25 +219,13 @@ function Row(anime) {
  * it gets highlighted using the anime status color.
  */
 function TitleColumn({ title, img, status, type, highlight }) {
-    // If there was a search query and highlight indices have been provided, highlight matches results using them
-    const highlightTitle = () => {
-        // Get unique parts of the title to highlight, sorted from longest to shortest
-        const parts = [ ...new Set(highlight.map(([ start, end ]) => title.slice(start, end + 1).toUpperCase())) ]
-            .sort((a, b) => b.length - a.length)
-
-        // Construct a regex to match the title parts
-        const matches = RegExp(`(${parts.join('|')})`, 'gi')
-
-        return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
-    }
-
     const classes = classNames('table-column', `has-highlight-${FILTERS.status.colorCodes[status]}`)
 
     return (
         <div className={classes} style={{ flexBasis: TABLE_COLUMNS.title.size }}>
-            <img width="37" height="50" src={img} alt={title} />
+            <img width="37" height="50" src={img} alt={title} loading="lazy" />
             <span className="has-text-overflow" title={title}>
-                {highlight ? highlightTitle() : title}
+                {highlight ? highlightTitle(title, highlight) : title}
             </span>
             <span className="type">
                 {FILTERS.type.descriptions[type]}

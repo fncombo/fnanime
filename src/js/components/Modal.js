@@ -25,7 +25,7 @@ import {
 } from 'js/helpers/Modal'
 import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
+import Icon, { fasStar } from 'js/helpers/Icon'
 
 // Components
 import Badge from 'js/components/Badge'
@@ -207,7 +207,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
         <ModalState.Provider value={{ modalState, changeAnime }}>
             <div className="columns">
                 <div className="column is-3 has-text-centered">
-                    <img className="rounded" width="269" src={anime.img} alt={anime.title} />
+                    <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
                     <LoadingText>
                         <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
@@ -321,7 +321,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     return (
         <div className={classes} title={navAnime.title} onClick={() => changeAnime(navAnime)}>
             {<Icon icon={icon} className="is-medium" size="2x" />}
-            <img className="rounded" width="74" height="100" src={navAnime.img} alt={navAnime.title} />
+            <img width="74" height="100" className="rounded" src={navAnime.img} alt={navAnime.title} />
         </div>
     )
 }
@@ -338,17 +338,19 @@ function Rating({ rating }) {
         <>
             <div className="rating">
                 <span className="has-text-warning">
-                    {Array(rating).fill(0).map((value, i) =>
-                        <Icon icon={[ 'fas', 'star' ]} key={i} />
+                    {Array.from({ length: rating }, (value, i) =>
+                        <Icon icon={fasStar} key={i} />
                     )}
                 </span>
                 <span className="has-text-grey-light">
-                    {Array(10 - rating).fill(0).map((value, i) =>
+                    {Array.from({ length: 10 - rating }, (value, i) =>
                         <Icon icon={[ 'far', 'star' ]} key={i} />
                     )}
                 </span>
             </div>
-            <h5 className="title is-5">{FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}</h5>
+            <h5 className="title is-5">
+                {FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}
+            </h5>
         </>
     )
 }
@@ -458,7 +460,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
     if (rewatchCount || (episodesWatched && episodes === 1)) {
         return (
             <>
-                {formatDuration(watchTime)}
+                {formatDuration(watchTime, true)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
@@ -470,7 +472,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
     if (episodesWatched) {
         return (
             <>
-                {formatDuration(watchTime)}
+                {formatDuration(watchTime, true)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
                 </span>
@@ -478,7 +480,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
         )
     }
 
-    return formatDuration(watchTime)
+    return formatDuration(watchTime, true)
 }
 
 /**
@@ -507,9 +509,9 @@ function Duration({ episodeDuration, episodes }) {
 
     return (
         <>
-            {formatDuration(episodeDuration * episodes)}
+            {formatDuration(episodeDuration * episodes, true)}
             {episodes > 1 &&
-                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration)} per episode</span>
+                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration, true)} per episode</span>
             }
         </>
     )
@@ -575,12 +577,12 @@ function RelatedList({ data }) {
     }
 
     // Sub list for every relation type
-    return relatedAnime.map(([ type, anime ]) =>
+    return relatedAnime.map(([ type, allAnime ]) =>
         <Fragment key={type}>
             <strong>{type}</strong>
             <ul className="related-list">
-                {anime.map(cartoon =>
-                    <RelatedListItem {...cartoon} key={cartoon.mal_id} />
+                {allAnime.map(anime =>
+                    <RelatedListItem {...anime} key={anime.mal_id} />
                 )}
             </ul>
         </Fragment>
