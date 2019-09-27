@@ -62,6 +62,7 @@ const FILTERS = {
     rating: {
         descriptions: {
             false: 'All Ratings',
+            null: 'Unrated',
             10: <>Masterpiece &ndash; 10<Icon icon={[ 'fas', 'star' ]} /></>,
             9: <>Great &ndash; 9<Icon icon={[ 'fas', 'star' ]} /></>,
             8: <>Very Good &ndash; 8<Icon icon={[ 'fas', 'star' ]} /></>,
@@ -76,6 +77,7 @@ const FILTERS = {
         },
         simpleDescriptions: {
             false: 'All Ratings',
+            null: 'Unrated',
             10: 'Masterpiece',
             9: 'Great',
             8: 'Very Good',
@@ -89,6 +91,7 @@ const FILTERS = {
             0: 'Not Rated',
         },
         detailedDescriptions: {
+            null: 'Haven\'t rated these yet!',
             10: 'My favourite anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
             9: 'The best anime which were super enjoyable and interesting to watch, and remain very memorable.',
             8: 'Overall very enjoyable anime which were a pleasure to watch. Relevant to my interests and have nice themes.',
@@ -101,8 +104,8 @@ const FILTERS = {
             1: '',
             0: '',
         },
-        // Exclude blank values and reverse sort
-        specialValuesProcess: values => values.filter(value => !!value).sort((a, b) => b - a),
+        // Reverse sort
+        specialValuesProcess: values => values.sort((a, b) => b - a),
     },
     subs: {
         descriptions: {

@@ -92,7 +92,7 @@ function processApiData(anime) {
             img: cartoon.image_url.match(/^[^?]+/)[0],
             status: cartoon.watching_status,
             airStatus: cartoon.airing_status,
-            rating: cartoon.score,
+            rating: cartoon.score || (cartoon.watched_episodes ? null : false),
             rewatchCount: getRewatchCount(cartoon.tags),
             url: cartoon.url,
             // The following data will be replaced if the anime is downloaded locally

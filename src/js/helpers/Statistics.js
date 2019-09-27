@@ -26,11 +26,11 @@ function calculateTotals(anime, property, countOnly) {
     // Increment the number of matched anime or add up the data
     if (countOnly) {
         for (const { rating, status } of anime) {
-            totals[rating][status] += 1
+            totals[rating || 0][status] += 1
         }
     } else {
         for (const { rating, status, [property]: value } of anime) {
-            totals[rating][status] += value
+            totals[rating || 0][status] += value
         }
     }
 

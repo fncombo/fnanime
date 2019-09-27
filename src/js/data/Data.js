@@ -12,6 +12,14 @@ import { FILTERS } from 'js/data/Filters'
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
+for (const anime of ANIME_ARRAY) {
+    if (anime.status < 5 && !anime.rating) {
+        anime.rating = null
+    } else if (!anime.rating) {
+        anime.rating = false
+    }
+}
+
 // Fuzzy search options
 const FUSE_OPTIONS = {
     includeMatches: true,
@@ -118,6 +126,11 @@ function updateAnimeData(animeId, newData) {
     // Don't update if anime doesn't exist
     if (!has(ANIME_OBJECT, animeId)) {
         return
+    }
+
+    // Check that the rating is non-0
+    if (!newData.rating) {
+        delete newData.rating
     }
 
     // Figure out if any data for this anime has changed
