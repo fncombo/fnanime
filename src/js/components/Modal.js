@@ -458,7 +458,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
     if (rewatchCount || (episodesWatched && episodes === 1)) {
         return (
             <>
-                {formatDuration(watchTime)}
+                {formatDuration(watchTime, true)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
                 </span>
@@ -470,7 +470,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
     if (episodesWatched) {
         return (
             <>
-                {formatDuration(watchTime)}
+                {formatDuration(watchTime, true)}
                 <span className="has-text-grey">
                     &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
                 </span>
@@ -478,7 +478,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
         )
     }
 
-    return formatDuration(watchTime)
+    return formatDuration(watchTime, true)
 }
 
 /**
@@ -507,9 +507,9 @@ function Duration({ episodeDuration, episodes }) {
 
     return (
         <>
-            {formatDuration(episodeDuration * episodes)}
+            {formatDuration(episodeDuration * episodes, true)}
             {episodes > 1 &&
-                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration)} per episode</span>
+                <span className="has-text-grey"> &ndash; {formatDuration(episodeDuration, true)} per episode</span>
             }
         </>
     )
