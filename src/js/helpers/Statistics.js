@@ -52,8 +52,8 @@ function calculateTotals(anime, property, countOnly) {
     // Biggest total
     const max = Math.max(...totals.map(rowReducer))
 
-    // Average of all totals if sum and count are not 0
-    const average = sum && count ? sum / count : 0
+    // Average of all totals if sum and count are not 0, otherwise 0
+    const average = (sum / count) || 0
 
     return {
         totals,
