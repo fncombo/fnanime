@@ -117,17 +117,18 @@ function FilterButton({ filterName, filterValue }) {
 
     // Whether this filter is currently selected and a count of how many anime match it
     const isSelected = activeFilters[filterName] === filterValue
+    const notAllFilterValue = filterValue !== false
     const count = filterCounts[filterName][filterValue]
     const classes = classNames('button', {
         'is-outlined': !isSelected,
-        'is-faded': filterValue && !count,
-        'is-dark': !(filterValue && !count),
+        'is-faded': notAllFilterValue && !count,
+        'is-dark': !(notAllFilterValue && !count),
     })
 
     return (
         <button className={classes} onClick={selectFilter}>
             {FILTERS[filterName].descriptions[filterValue]}
-            {!!count && filterValue !== false && <span className="count">{count}</span>}
+            {!!count && notAllFilterValue && <span className="count">{count}</span>}
         </button>
     )
 }
