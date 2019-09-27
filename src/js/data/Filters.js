@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Helpers
-import Icon, { fasStar } from 'js/helpers/Icon'
+import Icon from 'js/helpers/Icon'
 
 /**
  * Function to reverse sort filter values.
@@ -77,16 +77,16 @@ const FILTERS = {
         descriptions: {
             false: 'All Ratings',
             null: 'Not Rated',
-            10: <>Masterpiece &ndash; 10<Icon icon={fasStar} /></>,
-            9: <>Great &ndash; 9<Icon icon={fasStar} /></>,
-            8: <>Very Good &ndash; 8<Icon icon={fasStar} /></>,
-            7: <>Good &ndash; 7<Icon icon={fasStar} /></>,
-            6: <>Fine &ndash; 6<Icon icon={fasStar} /></>,
-            5: <>Average &ndash; 5<Icon icon={fasStar} /></>,
-            4: <>Bad &ndash; 4<Icon icon={fasStar} /></>,
-            3: <>Very Bad &ndash; 3<Icon icon={fasStar} /></>,
-            2: <>Horrible &ndash; 2<Icon icon={fasStar} /></>,
-            1: <>Appalling &ndash; 1<Icon icon={fasStar} /></>,
+            10: <>Masterpiece &ndash; 10</>,
+            9: <>Great &ndash; 9</>,
+            8: <>Very Good &ndash; 8</>,
+            7: <>Good &ndash; 7</>,
+            6: <>Fine &ndash; 6</>,
+            5: <>Average &ndash; 5</>,
+            4: <>Bad &ndash; 4</>,
+            3: <>Very Bad &ndash; 3</>,
+            2: <>Horrible &ndash; 2</>,
+            1: <>Appalling &ndash; 1</>,
             0: 'Not Rated',
         },
         simpleDescriptions: {
@@ -102,6 +102,21 @@ const FILTERS = {
             3: 'Very Bad',
             2: 'Horrible',
             1: 'Appalling',
+            0: 'Not Rated',
+        },
+        tinyDescriptions: {
+            false: 'All Ratings',
+            null: 'Not Rated',
+            10: '10',
+            9: '9',
+            8: '8',
+            7: '7',
+            6: '6',
+            5: '5',
+            4: '4',
+            3: '3',
+            2: '2',
+            1: '1',
             0: 'Not Rated',
         },
         detailedDescriptions: {
@@ -123,21 +138,6 @@ const FILTERS = {
             2: '',
             1: '',
             0: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
-        },
-        tinyDescriptions: {
-            false: 'All Ratings',
-            null: 'Not Rated',
-            10: <>10<Icon icon={fasStar} className="is-small" /></>,
-            9: <>9<Icon icon={fasStar} className="is-small" /></>,
-            8: <>8<Icon icon={fasStar} className="is-small" /></>,
-            7: <>7<Icon icon={fasStar} className="is-small" /></>,
-            6: <>6<Icon icon={fasStar} className="is-small" /></>,
-            5: <>5<Icon icon={fasStar} className="is-small" /></>,
-            4: <>4<Icon icon={fasStar} className="is-small" /></>,
-            3: <>3<Icon icon={fasStar} className="is-small" /></>,
-            2: <>2<Icon icon={fasStar} className="is-small" /></>,
-            1: <>1<Icon icon={fasStar} className="is-small" /></>,
-            0: 'Not Rated',
         },
         // Reverse sort
         specialValuesProcess: reverseSort,
