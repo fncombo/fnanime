@@ -198,7 +198,10 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     let sortResults = clone(results)
 
     for (const anime of sortResults) {
-        for (const [ prop, value ] of Object.entries(anime)) {
+        // This is better performance than doing Object.entries()
+        for (const prop of Object.keys(anime)) {
+            const value = anime[prop]
+
             // Replace false and 0 values with undefined so that they are always sorted to the bottom
             if (value === false || value === 0) {
                 anime[prop] = undefined
