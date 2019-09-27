@@ -17,7 +17,11 @@ import { FILTERS } from 'js/data/Filters'
 import ModalContainer from 'js/components/Modal'
 
 // Width of the gallery item
-const IMG_WIDTH = 165
+const ITEM_WIDTH = 165
+
+// Dimensions of the gallery images
+const IMG_WIDTH = 145
+const IMG_HEIGHT = IMG_WIDTH * 1.4
 
 // Offset of when to start showing the component and images offscreen
 const ROOT_MARGIN = '300px'
@@ -129,13 +133,13 @@ function GalleryItem(anime) {
         }
 
         // Close to the left
-        if (itemBounds.x <= (IMG_WIDTH / 4)) {
+        if (itemBounds.x <= (ITEM_WIDTH / 4)) {
             setHoverClass('is-left')
 
             style.left = currentTarget.offsetLeft
 
         // Close to the right
-        } else if (itemBounds.x + IMG_WIDTH + (IMG_WIDTH / 8) >= window.innerWidth) {
+        } else if (itemBounds.x + ITEM_WIDTH + (ITEM_WIDTH / 8) >= window.innerWidth) {
             setHoverClass('is-right')
 
             style.right = gallerySectionBounds.width - currentTarget.offsetLeft - itemBounds.width
@@ -161,7 +165,7 @@ function GalleryItem(anime) {
     return (
         <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
             <div className="gallery-item-inner" ref={itemRef}>
-                <img src={img} alt={title} loading="lazy" />
+                <img width={IMG_WIDTH} height={IMG_HEIGHT} src={img} alt={title} loading="lazy" />
                 <span className={`tag is-medium is-${FILTERS.status.colorCodes[status]}`}>
                     {episodes > 1
                         ? <>{FILTERS.type.descriptions[type]} &ndash; {episodes} ep</>

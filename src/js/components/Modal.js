@@ -207,7 +207,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
         <ModalState.Provider value={{ modalState, changeAnime }}>
             <div className="columns">
                 <div className="column is-3 has-text-centered">
-                    <img className="rounded" width="269" src={anime.img} alt={anime.title} />
+                    <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
                     <LoadingText>
                         <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
@@ -321,7 +321,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     return (
         <div className={classes} title={navAnime.title} onClick={() => changeAnime(navAnime)}>
             {<Icon icon={icon} className="is-medium" size="2x" />}
-            <img className="rounded" width="74" height="100" src={navAnime.img} alt={navAnime.title} />
+            <img width="74" height="100" className="rounded" src={navAnime.img} alt={navAnime.title} />
         </div>
     )
 }
