@@ -211,10 +211,14 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
                     [ anime[prop] ] = value
 
                 // For arrays with more than one value, sort it alphabetically and get the first one
-                } else {
+                } else if (value.length) {
                     fastSort(value)
 
                     anime[prop] = value.shift()
+
+                // For empty arrays, sort to the bottom
+                } else {
+                    anime[prop] = undefined
                 }
             }
         }
