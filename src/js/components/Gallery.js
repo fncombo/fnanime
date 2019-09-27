@@ -34,7 +34,7 @@ const GALLERY_ITEM_OPTIONS = {
  * Gallery for each rating which has matching anime.
  */
 function Gallery() {
-    const { state: { anime } } = useContext(GlobalState)
+    const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ ref, inView ] = useInView(GALLERY_OPTIONS)
 
     // Do not render and do all this calculating and creating hundreds of components if not in view
@@ -45,7 +45,7 @@ function Gallery() {
     // Count how many there are anime for each rating, if the rating is false or null, use 0
     const ratingCounts = Array(11).fill(0)
 
-    for (const { rating } of anime) {
+    for (const { rating } of allAnime) {
         ratingCounts[rating || 0] += 1
     }
 
@@ -68,8 +68,8 @@ function Gallery() {
                             {FILTERS.rating.detailedDescriptions[rating]}
                         </p>
                         <div className="gallery-grid">
-                            {anime.filter(({ rating: animeRating }) => animeRating === (rating || null)).map(cartoon =>
-                                <GalleryItem key={cartoon.id} {...cartoon} />
+                            {allAnime.filter(({ rating: animeRating }) => animeRating === (rating || null)).map(anime =>
+                                <GalleryItem key={anime.id} {...anime} />
                             )}
                         </div>
                     </div>
