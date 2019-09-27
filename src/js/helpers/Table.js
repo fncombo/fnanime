@@ -1,5 +1,9 @@
+// React
+import React from 'react'
+
 // Libraries
 import has from 'has'
+import reactStringReplace from 'react-string-replace'
 
 // Helpers
 import { FILTERS } from 'js/data/Filters'
@@ -94,6 +98,18 @@ function formatOrdinal(number) {
     return 'th'
 }
 
+// If there was a search query and highlight indices have been provided, highlight matches results using them
+function highlightTitle(title, highlight) {
+    // Get unique parts of the title to highlight, sorted from longest to shortest
+    const parts = [ ...new Set(highlight.map(([ start, end ]) => title.slice(start, end + 1).toUpperCase())) ]
+        .sort((a, b) => b.length - a.length)
+
+    // Construct a regex to match the title parts
+    const matches = RegExp(`(${parts.join('|')})`, 'gi')
+
+    return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
+}
+
 // Exports
 export {
     getColumnTextColor,
@@ -101,4 +117,5 @@ export {
     getSizeBarWidth,
     getSizeBarColor,
     formatOrdinal,
+    highlightTitle,
 }
