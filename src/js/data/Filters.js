@@ -4,6 +4,14 @@ import React from 'react'
 // Helpers
 import Icon from 'js/helpers/Icon'
 
+function reverseSort(values) {
+    return values.sort((a, b) => b - a)
+}
+
+function excludeBlankValues(values) {
+    return values.filter(value => !!value)
+}
+
 // Descriptions and data related to all possible filters
 /**
  * Key:
@@ -62,7 +70,7 @@ const FILTERS = {
     rating: {
         descriptions: {
             false: 'All Ratings',
-            null: 'Unrated',
+            null: 'Not Rated',
             10: <>Masterpiece &ndash; 10<Icon icon={[ 'fas', 'star' ]} /></>,
             9: <>Great &ndash; 9<Icon icon={[ 'fas', 'star' ]} /></>,
             8: <>Very Good &ndash; 8<Icon icon={[ 'fas', 'star' ]} /></>,
@@ -73,11 +81,11 @@ const FILTERS = {
             3: <>Very Bad &ndash; 3<Icon icon={[ 'fas', 'star' ]} /></>,
             2: <>Horrible &ndash; 2<Icon icon={[ 'fas', 'star' ]} /></>,
             1: <>Appalling &ndash; 1<Icon icon={[ 'fas', 'star' ]} /></>,
-            0: <>Not Rated &ndash; 0<Icon icon={[ 'fas', 'star' ]} /></>,
+            0: 'Not Rated',
         },
         simpleDescriptions: {
             false: 'All Ratings',
-            null: 'Unrated',
+            null: 'Not Rated',
             10: 'Masterpiece',
             9: 'Great',
             8: 'Very Good',
@@ -104,15 +112,30 @@ const FILTERS = {
             1: '',
             0: '',
         },
+        tinyDescriptions: {
+            false: 'All Ratings',
+            null: 'Not Rated',
+            10: <>10<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            9: <>9<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            8: <>8<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            7: <>7<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            6: <>6<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            5: <>5<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            4: <>4<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            3: <>3<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            2: <>2<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            1: <>1<Icon icon={[ 'fas', 'star' ]} className="is-small" /></>,
+            0: 'Not Rated',
+        },
         // Reverse sort
-        specialValuesProcess: values => values.sort((a, b) => b - a),
+        specialValuesProcess: reverseSort,
     },
     subs: {
         descriptions: {
             false: 'All Releases',
         },
         // Exclude blank values
-        specialValuesProcess: values => values.filter(value => !!value),
+        specialValuesProcess: excludeBlankValues,
     },
     genres: {
         descriptions: {
@@ -162,14 +185,14 @@ const FILTERS = {
             43: 'Josei',
         },
         // Exclude blank values
-        specialValuesProcess: values => values.filter(value => !!value),
+        specialValuesProcess: excludeBlankValues,
     },
     studios: {
         descriptions: {
             false: 'All Studios',
         },
         // Exclude blank values
-        specialValuesProcess: values => values.filter(value => !!value),
+        specialValuesProcess: excludeBlankValues,
     },
     resolution: {
         descriptions: {
@@ -198,7 +221,7 @@ const FILTERS = {
             360: 1,
         },
         // Reverse sort
-        specialValuesProcess: values => values.sort((a, b) => b - a),
+        specialValuesProcess: reverseSort,
     },
     source: {
         descriptions: {

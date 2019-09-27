@@ -16,6 +16,13 @@ function add(a, b) {
 }
 
 /**
+ * Row reducer.
+ */
+function rowReducer(row) {
+    return row.reduce(add)
+}
+
+/**
  * Returns a 2D array of each anime status within each rating, populated with either count
  * of matched anime or total of all data.
  */
@@ -38,13 +45,13 @@ function calculateTotals(anime, property, countOnly) {
     const sum = anime.map(({ [property]: value }) => value).reduce(add)
 
     // Count of all data
-    const count = totals.slice(1).map(row => row.reduce(add)).reduce(add)
+    const count = totals.map(rowReducer).reduce(add)
 
     // Biggest total
-    const max = Math.max(...totals.slice(1).map(row => row.reduce(add)))
+    const max = Math.max(...totals.map(rowReducer))
 
     // Average of all totals
-    const average = sum / count
+    const average = sum && count ? sum / count : 0
 
     return {
         totals,
@@ -58,8 +65,8 @@ function calculateTotals(anime, property, countOnly) {
 /**
  * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
  */
-function formatDuration(duration) {
-    return prettyMilliseconds(duration * 60000, { verbose: true })
+function formatDuration(duration, verbose = false) {
+    return prettyMilliseconds(duration * 60000, { verbose })
 }
 
 // Exports

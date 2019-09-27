@@ -14,7 +14,6 @@ import { FILTERS } from 'js/data/Filters'
 // Helpers
 import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
 
 /**
  * Show all the ratings, number of anime per rating, and other totals.
@@ -48,10 +47,10 @@ function Statistics() {
 
     // First and last non-zero values to exclude them from being shown
     // e.g. [0, 0, 1, 2, 0, 3, 4, 0] turns into [1, 2, 0, 3, 4]
-    const firstNonZero = totals.rating.totals.slice(1).map(row => row.reduce(add)).findIndex(index => !!index) + 1
+    const firstNonZero = totals.rating.totals.map(row => row.reduce(add)).findIndex(index => !!index)
 
     const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
-        .reverse().map(row => row.reduce(add)).findIndex(index => !!index) - 1
+        .reverse().map(row => row.reduce(add)).findIndex(index => !!index)
 
     // Don't show stats if all shown anime aren't rated
     if (firstNonZero + lastNonZero === 0) {
@@ -80,7 +79,7 @@ function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {[ ...Array(10) ].map((value, index) => index + 1).slice(firstNonZero - 1, lastNonZero).reverse()
+            {[ ...Array(11) ].map((value, index) => index).slice(firstNonZero, lastNonZero).reverse()
                 .map(rating =>
                     <StatisticsRow rating={rating} key={rating} totals={totals} />
                 )}
@@ -120,7 +119,7 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes,
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
-                <span>{rating}<Icon icon={[ 'fas', 'star' ]} className="is-small" /></span>
+                <span>{FILTERS.rating.tinyDescriptions[rating]}</span>
             </div>
             <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
