@@ -42,39 +42,39 @@ function Gallery() {
         return <div className="gallery-placeholder" ref={ref} />
     }
 
-    // Count how many there are anime for each rating
+    // Count how many there are anime for each rating, if the rating is false or null, use 0
     const ratingCounts = Array(11).fill(0)
 
     for (const { rating } of anime) {
-        ratingCounts[rating] += 1
+        ratingCounts[rating || 0] += 1
     }
 
     // Only show ratings which have anime and exclude all non-rated anime
     return (
         <div className="gallery" ref={ref}>
-            {ratingCounts.slice(1).reverse().map((count, rating) => {
+            {ratingCounts.map((count, rating) => {
+                // No anime found for this rating, skip it
                 if (!count) {
                     return null
                 }
 
-                const actualRating = 10 - rating
-
+                // If the rating is 0, use null to find non-planned anime without ratings
                 return (
-                    <div className="gallery-section" key={actualRating}>
+                    <div className="gallery-section" key={rating}>
                         <GalleryHeading>
-                            {FILTERS.rating.descriptions[actualRating]}
+                            {FILTERS.rating.descriptions[rating]}
                         </GalleryHeading>
                         <p className="gallery-detailed-description">
-                            {FILTERS.rating.detailedDescriptions[actualRating]}
+                            {FILTERS.rating.detailedDescriptions[rating]}
                         </p>
                         <div className="gallery-grid">
-                            {anime.filter(({ rating: animeRating }) => animeRating === actualRating).map(cartoon =>
+                            {anime.filter(({ rating: animeRating }) => animeRating === (rating || null)).map(cartoon =>
                                 <GalleryItem key={cartoon.id} {...cartoon} />
                             )}
                         </div>
                     </div>
                 )
-            })}
+            }).reverse()}
         </div>
     )
 }

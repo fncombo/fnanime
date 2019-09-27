@@ -105,7 +105,7 @@ const FILTERS = {
             0: 'Not Rated',
         },
         detailedDescriptions: {
-            null: 'Haven\'t rated these yet!',
+            null: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
             10: 'My favourite anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
             9: 'The best anime which were super enjoyable and interesting to watch, and remain very memorable.',
             8: 'Overall very enjoyable anime which were a pleasure to watch. Relevant to my interests and have nice themes.',
@@ -116,7 +116,7 @@ const FILTERS = {
             3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
             2: '',
             1: '',
-            0: '',
+            0: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
         },
         tinyDescriptions: {
             false: 'All Ratings',
