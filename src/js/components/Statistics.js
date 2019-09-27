@@ -61,8 +61,8 @@ function Statistics() {
 
     return (
         <div className="statistics has-text-centered" ref={ref}>
-            <div className="columns is-mobile">
-                <div className="column is-2-mobile is-1-tablet is-rating">
+            <div className="columns is-mobile is-not-progress">
+                <div className="column is-1-tablet is-rating">
                     <h6>Rating</h6>
                 </div>
                 <div className="column">
@@ -96,7 +96,7 @@ function Statistics() {
                 return <StatisticsRow rating={rating} key={rating} totals={totals} />
             }).reverse()}
             {firstNonZero !== lastNonZero &&
-                <div className="columns is-mobile">
+                <div className="columns is-mobile is-not-progress">
                     <div className="column is-2-mobile is-1-tablet is-rating">
                         <h6>Totals</h6>
                     </div>
