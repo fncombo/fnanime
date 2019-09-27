@@ -25,7 +25,7 @@ import {
 } from 'js/helpers/Modal'
 import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
+import Icon, { fasStar } from 'js/helpers/Icon'
 
 // Components
 import Badge from 'js/components/Badge'
@@ -339,7 +339,7 @@ function Rating({ rating }) {
             <div className="rating">
                 <span className="has-text-warning">
                     {Array(rating).fill(0).map((value, i) =>
-                        <Icon icon={[ 'fas', 'star' ]} key={i} />
+                        <Icon icon={fasStar} key={i} />
                     )}
                 </span>
                 <span className="has-text-grey-light">
