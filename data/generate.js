@@ -147,7 +147,6 @@ function processLocalData(filename, size, folder) {
     if (!TAGS_REGEXP.test(filename)) {
         ALL_ANIME[title] = {
             ...ALL_ANIME[title],
-            subs: null,
             resolution: null,
             source: null,
             videoCodec: null,
