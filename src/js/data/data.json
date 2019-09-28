@@ -1,5 +1,5 @@
 {
-    "updated": 1569616187248,
+    "updated": 1569686345213,
     "anime": {
         "20": {
             "id": 20,
@@ -134,7 +134,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "AC3",
+            "audioCodec": "AAC",
             "size": 11637710491,
             "studios": ["Madhouse"],
             "episodeDuration": 24
@@ -222,7 +222,7 @@
             "url": "https://myanimelist.net/anime/226/Elfen_Lied",
             "genres": [1, 14, 40, 37, 8, 22, 42],
             "subs": ["Coalgirls"],
-            "resolution": 1080,
+            "resolution": 720,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
@@ -360,7 +360,7 @@
             "url": "https://myanimelist.net/anime/376/Elfen_Lied__Tooriame_nite_Arui_wa_Shoujo_wa_Ikani_Shite_Sono_Shinjou_ni_Itatta_ka_-_Regenschauer",
             "genres": [14, 40, 37, 8, 9, 42],
             "subs": ["Coalgirls"],
-            "resolution": 1080,
+            "resolution": 720,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
@@ -686,7 +686,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "AC3",
+            "audioCodec": "FLAC",
             "size": 4410241584,
             "studios": ["Toei Animation"],
             "episodeDuration": 23
@@ -1491,7 +1491,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "AC3",
+            "audioCodec": "AAC",
             "size": 11274537453,
             "studios": ["Artland"],
             "episodeDuration": 25
@@ -1537,7 +1537,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "AAC",
+            "audioCodec": "FLAC",
             "size": 6719930738,
             "studios": ["Bones"],
             "episodeDuration": 24
@@ -2342,7 +2342,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "AAC",
             "size": 3900405215,
             "studios": ["Bones", "Kinema Citrus"],
             "episodeDuration": 22
@@ -3916,7 +3916,7 @@
             "title": "Kimi to Boku. 2",
             "type": 1,
             "episodes": 13,
-            "episodesWatched": 1,
+            "episodesWatched": 2,
             "img": "https://cdn.myanimelist.net/images/anime/10/42107.jpg",
             "status": 1,
             "airStatus": 2,
@@ -4918,7 +4918,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "AC3",
+            "audioCodec": "FLAC",
             "size": 3596471695,
             "studios": ["Wit Studio"],
             "episodeDuration": 60
@@ -5006,7 +5006,7 @@
             "url": "https://myanimelist.net/anime/16762/Mirai_Nikki__Redial",
             "genres": [1, 40, 37, 27],
             "subs": ["GotWoot"],
-            "resolution": 480,
+            "resolution": 576,
             "source": "DVD",
             "videoCodec": "H.264",
             "bits": 10,
@@ -6942,7 +6942,7 @@
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "AAC",
+            "audioCodec": "FLAC",
             "size": 4416098699,
             "studios": ["TMS Entertainment"],
             "episodeDuration": 23
@@ -8207,7 +8207,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "AAC",
+            "audioCodec": "FLAC",
             "size": 46029438250,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 24
@@ -9092,7 +9092,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1176/101963.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1019/103292.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,

@@ -16,6 +16,7 @@ const singleLineLog = require('single-line-log').stdout
 // Helpers
 const { removeInvalidChars, getRewatchCount, getDuration, animeProxy } = require('./helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
+const { validateLocalData } = require('./validation.js')
 
 // Location of the file to save data to
 const ANIME_JSON_LOCATION = '../src/js/data/data.json'
@@ -285,6 +286,7 @@ getApiData().then(async () => {
         await eachSeries(contents, async subContent => {
             const { name } = subContent
             const index = contents.indexOf(subContent) + 1
+            const isDirectory = subContent.isDirectory()
             let totalSize
 
             singleLineLog(
@@ -295,7 +297,7 @@ getApiData().then(async () => {
             )
 
             // If this is a folder, get its total size recursively based on all the files inside
-            if (subContent.isDirectory()) {
+            if (isDirectory) {
                 try {
                     totalSize = await getFolderSize(`${animeFolder}/${name}`)
                 } catch (error) {
@@ -312,7 +314,11 @@ getApiData().then(async () => {
             }
 
             // Save data about this local anime
-            processLocalData(name, totalSize, animeFolder)
+            const anime = processLocalData(name, totalSize, animeFolder)
+
+            if (anime) {
+                validateLocalData(`${animeFolder}/${name}`, isDirectory, anime)
+            }
         })
 
         // Empty log to separate single line logs between anime folders
