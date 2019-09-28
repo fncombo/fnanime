@@ -114,7 +114,7 @@ function processApiData(allAnime) {
 function processLocalData(filename, size, folder) {
     // Ignore rubbish
     if (/\.ini/.test(filename)) {
-        return
+        return false
     }
 
     // Get the anime title
@@ -155,7 +155,7 @@ function processLocalData(filename, size, folder) {
             size,
         }
 
-        return
+        return false
     }
 
     // Get all data tags
@@ -171,6 +171,8 @@ function processLocalData(filename, size, folder) {
         audioCodec,
         size,
     }
+
+    return ALL_ANIME[title]
 }
 
 /**
