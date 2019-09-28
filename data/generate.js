@@ -246,6 +246,9 @@ async function getApiData(page = 1, isRetry = false) {
  * Monolith incoming.
  */
 getApiData().then(async () => {
+    // Argument to validate local data using ffprobe
+    const validate = process.argv.includes('validate')
+
     // Generate new cache if the argument has been passed, then save it
     if (process.argv.includes('cache')) {
         CACHE = await generateCache()
@@ -315,7 +318,7 @@ getApiData().then(async () => {
             // Save data about this local anime
             const anime = processLocalData(name, totalSize, animeFolder)
 
-            if (anime) {
+            if (anime && validate) {
                 validateLocalData(`${animeFolder}/${name}`, isDirectory, anime)
             }
         })
