@@ -120,13 +120,9 @@ function App() {
 
         // Update certain data from live API
         async function fetchData() {
-            let newApiData
+            const newApiData = await getApiData()
 
-            try {
-                newApiData = await getApiData()
-            } catch (error) {
-                console.warn(error)
-
+            if (!newApiData) {
                 dispatch({ type: ACTIONS.API_ERROR })
 
                 return
