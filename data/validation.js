@@ -35,7 +35,7 @@ log4js.configure({
 const log = log4js.getLogger('validation')
 
 // Map ffprobe video codecs to mine
-const VIDE_CODEC_MAP = {
+const VIDEO_CODEC_MAP = {
     hevc: 'H.265',
     h264: 'H.264',
 }
@@ -69,7 +69,7 @@ function logMismatch(what, animeTitle, configured, actual) {
  */
 function validateVideoStream(stream, anime) {
     // Wrong codec
-    if (VIDE_CODEC_MAP[stream.codec_name] !== anime.videoCodec) {
+    if (VIDEO_CODEC_MAP[stream.codec_name] !== anime.videoCodec) {
         logMismatch('Video codec', anime.title, anime.videoCodec, stream.codec_name)
     }
 
