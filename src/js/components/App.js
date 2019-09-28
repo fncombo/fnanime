@@ -112,15 +112,6 @@ function globalReducer(state, action) {
 function App() {
     const [ state, dispatch ] = useReducer(globalReducer, INITIAL_STATE)
     const { apiUpdated, apiError } = state
-    let updateStatusMessage
-
-    if (apiUpdated) {
-        updateStatusMessage = apiError
-            ? <><Icon icon="times-circle" /> Error contacting API</>
-            : <><Icon icon="check-circle" /> Updated</>
-    } else {
-        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
-    }
 
     useEffect(() => {
         if (apiUpdated || SUPPRESS_API_UPDATE) {
@@ -162,6 +153,15 @@ function App() {
     }, [ apiUpdated ])
 
     const messageClasses = classNames('message', apiUpdated ? 'is-done' : 'is-loading')
+    let updateStatusMessage
+
+    if (apiUpdated) {
+        updateStatusMessage = apiError
+            ? <><Icon icon="times-circle" /> Error contacting API</>
+            : <><Icon icon="check-circle" /> Updated</>
+    } else {
+        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
+    }
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
