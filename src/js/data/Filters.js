@@ -285,6 +285,7 @@ const FILTERS = {
             DTS: 'DTS',
             AAC: 'AAC',
             AC3: 'AC3',
+            Other: 'Other',
         },
         colorCodes: {
             null: 'black',
@@ -292,6 +293,7 @@ const FILTERS = {
             DTS: 'green',
             AAC: 'yellow',
             AC3: 'orange',
+            Other: 'orange',
         },
         fileQuality: {
             null: 0,
@@ -299,6 +301,7 @@ const FILTERS = {
             DTS: 5,
             AAC: 4,
             AC3: 3,
+            Other: 2,
         },
     },
 }

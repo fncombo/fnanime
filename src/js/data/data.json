@@ -1,5 +1,5 @@
 {
-    "updated": 1569689837395,
+    "updated": 1569690713040,
     "anime": {
         "20": {
             "id": 20,
@@ -525,7 +525,7 @@
             "source": "DVD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 4699010087,
             "studios": ["A.C.G.T."],
             "episodeDuration": 24
@@ -939,7 +939,7 @@
             "source": "Web",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "AC3",
+            "audioCodec": "Other",
             "size": 1367749162,
             "studios": ["Palm Studio"],
             "episodeDuration": 23
@@ -1468,7 +1468,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 7114691795,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
@@ -1537,7 +1537,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 6719930738,
             "studios": ["Bones"],
             "episodeDuration": 24
@@ -1951,7 +1951,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 5529533231,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
@@ -2664,7 +2664,7 @@
             "source": "DVD",
             "videoCodec": "H.264",
             "bits": 8,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 243850177,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 26
@@ -4435,7 +4435,7 @@
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 347483286,
             "studios": ["Studio Deen"],
             "episodeDuration": 22
@@ -6942,7 +6942,7 @@
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 4416098699,
             "studios": ["TMS Entertainment"],
             "episodeDuration": 23
@@ -8667,7 +8667,7 @@
             "source": "Web",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 7009170488,
             "studios": ["Tezuka Productions", "MAPPA"],
             "episodeDuration": 24
@@ -8993,6 +8993,29 @@
             "size": 0,
             "studios": ["EMT Squared"],
             "episodeDuration": 0
+        },
+        "38671": {
+            "id": 38671,
+            "title": "Enen no Shouboutai",
+            "type": 1,
+            "episodes": 24,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1664/103275.jpg",
+            "status": 6,
+            "airStatus": 1,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/38671/Enen_no_Shouboutai",
+            "genres": [1, 37, 27],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "studios": ["David Production"],
+            "episodeDuration": 23
         },
         "38826": {
             "id": 38826,

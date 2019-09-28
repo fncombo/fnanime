@@ -71,7 +71,7 @@ const ALL_ANIME = {}
 let CACHE
 
 // Regular expression to match all the data tags in the anime file/folder name
-const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2})bit\s(\w{3,4})\]/
+const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2})bit\s(\w{3,5})\]/
 
 /**
  * Update anime data from the API.
