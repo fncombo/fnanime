@@ -10,10 +10,10 @@ async function getApiData(page = 1, isRetry = false) {
 
     // Stop after too many retries
     if (isRetry > 5) {
-        throw new Error('Too many API retries')
+        return false
     }
 
-    // Wait at least 2 seconds between API requests, increasing with each retry
+    // Wait at least 2 seconds between API requests, increasing by 2 seconds with each retry
     if (page > 1 || isRetry) {
         await new Promise(resolve => {
             setTimeout(resolve, (isRetry || 1) * 2000)
@@ -25,17 +25,19 @@ async function getApiData(page = 1, isRetry = false) {
 
     try {
         response = await fetch(`https://api.jikan.moe/v3/user/fncombo/animelist/all/${page}`)
+
+        // Force retry if non-200 status
+        if (!response.ok) {
+            throw new Error()
+        }
     } catch (error) {
-        console.warn('Error occurred while fetching API, retrying')
+        const retryData = await getApiData(page, isRetry ? isRetry + 1 : 1)
 
-        newApiData = newApiData.concat(await getApiData(page, isRetry ? isRetry + 1 : 1))
-    }
+        if (!retryData) {
+            return false
+        }
 
-    // Re-try if failed for any reason
-    if (response.status !== 200) {
-        console.warn('API responded with non-200 status, retrying')
-
-        newApiData = newApiData.concat(await getApiData(page, isRetry ? isRetry + 1 : 1))
+        newApiData = newApiData.push(...retryData)
     }
 
     // Parse JSON response
@@ -44,19 +46,25 @@ async function getApiData(page = 1, isRetry = false) {
     try {
         responseJson = await response.json()
     } catch (error) {
-        throw new Error('Could not parse API data')
+        return false
     }
 
+    // Check that anime data actually exists in the API response
     if (!has(responseJson, 'anime') || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
-        throw new Error('Anime data not found in API data')
+        return false
     }
 
-    // Add all anime from API
     newApiData.push(...responseJson.anime)
 
     // If this page was full (300 entries per page), get the next page
     if (responseJson.anime.length === 300) {
-        newApiData = newApiData.concat(await getApiData(page + 1))
+        const nextPageData = await getApiData(page + 1)
+
+        if (!nextPageData) {
+            return false
+        }
+
+        newApiData = newApiData.concat(...nextPageData)
     }
 
     return newApiData
