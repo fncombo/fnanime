@@ -121,7 +121,7 @@ function validateAudioStreams(streams, anime) {
                 // Otherwise create an array of all codecs found for Japanese audio streams to display in the error
                 } else if (Array.isArray(hasMatchedJp)) {
                     hasMatchedJp.push(stream.codec_name)
-                } else {
+                } else if (hasMatchedJp === false) {
                     hasMatchedJp = [ stream.codec_name ]
                 }
             }
@@ -140,7 +140,7 @@ function validateAudioStreams(streams, anime) {
     }
 
     // If Japanese audio stream codec does not match the configured codec
-    if (hasJp && !hasMatchedJp) {
+    if (hasJp && Array.isArray(hasMatchedJp)) {
         logMismatch('Audio codec for Japanese audio', anime.title, anime.audioCodec, hasMatchedJp.join(', '))
     }
 }
