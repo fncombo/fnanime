@@ -1,6 +1,9 @@
 # cache
 cache.json
 
+# logs
+*.log
+
 # dependencies
 /node_modules
 
@@ -20,3 +23,8 @@ cache.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.exe
+
+# ffprobe
+*ffprobe*
