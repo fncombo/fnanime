@@ -34,10 +34,10 @@ const FUSE_OPTIONS = {
 // Various default values for the app
 const DEFAULTS = {
     // Table sorting first by status then by title
-    sorting: {
-        status: SORTING_ORDERS.asc,
-        title: SORTING_ORDERS.asc,
-    },
+    sorting: new Map([
+        [ 'status', SORTING_ORDERS.asc ],
+        [ 'title', SORTING_ORDERS.asc ],
+    ]),
     // Filtering is populated later based on all available filters
     filters: {},
     // Rows per table page
@@ -162,15 +162,11 @@ function updateAnimeData(animeId, newData) {
 function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFAULTS.filters) {
     // Start with all the anime
     let results = [ ...ANIME_ARRAY ]
-    let actualSorting = sorting
+    const actualSorting = clone(sorting)
 
     // Add sorting alphabetically by title if not already, to make it more consistent and predictable
-    if (!has(sorting, 'title')) {
-        // Copy to not modify actual sorting settings
-        actualSorting = {
-            ...sorting,
-            title: SORTING_ORDERS.asc,
-        }
+    if (!actualSorting.has('title')) {
+        actualSorting.set('title', SORTING_ORDERS.asc)
     }
 
     // Go through each filter, narrowing down results each time, but don't filter when there is no value
@@ -229,7 +225,11 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     }
 
     // Apply sorting with correct options
-    const fastSortOptions = Object.entries(actualSorting).map(([ column, direction ]) => ({ [direction]: column }))
+    const fastSortOptions = []
+
+    for (const [ column, order ] of actualSorting) {
+        fastSortOptions.push({ [order]: column })
+    }
 
     fastSort(sortResults).by(fastSortOptions)
 

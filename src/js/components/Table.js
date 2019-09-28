@@ -2,7 +2,7 @@
 import React, { memo, useContext, useReducer } from 'react'
 
 // Libraries
-import has from 'has'
+import clone from 'clone'
 import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
@@ -113,26 +113,25 @@ const Header = memo(() => {
 const HeaderColumn = memo(({ columnName }) => {
     const { state: { activeSorting }, dispatch } = useContext(GlobalState)
 
-    const activeSortingKeys = Object.keys(activeSorting)
-
     // Callback to update sorting when clicking on a column
     const changeSorting = ({ shiftKey }) => {
         // Amending current sorting (holding shift) or sorting only the currently sorted column modifies existing
         // sorting settings, otherwise create new settings
         const newSorting = shiftKey || (
-            activeSortingKeys.length === 1 && has(activeSorting, columnName)
-        ) ? { ...activeSorting } : {}
+            activeSorting.size === 1 && activeSorting.has(columnName)
+        ) ? clone(activeSorting) : new Map()
 
         // Check if this column is already being sorted, in which case reverse it,
         // otherwise use the default sorting for it
-        if (has(newSorting, columnName)) {
-            newSorting[columnName] = newSorting[columnName] === SORTING_ORDERS.asc
-                ? SORTING_ORDERS.desc
-                : SORTING_ORDERS.asc
+        if (newSorting.has(columnName)) {
+            newSorting.set(
+                columnName,
+                newSorting.get(columnName) === SORTING_ORDERS.asc ? SORTING_ORDERS.desc : SORTING_ORDERS.asc
+            )
 
         // Add new sorting for this column because it isn't being sorted yet
         } else {
-            newSorting[columnName] = TABLE_COLUMNS[columnName].defaultSorting
+            newSorting.set(columnName, TABLE_COLUMNS[columnName].defaultSorting)
         }
 
         dispatch({
@@ -146,16 +145,16 @@ const HeaderColumn = memo(({ columnName }) => {
     let title = ''
 
     // If this column is being sorted, say so and the order of the sort
-    if (has(activeSorting, columnName)) {
+    if (activeSorting.has(columnName)) {
         // If there are multiple sorting columns, get the index this one was activated at
-        if (activeSortingKeys.length > 1) {
-            index = activeSortingKeys.indexOf(columnName) + 1
+        if (activeSorting.size > 1) {
+            index = [ ...activeSorting.keys() ].indexOf(columnName) + 1
 
             const ordinal = formatOrdinal(index)
 
-            title = `Sorting ${index}${ordinal} by this column in ${activeSorting[columnName]}ending order.\n\n`
+            title = `Sorting ${index}${ordinal} by this column in ${activeSorting.get(columnName)}ending order.\n\n`
         } else {
-            title = `Sorting by this column in ${activeSorting[columnName]}ending order.\n\n`
+            title = `Sorting by this column in ${activeSorting.get(columnName)}ending order.\n\n`
         }
     }
 
@@ -165,8 +164,11 @@ const HeaderColumn = memo(({ columnName }) => {
 
     return (
         <div className="table-column" style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
-            {has(activeSorting, columnName) &&
-                <Icon icon={SORTING_ICONS[activeSorting[columnName]]} className={`is-${activeSorting[columnName]}`} />
+            {activeSorting.has(columnName) &&
+                <Icon
+                    icon={SORTING_ICONS[activeSorting.get(columnName)]}
+                    className={`is-${activeSorting.get(columnName)}`}
+                />
             }
             {TABLE_COLUMNS[columnName].text}
         </div>
