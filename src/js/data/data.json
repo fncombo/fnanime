@@ -1,5 +1,5 @@
 {
-    "updated": 1570222814731,
+    "updated": 1570309214520,
     "anime": {
         "20": {
             "id": 20,
@@ -6653,11 +6653,11 @@
             "title": "Arslan Senki (TV)",
             "type": 1,
             "episodes": 25,
-            "episodesWatched": 20,
+            "episodesWatched": 25,
             "img": "https://cdn.myanimelist.net/images/anime/6/73588.jpg",
-            "status": 1,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/28249/Arslan_Senki_TV",
             "genres": [1, 2, 8, 10, 13, 27],
@@ -7251,9 +7251,9 @@
             "title": "Arslan Senki (TV): Fuujin Ranbu",
             "type": 1,
             "episodes": 8,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/12/80681.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
