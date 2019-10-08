@@ -210,10 +210,15 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
                     <LoadingText>
-                        <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
+                        <p>Mean MAL rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
                     <LoadingText>
-                        <p>Rank: <ApiData property="rank" fallback="N/A">{rank => `#${rank}`}</ApiData></p>
+                        <p>Rated by <ApiData property="scored_by" fallback="?" /> people</p>
+                    </LoadingText>
+                    <LoadingText>
+                        <p>Ranked <ApiData property="rank" fallback="?">{rank =>
+                            `#${rank.toLocaleString()}`
+                        }</ApiData></p>
                     </LoadingText>
                     <hr />
                     <p>
@@ -437,12 +442,19 @@ function ApiData({ property, fallback = <>&mdash;</>, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
+    // No such API data or it's empty, return the fallback
     if (!data) {
         return fallback
     }
 
+    // Function provided, pass the data to it
     if (typeof children === 'function') {
         return children(data)
+    }
+
+    // The data is a number, format it properly
+    if (/^\d+$/.test(data)) {
+        return data.toLocaleString()
     }
 
     return data
