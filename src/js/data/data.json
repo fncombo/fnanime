@@ -1,5 +1,5 @@
 {
-    "updated": 1570482011973,
+    "updated": 1570568410096,
     "anime": {
         "20": {
             "id": 20,
@@ -765,7 +765,7 @@
             "title": "Ergo Proxy",
             "type": 1,
             "episodes": 23,
-            "episodesWatched": 7,
+            "episodesWatched": 9,
             "img": "https://cdn.myanimelist.net/images/anime/11/6259.jpg",
             "status": 1,
             "airStatus": 2,
@@ -3654,7 +3654,7 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 36147442876,
+            "size": 36147398247,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -8332,11 +8332,11 @@
             "title": "Boku no Hero Academia the Movie 1: Futari no Hero",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1736/93138.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/36896/Boku_no_Hero_Academia_the_Movie_1__Futari_no_Hero",
             "genres": [1, 31, 27],
