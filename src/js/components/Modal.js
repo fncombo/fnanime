@@ -209,6 +209,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
+                    <hr />
                     <LoadingText>
                         <p>Mean MAL rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
@@ -335,10 +336,6 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
  * Displays anime's rating using stars. Always shows 10 stars with different style for rating and filler.
  */
 function Rating({ rating }) {
-    if (!rating) {
-        return <h5>Not Rated</h5>
-    }
-
     return (
         <>
             <div className="rating">
@@ -354,7 +351,7 @@ function Rating({ rating }) {
                 </span>
             </div>
             <h5 className="title is-5">
-                {FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}
+                {FILTERS.rating.simpleDescriptions[rating]}{!!rating && <> &ndash; {rating}</>}
             </h5>
         </>
     )
