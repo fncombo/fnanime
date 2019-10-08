@@ -183,7 +183,7 @@ function Row(anime) {
         <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
             <TitleColumn {...anime} />
             <Column columnName="status">
-                <Badge includeAirStatus {...anime} />
+                <Badge showAirStatus {...anime} />
             </Column>
             <Column columnName="rating">
                 {anime.rating}

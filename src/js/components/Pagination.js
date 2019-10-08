@@ -1,5 +1,5 @@
 // React
-import React, { memo, useContext } from 'react'
+import React, { useContext } from 'react'
 
 // Libraries
 import classNames from 'classnames'
@@ -131,7 +131,7 @@ function NumberButton({ children: pageNumber }) {
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-const NavButton = memo(({ action: type, disabled = false }) => {
+function NavButton({ action: type, disabled = false }) {
     const { dispatch } = useContext(TableState)
 
     const changePage = () => {
@@ -143,12 +143,8 @@ const NavButton = memo(({ action: type, disabled = false }) => {
         'is-disabled': disabled,
     })
 
-    if (disabled) {
-        return <Icon as="button" icon={icon} className={classes} />
-    }
-
-    return <Icon as="button" icon={icon} className={classes} onClick={changePage} />
-})
+    return disabled ? null : <Icon as="button" icon={icon} className={classes} onClick={changePage} />
+}
 
 // Exports
 export default Pagination

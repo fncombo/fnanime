@@ -35,13 +35,14 @@
             }
         }
     }
+}
 
-    &.is-link:hover {
-        cursor: pointer;
+.is-modal-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 
-        .tag {
-            text-decoration: underline;
-        }
+    .tag {
+        text-decoration: underline;
     }
 }
 

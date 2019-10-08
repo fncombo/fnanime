@@ -209,11 +209,17 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
+                    <hr />
                     <LoadingText>
-                        <p>Average rating: <ApiData property="score" fallback="N/A" /></p>
+                        <p>Mean MAL rating: <ApiData property="score" fallback="N/A" /></p>
                     </LoadingText>
                     <LoadingText>
-                        <p>Rank: <ApiData property="rank" fallback="N/A">{rank => `#${rank}`}</ApiData></p>
+                        <p>Rated by <ApiData property="scored_by" fallback="?" /> people</p>
+                    </LoadingText>
+                    <LoadingText>
+                        <p>Ranked <ApiData property="rank" fallback="?">{rank =>
+                            `#${rank.toLocaleString()}`
+                        }</ApiData></p>
                     </LoadingText>
                     <hr />
                     <p>
@@ -330,10 +336,6 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
  * Displays anime's rating using stars. Always shows 10 stars with different style for rating and filler.
  */
 function Rating({ rating }) {
-    if (!rating) {
-        return <h5>Not Rated</h5>
-    }
-
     return (
         <>
             <div className="rating">
@@ -349,7 +351,7 @@ function Rating({ rating }) {
                 </span>
             </div>
             <h5 className="title is-5">
-                {FILTERS.rating.simpleDescriptions[rating]} &ndash; {rating}
+                {FILTERS.rating.simpleDescriptions[rating]}{!!rating && <> &ndash; {rating}</>}
             </h5>
         </>
     )
@@ -437,12 +439,19 @@ function ApiData({ property, fallback = <>&mdash;</>, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
+    // No such API data or it's empty, return the fallback
     if (!data) {
         return fallback
     }
 
+    // Function provided, pass the data to it
     if (typeof children === 'function') {
         return children(data)
+    }
+
+    // The data is a number, format it properly
+    if (/^\d+$/.test(data)) {
+        return data.toLocaleString()
     }
 
     return data
@@ -605,7 +614,7 @@ function RelatedListItem({ ...anime }) {
                 {replaceSpecialChars(anime.name)}
             </a>
             {has(ANIME_OBJECT, anime.mal_id) &&
-                <Badge showRating isSmall onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
+                <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
             }
         </li>
     )
