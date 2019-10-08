@@ -60,13 +60,13 @@ function FilterButtons() {
                     />
                 </div>
                 <div className="column is-6-mobile is-2-tablet">
-                    <OptionGroup filterName="subs" />
+                    <Select filterName="subs" />
                 </div>
                 <div className="column is-6-mobile is-2-tablet">
-                    <OptionGroup filterName="genres" />
+                    <Select filterName="genres" />
                 </div>
                 <div className="column is-6-mobile is-2-tablet">
-                    <OptionGroup filterName="studios" />
+                    <Select filterName="studios" />
                 </div>
                 <div className="column is-8-mobile is-2-tablet summary">
                     <Summary />
@@ -136,7 +136,7 @@ function FilterButton({ filterName, filterValue }) {
 /**
  * Select input for a filter. Updates global filtering.
  */
-function OptionGroup({ filterName }) {
+function Select({ filterName }) {
     const { state: { activeFilters: { [filterName]: value } }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
@@ -169,22 +169,27 @@ function OptionGroup({ filterName }) {
         <div className="select is-fullwidth">
             <select value={value} onChange={selectFilter}>
                 <Option filterName={filterName} filterValue={false} />
-                {!!withCount.length &&
-                    <optgroup label="Have matching anime">
-                        {withCount.map(filterValue =>
-                            <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
-                        )}
-                    </optgroup>
-                }
-                {!!withoutCount.length &&
-                    <optgroup label="No matching anime">
-                        {withoutCount.map(filterValue =>
-                            <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
-                        )}
-                    </optgroup>
-                }
+                <OptionGroup filterName={filterName} label="Have matching anime" options={withCount} />
+                <OptionGroup filterName={filterName} label="No matching anime" options={withoutCount} />
             </select>
         </div>
+    )
+}
+
+/**
+ * A group of filter options in a select list with a label.
+ */
+function OptionGroup({ filterName, label, options }) {
+    if (!options.length) {
+        return null
+    }
+
+    return (
+        <optgroup label={label}>
+            {options.map(filterValue =>
+                <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
+            )}
+        </optgroup>
     )
 }
 
