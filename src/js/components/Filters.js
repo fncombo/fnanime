@@ -194,7 +194,7 @@ function OptionGroup({ filterName, label, options }) {
 }
 
 /**
- * Single filter option  for a value of a filter with a count of how many anime currently match it.
+ * Single filter option for a value of a filter with a count of how many anime currently match it.
  */
 function Option({ filterName, filterValue }) {
     const { filterCounts } = useContext(FiltersState)
