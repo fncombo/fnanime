@@ -605,7 +605,7 @@ function RelatedListItem({ ...anime }) {
                 {replaceSpecialChars(anime.name)}
             </a>
             {has(ANIME_OBJECT, anime.mal_id) &&
-                <Badge showRating isSmall onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
+                <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
             }
         </li>
     )

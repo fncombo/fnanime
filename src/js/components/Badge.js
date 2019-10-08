@@ -15,70 +15,56 @@ import { FILTERS } from 'js/data/Filters'
  * A badge for an anime display the watch status with episode count if watching. Optionally can display
  * the anime rating and link to open an anime's info box.
  */
-function Badge({ showRating, isSmall, includeAirStatus, onClick, ...anime }) {
+function Badge({ showRating, showAirStatus, onClick, ...anime }) {
     // Anime wasn't found
     if (!anime) {
         return null
     }
 
-    const showAirStatus = includeAirStatus
-        ? anime.airStatus !== 2 && has(FILTERS.airStatus.descriptions, anime.airStatus)
-        : false
+    const { status, airStatus, rating, episodes, episodesWatched } = anime
 
-    const isSmallClass = isSmall || showAirStatus
+    // Only show rating when the option is true and the anime is either watching, completed, on-hold, or dropped
+    const includeRating = showRating && status < 5
 
-    let extraInfo
-    let attributes = {}
-    let showEpisodes = (anime.episodesWatched !== 0 && anime.episodesWatched !== anime.episodes) || anime.status === 1
+    // Only show air status when the option is true and anime is not completed and the air status has a description
+    const includeAirStatus = showAirStatus && airStatus !== 2 && has(FILTERS.airStatus.descriptions, airStatus)
+
+    // Only show episodes when at least 1 and not all episodes have been watched, or the status is watching
+    const includeEpisodes = ((episodesWatched !== 0 && episodesWatched !== episodes) || status === 1) && !includeRating
+
+    // Make the badge small if the rating was asked for or air status is being included
+    const isSmall = showRating || includeAirStatus
+
+    // Title and onClick handler attributes if onClick was provided
+    const attributes = onClick ? {
+        title: 'View',
+        onClick,
+    } : {}
 
     const classes = classNames(
         'tag is-rounded',
-        isSmallClass ? 'is-normal' : 'is-medium',
-        `is-${FILTERS.status.colorCodes[anime.status]}`,
-    )
-
-    // Show episode progress if number of watched episodes is different from total and not zero
-    if (showEpisodes) {
-        extraInfo = <>
-            <span className={`tag-part is-current has-background-${FILTERS.status.colorCodes[anime.status]}`}>
-                {anime.episodesWatched}
-            </span>
-            <span className="tag-part is-total">{anime.episodes || '?'}</span>
-        </>
-    }
-
-    // Optionally show anime rating
-    if (showRating && !!anime.rating) {
-        // In which case, no longer show episodes
-        showEpisodes = false
-
-        extraInfo = <>Rated {anime.rating}</>
-    }
-
-    // Open info box if a link
-    if (onClick) {
-        attributes = {
-            title: 'View',
-            onClick,
-        }
-    }
-
-    if (extraInfo) {
-        const mainClasses = classNames('tags has-addons', {
-            'is-link': onClick,
+        isSmall ? 'is-normal' : 'is-medium',
+        `is-${FILTERS.status.colorCodes[status]}`, {
+            'is-modal-link': onClick,
         })
-        const extraClasses = classNames('tag is-rounded is-dark', isSmallClass ? 'is-normal' : 'is-medium', {
-            'is-parted': showEpisodes,
+
+    if (includeEpisodes || includeRating) {
+        const mainClasses = classNames('tags has-addons', {
+            'is-modal-link': onClick,
+        })
+        const extraClasses = classNames('tag is-rounded is-dark', isSmall ? 'is-normal' : 'is-medium', {
+            'is-parted': includeEpisodes,
         })
 
         return (
             <div className={mainClasses} {...attributes}>
                 <span className={classes}>
-                    {FILTERS.status.fancyDescriptions[anime.status]}
-                    {showAirStatus && `, ${FILTERS.airStatus.descriptions[anime.airStatus]}`}
+                    {FILTERS.status.fancyDescriptions[status]}
+                    {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
                 </span>
                 <span className={extraClasses}>
-                    {extraInfo}
+                    {includeEpisodes && <EpisodeProgress {...anime} />}
+                    {includeRating && (rating ? `Rated ${rating}` : FILTERS.rating.tinyDescriptions.null)}
                 </span>
             </div>
         )
@@ -86,9 +72,23 @@ function Badge({ showRating, isSmall, includeAirStatus, onClick, ...anime }) {
 
     return (
         <span className={classes} {...attributes}>
-            {FILTERS.status.fancyDescriptions[anime.status]}
-            {showAirStatus && `, ${FILTERS.airStatus.descriptions[anime.airStatus]}`}
+            {FILTERS.status.fancyDescriptions[status]}
+            {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
         </span>
+    )
+}
+
+/**
+ * Shows how many episodes have been watched out of the total number of episodes if it's known.
+ */
+function EpisodeProgress({ status, episodes, episodesWatched }) {
+    return (
+        <>
+            <span className={`tag-part is-current has-background-${FILTERS.status.colorCodes[status]}`}>
+                {episodesWatched}
+            </span>
+            <span className="tag-part is-total">{episodes || '?'}</span>
+        </>
     )
 }
 
