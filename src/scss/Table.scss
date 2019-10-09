@@ -12,7 +12,7 @@
 
 .table-sentinel {
     position: absolute;
-    top: -60px;
+    top: -$sticky-panel-height;
     left: 0;
     right: 0;
     pointer-events: none;
@@ -23,7 +23,7 @@
     align-items: center;
     position: sticky;
     height: 45px;
-    top: 60px;
+    top: $sticky-panel-height;
     z-index: 5;
     transition-property: height, margin-bottom;
     transition-duration: $duration-fast;
@@ -50,8 +50,8 @@
 
     // Special style when the table header is stuck
     &.is-stuck {
-        height: 60px;
-        margin-bottom: -(60px - 45px);
+        height: $sticky-panel-height;
+        margin-bottom: calc(-#{$sticky-panel-height} + 45px);
 
         &::before {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);

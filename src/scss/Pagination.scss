@@ -28,8 +28,7 @@
 
     // Special style when the pagination is stuck
     &.is-stuck {
-        height: 60px;
-        margin-bottom: -(60px - 45px);
+        height: $sticky-panel-height;
 
         &::before {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);

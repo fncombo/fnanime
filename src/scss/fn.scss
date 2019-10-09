@@ -2,7 +2,7 @@
 
 .fnheader {
     background: $backdrop-background-light-fallback;
-    height: 60px;
+    height: $sticky-panel-height;
     display: flex;
     justify-content: center;
     align-items: center;

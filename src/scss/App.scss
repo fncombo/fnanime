@@ -192,7 +192,7 @@ strong {
     align-items: center;
     border-radius: 10rem;
     position: fixed;
-    bottom: calc(60px + 0.75rem);
+    bottom: calc(#{$sticky-panel-height} + 0.75rem);
     left: 50%;
     transform: translateX(-50%);
     z-index: 300;
