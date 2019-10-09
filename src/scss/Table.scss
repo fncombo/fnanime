@@ -129,11 +129,11 @@
         padding: 0.25rem 0;
         margin: 0.25rem 0;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: $mobile-table-img-height 1fr 1fr;
-        grid-template-areas: "header header header header header header"
-                             "rating resolution source videoCodec audioCodec fileQuality"
-                             "episodeSize episodeSize episodeSize size size size";
+        grid-template: "header header header header header header" $mobile-table-img-height
+                       "rating resolution source videoCodec audioCodec fileQuality" 1fr
+                       "episodeSize episodeSize episodeSize size size size" 1fr
+                       / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
+
     }
 
     @include tablet {
@@ -179,6 +179,16 @@
         justify-content: flex-start;
         flex: 1 1 auto;
         padding-right: 0.25rem;
+
+        @include mobile {
+            display: grid;
+            padding: 0;
+            grid-area: header;
+            overflow: visible;
+            grid-template: "img title title" #{$mobile-table-img-height / 2}
+                           "img status status" #{$mobile-table-img-height / 2}
+                           / #{$mobile-table-img-width} 1fr 1fr;
+        }
 
         .table-column {
             &.is-title {
