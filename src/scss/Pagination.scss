@@ -76,8 +76,10 @@
             transition: transform $duration-medium $easing;
         }
 
-        &:hover svg {
-            transform: scale(1.5);
+        @media (hover: hover) {
+            &:hover svg {
+                transform: scale(1.5);
+            }
         }
 
         &.is-left svg {
@@ -99,12 +101,6 @@
 .pagination-list {
     display: flex;
     justify-content: center;
-
-    .button.is-fill {
-        @include mobile {
-            display: none;
-        }
-    }
 
     .button {
         flex: 0 0 2.25em;
