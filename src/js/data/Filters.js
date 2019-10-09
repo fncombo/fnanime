@@ -137,7 +137,7 @@ const FILTERS = {
             3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
             2: '',
             1: '',
-            0: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
+            0: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">less than 20%</a> of the episodes watched.</>,
         },
         // Reverse sort
         specialValuesProcess: reverseSort,
