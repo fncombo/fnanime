@@ -133,7 +133,7 @@ function App() {
                 updateAnimeData(anime.mal_id, {
                     status: anime.watching_status,
                     airStatus: anime.airing_status,
-                    rating: anime.score,
+                    rating: anime.score || (anime.watching_status < 5 ? null : false),
                     episodes: anime.total_episodes,
                     episodesWatched: anime.watched_episodes,
                 })
