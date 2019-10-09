@@ -14,13 +14,17 @@ $gap: 5px;
     --img-height: calc(var(--img-width) * 1.4);
 
     @include mobile {
-        --img-width: 110px;
+        --img-width: 80px;
     }
 
     padding: 0 $column-gap;
 
     .tag {
         border-radius: 0;
+
+        @include mobile {
+            font-size: 0.75rem !important;
+        }
     }
 
     img {
