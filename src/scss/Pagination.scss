@@ -24,6 +24,11 @@
         z-index: 1;
         pointer-events: none;
         transition: box-shadow $duration-fast $easing;
+
+        @include mobile {
+            width: 100%;
+            left: 0;
+        }
     }
 
     // Special style when the pagination is stuck
