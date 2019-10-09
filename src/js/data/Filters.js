@@ -121,22 +121,23 @@ const FILTERS = {
         },
         detailedDescriptions: {
             null: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
-            10: 'My favourite anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
-            9: 'The best anime which were super enjoyable and interesting to watch, and remain very memorable.',
+            10: 'The very best anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
+            9: 'Great anime which were super enjoyable and interesting to watch, and remain very memorable.',
             // eslint-disable-next-line max-len
-            8: 'Overall very enjoyable anime which were a pleasure to watch. Relevant to my interests and have nice themes.',
+            8: 'Overall enjoyable anime which were a pleasure to watch. Relevant to my interests and have nice themes.',
             // eslint-disable-next-line max-len
-            7: 'Nice anime to pass the time, however nothing too special. These are average anime which I did not dislike watching.',
+            7: 'Nice anime to pass the time, however nothing too special. These are average anime which I didn\'t dislike watching.',
             // eslint-disable-next-line max-len
             6: 'Not terrible but not that good either that I\'d consider recommending. Starting to maybe forget what these were about.',
             // eslint-disable-next-line max-len
-            5: 'Low effort recaps, confusing shorts, or bad movies. Might have made me question why I\'m still watching it.',
+            5: 'Low effort recaps, confusing shorts, bad movies, incomprehensible series. Made me question why I\'m still watching it.',
             // eslint-disable-next-line max-len
-            4: 'Boring and not interesting. Only reason I probably didn\'t drop these is because 20 minutes a week was just about bearable.',
+            4: 'Utterly boring and not interesting. I probably didn\'t drop these because 20 minutes a week was just about bearable.',
             // eslint-disable-next-line max-len
             3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
             2: '',
             1: '',
+            // eslint-disable-next-line max-len
             0: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">less than 20%</a> of the episodes watched.</>,
         },
         // Reverse sort
