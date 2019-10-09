@@ -16,7 +16,7 @@ import { DEFAULTS } from 'js/data/Data'
 import Icon from 'js/helpers/Icon'
 
 /**
- * Previous, next, and number button to control the table.
+ * Previous, next, and number buttons to control the table.
  */
 function Pagination() {
     const { state: { page }, dispatch, lastPage } = useContext(TableState)
@@ -42,6 +42,31 @@ function Pagination() {
     if (lastPage <= 1) {
         return null
     }
+
+    return (
+        <>
+            <div className="pagination-sentinel" ref={ref} />
+            <div className={classes}>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
+                </div>
+                <div className="column is-6 pagination-list">
+                    <PageNumberButtons />
+                </div>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
+                </div>
+            </div>
+        </>
+    )
+}
+
+/**
+ * Number buttons to control the table. Some number buttons are truncated when the are too many between the current
+ * and first/last page.
+ */
+function PageNumberButtons() {
+    const { state: { page }, lastPage } = useContext(TableState)
 
     // The lowest and highest page button numbers on either side of the current page
     const leftPage = page - DEFAULTS.pageButtons
@@ -91,20 +116,7 @@ function Pagination() {
         }
     }
 
-    return (
-        <>
-            <div className="pagination-sentinel" ref={ref} />
-            <div className={classes}>
-                <div className="column is-3">
-                    <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
-                </div>
-                <div className="column is-6 pagination-list">{buttons}</div>
-                <div className="column is-3">
-                    <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
-                </div>
-            </div>
-        </>
-    )
+    return buttons
 }
 
 /**
