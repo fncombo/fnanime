@@ -105,14 +105,14 @@ function PageNumberButtons() {
     // Add blank buttons at the start to ensure the current page button is always exactly in the middle
     if (page <= DEFAULTS.pageButtons + 2) {
         for (let i = 0; i <= DEFAULTS.pageButtons + 2 - page; i += 1) {
-            buttons.unshift(<button className="button" disabled={true} key={`start-${i}-fill`} />)
+            buttons.unshift(<button className="button is-fill" disabled={true} key={`start-${i}-fill`} />)
         }
     }
 
     // Add blank buttons at the end to ensure the current page button is always exactly in the middle
     if (page > lastPage - DEFAULTS.pageButtons - 2) {
         for (let i = lastPage + 1; i <= lastPage + DEFAULTS.pageButtons + 2 - (lastPage - page); i += 1) {
-            buttons.push(<button className="button" disabled={true} key={`end-${i}-fill`} />)
+            buttons.push(<button className="button is-fill" disabled={true} key={`end-${i}-fill`} />)
         }
     }
 
@@ -155,7 +155,9 @@ function NavButton({ action: type, disabled = false }) {
         'is-disabled': disabled,
     })
 
-    return disabled ? null : <Icon as="button" icon={icon} className={classes} onClick={changePage} />
+    return disabled
+        ? <Icon as="button" icon={icon} className={classes} />
+        : <Icon as="button" icon={icon} className={classes} onClick={changePage} />
 }
 
 // Exports
