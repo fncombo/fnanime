@@ -60,7 +60,7 @@ function Table() {
         return (
             <div className="container">
                 <p className="table-empty">
-                    <Icon icon="exclamation-circle" />No matching anime found
+                    <Icon icon="exclamation-circle" /> No matching anime found
                 </p>
             </div>
         )
