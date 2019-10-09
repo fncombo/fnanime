@@ -95,8 +95,8 @@
     display: flex;
     justify-content: center;
 
-    @include mobile {
-        .button.is-fill {
+    .button.is-fill {
+        @include mobile {
             display: none;
         }
     }
