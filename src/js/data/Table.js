@@ -30,7 +30,6 @@ const STORAGE_SIZE_LIMITS = {
 const COLUMN_SIZES = {
     small: '5%',
     medium: '7%',
-    large: '15%',
 }
 
 // Sorting directions
@@ -55,7 +54,7 @@ const TABLE_COLUMNS = {
     status: {
         text: 'Status',
         defaultSorting: SORTING_ORDERS.asc,
-        size: COLUMN_SIZES.large,
+        size: '220px',
     },
     rating: {
         text: 'Rating',
