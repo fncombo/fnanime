@@ -1,5 +1,5 @@
 {
-    "updated": 1570568410096,
+    "updated": 1570654812125,
     "anime": {
         "20": {
             "id": 20,
@@ -3640,9 +3640,9 @@
             "title": "Hunter x Hunter (2011)",
             "type": 1,
             "episodes": 148,
-            "episodesWatched": 0,
+            "episodesWatched": 4,
             "img": "https://cdn.myanimelist.net/images/anime/11/33657.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
@@ -3653,7 +3653,7 @@
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Other",
             "size": 36147398247,
             "studios": ["Madhouse"],
             "episodeDuration": 23
@@ -9025,7 +9025,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1267/103421.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38572/Assassins_Pride",
@@ -9117,7 +9117,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1234/102008.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39195/Beastars",
