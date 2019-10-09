@@ -24,7 +24,7 @@
     }
 }
 
-.fnheader:before {
+.fnheader::before {
     background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
     content: '';
     display: block;
