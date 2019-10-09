@@ -83,4 +83,14 @@
         justify-content: center;
         align-items: center;
     }
+
+    .column:not(.buttons) {
+        @include mobile {
+            padding-bottom: 0;
+
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+        }
+    }
 }

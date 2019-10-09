@@ -12,7 +12,7 @@ import 'scss/Table.scss'
 // Data
 import { GlobalState, TableState, ACTIONS } from 'js/data/GlobalState'
 import { DEFAULTS } from 'js/data/Data'
-import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
+import { TABLE_COLUMNS, TABLE_COLUMN_NAMES, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
@@ -60,7 +60,7 @@ function Table() {
         return (
             <div className="container">
                 <p className="table-empty">
-                    <Icon icon="exclamation-circle" />No matching anime found
+                    <Icon icon="exclamation-circle" /> No matching anime found
                 </p>
             </div>
         )
@@ -99,7 +99,7 @@ const Header = memo(() => {
         <>
             <div className="table-sentinel" ref={ref} />
             <div className={classes}>
-                {Object.keys(TABLE_COLUMNS).map(columnName =>
+                {TABLE_COLUMN_NAMES.map(columnName =>
                     <HeaderColumn columnName={columnName} key={columnName} />
                 )}
             </div>
@@ -181,10 +181,21 @@ const HeaderColumn = memo(({ columnName }) => {
 function Row(anime) {
     return (
         <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
-            <TitleColumn {...anime} />
-            <Column columnName="status">
-                <Badge showAirStatus {...anime} />
-            </Column>
+            <div className="table-column is-main">
+                <img
+                    className="table-column is-img"
+                    width="33"
+                    height="45"
+                    src={anime.img}
+                    alt={anime.title}
+                    loading="lazy"
+                    style={{ gridArea: 'img' }}
+                />
+                <TitleColumn {...anime} />
+                <Column columnName="status">
+                    <Badge showAirStatus {...anime} />
+                </Column>
+            </div>
             <Column columnName="rating">
                 {anime.rating}
             </Column>
@@ -220,12 +231,15 @@ function Row(anime) {
  * Title column for an anime which contains the image, title, and anime type. If a search query is present,
  * it gets highlighted using the anime status color.
  */
-function TitleColumn({ title, img, status, type, highlight }) {
-    const classes = classNames('table-column', `has-highlight-${FILTERS.status.colorCodes[status]}`)
+function TitleColumn({ title, status, type, highlight }) {
+    const classes = classNames('table-column is-title', `has-highlight-${FILTERS.status.colorCodes[status]}`)
+    const style = {
+        flexBasis: TABLE_COLUMNS.title.size,
+        gridArea: 'title',
+    }
 
     return (
-        <div className={classes} style={{ flexBasis: TABLE_COLUMNS.title.size }}>
-            <img width="37" height="50" src={img} alt={title} loading="lazy" />
+        <div className={classes} style={style}>
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle(title, highlight) : title}
             </span>
@@ -241,10 +255,14 @@ function TitleColumn({ title, img, status, type, highlight }) {
  */
 function Column({ value, columnName, children }) {
     const textColor = getColumnTextColor(columnName, value || children) || 'black'
+    const style = {
+        flexBasis: TABLE_COLUMNS[columnName].size,
+        gridArea: columnName,
+    }
 
     // Fallback to a dash if there are no children or value
     return (
-        <div className={`table-column has-text-${textColor}`} style={{ flexBasis: TABLE_COLUMNS[columnName].size }}>
+        <div className={`table-column has-text-${textColor} is-${columnName}`} style={style}>
             {(value === undefined ? children : value) ? children || value : <>&mdash;</>}
         </div>
     )
@@ -259,20 +277,33 @@ function SizeColumns({ episodeSize, size }) {
     if (size === episodeSize) {
         // Add the widths of both columns
         const width = parseInt(TABLE_COLUMNS.episodeSize.size, 10) + parseInt(TABLE_COLUMNS.size.size, 10)
+        const style = {
+            flexBasis: `${width}%`,
+            gridArea: 'episodeSize / episodeSize / episodeSize / size',
+        }
 
         return (
-            <div className="table-column has-progress is-double" style={{ flexBasis: `${width}%` }}>
+            <div className="table-column has-progress is-double" style={style}>
                 <SizeBar size={size} type="total" />
             </div>
         )
     }
 
+    const episodeSizeStyle = {
+        flexBasis: TABLE_COLUMNS.episodeSize.size,
+        gridArea: 'episodeSize',
+    }
+    const sizeStyle = {
+        flexBasis: TABLE_COLUMNS.size.size,
+        gridArea: 'size',
+    }
+
     return (
         <>
-            <div className="table-column has-progress" style={{ flexBasis: TABLE_COLUMNS.episodeSize.size }}>
+            <div className="table-column has-progress" style={episodeSizeStyle}>
                 <SizeBar size={episodeSize} type="episode" />
             </div>
-            <div className="table-column has-progress" style={{ flexBasis: TABLE_COLUMNS.size.size }}>
+            <div className="table-column has-progress" style={sizeStyle}>
                 <SizeBar size={size} type="total" />
             </div>
         </>

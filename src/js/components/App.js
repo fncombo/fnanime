@@ -1,5 +1,5 @@
 // React
-import React, { Suspense, lazy, useReducer, useEffect } from 'react'
+import React, { Suspense, lazy, useReducer, useEffect, useContext } from 'react'
 
 // Libraries
 import clone from 'clone'
@@ -111,7 +111,7 @@ function globalReducer(state, action) {
  */
 function App() {
     const [ state, dispatch ] = useReducer(globalReducer, INITIAL_STATE)
-    const { apiUpdated, apiError } = state
+    const { apiUpdated } = state
 
     useEffect(() => {
         if (apiUpdated || SUPPRESS_API_UPDATE) {
@@ -133,7 +133,7 @@ function App() {
                 updateAnimeData(anime.mal_id, {
                     status: anime.watching_status,
                     airStatus: anime.airing_status,
-                    rating: anime.score,
+                    rating: anime.score || (anime.watching_status < 5 ? null : false),
                     episodes: anime.total_episodes,
                     episodesWatched: anime.watched_episodes,
                 })
@@ -147,17 +147,6 @@ function App() {
 
         fetchData()
     }, [ apiUpdated ])
-
-    const messageClasses = classNames('message', apiUpdated ? 'is-done' : 'is-loading')
-    let updateStatusMessage
-
-    if (apiUpdated) {
-        updateStatusMessage = apiError
-            ? <><Icon icon="times-circle" /> Error contacting API</>
-            : <><Icon icon="check-circle" /> Updated</>
-    } else {
-        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
-    }
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
@@ -180,9 +169,7 @@ function App() {
                     <li>All rankings are my own subjective opinion</li>
                 </ul>
             </div>
-            <div className={messageClasses}>
-                {updateStatusMessage}
-            </div>
+            <UpdateMessage />
         </GlobalState.Provider>
     )
 }
@@ -194,6 +181,31 @@ function Loading() {
     return (
         <div className="container">
             <p className="notification">Loading&hellip;</p>
+        </div>
+    )
+}
+
+/**
+ * Message indicating the loading status of the API update.
+ */
+function UpdateMessage() {
+    const { state: { apiUpdated, apiError } } = useContext(GlobalState)
+
+    const classes = classNames('message', apiUpdated ? 'is-done' : 'is-loading')
+
+    let updateStatusMessage
+
+    if (apiUpdated) {
+        updateStatusMessage = apiError
+            ? <><Icon icon="times-circle" /> Error contacting API</>
+            : <><Icon icon="check-circle" /> Updated</>
+    } else {
+        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
+    }
+
+    return (
+        <div className={classes}>
+            {updateStatusMessage}
         </div>
     )
 }
