@@ -24,12 +24,16 @@
         z-index: 1;
         pointer-events: none;
         transition: box-shadow $duration-fast $easing;
+
+        @include mobile {
+            width: 100%;
+            left: 0;
+        }
     }
 
     // Special style when the pagination is stuck
     &.is-stuck {
-        height: 60px;
-        margin-bottom: -(60px - 45px);
+        height: $sticky-panel-height;
 
         &::before {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -72,8 +76,10 @@
             transition: transform $duration-medium $easing;
         }
 
-        &:hover svg {
-            transform: scale(1.5);
+        @media (hover: hover) {
+            &:hover svg {
+                transform: scale(1.5);
+            }
         }
 
         &.is-left svg {
@@ -85,7 +91,8 @@
         }
 
         &.is-disabled {
-            color: $border;
+            opacity: 0;
+            visibility: hidden;
             pointer-events: none;
         }
     }
@@ -95,22 +102,12 @@
     display: flex;
     justify-content: center;
 
-    @include mobile {
-        .button:not(.is-dark) {
-            display: none;
-        }
-    }
-
     .button {
         flex: 0 0 2.25em;
         width: 2.25em;
         padding: 0.25rem;
         margin: 0 0.25rem;
         transition: none !important;
-
-        @include mobile {
-            margin: 0 0.1rem;
-        }
 
         &[disabled] {
             opacity: 0;
@@ -127,10 +124,6 @@
     margin: 0 0.25rem;
     justify-content: center;
     align-items: center;
-
-    @include mobile {
-        display: none;
-    }
 }
 
 .pagination-sentinel {

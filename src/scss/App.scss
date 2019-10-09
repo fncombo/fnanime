@@ -19,10 +19,12 @@
 html,
 body {
     font-family: 'Open Sans', $body-family;
+    font-size: 14px;
     color: #000;
 
     @include tablet {
         min-width: 1325px;
+        font-size: 16px;
     }
 }
 
@@ -192,7 +194,7 @@ strong {
     align-items: center;
     border-radius: 10rem;
     position: fixed;
-    bottom: calc(60px + 0.75rem);
+    bottom: calc(#{$sticky-panel-height} + 0.75rem);
     left: 50%;
     transform: translateX(-50%);
     z-index: 300;

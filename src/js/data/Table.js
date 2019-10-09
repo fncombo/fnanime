@@ -30,7 +30,6 @@ const STORAGE_SIZE_LIMITS = {
 const COLUMN_SIZES = {
     small: '5%',
     medium: '7%',
-    large: '15%',
 }
 
 // Sorting directions
@@ -55,7 +54,7 @@ const TABLE_COLUMNS = {
     status: {
         text: 'Status',
         defaultSorting: SORTING_ORDERS.asc,
-        size: COLUMN_SIZES.large,
+        size: '220px',
     },
     rating: {
         text: 'Rating',
@@ -109,9 +108,13 @@ const TABLE_COLUMNS = {
     },
 }
 
+// Only the keys (names) of all table columns
+const TABLE_COLUMN_NAMES = Object.keys(TABLE_COLUMNS)
+
 // Exports
 export {
     TABLE_COLUMNS,
+    TABLE_COLUMN_NAMES,
     STORAGE_SIZE_LIMITS,
     SORTING_ORDERS,
     SORTING_ICONS,

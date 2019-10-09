@@ -12,7 +12,7 @@
 
 .table-sentinel {
     position: absolute;
-    top: -60px;
+    top: -$sticky-panel-height;
     left: 0;
     right: 0;
     pointer-events: none;
@@ -23,7 +23,7 @@
     align-items: center;
     position: sticky;
     height: 45px;
-    top: 60px;
+    top: $sticky-panel-height;
     z-index: 5;
     transition-property: height, margin-bottom;
     transition-duration: $duration-fast;
@@ -50,8 +50,8 @@
 
     // Special style when the table header is stuck
     &.is-stuck {
-        height: 60px;
-        margin-bottom: -(60px - 45px);
+        height: $sticky-panel-height;
+        margin-bottom: calc(-#{$sticky-panel-height} + 45px);
 
         &::before {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -125,22 +125,23 @@
     color: unset;
 
     @include mobile {
-        flex-wrap: wrap;
-        background: none;
         border-bottom: 1px solid $border;
-        padding-top: 0.75rem;
+        padding: 0.25rem 0;
+        margin: 0.25rem 0;
+        display: grid;
+        grid-template: "header header header header header header" $mobile-table-img-height
+                       "rating resolution source videoCodec audioCodec fileQuality" 1fr
+                       "episodeSize episodeSize episodeSize size size size" 1fr
+                       / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
 
-        &:first-child {
-            border-top: 1px solid $border;
-        }
     }
 
     @include tablet {
-        @media (hover: hover) {
-            &:nth-child(odd) {
-                background: $row-color;
-            }
+        &:nth-child(odd) {
+            background: $row-color;
+        }
 
+        @media (hover: hover) {
             &:hover {
                 background: $row-color-hover;
                 cursor: pointer;
@@ -164,55 +165,71 @@
     justify-content: center;
     overflow: hidden;
 
-    &:first-child {
-        text-align: left;
-        justify-content: flex-start;
-        flex-grow: 1;
-        flex-shrink: 1;
-        padding-right: 0.25rem;
+    @include mobile {
+        height: 30px;
+
+        &.is-rewatchCount,
+        &.is-subs {
+            display: none;
+        }
     }
 
-    @include mobile {
-        flex: 1 1 auto !important;
-        position: relative;
-        padding: 0 0.25rem;
+    &.is-main {
+        text-align: left;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        padding-right: 0.25rem;
 
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 0;
-            transform: scale(2);
-            transform-origin: top left;
+        @include mobile {
+            display: grid;
+            padding: 0;
+            grid-area: header;
+            overflow: visible;
+            grid-template: "img title title" #{$mobile-table-img-height / 2}
+                           "img status status" #{$mobile-table-img-height / 2}
+                           / #{$mobile-table-img-width} 1fr 1fr;
         }
 
-        &:first-child,
-        &:nth-child(2) {
-            height: 45px;
-            max-width: 100%;
-            flex: 0 0 100% !important;
-            justify-content: flex-start;
-            padding: 0 1rem 0 calc(66px + 1rem);
+        .table-column {
+            &.is-title {
+                flex-shrink: 1;
+            }
+
+            &:last-child {
+                @include tablet {
+                    margin-left: auto;
+                }
+            }
+
+            @include mobile {
+                justify-content: flex-start;
+
+                &:not(:first-child) {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: $mobile-table-img-width 1fr 1fr;
+            grid-template-rows: #{$mobile-table-img-height / 2} #{$mobile-table-img-height / 2};
+            grid-template-areas: "img title title"
+                                 "img status status";
+            grid-area: header;
             overflow: visible;
         }
+    }
 
-        &:first-child {
-            align-items: flex-end;
-            padding-bottom: 10px;
-        }
+    &.is-img {
+        flex: 0 0 33px;
+        width: 33px;
+        height: 45px;
+        margin-right: $spacing;
 
-        &:nth-child(2) {
-            align-items: flex-start;
-        }
-
-        &:nth-child(3) {
-            max-width: 66px;
-            flex: 0 0 66px !important;
-        }
-
-        &:nth-child(4),
-        &:nth-child(5) {
-            display: none;
+        @include mobile {
+            width: $mobile-table-img-width;
+            height: $mobile-table-img-height;
         }
     }
 
@@ -229,13 +246,6 @@
         border-radius: 100px;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-    }
-
-    img {
-        flex: 0 0 33px;
-        width: 33px;
-        height: 100%;
-        margin-right: $spacing;
     }
 
     // Search highlighted text
@@ -269,47 +279,24 @@
         background-color: $dark;
     }
 
+    .tag {
+        @include mobile {
+            font-size: 0.75rem !important;
+        }
+    }
+
     // Size progress column don't wrap long numbers
     &.has-progress {
         flex-direction: column;
         padding: 0 0.75rem;
         white-space: nowrap;
         font-size: 0.75rem;
-
-        @include mobile {
-            flex-direction: row;
-            flex-wrap: wrap;
-            max-width: 50%;
-            flex: 0 0 50% !important;
-            padding: 0 0.5rem 0.75rem;
-
-            &:nth-child(11)::before {
-                content: 'Episode Size:\00a0';
-            }
-
-            &:nth-child(12)::before {
-                content: 'Total Size:\00a0';
-            }
-
-            &.is-double {
-                max-width: 100%;
-                flex: 0 0 100% !important;
-
-                &::before {
-                    content: 'Total Size:\00a0';
-                }
-            }
-        }
     }
 
     .progress {
         width: 100%;
         height: $progress-height;
         margin-top: 0.25rem;
-
-        @include mobile {
-            margin-top: 0.25rem;
-        }
     }
 }
 

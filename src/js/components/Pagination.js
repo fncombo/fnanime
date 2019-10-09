@@ -1,5 +1,5 @@
 // React
-import React, { memo, useContext } from 'react'
+import React, { useContext } from 'react'
 
 // Libraries
 import classNames from 'classnames'
@@ -16,7 +16,7 @@ import { DEFAULTS } from 'js/data/Data'
 import Icon from 'js/helpers/Icon'
 
 /**
- * Previous, next, and number button to control the table.
+ * Previous, next, and number buttons to control the table.
  */
 function Pagination() {
     const { state: { page }, dispatch, lastPage } = useContext(TableState)
@@ -42,6 +42,34 @@ function Pagination() {
     if (lastPage <= 1) {
         return null
     }
+
+    return (
+        <>
+            <div className="pagination-sentinel" ref={ref} />
+            <div className={classes}>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
+                </div>
+                <div className="column is-6 pagination-list is-hidden-tablet">
+                    Page {page} of {lastPage}
+                </div>
+                <div className="column is-6 pagination-list is-hidden-mobile">
+                    <PageNumberButtons />
+                </div>
+                <div className="column is-3">
+                    <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
+                </div>
+            </div>
+        </>
+    )
+}
+
+/**
+ * Number buttons to control the table. Some number buttons are truncated when the are too many between the current
+ * and first/last page.
+ */
+function PageNumberButtons() {
+    const { state: { page }, lastPage } = useContext(TableState)
 
     // The lowest and highest page button numbers on either side of the current page
     const leftPage = page - DEFAULTS.pageButtons
@@ -91,20 +119,7 @@ function Pagination() {
         }
     }
 
-    return (
-        <>
-            <div className="pagination-sentinel" ref={ref} />
-            <div className={classes}>
-                <div className="column is-3">
-                    <NavButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
-                </div>
-                <div className="column is-6 pagination-list">{buttons}</div>
-                <div className="column is-3">
-                    <NavButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
-                </div>
-            </div>
-        </>
-    )
+    return buttons
 }
 
 /**
@@ -131,7 +146,7 @@ function NumberButton({ children: pageNumber }) {
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-const NavButton = memo(({ action: type, disabled = false }) => {
+function NavButton({ action: type, disabled = false }) {
     const { dispatch } = useContext(TableState)
 
     const changePage = () => {
@@ -143,12 +158,10 @@ const NavButton = memo(({ action: type, disabled = false }) => {
         'is-disabled': disabled,
     })
 
-    if (disabled) {
-        return <Icon as="button" icon={icon} className={classes} />
-    }
-
-    return <Icon as="button" icon={icon} className={classes} onClick={changePage} />
-})
+    return disabled
+        ? <Icon as="button" icon={icon} className={classes} />
+        : <Icon as="button" icon={icon} className={classes} onClick={changePage} />
+}
 
 // Exports
 export default Pagination
