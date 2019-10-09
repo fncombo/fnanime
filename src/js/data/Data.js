@@ -131,8 +131,8 @@ function updateAnimeData(animeId, newData) {
         return
     }
 
-    // Check that the rating is non-0
-    if (!newData.rating) {
+    // Check that the rating is different
+    if (ANIME_OBJECT[animeId].rating === newData.rating) {
         delete newData.rating
     }
 
