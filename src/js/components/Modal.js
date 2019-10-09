@@ -334,6 +334,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
 
 /**
  * Displays anime's rating using stars. Always shows 10 stars with different style for rating and filler.
+ * Defaults to "not rated" for falsy ratings.
  */
 function Rating({ rating }) {
     return (
@@ -351,7 +352,7 @@ function Rating({ rating }) {
                 </span>
             </div>
             <h5 className="title is-5">
-                {FILTERS.rating.simpleDescriptions[rating]}{!!rating && <> &ndash; {rating}</>}
+                {FILTERS.rating.simpleDescriptions[rating || null]}{!!rating && <> &ndash; {rating}</>}
             </h5>
         </>
     )
