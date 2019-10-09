@@ -12,7 +12,7 @@ import 'scss/Table.scss'
 // Data
 import { GlobalState, TableState, ACTIONS } from 'js/data/GlobalState'
 import { DEFAULTS } from 'js/data/Data'
-import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
+import { TABLE_COLUMNS, TABLE_COLUMN_NAMES, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
@@ -99,7 +99,7 @@ const Header = memo(() => {
         <>
             <div className="table-sentinel" ref={ref} />
             <div className={classes}>
-                {Object.keys(TABLE_COLUMNS).map(columnName =>
+                {TABLE_COLUMN_NAMES.map(columnName =>
                     <HeaderColumn columnName={columnName} key={columnName} />
                 )}
             </div>
