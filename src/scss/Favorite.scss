@@ -17,7 +17,7 @@
         width: auto;
         height: auto;
         margin: 0 0 0 1rem !important;
-        padding: 0.5rem;
+        padding: 0.25rem 0.75rem;
         border-top-left-radius: 6px;
 
         @supports (backdrop-filter: $backdrop-filter) {
@@ -34,7 +34,7 @@
     .modal & {
         width: auto;
         height: auto;
-        margin: 0 0 0 1rem !important;
+        margin-top: 0.5rem;
     }
 }
 
