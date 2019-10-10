@@ -17,11 +17,11 @@ import { DEFAULTS, getAnime, updateAnimeData, createFilterDefaults } from 'js/da
 // Helpers
 import { getApiData } from 'js/helpers/App'
 import 'js/helpers/FontAwesome'
-import Icon from 'js/helpers/Icon'
 
 // Components
 import FilterButtons from 'js/components/Filters'
 import Table from 'js/components/Table'
+import Icon from 'js/components/Icon'
 const Statistics = lazy(() => import('js/components/Statistics'))
 const Gallery = lazy(() => import('js/components/Gallery'))
 
