@@ -8,7 +8,7 @@ import 'scss/Favorite.scss'
 import Icon from 'js/components/Icon'
 
 /**
- * Displays a heart icon with a number to denote a favourite anime.
+ * Displays a heart icon with a number to denote a favorite anime.
  */
 function Favorite({ number }) {
     return (
