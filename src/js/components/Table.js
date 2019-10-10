@@ -181,21 +181,19 @@ const HeaderColumn = memo(({ columnName }) => {
 function Row(anime) {
     return (
         <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
-            <div className="table-column is-main">
-                <img
-                    className="table-column is-img"
-                    width="33"
-                    height="45"
-                    src={anime.img}
-                    alt={anime.title}
-                    loading="lazy"
-                    style={{ gridArea: 'img' }}
-                />
-                <TitleColumn {...anime} />
-                <Column columnName="status">
-                    <Badge showAirStatus {...anime} />
-                </Column>
-            </div>
+            <img
+                className="table-column is-img"
+                width="33"
+                height="45"
+                src={anime.img}
+                alt={anime.title}
+                loading="lazy"
+                style={{ gridArea: 'img' }}
+            />
+            <TitleColumn {...anime} />
+            <Column columnName="status">
+                <Badge showAirStatus {...anime} />
+            </Column>
             <Column columnName="rating">
                 {anime.rating}
             </Column>
