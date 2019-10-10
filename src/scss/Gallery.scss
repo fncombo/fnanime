@@ -12,12 +12,11 @@ $gap: 5px;
 .gallery {
     --img-width: 145px;
     --img-height: calc(var(--img-width) * 1.4);
+    padding: 0 $column-gap;
 
     @include mobile {
         --img-width: 80px;
     }
-
-    padding: 0 $column-gap;
 
     .tag {
         border-radius: 0;
@@ -172,6 +171,11 @@ $gap: 5px;
     z-index: 5;
     pointer-events: none;
 
+    @supports (backdrop-filter: blur(20px)) {
+        background: $backdrop-background-dark;
+        backdrop-filter: $backdrop-filter;
+    }
+
     .gallery-item:hover & {
         opacity: 1;
         visibility: visible;
@@ -184,10 +188,5 @@ $gap: 5px;
 
     .gallery-item.is-right & {
         transform-origin: right top;
-    }
-
-    @supports (backdrop-filter: blur(20px)) {
-        background: $backdrop-background-dark;
-        backdrop-filter: $backdrop-filter;
     }
 }

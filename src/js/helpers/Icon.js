@@ -10,9 +10,10 @@ const fasStar = [ 'fas', 'star' ]
 /**
  * Wrapper around the FontAwesomeIcon component
  */
-const Icon = memo(({ as: Element = 'span', icon, size = '1x', className, ...rest }) =>
+const Icon = memo(({ as: Element = 'span', icon, size = '1x', className, children, ...rest }) =>
     <Element className={className ? `icon ${className}` : 'icon'} {...rest}>
         <FontAwesomeIcon icon={icon} size={size} />
+        {children}
     </Element>
 )
 

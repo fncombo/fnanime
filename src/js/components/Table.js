@@ -24,6 +24,7 @@ import Icon from 'js/helpers/Icon'
 import Badge from 'js/components/Badge'
 import Pagination from 'js/components/Pagination'
 import ModalContainer from 'js/components/Modal'
+import Favorite from 'js/components/Favorite'
 
 // Default table state
 const INITIAL_TABLE_STATE = {
@@ -229,7 +230,7 @@ function Row(anime) {
  * Title column for an anime which contains the image, title, and anime type. If a search query is present,
  * it gets highlighted using the anime status color.
  */
-function TitleColumn({ title, status, type, highlight }) {
+function TitleColumn({ title, status, type, favorite, highlight }) {
     const classes = classNames('table-column is-title', `has-highlight-${FILTERS.status.colorCodes[status]}`)
     const style = {
         flexBasis: TABLE_COLUMNS.title.size,
@@ -238,6 +239,7 @@ function TitleColumn({ title, status, type, highlight }) {
 
     return (
         <div className={classes} style={style}>
+            {!!favorite && <Favorite number={favorite} />}
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle(title, highlight) : title}
             </span>
