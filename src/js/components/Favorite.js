@@ -23,4 +23,5 @@ function Favorite({ number }) {
     )
 }
 
+// Exports
 export default Favorite
