@@ -12,7 +12,7 @@ function Favorite({ number }) {
         <Icon
             icon="heart"
             className="is-favorite"
-            title={`#${number} Favourite anime. These don't have to be rated 10, they are special regardless.`}
+            title={`Favourite anime #${number}. These don't have to be rated 10, they are special regardless.`}
         >
             <span class="favorite-number">{number}</span>
         </Icon>

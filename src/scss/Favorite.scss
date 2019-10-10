@@ -3,6 +3,7 @@
 .is-favorite {
     position: relative;
     color: $red;
+    cursor: help;
 
     .table & {
         margin-right: 0.5rem;
@@ -29,6 +30,12 @@
             font-size: 0.7rem;
         }
     }
+
+    .modal & {
+        width: auto;
+        height: auto;
+        margin: 0 0 0 1rem !important;
+    }
 }
 
 .favorite-number {
@@ -41,6 +48,14 @@
     }
 
     .gallery & {
+        margin-left: 0.25rem;
+
+        &::before {
+            content: '#';
+        }
+    }
+
+    .modal & {
         margin-left: 0.25rem;
 
         &::before {
