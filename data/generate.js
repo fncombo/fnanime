@@ -14,7 +14,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const singleLineLog = require('single-line-log').stdout
 
 // Helpers
-const { removeInvalidChars, getRewatchCount, getDuration, animeProxy } = require('./helpers.js')
+const { removeInvalidChars, getRewatchCount, getDuration, getFavoriteStatus, animeProxy } = require('./helpers.js')
 const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
 const { validateLocalData } = require('./validation.js')
 
@@ -193,6 +193,18 @@ function processCacheData() {
 }
 
 /**
+ * Process user profile data.
+ */
+function processUserProfileData(userProfileData) {
+    // Assign each anime its favorite status and order
+    for (const title of Object.keys(ALL_ANIME)) {
+        const anime = ALL_ANIME[title]
+
+        anime.favorite = getFavoriteStatus(anime.id, userProfileData.favorites.anime)
+    }
+}
+
+/**
  * Get anime list API data.
  */
 async function getApiData(page = 1, isRetry = false) {
@@ -243,9 +255,54 @@ async function getApiData(page = 1, isRetry = false) {
 }
 
 /**
+ * Get all the user profile data.
+ */
+async function getUserProfileData(isRetry = false) {
+    // Stop after too many retries
+    if (isRetry > 5) {
+        throw new Error('Too many API retries')
+    }
+
+    console.log(isRetry ? 'Retrying getting' : 'Getting', yellow(`${MAL_USERNAME}'s`), 'user profile')
+
+    // Wait at least 2 seconds between API requests, increasing with each retry
+    if (isRetry) {
+        await new Promise(resolve => {
+            setTimeout(resolve, (isRetry || 1) * 2000)
+        })
+    }
+
+    // Get the data
+    let response
+
+    try {
+        response = await fetch(`https://api.jikan.moe/v3/user/${MAL_USERNAME}`)
+    } catch (error) {
+        console.log(magenta('Error occurred while fetching API, retrying'))
+
+        return getUserProfileData(isRetry ? isRetry + 1 : 1)
+    }
+
+    // Re-try if failed for any reason
+    if (response.status !== 200) {
+        console.log(magenta('API responded with non-200 status, retrying'))
+
+        return getUserProfileData(isRetry ? isRetry + 1 : 1)
+    }
+
+    // Parse JSON response
+    response = await response.json()
+
+    return response
+}
+
+/**
  * Monolith incoming.
  */
 getApiData().then(async () => {
+    // Get and process user profile data
+    processUserProfileData(await getUserProfileData())
+
     // Argument to validate local data using ffprobe
     const validate = process.argv.includes('validate')
 
