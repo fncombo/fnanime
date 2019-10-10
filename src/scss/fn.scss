@@ -11,14 +11,7 @@
     z-index: 30;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
-    @supports (backdrop-filter: blur(20px)) {
-        background: $backdrop-background-light;
-        backdrop-filter: $backdrop-filter;
-    }
-}
-
-@supports (backdrop-filter: blur(20px)) {
-    .fnheader {
+    @supports (backdrop-filter: $backdrop-filter) {
         background: $backdrop-background-light;
         backdrop-filter: $backdrop-filter;
     }

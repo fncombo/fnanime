@@ -205,7 +205,7 @@ strong {
     color: #fff;
     opacity: 0;
 
-    @supports (backdrop-filter: blur(20px)) {
+    @supports (backdrop-filter: $backdrop-filter) {
         background: $backdrop-background-dark;
         backdrop-filter: $backdrop-filter;
     }
