@@ -1,5 +1,5 @@
 {
-    "updated": 1570659150809,
+    "updated": 1570741225592,
     "anime": {
         "20": {
             "id": 20,
@@ -21,6 +21,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 23
         },
@@ -44,6 +45,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 9066317735,
+            "favorite": 0,
             "studios": ["Gainax", "Tatsunoko Production"],
             "episodeDuration": 24
         },
@@ -67,6 +69,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 9353309336,
+            "favorite": 0,
             "studios": ["Gainax", "Production I.G"],
             "episodeDuration": 87
         },
@@ -90,6 +93,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 82
         },
@@ -113,6 +117,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 37434136298,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -136,6 +141,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11637710491,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 24
         },
@@ -159,6 +165,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 56017771326,
+            "favorite": 0,
             "studios": ["Xebec"],
             "episodeDuration": 23
         },
@@ -182,6 +189,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 19875018583,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 135
         },
@@ -205,6 +213,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 14918758264,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 125
         },
@@ -228,6 +237,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 10880495441,
+            "favorite": 0,
             "studios": ["Arms"],
             "episodeDuration": 25
         },
@@ -251,6 +261,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 544861096,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 25
         },
@@ -274,6 +285,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 2979449789,
+            "favorite": 0,
             "studios": ["Gonzo"],
             "episodeDuration": 23
         },
@@ -297,6 +309,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Square Enix"],
             "episodeDuration": 101
         },
@@ -320,6 +333,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4237316892,
+            "favorite": 0,
             "studios": ["Triangle Staff"],
             "episodeDuration": 23
         },
@@ -343,6 +357,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 16134136428,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -366,6 +381,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 658385815,
+            "favorite": 0,
             "studios": ["Arms"],
             "episodeDuration": 25
         },
@@ -389,6 +405,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8919621735,
+            "favorite": 0,
             "studios": ["Radix"],
             "episodeDuration": 24
         },
@@ -412,6 +429,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 93
         },
@@ -435,6 +453,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 10736530199,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 119
         },
@@ -458,6 +477,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 6386773182,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 90
         },
@@ -481,6 +501,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 8487454485,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 80
         },
@@ -504,6 +525,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 15221150917,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 25
         },
@@ -527,6 +549,7 @@
             "bits": 8,
             "audioCodec": "Other",
             "size": 4699010087,
+            "favorite": 0,
             "studios": ["A.C.G.T."],
             "episodeDuration": 24
         },
@@ -550,6 +573,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 14433777095,
+            "favorite": 0,
             "studios": ["Studio Ghibli", "Studio Hibari"],
             "episodeDuration": 105
         },
@@ -573,6 +597,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 18261736303,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 125
         },
@@ -596,6 +621,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9564405976,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 86
         },
@@ -619,6 +645,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 13926822623,
+            "favorite": 0,
             "studios": ["Studio Hibari", "Topcraft"],
             "episodeDuration": 117
         },
@@ -642,6 +669,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 10116974427,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 88
         },
@@ -665,6 +693,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11820441897,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 111
         },
@@ -688,6 +717,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 4410241584,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 23
         },
@@ -711,6 +741,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 8756768313,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 75
         },
@@ -734,6 +765,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 92
         },
@@ -757,6 +789,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 24859459438,
+            "favorite": 0,
             "studios": ["Madhouse", "Satelight", "Graphinica"],
             "episodeDuration": 50
         },
@@ -780,6 +813,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 8386016644,
+            "favorite": 0,
             "studios": ["Manglobe"],
             "episodeDuration": 25
         },
@@ -803,6 +837,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5220985462,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 23
         },
@@ -826,6 +861,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 11443674611,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -849,6 +885,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1760352084,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 87
         },
@@ -872,6 +909,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 5646568985,
+            "favorite": 0,
             "studios": ["Gonzo"],
             "episodeDuration": 95
         },
@@ -895,6 +933,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["A.C.G.T."],
             "episodeDuration": 29
         },
@@ -918,6 +957,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 20530122565,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -941,6 +981,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 1367749162,
+            "favorite": 0,
             "studios": ["Palm Studio"],
             "episodeDuration": 23
         },
@@ -964,6 +1005,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4896680353,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 22
         },
@@ -987,6 +1029,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 109441903621,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 23
         },
@@ -1010,6 +1053,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11619359184,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -1033,6 +1077,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 25
         },
@@ -1056,6 +1101,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8490565551,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 115
         },
@@ -1079,6 +1125,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 10179301435,
+            "favorite": 4,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -1102,6 +1149,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 7088983832,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 90
         },
@@ -1125,6 +1173,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 10022263888,
+            "favorite": 0,
             "studios": ["Gainax"],
             "episodeDuration": 24
         },
@@ -1148,6 +1197,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 24
         },
@@ -1171,6 +1221,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Telescreen"],
             "episodeDuration": 24
         },
@@ -1194,6 +1245,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 20522099613,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -1217,6 +1269,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8190181276,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 98
         },
@@ -1240,6 +1293,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 9385164478,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 22
         },
@@ -1263,6 +1317,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 8941639030,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 103
         },
@@ -1286,6 +1341,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 9602323514,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 94
         },
@@ -1309,6 +1365,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 2290367432,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 50
         },
@@ -1332,6 +1389,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 4197381674,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 100
         },
@@ -1355,6 +1413,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1896509344,
+            "favorite": 0,
             "studios": ["Khara"],
             "episodeDuration": 100
         },
@@ -1378,6 +1437,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 9386128719,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 101
         },
@@ -1401,6 +1461,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12456083878,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 24
         },
@@ -1424,6 +1485,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 18156949902,
+            "favorite": 0,
             "studios": ["Imagin"],
             "episodeDuration": 24
         },
@@ -1447,6 +1509,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 610652905,
+            "favorite": 0,
             "studios": ["Think Corporation"],
             "episodeDuration": 26
         },
@@ -1470,6 +1533,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 7114691795,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -1493,6 +1557,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11274537453,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 25
         },
@@ -1516,6 +1581,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["A.C.G.T."],
             "episodeDuration": 14
         },
@@ -1539,6 +1605,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 6719930738,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -1562,6 +1629,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Yumeta Company"],
             "episodeDuration": 24
         },
@@ -1585,6 +1653,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5541396151,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 30
         },
@@ -1608,6 +1677,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 2673627923,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 61
         },
@@ -1631,6 +1701,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 3201640558,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 59
         },
@@ -1654,6 +1725,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1930113996,
+            "favorite": 0,
             "studios": ["Khara"],
             "episodeDuration": 112
         },
@@ -1677,6 +1749,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1549911397,
+            "favorite": 0,
             "studios": ["Khara"],
             "episodeDuration": 96
         },
@@ -1700,6 +1773,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Khara"],
             "episodeDuration": 0
         },
@@ -1723,6 +1797,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 665775094,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 25
         },
@@ -1746,6 +1821,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 3995886140,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -1769,6 +1845,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1500498646,
+            "favorite": 0,
             "studios": ["Gainax"],
             "episodeDuration": 112
         },
@@ -1792,6 +1869,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 21152961671,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -1815,6 +1893,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 2519810462,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 46
         },
@@ -1838,6 +1917,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 25069588450,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 114
         },
@@ -1861,6 +1941,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 10904352239,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 92
         },
@@ -1884,6 +1965,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2179727124,
+            "favorite": 0,
             "studios": ["Gainax"],
             "episodeDuration": 125
         },
@@ -1907,6 +1989,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 25
         },
@@ -1930,6 +2013,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 16090342056,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 24
         },
@@ -1953,6 +2037,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 5529533231,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -1976,6 +2061,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 16492610536,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 23
         },
@@ -1999,6 +2085,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5275544818,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -2022,6 +2109,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 24
         },
@@ -2045,6 +2133,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 4692060976,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 93
         },
@@ -2068,6 +2157,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 23267914487,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -2091,6 +2181,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 2378304423,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 59
         },
@@ -2114,6 +2205,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10138904729,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 121
         },
@@ -2137,6 +2229,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -2160,6 +2253,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10760715806,
+            "favorite": 0,
             "studios": ["Brain's Base", "Marvy Jack"],
             "episodeDuration": 24
         },
@@ -2183,6 +2277,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 251122130,
+            "favorite": 0,
             "studios": ["Oh! Production"],
             "episodeDuration": 12
         },
@@ -2206,6 +2301,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 19595721216,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 23
         },
@@ -2229,6 +2325,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 6084499322,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 114
         },
@@ -2252,6 +2349,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 943486991,
+            "favorite": 0,
             "studios": ["Brain's Base", "Marvy Jack"],
             "episodeDuration": 23
         },
@@ -2275,6 +2373,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 20575658620,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 22
         },
@@ -2298,6 +2397,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 3403707259,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 110
         },
@@ -2321,6 +2421,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Nomad"],
             "episodeDuration": 24
         },
@@ -2344,6 +2445,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3900405215,
+            "favorite": 0,
             "studios": ["Bones", "Kinema Citrus"],
             "episodeDuration": 22
         },
@@ -2367,6 +2469,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 7748382666,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 95
         },
@@ -2390,6 +2493,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 794774646,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -2413,6 +2517,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 199776155,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 4
         },
@@ -2436,6 +2541,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 4220527417,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 82
         },
@@ -2459,6 +2565,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 166007752,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 4
         },
@@ -2482,6 +2589,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1750952489,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 100
         },
@@ -2505,6 +2613,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 764269091,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 15
         },
@@ -2528,6 +2637,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12501079431,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 24
         },
@@ -2551,6 +2661,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7699615671,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 50
         },
@@ -2574,6 +2685,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 6054780409,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 61
         },
@@ -2597,6 +2709,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 5791086258,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 92
         },
@@ -2620,6 +2733,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3455168195,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -2643,6 +2757,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -2666,6 +2781,7 @@
             "bits": 8,
             "audioCodec": "Other",
             "size": 243850177,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 26
         },
@@ -2689,6 +2805,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10410148036,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 100
         },
@@ -2712,6 +2829,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 3332387434,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 33
         },
@@ -2735,6 +2853,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 3748398902,
+            "favorite": 0,
             "studios": ["Ordet"],
             "episodeDuration": 52
         },
@@ -2758,6 +2877,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 7465050908,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 22
         },
@@ -2781,6 +2901,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10789095103,
+            "favorite": 0,
             "studios": ["Studio Rikka"],
             "episodeDuration": 106
         },
@@ -2804,6 +2925,7 @@
             "bits": 8,
             "audioCodec": "DTS",
             "size": 7542068328,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 94
         },
@@ -2827,6 +2949,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10735421519,
+            "favorite": 0,
             "studios": ["GoHands"],
             "episodeDuration": 70
         },
@@ -2850,6 +2973,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 9213454214,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 136
         },
@@ -2873,6 +2997,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 2716308084,
+            "favorite": 0,
             "studios": ["Sunrise", "Ascension"],
             "episodeDuration": 127
         },
@@ -2896,6 +3021,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 7125017151,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 85
         },
@@ -2908,7 +3034,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/11/27906.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 10,
+            "rating": 9,
             "rewatchCount": 4,
             "url": "https://myanimelist.net/anime/8425/Gosick",
             "genres": [7, 13, 8, 22],
@@ -2919,6 +3045,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 18348773263,
+            "favorite": 5,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -2942,6 +3069,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 464904993,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 22
         },
@@ -2965,6 +3093,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 9694511740,
+            "favorite": 0,
             "studios": ["Gainax"],
             "episodeDuration": 25
         },
@@ -2988,6 +3117,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 1971720426,
+            "favorite": 0,
             "studios": ["Hal Film Maker"],
             "episodeDuration": 18
         },
@@ -3011,6 +3141,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4883888558,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 24
         },
@@ -3034,6 +3165,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11837122222,
+            "favorite": 0,
             "studios": ["GoHands"],
             "episodeDuration": 24
         },
@@ -3057,6 +3189,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 25
         },
@@ -3080,6 +3213,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8966455059,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 23
         },
@@ -3103,6 +3237,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 25502449569,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 24
         },
@@ -3126,6 +3261,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7526646706,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 116
         },
@@ -3149,6 +3285,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 30936368924,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -3172,6 +3309,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 6796856720,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 23
         },
@@ -3195,6 +3333,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 2910679677,
+            "favorite": 0,
             "studios": ["Satelight"],
             "episodeDuration": 23
         },
@@ -3218,6 +3357,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7301611140,
+            "favorite": 0,
             "studios": ["Sunrise"],
             "episodeDuration": 25
         },
@@ -3241,6 +3381,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2673678873,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 22
         },
@@ -3264,6 +3405,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6898148442,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 95
         },
@@ -3287,6 +3429,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 27108900616,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 28
         },
@@ -3310,6 +3453,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 793398577,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 23
         },
@@ -3333,6 +3477,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3456261069,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 23
         },
@@ -3356,6 +3501,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12423177771,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 22
         },
@@ -3379,6 +3525,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 20966394096,
+            "favorite": 3,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 23
         },
@@ -3391,7 +3538,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/4/45704.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 10,
+            "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/10357/Jinrui_wa_Suitai_Shimashita",
             "genres": [4, 10, 42],
@@ -3402,6 +3549,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 5669904880,
+            "favorite": 8,
             "studios": ["AIC A.S.T.A."],
             "episodeDuration": 23
         },
@@ -3425,6 +3573,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -3448,6 +3597,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3533518868,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 120
         },
@@ -3471,6 +3621,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 945932816,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 45
         },
@@ -3494,6 +3645,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8612875613,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 24
         },
@@ -3517,6 +3669,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 7439060280,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 102
         },
@@ -3540,6 +3693,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 8177840259,
+            "favorite": 0,
             "studios": ["Asread"],
             "episodeDuration": 23
         },
@@ -3563,6 +3717,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10225643856,
+            "favorite": 0,
             "studios": ["GoHands"],
             "episodeDuration": 64
         },
@@ -3586,6 +3741,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 15224748357,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 24
         },
@@ -3609,6 +3765,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5665229520,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 22
         },
@@ -3632,6 +3789,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 138196311,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 24
         },
@@ -3640,7 +3798,7 @@
             "title": "Hunter x Hunter (2011)",
             "type": 1,
             "episodes": 148,
-            "episodesWatched": 14,
+            "episodesWatched": 18,
             "img": "https://cdn.myanimelist.net/images/anime/11/33657.jpg",
             "status": 1,
             "airStatus": 2,
@@ -3655,6 +3813,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 36147398247,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -3678,6 +3837,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 12722466428,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 24
         },
@@ -3701,6 +3861,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 6805855998,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -3724,6 +3885,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 25
         },
@@ -3747,6 +3909,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2631726104,
+            "favorite": 0,
             "studios": ["Ordet", "SANZIGEN"],
             "episodeDuration": 23
         },
@@ -3770,6 +3933,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8617861443,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 23
         },
@@ -3793,6 +3957,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 442077329,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 90
         },
@@ -3816,6 +3981,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -3839,6 +4005,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 988744067,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 24
         },
@@ -3862,6 +4029,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 3554263096,
+            "favorite": 0,
             "studios": ["Oxybot"],
             "episodeDuration": 89
         },
@@ -3885,6 +4053,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 10259091174,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 88
         },
@@ -3908,6 +4077,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12133412704,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 24
         },
@@ -3931,6 +4101,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 22609419005,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 24
         },
@@ -3954,6 +4125,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 30491415205,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -3977,6 +4149,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7812038843,
+            "favorite": 0,
             "studios": ["Sunrise"],
             "episodeDuration": 24
         },
@@ -4000,6 +4173,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2563296204,
+            "favorite": 0,
             "studios": ["Sunrise"],
             "episodeDuration": 24
         },
@@ -4023,6 +4197,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 5799877837,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 24
         },
@@ -4046,6 +4221,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8092673281,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 130
         },
@@ -4069,6 +4245,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8418304686,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 109
         },
@@ -4092,6 +4269,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9675511447,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 116
         },
@@ -4115,6 +4293,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 10352700755,
+            "favorite": 0,
             "studios": ["GoHands"],
             "episodeDuration": 68
         },
@@ -4138,6 +4317,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 38583385417,
+            "favorite": 2,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 25
         },
@@ -4161,6 +4341,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8378535951,
+            "favorite": 0,
             "studios": ["Studio Chizu"],
             "episodeDuration": 117
         },
@@ -4184,6 +4365,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12762801426,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 23
         },
@@ -4207,6 +4389,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5607456494,
+            "favorite": 0,
             "studios": ["Studio Rikka", "Purple Cow Studio Japan"],
             "episodeDuration": 99
         },
@@ -4230,6 +4413,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 316610704,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 12
         },
@@ -4253,6 +4437,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7606243249,
+            "favorite": 0,
             "studios": ["Sunrise"],
             "episodeDuration": 25
         },
@@ -4276,6 +4461,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 336930007,
+            "favorite": 0,
             "studios": ["Gainax"],
             "episodeDuration": 24
         },
@@ -4299,6 +4485,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 43727399637,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 22
         },
@@ -4322,6 +4509,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 249132526,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 14
         },
@@ -4345,6 +4533,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1562361737,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 25
         },
@@ -4368,6 +4557,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 23
         },
@@ -4391,6 +4581,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 7495657699,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 109
         },
@@ -4414,6 +4605,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 347483286,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 22
         },
@@ -4437,6 +4629,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2721694432,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 66
         },
@@ -4460,6 +4653,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 888675573,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 24
         },
@@ -4483,6 +4677,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 24
         },
@@ -4506,6 +4701,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11224613499,
+            "favorite": 0,
             "studios": ["Zexcs"],
             "episodeDuration": 24
         },
@@ -4529,6 +4725,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 980531709,
+            "favorite": 0,
             "studios": ["Trigger"],
             "episodeDuration": 26
         },
@@ -4552,6 +4749,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 939123407,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 25
         },
@@ -4575,6 +4773,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7151053479,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 22
         },
@@ -4598,6 +4797,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 48477013476,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -4621,6 +4821,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 14816595919,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -4644,6 +4845,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 11213627311,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 24
         },
@@ -4667,6 +4869,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 367702488,
+            "favorite": 0,
             "studios": ["Gonzo", "Hoods Entertainment"],
             "episodeDuration": 23
         },
@@ -4690,6 +4893,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11665231438,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 90
         },
@@ -4713,6 +4917,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 13062585775,
+            "favorite": 0,
             "studios": ["Arms"],
             "episodeDuration": 23
         },
@@ -4736,8 +4941,33 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4569310323,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 99
+        },
+        "15227": {
+            "id": 15227,
+            "title": "Kono Sekai no Katasumi ni",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/2/87704.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
+            "genres": [13, 8, 42],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "favorite": 0,
+            "studios": ["MAPPA"],
+            "episodeDuration": 156
         },
         "15617": {
             "id": 15617,
@@ -4759,6 +4989,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 448365776,
+            "favorite": 0,
             "studios": ["AIC A.S.T.A."],
             "episodeDuration": 2
         },
@@ -4782,6 +5013,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 10078866739,
+            "favorite": 0,
             "studios": ["Sunrise"],
             "episodeDuration": 25
         },
@@ -4805,6 +5037,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1675326582,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 27
         },
@@ -4828,6 +5061,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 35629183173,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 23
         },
@@ -4851,6 +5085,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7871442833,
+            "favorite": 0,
             "studios": ["Zexcs"],
             "episodeDuration": 24
         },
@@ -4874,6 +5109,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 57829327210,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 24
         },
@@ -4897,6 +5133,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 3596471695,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 60
         },
@@ -4920,6 +5157,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 6658747628,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 24
         },
@@ -4943,6 +5181,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8502786141,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 126
         },
@@ -4966,6 +5205,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 476256169,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 52
         },
@@ -4989,6 +5229,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 285588289,
+            "favorite": 0,
             "studios": ["Asread"],
             "episodeDuration": 29
         },
@@ -5012,6 +5253,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 3427746536,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 46
         },
@@ -5035,6 +5277,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 14006080121,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 112
         },
@@ -5058,6 +5301,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 9189491759,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -5081,6 +5325,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -5104,6 +5349,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 244628128,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 6
         },
@@ -5127,6 +5373,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5784678137,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 23
         },
@@ -5150,6 +5397,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 25427893550,
+            "favorite": 6,
             "studios": ["Satelight"],
             "episodeDuration": 25
         },
@@ -5173,6 +5421,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 8342598613,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 115
         },
@@ -5196,6 +5445,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 299025939,
+            "favorite": 0,
             "studios": ["Zexcs"],
             "episodeDuration": 1
         },
@@ -5219,6 +5469,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6281021390,
+            "favorite": 9,
             "studios": ["Silver Link."],
             "episodeDuration": 24
         },
@@ -5242,6 +5493,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 274774396,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 7
         },
@@ -5265,6 +5517,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 26476982860,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 24
         },
@@ -5288,6 +5541,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 35802934821,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 25
         },
@@ -5311,6 +5565,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9761430612,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -5334,6 +5589,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 3869817844,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -5357,6 +5613,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Silver Link.", "Connect"],
             "episodeDuration": 24
         },
@@ -5380,6 +5637,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 9850800144,
+            "favorite": 0,
             "studios": ["Diomedea"],
             "episodeDuration": 24
         },
@@ -5403,6 +5661,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4252455463,
+            "favorite": 0,
             "studios": ["Tatsunoko Production"],
             "episodeDuration": 23
         },
@@ -5426,6 +5685,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kyoto Animation", "Animation Do"],
             "episodeDuration": 24
         },
@@ -5449,6 +5709,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5800000870,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -5472,6 +5733,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7650954568,
+            "favorite": 0,
             "studios": ["Trigger"],
             "episodeDuration": 24
         },
@@ -5495,6 +5757,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 22
         },
@@ -5518,6 +5781,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6751743922,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 97
         },
@@ -5541,6 +5805,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 14959981122,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -5564,6 +5829,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9223280686,
+            "favorite": 0,
             "studios": ["feel."],
             "episodeDuration": 24
         },
@@ -5587,6 +5853,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 4513807689,
+            "favorite": 0,
             "studios": ["Trigger"],
             "episodeDuration": 53
         },
@@ -5610,6 +5877,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 13106185625,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -5633,6 +5901,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -5656,6 +5925,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Brain's Base"],
             "episodeDuration": 23
         },
@@ -5679,6 +5949,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 2382242947,
+            "favorite": 0,
             "studios": ["Studio Rikka"],
             "episodeDuration": 25
         },
@@ -5702,6 +5973,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 18759401753,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -5725,6 +5997,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 394967642,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 45
         },
@@ -5748,6 +6021,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7481890701,
+            "favorite": 0,
             "studios": ["Studio Ghibli"],
             "episodeDuration": 103
         },
@@ -5771,6 +6045,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2616455803,
+            "favorite": 0,
             "studios": ["Shaft"],
             "episodeDuration": 23
         },
@@ -5794,6 +6069,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 391017708,
+            "favorite": 0,
             "studios": ["Trigger"],
             "episodeDuration": 18
         },
@@ -5817,6 +6093,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 324456751,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 20
         },
@@ -5840,6 +6117,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12581273804,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -5863,6 +6141,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3218320401,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 24
         },
@@ -5886,6 +6165,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Lay-duce"],
             "episodeDuration": 24
         },
@@ -5909,6 +6189,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3213009671,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -5932,6 +6213,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 16849637907,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 24
         },
@@ -5955,6 +6237,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 17803931352,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 23
         },
@@ -5978,6 +6261,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kyoto Animation", "Animation Do"],
             "episodeDuration": 24
         },
@@ -6001,6 +6285,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 21334402618,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 28
         },
@@ -6024,6 +6309,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12737138776,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 24
         },
@@ -6047,6 +6333,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Ghibli", "Polygon Pictures"],
             "episodeDuration": 25
         },
@@ -6070,6 +6357,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11927301709,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -6093,6 +6381,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 16871504591,
+            "favorite": 0,
             "studios": ["A-1 Pictures", "TROYCA"],
             "episodeDuration": 23
         },
@@ -6116,6 +6405,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 12074371406,
+            "favorite": 0,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 22
         },
@@ -6139,6 +6429,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 33794776562,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 22
         },
@@ -6162,6 +6453,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 15209971771,
+            "favorite": 0,
             "studios": ["MAPPA"],
             "episodeDuration": 22
         },
@@ -6185,6 +6477,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 1435054779,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 58
         },
@@ -6208,6 +6501,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 36762388571,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -6231,6 +6525,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 310861554,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 23
         },
@@ -6254,6 +6549,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1163047485,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 26
         },
@@ -6277,6 +6573,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9024719800,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 23
         },
@@ -6300,6 +6597,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 751953846,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 44
         },
@@ -6323,6 +6621,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 592342639,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 47
         },
@@ -6346,6 +6645,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2401820836,
+            "favorite": false,
             "studios": ["Artland"],
             "episodeDuration": 23
         },
@@ -6369,6 +6669,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6414561147,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 82
         },
@@ -6392,6 +6693,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 120
         },
@@ -6415,6 +6717,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 8991668895,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -6438,6 +6741,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 34178747878,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 24
         },
@@ -6461,6 +6765,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 15235333968,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 24
         },
@@ -6484,6 +6789,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 6601377751,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 23
         },
@@ -6507,6 +6813,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 15390239482,
+            "favorite": 0,
             "studios": ["A-1 Pictures", "TROYCA"],
             "episodeDuration": 23
         },
@@ -6530,6 +6837,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Diomedea"],
             "episodeDuration": 24
         },
@@ -6553,6 +6861,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 3338180225,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 51
         },
@@ -6576,6 +6885,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11502068641,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 24
         },
@@ -6599,6 +6909,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3084465062,
+            "favorite": 0,
             "studios": ["Steve N' Steven", "Rockwell Eyes"],
             "episodeDuration": 98
         },
@@ -6622,6 +6933,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 24
         },
@@ -6645,6 +6957,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 10316928193,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -6668,6 +6981,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 7931917881,
+            "favorite": 0,
             "studios": ["SANZIGEN", "LIDENFILMS"],
             "episodeDuration": 24
         },
@@ -6691,6 +7005,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -6714,6 +7029,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 120
         },
@@ -6737,6 +7053,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7659003336,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 90
         },
@@ -6760,6 +7077,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5196552354,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 23
         },
@@ -6783,6 +7101,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2853627729,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 119
         },
@@ -6806,6 +7125,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 12914945450,
+            "favorite": 0,
             "studios": ["Studio Pierrot"],
             "episodeDuration": 95
         },
@@ -6829,6 +7149,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 5178142400,
+            "favorite": 0,
             "studios": ["Studio Chizu"],
             "episodeDuration": 119
         },
@@ -6852,6 +7173,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4533301467,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 130
         },
@@ -6875,6 +7197,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 2949686358,
+            "favorite": 0,
             "studios": ["Artland"],
             "episodeDuration": 47
         },
@@ -6898,6 +7221,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7424528473,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 24
         },
@@ -6921,6 +7245,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 4416098699,
+            "favorite": 0,
             "studios": ["TMS Entertainment"],
             "episodeDuration": 23
         },
@@ -6944,6 +7269,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 14003333391,
+            "favorite": 0,
             "studios": ["TROYCA"],
             "episodeDuration": 23
         },
@@ -6967,6 +7293,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3085429856,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 24
         },
@@ -6990,6 +7317,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 630003155,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 60
         },
@@ -7013,6 +7341,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4106560382,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 23
         },
@@ -7036,6 +7365,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 31991388217,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 23
         },
@@ -7059,6 +7389,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 17236651400,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 23
         },
@@ -7082,6 +7413,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 21069809708,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 25
         },
@@ -7105,8 +7437,33 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 30196754781,
+            "favorite": 0,
             "studios": ["Polygon Pictures"],
             "episodeDuration": 24
+        },
+        "31646": {
+            "id": 31646,
+            "title": "3-gatsu no Lion",
+            "type": 1,
+            "episodes": 22,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/6/82898.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/31646/3-gatsu_no_Lion",
+            "genres": [8, 11, 42, 36],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "favorite": 0,
+            "studios": ["Shaft"],
+            "episodeDuration": 25
         },
         "31680": {
             "id": 31680,
@@ -7128,6 +7485,7 @@
             "bits": 12,
             "audioCodec": "AAC",
             "size": 1705523266,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -7151,6 +7509,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 4516286363,
+            "favorite": 0,
             "studios": ["Toei Animation"],
             "episodeDuration": 24
         },
@@ -7174,6 +7533,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 9600544204,
+            "favorite": 0,
             "studios": ["Lay-duce"],
             "episodeDuration": 24
         },
@@ -7197,6 +7557,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 1998790703,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 119
         },
@@ -7220,6 +7581,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4113600182,
+            "favorite": 0,
             "studios": ["Trigger"],
             "episodeDuration": 24
         },
@@ -7243,6 +7605,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 8501227765,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 100
         },
@@ -7266,6 +7629,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2085317011,
+            "favorite": 0,
             "studios": ["LIDENFILMS"],
             "episodeDuration": 24
         },
@@ -7289,6 +7653,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11891046643,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -7312,6 +7677,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Barnum Studio", "Project No.9"],
             "episodeDuration": 24
         },
@@ -7335,6 +7701,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 28812921707,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
@@ -7358,6 +7725,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 14566341814,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 24
         },
@@ -7381,6 +7749,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 5686952641,
+            "favorite": 0,
             "studios": ["8bit"],
             "episodeDuration": 24
         },
@@ -7404,6 +7773,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 191471538,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 24
         },
@@ -7427,6 +7797,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2570296969,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 106
         },
@@ -7450,6 +7821,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3383186626,
+            "favorite": 0,
             "studios": ["Diomedea"],
             "episodeDuration": 24
         },
@@ -7473,6 +7845,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -7496,6 +7869,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 409093296,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 24
         },
@@ -7519,6 +7893,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 491744830,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 11
         },
@@ -7542,6 +7917,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Diomedea"],
             "episodeDuration": 24
         },
@@ -7565,6 +7941,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 7821389710,
+            "favorite": 0,
             "studios": ["TMS Entertainment"],
             "episodeDuration": 24
         },
@@ -7588,6 +7965,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 723895607,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 23
         },
@@ -7611,6 +7989,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Shuka"],
             "episodeDuration": 23
         },
@@ -7634,6 +8013,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 23
         },
@@ -7657,6 +8037,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 117
         },
@@ -7680,6 +8061,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 0
         },
@@ -7703,6 +8085,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1318628731,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 4
         },
@@ -7726,6 +8109,7 @@
             "bits": 10,
             "audioCodec": "DTS",
             "size": 29489848386,
+            "favorite": 0,
             "studios": ["Polygon Pictures"],
             "episodeDuration": 24
         },
@@ -7749,6 +8133,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 18508029662,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 23
         },
@@ -7772,6 +8157,7 @@
             "bits": 12,
             "audioCodec": "AAC",
             "size": 1445409624,
+            "favorite": 0,
             "studios": ["Studio Deen"],
             "episodeDuration": 24
         },
@@ -7795,6 +8181,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 55263621017,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 23
         },
@@ -7818,6 +8205,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 27388385719,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -7841,6 +8229,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 23
         },
@@ -7864,6 +8253,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6791547325,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 106
         },
@@ -7887,6 +8277,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["G.CMay Animation & Film"],
             "episodeDuration": 24
         },
@@ -7910,6 +8301,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 35793104053,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 23
         },
@@ -7933,6 +8325,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 6712264663,
+            "favorite": 0,
             "studios": ["Lay-duce"],
             "episodeDuration": 74
         },
@@ -7956,6 +8349,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 12261681343,
+            "favorite": 0,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 25
         },
@@ -7979,6 +8373,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 11724247594,
+            "favorite": 0,
             "studios": ["J.C.Staff"],
             "episodeDuration": 23
         },
@@ -8002,6 +8397,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 48370217692,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 24
         },
@@ -8025,6 +8421,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 13245866120,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -8048,6 +8445,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 23
         },
@@ -8071,7 +8469,32 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 2094144996,
+            "favorite": 0,
             "studios": ["Science SARU"],
+            "episodeDuration": 25
+        },
+        "35180": {
+            "id": 35180,
+            "title": "3-gatsu no Lion 2nd Season",
+            "type": 1,
+            "episodes": 22,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/3/88469.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/35180/3-gatsu_no_Lion_2nd_Season",
+            "genres": [8, 11, 42, 36],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "favorite": 0,
+            "studios": ["Shaft"],
             "episodeDuration": 25
         },
         "35262": {
@@ -8094,6 +8517,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 3387115654,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 23
         },
@@ -8117,6 +8541,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 3053501941,
+            "favorite": 0,
             "studios": ["TMS Entertainment"],
             "episodeDuration": 23
         },
@@ -8140,6 +8565,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Orange"],
             "episodeDuration": 24
         },
@@ -8163,6 +8589,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 93
         },
@@ -8186,6 +8613,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 30636781171,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 23
         },
@@ -8209,6 +8637,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 46029438250,
+            "favorite": 0,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 24
         },
@@ -8232,6 +8661,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11867211086,
+            "favorite": 10,
             "studios": ["Signal.MD"],
             "episodeDuration": 23
         },
@@ -8255,6 +8685,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 315638179,
+            "favorite": 0,
             "studios": ["Signal.MD"],
             "episodeDuration": 24
         },
@@ -8278,6 +8709,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 24091509450,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 23
         },
@@ -8301,6 +8733,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 26937257226,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -8324,6 +8757,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -8347,6 +8781,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 10454891167,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 96
         },
@@ -8370,6 +8805,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 4744387232,
+            "favorite": 0,
             "studios": ["Lay-duce"],
             "episodeDuration": 32
         },
@@ -8393,6 +8829,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Studio Chizu"],
             "episodeDuration": 98
         },
@@ -8416,6 +8853,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Silver Link."],
             "episodeDuration": 71
         },
@@ -8439,6 +8877,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 1728594411,
+            "favorite": 0,
             "studios": ["Kyoto Animation"],
             "episodeDuration": 34
         },
@@ -8462,6 +8901,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["David Production"],
             "episodeDuration": 23
         },
@@ -8485,6 +8925,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 4046218499,
+            "favorite": 7,
             "studios": ["G.CMay Animation & Film"],
             "episodeDuration": 24
         },
@@ -8508,6 +8949,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 8963168632,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 23
         },
@@ -8531,6 +8973,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 22
         },
@@ -8554,6 +8997,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 26
         },
@@ -8577,6 +9021,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["8bit"],
             "episodeDuration": 23
         },
@@ -8600,6 +9045,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 272790048,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 23
         },
@@ -8623,6 +9069,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 135
         },
@@ -8646,6 +9093,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Kinema Citrus"],
             "episodeDuration": 0
         },
@@ -8669,6 +9117,7 @@
             "bits": 10,
             "audioCodec": "Other",
             "size": 7009170488,
+            "favorite": 0,
             "studios": ["Tezuka Productions", "MAPPA"],
             "episodeDuration": 24
         },
@@ -8692,6 +9141,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 24
         },
@@ -8715,6 +9165,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["CloverWorks"],
             "episodeDuration": 23
         },
@@ -8738,6 +9189,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -8761,6 +9213,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 14151202456,
+            "favorite": 0,
             "studios": ["Madhouse"],
             "episodeDuration": 23
         },
@@ -8784,6 +9237,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 5403627012,
+            "favorite": 0,
             "studios": ["CloverWorks"],
             "episodeDuration": 22
         },
@@ -8807,6 +9261,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["P.A. Works"],
             "episodeDuration": 0
         },
@@ -8830,6 +9285,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 24
         },
@@ -8853,6 +9309,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 27009003872,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 24
         },
@@ -8876,6 +9333,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["CloverWorks"],
             "episodeDuration": 0
         },
@@ -8899,6 +9357,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Signal.MD"],
             "episodeDuration": 0
         },
@@ -8922,6 +9381,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Production I.G"],
             "episodeDuration": 0
         },
@@ -8945,6 +9405,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Zero-G"],
             "episodeDuration": 23
         },
@@ -8968,6 +9429,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 0
         },
@@ -8991,6 +9453,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 1863544366,
+            "favorite": 0,
             "studios": ["G.CMay Animation & Film"],
             "episodeDuration": 24
         },
@@ -9014,6 +9477,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11032654822,
+            "favorite": 0,
             "studios": ["Wit Studio"],
             "episodeDuration": 23
         },
@@ -9037,6 +9501,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["EMT Squared"],
             "episodeDuration": 0
         },
@@ -9060,6 +9525,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["David Production"],
             "episodeDuration": 23
         },
@@ -9083,6 +9549,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["CoMix Wave Films"],
             "episodeDuration": 114
         },
@@ -9106,6 +9573,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["TROYCA"],
             "episodeDuration": 23
         },
@@ -9129,6 +9597,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Orange"],
             "episodeDuration": 0
         },
@@ -9152,6 +9621,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 1063691482,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 24
         },
@@ -9175,6 +9645,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 11693802235,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 22
         },
@@ -9198,6 +9669,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Bones"],
             "episodeDuration": 0
         },
@@ -9221,6 +9693,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["White Fox"],
             "episodeDuration": 0
         },
@@ -9244,6 +9717,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -9267,6 +9741,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["A-1 Pictures"],
             "episodeDuration": 0
         },
@@ -9290,6 +9765,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 22
         },
@@ -9313,6 +9789,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -9336,6 +9813,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Twin Engine"],
             "episodeDuration": 4
         },
@@ -9359,6 +9837,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -9382,6 +9861,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -9405,6 +9885,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["CloverWorks"],
             "episodeDuration": 27
         },
@@ -9428,6 +9909,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 0
         },
@@ -9451,6 +9933,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 24
         },
@@ -9474,6 +9957,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": [],
             "episodeDuration": 24
         },
@@ -9497,6 +9981,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["Lerche"],
             "episodeDuration": 0
         },
@@ -9520,6 +10005,7 @@
             "bits": false,
             "audioCodec": false,
             "size": 0,
+            "favorite": 0,
             "studios": ["ufotable"],
             "episodeDuration": 0
         }
