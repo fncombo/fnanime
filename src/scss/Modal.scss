@@ -41,13 +41,13 @@
     opacity: 0;
     transition: opacity $duration-medium $easing;
 
-    .is-active & {
-        opacity: 1;
-    }
-
-    @supports (backdrop-filter: blur(20px)) {
+    @supports (backdrop-filter: $backdrop-filter) {
         background: $backdrop-background-dark;
         backdrop-filter: $backdrop-filter;
+    }
+
+    .is-active & {
+        opacity: 1;
     }
 }
 

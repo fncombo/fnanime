@@ -12,12 +12,21 @@ import { FILTERS } from 'js/data/Filters'
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
+const test = [
+    24701,
+    12189,
+    10165,
+    1889,
+    8425,
+    17265,
+    37208,
+    10357,
+    17549,
+    36038,
+]
+
 for (const anime of ANIME_ARRAY) {
-    if (anime.status < 5 && !anime.rating) {
-        anime.rating = null
-    } else if (!anime.rating) {
-        anime.rating = false
-    }
+    anime.favorite = test.includes(anime.id) ? test.indexOf(anime.id) + 1 : false
 }
 
 // Fuzzy search options
@@ -36,6 +45,8 @@ const DEFAULTS = {
     // Table sorting first by status then by title
     sorting: new Map([
         [ 'status', SORTING_ORDERS.asc ],
+        [ 'favorite', SORTING_ORDERS.asc ],
+        [ 'rating', SORTING_ORDERS.desc ],
         [ 'title', SORTING_ORDERS.asc ],
     ]),
     // Filtering is populated later based on all available filters
@@ -229,6 +240,13 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
 
     for (const [ column, order ] of actualSorting) {
         fastSortOptions.push({ [order]: column })
+    }
+
+    // Insert sorting by favorite just before the title, to make favorite anime (usually) first in the list
+    if (!actualSorting.has('favorite')) {
+        const titleIndex = fastSortOptions.findIndex(({ asc, desc }) => asc === 'title' || desc === 'title')
+
+        fastSortOptions.splice(titleIndex, 0, { asc: 'favorite' })
     }
 
     fastSort(sortResults).by(fastSortOptions)

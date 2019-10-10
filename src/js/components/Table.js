@@ -18,12 +18,13 @@ import { FILTERS } from 'js/data/Filters'
 // Helpers
 import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor, highlightTitle } from 'js/helpers/Table'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
 
 // Components
 import Badge from 'js/components/Badge'
 import Pagination from 'js/components/Pagination'
 import ModalContainer from 'js/components/Modal'
+import Icon from 'js/components/Icon'
+import Favorite from 'js/components/Favorite'
 
 // Default table state
 const INITIAL_TABLE_STATE = {
@@ -181,21 +182,19 @@ const HeaderColumn = memo(({ columnName }) => {
 function Row(anime) {
     return (
         <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
-            <div className="table-column is-main">
-                <img
-                    className="table-column is-img"
-                    width="33"
-                    height="45"
-                    src={anime.img}
-                    alt={anime.title}
-                    loading="lazy"
-                    style={{ gridArea: 'img' }}
-                />
-                <TitleColumn {...anime} />
-                <Column columnName="status">
-                    <Badge showAirStatus {...anime} />
-                </Column>
-            </div>
+            <img
+                className="table-column is-img"
+                width="33"
+                height="45"
+                src={anime.img}
+                alt={anime.title}
+                loading="lazy"
+                style={{ gridArea: 'img' }}
+            />
+            <TitleColumn {...anime} />
+            <Column columnName="status">
+                <Badge showAirStatus {...anime} />
+            </Column>
             <Column columnName="rating">
                 {anime.rating}
             </Column>
@@ -231,7 +230,7 @@ function Row(anime) {
  * Title column for an anime which contains the image, title, and anime type. If a search query is present,
  * it gets highlighted using the anime status color.
  */
-function TitleColumn({ title, status, type, highlight }) {
+function TitleColumn({ title, status, type, favorite, highlight }) {
     const classes = classNames('table-column is-title', `has-highlight-${FILTERS.status.colorCodes[status]}`)
     const style = {
         flexBasis: TABLE_COLUMNS.title.size,
@@ -240,6 +239,7 @@ function TitleColumn({ title, status, type, highlight }) {
 
     return (
         <div className={classes} style={style}>
+            {!!favorite && <Favorite number={favorite} />}
             <span className="has-text-overflow" title={title}>
                 {highlight ? highlightTitle(title, highlight) : title}
             </span>

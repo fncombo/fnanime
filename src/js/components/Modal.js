@@ -1,11 +1,10 @@
 // React
-import React, { Fragment, useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 // Libraries
 import has from 'has'
 import classNames from 'classnames'
-import { SlideDown } from 'react-slidedown'
 
 // Style
 import 'scss/Modal.scss'
@@ -13,7 +12,6 @@ import 'react-slidedown/lib/slidedown.css'
 
 // Data
 import { ModalState, GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { ANIME_OBJECT } from 'js/data/Data'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
@@ -25,10 +23,13 @@ import {
 } from 'js/helpers/Modal'
 import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon, { fasStar } from 'js/helpers/Icon'
 
 // Components
+import RelatedList from 'js/components/RelatedList'
 import Badge from 'js/components/Badge'
+import Icon from 'js/components/Icon'
+import Favorite from 'js/components/Favorite'
+import { LoadingInline, LoadingText, LoadingParagraph } from 'js/components/Loading'
 
 // DOM element into which to portal the modal
 const MODAL_ELEMENT = document.getElementById('modal')
@@ -209,6 +210,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
+                    {!!anime.favorite && <Favorite number={anime.favorite} />}
                     <hr />
                     <LoadingText>
                         <p>Mean MAL rating: <ApiData property="score" fallback="N/A" /></p>
@@ -342,7 +344,7 @@ function Rating({ rating }) {
             <div className="rating">
                 <span className="has-text-warning">
                     {Array.from({ length: rating }, (value, i) =>
-                        <Icon icon={fasStar} key={i} />
+                        <Icon icon={[ 'fas', 'star' ]} key={i} />
                     )}
                 </span>
                 <span className="has-text-grey-light">
@@ -367,70 +369,6 @@ function Episodes({ episodes }) {
     }
 
     return <> &ndash; {episodes} episode{episodes > 1 ? 's' : ''}</>
-}
-
-/**
- * Single-line loading placeholder.
- */
-function Loading({ children, ...rest }) {
-    const { modalState: { isLoaded, isError } } = useContext(ModalState)
-
-    if (isError) {
-        return <LoadingError />
-    }
-
-    return isLoaded ? children : <span {...rest} />
-}
-
-/**
- * Inline, shorter loading placeholder.
- */
-function LoadingInline({ children }) {
-    return <Loading className="loading-text loading-inline">{children}</Loading>
-}
-
-/**
- * Full line loading placeholder.
- */
-function LoadingText({ children }) {
-    return <Loading className="loading-text">{children}</Loading>
-}
-
-/**
- * Message for when an error has occurred while fetching data and it can't be displayed.
- */
-function LoadingError() {
-    return (
-        <span className="modal-error has-text-danger">
-            <Icon icon="exclamation-circle" /> An error has occurred
-        </span>
-    )
-}
-
-/**
- * A multi-line loading paragraphs placeholder which animates to the correct height when the content has loaded.
- */
-function LoadingParagraph({ children }) {
-    const { modalState: { isLoaded, isError } } = useContext(ModalState)
-
-    if (isError) {
-        return <LoadingError />
-    }
-
-    return (
-        <SlideDown className={`loading-paragraph ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
-            <div className="placeholders">
-                <span /><span />
-                <span /><span />
-                <span /><span />
-                <span /><span />
-                <span /><span />
-            </div>
-            <div className={`loading-content ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
-                {isLoaded ? children : null}
-            </div>
-        </SlideDown>
-    )
 }
 
 /**
@@ -561,64 +499,6 @@ function Synopsis({ data }) {
     }
 
     return <p>{replaceSpecialChars(data)}</p>
-}
-
-/**
- * List of all related anime grouped by their relation type. Anime which are present in the data
- * have badges which link to open that anime's modal.
- */
-function RelatedList({ data }) {
-    if (!data) {
-        return null
-    }
-
-    const relatedAnime = Object.entries(data).reduce((relatedArray, [ relationType, relatedData ]) => {
-        const animeOnly = relatedData.filter(({ type }) => type === 'anime')
-
-        if (animeOnly.length) {
-            relatedArray.push([ relationType, animeOnly ])
-        }
-
-        return relatedArray
-    }, [])
-
-    if (!relatedAnime.length) {
-        return <p>No related anime</p>
-    }
-
-    // Sub list for every relation type
-    return relatedAnime.map(([ type, allAnime ]) =>
-        <Fragment key={type}>
-            <strong>{type}</strong>
-            <ul className="related-list">
-                {allAnime.map(anime =>
-                    <RelatedListItem {...anime} key={anime.mal_id} />
-                )}
-            </ul>
-        </Fragment>
-    )
-}
-
-/**
- * Single item in the related anime list.
- */
-function RelatedListItem({ ...anime }) {
-    const { changeAnime } = useContext(ModalState)
-
-    const onClick = () => {
-        changeAnime(ANIME_OBJECT[anime.mal_id])
-    }
-
-    return (
-        <li>
-            <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
-                {replaceSpecialChars(anime.name)}
-            </a>
-            {has(ANIME_OBJECT, anime.mal_id) &&
-                <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
-            }
-        </li>
-    )
 }
 
 // Exports

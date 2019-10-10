@@ -12,8 +12,8 @@ import 'scss/Pagination.scss'
 import { TableState, ACTIONS } from 'js/data/GlobalState'
 import { DEFAULTS } from 'js/data/Data'
 
-// Helpers
-import Icon from 'js/helpers/Icon'
+// Components
+import Icon from 'js/components/Icon'
 
 /**
  * Previous, next, and number buttons to control the table.

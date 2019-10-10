@@ -73,6 +73,22 @@ function getDuration(duration) {
     return 0
 }
 
+/**
+ * Returns whether an anime is a favorite anime and its order in the favorites list.
+ */
+function getFavoriteStatus(animeId, favoriteAnime) {
+    // Check whether this anime ID exists in favorites
+    // eslint-disable-next-line camelcase
+    const isFavorite = favoriteAnime.findIndex(({ mal_id }) => animeId === mal_id)
+
+    // If it does, return its order (starting from 1, not 0)
+    if (isFavorite) {
+        return isFavorite + 1
+    }
+
+    return false
+}
+
 // Proxy for the generated anime object to check certain set values
 const animeProxy = {
     set(object, prop, value) {
@@ -90,5 +106,6 @@ module.exports = {
     removeInvalidChars,
     getRewatchCount,
     getDuration,
+    getFavoriteStatus,
     animeProxy,
 }

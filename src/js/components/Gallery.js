@@ -15,6 +15,7 @@ import { FILTERS } from 'js/data/Filters'
 
 // Components
 import ModalContainer from 'js/components/Modal'
+import Favorite from 'js/components/Favorite'
 
 // Width of the gallery item
 const ITEM_WIDTH = 165
@@ -157,7 +158,7 @@ function GalleryItem(anime) {
     }
 
     const rel = 'noopener noreferrer'
-    const { title, img, url, episodes, type, size, status } = anime
+    const { title, img, url, episodes, type, size, status, favorite } = anime
     const classes = classNames('gallery-item', hoverClass, {
         'is-not-downloaded': !size,
     })
@@ -172,6 +173,7 @@ function GalleryItem(anime) {
                         : FILTERS.type.descriptions[type]
                     }
                 </span>
+                {!!favorite && <Favorite number={favorite} />}
             </div>
             <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>{title}</div>
         </ModalContainer>

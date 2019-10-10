@@ -56,7 +56,7 @@
         &::before {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
-            @supports (backdrop-filter: blur(20px)) {
+            @supports (backdrop-filter: $backdrop-filter) {
                 background: $backdrop-background-light;
                 backdrop-filter: $backdrop-filter;
             }
@@ -129,11 +129,11 @@
         padding: 0.25rem 0;
         margin: 0.25rem 0;
         display: grid;
-        grid-template: "header header header header header header" $mobile-table-img-height
+        grid-template: "img title title title title title" #{$mobile-table-img-height / 2}
+                       "img status status status status status" #{$mobile-table-img-height / 2}
                        "rating resolution source videoCodec audioCodec fileQuality" 1fr
                        "episodeSize episodeSize episodeSize size size size" 1fr
                        / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
-
     }
 
     @include tablet {
@@ -174,62 +174,33 @@
         }
     }
 
-    &.is-main {
-        text-align: left;
-        justify-content: flex-start;
-        flex: 1 1 auto;
-        padding-right: 0.25rem;
-
-        @include mobile {
-            display: grid;
-            padding: 0;
-            grid-area: header;
-            overflow: visible;
-            grid-template: "img title title" #{$mobile-table-img-height / 2}
-                           "img status status" #{$mobile-table-img-height / 2}
-                           / #{$mobile-table-img-width} 1fr 1fr;
-        }
-
-        .table-column {
-            &.is-title {
-                flex-shrink: 1;
-            }
-
-            &:last-child {
-                @include tablet {
-                    margin-left: auto;
-                }
-            }
-
-            @include mobile {
-                justify-content: flex-start;
-
-                &:not(:first-child) {
-                    padding-left: 0.5rem;
-                }
-            }
-        }
-
-        @include mobile {
-            display: grid;
-            grid-template-columns: $mobile-table-img-width 1fr 1fr;
-            grid-template-rows: #{$mobile-table-img-height / 2} #{$mobile-table-img-height / 2};
-            grid-template-areas: "img title title"
-                                 "img status status";
-            grid-area: header;
-            overflow: visible;
-        }
-    }
-
     &.is-img {
         flex: 0 0 33px;
         width: 33px;
         height: 45px;
         margin-right: $spacing;
+        grid-area: img;
 
         @include mobile {
             width: $mobile-table-img-width;
             height: $mobile-table-img-height;
+        }
+    }
+
+    &.is-title {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        grid-area: title;
+
+        @include mobile {
+            padding-left: 0.5rem;
+        }
+    }
+
+    &.is-status {
+        @include mobile {
+            justify-content: flex-start;
+            padding-left: 0.5rem;
         }
     }
 
