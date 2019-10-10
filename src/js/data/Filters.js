@@ -1,8 +1,8 @@
 // React
 import React from 'react'
 
-// Helpers
-import Icon from 'js/helpers/Icon'
+// Components
+import Icon from 'js/components/Icon'
 
 /**
  * Function to reverse sort filter values.

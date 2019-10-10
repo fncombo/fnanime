@@ -25,10 +25,10 @@ import {
 } from 'js/helpers/Modal'
 import { formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
-import Icon, { fasStar } from 'js/helpers/Icon'
 
 // Components
 import Badge from 'js/components/Badge'
+import Icon from 'js/components/Icon'
 import Favorite from 'js/components/Favorite'
 
 // DOM element into which to portal the modal
@@ -343,7 +343,7 @@ function Rating({ rating, favorite }) {
             <div className="rating">
                 <span className="has-text-warning">
                     {Array.from({ length: rating }, (value, i) =>
-                        <Icon icon={fasStar} key={i} />
+                        <Icon icon={[ 'fas', 'star' ]} key={i} />
                     )}
                 </span>
                 <span className="has-text-grey-light">

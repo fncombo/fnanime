@@ -18,12 +18,12 @@ import { FILTERS } from 'js/data/Filters'
 // Helpers
 import { formatOrdinal, getColumnTextColor, getSizeBarWidth, getSizeBarColor, highlightTitle } from 'js/helpers/Table'
 import fileSize from 'js/helpers/FileSize'
-import Icon from 'js/helpers/Icon'
 
 // Components
 import Badge from 'js/components/Badge'
 import Pagination from 'js/components/Pagination'
 import ModalContainer from 'js/components/Modal'
+import Icon from 'js/components/Icon'
 import Favorite from 'js/components/Favorite'
 
 // Default table state

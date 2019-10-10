@@ -4,8 +4,8 @@ import React from 'react'
 // Style
 import 'scss/Favorite.scss'
 
-// Helpers
-import Icon from 'js/helpers/Icon'
+// Components
+import Icon from 'js/components/Icon'
 
 function Favorite({ number }) {
     return (
