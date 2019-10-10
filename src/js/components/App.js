@@ -1,5 +1,5 @@
 // React
-import React, { Suspense, lazy, useReducer, useEffect, useContext } from 'react'
+import React, { useReducer, useEffect, useContext } from 'react'
 
 // Libraries
 import clone from 'clone'
@@ -22,8 +22,8 @@ import 'js/helpers/FontAwesome'
 import FilterButtons from 'js/components/Filters'
 import Table from 'js/components/Table'
 import Icon from 'js/components/Icon'
-const Statistics = lazy(() => import('js/components/Statistics'))
-const Gallery = lazy(() => import('js/components/Gallery'))
+import Statistics from 'js/components/Statistics'
+import Gallery from 'js/components/Gallery'
 
 // Local data last update time
 const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
@@ -155,13 +155,9 @@ function App() {
             </div>
             <Table />
             <div className="container statistics-container">
-                <Suspense fallback={<Loading />}>
-                    <Statistics />
-                </Suspense>
+                <Statistics />
             </div>
-            <Suspense fallback={<Loading />}>
-                <Gallery />
-            </Suspense>
+            <Gallery />
             <div className="container">
                 <ul className="updated-times has-text-centered">
                     <li>Local anime data last updated on {UPDATE_TIME}</li>
@@ -171,17 +167,6 @@ function App() {
             </div>
             <UpdateMessage />
         </GlobalState.Provider>
-    )
-}
-
-/**
- * Lazy component loading placeholder.
- */
-function Loading() {
-    return (
-        <div className="container">
-            <p className="notification">Loading&hellip;</p>
-        </div>
     )
 }
 
