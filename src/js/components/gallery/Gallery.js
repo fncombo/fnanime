@@ -12,8 +12,8 @@ import { GlobalState } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
 
 // Components
-import Heading from 'js/components/gallery/Heading'
-import Item from 'js/components/gallery/Item'
+import GalleryHeading from 'js/components/gallery/GalleryHeading'
+import GalleryItem from 'js/components/gallery/GalleryItem'
 
 // Offset of when to start showing the component and images offscreen
 const ROOT_MARGIN = '300px'
@@ -57,15 +57,15 @@ function Gallery() {
                 // If the rating is 0, use null to find non-planned anime without ratings
                 return (
                     <div className="gallery-section" key={rating}>
-                        <Heading>
+                        <GalleryHeading>
                             {FILTERS.rating.descriptions[rating]}
-                        </Heading>
+                        </GalleryHeading>
                         <p className="gallery-detailed-description">
                             {FILTERS.rating.detailedDescriptions[rating]}
                         </p>
                         <div className="gallery-grid">
                             {allAnime.filter(({ rating: animeRating }) => animeRating === (rating || null)).map(anime =>
-                                <Item key={anime.id} {...anime} />
+                                <GalleryItem key={anime.id} {...anime} />
                             )}
                         </div>
                     </div>

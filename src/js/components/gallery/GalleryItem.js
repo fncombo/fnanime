@@ -35,7 +35,7 @@ const GALLERY_ITEM_OPTIONS = {
 /**
  * Gallery item for a single anime including the image, type, status, and favorite icon.
  */
-function Item(anime) {
+function GalleryItem(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
     const [ tooltipStyle, setTooltipStyle ] = useState({})
     const [ itemRef, inView ] = useInView(GALLERY_ITEM_OPTIONS)
@@ -104,4 +104,4 @@ function Item(anime) {
     )
 }
 
-export default Item
+export default GalleryItem

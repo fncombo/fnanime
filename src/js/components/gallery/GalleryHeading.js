@@ -11,7 +11,7 @@ import 'scss/Gallery.scss'
 /**
  * Gallery section heading which can become stuck.
  */
-function Heading({ children }) {
+function GalleryHeading({ children }) {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the heading is stuck to add additional styling
@@ -31,4 +31,4 @@ function Heading({ children }) {
     )
 }
 
-export default Heading
+export default GalleryHeading
