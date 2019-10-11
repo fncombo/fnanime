@@ -57,7 +57,15 @@ const HeaderColumn = memo(({ columnName }) => {
     if (activeSorting.has(columnName)) {
         // If there are multiple sorting columns, get the index this one was activated at
         if (activeSorting.size > 1) {
-            index = [ ...activeSorting.keys() ].indexOf(columnName) + 1
+            const sortedColumns = [ ...activeSorting.keys() ]
+
+            // Do not take sorting by favorite into account when display the index of the column,
+            // this is because it's actually not possible to manually sort by favorite
+            if (sortedColumns.includes('favorite')) {
+                sortedColumns.splice(sortedColumns.indexOf('favorite'), 1)
+            }
+
+            index = sortedColumns.indexOf(columnName) + 1
 
             const ordinal = formatOrdinal(index)
 
