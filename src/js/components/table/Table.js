@@ -12,7 +12,7 @@ import { DEFAULTS } from 'js/data/Data'
 import Icon from 'js/components/Icon'
 import Header from 'js/components/table/Header'
 import Row from 'js/components/table/Row'
-import Pagination from 'js/components/Pagination'
+import Pagination from 'js/components/pagination/Pagination'
 
 // Default table state
 const INITIAL_TABLE_STATE = {
