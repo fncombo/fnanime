@@ -63,7 +63,14 @@ function Badge({ showRating, showAirStatus, onClick, ...anime }) {
                     {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
                 </span>
                 <span className={extraClasses}>
-                    {includeEpisodes && <EpisodeProgress {...anime} />}
+                    {includeEpisodes &&
+                        <>
+                            <span className={`tag-part is-current has-background-${FILTERS.status.colorCodes[status]}`}>
+                                {episodesWatched}
+                            </span>
+                            <span className="tag-part is-total">{episodes || '?'}</span>
+                        </>
+                    }
                     {includeRating && (rating ? `Rated ${rating}` : FILTERS.rating.tinyDescriptions.null)}
                 </span>
             </div>
@@ -75,20 +82,6 @@ function Badge({ showRating, showAirStatus, onClick, ...anime }) {
             {FILTERS.status.fancyDescriptions[status]}
             {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
         </span>
-    )
-}
-
-/**
- * Shows how many episodes have been watched out of the total number of episodes if it's known.
- */
-function EpisodeProgress({ status, episodes, episodesWatched }) {
-    return (
-        <>
-            <span className={`tag-part is-current has-background-${FILTERS.status.colorCodes[status]}`}>
-                {episodesWatched}
-            </span>
-            <span className="tag-part is-total">{episodes || '?'}</span>
-        </>
     )
 }
 
