@@ -1,5 +1,5 @@
 {
-    "updated": 1570741225592,
+    "updated": 1570827617083,
     "anime": {
         "20": {
             "id": 20,
@@ -9417,7 +9417,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1315/102961.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season",
