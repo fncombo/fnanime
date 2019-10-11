@@ -12,23 +12,6 @@ import { FILTERS } from 'js/data/Filters'
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
-const test = [
-    24701,
-    12189,
-    10165,
-    1889,
-    8425,
-    17265,
-    37208,
-    10357,
-    17549,
-    36038,
-]
-
-for (const anime of ANIME_ARRAY) {
-    anime.favorite = test.includes(anime.id) ? test.indexOf(anime.id) + 1 : false
-}
-
 // Fuzzy search options
 const FUSE_OPTIONS = {
     includeMatches: true,

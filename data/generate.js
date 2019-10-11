@@ -96,6 +96,7 @@ function processApiData(allAnime) {
             rating: anime.score || (anime.watching_status < 5 ? null : false),
             rewatchCount: getRewatchCount(anime.tags),
             url: anime.url,
+            favorite: false,
             // The following data will be replaced if the anime is downloaded locally
             genres: [],
             subs: [],

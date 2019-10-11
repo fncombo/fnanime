@@ -82,7 +82,7 @@ function getFavoriteStatus(animeId, favoriteAnime) {
     const isFavorite = favoriteAnime.findIndex(({ mal_id }) => animeId === mal_id)
 
     // If it does, return its order (starting from 1, not 0)
-    if (isFavorite) {
+    if (isFavorite !== -1) {
         return isFavorite + 1
     }
 
