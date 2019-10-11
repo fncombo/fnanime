@@ -16,7 +16,7 @@ import Summary from 'js/components/filters/Summary'
 /**
  * Groups of filters, search input, summary, and reset button.
  */
-function FilterButtons() {
+function Filters() {
     const { state: { anime }, dispatch } = useContext(GlobalState)
     const [ searchValue, setSearchValue ] = useState('')
 
@@ -84,4 +84,4 @@ function FilterButtons() {
 }
 
 // Exports
-export default FilterButtons
+export default Filters

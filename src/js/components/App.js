@@ -18,7 +18,7 @@ import { getApiData } from 'js/helpers/App'
 import 'js/helpers/FontAwesome'
 
 // Components
-import FilterButtons from 'js/components/filters/Filters'
+import Filters from 'js/components/filters/Filters'
 import Table from 'js/components/table/Table'
 import Statistics from 'js/components/statistics/Statistics'
 import Gallery from 'js/components/gallery/Gallery'
@@ -150,7 +150,7 @@ function App() {
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
             <div className="container">
-                <FilterButtons />
+                <Filters />
             </div>
             <Table />
             <div className="container statistics-container">
