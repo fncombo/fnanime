@@ -19,7 +19,7 @@ import { getApiData } from 'js/helpers/App'
 import 'js/helpers/FontAwesome'
 
 // Components
-import FilterButtons from 'js/components/Filters'
+import FilterButtons from 'js/components/filters/Filters'
 import Table from 'js/components/table/Table'
 import Icon from 'js/components/Icon'
 import Statistics from 'js/components/Statistics'
