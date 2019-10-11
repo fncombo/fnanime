@@ -1,15 +1,17 @@
 // React
 import React, { useContext, useState } from 'react'
 
-// Libraries
-import classNames from 'classnames'
-
 // Style
 import 'scss/Filters.scss'
 
 // Data
 import { GlobalState, FiltersState, ACTIONS } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
+
+// Components
+import FilterButtonGroup from 'js/components/filters/FilterButtonGroup'
+import Select from 'js/components/filters/Select'
+import Summary from 'js/components/filters/Summary'
 
 /**
  * Groups of filters, search input, summary, and reset button.
@@ -43,13 +45,13 @@ function FilterButtons() {
     return (
         <div className="columns is-mobile is-multiline filters">
             <FiltersState.Provider value={{ filterCounts }}>
-                <FilterGroup filterName="rating" fullWidth />
-                <FilterGroup filterName="type" />
-                <FilterGroup filterName="resolution" />
-                <FilterGroup filterName="status" />
-                <FilterGroup filterName="videoCodec" />
-                <FilterGroup filterName="source" />
-                <FilterGroup filterName="audioCodec" />
+                <FilterButtonGroup filterName="rating" fullWidth />
+                <FilterButtonGroup filterName="type" />
+                <FilterButtonGroup filterName="resolution" />
+                <FilterButtonGroup filterName="status" />
+                <FilterButtonGroup filterName="videoCodec" />
+                <FilterButtonGroup filterName="source" />
+                <FilterButtonGroup filterName="audioCodec" />
                 <div className="column is-6-mobile is-3-tablet">
                     <input
                         type="text"
@@ -79,162 +81,6 @@ function FilterButtons() {
             </FiltersState.Provider>
         </div>
     )
-}
-
-/**
- * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
- */
-function FilterGroup({ filterName, fullWidth }) {
-    const classes = classNames('column is-flex buttons has-addons is-12-mobile ', {
-        'is-12-tablet': fullWidth,
-        'is-6-tablet': !fullWidth,
-    })
-
-    return (
-        <div className={classes}>
-            {FILTERS[filterName].values.map(filterValue =>
-                <FilterButton filterName={filterName} filterValue={filterValue} key={filterValue} />
-            )}
-        </div>
-    )
-}
-
-/**
- * Single filter button for a value of a filter with a count of how many anime currently match it.
- */
-function FilterButton({ filterName, filterValue }) {
-    const { state: { activeFilters }, dispatch } = useContext(GlobalState)
-    const { filterCounts } = useContext(FiltersState)
-
-    // Callback to update the anime list when selecting this filter
-    const selectFilter = () => {
-        dispatch({
-            type: ACTIONS.SELECT_FILTER,
-            filterName,
-            filterValue,
-        })
-    }
-
-    // Whether this filter is currently selected and a count of how many anime match it
-    const isSelected = activeFilters[filterName] === filterValue
-    const notAllFilterValue = filterValue !== false
-    const count = filterCounts[filterName][filterValue]
-    const classes = classNames('button', {
-        'is-outlined': !isSelected,
-        'is-faded': notAllFilterValue && !count,
-        'is-dark': !(notAllFilterValue && !count),
-    })
-
-    return (
-        <button className={classes} onClick={selectFilter}>
-            {FILTERS[filterName].descriptions[filterValue]}
-            {!!count && notAllFilterValue && <span className="count">{count}</span>}
-        </button>
-    )
-}
-
-/**
- * Select input for a filter. Updates global filtering.
- */
-function Select({ filterName }) {
-    const { state: { activeFilters: { [filterName]: value } }, dispatch } = useContext(GlobalState)
-    const { filterCounts } = useContext(FiltersState)
-
-    // Callback to update the anime list when selecting this filter
-    const selectFilter = ({ target: { value: filterValue } }) => {
-        // Check if the option value is potentially a valid number, and it if it is
-        const actualFilterValue = /^\d+$/.test(filterValue) ? parseInt(filterValue, 10) : filterValue
-
-        dispatch({
-            type: ACTIONS.SELECT_FILTER,
-            filterName,
-            filterValue: actualFilterValue,
-        })
-    }
-
-    const withCount = FILTERS[filterName].values.filter(filterValue =>
-        filterValue && filterCounts[filterName][filterValue]
-    ).sort((filterValueA, filterValueB) =>
-        // Sort options by how many matches they have to them
-        filterCounts[filterName][filterValueB] - filterCounts[filterName][filterValueA]
-        // If the same number of matches, sort alphabetically
-        || (typeof filterValueA === 'string' && filterValueA.localeCompare(filterValueB))
-    )
-
-    const withoutCount = FILTERS[filterName].values.filter(filterValue =>
-        filterValue && !filterCounts[filterName][filterValue]
-    )
-
-    return (
-        <div className="select is-fullwidth">
-            <select value={value} onChange={selectFilter}>
-                <Option filterName={filterName} filterValue={false} />
-                <OptionGroup filterName={filterName} label="Have matching anime" options={withCount} />
-                <OptionGroup filterName={filterName} label="No matching anime" options={withoutCount} />
-            </select>
-        </div>
-    )
-}
-
-/**
- * A group of filter options in a select list with a label.
- */
-function OptionGroup({ filterName, label, options }) {
-    if (!options.length) {
-        return null
-    }
-
-    return (
-        <optgroup label={label}>
-            {options.map(filterValue =>
-                <Option filterName={filterName} filterValue={filterValue} key={filterValue} />
-            )}
-        </optgroup>
-    )
-}
-
-/**
- * Single filter option for a value of a filter with a count of how many anime currently match it.
- */
-function Option({ filterName, filterValue }) {
-    const { filterCounts } = useContext(FiltersState)
-
-    // Use the filter value, otherwise look up the definition
-    const value = typeof filterValue === 'string' ? filterValue : FILTERS[filterName].descriptions[filterValue]
-
-    // How many anime match this filter
-    const count = filterCounts[filterName][filterValue]
-
-    // Do not show count on "all" selection
-    return (
-        <option value={filterValue}>
-            {value}
-            {filterValue && !!count && ` (${count})`}
-        </option>
-    )
-}
-
-/**
- * Displays how many downloaded and not downloaded anime there are.
- */
-function Summary() {
-    const { state: { anime } } = useContext(GlobalState)
-
-    // Why is the anime gone!
-    if (!anime.length) {
-        return null
-    }
-
-    const downloadedCount = anime.filter(({ size }) => !!size).length
-    const notDownloadedCount = anime.length - downloadedCount
-
-    if (downloadedCount && notDownloadedCount) {
-        return <span>Found <strong>{downloadedCount}</strong> + {notDownloadedCount} anime</span>
-    } else if (downloadedCount && !notDownloadedCount) {
-        return <span>Found <strong>{downloadedCount}</strong> anime</span>
-    } else if (!downloadedCount && notDownloadedCount) {
-        return <span>Found {notDownloadedCount} anime</span>
-    }
 }
 
 // Exports
