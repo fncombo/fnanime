@@ -5,7 +5,7 @@ import React from 'react'
 import { FILTERS } from 'js/data/Filters'
 
 // Components
-import ModalContainer from 'js/components/Modal'
+import ModalContainer from 'js/components/modal/ModalContainer'
 import TitleColumn from 'js/components/table/TitleColumn'
 import Column from 'js/components/table/Column'
 import Badge from 'js/components/Badge'

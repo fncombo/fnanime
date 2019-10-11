@@ -13,7 +13,7 @@ import 'scss/Gallery.scss'
 import { FILTERS } from 'js/data/Filters'
 
 // Components
-import ModalContainer from 'js/components/Modal'
+import ModalContainer from 'js/components/modal/ModalContainer'
 import Favorite from 'js/components/Favorite'
 
 // Width of the gallery item
