@@ -23,7 +23,9 @@ function Heading({ children }) {
         <>
             <div className="gallery-heading-sentinel" ref={ref} />
             <h2 className={headerClasses}>
-                <span>{children}</span>
+                <span>
+                    {children}
+                </span>
             </h2>
         </>
     )

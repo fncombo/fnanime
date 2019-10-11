@@ -23,7 +23,11 @@ function HighlightTitle({ highlight, children: title }) {
     // Construct a simple regex to match the title parts
     const matches = RegExp(`(${parts.join('|')})`, 'gi')
 
-    return reactStringReplace(title, matches, (match, i) => <strong key={match + i}>{match}</strong>)
+    return reactStringReplace(title, matches, (match, i) =>
+        <strong key={match + i}>
+            {match}
+        </strong>
+    )
 }
 
 export default HighlightTitle

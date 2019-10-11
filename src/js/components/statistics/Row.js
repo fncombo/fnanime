@@ -21,7 +21,9 @@ function Row({ rating, totals: { rating: ratingTotals, size, episodes, totalDura
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
-                <span>{FILTERS.rating.tinyDescriptions[rating]}</span>
+                <span>
+                    {FILTERS.rating.tinyDescriptions[rating]}
+                </span>
             </div>
             <Column rating={rating} data={ratingTotals} showPercentage={true} />
             <Column rating={rating} data={size} formatFunction={fileSize} />

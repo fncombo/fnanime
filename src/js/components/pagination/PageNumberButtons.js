@@ -39,7 +39,11 @@ function PageNumberButtons() {
 
     for (const pageNumber of pageNumbers) {
         if (pageNumber - previousPage === 2) {
-            buttons.push(<NumberButton key={previousPage + 1}>{previousPage + 1}</NumberButton>)
+            buttons.push(
+                <NumberButton key={previousPage + 1}>
+                    {previousPage + 1}
+                </NumberButton>
+            )
 
         // Show "..." after first page and before the last page if there are more than 2 pages
         // in between them and adjacent buttons
@@ -47,7 +51,11 @@ function PageNumberButtons() {
             buttons.push(<span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>&hellip;</span>)
         }
 
-        buttons.push(<NumberButton key={pageNumber}>{pageNumber}</NumberButton>)
+        buttons.push(
+            <NumberButton key={pageNumber}>
+                {pageNumber}
+            </NumberButton>
+        )
 
         previousPage = pageNumber
     }

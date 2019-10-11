@@ -97,7 +97,9 @@ function Item(anime) {
                 </span>
                 {!!favorite && <Favorite number={favorite} />}
             </div>
-            <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>{title}</div>
+            <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>
+                {title}
+            </div>
         </ModalContainer>
     )
 }

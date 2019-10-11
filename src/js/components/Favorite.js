@@ -10,7 +10,11 @@ import Icon from 'js/components/Icon'
 /**
  * Displays a heart icon with a number to denote a favorite anime.
  */
-function Favorite({ number }) {
+function Favorite({ number, showHash = false }) {
+    if (!number) {
+        return null
+    }
+
     return (
         <Icon
             icon="heart"
@@ -18,7 +22,9 @@ function Favorite({ number }) {
             // eslint-disable-next-line max-len
             title={`Favourite anime #${number}.\n\nThis refers to the whole series in general, or a specific season of that series.\n\nThese don't have to be rated 10 because they are special regardless in their own way.`}
         >
-            <span className="favorite-number">{number}</span>
+            <span className="favorite-number">
+                {showHash && '#'}{number}
+            </span>
         </Icon>
     )
 }

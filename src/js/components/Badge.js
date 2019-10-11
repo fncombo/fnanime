@@ -68,7 +68,9 @@ function Badge({ showRating, showAirStatus, onClick, ...anime }) {
                             <span className={`tag-part is-current has-background-${FILTERS.status.colorCodes[status]}`}>
                                 {episodesWatched}
                             </span>
-                            <span className="tag-part is-total">{episodes || '?'}</span>
+                            <span className="tag-part is-total">
+                                {episodes || '?'}
+                            </span>
                         </>
                     }
                     {includeRating && (rating ? `Rated ${rating}` : FILTERS.rating.tinyDescriptions.null)}

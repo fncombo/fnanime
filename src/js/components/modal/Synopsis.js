@@ -12,7 +12,11 @@ function Synopsis({ data }) {
         return <p>No synopsis</p>
     }
 
-    return <p>{replaceSpecialChars(data)}</p>
+    return (
+        <p>
+            {replaceSpecialChars(data)}
+        </p>
+    )
 }
 
 export default Synopsis

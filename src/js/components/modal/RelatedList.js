@@ -30,7 +30,9 @@ function RelatedList({ data }) {
     // Sub list for every relation type
     return relatedAnime.map(([ type, allAnime ]) =>
         <Fragment key={type}>
-            <strong>{type}</strong>
+            <strong>
+                {type}
+            </strong>
             <ul className="related-list">
                 {allAnime.map(anime =>
                     <RelatedListItem {...anime} key={anime.mal_id} />
