@@ -9,14 +9,17 @@ import 'scss/Statistics.scss'
 
 // Data
 import { GlobalState } from 'js/data/GlobalState'
-import { FILTERS } from 'js/data/Filters'
 
 // Helpers
 import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 
+// Components
+import Row from 'js/components/statistics/Row'
+
 /**
- * Show all the ratings, number of anime per rating, and other totals.
+ * Show all the ratings, the number of anime per rating, and a column for each of the other totals.
+ * Each totals column has a header with its name, and a footer of the "totals total".
  */
 function Statistics() {
     const { state: { anime } } = useContext(GlobalState)
@@ -93,7 +96,7 @@ function Statistics() {
                     previousHadCount = true
                 }
 
-                return <StatisticsRow rating={rating} key={rating} totals={totals} />
+                return <Row rating={rating} key={rating} totals={totals} />
             }).reverse()}
             {firstNonZero !== lastNonZero &&
                 <div className="columns is-mobile is-not-progress">
@@ -120,66 +123,6 @@ function Statistics() {
                     </div>
                 </div>
             }
-        </div>
-    )
-}
-
-/**
- * Row of statistics for a single rating.
- */
-function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes, totalDuration, watchTime } }) {
-    return (
-        <div className="columns is-mobile">
-            <div className="column is-2-mobile is-1-tablet is-rating">
-                <span>{FILTERS.rating.tinyDescriptions[rating]}</span>
-            </div>
-            <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
-            <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
-            <StatisticsColumn rating={rating} data={episodes} />
-            <StatisticsColumn rating={rating} data={totalDuration} formatFunction={formatDuration} />
-            <StatisticsColumn rating={rating} data={watchTime} formatFunction={formatDuration} />
-        </div>
-    )
-}
-
-/**
- * Column of statistics for specific data within a rating. Accepts a format function to modify output.
- */
-function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
-    // Total of this data for this rating
-    const ratingData = data.totals[rating]
-    const sum = ratingData.reduce(add)
-
-    // Nothing to show
-    if (!sum) {
-        return <div className="column">&mdash;</div>
-    }
-
-    // Draw a part of the progress bar in the correct color for each status of anime
-    return (
-        <div className="column">
-            {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
-            {!!showPercentage && sum !== data.count && !!rating &&
-                ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`
-            }
-            <div className="progress is-flex has-background-grey-lighter">
-                {ratingData.map((singleData, status) => {
-                    if (!singleData) {
-                        return null
-                    }
-
-                    const count = formatFunction ? formatFunction(singleData) : singleData
-
-                    return (
-                        <div
-                            title={`${FILTERS.status.descriptions[status]} (${count})`}
-                            className={`has-background-${FILTERS.status.colorCodes[status]}`}
-                            style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
-                            key={`${rating}-${status}`}
-                        />
-                    )
-                })}
-            </div>
         </div>
     )
 }

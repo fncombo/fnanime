@@ -22,7 +22,7 @@ import 'js/helpers/FontAwesome'
 import FilterButtons from 'js/components/filters/Filters'
 import Table from 'js/components/table/Table'
 import Icon from 'js/components/Icon'
-import Statistics from 'js/components/Statistics'
+import Statistics from 'js/components/statistics/Statistics'
 import Gallery from 'js/components/Gallery'
 
 // Local data last update time
