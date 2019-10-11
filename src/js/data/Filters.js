@@ -311,21 +311,33 @@ const FILTERS = {
 const FILTER_NAMES = Object.keys(FILTERS)
 
 /**
+ * Reducer function to create a template object of all filter values for this filter.
+ * e.g. for "status" `{ false: 10, 1: 4, 2: 6 }`
+ */
+function filterNamesReducer(filterValuesObject, filterValue) {
+    filterValuesObject[filterValue] = 0
+
+    return filterValuesObject
+}
+
+/**
+ * Reducer function to create a template object of all filter.
+ * e.g. for "status" `{ status: { ... } }`
+ */
+function filterCountsReducer(filterNamesObject, filterName) {
+    filterNamesObject[filterName] = FILTERS[filterName].values.reduce(filterNamesReducer, {})
+
+    return filterNamesObject
+}
+
+/**
  * Non-enumerable property which returns an object with counts of
  * how many anime match each filter name and filter value.
  */
 Object.defineProperty(FILTERS, 'makeCounts', {
     value(allAnime) {
         // Make a nested blank object of filter names and values
-        const filterCounts = FILTER_NAMES.reduce((filterNamesObject, filterName) => {
-            filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
-                filterValuesObject[filterValue] = 0
-
-                return filterValuesObject
-            }, {})
-
-            return filterNamesObject
-        }, {})
+        const filterCounts = FILTER_NAMES.reduce(filterCountsReducer, {})
 
         // Loop through all anime and increment related filter value counts
         for (const anime of allAnime) {
