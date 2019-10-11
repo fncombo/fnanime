@@ -97,7 +97,7 @@ function Statistics() {
                     previousHadCount = true
                 }
 
-                return <StatisticsRow rating={rating} key={rating} totals={totals} />
+                return <StatisticsRow rating={rating} totals={totals} key={rating} />
             }).reverse()}
             {firstNonZero !== lastNonZero &&
                 <div className="columns is-mobile is-not-progress">

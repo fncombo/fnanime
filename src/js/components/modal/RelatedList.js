@@ -35,7 +35,7 @@ function RelatedList({ data }) {
             </strong>
             <ul className="related-list">
                 {allAnime.map(anime =>
-                    <RelatedListItem {...anime} key={anime.mal_id} />
+                    <RelatedListItem key={anime.mal_id} {...anime} />
                 )}
             </ul>
         </Fragment>
