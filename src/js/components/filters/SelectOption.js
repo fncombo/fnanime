@@ -25,7 +25,7 @@ function SelectOption({ filterName, filterValue }) {
     return (
         <option value={filterValue}>
             {value}
-            {filterValue && !!count && ` (${count})`}
+            {!!filterValue && !!count && ` (${count})`}
         </option>
     )
 }
