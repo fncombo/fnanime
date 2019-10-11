@@ -15,7 +15,7 @@ import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helper
 import fileSize from 'js/helpers/FileSize'
 
 // Components
-import Row from 'js/components/statistics/Row'
+import StatisticsRow from 'js/components/statistics/StatisticsRow'
 
 /**
  * Show all the ratings, the number of anime per rating, and a column for each of the other totals.
@@ -96,7 +96,7 @@ function Statistics() {
                     previousHadCount = true
                 }
 
-                return <Row rating={rating} key={rating} totals={totals} />
+                return <StatisticsRow rating={rating} key={rating} totals={totals} />
             }).reverse()}
             {firstNonZero !== lastNonZero &&
                 <div className="columns is-mobile is-not-progress">
