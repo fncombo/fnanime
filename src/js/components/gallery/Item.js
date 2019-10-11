@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 
 // Libraries
 import has from 'has'
@@ -10,7 +10,6 @@ import { useInView } from 'react-intersection-observer'
 import 'scss/Gallery.scss'
 
 // Data
-import { GlobalState } from 'js/data/GlobalState'
 import { FILTERS } from 'js/data/Filters'
 
 // Components
@@ -27,93 +26,16 @@ const IMG_HEIGHT = IMG_WIDTH * 1.4
 // Offset of when to start showing the component and images offscreen
 const ROOT_MARGIN = '300px'
 
-// Intersection options for the component and individual items
-const GALLERY_OPTIONS = { rootMargin: ROOT_MARGIN }
-
+// Intersection options for the gallery item
 const GALLERY_ITEM_OPTIONS = {
     rootMargin: ROOT_MARGIN,
     triggerOnce: true,
 }
 
 /**
- * Gallery for each rating which has matching anime.
+ * Gallery item for a single anime including the image, type, status, and favorite icon.
  */
-function Gallery() {
-    const { state: { anime: allAnime } } = useContext(GlobalState)
-    const [ ref, inView ] = useInView(GALLERY_OPTIONS)
-
-    // Do not render and do all this calculating and creating hundreds of components if not in view
-    if (!inView) {
-        return <div className="gallery-placeholder" ref={ref} />
-    }
-
-    // Count how many there are anime for each rating, if the rating is null (not planned, not rated), use 0,
-    // if the rating is false (planned, not rated), skip that anime
-    const ratingCounts = Array(11).fill(0)
-
-    for (const { rating } of allAnime) {
-        if (rating === false) {
-            continue
-        }
-
-        ratingCounts[rating || 0] += 1
-    }
-
-    // Only show ratings which have anime and exclude all non-rated anime
-    return (
-        <div className="gallery" ref={ref}>
-            {ratingCounts.map((count, rating) => {
-                // No anime found for this rating, skip it
-                if (!count) {
-                    return null
-                }
-
-                // If the rating is 0, use null to find non-planned anime without ratings
-                return (
-                    <div className="gallery-section" key={rating}>
-                        <GalleryHeading>
-                            {FILTERS.rating.descriptions[rating]}
-                        </GalleryHeading>
-                        <p className="gallery-detailed-description">
-                            {FILTERS.rating.detailedDescriptions[rating]}
-                        </p>
-                        <div className="gallery-grid">
-                            {allAnime.filter(({ rating: animeRating }) => animeRating === (rating || null)).map(anime =>
-                                <GalleryItem key={anime.id} {...anime} />
-                            )}
-                        </div>
-                    </div>
-                )
-            }).reverse()}
-        </div>
-    )
-}
-
-/**
- * Gallery section heading which can become stuck.
- */
-function GalleryHeading({ children }) {
-    const [ ref, inView, entry ] = useInView()
-
-    // Check whether the heading is stuck to add additional styling
-    const headerClasses = classNames('gallery-heading', {
-        'is-stuck': !inView && entry,
-    })
-
-    return (
-        <>
-            <div className="gallery-heading-sentinel" ref={ref} />
-            <h2 className={headerClasses}>
-                <span>{children}</span>
-            </h2>
-        </>
-    )
-}
-
-/**
- * Gallery item for a single item including the image, type, and status.
- */
-function GalleryItem(anime) {
+function Item(anime) {
     const [ hoverClass, setHoverClass ] = useState('')
     const [ tooltipStyle, setTooltipStyle ] = useState({})
     const [ itemRef, inView ] = useInView(GALLERY_ITEM_OPTIONS)
@@ -180,5 +102,4 @@ function GalleryItem(anime) {
     )
 }
 
-// Exports
-export default Gallery
+export default Item

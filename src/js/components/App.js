@@ -23,7 +23,7 @@ import FilterButtons from 'js/components/filters/Filters'
 import Table from 'js/components/table/Table'
 import Icon from 'js/components/Icon'
 import Statistics from 'js/components/statistics/Statistics'
-import Gallery from 'js/components/Gallery'
+import Gallery from 'js/components/gallery/Gallery'
 
 // Local data last update time
 const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
