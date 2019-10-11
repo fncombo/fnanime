@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Helpers
-import { formatDuration } from 'js/helpers/Statistics'
+import { formatDuration } from 'js/helpers/Generic'
 
 /**
  * Display the total watch time of this anime based on episode duration and number of episodes watched.

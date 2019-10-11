@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Helpers
-import { formatDuration } from 'js/helpers/Statistics'
+import { formatDuration } from 'js/helpers/Generic'
 
 /**
  * Displays the total duration of the anime and the duration per episode.

@@ -11,7 +11,8 @@ import 'scss/Statistics.scss'
 import { GlobalState } from 'js/data/GlobalState'
 
 // Helpers
-import { statisticsAnime, add, calculateTotals, formatDuration } from 'js/helpers/Statistics'
+import { formatDuration } from 'js/helpers/Generic'
+import { statisticsAnime, add, calculateTotals } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 
 // Components

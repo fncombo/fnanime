@@ -8,7 +8,7 @@ import 'scss/Statistics.scss'
 import { FILTERS } from 'js/data/Filters'
 
 // Helpers
-import { formatDuration } from 'js/helpers/Statistics'
+import { formatDuration } from 'js/helpers/Generic'
 import fileSize from 'js/helpers/FileSize'
 
 // Components
