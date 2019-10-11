@@ -20,7 +20,7 @@ import 'js/helpers/FontAwesome'
 
 // Components
 import FilterButtons from 'js/components/Filters'
-import Table from 'js/components/Table'
+import Table from 'js/components/table/Table'
 import Icon from 'js/components/Icon'
 import Statistics from 'js/components/Statistics'
 import Gallery from 'js/components/Gallery'
