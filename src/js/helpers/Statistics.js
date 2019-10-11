@@ -1,6 +1,3 @@
-// Libraries
-import prettyMilliseconds from 'pretty-ms'
-
 /**
  * Only include watching, completed, on-hold, and dropped anime in statistics.
  */
@@ -64,17 +61,9 @@ function calculateTotals(anime, property, countOnly) {
     }
 }
 
-/**
- * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
- */
-function formatDuration(duration, verbose = false) {
-    return prettyMilliseconds(duration * 60000, { verbose })
-}
-
 // Exports
 export {
     statisticsAnime,
     add,
     calculateTotals,
-    formatDuration,
 }

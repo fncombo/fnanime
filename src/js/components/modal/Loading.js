@@ -27,14 +27,22 @@ function Loading({ children, ...rest }) {
  * Inline, shorter loading placeholder.
  */
 function LoadingInline({ children }) {
-    return <Loading className="loading-text loading-inline">{children}</Loading>
+    return (
+        <Loading className="loading-text loading-inline">
+            {children}
+        </Loading>
+    )
 }
 
 /**
  * Full line loading placeholder.
  */
 function LoadingText({ children }) {
-    return <Loading className="loading-text">{children}</Loading>
+    return (
+        <Loading className="loading-text">
+            {children}
+        </Loading>
+    )
 }
 
 /**

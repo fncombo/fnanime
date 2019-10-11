@@ -1,9 +1,8 @@
 // React
-import React, { useReducer, useEffect, useContext } from 'react'
+import React, { useReducer, useEffect } from 'react'
 
 // Libraries
 import clone from 'clone'
-import classNames from 'classnames'
 
 // Style
 import 'scss/App.scss'
@@ -19,11 +18,11 @@ import { getApiData } from 'js/helpers/App'
 import 'js/helpers/FontAwesome'
 
 // Components
-import FilterButtons from 'js/components/Filters'
-import Table from 'js/components/Table'
-import Icon from 'js/components/Icon'
-import Statistics from 'js/components/Statistics'
-import Gallery from 'js/components/Gallery'
+import Filters from 'js/components/filters/Filters'
+import Table from 'js/components/table/Table'
+import Statistics from 'js/components/statistics/Statistics'
+import Gallery from 'js/components/gallery/Gallery'
+import UpdateMessage from 'js/components/UpdateMessage'
 
 // Local data last update time
 const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
@@ -151,7 +150,7 @@ function App() {
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
             <div className="container">
-                <FilterButtons />
+                <Filters />
             </div>
             <Table />
             <div className="container statistics-container">
@@ -167,31 +166,6 @@ function App() {
             </div>
             <UpdateMessage />
         </GlobalState.Provider>
-    )
-}
-
-/**
- * Message indicating the loading status of the API update.
- */
-function UpdateMessage() {
-    const { state: { apiUpdated, apiError } } = useContext(GlobalState)
-
-    const classes = classNames('message', apiUpdated ? 'is-done' : 'is-loading')
-
-    let updateStatusMessage
-
-    if (apiUpdated) {
-        updateStatusMessage = apiError
-            ? <><Icon icon="times-circle" /> Error contacting API</>
-            : <><Icon icon="check-circle" /> Updated</>
-    } else {
-        updateStatusMessage = <><Icon icon="database" /> Loading latest information</>
-    }
-
-    return (
-        <div className={classes}>
-            {updateStatusMessage}
-        </div>
     )
 }
 
