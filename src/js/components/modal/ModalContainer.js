@@ -29,14 +29,10 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     }
 
     return (
-        <>
-            <Element onClick={openModal} {...rest}>
-                {children}
-            </Element>
-            {isModalOpen &&
-                ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)
-            }
-        </>
+        <Element onClick={openModal} {...rest}>
+            {children}
+            {isModalOpen && ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)}
+        </Element>
     )
 }
 
