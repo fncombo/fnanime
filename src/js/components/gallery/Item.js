@@ -95,7 +95,7 @@ function Item(anime) {
                         : FILTERS.type.descriptions[type]
                     }
                 </span>
-                {!!favorite && <Favorite number={favorite} />}
+                {!!favorite && <Favorite showHash number={favorite} />}
             </div>
             <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>
                 {title}

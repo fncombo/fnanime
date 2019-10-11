@@ -39,27 +39,15 @@
 }
 
 .favorite-number {
+    &.has-hash {
+        margin-left: 0.25rem;
+    }
+
     .table & {
         position: absolute;
         bottom: 0;
         right: 0;
         font-size: 0.75rem;
         text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-    }
-
-    .gallery & {
-        margin-left: 0.25rem;
-
-        &::before {
-            content: '#';
-        }
-    }
-
-    .modal & {
-        margin-left: 0.25rem;
-
-        &::before {
-            content: '#';
-        }
     }
 }

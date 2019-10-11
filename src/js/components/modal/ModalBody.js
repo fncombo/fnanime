@@ -82,7 +82,7 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating rating={anime.rating} />
-                    {!!anime.favorite && <Favorite number={anime.favorite} />}
+                    {!!anime.favorite && <Favorite showHash number={anime.favorite} />}
                     <hr />
                     <LoadingText>
                         <p>Mean MAL rating: <ApiData property="score" fallback="N/A" /></p>

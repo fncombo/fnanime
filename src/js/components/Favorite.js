@@ -1,6 +1,9 @@
 // React
 import React from 'react'
 
+// Libraries
+import classNames from 'classnames'
+
 // Style
 import 'scss/Favorite.scss'
 
@@ -15,6 +18,10 @@ function Favorite({ number, showHash = false }) {
         return null
     }
 
+    const numberClasses = classNames('favorite-number', {
+        'has-hash': showHash,
+    })
+
     return (
         <Icon
             icon="heart"
@@ -22,7 +29,7 @@ function Favorite({ number, showHash = false }) {
             // eslint-disable-next-line max-len
             title={`Favourite anime #${number}.\n\nThis refers to the whole series in general, or a specific season of that series.\n\nThese don't have to be rated 10 because they are special regardless in their own way.`}
         >
-            <span className="favorite-number">
+            <span className={numberClasses}>
                 {showHash && '#'}{number}
             </span>
         </Icon>
