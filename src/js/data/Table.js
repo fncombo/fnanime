@@ -55,7 +55,7 @@ const TABLE_COLUMNS = {
     status: {
         text: 'Status',
         defaultSorting: SORTING_ORDERS.asc,
-        size: COLUMN_SIZES.large,
+        size: 'auto',
     },
     rating: {
         text: 'Rating',

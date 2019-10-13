@@ -33,7 +33,7 @@ function Badge({ showRating, showAirStatus, onClick, ...anime }) {
     const includeEpisodes = ((episodesWatched !== 0 && episodesWatched !== episodes) || status === 1) && !includeRating
 
     // Make the badge small if the rating was asked for or air status is being included
-    const isSmall = showRating || includeAirStatus
+    const isSmall = showRating
 
     // Title and onClick handler attributes if onClick was provided
     const attributes = onClick ? {
