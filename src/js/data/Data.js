@@ -12,6 +12,9 @@ import { FILTERS, FILTER_NAMES } from 'js/data/Filters'
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
 
+// Array of all props an anime has
+const ANIME_PROPS = Object.keys(ANIME_ARRAY[0])
+
 // Fuzzy search options
 const FUSE_OPTIONS = {
     includeMatches: true,
@@ -77,18 +80,20 @@ function getFileQuality(anime) {
     let measuredStats = 0
     let totalMeasure = 0
 
-    for (const [ key, value ] of Object.entries(anime)) {
+    for (const prop of ANIME_PROPS) {
+        const value = anime[prop]
+
         if (value === false || value === null) {
             continue
         }
 
-        if (!has(FILTERS, key) || !has(FILTERS[key], 'fileQuality') || !has(FILTERS[key].fileQuality, value)) {
+        if (!has(FILTERS, prop) || !has(FILTERS[prop], 'fileQuality') || !has(FILTERS[prop].fileQuality, value)) {
             continue
         }
 
         measuredStats += 1
 
-        totalMeasure += FILTERS[key].fileQuality[value]
+        totalMeasure += FILTERS[prop].fileQuality[value]
     }
 
     if (!measuredStats) {
@@ -112,9 +117,6 @@ for (const animeId of Object.keys(ANIME_OBJECT)) {
 
     anime.watchTime = anime.episodeDuration * anime.episodesWatched * (anime.rewatchCount + 1)
 }
-
-// Array of all props an anime has
-const ANIME_PROPS = Object.keys(ANIME_ARRAY[0])
 
 /**
  * Update info about an anime from provided new API data.
