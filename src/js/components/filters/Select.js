@@ -20,8 +20,17 @@ function Select({ filterName }) {
 
     // Callback to update the anime list when selecting this filter
     const selectFilter = ({ target: { value: filterValue } }) => {
+        let actualFilterValue = filterValue
+
+        // Check if the filter value is the string "false" and convert it to a proper boolean if it is
+        if (filterValue === 'false') {
+            actualFilterValue = false
+        }
+
         // Check if the option value is fully a number, and convert it to the correct type if it is
-        const actualFilterValue = /^\d+$/.test(filterValue) ? parseInt(filterValue, 10) : filterValue
+        if (/^\d+$/.test(filterValue)) {
+            actualFilterValue = parseInt(filterValue, 10)
+        }
 
         dispatch({
             type: ACTIONS.SELECT_FILTER,

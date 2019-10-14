@@ -67,7 +67,7 @@ function globalReducer(state, action) {
     case ACTIONS.SELECT_FILTER: {
         const activeFilters = {
             ...state.activeFilters,
-            [action.filterName]: action.filterValue === 'false' ? false : action.filterValue,
+            [action.filterName]: action.filterValue,
         }
 
         return {
