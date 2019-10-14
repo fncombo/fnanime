@@ -364,4 +364,5 @@ Object.defineProperty(FILTERS, 'makeCounts', {
 // Exports
 export {
     FILTERS,
+    FILTER_NAMES,
 }

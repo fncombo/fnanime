@@ -7,7 +7,7 @@ import Fuse from 'fuse.js'
 // Data
 import { anime as ANIME_OBJECT } from 'js/data/data.json'
 import { SORTING_ORDERS } from 'js/data/Table'
-import { FILTERS } from 'js/data/Filters'
+import { FILTERS, FILTER_NAMES } from 'js/data/Filters'
 
 // Only the anime object's entries in an array
 let ANIME_ARRAY = Object.values(ANIME_OBJECT)
@@ -44,7 +44,7 @@ const DEFAULTS = {
  * Populate default filter data and filter values.
  */
 function createFilterDefaults() {
-    for (const filterName of Object.keys(FILTERS)) {
+    for (const filterName of FILTER_NAMES) {
         // Populate only the filter values which have some data to them
         let filterValues = ANIME_ARRAY
             .map(anime => anime[filterName])
