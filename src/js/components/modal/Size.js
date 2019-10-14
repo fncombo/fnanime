@@ -10,7 +10,7 @@ import fileSize from 'js/helpers/FileSize'
 function Size({ size, episodes }) {
     return (
         <>
-            {size ? fileSize(size) : 'Not Downloaded'}
+            {size ? fileSize(size) : 'None'}
             {!!(size && episodes > 1) &&
                 <span className="has-text-grey">
                     &nbsp;&ndash; average {fileSize(size / episodes)} per episode
