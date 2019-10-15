@@ -20,8 +20,8 @@ function rowReducer(row) {
 }
 
 /**
- * Returns a 2D array of each anime status within each rating, populated with either count
- * of matched anime or total of all data.
+ * Returns a 2D array of each anime status within each rating, populated with either count of matched anime or
+ * total of all data.
  */
 function calculateTotals(anime, property, countOnly) {
     // Create the 2D array to populate

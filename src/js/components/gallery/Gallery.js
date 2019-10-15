@@ -22,13 +22,12 @@ const GALLERY_OPTIONS = { rootMargin: ROOT_MARGIN }
 function Gallery() {
     const [ ref, inView ] = useInView(GALLERY_OPTIONS)
 
-    // Do not render and do all this calculating and creating hundreds of components if not in view
+    // Optimise to not render if not in view
     if (!inView) {
         return <div className="gallery-placeholder" ref={ref} />
     }
 
-    // Make a gallery section for each rating from 10 to 1,
-    // use the 0 index as null for "non-planned and non-rated anime"
+    // Make a section for each rating from 10 to 1, use the 0 index as null for "non-planned and non-rated anime"
     return (
         <div className="gallery" ref={ref}>
             {Array.from({ length: 11 }, (value, index) =>

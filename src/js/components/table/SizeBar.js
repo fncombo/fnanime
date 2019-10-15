@@ -6,8 +6,8 @@ import { getSizeBarWidth, getSizeBarColor } from 'js/helpers/Table'
 import fileSize from 'js/helpers/FileSize'
 
 /**
- * Displays the formatted file size and a progress bar which is
- * relative to the maximum and minimum sizes for the size type (episode or total).
+ * Displays the formatted file size and a progress bar which is relative to the maximum and minimum sizes for the
+ * size type (episode or total).
  */
 function SizeBar({ size, type }) {
     if (!size || !type) {

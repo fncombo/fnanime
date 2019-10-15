@@ -14,9 +14,10 @@ import { FILTERS } from 'js/data/Filters'
 import FilterButton from 'js/components/filters/FilterButton'
 
 /**
- * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
+ * Group of buttons for a filter.
  */
 function FilterButtonGroup({ filterName, isFullWidth }) {
+    // The button group is either half wide or takes up the whole row
     const classes = classNames(
         'column is-flex buttons has-addons is-12-mobile ',
         isFullWidth ? 'is-12-tablet' : 'is-6-tablet'

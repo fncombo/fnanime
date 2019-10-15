@@ -12,8 +12,7 @@ import { TABLE_COLUMN_NAMES } from 'js/data/Table'
 import HeaderColumn from 'js/components/table/HeaderColumn'
 
 /**
- * Table header row which becomes stuck to the top of the page and
- * gains additional styling when scrolling.
+ * Table header row which becomes stuck to the top of the page and gains additional styling when scrolling.
  */
 const Header = memo(() => {
     const [ ref, inView, entry ] = useInView()

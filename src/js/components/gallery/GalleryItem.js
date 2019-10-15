@@ -41,7 +41,7 @@ function GalleryItem(anime) {
     const [ itemRef, inView ] = useInView(GALLERY_ITEM_OPTIONS)
     const tooltipRef = useRef(null)
 
-    // Do not render until the item is close to being visible to the user to prevent useless image loading
+    // Do not render until the item is close to being visible to the user
     if (!inView) {
         return <div className="gallery-item-placeholder" ref={itemRef} />
     }

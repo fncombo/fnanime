@@ -8,8 +8,7 @@ import { TABLE_COLUMNS } from 'js/data/Table'
 import { getColumnTextColor } from 'js/helpers/Table'
 
 /**
- * Generic table column with anime data. The text is color coded if
- * mapping for data to color are found for this column.
+ * Generic table cell with anime data. The text is color coded if mapping for data to color are found for this column.
  */
 function Column({ value, columnName, children }) {
     // Try to get the column's text color of they are defined

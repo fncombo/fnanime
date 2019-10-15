@@ -26,9 +26,8 @@ function Statistics() {
     const { state: { anime } } = useContext(GlobalState)
     const [ ref, inView, entry ] = useInView()
 
-    // Do not render and do all this calculating if not in view and if scrolled upwards,
-    // if downwards then keep the component because nothing is going to cause it to re-render and need
-    // to preserve its height so the page doesn't jump
+    // Do not render if not in view and if haven't scrolled past this component yet. If already rendered and
+    // scrolled past, keep it
     if (!inView && entry && entry.boundingClientRect.y >= 0) {
         return <div className="statistics-placeholder" ref={ref} />
     }

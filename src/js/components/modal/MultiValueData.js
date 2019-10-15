@@ -21,8 +21,7 @@ function MultiValueData({ data, ...anime }) {
         return data.join(', ')
     }
 
-    // If the data property is not present on the anime, or it's not an array with values,
-    // fallback on a dash
+    // If the data property is not present on the anime, or it's not an array with values, fallback on a dash
     if (!has(anime, data) || !Array.isArray(anime[data]) || !anime[data].length) {
         return <>&mdash;</>
     }

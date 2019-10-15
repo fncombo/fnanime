@@ -27,8 +27,7 @@ function Pagination() {
         'is-stuck': !inView && entry,
     })
 
-    // If the anime updated and the table is now over the last possible page,
-    // switch to the new last page instead
+    // If the anime updated and the table is now over the last possible page, switch to the new last page instead
     if (page > lastPage && lastPage !== 0) {
         dispatch({
             type: ACTIONS.SET_PAGE,

@@ -12,8 +12,8 @@ import { DEFAULTS } from 'js/data/Data'
 import NumberButton from 'js/components/pagination/NumberButton'
 
 /**
- * Number buttons to control the table. Some number buttons are truncated when the are too many between the current
- * and first/last page.
+ * Number buttons to navigate the table. Some number buttons are truncated when the are too many between the current
+ * button and the first/last page button.
  */
 function PageNumberButtons() {
     const { state: { page }, lastPage } = useContext(TableState)

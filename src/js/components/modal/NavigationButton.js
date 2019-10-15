@@ -20,13 +20,16 @@ import Icon from 'js/components/Icon'
 function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
+    // Get data about the adjacent anime
     const navAnime = getAdjacentAnime(allAnime, currentAnimeId, direction)
+
     const classes = classNames('modal-nav', `has-text-${FILTERS.status.colorCodes[navAnime.status]}`, {
         'is-placeholder': !navAnime,
         'is-next': direction === ACTIONS.NEXT_ANIME,
         'is-prev': direction !== ACTIONS.NEXT_ANIME,
     })
 
+    // If no adjacent anime was found (e.g. this is the first or last anime already), then only display a placeholder
     if (!navAnime) {
         return <div className={classes} />
     }

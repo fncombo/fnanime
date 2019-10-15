@@ -56,8 +56,7 @@ function Table() {
         )
     }
 
-    // Calculate the last possible page number based on the total number of anime and
-    // how many anime are displayed per page
+    // Calculate the last possible page number based on the total number of anime and how many are displayed per page
     const lastPage = Math.ceil(allAnime.length / DEFAULTS.perPage)
 
     return (

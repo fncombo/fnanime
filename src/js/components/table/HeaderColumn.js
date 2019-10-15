@@ -31,14 +31,13 @@ const HeaderColumn = memo(({ columnName }) => {
         ) ? clone(activeSorting) : new Map()
 
         // Check if this column is already being sorted, in which case reverse it,
-        // otherwise use the default sorting for it
         if (newSorting.has(columnName)) {
             newSorting.set(
                 columnName,
                 newSorting.get(columnName) === SORTING_ORDERS.asc ? SORTING_ORDERS.desc : SORTING_ORDERS.asc
             )
 
-        // Add new sorting for this column because it isn't being sorted yet
+        // Otherwise add new sorting for this column and use the default direction for it
         } else {
             newSorting.set(columnName, TABLE_COLUMNS[columnName].defaultSorting)
         }

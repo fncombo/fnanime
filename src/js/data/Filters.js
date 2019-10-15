@@ -331,8 +331,7 @@ function filterCountsReducer(filterNamesObject, filterName) {
 }
 
 /**
- * Non-enumerable property which returns an object with counts of
- * how many anime match each filter name and filter value.
+ * Non-enumerable property which returns an object with counts of how many anime match each filter name and value.
  */
 Object.defineProperty(FILTERS, 'makeCounts', {
     value(allAnime) {

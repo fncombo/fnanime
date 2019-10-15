@@ -20,6 +20,7 @@ import Badge from 'js/components/Badge'
 function RelatedListItem({ ...anime }) {
     const { changeAnime } = useContext(ModalState)
 
+    // Callback to change the anime when clicking on the badge
     const onClick = () => {
         changeAnime(ANIME_OBJECT[anime.mal_id])
     }

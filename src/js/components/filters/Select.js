@@ -10,8 +10,7 @@ import SelectOption from 'js/components/filters/SelectOption'
 import SelectOptionGroup from 'js/components/filters/SelectOptionGroup'
 
 /**
- * Select input for a filter. Updates global filtering. Options are divided by whether
- * they currently have anime matching anime to them or not.
+ * Select input for a filter. Options are divided by whether they currently have anime matching anime to them or not.
  */
 function Select({ filterName }) {
     // Get the active filter setting for the filter name of this select
@@ -49,8 +48,7 @@ function Select({ filterName }) {
         || (typeof filterValueA === 'string' && filterValueA.localeCompare(filterValueB))
     )
 
-    // Get all the filter values which don't currently have matching anime to them,
-    // sorted alphabetically by default
+    // Get all the filter values which don't currently have matching anime to them, sorted alphabetically by default
     const withoutCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && !filterCounts[filterName][filterValue]
     )

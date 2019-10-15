@@ -36,8 +36,7 @@ function FilterButton({ filterName, filterValue }) {
     // Count of how many anime match it
     const count = filterCounts[filterName][filterValue]
 
-    // Styling based on whether this filter is "all", whether or not it's selected,
-    // and whether it has any matching anime
+    // Styling based on whether this filter is "all", whether it's selected, and whether it has any matching anime
     const classes = classNames('button', {
         'is-outlined': !isSelected,
         'is-faded': notAllFilterValue && !count,
