@@ -21,20 +21,10 @@ function NumberButton({ children: pageNumber }) {
         })
     }
 
-    // Current page button does nothing and has a unique look
-    if (pageNumber === page) {
-        return (
-            <button className="button is-dark is-rounded">
-                {pageNumber}
-            </button>
-        )
-    }
-
-    return (
-        <button className="button is-rounded" onClick={changePage}>
-            {pageNumber}
-        </button>
-    )
+    // Current page button does nothing and has a unique look, normal page button takes to the page on click
+    return pageNumber === page
+        ? <button className="button is-dark is-rounded">{pageNumber}</button>
+        : <button className="button is-rounded" onClick={changePage}>{pageNumber}</button>
 }
 
 export default NumberButton
