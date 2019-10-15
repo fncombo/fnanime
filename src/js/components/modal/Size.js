@@ -11,10 +11,8 @@ function Size({ size, episodes }) {
     return (
         <>
             {size ? fileSize(size) : 'None'}
-            {!!(size && episodes > 1) &&
-                <span className="has-text-grey">
-                    &nbsp;&ndash; average {fileSize(size / episodes)} per episode
-                </span>
+            {!!size && episodes > 1 &&
+                <span className="has-text-grey"> &ndash; average {fileSize(size / episodes)} per episode</span>
             }
         </>
     )
