@@ -8,11 +8,7 @@ import { replaceSpecialChars } from 'js/helpers/Modal'
  * Synopsis text for this anime. Unfortunately the API returns it only all as one huge paragraph.
  */
 function Synopsis({ data }) {
-    if (!data || typeof data !== 'string') {
-        return <p>No synopsis</p>
-    }
-
-    return <p>{replaceSpecialChars(data)}</p>
+    return <p>{typeof data === 'string' ? replaceSpecialChars(data) : 'No synopsis'}</p>
 }
 
 export default Synopsis
