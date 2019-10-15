@@ -59,8 +59,12 @@ function Select({ filterName }) {
         <div className="select is-fullwidth">
             <select value={activeFilterValue} onChange={selectFilter}>
                 <SelectOption filterName={filterName} filterValue={false} />
-                <SelectOptionGroup filterName={filterName} label="Have matching anime" options={withCount} />
-                <SelectOptionGroup filterName={filterName} label="No matching anime" options={withoutCount} />
+                <SelectOptionGroup filterName={filterName} label="" options={withCount}>
+                    Have matching anime
+                </SelectOptionGroup>
+                <SelectOptionGroup filterName={filterName} options={withoutCount}>
+                    No matching anime
+                </SelectOptionGroup>
             </select>
         </div>
     )
