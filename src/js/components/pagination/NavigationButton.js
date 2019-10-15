@@ -16,7 +16,7 @@ import Icon from 'js/components/Icon'
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-function NavigationButton({ action: type, disabled = false }) {
+function NavigationButton({ action: type, disabled }) {
     const { dispatch } = useContext(TableState)
 
     // Callback to go to the next or previous page
