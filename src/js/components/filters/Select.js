@@ -61,7 +61,7 @@ function Select({ filterName }) {
                 <SelectOption filterName={filterName}>
                     {false}
                 </SelectOption>
-                <SelectOptionGroup filterName={filterName} label="" options={withCount}>
+                <SelectOptionGroup filterName={filterName} options={withCount}>
                     Have matching anime
                 </SelectOptionGroup>
                 <SelectOptionGroup filterName={filterName} options={withoutCount}>
