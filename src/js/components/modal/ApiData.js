@@ -25,7 +25,7 @@ function ApiData({ property, fallback = <>&mdash;</>, children }) {
     }
 
     // The data is a number, format it properly
-    if (/^\d+$/.test(data)) {
+    if (typeof data === 'number') {
         return data.toLocaleString()
     }
 
