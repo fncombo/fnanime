@@ -27,7 +27,9 @@ const Header = memo(() => {
             <div className="table-sentinel" ref={ref} />
             <div className={classes}>
                 {TABLE_COLUMN_NAMES.map(columnName =>
-                    <HeaderColumn columnName={columnName} key={columnName} />
+                    <HeaderColumn key={columnName}>
+                        {columnName}
+                    </HeaderColumn>
                 )}
             </div>
         </>

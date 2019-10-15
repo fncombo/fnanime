@@ -19,7 +19,7 @@ import Icon from 'js/components/Icon'
  * Clicking on already sorted column changes the sort direction.
  * If the shift key is held down, multiple columns can be added for sorting.
  */
-const HeaderColumn = memo(({ columnName }) => {
+const HeaderColumn = memo(({ children: columnName }) => {
     const { state: { activeSorting }, dispatch } = useContext(GlobalState)
 
     // Callback to update sorting when clicking on a column
