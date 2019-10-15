@@ -23,7 +23,9 @@ function TitleColumn({ title, status, type, favorite, highlight }) {
 
     return (
         <div className={`table-column is-title has-highlight-${FILTERS.status.colorCodes[status]}`} style={style}>
-            {!!favorite && <Favorite number={favorite} />}
+            <Favorite>
+                {favorite}
+            </Favorite>
             <span className="has-text-overflow" title={title}>
                 <HighlightTitle highlight={highlight}>
                     {title}
