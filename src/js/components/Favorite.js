@@ -28,7 +28,8 @@ function Favorite({ showHash, children: number }) {
     return (
         <Icon icon="heart" className="is-favorite" title={title}>
             <span className={numberClasses}>
-                {showHash && '#'}{number}
+                {showHash && '#'}
+                {number}
             </span>
         </Icon>
     )

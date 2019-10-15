@@ -27,7 +27,8 @@ function Rating({ rating }) {
                 </span>
             </div>
             <h5 className="title is-5">
-                {FILTERS.rating.simpleDescriptions[rating || null]}{!!rating && <> &ndash; {rating}</>}
+                {FILTERS.rating.simpleDescriptions[rating || null]}
+                {!!rating && <> &ndash; {rating}</>}
             </h5>
         </>
     )
