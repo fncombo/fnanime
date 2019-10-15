@@ -15,7 +15,9 @@ function SelectOptionGroup({ filterName, options, children: label }) {
     return (
         <optgroup label={label}>
             {options.map(filterValue =>
-                <SelectOption filterName={filterName} filterValue={filterValue} key={filterValue} />
+                <SelectOption filterName={filterName} key={filterValue}>
+                    {filterValue}
+                </SelectOption>
             )}
         </optgroup>
     )

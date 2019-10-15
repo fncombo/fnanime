@@ -8,7 +8,7 @@ import { FILTERS } from 'js/data/Filters'
 /**
  * Single filter option in a select list for a value of a filter with a count of how many anime currently match it.
  */
-function SelectOption({ filterName, filterValue }) {
+function SelectOption({ filterName, children: filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Use the filter value if it's a string, otherwise look up the definition if it's anything else
