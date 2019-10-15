@@ -11,7 +11,7 @@ import 'scss/Gallery.scss'
 /**
  * Gallery section heading which can become stuck.
  */
-function GalleryHeading({ children }) {
+function GalleryHeading({ children: heading }) {
     const [ ref, inView, entry ] = useInView()
 
     // Check whether the heading is stuck to add additional styling
@@ -24,7 +24,7 @@ function GalleryHeading({ children }) {
             <div className="gallery-heading-sentinel" ref={ref} />
             <h2 className={headerClasses}>
                 <span>
-                    {children}
+                    {heading}
                 </span>
             </h2>
         </>
