@@ -1,9 +1,6 @@
 // React
 import React, { useContext } from 'react'
 
-// Libraries
-import has from 'has'
-
 // Data
 import { ModalState } from 'js/data/GlobalState'
 import { ANIME_OBJECT } from 'js/data/Data'
