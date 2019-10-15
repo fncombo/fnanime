@@ -13,8 +13,7 @@ import SelectOptionGroup from 'js/components/filters/SelectOptionGroup'
  * Select input for a filter. Options are divided by whether they currently have anime matching anime to them or not.
  */
 function Select({ filterName }) {
-    // Get the active filter setting for the filter name of this select
-    const { state: { activeFilters: { [filterName]: value } }, dispatch } = useContext(GlobalState)
+    const { state: { activeFilters }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
@@ -38,6 +37,9 @@ function Select({ filterName }) {
         })
     }
 
+    // Currently active value for this filter
+    const activeFilterValue = activeFilters[filterName]
+
     // Get all the filter values which currently have matching anime to them
     const withCount = FILTERS[filterName].values.filter(filterValue =>
         filterValue && filterCounts[filterName][filterValue]
@@ -55,7 +57,7 @@ function Select({ filterName }) {
 
     return (
         <div className="select is-fullwidth">
-            <select value={value} onChange={selectFilter}>
+            <select value={activeFilterValue} onChange={selectFilter}>
                 <SelectOption filterName={filterName} filterValue={false} />
                 <SelectOptionGroup filterName={filterName} label="Have matching anime" options={withCount} />
                 <SelectOptionGroup filterName={filterName} label="No matching anime" options={withoutCount} />
