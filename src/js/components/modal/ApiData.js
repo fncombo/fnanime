@@ -8,15 +8,15 @@ import { ModalState } from 'js/data/GlobalState'
 import { getNestedProperty } from 'js/helpers/Modal'
 
 /**
- * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data or the fallback.
+ * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.
  */
-function ApiData({ property, fallback = <>&mdash;</>, children }) {
+function ApiData({ property, fallback, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
     // No such API data or it's empty, return the fallback
     if (!data) {
-        return fallback
+        return fallback || <>&mdash;</>
     }
 
     // Render function provided, pass the data to it
