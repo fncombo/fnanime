@@ -14,12 +14,13 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
 
     // If rewatched anime or it's a movie, say how many total times watched
     if (rewatchCount || (episodesWatched && episodes === 1)) {
+        // Singular or plural based on the total number of times watched
+        const word = rewatchCount + 1 > 1 ? 'times' : 'time'
+
         return (
             <>
                 {formatDuration(watchTime, true)}
-                <span className="has-text-grey">
-                    &nbsp;&ndash; watched {rewatchCount + 1} time{rewatchCount + 1 > 1 ? 's' : ''}
-                </span>
+                <span className="has-text-grey"> &ndash; watched {rewatchCount + 1} {word}</span>
             </>
         )
     }
@@ -29,9 +30,7 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
         return (
             <>
                 {formatDuration(watchTime, true)}
-                <span className="has-text-grey">
-                    &nbsp;&ndash; {episodesWatched}/{episodes || '?'} episodes
-                </span>
+                <span className="has-text-grey"> &ndash; {episodesWatched}/{episodes || '?'} episodes</span>
             </>
         )
     }
