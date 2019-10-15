@@ -30,9 +30,7 @@ function RelatedListItem({ ...anime }) {
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
-            {has(ANIME_OBJECT, anime.mal_id) &&
-                <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
-            }
+            <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
         </li>
     )
 }
