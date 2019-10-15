@@ -16,10 +16,10 @@ import FilterButton from 'js/components/filters/FilterButton'
 /**
  * Group of buttons for a filter. Can span full width of the container. Updates global filtering.
  */
-function FilterButtonGroup({ filterName, fullWidth }) {
+function FilterButtonGroup({ filterName, isFullWidth }) {
     const classes = classNames(
         'column is-flex buttons has-addons is-12-mobile ',
-        fullWidth ? 'is-12-tablet' : 'is-6-tablet'
+        isFullWidth ? 'is-12-tablet' : 'is-6-tablet'
     )
 
     return (
