@@ -18,9 +18,7 @@ function GalleryHeading({ children: heading }) {
         <StuckSentinel className="gallery-heading-sentinel">
             {(isStuck =>
                 <h2 className={classNames('gallery-heading', { 'is-stuck': isStuck })}>
-                    <span>
-                        {heading}
-                    </span>
+                    {heading}
                 </h2>
             )}
         </StuckSentinel>
