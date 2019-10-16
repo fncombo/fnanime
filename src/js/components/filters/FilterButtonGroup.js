@@ -26,7 +26,9 @@ function FilterButtonGroup({ filterName, isFullWidth }) {
     return (
         <div className={classes}>
             {FILTERS[filterName].values.map(filterValue =>
-                <FilterButton filterName={filterName} filterValue={filterValue} key={filterValue} />
+                <FilterButton filterName={filterName} key={filterValue}>
+                    {filterValue}
+                </FilterButton>
             )}
         </div>
     )

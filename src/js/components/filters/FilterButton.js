@@ -14,12 +14,12 @@ import { FILTERS } from 'js/data/Filters'
 /**
  * Single filter button for a value of a filter with a count of how many anime currently match it.
  */
-function FilterButton({ filterName, filterValue }) {
+function FilterButton({ filterName, children: filterValue }) {
     const { state: { activeFilters }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilter = () => {
+    const selectFilterCallback = () => {
         dispatch({
             type: ACTIONS.SELECT_FILTER,
             filterName,
@@ -44,7 +44,7 @@ function FilterButton({ filterName, filterValue }) {
     })
 
     return (
-        <button className={classes} onClick={selectFilter}>
+        <button className={classes} onClick={selectFilterCallback}>
             {FILTERS[filterName].descriptions[filterValue]}
             {!!count && notAllFilterValue &&
                 <span className="count">
