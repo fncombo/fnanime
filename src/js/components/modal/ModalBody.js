@@ -170,7 +170,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     <hr />
                     <h5 className="title is-5">Synopsis</h5>
                     <LoadingParagraph>
-                        <Synopsis data={apiData.synopsis} />
+                        <Synopsis>
+                            {apiData.synopsis}
+                        </Synopsis>
                     </LoadingParagraph>
                     <hr />
                     <h5 className="title is-5">Related Anime</h5>
