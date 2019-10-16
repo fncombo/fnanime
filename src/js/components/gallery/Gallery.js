@@ -10,11 +10,10 @@ import 'scss/Gallery.scss'
 // Components
 import GallerySection from 'js/components/gallery/GallerySection'
 
-// Offset of when to start showing the component and images offscreen
-const ROOT_MARGIN = '300px'
-
 // Intersection options for the component and individual items
-const GALLERY_OPTIONS = { rootMargin: ROOT_MARGIN }
+const GALLERY_OPTIONS = {
+    rootMargin: '300px',
+}
 
 /**
  * Gallery for each rating which has matching anime.

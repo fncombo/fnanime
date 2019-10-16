@@ -23,12 +23,9 @@ const ITEM_WIDTH = 165
 const IMG_WIDTH = 145
 const IMG_HEIGHT = IMG_WIDTH * 1.4
 
-// Offset of when to start showing the component and images offscreen
-const ROOT_MARGIN = '300px'
-
 // Intersection options for the gallery item
 const GALLERY_ITEM_OPTIONS = {
-    rootMargin: ROOT_MARGIN,
+    rootMargin: '300px',
     triggerOnce: true,
 }
 
