@@ -48,7 +48,11 @@ function PageNumberButtons() {
         // Show "..." after first page and before the last page if there are more than 2 pages
         // in between them and adjacent buttons
         } else if (pageNumber - previousPage !== 1) {
-            buttons.push(<span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>&hellip;</span>)
+            buttons.push(
+                <span className="pagination-ellipsis" key={`${pageNumber}-ellipsis`}>
+                    &hellip;
+                </span>
+            )
         }
 
         buttons.push(
