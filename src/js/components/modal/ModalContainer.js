@@ -28,8 +28,15 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
         setModalOpen(false)
     }
 
+    // If the element is a link, set options for valid link to the anime page
+    const linkAttributes = Element === 'a' ? {
+        href: anime.url,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+    } : {}
+
     return (
-        <Element onClick={openModal} {...rest}>
+        <Element onClick={openModal} {...linkAttributes} {...rest}>
             {children}
             {isModalOpen && ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)}
         </Element>

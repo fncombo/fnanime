@@ -76,14 +76,13 @@ function GalleryItem(anime) {
         setTooltipStyle(style)
     }
 
-    const rel = 'noopener noreferrer'
-    const { title, img, url, episodes, type, size, status, favorite } = anime
+    const { title, img, episodes, type, size, status, favorite } = anime
     const classes = classNames('gallery-item', hoverClass, {
         'is-not-downloaded': !size,
     })
 
     return (
-        <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hoverCallback}>
+        <ModalContainer anime={anime} className={classes} onMouseOver={hoverCallback}>
             <div className="gallery-item-inner" ref={itemRef}>
                 <img width={IMG_WIDTH} height={IMG_HEIGHT} src={img} alt={title} loading="lazy" />
                 <span className={`tag is-medium is-${FILTERS.status.colorCodes[status]}`}>

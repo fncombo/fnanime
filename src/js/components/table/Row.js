@@ -17,7 +17,7 @@ import SizeColumns from 'js/components/table/SizeColumns'
  */
 function Row(anime) {
     return (
-        <ModalContainer anime={anime} className="table-row" href={anime.url} target="_blank" rel="noopener noreferrer">
+        <ModalContainer anime={anime} className="table-row">
             <img
                 className="table-column is-img"
                 width="33"
