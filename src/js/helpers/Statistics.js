@@ -23,23 +23,23 @@ function rowReducer(row) {
  * Returns a 2D array of each anime status within each rating, populated with either count of matched anime or
  * total of all data.
  */
-function calculateTotals(anime, property, countOnly) {
+function calculateTotals(allAnime, property, countOnly) {
     // Create the 2D array to populate
     const totals = Array.from({ length: 11 }, () => Array(7).fill(0))
 
     // Increment the number of matched anime or add up the data, if the rating is false or null, use 0
     if (countOnly) {
-        for (const { rating, status } of anime) {
+        for (const { rating, status } of allAnime) {
             totals[rating || 0][status] += 1
         }
     } else {
-        for (const { rating, status, [property]: value } of anime) {
+        for (const { rating, status, [property]: value } of allAnime) {
             totals[rating || 0][status] += value
         }
     }
 
     // Sum of all data
-    const sum = anime.map(({ [property]: value }) => value).reduce(add)
+    const sum = allAnime.map(anime => anime[property]).reduce(add)
 
     // Count of all data, if counting score, exclude not rated anime to not bring down the average
     const count = property === 'rating'
