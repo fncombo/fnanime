@@ -23,7 +23,7 @@ const HeaderColumn = memo(({ children: columnName }) => {
     const { state: { activeSorting }, dispatch } = useContext(GlobalState)
 
     // Callback to update sorting when clicking on a column
-    const changeSorting = ({ shiftKey }) => {
+    const changeSortingCallback = ({ shiftKey }) => {
         // Amending current sorting by holding shift or sorting only the currently sorted column
         // modifies existing sorting settings, otherwise create new settings
         const newSorting = shiftKey || (
@@ -76,15 +76,15 @@ const HeaderColumn = memo(({ children: columnName }) => {
 
     title = `${title}Hold shift to sort by multiple columns.`
 
-    const flexBasis = TABLE_COLUMNS[columnName].size
+    const style = {
+        flexBasis: TABLE_COLUMNS[columnName].size,
+    }
+    const icon = SORTING_ICONS[activeSorting.get(columnName)]
 
     return (
-        <div className="table-column" style={{ flexBasis }} onClick={changeSorting} data-index={index} title={title}>
+        <div className="table-column" style={style} onClick={changeSortingCallback} data-index={index} title={title}>
             {activeSorting.has(columnName) &&
-                <Icon
-                    icon={SORTING_ICONS[activeSorting.get(columnName)]}
-                    className={`is-${activeSorting.get(columnName)}`}
-                />
+                <Icon icon={icon} className={`is-${activeSorting.get(columnName)}`} />
             }
             {TABLE_COLUMNS[columnName].text}
         </div>

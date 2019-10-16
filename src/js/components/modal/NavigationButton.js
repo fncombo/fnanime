@@ -35,7 +35,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     }
 
     // Callback to change the modal anime when clicking on the button
-    const onClick = () => {
+    const changeAnimeCallback = () => {
         changeAnime(navAnime)
     }
 
@@ -43,7 +43,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const icon = direction === ACTIONS.NEXT_ANIME ? 'chevron-right' : 'chevron-left'
 
     return (
-        <div className={classes} title={navAnime.title} onClick={onClick}>
+        <div className={classes} title={navAnime.title} onClick={changeAnimeCallback}>
             <Icon icon={icon} className="is-medium" size="2x" />
             <img width="74" height="100" className="rounded" src={navAnime.img} alt={navAnime.title} />
         </div>

@@ -44,7 +44,7 @@ function GalleryItem(anime) {
     }
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
-    const hover = ({ currentTarget }) => {
+    const hoverCallback = ({ currentTarget }) => {
         const itemBounds = currentTarget.getBoundingClientRect()
         const gallerySectionBounds = currentTarget.parentNode.parentNode.getBoundingClientRect()
         const tooltipBounds = tooltipRef.current.getBoundingClientRect()
@@ -83,7 +83,7 @@ function GalleryItem(anime) {
     })
 
     return (
-        <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hover}>
+        <ModalContainer anime={anime} className={classes} href={url} target="_blank" rel={rel} onMouseOver={hoverCallback}>
             <div className="gallery-item-inner" ref={itemRef}>
                 <img width={IMG_WIDTH} height={IMG_HEIGHT} src={img} alt={title} loading="lazy" />
                 <span className={`tag is-medium is-${FILTERS.status.colorCodes[status]}`}>

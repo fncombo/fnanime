@@ -20,7 +20,7 @@ function NavigationButton({ action: type, disabled }) {
     const { dispatch } = useContext(TableState)
 
     // Callback to go to the next or previous page
-    const changePage = () => {
+    const changePageCallback = () => {
         dispatch({ type })
     }
 
@@ -33,7 +33,7 @@ function NavigationButton({ action: type, disabled }) {
 
     return disabled
         ? <Icon as="button" icon={icon} className={classes} />
-        : <Icon as="button" icon={icon} className={classes} onClick={changePage} />
+        : <Icon as="button" icon={icon} className={classes} onClick={changePageCallback} />
 }
 
 export default NavigationButton

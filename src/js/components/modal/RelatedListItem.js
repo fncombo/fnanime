@@ -18,7 +18,7 @@ function RelatedListItem({ ...anime }) {
     const { changeAnime } = useContext(ModalState)
 
     // Callback to change the anime when clicking on the badge
-    const onClick = () => {
+    const onClickCallback = () => {
         changeAnime(ANIME_OBJECT[anime.mal_id])
     }
 
@@ -27,7 +27,7 @@ function RelatedListItem({ ...anime }) {
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
-            <Badge showRating onClick={onClick} {...ANIME_OBJECT[anime.mal_id]} />
+            <Badge showRating onClick={onClickCallback} {...ANIME_OBJECT[anime.mal_id]} />
         </li>
     )
 }

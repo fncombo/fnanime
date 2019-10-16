@@ -14,7 +14,7 @@ function NumberButton({ children: pageNumber }) {
     const { state: { page }, dispatch } = useContext(TableState)
 
     // Callback to switch the table to a specific page
-    const changePage = () => {
+    const setPageCallback = () => {
         dispatch({
             type: ACTIONS.SET_PAGE,
             page: pageNumber,
@@ -24,7 +24,7 @@ function NumberButton({ children: pageNumber }) {
     // Current page button does nothing and has a unique look, normal page button takes to the page on click
     return pageNumber === page
         ? <button className="button is-dark is-rounded">{pageNumber}</button>
-        : <button className="button is-rounded" onClick={changePage}>{pageNumber}</button>
+        : <button className="button is-rounded" onClick={setPageCallback}>{pageNumber}</button>
 }
 
 export default NumberButton
