@@ -134,7 +134,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                             <strong>Synonyms: </strong>
                             <LoadingInline>
                                 <ApiData property="title_synonyms">
-                                    {synonyms => <MultiValueData data={synonyms} />}
+                                    {synonyms =>
+                                        <MultiValueData data={synonyms} />
+                                    }
                                 </ApiData>
                             </LoadingInline>
                         </li>
