@@ -100,7 +100,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                     <hr />
                     <p>
                         {FILTERS.type.descriptions[anime.type]}
-                        <Episodes episodes={anime.episodes} />
+                        <Episodes>
+                            {anime.episodes}
+                        </Episodes>
                     </p>
                     {anime.airStatus === 2
                         ? <LoadingText><p>Aired: <ApiData property="aired.string" fallback="N/A" /></p></LoadingText>

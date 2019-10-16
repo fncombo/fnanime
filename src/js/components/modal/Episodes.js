@@ -4,7 +4,7 @@ import React from 'react'
 /**
  * Shows the number of episodes the anime has if it's known.
  */
-function Episodes({ episodes }) {
+function Episodes({ children: episodes }) {
     if (!episodes) {
         return <> &ndash; ? episodes</>
     }
