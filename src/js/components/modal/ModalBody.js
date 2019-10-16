@@ -95,7 +95,13 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <p>Rated by <ApiData property="scored_by" fallback="?" /> people</p>
                     </LoadingText>
                     <LoadingText>
-                        <p>Ranked <ApiData property="rank" fallback="?">{n => `#${n.toLocaleString()}`}</ApiData></p>
+                        <p>
+                            <ApiData property="rank" fallback="Ranked ?">
+                                {rankNumber =>
+                                    `Ranked #${rankNumber.toLocaleString()}`
+                                }
+                            </ApiData>
+                        </p>
                     </LoadingText>
                     <hr />
                     <p>

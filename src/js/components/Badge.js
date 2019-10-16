@@ -12,7 +12,7 @@ import 'scss/Badge.scss'
 import { FILTERS } from 'js/data/Filters'
 
 /**
- * A badge for an anime display the watch status with episode count if watching. Optionally can display
+ * A badge for an anime to display the watch status with episode count if watching. Optionally can display
  * the anime rating and link to open an anime's info box.
  */
 function Badge({ showRating, showAirStatus, onClick, ...anime }) {
