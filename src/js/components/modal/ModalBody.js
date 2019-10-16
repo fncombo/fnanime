@@ -81,7 +81,9 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
             <div className="columns">
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
-                    <Rating rating={anime.rating} />
+                    <Rating>
+                        {anime.rating}
+                    </Rating>
                     <Favorite showHash>
                         {anime.favorite}
                     </Favorite>
