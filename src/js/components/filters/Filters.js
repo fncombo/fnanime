@@ -20,8 +20,8 @@ import Summary from 'js/components/filters/Summary'
 function Filters() {
     const { state: { anime }, dispatch } = useContext(GlobalState)
 
-    // Reset filters, sorting, and search
-    const reset = () => {
+    // Callback to reset filters, sorting, and search (not the active table page)
+    const resetCallback = () => {
         dispatch({ type: ACTIONS.RESET })
     }
 
@@ -54,7 +54,7 @@ function Filters() {
                     <Summary />
                 </div>
                 <div className="column is-4-mobile is-1-tablet">
-                    <button className="button is-fullwidth" onClick={reset}>
+                    <button className="button is-fullwidth" onClick={resetCallback}>
                         Reset
                     </button>
                 </div>

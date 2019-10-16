@@ -17,7 +17,7 @@ function Select({ filterName }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilter = ({ target: { value: filterValue } }) => {
+    const selectFilterCallback = ({ target: { value: filterValue } }) => {
         let actualFilterValue = filterValue
 
         // Check if the filter value is the string "false" and convert it to a proper boolean if it is
@@ -56,7 +56,7 @@ function Select({ filterName }) {
 
     return (
         <div className="select is-fullwidth">
-            <select value={activeFilterValue} onChange={selectFilter}>
+            <select value={activeFilterValue} onChange={selectFilterCallback}>
                 <SelectOption filterName={filterName}>
                     {false}
                 </SelectOption>

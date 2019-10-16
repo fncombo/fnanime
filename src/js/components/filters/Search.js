@@ -14,14 +14,14 @@ function Search() {
     const { state: { searchQuery }, dispatch } = useContext(GlobalState)
 
     // Callback for the search input change
-    const search = ({ target: { value } }) => {
+    const searchCallback = ({ target: { value } }) => {
         dispatch({
             type: ACTIONS.SEARCH,
             searchQuery: value,
         })
     }
 
-    return <input type="text" className="input" placeholder="Search" value={searchQuery} onChange={search} />
+    return <input type="text" className="input" placeholder="Search" value={searchQuery} onChange={searchCallback} />
 }
 
 // Exports
