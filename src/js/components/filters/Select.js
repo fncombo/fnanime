@@ -23,10 +23,9 @@ function Select({ filterName }) {
         // Check if the filter value is the string "false" and convert it to a proper boolean if it is
         if (filterValue === 'false') {
             actualFilterValue = false
-        }
 
         // Check if the option value is fully a number, and convert it to the correct type if it is
-        if (/^\d+$/.test(filterValue)) {
+        } else if (/^\d+$/.test(filterValue)) {
             actualFilterValue = parseInt(filterValue, 10)
         }
 
