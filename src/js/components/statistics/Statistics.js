@@ -12,7 +12,7 @@ import { GlobalState } from 'js/data/GlobalState'
 
 // Helpers
 import { formatDuration } from 'js/helpers/Generic'
-import { statisticsAnime, add, calculateTotals } from 'js/helpers/Statistics'
+import { getStatisticsAnime, add, calculateTotals } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 
 // Components
@@ -32,7 +32,7 @@ function Statistics() {
         return <div className="statistics-placeholder" ref={ref} />
     }
 
-    const allAnime = statisticsAnime(anime)
+    const allAnime = getStatisticsAnime(anime)
 
     // No anime to display
     if (!allAnime.length) {

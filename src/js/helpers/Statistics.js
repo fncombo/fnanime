@@ -1,7 +1,7 @@
 /**
  * Only include watching, completed, on-hold, and dropped anime in statistics.
  */
-function statisticsAnime(anime) {
+function getStatisticsAnime(anime) {
     return anime.filter(({ status }) => status < 5)
 }
 
@@ -63,7 +63,7 @@ function calculateTotals(anime, property, countOnly) {
 
 // Exports
 export {
-    statisticsAnime,
+    getStatisticsAnime,
     add,
     calculateTotals,
 }
