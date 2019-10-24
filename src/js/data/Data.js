@@ -147,9 +147,36 @@ function updateAnimeData(animeId, newData) {
         ...ANIME_OBJECT[animeId],
         ...newData,
     }
+}
+
+/**
+ * Update all anime from new API data. If the anime doesn't exist in the API, delete it.
+ */
+function updateAnimeFromApi(newAnime) {
+    // Update each anime's data
+    for (const anime of newAnime) {
+        updateAnimeData(anime.mal_id, {
+            status: anime.watching_status,
+            airStatus: anime.airing_status,
+            rating: anime.score || (anime.watching_status < 5 ? null : false),
+            episodes: anime.total_episodes,
+            episodesWatched: anime.watched_episodes,
+            updated: true,
+        })
+    }
+
+    // Delete anime which were not updated and therefore were not in the API
+    for (const animeId of Object.keys(ANIME_OBJECT)) {
+        if (!has(ANIME_OBJECT[animeId], 'updated')) {
+            delete ANIME_OBJECT[animeId]
+        }
+    }
 
     // Update the array of all anime
     ANIME_ARRAY = Object.values(ANIME_OBJECT)
+
+    // Re-create filter defaults based on new anime data
+    createFilterDefaults()
 }
 
 /**
@@ -259,6 +286,6 @@ export {
     ANIME_ARRAY,
     DEFAULTS,
     getAnime,
-    updateAnimeData,
+    updateAnimeFromApi,
     createFilterDefaults,
 }

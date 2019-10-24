@@ -11,7 +11,7 @@ import 'scss/fn.scss'
 // Data
 import { updated as updateTime } from 'js/data/data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { DEFAULTS, getAnime, updateAnimeData, createFilterDefaults } from 'js/data/Data'
+import { DEFAULTS, getAnime, updateAnimeFromApi } from 'js/data/Data'
 
 // Helpers
 import { getApiData } from 'js/helpers/App'
@@ -51,6 +51,8 @@ const INITIAL_STATE = {
 function globalReducer(state, action) {
     switch (action.type) {
     case ACTIONS.UPDATE_API_DATA:
+        updateAnimeFromApi(action.newAnime)
+
         return {
             ...state,
             anime: getAnime(state.searchQuery, state.activeSorting, state.activeFilters),
@@ -119,29 +121,18 @@ function App() {
 
         // Update certain data from live API
         async function fetchData() {
-            const newApiData = await getApiData()
+            const newAnime = await getApiData()
 
-            if (!newApiData) {
+            if (!newAnime) {
                 dispatch({ type: ACTIONS.API_ERROR })
 
                 return
             }
 
-            // Update each anime's data
-            for (const anime of newApiData) {
-                updateAnimeData(anime.mal_id, {
-                    status: anime.watching_status,
-                    airStatus: anime.airing_status,
-                    rating: anime.score || (anime.watching_status < 5 ? null : false),
-                    episodes: anime.total_episodes,
-                    episodesWatched: anime.watched_episodes,
-                })
-            }
-
-            // Re-create filter defaults based on new anime data
-            createFilterDefaults()
-
-            dispatch({ type: ACTIONS.UPDATE_API_DATA })
+            dispatch({
+                type: ACTIONS.UPDATE_API_DATA,
+                newAnime,
+            })
         }
 
         fetchData()
