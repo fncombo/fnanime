@@ -16,11 +16,11 @@ import StuckSentinel from '../StuckSentinel'
 function GalleryHeading({ children: heading }) {
     return (
         <StuckSentinel className="gallery-heading-sentinel">
-            {(isStuck =>
+            {isStuck =>
                 <h2 className={classNames('gallery-heading', { 'is-stuck': isStuck })}>
                     {heading}
                 </h2>
-            )}
+            }
         </StuckSentinel>
     )
 }

@@ -38,7 +38,7 @@ function Pagination() {
 
     return (
         <StuckSentinel className="pagination-sentinel">
-            {(isStuck =>
+            {isStuck =>
                 <div className={classNames('columns pagination', { 'is-stuck': isStuck })}>
                     <div className="column is-3">
                         <NavigationButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
@@ -53,7 +53,7 @@ function Pagination() {
                         <NavigationButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
                     </div>
                 </div>
-            )}
+            }
         </StuckSentinel>
     )
 }

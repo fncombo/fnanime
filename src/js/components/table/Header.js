@@ -16,7 +16,7 @@ import HeaderColumn from 'js/components/table/HeaderColumn'
  */
 const Header = memo(() =>
     <StuckSentinel className="table-sentinel">
-        {(isStuck =>
+        {isStuck =>
             <div className={classNames('table-header', { 'is-stuck': isStuck })}>
                 {TABLE_COLUMN_NAMES.map(columnName =>
                     <HeaderColumn key={columnName}>
@@ -24,7 +24,7 @@ const Header = memo(() =>
                     </HeaderColumn>
                 )}
             </div>
-        )}
+        }
     </StuckSentinel>
 )
 
