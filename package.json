@@ -6,7 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.5",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "bulma": "^0.7.5",
     "classnames": "^2.2.6",
     "clone": "^2.1.2",
@@ -14,11 +14,11 @@
     "filesize": "^4.2.1",
     "fuse.js": "^3.4.5",
     "has": "^1.0.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "pretty-ms": "^5.0.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-intersection-observer": "^8.24.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-intersection-observer": "^8.25.1",
     "react-scripts": "^3.2.0",
     "react-slidedown": "^2.4.4",
     "react-string-replace": "^0.4.4"
@@ -46,13 +46,13 @@
     "ffprobe-client": "^1.1.5",
     "get-folder-size": "^2.0.1",
     "js-beautify": "^1.10.2",
-    "log4js": "^5.2.1",
+    "log4js": "^5.3.0",
     "node-fetch": "^2.6.0",
     "simple-git": "^1.126.0",
     "single-line-log": "^1.1.2",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-scss": "^3.11.1"
+    "stylelint-scss": "^3.12.0"
   }
 }
