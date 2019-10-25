@@ -85,9 +85,13 @@ function formatOrdinal(number) {
 
     if (dec === 1) {
         return 'st'
-    } else if (dec === 2) {
+    }
+
+    if (dec === 2) {
         return 'nd'
-    } else if (dec === 3) {
+    }
+
+    if (dec === 3) {
         return 'rd'
     }
 
