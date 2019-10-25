@@ -44,7 +44,7 @@ function GalleryItem(anime) {
     }
 
     // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
-    const hoverCallback = ({ currentTarget }) => {
+    function hoverCallback({ currentTarget }) {
         const itemBounds = currentTarget.getBoundingClientRect()
         const gallerySectionBounds = currentTarget.parentNode.parentNode.getBoundingClientRect()
         const tooltipBounds = tooltipRef.current.getBoundingClientRect()

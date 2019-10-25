@@ -25,7 +25,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     const [ anime, setAnime ] = useState(props)
 
     // Callback to change the anime info inside the modal with a transition animation in between
-    const changeAnime = newAnime => {
+    function changeAnime(newAnime) {
         document.body.classList.add('is-changing')
 
         setTimeout(() => {
@@ -36,7 +36,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     }
 
     // Callback to close the modal after it has finished animating out
-    const closeModal = () => {
+    function closeModal() {
         document.body.classList.remove('is-active')
 
         setTimeout(() => {
@@ -45,7 +45,7 @@ function Modal({ closeModal: closeCallback, ...props }) {
     }
 
     // Switch between next and previous anime using arrow keys and close the modal using esc
-    const keyHandler = ({ key }) => {
+    function keyHandler({ key }) {
         if (key === 'Escape') {
             closeModal()
         }

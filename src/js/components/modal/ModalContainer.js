@@ -15,7 +15,7 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     const [ isModalOpen, setModalOpen ] = useState(false)
 
     // Callback to open the modal when the main element is clicked
-    const openModal = event => {
+    function openModal(event) {
         if (event.button === 0) {
             event.preventDefault()
 
@@ -24,7 +24,7 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     }
 
     // Callback to close the modal
-    const closeModal = () => {
+    function closeModal() {
         setModalOpen(false)
     }
 

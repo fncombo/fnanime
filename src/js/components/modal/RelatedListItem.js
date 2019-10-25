@@ -18,7 +18,7 @@ function RelatedListItem({ ...anime }) {
     const { changeAnime } = useContext(ModalState)
 
     // Callback to change the anime when clicking on the badge
-    const onClickCallback = () => {
+    function onClickCallback() {
         changeAnime(ANIME_OBJECT[anime.mal_id])
     }
 

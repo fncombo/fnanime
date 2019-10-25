@@ -23,7 +23,7 @@ const HeaderColumn = memo(({ children: columnName }) => {
     const { state: { activeSorting }, dispatch } = useContext(GlobalState)
 
     // Callback to update sorting when clicking on a column
-    const changeSortingCallback = ({ shiftKey }) => {
+    function changeSortingCallback({ shiftKey }) {
         // Amending current sorting by holding shift or sorting only the currently sorted column
         // modifies existing sorting settings, otherwise create new settings
         const newSorting = shiftKey || (

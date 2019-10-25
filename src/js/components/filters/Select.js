@@ -17,7 +17,7 @@ function Select({ filterName }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilterCallback = ({ target: { value: filterValue } }) => {
+    function selectFilterCallback({ target: { value: filterValue } }) {
         let actualFilterValue = filterValue
 
         // Check if the filter value is the string "false" and convert it to a proper boolean if it is

@@ -21,7 +21,7 @@ function Filters() {
     const { state: { anime }, dispatch } = useContext(GlobalState)
 
     // Callback to reset filters, sorting, and search (not the active table page)
-    const resetCallback = () => {
+    function resetCallback() {
         dispatch({ type: ACTIONS.RESET })
     }
 

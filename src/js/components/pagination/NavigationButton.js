@@ -20,7 +20,7 @@ function NavigationButton({ action: type, disabled }) {
     const { dispatch } = useContext(TableState)
 
     // Callback to go to the next or previous page
-    const changePageCallback = () => {
+    function changePageCallback() {
         dispatch({ type })
     }
 

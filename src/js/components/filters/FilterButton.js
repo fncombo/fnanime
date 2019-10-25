@@ -19,7 +19,7 @@ function FilterButton({ filterName, children: filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilterCallback = () => {
+    function selectFilterCallback() {
         dispatch({
             type: ACTIONS.SELECT_FILTER,
             filterName,

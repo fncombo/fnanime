@@ -14,7 +14,7 @@ function NumberButton({ children: pageNumber }) {
     const { state: { page }, dispatch } = useContext(TableState)
 
     // Callback to switch the table to a specific page
-    const setPageCallback = () => {
+    function setPageCallback() {
         dispatch({
             type: ACTIONS.SET_PAGE,
             page: pageNumber,

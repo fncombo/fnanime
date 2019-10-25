@@ -35,7 +35,7 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     }
 
     // Callback to change the modal anime when clicking on the button
-    const changeAnimeCallback = () => {
+    function changeAnimeCallback() {
         changeAnime(navAnime)
     }
 
