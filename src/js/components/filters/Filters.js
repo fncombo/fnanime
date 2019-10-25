@@ -26,7 +26,7 @@ function Filters() {
     }
 
     // Count how many anime match each filter
-    const filterCounts = FILTERS.makeCounts(anime)
+    const filterCounts = FILTERS.getCounts(anime)
 
     return (
         <div className="columns is-mobile is-multiline filters">

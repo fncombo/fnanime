@@ -1,22 +1,17 @@
 // React
 import React from 'react'
 
+// Libraries
+import has from 'has'
+
+// Data
+import { DEFAULTS } from 'js/data/Data'
+
+// Helpers
+import { reverseSort, excludeBlankValues } from 'js/helpers/Filters'
+
 // Components
 import Icon from 'js/components/Icon'
-
-/**
- * Function to reverse sort filter values.
- */
-function reverseSort(values) {
-    return values.sort((a, b) => b - a)
-}
-
-/**
- * Function to exclude falsy filter values.
- */
-function excludeBlankValues(values) {
-    return values.filter(value => !!value)
-}
 
 /**
  * Descriptions and data related to all possible filters
@@ -310,53 +305,77 @@ const FILTERS = {
 // All filter names
 const FILTER_NAMES = Object.keys(FILTERS)
 
-/**
- * Reducer function to create a template object of all filter values for this filter.
- * e.g. for "status" `{ false: 10, 1: 4, 2: 6 }`
- */
-function filterNamesReducer(filterValuesObject, filterValue) {
-    filterValuesObject[filterValue] = 0
+// Define additional functions for the filters object
+Object.defineProperties(FILTERS, {
 
-    return filterValuesObject
-}
+    /**
+     * Non-enumerable property which returns an object with counts of how many anime match each filter name and value.
+     */
+    getCounts: {
+        value(allAnime) {
+            // Make a nested blank object of filter names and values
+            const filterCounts = FILTER_NAMES.reduce((filterNamesObject, filterName) => {
+                filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
+                    filterValuesObject[filterValue] = 0
 
-/**
- * Reducer function to create a template object of all filter.
- * e.g. for "status" `{ status: { ... } }`
- */
-function filterCountsReducer(filterNamesObject, filterName) {
-    filterNamesObject[filterName] = FILTERS[filterName].values.reduce(filterNamesReducer, {})
+                    return filterValuesObject
+                }, {})
 
-    return filterNamesObject
-}
+                return filterNamesObject
+            }, {})
 
-/**
- * Non-enumerable property which returns an object with counts of how many anime match each filter name and value.
- */
-Object.defineProperty(FILTERS, 'makeCounts', {
-    value(allAnime) {
-        // Make a nested blank object of filter names and values
-        const filterCounts = FILTER_NAMES.reduce(filterCountsReducer, {})
+            // Loop through all anime and increment related filter value counts
+            for (const anime of allAnime) {
+                for (const filterName of FILTER_NAMES) {
+                    // If it's an array of filter values, go through each filter value inside and increment it
+                    if (Array.isArray(anime[filterName])) {
+                        for (const singleFilterValue of anime[filterName]) {
+                            filterCounts[filterName][singleFilterValue] += 1
+                        }
 
-        // Loop through all anime and increment related filter value counts
-        for (const anime of allAnime) {
-            for (const filterName of FILTER_NAMES) {
-                // If it's an array of filter values, go through each filter value inside and increment it
-                if (Array.isArray(anime[filterName])) {
-                    for (const singleFilterValue of anime[filterName]) {
-                        filterCounts[filterName][singleFilterValue] += 1
+                    // Otherwise increment the count for this filter value normally
+                    } else {
+                        const filterValue = anime[filterName]
+
+                        filterCounts[filterName][filterValue] += 1
                     }
-
-                // Otherwise increment the count for this filter value normally
-                } else {
-                    const filterValue = anime[filterName]
-
-                    filterCounts[filterName][filterValue] += 1
                 }
             }
-        }
 
-        return filterCounts
+            return filterCounts
+        },
+    },
+
+    /**
+     * Populate default filter data and filter values.
+     */
+    createDefaults: {
+        value(allAnime) {
+            const animeArray = Object.values(allAnime)
+
+            for (const filterName of FILTER_NAMES) {
+                // Populate only the filter values which have some data to them
+                let filterValues = animeArray
+                    .map(anime => anime[filterName])
+                    .flat()
+                    .filter((value, index, self) => self.indexOf(value) === index && value !== false)
+                    .sort()
+
+                // Apply any special processing for this filter
+                if (has(FILTERS[filterName], 'specialValuesProcess')) {
+                    filterValues = FILTERS[filterName].specialValuesProcess(filterValues)
+                }
+
+                // Add the "all" option at the start
+                filterValues.unshift(false)
+
+                // Set the default value for this filter
+                DEFAULTS.filters[filterName] = false
+
+                // Populate filter values in filter data
+                FILTERS[filterName].values = filterValues
+            }
+        },
     },
 })
 

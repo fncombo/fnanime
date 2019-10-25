@@ -11,10 +11,11 @@ import 'scss/fn.scss'
 // Data
 import { updated as updateTime } from 'js/data/data.json'
 import { GlobalState, ACTIONS } from 'js/data/GlobalState'
-import { DEFAULTS, getAnime, updateAnimeFromApi } from 'js/data/Data'
+import { DEFAULTS } from 'js/data/Data'
 
 // Helpers
 import { getApiData } from 'js/helpers/App'
+import { getAnime, updateAnimeFromApi } from 'js/helpers/Data'
 import 'js/helpers/FontAwesome'
 
 // Components
