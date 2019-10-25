@@ -13,7 +13,11 @@ const ffprobe = require('ffprobe-client')
 const log4js = require('log4js')
 
 // Delete the current log file
-unlinkSync('./validation.log')
+try {
+    unlinkSync('./validation.log')
+} catch (error) {
+    // No log yet *shrug*
+}
 
 // Configure logging
 log4js.configure({
