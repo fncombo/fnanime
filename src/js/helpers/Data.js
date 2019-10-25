@@ -56,7 +56,7 @@ function getFileQuality(anime) {
 function reverseTypeLookup(type) {
     const data = Object.entries(FILTERS.type.descriptions).find(([ , value ]) => value === type)
 
-    return data ? parseInt([ data ], 10) : 0
+    return data ? parseInt(data[0], 10) : 0
 }
 
 /**
