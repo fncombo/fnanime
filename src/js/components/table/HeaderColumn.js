@@ -49,7 +49,7 @@ const HeaderColumn = memo(({ children: columnName }) => {
         })
     }
 
-    let index = ''
+    let index
     let title = ''
 
     // If this column is being sorted, say so and the order of the sort
