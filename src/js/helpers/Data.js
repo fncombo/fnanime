@@ -51,11 +51,51 @@ function getFileQuality(anime) {
 }
 
 /**
+ * Reverse lookup an anime's type from string to ID based on the filters data.
+ */
+function reverseTypeLookup(type) {
+    const data = Object.entries(FILTERS.type.descriptions).find(([ , value ]) => value === type)
+
+    return data ? parseInt([ data ], 10) : 0
+}
+
+/**
+ * Create a very basic entry for a new anime from the API which didn't originally exist in the local data.
+ */
+function createAnimeFromApiData(animeId, anime) {
+    ANIME_OBJECT[animeId] = {
+        id: anime.mal_id,
+        title: anime.title,
+        type: reverseTypeLookup(anime.type),
+        episodes: anime.total_episodes,
+        episodesWatched: anime.watched_episodes,
+        img: anime.image_url.match(/^[^?]+/)[0],
+        status: anime.watching_status,
+        airStatus: anime.airing_status,
+        rating: anime.score || (anime.watching_status < 5 ? null : false),
+        rewatchCount: 0,
+        url: anime.url,
+        favorite: false,
+        genres: [],
+        subs: [],
+        resolution: false,
+        source: false,
+        videoCodec: false,
+        bits: false,
+        audioCodec: false,
+        size: 0,
+        updated: true,
+    }
+}
+
+/**
  * Update info about an anime from provided new API data.
  */
-function updateAnimeData(animeId, newData) {
-    // Don't update if anime doesn't exist
+function updateAnimeData(animeId, newData, fullData) {
+    // If the anime doesn't exist, create an entry for it
     if (!has(ANIME_OBJECT, animeId)) {
+        createAnimeFromApiData(animeId, fullData)
+
         return
     }
 
@@ -94,7 +134,7 @@ function updateAnimeFromApi(newAnime) {
             episodes: anime.total_episodes,
             episodesWatched: anime.watched_episodes,
             updated: true,
-        })
+        }, anime)
     }
 
     // Delete anime which were not updated and therefore were not in the API
