@@ -115,7 +115,8 @@ const FILTERS = {
             0: 'Not Rated',
         },
         detailedDescriptions: {
-            null: 'Haven\'t rated these yet! I also don\'t rate dropped anime with less than 3 episodes watched.',
+            // eslint-disable-next-line max-len
+            null: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">less than 20%</a> of the episodes watched.</>,
             10: 'The very best anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
             9: 'Great anime which were super enjoyable and interesting to watch, and remain very memorable.',
             // eslint-disable-next-line max-len
@@ -132,8 +133,6 @@ const FILTERS = {
             3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
             2: '',
             1: '',
-            // eslint-disable-next-line max-len
-            0: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">less than 20%</a> of the episodes watched.</>,
         },
         // Reverse sort
         specialValuesProcess: reverseSort,
