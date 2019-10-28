@@ -12,6 +12,7 @@ $gap: 5px;
 .gallery {
     --img-width: 145px;
     --img-height: calc(var(--img-width) * 1.4);
+
     padding: 0 $column-gap;
 
     @include mobile {

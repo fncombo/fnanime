@@ -129,11 +129,12 @@
         padding: 0.25rem 0;
         margin: 0.25rem 0;
         display: grid;
-        grid-template: "img title title title title title" #{$mobile-table-img-height / 2}
-                       "img status status status status status" #{$mobile-table-img-height / 2}
-                       "rating resolution source videoCodec audioCodec fileQuality" 1fr
-                       "episodeSize episodeSize episodeSize size size size" 1fr
-                       / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
+        grid-template:
+            "img title title title title title" #{$mobile-table-img-height / 2}
+            "img status status status status status" #{$mobile-table-img-height / 2}
+            "rating resolution source videoCodec audioCodec fileQuality" 1fr
+            "episodeSize episodeSize episodeSize size size size" 1fr
+            / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
     }
 
     @include tablet {
