@@ -21,7 +21,9 @@ const FUSE_OPTIONS = {
 }
 
 /**
- * Calculate the file quality of an anime based on the video and audio properties.
+ * Returns the average file quality of an anime from 0 to 5 based on the video and audio properties.
+ * @param {Object} anime Object of an anime's data.
+ * @returns {false|number}
  */
 function getFileQuality(anime) {
     let measuredStats = 0
@@ -51,7 +53,9 @@ function getFileQuality(anime) {
 }
 
 /**
- * Reverse lookup an anime's type from string to ID based on the filters data.
+ * Returns the ID of an anime's type by reverse looking it up from a string from the filters data.
+ * @param {string} type Name of the type.
+ * @returns {number}
  */
 function reverseTypeLookup(type) {
     const data = Object.entries(FILTERS.type.descriptions).find(([ , value ]) => value === type)
@@ -65,7 +69,10 @@ function reverseTypeLookup(type) {
 }
 
 /**
- * Create a very basic entry for a new anime from the API which didn't originally exist in the local data.
+ * Returns a very basic entry for a new anime from the API which didn't originally exist in the local data.
+ * @param {number} animeId ID of the anime.
+ * @param {Object} anime Anime data from the API.
+ * @returns {Object}
  */
 function createAnimeFromApiData(animeId, anime) {
     ANIME_OBJECT[animeId] = {
@@ -94,7 +101,11 @@ function createAnimeFromApiData(animeId, anime) {
 }
 
 /**
- * Update info about an anime from provided new API data.
+ * Updates info about an anime from provided new API data.
+ * @param {number} animeId ID of the anime to update.
+ * @param {Object} newData Object of new data to overwrite old data with.
+ * @param {Object} fullData Object of the full original data from the API.
+ * @returns {void}
  */
 function updateAnimeData(animeId, newData, fullData) {
     // If the anime doesn't exist, create an entry for it
@@ -127,7 +138,9 @@ function updateAnimeData(animeId, newData, fullData) {
 }
 
 /**
- * Update all anime from new API data. If the anime doesn't exist in the API, delete it.
+ * Updates all anime from new API data. If the anime doesn't exist in the API, delete it. If a new anime is present in
+ * the API but not in cached data, add a very basic entry for it. Re-creates filter defaults afterwards.
+ * @param {Array} newAnime Array of all anime objects from the API.
  */
 function updateAnimeFromApi(newAnime) {
     // Update each anime's data
@@ -154,7 +167,11 @@ function updateAnimeFromApi(newAnime) {
 }
 
 /**
- * Search, sort and filter all anime.
+ * Returns the searched, sorted, and filtered array of anime to display.
+ * @param {string} searchQuery String to search for in the anime title.
+ * @param {Map} sorting Map of the current table sorting settings.
+ * @param {Object} filters Object of currently active filter names and their values.
+ * @returns {Array}
  */
 function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFAULTS.filters) {
     // Start with all the anime

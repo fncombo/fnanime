@@ -2,7 +2,10 @@
 import prettyMilliseconds from 'pretty-ms'
 
 /**
- * Convert duration from minutes into milliseconds for the library and then print pretty human-readable time.
+ * Converts duration from minutes into milliseconds for the library and returns the pretty human-readable time.
+ * @param {number} duration Duration in minutes.
+ * @param {boolean} verbose Whether to use verbose pretty date (e.g. 5d vs 5 days).
+ * @return {string}
  */
 function formatDuration(duration, verbose = false) {
     return prettyMilliseconds(duration * 60000, { verbose })

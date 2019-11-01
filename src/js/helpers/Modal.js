@@ -9,6 +9,10 @@ const CACHED_API_DATA = new Map()
 
 /**
  * Attempt to retrieve a deeply nested property from an object. Returns the value if found or false.
+ * @param {Object} object The object to search.
+ * @param {string} property The current property name to search for.
+ * @param {string[]} rest The rest of deeper property names to search for after "property" is found.
+ * @returns {any}
  */
 function getNestedProperty(object, property, ...rest) {
     if (object === undefined) {
@@ -24,13 +28,19 @@ function getNestedProperty(object, property, ...rest) {
 
 /**
  * Replaces special characters returned by the API into proper HTML entities.
+ * @param {string} string The string to replace characters in.
+ * @returns {string}
  */
 function replaceSpecialChars(string) {
     return string.replace(/&#(\d+);/g, (match, p1) => String.fromCharCode(p1))
 }
 
 /**
- * Get the previous or next anime in the current table.
+ * Returns the ID of the previous or next anime in the array relative to the current anime.
+ * @param {Array} allAnime Array of all anime objects.
+ * @param {number} animeId ID of the current anime.
+ * @param {ACTIONS} direction The direction to go from the current anime. Either `NEXT_ANIME` or `PREV_ANIME`.
+ * @returns {false|number}
  */
 function getAdjacentAnime(allAnime, animeId, direction) {
     const index = allAnime.findIndex(anime => anime.id === animeId)
@@ -63,7 +73,10 @@ function getAdjacentAnime(allAnime, animeId, direction) {
 }
 
 /**
- * Get more data about an anime either form the API or cache.
+ * Retrieves more information about an anime from the API or cache if already previously retrieved.
+ * @param {number} animeId ID of the anime to retrieve.
+ * @param {false|number} isRetry Whether this request is a retry, and if so the retry count number.
+ * @returns {Object}
  */
 async function getAnimeApiData(animeId, isRetry = false) {
     // Return cached data

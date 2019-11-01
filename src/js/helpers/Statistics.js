@@ -1,19 +1,26 @@
 /**
- * Only include watching, completed, on-hold, and dropped anime in statistics.
+ * Returns only watching, completed, on-hold, and dropped anime to be used in statistics.
+ * @param {Array} anime Array of anime objects.
+ * @returns {Array}
  */
 function getStatisticsAnime(anime) {
     return anime.filter(({ status }) => status < 5)
 }
 
 /**
- * Addition reducer.
+ * Addition reducer, returns the sum of two numbers.
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
  */
 function add(a, b) {
     return a + b
 }
 
 /**
- * Row reducer.
+ * Row reducer, returns the sum of all values.
+ * @param {Array} row A row of statistics.
+ * @returns {number}
  */
 function rowReducer(row) {
     return row.reduce(add)
@@ -22,6 +29,10 @@ function rowReducer(row) {
 /**
  * Returns a 2D array of each anime status within each rating, populated with either count of matched anime or
  * total of all data.
+ * @param {Array} allAnime Array of all the anime objects to calculate totals for.
+ * @param {string} property Name of the anime property to calculate.
+ * @param {boolean} countOnly Whether to only count how many times the property appears, its actual value.
+ * @returns {Object}
  */
 function calculateTotals(allAnime, property, countOnly) {
     // Create the 2D array to populate
