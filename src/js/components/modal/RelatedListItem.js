@@ -1,6 +1,9 @@
 // React
 import React, { useContext } from 'react'
 
+// Libraries
+import has from 'has'
+
 // Data
 import { ModalState } from 'js/data/GlobalState'
 import { ANIME_OBJECT } from 'js/data/Data'
@@ -27,7 +30,9 @@ function RelatedListItem({ ...anime }) {
             <a className="has-text-overflow" href={anime.url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(anime.name)}
             </a>
-            <Badge showRating onClick={onClickCallback} {...ANIME_OBJECT[anime.mal_id]} />
+            {has(ANIME_OBJECT, anime.mal_id) &&
+                <Badge showRating onClick={onClickCallback} {...ANIME_OBJECT[anime.mal_id]} />
+            }
         </li>
     )
 }
