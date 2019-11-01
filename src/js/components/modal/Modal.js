@@ -48,6 +48,8 @@ function Modal({ closeModal: closeCallback, ...props }) {
     function keyHandler({ key }) {
         if (key === 'Escape') {
             closeModal()
+
+            return
         }
 
         if (key !== 'ArrowLeft' && key !== 'ArrowRight') {
