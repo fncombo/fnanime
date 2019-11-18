@@ -116,23 +116,17 @@ const FILTERS = {
         },
         detailedDescriptions: {
             // eslint-disable-next-line max-len
-            null: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">less than 20%</a> of the episodes watched.</>,
-            10: 'The very best anime. Unique, unforgettable, and entertaining. Definitely shaped me and my interests.',
-            9: 'Great anime which were super enjoyable and interesting to watch, and remain very memorable.',
-            // eslint-disable-next-line max-len
-            8: 'Overall enjoyable anime which were a pleasure to watch. Relevant to my interests and have nice themes.',
-            // eslint-disable-next-line max-len
-            7: 'Nice anime to pass the time, however nothing too special. These are average anime which I didn\'t dislike watching.',
-            // eslint-disable-next-line max-len
-            6: 'Not terrible but not that good either that I\'d consider recommending. Starting to maybe forget what these were about.',
-            // eslint-disable-next-line max-len
-            5: 'Low effort recaps, confusing shorts, bad movies, incomprehensible series. Made me question why I\'m still watching it.',
-            // eslint-disable-next-line max-len
-            4: 'Utterly boring and not interesting. I probably didn\'t drop these because 20 minutes a week was just about bearable.',
-            // eslint-disable-next-line max-len
-            3: 'I can\'t believe these had a budget approved for them. Wouldn\'t want to subject anyone to anime like these.',
             2: '',
             1: '',
+            null: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">fewer than 20%</a> of the episodes watched.</>,
+            10: 'The very best, unique, and unforgettable anime with a lot of impact.',
+            9: 'Amazing anime which were super enjoyable, interesting, and entertaining.',
+            8: 'Very enjoyable anime with nice themes which were a pleasure to watch.',
+            7: 'Average nice anime to pass the time, however nothing too special.',
+            6: 'Not terrible but not good either. Easy forget what these were about.',
+            5: 'Low effort recaps, confusing shorts, bad movies, and incomprehensible series.',
+            4: 'Utterly boring and not interesting. Difficult to watch without yawning.',
+            3: 'I can\'t believe these had a budget approved for them.',
         },
         // Reverse sort
         specialValuesProcess: reverseSort,
