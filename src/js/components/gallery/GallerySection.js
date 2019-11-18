@@ -25,14 +25,18 @@ export default function GallerySection({ rating }) {
         return null
     }
 
+    const ratingDetailedDescription = FILTERS.rating.detailedDescriptions[rating]
+
     return (
         <div className="gallery-section" key={rating}>
             <GalleryHeading>
                 {FILTERS.rating.descriptions[rating]}
             </GalleryHeading>
-            <p className="gallery-detailed-description">
-                {FILTERS.rating.detailedDescriptions[rating]}
-            </p>
+            {ratingDetailedDescription &&
+                <p className="gallery-detailed-description">
+                    {ratingDetailedDescription}
+                </p>
+            }
             <div className="gallery-grid">
                 {galleryAnime.map(anime =>
                     <GalleryItem key={anime.id} {...anime} />

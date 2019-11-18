@@ -116,8 +116,6 @@ const FILTERS = {
         },
         detailedDescriptions: {
             // eslint-disable-next-line max-len
-            2: '',
-            1: '',
             null: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">fewer than 20%</a> of the episodes watched.</>,
             10: 'The very best, unique, and unforgettable anime with a lot of impact.',
             9: 'Amazing anime which were super enjoyable, interesting, and entertaining.',
@@ -127,6 +125,8 @@ const FILTERS = {
             5: 'Low effort recaps, confusing shorts, bad movies, and incomprehensible series.',
             4: 'Utterly boring and not interesting. Difficult to watch without yawning.',
             3: 'I can\'t believe these had a budget approved for them.',
+            2: null,
+            1: null,
         },
         // Reverse sort
         specialValuesProcess: reverseSort,
