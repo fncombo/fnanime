@@ -138,6 +138,26 @@ function updateAnimeData(animeId, newData, fullData) {
 }
 
 /**
+ * Addd data that didn't need to be downloaded to each anime because it can be calculated on the fly.
+ * @param {number[]} animeIds Array of anime IDs to loop.
+ */
+function calculateAdditionalData(animeIds) {
+    for (const animeId of animeIds) {
+        // Reference back to object value
+        const anime = ANIME_OBJECT[animeId]
+
+        // Calculate values on the fly
+        anime.episodeSize = anime.size && anime.episodes ? anime.size / anime.episodes : 0
+
+        anime.fileQuality = getFileQuality(anime)
+
+        anime.totalDuration = anime.episodeDuration * anime.episodes
+
+        anime.watchTime = anime.episodeDuration * anime.episodesWatched * (anime.rewatchCount + 1)
+    }
+}
+
+/**
  * Updates all anime from new API data. If the anime doesn't exist in the API, delete it. If a new anime is present in
  * the API but not in cached data, add a very basic entry for it. Re-creates filter defaults afterwards.
  * @param {Array} newAnime Array of all anime objects from the API.
@@ -155,12 +175,17 @@ function updateAnimeFromApi(newAnime) {
         }, anime)
     }
 
+    const animeIds = Object.keys(ANIME_OBJECT)
+
     // Delete anime which were not updated and therefore were not in the API
-    for (const animeId of Object.keys(ANIME_OBJECT)) {
+    for (const animeId of animeIds) {
         if (!has(ANIME_OBJECT[animeId], 'updated')) {
             delete ANIME_OBJECT[animeId]
         }
     }
+
+    // Add additional data to each anime
+    calculateAdditionalData(animeIds)
 
     // Re-create filter defaults based on new anime data
     FILTERS.createDefaults(ANIME_OBJECT)
@@ -274,6 +299,7 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
 // Exports
 export {
     getFileQuality,
+    calculateAdditionalData,
     updateAnimeFromApi,
     getAnime,
 }
