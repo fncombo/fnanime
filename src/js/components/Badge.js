@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Libraries
-import has from 'has'
 import classNames from 'classnames'
 
 // Style
@@ -27,7 +26,7 @@ export default function Badge({ showRating, showAirStatus, onClick, ...anime }) 
     const includeRating = showRating && status < 5
 
     // Only show air status when the option is true and anime is not completed and the air status has a description
-    const includeAirStatus = showAirStatus && airStatus !== 2 && has(FILTERS.airStatus.descriptions, airStatus)
+    const includeAirStatus = showAirStatus && airStatus !== 2 && FILTERS.airStatus.descriptions.airStatus
 
     // Only show episodes when at least 1 and not all episodes have been watched, or the status is watching
     const includeEpisodes = ((episodesWatched !== 0 && episodesWatched !== episodes) || status === 1) && !includeRating

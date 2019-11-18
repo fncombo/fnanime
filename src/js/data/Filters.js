@@ -1,9 +1,6 @@
 // React
 import React from 'react'
 
-// Libraries
-import has from 'has'
-
 // Data
 import { DEFAULTS } from 'js/data/Data'
 
@@ -355,7 +352,7 @@ Object.defineProperties(FILTERS, {
                     .sort()
 
                 // Apply any special processing for this filter
-                if (has(FILTERS[filterName], 'specialValuesProcess')) {
+                if (FILTERS[filterName].specialValuesProcess) {
                     filterValues = FILTERS[filterName].specialValuesProcess(filterValues)
                 }
 

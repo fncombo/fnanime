@@ -1,6 +1,3 @@
-// Libraries
-import has from 'has'
-
 /**
  * Get updated API date to display the latest info such as episode watch progress.
  */
@@ -50,7 +47,7 @@ async function getApiData(page = 1, isRetry = false) {
     }
 
     // Check that anime data actually exists in the API response
-    if (!has(responseJson, 'anime') || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
+    if (!responseJson.anime || !Array.isArray(responseJson.anime) || !responseJson.anime.length) {
         return false
     }
 

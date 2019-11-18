@@ -1,6 +1,5 @@
 // Libraries
 import clone from 'clone'
-import has from 'has'
 import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
@@ -29,27 +28,20 @@ function getFileQuality(anime) {
     let measuredStats = 0
     let totalMeasure = 0
 
+    // Go through each value in the anime and check if it has a corresponding quality score
     for (const prop of ANIME_PROPS) {
         const value = anime[prop]
+        const fileQuality = FILTERS?.[prop]?.fileQuality?.[value]
 
-        if (value === false || value === null) {
-            continue
+        if (fileQuality) {
+            measuredStats += 1
+
+            totalMeasure += fileQuality
         }
-
-        if (!has(FILTERS, prop) || !has(FILTERS[prop], 'fileQuality') || !has(FILTERS[prop].fileQuality, value)) {
-            continue
-        }
-
-        measuredStats += 1
-
-        totalMeasure += FILTERS[prop].fileQuality[value]
     }
 
-    if (!measuredStats) {
-        return false
-    }
-
-    return totalMeasure / measuredStats
+    // Return the average quality score if any values were measured
+    return measuredStats ? totalMeasure / measuredStats : false
 }
 
 /**
@@ -109,7 +101,7 @@ function createAnimeFromApiData(animeId, anime) {
  */
 function updateAnimeData(animeId, newData, fullData) {
     // If the anime doesn't exist, create an entry for it
-    if (!has(ANIME_OBJECT, animeId)) {
+    if (!ANIME_OBJECT[animeId]) {
         createAnimeFromApiData(animeId, fullData)
 
         return
@@ -179,7 +171,7 @@ function updateAnimeFromApi(newAnime) {
 
     // Delete anime which were not updated and therefore were not in the API
     for (const animeId of animeIds) {
-        if (!has(ANIME_OBJECT[animeId], 'updated')) {
+        if (!ANIME_OBJECT[animeId].updated) {
             delete ANIME_OBJECT[animeId]
         }
     }

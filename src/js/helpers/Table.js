@@ -1,6 +1,3 @@
-// Libraries
-import has from 'has'
-
 // Helpers
 import { FILTERS } from 'js/data/Filters'
 import { STORAGE_SIZE_LIMITS } from 'js/data/Table'
@@ -42,12 +39,8 @@ function getColumnTextColor(columnName, value) {
         return getFileQualityColor(value)
     }
 
-    // If color codes mapping exists for this column
-    if (has(FILTERS, columnName) && has(FILTERS[columnName], 'colorCodes')) {
-        return FILTERS[columnName].colorCodes[value]
-    }
-
-    return 'default'
+    // If color codes mapping exists for this column use it
+    return FILTERS?.[columnName]?.colorCodes?.[value] || 'default'
 }
 
 /**

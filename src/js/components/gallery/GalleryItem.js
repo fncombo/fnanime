@@ -2,7 +2,6 @@
 import React, { useState, useRef } from 'react'
 
 // Libraries
-import has from 'has'
 import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
@@ -69,7 +68,7 @@ export default function GalleryItem(anime) {
             setHoverClass('')
         }
 
-        if (!has(style, 'left') && !has(style, 'right')) {
+        if (!style.left && !style.right) {
             style.left = itemBounds.x - gallerySectionBounds.x + ((itemBounds.width - tooltipBounds.width) / 2)
         }
 
