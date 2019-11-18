@@ -18,7 +18,7 @@ const GALLERY_OPTIONS = {
 /**
  * Gallery for each rating which has matching anime.
  */
-function Gallery() {
+export default function Gallery() {
     const [ ref, inView ] = useInView(GALLERY_OPTIONS)
 
     // Optimise to not render if not in view
@@ -35,6 +35,3 @@ function Gallery() {
         </div>
     )
 }
-
-// Exports
-export default Gallery

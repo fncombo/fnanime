@@ -17,7 +17,7 @@ import Badge from 'js/components/Badge'
 /**
  * Single item in the related anime list.
  */
-function RelatedListItem({ ...anime }) {
+export default function RelatedListItem({ ...anime }) {
     const { changeAnime } = useContext(ModalState)
 
     // Callback to change the anime when clicking on the badge
@@ -36,5 +36,3 @@ function RelatedListItem({ ...anime }) {
         </li>
     )
 }
-
-export default RelatedListItem

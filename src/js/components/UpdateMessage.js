@@ -13,7 +13,7 @@ import Icon from 'js/components/Icon'
 /**
  * Message indicating the loading status of the API update.
  */
-function UpdateMessage({ hideTimeout = 3000 }) {
+export default function UpdateMessage({ hideTimeout = 3000 }) {
     const { state: { apiUpdated, apiError } } = useContext(GlobalState)
     const [ isHidden, setIsHidden ] = useState(false)
 
@@ -49,5 +49,3 @@ function UpdateMessage({ hideTimeout = 3000 }) {
         </div>
     )
 }
-
-export default UpdateMessage

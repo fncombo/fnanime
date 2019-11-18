@@ -13,7 +13,7 @@ import { add } from 'js/helpers/Statistics'
 /**
  * Column of statistics for specific data within a rating. Accepts a format function to modify data.
  */
-function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
+export default function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
     // Total of this data for this rating
     const ratingData = data.totals[rating]
     const sum = ratingData.reduce(add)
@@ -51,5 +51,3 @@ function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
         </div>
     )
 }
-
-export default StatisticsColumn

@@ -15,7 +15,7 @@ import SizeColumns from 'js/components/table/SizeColumns'
  * Default table row of data for a single anime. Contains the anime image and all the various columns.
  * Clicking on the table rows brings up the modal for its anime.
  */
-function Row(anime) {
+export default function Row(anime) {
     return (
         <ModalContainer anime={anime} className="table-row">
             <img
@@ -61,5 +61,3 @@ function Row(anime) {
         </ModalContainer>
     )
 }
-
-export default Row

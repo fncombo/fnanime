@@ -7,7 +7,7 @@ import { formatDuration } from 'js/helpers/Generic'
 /**
  * Displays the total duration of the anime and the duration per episode.
  */
-function Duration({ episodeDuration, episodes }) {
+export default function Duration({ episodeDuration, episodes }) {
     if (!episodeDuration || !episodes) {
         return 'Unknown'
     }
@@ -21,5 +21,3 @@ function Duration({ episodeDuration, episodes }) {
         </>
     )
 }
-
-export default Duration

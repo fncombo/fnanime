@@ -11,7 +11,7 @@ import Icon from 'js/components/Icon'
  * Displays anime's rating using stars. Always shows 10 stars with different style for rating and filler.
  * Defaults to "not rated" description for falsy ratings.
  */
-function Rating({ children: rating }) {
+export default function Rating({ children: rating }) {
     return (
         <>
             <div className="rating">
@@ -33,5 +33,3 @@ function Rating({ children: rating }) {
         </>
     )
 }
-
-export default Rating

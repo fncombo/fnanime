@@ -14,7 +14,7 @@ import { FILTERS } from 'js/data/Filters'
 /**
  * Single filter button for a value of a filter with a count of how many anime currently match it.
  */
-function FilterButton({ filterName, children: filterValue }) {
+export default function FilterButton({ filterName, children: filterValue }) {
     const { state: { activeFilters }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
@@ -54,5 +54,3 @@ function FilterButton({ filterName, children: filterValue }) {
         </button>
     )
 }
-
-export default FilterButton

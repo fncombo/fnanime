@@ -7,7 +7,7 @@ import reactStringReplace from 'react-string-replace'
 /**
  * Highlights an anime title with search results if they have been provided.
  */
-function HighlightTitle({ highlight, children: title }) {
+export default function HighlightTitle({ highlight, children: title }) {
     if (!title) {
         return null
     }
@@ -29,5 +29,3 @@ function HighlightTitle({ highlight, children: title }) {
         </strong>
     )
 }
-
-export default HighlightTitle

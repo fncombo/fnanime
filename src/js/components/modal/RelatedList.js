@@ -8,7 +8,7 @@ import RelatedListItem from 'js/components/modal/RelatedListItem'
  * List of all related anime grouped by their relation type. Anime which are present in the data
  * have badges which link to open that anime's modal.
  */
-function RelatedList({ data }) {
+export default function RelatedList({ data }) {
     if (!data) {
         return null
     }
@@ -41,6 +41,3 @@ function RelatedList({ data }) {
         </Fragment>
     )
 }
-
-// Exports
-export default RelatedList

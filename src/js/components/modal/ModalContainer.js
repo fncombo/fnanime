@@ -11,7 +11,7 @@ const MODAL_ELEMENT = document.getElementById('modal')
 /**
  * Makes any element a button to open a portal to a modal.
  */
-function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
+export default function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     const [ isModalOpen, setModalOpen ] = useState(false)
 
     // Callback to open the modal when the main element is clicked
@@ -42,6 +42,3 @@ function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
         </Element>
     )
 }
-
-// Exports
-export default ModalContainer

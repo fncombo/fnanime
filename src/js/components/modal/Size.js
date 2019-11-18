@@ -7,7 +7,7 @@ import fileSize from 'js/helpers/FileSize'
 /**
  * Displays the total anime size. If anime has episodes, also displays the average size per episode.
  */
-function Size({ size, episodes }) {
+export default function Size({ size, episodes }) {
     return (
         <>
             {size ? fileSize(size) : 'None'}
@@ -17,5 +17,3 @@ function Size({ size, episodes }) {
         </>
     )
 }
-
-export default Size

@@ -12,7 +12,7 @@ import SelectOptionGroup from 'js/components/filters/SelectOptionGroup'
 /**
  * Select input for a filter. Options are divided by whether they currently have anime matching anime to them or not.
  */
-function Select({ filterName }) {
+export default function Select({ filterName }) {
     const { state: { activeFilters }, dispatch } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
@@ -70,5 +70,3 @@ function Select({ filterName }) {
         </div>
     )
 }
-
-export default Select

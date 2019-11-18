@@ -16,7 +16,7 @@ import Icon from 'js/components/Icon'
 /**
  * Next and previous page button simply send an action type to the reducer.
  */
-function NavigationButton({ action: type, disabled }) {
+export default function NavigationButton({ action: type, disabled }) {
     const { dispatch } = useContext(TableState)
 
     // Callback to go to the next or previous page
@@ -35,5 +35,3 @@ function NavigationButton({ action: type, disabled }) {
         ? <Icon as="button" icon={icon} className={classes} />
         : <Icon as="button" icon={icon} className={classes} onClick={changePageCallback} />
 }
-
-export default NavigationButton

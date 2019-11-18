@@ -28,4 +28,5 @@ const Header = memo(() =>
     </StuckSentinel>
 )
 
+// Exports
 export default Header

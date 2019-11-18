@@ -10,7 +10,7 @@ import { getNestedProperty } from 'js/helpers/Modal'
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.
  */
-function ApiData({ property, fallback, children }) {
+export default function ApiData({ property, fallback, children }) {
     const { modalState: { apiData } } = useContext(ModalState)
     const data = getNestedProperty(apiData, ...property.split('.'))
 
@@ -31,5 +31,3 @@ function ApiData({ property, fallback, children }) {
 
     return data
 }
-
-export default ApiData

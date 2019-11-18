@@ -14,7 +14,7 @@ import HighlightTitle from 'js/components/table/HighlightTitle'
  * If the anime is a favorite, the favorite icon and number are included.
  * If a search query is present, it gets highlighted using the anime's status color.
  */
-function TitleColumn({ title, status, type, favorite, highlight }) {
+export default function TitleColumn({ title, status, type, favorite, highlight }) {
     // Styles for the column width on desktop and grid position on mobile
     const style = {
         flexBasis: TABLE_COLUMNS.title.size,
@@ -37,5 +37,3 @@ function TitleColumn({ title, status, type, favorite, highlight }) {
         </div>
     )
 }
-
-export default TitleColumn

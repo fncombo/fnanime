@@ -17,7 +17,9 @@ import StatisticsColumn from 'js/components/statistics/StatisticsColumn'
 /**
  * Row of statistics for a single rating.
  */
-function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes, totalDuration, watchTime } }) {
+export default function StatisticsRow({ rating, totals }) {
+    const { rating: ratingTotals, size, episodes, totalDuration, watchTime } = totals
+
     return (
         <div className="columns is-mobile">
             <div className="column is-2-mobile is-1-tablet is-rating">
@@ -33,5 +35,3 @@ function StatisticsRow({ rating, totals: { rating: ratingTotals, size, episodes,
         </div>
     )
 }
-
-export default StatisticsRow

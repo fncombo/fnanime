@@ -20,7 +20,7 @@ import Icon from 'js/components/Icon'
 /**
  * All the modal HTML including managing what it's displaying and its animations.
  */
-function Modal({ closeModal: closeCallback, ...props }) {
+export default function Modal({ closeModal: closeCallback, ...props }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ anime, setAnime ] = useState(props)
 
@@ -102,5 +102,3 @@ function Modal({ closeModal: closeCallback, ...props }) {
         </div>
     )
 }
-
-export default Modal

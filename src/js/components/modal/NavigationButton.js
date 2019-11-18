@@ -17,7 +17,7 @@ import Icon from 'js/components/Icon'
 /**
  * Previous and next buttons around the modal to quickly switch between adjacent anime.
  */
-function NavigationButton({ direction, changeAnime, currentAnimeId }) {
+export default function NavigationButton({ direction, changeAnime, currentAnimeId }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
     // Get data about the adjacent anime
@@ -49,5 +49,3 @@ function NavigationButton({ direction, changeAnime, currentAnimeId }) {
         </div>
     )
 }
-
-export default NavigationButton

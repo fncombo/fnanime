@@ -15,7 +15,7 @@ import { FILTERS } from 'js/data/Filters'
  * A badge for an anime to display the watch status with episode count if watching. Optionally can display
  * the anime rating and link to open an anime's info box.
  */
-function Badge({ showRating, showAirStatus, onClick, ...anime }) {
+export default function Badge({ showRating, showAirStatus, onClick, ...anime }) {
     // Anime wasn't found
     if (!anime) {
         return null
@@ -86,6 +86,3 @@ function Badge({ showRating, showAirStatus, onClick, ...anime }) {
         </span>
     )
 }
-
-// Exports
-export default Badge

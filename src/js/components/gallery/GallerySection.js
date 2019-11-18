@@ -15,7 +15,7 @@ import GalleryItem from 'js/components/gallery/GalleryItem'
 /**
  * A section of gallery for a single rating. If there are no anime matching the rating, the section is skipped.
  */
-function GallerySection({ rating }) {
+export default function GallerySection({ rating }) {
     const { state: { anime: allAnime } } = useContext(GlobalState)
 
     const galleryAnime = allAnime.filter(({ rating: animeRating }) => animeRating === rating)
@@ -41,5 +41,3 @@ function GallerySection({ rating }) {
         </div>
     )
 }
-
-export default GallerySection

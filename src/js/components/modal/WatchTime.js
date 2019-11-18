@@ -7,7 +7,7 @@ import { formatDuration } from 'js/helpers/Generic'
 /**
  * Display the total watch time of this anime based on episode duration and number of episodes watched.
  */
-function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewatchCount }) {
+export default function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewatchCount }) {
     if (!episodeDuration || !episodesWatched) {
         return 'None'
     }
@@ -37,5 +37,3 @@ function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewa
 
     return formatDuration(watchTime, true)
 }
-
-export default WatchTime

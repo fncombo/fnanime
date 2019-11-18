@@ -10,7 +10,7 @@ import { TableState, ACTIONS } from 'js/data/GlobalState'
 /**
  * Single page button with a number which takes you to that page when clicked.
  */
-function NumberButton({ children: pageNumber }) {
+export default function NumberButton({ children: pageNumber }) {
     const { state: { page }, dispatch } = useContext(TableState)
 
     // Callback to switch the table to a specific page
@@ -26,5 +26,3 @@ function NumberButton({ children: pageNumber }) {
         ? <button className="button is-rounded is-dark">{pageNumber}</button>
         : <button className="button is-rounded" onClick={setPageCallback}>{pageNumber}</button>
 }
-
-export default NumberButton

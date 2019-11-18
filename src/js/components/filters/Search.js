@@ -10,7 +10,7 @@ import { GlobalState, ACTIONS } from 'js/data/GlobalState'
 /**
  * Search input to filter anime by a query string.
  */
-function Search() {
+export default function Search() {
     const { state: { searchQuery }, dispatch } = useContext(GlobalState)
 
     // Callback for the search input change
@@ -23,6 +23,3 @@ function Search() {
 
     return <input type="text" className="input" placeholder="Search" value={searchQuery} onChange={searchCallback} />
 }
-
-// Exports
-export default Search

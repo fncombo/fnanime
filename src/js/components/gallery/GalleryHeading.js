@@ -13,7 +13,7 @@ import StuckSentinel from '../StuckSentinel'
 /**
  * Gallery section heading which can become stuck.
  */
-function GalleryHeading({ children: heading }) {
+export default function GalleryHeading({ children: heading }) {
     return (
         <StuckSentinel className="gallery-heading-sentinel">
             {isStuck =>
@@ -24,5 +24,3 @@ function GalleryHeading({ children: heading }) {
         </StuckSentinel>
     )
 }
-
-export default GalleryHeading

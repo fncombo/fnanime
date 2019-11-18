@@ -7,7 +7,7 @@ import { GlobalState } from 'js/data/GlobalState'
 /**
  * Displays how many downloaded and not downloaded anime there are.
  */
-function Summary() {
+export default function Summary() {
     const { state: { anime } } = useContext(GlobalState)
 
     if (!anime.length) {
@@ -28,5 +28,3 @@ function Summary() {
         return <span>Found {notDownloadedCount} anime</span>
     }
 }
-
-export default Summary

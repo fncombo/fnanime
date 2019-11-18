@@ -22,7 +22,7 @@ import StatisticsRow from 'js/components/statistics/StatisticsRow'
  * Show all the ratings, the number of anime per rating, and a column for each of the other totals.
  * Each totals column has a header with its name, and a footer of the "totals total".
  */
-function Statistics() {
+export default function Statistics() {
     const { state: { anime } } = useContext(GlobalState)
     const [ ref, inView, entry ] = useInView()
 
@@ -126,6 +126,3 @@ function Statistics() {
         </div>
     )
 }
-
-// Exports
-export default Statistics

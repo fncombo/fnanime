@@ -41,7 +41,7 @@ function tableStateReducer(state, action) {
 /**
  * Table showing all the currently filtered and searched anime with pagination.
  */
-function Table() {
+export default function Table() {
     const { state: { anime: allAnime } } = useContext(GlobalState)
     const [ state, dispatch ] = useReducer(tableStateReducer, INITIAL_TABLE_STATE)
 
@@ -73,6 +73,3 @@ function Table() {
         </TableState.Provider>
     )
 }
-
-// Exports
-export default Table

@@ -18,7 +18,7 @@ import PageNumberButtons from 'js/components/pagination/PageNumberButtons'
 /**
  * Previous, next, and number buttons to control the table.
  */
-function Pagination() {
+export default function Pagination() {
     const { state: { page }, dispatch, lastPage } = useContext(TableState)
 
     // If the anime updated and the table is now over the last possible page, switch to the new last page instead
@@ -57,6 +57,3 @@ function Pagination() {
         </StuckSentinel>
     )
 }
-
-// Exports
-export default Pagination

@@ -13,7 +13,7 @@ import Icon from 'js/components/Icon'
 /**
  * Displays a heart icon with a number to denote a favorite anime.
  */
-function Favorite({ showHash, children: number }) {
+export default function Favorite({ showHash, children: number }) {
     if (!number) {
         return null
     }
@@ -34,6 +34,3 @@ function Favorite({ showHash, children: number }) {
         </Icon>
     )
 }
-
-// Exports
-export default Favorite

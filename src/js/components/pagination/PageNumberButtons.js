@@ -15,7 +15,7 @@ import NumberButton from 'js/components/pagination/NumberButton'
  * Number buttons to navigate the table. Some number buttons are truncated when the are too many between the current
  * button and the first/last page button.
  */
-function PageNumberButtons() {
+export default function PageNumberButtons() {
     const { state: { page }, lastPage } = useContext(TableState)
 
     // The lowest and highest page button numbers on either side of the current page
@@ -80,5 +80,3 @@ function PageNumberButtons() {
 
     return buttons
 }
-
-export default PageNumberButtons

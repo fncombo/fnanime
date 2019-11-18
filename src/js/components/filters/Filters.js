@@ -17,7 +17,7 @@ import Summary from 'js/components/filters/Summary'
 /**
  * Groups of filters, search input, summary, and reset button.
  */
-function Filters() {
+export default function Filters() {
     const { state: { anime }, dispatch } = useContext(GlobalState)
 
     // Callback to reset filters, sorting, and search (not the active table page)
@@ -62,6 +62,3 @@ function Filters() {
         </div>
     )
 }
-
-// Exports
-export default Filters

@@ -32,7 +32,7 @@ const INITIAL_MODAL_BODY_STATE = {
 /**
  * Body of the modal which contains all the information about the anime.
  */
-function ModalBody({ closeModal, changeAnime, ...anime }) {
+export default function ModalBody({ closeModal, changeAnime, ...anime }) {
     const [ modalState, setModalState ] = useState(INITIAL_MODAL_BODY_STATE)
     const { isLoaded, apiData } = modalState
 
@@ -192,5 +192,3 @@ function ModalBody({ closeModal, changeAnime, ...anime }) {
         </ModalState.Provider>
     )
 }
-
-export default ModalBody

@@ -111,7 +111,7 @@ function globalReducer(state, action) {
 /**
  * ZA WARUDO
  */
-function App() {
+export default function App() {
     const [ state, dispatch ] = useReducer(globalReducer, INITIAL_STATE)
     const { apiUpdated } = state
 
@@ -160,6 +160,3 @@ function App() {
         </GlobalState.Provider>
     )
 }
-
-// Exports
-export default App

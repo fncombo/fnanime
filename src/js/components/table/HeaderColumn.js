@@ -91,4 +91,5 @@ const HeaderColumn = memo(({ children: columnName }) => {
     )
 })
 
+// Exports
 export default HeaderColumn

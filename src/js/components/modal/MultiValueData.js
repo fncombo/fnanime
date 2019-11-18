@@ -10,7 +10,7 @@ import { FILTERS } from 'js/data/Filters'
 /**
  * Array of values which should be comma-separated. Can look up description from filters.
  */
-function MultiValueData({ data, ...anime }) {
+export default function MultiValueData({ data, ...anime }) {
     // No data, fallback on a dash
     if (!data) {
         return <>&mdash;</>
@@ -36,5 +36,3 @@ function MultiValueData({ data, ...anime }) {
         return value
     }).join(', ')
 }
-
-export default MultiValueData

@@ -11,7 +11,7 @@ import SizeBar from 'js/components/table/SizeBar'
  * Displays either two columns showing the size per episode and total size of the anime,
  * or one column which spans two columns if both sizes are the same.
  */
-function SizeColumns({ episodeSize, size }) {
+export default function SizeColumns({ episodeSize, size }) {
     // If the size is the same, only create one column which spans the width of 2
     if (size === episodeSize) {
         // Add the widths of both columns
@@ -51,5 +51,3 @@ function SizeColumns({ episodeSize, size }) {
         </>
     )
 }
-
-export default SizeColumns
