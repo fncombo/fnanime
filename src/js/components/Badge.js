@@ -45,7 +45,8 @@ export default function Badge({ showRating, showAirStatus, onClick, ...anime }) 
         isSmall ? 'is-normal' : 'is-medium',
         `is-${FILTERS.status.colorCodes[status]}`, {
             'is-modal-link': onClick,
-        })
+        }
+    )
 
     if (includeEpisodes || includeRating) {
         const mainClasses = classNames('tags has-addons', {

@@ -8,8 +8,8 @@ import classNames from 'classnames'
 import { TABLE_COLUMN_NAMES } from 'js/data/Table'
 
 // Components
-import StuckSentinel from '../StuckSentinel'
 import HeaderColumn from 'js/components/table/HeaderColumn'
+import StuckSentinel from '../StuckSentinel'
 
 /**
  * Table header row which becomes stuck to the top of the page and gains additional styling when scrolling.

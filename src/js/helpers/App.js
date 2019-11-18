@@ -69,5 +69,6 @@ async function getApiData(page = 1, isRetry = false) {
 
 // Exports
 export {
+    // eslint-disable-next-line import/prefer-default-export
     getApiData,
 }

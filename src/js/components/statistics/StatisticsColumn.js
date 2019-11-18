@@ -43,6 +43,7 @@ export default function StatisticsColumn({ rating, data, formatFunction, showPer
                             title={`${FILTERS.status.descriptions[status]} (${count})`}
                             className={`has-background-${FILTERS.status.colorCodes[status]}`}
                             style={{ width: `${data.max ? (singleData / data.max) * 100 : 0}%` }}
+                            // eslint-disable-next-line react/no-array-index-key
                             key={`${rating}-${status}`}
                         />
                     )

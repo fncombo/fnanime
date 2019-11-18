@@ -27,7 +27,7 @@ export default function StatisticsRow({ rating, totals }) {
                     {FILTERS.rating.tinyDescriptions[rating]}
                 </span>
             </div>
-            <StatisticsColumn rating={rating} data={ratingTotals} showPercentage={true} />
+            <StatisticsColumn rating={rating} data={ratingTotals} showPercentage />
             <StatisticsColumn rating={rating} data={size} formatFunction={fileSize} />
             <StatisticsColumn rating={rating} data={episodes} />
             <StatisticsColumn rating={rating} data={totalDuration} formatFunction={formatDuration} />
