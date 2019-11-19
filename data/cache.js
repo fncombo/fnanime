@@ -87,6 +87,7 @@ async function updateCache(cache, animeIds) {
 
     // Go through each new anime ID and generate cache for it one at a time
     await eachSeries(newAnimeIds, async newAnimeId => {
+        // eslint-disable-next-line no-param-reassign
         cache.anime[newAnimeId] = await getAnimeData(newAnimeId)
     })
 

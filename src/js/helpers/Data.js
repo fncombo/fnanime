@@ -109,6 +109,7 @@ function updateAnimeData(animeId, newData, fullData) {
 
     // Check that the rating is different
     if (ANIME_OBJECT[animeId].rating === newData.rating) {
+        // eslint-disable-next-line no-param-reassign
         delete newData.rating
     }
 
@@ -272,10 +273,10 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     fastSort(sortResults).by(fastSortOptions)
 
     // Map which anime ID should be in which order
-    sortResults = sortResults.reduce((object, anime, index) => {
-        object[anime.id] = index
+    sortResults = sortResults.reduce((accumulator, anime, index) => {
+        accumulator[anime.id] = index
 
-        return object
+        return accumulator
     }, {})
 
     // Sort the real results based on the sorting outcome, to preserve difference between false and null values

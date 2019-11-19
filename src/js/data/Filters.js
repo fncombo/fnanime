@@ -305,7 +305,9 @@ Object.defineProperties(FILTERS, {
         value(allAnime) {
             // Make a nested blank object of filter names and values
             const filterCounts = FILTER_NAMES.reduce((filterNamesObject, filterName) => {
+                // eslint-disable-next-line no-param-reassign
                 filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
+                    // eslint-disable-next-line no-param-reassign
                     filterValuesObject[filterValue] = 0
 
                     return filterValuesObject
