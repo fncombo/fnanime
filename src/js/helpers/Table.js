@@ -81,27 +81,27 @@ function getSizeBarColor(size, type) {
  * @returns {string}
  */
 function formatOrdinal(number) {
-    const cent = number % 100
+    const tens = number % 100
 
-    if (cent >= 10 && cent <= 20) {
+    if (tens >= 10 && tens <= 20) {
         return 'th'
     }
 
-    const dec = number % 10
+    const ones = number % 10
 
-    if (dec === 1) {
+    switch (ones) {
+    case 1:
         return 'st'
-    }
 
-    if (dec === 2) {
+    case 2:
         return 'nd'
-    }
 
-    if (dec === 3) {
+    case 3:
         return 'rd'
-    }
 
-    return 'th'
+    default:
+        return 'th'
+    }
 }
 
 // Exports
