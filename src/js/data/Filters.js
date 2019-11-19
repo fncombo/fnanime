@@ -113,7 +113,7 @@ const FILTERS = {
         },
         detailedDescriptions: {
             // eslint-disable-next-line max-len
-            null: <>Haven't rated these yet! I also don't rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">fewer than 20%</a> of the episodes watched.</>,
+            null: <>Haven&apos;t rated these yet! I also don&apos;t rate dropped anime with <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">fewer than 20%</a> of the episodes watched.</>,
             10: 'The very best, unique, and unforgettable anime with a lot of impact.',
             9: 'Amazing anime which were super enjoyable, interesting, and entertaining.',
             8: 'Very enjoyable anime with nice themes which were a pleasure to watch.',
@@ -305,7 +305,9 @@ Object.defineProperties(FILTERS, {
         value(allAnime) {
             // Make a nested blank object of filter names and values
             const filterCounts = FILTER_NAMES.reduce((filterNamesObject, filterName) => {
+                // eslint-disable-next-line no-param-reassign
                 filterNamesObject[filterName] = FILTERS[filterName].values.reduce((filterValuesObject, filterValue) => {
+                    // eslint-disable-next-line no-param-reassign
                     filterValuesObject[filterValue] = 0
 
                     return filterValuesObject

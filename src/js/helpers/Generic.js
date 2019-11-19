@@ -12,5 +12,6 @@ function formatDuration(duration, verbose = false) {
 }
 
 export {
+    // eslint-disable-next-line import/prefer-default-export
     formatDuration,
 }

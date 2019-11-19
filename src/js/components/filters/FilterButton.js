@@ -44,7 +44,7 @@ export default function FilterButton({ filterName, children: filterValue }) {
     })
 
     return (
-        <button className={classes} onClick={selectFilterCallback}>
+        <button type="button" className={classes} onClick={selectFilterCallback}>
             {FILTERS[filterName].descriptions[filterValue]}
             {!!count && notAllFilterValue &&
                 <span className="count">

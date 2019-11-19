@@ -22,9 +22,13 @@ export default function Summary() {
 
     if (downloadedCount && notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> + {notDownloadedCount} anime</span>
-    } else if (downloadedCount && !notDownloadedCount) {
+    }
+
+    if (downloadedCount && !notDownloadedCount) {
         return <span>Found <strong>{downloadedCount}</strong> anime</span>
-    } else if (!downloadedCount && notDownloadedCount) {
+    }
+
+    if (!downloadedCount && notDownloadedCount) {
         return <span>Found {notDownloadedCount} anime</span>
     }
 }

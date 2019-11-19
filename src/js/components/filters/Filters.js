@@ -54,7 +54,7 @@ export default function Filters() {
                     <Summary />
                 </div>
                 <div className="column is-4-mobile is-1-tablet">
-                    <button className="button is-fullwidth" onClick={resetCallback}>
+                    <button type="button" className="button is-fullwidth" onClick={resetCallback}>
                         Reset
                     </button>
                 </div>
