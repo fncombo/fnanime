@@ -38,14 +38,21 @@ function calculateTotals(allAnime, property, countOnly) {
     // Create the 2D array to populate
     const totals = Array.from({ length: 11 }, () => Array(7).fill(0))
 
+    // Create an array of totals for each rating
+    const totalsPerRating = Array.from({ length: 11 }).fill(0)
+
     // Increment the number of matched anime or add up the data, if the rating is false or null, use 0
     if (countOnly) {
         for (const { rating, status } of allAnime) {
             totals[rating || 0][status] += 1
+
+            totalsPerRating[rating || 0] += 1
         }
     } else {
         for (const { rating, status, [property]: value } of allAnime) {
             totals[rating || 0][status] += value
+
+            totalsPerRating[rating || 0] += 1
         }
     }
 
@@ -65,6 +72,7 @@ function calculateTotals(allAnime, property, countOnly) {
 
     return {
         totals,
+        totalsPerRating,
         sum,
         count,
         max,

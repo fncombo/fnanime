@@ -12,7 +12,7 @@ import { GlobalState } from 'js/data/GlobalState'
 
 // Helpers
 import { formatDuration } from 'js/helpers/Generic'
-import { getStatisticsAnime, add, calculateTotals } from 'js/helpers/Statistics'
+import { getStatisticsAnime, calculateTotals } from 'js/helpers/Statistics'
 import fileSize from 'js/helpers/FileSize'
 
 // Components
@@ -48,19 +48,16 @@ export default function Statistics() {
         watchTime: calculateTotals(allAnime, 'watchTime'),
     }
 
-    // First and last ratings which have anime to them
+    // First and last ratings which have anime to them (excluding "not rated")
     // e.g. [0, 0, x, x, 0, x, x, 0] turns into [x, x, 0, x, x]
-    const firstNonZero = totals.rating.totals.map(row => row.reduce(add)).findIndex(index => !!index)
-
-    const lastNonZero = totals.rating.totals.length - [ ...totals.rating.totals ]
-        .reverse().map(row => row.reduce(add)).findIndex(index => !!index)
+    const checkArray = totals.rating.totalsPerRating.slice(1)
+    const firstNonZero = checkArray.findIndex(value => !!value)
+    const lastNonZero = checkArray.length - [ ...checkArray ].reverse().findIndex(value => !!value)
 
     // Don't show stats if all shown anime aren't rated
     if (firstNonZero + lastNonZero === 0) {
         return null
     }
-
-    let previousHadCount = false
 
     return (
         <div className="statistics has-text-centered" ref={ref}>
@@ -84,20 +81,10 @@ export default function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {Array.from({ length: 11 }, (value, index) => index).slice(firstNonZero, lastNonZero).map(rating => {
-                // If the first rating is "not rated", skip ratings without entries between it
-                // and when ratings with anime start, e.g.:
-                // ["not rated", 0, 0, x, x, 0, 0, x, x] turns into ["not rated", x, x, 0, 0, x, x]
-                if (!previousHadCount && firstNonZero === 0 && !totals.rating.totals[rating].reduce(add)) {
-                    return null
-                }
-
-                if (rating) {
-                    previousHadCount = true
-                }
-
-                return <StatisticsRow rating={rating} totals={totals} key={rating} />
-            }).reverse()}
+            {Array.from({ length: 10 }, (value, index) => index + 1).slice(firstNonZero, lastNonZero).map(rating =>
+                <StatisticsRow rating={rating} totals={totals} key={rating} />
+            ).reverse()}
+            {!!totals.rating.totalsPerRating[0] && <StatisticsRow rating={0} totals={totals} />}
             {firstNonZero !== lastNonZero &&
                 <div className="columns is-mobile is-not-progress">
                     <div className="column is-2-mobile is-1-tablet is-rating">
