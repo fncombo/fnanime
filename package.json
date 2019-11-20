@@ -1,7 +1,18 @@
 {
   "name": "fnanime",
+  "homepage": "https://anime.fncombo.me",
+  "description": "Custom data table and gallery of owned anime.",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "license": "ISC",
+  "author": {
+    "name": "fncombo",
+    "url": "https://fncombo.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fncombo/fnanime"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
