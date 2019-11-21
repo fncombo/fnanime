@@ -9,6 +9,7 @@ import 'scss/Favorite.scss'
 
 // Components
 import Icon from 'js/components/Icon'
+import { formatOrdinal } from 'js/helpers/Table'
 
 /**
  * Displays a heart icon with a number to denote a favorite anime.
@@ -18,8 +19,7 @@ export default function Favorite({ showHash, children: number }) {
         return null
     }
 
-    // eslint-disable-next-line max-len
-    const title = `Favourite anime #${number}.\n\nThis refers to the whole series in general, or a specific season of that series.\n\nThese don't have to be rated 10 because they are special regardless in their own way.`
+    const title = `${number}${formatOrdinal(number)} favourite anime (also refers to the whole series in general)`
 
     const numberClasses = classNames('favorite-number', {
         'has-hash': showHash,
