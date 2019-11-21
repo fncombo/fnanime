@@ -9,7 +9,7 @@ import { GlobalState, ACTIONS } from 'js/data/GlobalState'
 import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'js/data/Table'
 
 // Helpers
-import { formatOrdinal } from 'js/helpers/Table'
+import { formatOrdinal } from 'js/helpers/Generic'
 
 // Components
 import Icon from 'js/components/Icon'
@@ -68,13 +68,13 @@ const HeaderColumn = memo(({ children: columnName }) => {
 
             const ordinal = formatOrdinal(index)
 
-            title = `Sorting ${index}${ordinal} by this column in ${activeSorting.get(columnName)}ending order.\n\n`
+            title = `Sorting ${index}${ordinal} by this column in ${activeSorting.get(columnName)}ending order\n\n`
         } else {
-            title = `Sorting by this column in ${activeSorting.get(columnName)}ending order.\n\n`
+            title = `Sorting by this column in ${activeSorting.get(columnName)}ending order\n\n`
         }
     }
 
-    title = `${title}Hold shift to sort by multiple columns.`
+    title = `${title}Hold shift to sort by multiple columns`
 
     const style = {
         flexBasis: TABLE_COLUMNS[columnName].size,
