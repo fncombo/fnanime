@@ -29,6 +29,32 @@
             "exports": "always-multiline",
             "functions": "never"
         } ],
+        "no-multiple-empty-lines": [
+            "error", {
+                "max": 1,
+                "maxBOF": 0,
+                "maxEOF": 1
+            }
+        ],
+        "padding-line-between-statements": [
+            "error", {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "*"
+            }, {
+                "blankLine": "any",
+                "prev": [
+                    "const",
+                    "let",
+                    "import"
+                ],
+                "next": [
+                    "const",
+                    "let",
+                    "import"
+                ]
+            }
+        ],
 
         // Disabled rules
         "implicit-arrow-linebreak": 0,
