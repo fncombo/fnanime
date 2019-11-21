@@ -144,9 +144,14 @@
         outline: none;
         transition: opacity $duration-fast $easing;
         opacity: 0.5;
+        font-size: 1.25rem;
 
         &:hover {
             opacity: 1;
+        }
+
+        &:last-child {
+            margin-left: 0.75rem;
         }
     }
 }

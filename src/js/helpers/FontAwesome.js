@@ -16,6 +16,7 @@ import {
     faPlusCircle,
     faDatabase,
     faHeart,
+    faCopy,
 } from '@fortawesome/free-solid-svg-icons'
 
 // Array of all icons to be used
@@ -35,6 +36,7 @@ const icons = [
     faPlusCircle,
     faDatabase,
     faHeart,
+    faCopy,
 ]
 
 // Add all icons to the library
