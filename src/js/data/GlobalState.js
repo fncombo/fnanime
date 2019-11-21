@@ -20,6 +20,7 @@ const ACTIONS = {
     SET_PAGE: Symbol(),
     PREV_ANIME: Symbol(),
     NEXT_ANIME: Symbol(),
+    UPDATE_FROM_HASH: Symbol(),
 }
 
 // Exports

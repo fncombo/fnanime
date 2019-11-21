@@ -14,7 +14,7 @@ import { GlobalState, ACTIONS } from 'js/data/GlobalState'
 import { DEFAULTS } from 'js/data/Data'
 
 // Helpers
-import { getApiData } from 'js/helpers/App'
+import { getApiData, getUrlQueryStringData, updateUrlQueryString, resetUrlQueryString } from 'js/helpers/App'
 import { getAnime, updateAnimeFromApi } from 'js/helpers/Data'
 import 'js/helpers/FontAwesome'
 
@@ -73,6 +73,8 @@ function globalReducer(state, action) {
             [action.filterName]: action.filterValue,
         }
 
+        updateUrlQueryString(state.searchQuery, state.activeSorting, activeFilters)
+
         return {
             ...state,
             activeFilters,
@@ -81,6 +83,8 @@ function globalReducer(state, action) {
     }
 
     case ACTIONS.SEARCH:
+        updateUrlQueryString(action.searchQuery, state.activeSorting, state.activeFilters)
+
         return {
             ...state,
             searchQuery: action.searchQuery,
@@ -88,6 +92,8 @@ function globalReducer(state, action) {
         }
 
     case ACTIONS.CHANGE_SORTING:
+        updateUrlQueryString(state.searchQuery, action.newSorting, state.activeFilters)
+
         return {
             ...state,
             activeSorting: action.newSorting,
@@ -95,12 +101,21 @@ function globalReducer(state, action) {
         }
 
     case ACTIONS.RESET:
+        resetUrlQueryString()
+
         return {
             ...state,
             anime: getAnime(),
             searchQuery: '',
             activeSorting: clone(DEFAULTS.sorting),
             activeFilters: clone(DEFAULTS.filters),
+        }
+
+    case ACTIONS.UPDATE_FROM_HASH:
+        return {
+            ...state,
+            ...action.urlData,
+            anime: getAnime(action.urlData.searchQuery, action.urlData.activeSorting, action.urlData.activeFilters),
         }
 
     default:
@@ -138,6 +153,18 @@ export default function App() {
 
         fetchData()
     }, [ apiUpdated ])
+
+    // Attempt to update state from URL on first load
+    useEffect(() => {
+        const urlData = getUrlQueryStringData()
+
+        if (urlData) {
+            dispatch({
+                type: ACTIONS.UPDATE_FROM_HASH,
+                urlData,
+            })
+        }
+    }, [])
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
