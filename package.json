@@ -31,11 +31,13 @@
     "react-intersection-observer": "^8.25.1",
     "react-scripts": "^3.3.0-next.62",
     "react-slidedown": "^2.4.4",
+    "react-snap": "^1.23.0",
     "react-string-replace": "^0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
