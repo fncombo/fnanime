@@ -7,9 +7,11 @@ import classNames from 'classnames'
 // Style
 import 'scss/Favorite.scss'
 
+// Helpers
+import { formatOrdinal } from 'js/helpers/Generic'
+
 // Components
 import Icon from 'js/components/Icon'
-import { formatOrdinal } from 'js/helpers/Table'
 
 /**
  * Displays a heart icon with a number to denote a favorite anime.
