@@ -12,7 +12,7 @@ const CACHED_API_DATA = new Map()
  * @returns {any}
  */
 function getNestedProperty(object, property, ...rest) {
-    if (object === undefined) {
+    if (!object) {
         return false
     }
 
