@@ -9,13 +9,13 @@ import App from 'js/components/App'
 import * as serviceWorker from 'serviceWorker'
 
 // Root element of the app
-const root = document.getElementById('root')
+const rootEl = document.getElementById('root')
 
 // Hydrate server rendered HTML or render from scratch
-if (root.hasChildNodes()) {
-    hydrate(<App />, root)
+if (rootEl.hasChildNodes()) {
+    hydrate(<App />, rootEl)
 } else {
-    render(<App />, root)
+    render(<App />, rootEl)
 }
 
 serviceWorker.register()
