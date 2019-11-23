@@ -81,8 +81,6 @@ function processApiData(allAnime) {
         // Remove diacritics and other unwanted characters from the title
         const title = removeDiacritics(anime.title).replace(/["]/g, '')
 
-        // Create an array of all anime genre IDs for this anime
-
         // Start compiling clean data that we need
         ALL_ANIME[removeInvalidChars(title)] = new Proxy({
             id: anime.mal_id,
