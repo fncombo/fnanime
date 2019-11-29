@@ -397,3 +397,48 @@
         pointer-events: none;
     }
 }
+
+// Copy tooltip
+.copy-icon {
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+        pointer-events: none;
+    }
+
+    &:hover .icon {
+        opacity: 1;
+    }
+}
+
+.copy-tooltip {
+    background: $backdrop-background-dark-fallback;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    transform: translate(-50%, -0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition-property: visibility, opacity, transform;
+    transition-duration: $duration-medium;
+    transition-timing-function: $easing;
+    pointer-events: none;
+
+    @supports (backdrop-filter: $backdrop-filter) {
+        background: $backdrop-background-dark;
+        backdrop-filter: $backdrop-filter;
+    }
+
+    .copy-icon:hover & {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+    }
+}

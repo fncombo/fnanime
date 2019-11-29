@@ -21,6 +21,7 @@
     "bulma": "^0.8.0",
     "classnames": "^2.2.6",
     "clone": "^2.1.2",
+    "copy-text-to-clipboard": "^2.1.1",
     "fast-sort": "^1.6.0",
     "filesize": "^6.0.1",
     "fuse.js": "^3.4.5",
