@@ -35,10 +35,14 @@ export default function ModalContainer({ as: Element = 'a', anime, children, ...
         rel: 'noopener noreferrer',
     } : {}
 
+    // Do not put modal inside the Element as that messes up click events: they all get handled by `openModal`
+    // and are therefore "default prevented"
     return (
-        <Element onClick={openModal} {...linkAttributes} {...rest}>
-            {children}
+        <>
+            <Element onClick={openModal} {...linkAttributes} {...rest}>
+                {children}
+            </Element>
             {isModalOpen && ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)}
-        </Element>
+        </>
     )
 }
