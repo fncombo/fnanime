@@ -3,7 +3,7 @@
   "homepage": "https://anime.fncombo.me",
   "description": "Custom data table and gallery of owned anime.",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "license": "ISC",
   "author": {
     "name": "fncombo",
