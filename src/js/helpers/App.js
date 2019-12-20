@@ -100,15 +100,25 @@ function getUrlQueryStringData() {
         let [ , value ] = fragments
 
         // If this is the search query data, add it as-is
-        if (key === 'searchQuery') {
+        if (key === 'search') {
             accumulator.searchQuery = value
 
             return accumulator
         }
 
-        // Sorting data starts with two digits to indicate the index of the sort for that column
-        if (/^\d{2}[a-z]+$/.test(key)) {
-            const column = key.slice(2)
+        // Split again by dash to separate filters and sorting data
+        const keyFragments = key.split('-')
+
+        // Data is not formatted correctly
+        if (keyFragments.length !== 2) {
+            return accumulator
+        }
+
+        const [ keyType, keyValue ] = keyFragments
+
+        // Sorting data
+        if (keyType === 'sorting') {
+            const column = keyValue
 
             // Check if this is valid table column or the hidden "favorite" field, and that the sorting order is valid
             if ((TABLE_COLUMN_NAMES.includes(column) || column === 'favorite') && SORTING_ORDERS[value]) {
@@ -121,30 +131,37 @@ function getUrlQueryStringData() {
             return accumulator
         }
 
-        // Any other type of data must be a filter, so check if this filter name exists
-        if (!FILTER_NAMES.includes(key)) {
+        // Filters data
+        if (keyType === 'filter') {
+            const filterName = keyValue
+
+            // Check if filer name exists
+            if (!FILTER_NAMES.includes(filterName)) {
+                return accumulator
+            }
+
+            // Decode data
+            value = decodeURIComponent(value)
+
+            // Convert null to proper type
+            if (value === 'null') {
+                value = null
+
+            // Parse numbers
+            } else if (/^\d+$/.test(value)) {
+                value = parseInt(value, 10)
+            }
+
+            // Check if the filter value exists
+            if (!FILTERS[filterName]?.values.includes(value)) {
+                return accumulator
+            }
+
+            // Assign the filter name to filter value
+            accumulator.activeFilters[filterName] = value
+
             return accumulator
         }
-
-        // Decode data
-        value = decodeURIComponent(value)
-
-        // Convert null to proper type
-        if (value === 'null') {
-            value = null
-
-        // Parse numbers
-        } else if (/^\d+$/.test(value)) {
-            value = parseInt(value, 10)
-        }
-
-        // Check if the filter value exists
-        if (!FILTERS[key]?.values.includes(value)) {
-            return accumulator
-        }
-
-        // Assign the filter name to filter value
-        accumulator.activeFilters[key] = value
 
         return accumulator
     }, {
@@ -182,35 +199,35 @@ function getUrlQueryStringData() {
  * @param {Object} activeFilters Object of currently active filter names and their values.
  */
 function updateUrlQueryString(searchQuery, activeSorting, activeFilters) {
-    // Template object
-    const object = {}
+    // Map of all filters, sorting, and the search query
+    const data = new Map()
 
     // Process all filters
     for (const [ filterName, filterValue ] of Object.entries(activeFilters)) {
         if (filterValue !== false) {
-            object[filterName] = filterValue
+            data.set(`filter-${filterName}`, filterValue)
         }
     }
 
-    // Process sorting, assigning an index to each column to represent the order they were sorted in
-    let index = 0
-
+    // Process sorting, due to sorting and data both being maps, the sorting order will be preserved
     for (const [ column, direction ] of activeSorting) {
-        object[`${index.toString().padStart(2, '0')}${column}`] = direction
-
-        index += 1
+        data.set(`sorting-${column}`, direction)
     }
 
     // Add search query, if any
-    if (searchQuery.length) {
-        object.searchQuery = searchQuery
+    if (searchQuery) {
+        data.set('search', searchQuery)
     }
 
-    // Convert the object to a proper string
-    const string = Object.entries(object).map(([ key, value ]) => `${key}=${value}`).join('&')
+    // Convert the map into a query string
+    const queryString = []
+
+    for (const [ key, value ] of data) {
+        queryString.push(`${key}=${value}`)
+    }
 
     // Update the URL
-    window.history.replaceState(undefined, document.title, `${window.location.pathname}?${string}`)
+    window.history.replaceState(undefined, document.title, `${window.location.pathname}?${queryString.join('&')}`)
 }
 
 /**
