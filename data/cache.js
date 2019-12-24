@@ -107,7 +107,7 @@ async function loadCache() {
 
         // Check if the cache is too old
         if (Date.now() - cache.updated > 2.628e9) {
-            console.log(`Cache is over a month old, update by passing the ${yellow('cache')} argument`)
+            console.log('Cache is over a month old, consider deleting it so that it\'s generated again')
         } else {
             console.log('Successfully loaded cache')
         }
@@ -142,7 +142,6 @@ async function saveCache(data, isUpdate = false) {
 // Exports
 module.exports = {
     getAnimeData,
-    generateCache,
     updateCache,
     loadCache,
     saveCache,

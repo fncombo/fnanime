@@ -15,7 +15,7 @@ const singleLineLog = require('single-line-log').stdout
 
 // Helpers
 const { removeInvalidChars, getRewatchCount, getDuration, getFavoriteStatus, animeProxy } = require('./helpers.js')
-const { generateCache, updateCache, loadCache, saveCache } = require('./cache.js')
+const { updateCache, loadCache, saveCache } = require('./cache.js')
 const { validateLocalData } = require('./validation.js')
 
 // Location of the file to save data to
@@ -305,27 +305,19 @@ getApiData().then(async () => {
     // Argument to validate local data using ffprobe
     const validate = process.argv.includes('validate')
 
-    // Generate new cache if the argument has been passed, then save it
-    if (process.argv.includes('cache')) {
-        CACHE = await generateCache()
+    // Attempt to load and update cache
+    CACHE = await loadCache()
 
-        await saveCache(CACHE)
+    // Attempt to update cache with any missing anime
+    const animeIds = []
 
-    // Load existing cache
-    } else {
-        CACHE = await loadCache()
-
-        // Attempt to update cache with any missing anime
-        const animeIds = []
-
-        for (const { id } of Object.values(ALL_ANIME)) {
-            animeIds.push(id)
-        }
-
-        await updateCache(CACHE, animeIds)
-
-        await saveCache(CACHE, true)
+    for (const { id } of Object.values(ALL_ANIME)) {
+        animeIds.push(id)
     }
+
+    await updateCache(CACHE, animeIds)
+
+    await saveCache(CACHE, true)
 
     processCacheData()
 
