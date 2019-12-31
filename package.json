@@ -59,7 +59,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "ffprobe-client": "^1.1.5",
+    "ffprobe-client": "^1.1.6",
     "get-folder-size": "^2.0.1",
     "has": "^1.0.3",
     "js-beautify": "^1.10.2",
@@ -67,7 +67,7 @@
     "node-fetch": "^2.6.0",
     "simple-git": "^1.129.0",
     "single-line-log": "^1.1.2",
-    "stylelint": "^12.0.0",
+    "stylelint": "^12.0.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.12.1"
