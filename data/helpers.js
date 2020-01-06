@@ -6,7 +6,7 @@ const TYPES = {
     resolution: [ 1080, 720, 576, 480, 360 ],
     source: [ 'BD', 'TV', 'Web', 'DVD' ],
     videoCodec: [ 'H.265', 'H.264' ],
-    audioCodec: [ 'FLAC', 'DTS', 'AAC', 'AC3' ],
+    audioCodec: [ 'FLAC', 'DTS', 'AAC', 'AC3', 'Opus' ],
     bits: [ 10, 8 ],
 }
 

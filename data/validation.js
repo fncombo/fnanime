@@ -50,9 +50,9 @@ const AUDIO_CODEC_MAP = {
     dts: 'DTS',
     aac: 'AAC',
     ac3: 'AC3',
+    opus: 'Opus',
     vorbis: 'Other',
     mp3: 'Other',
-    opus: 'Other',
 }
 
 // Array of valid subtitle formats to check for
