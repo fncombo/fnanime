@@ -1,5 +1,5 @@
 {
-    "updated": 1578759483664,
+    "updated": 1578760134036,
     "anime": {
         "20": {
             "id": 20,
@@ -9279,13 +9279,13 @@
             "url": "https://myanimelist.net/anime/37520/Dororo",
             "favorite": false,
             "genres": [1, 2, 13, 6, 37, 21, 27],
-            "subs": ["Hakata Ramen"],
+            "subs": ["Judas"],
             "resolution": 1080,
-            "source": "Web",
+            "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "Opus",
-            "size": 7009170488,
+            "audioCodec": "FLAC",
+            "size": 7787422939,
             "studios": ["Tezuka Productions", "MAPPA"],
             "episodeDuration": 24
         },
@@ -9525,7 +9525,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 28246259000,
+            "size": 29688278969,
             "studios": ["CloverWorks"],
             "episodeDuration": 23
         },
@@ -9621,7 +9621,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 17401500836,
+            "size": 18852961808,
             "studios": ["Bones"],
             "episodeDuration": 24
         },
