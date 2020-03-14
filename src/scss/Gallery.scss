@@ -127,6 +127,7 @@ $gap: 5px;
     overflow: hidden;
     position: relative;
     z-index: 10;
+    will-change: opacity, box-shadow, transform;
 
     @media (hover: hover) {
         .gallery-item:hover & {
