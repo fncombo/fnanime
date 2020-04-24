@@ -1,16 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import 'src/styles/Badge.scss'
+import { FILTERS } from 'src/data/filters'
 
-import { FILTERS } from 'src/data/Filters'
+import { PROP_TYPES } from 'src/helpers/generic'
+
+import 'src/styles/Badge.scss'
 
 /**
  * A badge for an anime to display the watch status with episode count if watching. Optionally can display
  * the anime rating and link to open an anime's info box.
  */
-export default function Badge({ showRating, showAirStatus, onClick, ...anime }) {
+export default function Badge({ hasRating = false, hasAirStatus = false, onClick = undefined, anime = null }) {
     // Anime wasn't found
     if (!anime) {
         return null
@@ -19,24 +22,19 @@ export default function Badge({ showRating, showAirStatus, onClick, ...anime }) 
     const { status, airStatus, rating, episodes, episodesWatched } = anime
 
     // Only show rating when the option is true and the anime is either watching, completed, on-hold, or dropped
-    const includeRating = showRating && status < 5
+    const includeRating = hasRating && status < 5
 
     // Only show air status when the option is true and anime is not completed and the air status has a description
-    const includeAirStatus = showAirStatus && airStatus !== 2 && FILTERS.airStatus.descriptions[airStatus]
+    const includeAirStatus = hasAirStatus && airStatus !== 2 && FILTERS.airStatus.descriptions[airStatus]
 
     // Only show episodes when at least 1 and not all episodes have been watched, or the status is watching
     const includeEpisodes = ((episodesWatched !== 0 && episodesWatched !== episodes) || status === 1) && !includeRating
 
     // Make the badge small if the rating was asked for or air status is being included
-    const isSmall = showRating
+    const isSmall = hasRating
 
-    // Title and onClick handler attributes if onClick was provided
-    const attributes = onClick
-        ? {
-              title: 'View',
-              onClick,
-          }
-        : {}
+    // Title if onClick was provided
+    const title = onClick ? 'View' : undefined
 
     const classes = classNames(
         'tag is-rounded',
@@ -56,7 +54,7 @@ export default function Badge({ showRating, showAirStatus, onClick, ...anime }) 
         })
 
         return (
-            <div className={mainClasses} {...attributes}>
+            <div className={mainClasses} onClick={onClick} title={title}>
                 <span className={classes}>
                     {FILTERS.status.fancyDescriptions[status]}
                     {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
@@ -77,9 +75,16 @@ export default function Badge({ showRating, showAirStatus, onClick, ...anime }) 
     }
 
     return (
-        <span className={classes} {...attributes}>
+        <span className={classes} onClick={onClick} title={title}>
             {FILTERS.status.fancyDescriptions[status]}
             {includeAirStatus && `, ${FILTERS.airStatus.descriptions[airStatus]}`}
         </span>
     )
+}
+
+Badge.propTypes = {
+    hasRating: PropTypes.bool,
+    hasAirStatus: PropTypes.bool,
+    onClick: PropTypes.func,
+    anime: PROP_TYPES.ANIME,
 }

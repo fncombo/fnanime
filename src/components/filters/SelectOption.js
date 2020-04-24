@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
-import { FiltersState } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
+import { FiltersState } from 'src/data/global-state'
 
 /**
  * Single filter option in a select list for a value of a filter with a count of how many anime currently match it.
@@ -22,4 +23,9 @@ export default function SelectOption({ filterName, children: filterValue }) {
             {!!filterValue && !!count && ` (${count})`}
         </option>
     )
+}
+
+SelectOption.propTypes = {
+    filterName: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]).isRequired,
 }

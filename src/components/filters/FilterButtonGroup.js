@@ -1,15 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import 'src/styles/Filters.scss'
-
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
 
 import FilterButton from 'src/components/filters/FilterButton'
+
+import 'src/styles/Filters.scss'
 
 /**
  * Group of buttons for a filter.
  */
-export default function FilterButtonGroup({ filterName, isFullWidth }) {
+export default function FilterButtonGroup({ filterName, isFullWidth = false }) {
     // The button group is either half wide or takes up the whole row
     const classes = `column buttons has-addons is-flex is-12-mobile ${isFullWidth ? 'is-12-tablet' : 'is-6-tablet'}`
 
@@ -22,4 +23,9 @@ export default function FilterButtonGroup({ filterName, isFullWidth }) {
             ))}
         </div>
     )
+}
+
+FilterButtonGroup.propTypes = {
+    filterName: PropTypes.string.isRequired,
+    isFullWidth: PropTypes.bool,
 }

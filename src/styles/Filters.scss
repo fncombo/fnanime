@@ -1,9 +1,9 @@
-@import '_base';
+@import "_base";
 
 // Bulma form
-@import '~bulma/sass/form/shared.sass';
-@import '~bulma/sass/form/input-textarea.sass';
-@import '~bulma/sass/form/select.sass';
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/input-textarea.sass";
+@import "~bulma/sass/form/select.sass";
 
 .filters {
     @include mobile {
@@ -11,28 +11,28 @@
     }
 
     .buttons {
+        overflow: hidden;
         flex-wrap: nowrap;
         align-items: normal;
-        overflow: hidden;
-        margin: 0;
+        margin: 0 !important;
 
         @include mobile {
-            padding-right: 0;
             overflow: scroll;
+            padding-right: 0;
             -webkit-overflow-scrolling: touch;
 
             &::after {
-                content: '';
                 display: inline-flex;
                 min-width: $column-gap;
                 flex: 0 0 $column-gap;
+                content: "";
             }
         }
 
         .button {
             display: block;
-            flex: 1 1 auto;
             height: 2.5em;
+            flex: 1 1 auto;
             padding: 0.25rem;
             margin-bottom: -$column-gap;
             box-shadow: none !important;
@@ -52,11 +52,11 @@
                 opacity: 0.5;
 
                 &::before {
-                    content: '\00a0(';
+                    content: "\00a0(";
                 }
 
                 &::after {
-                    content: ')';
+                    content: ")";
                 }
             }
 
@@ -80,8 +80,8 @@
 
     .summary {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
     .column:not(.buttons) {

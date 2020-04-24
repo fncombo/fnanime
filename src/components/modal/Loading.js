@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import { SlideDown } from 'react-slidedown'
 
-import { ModalState } from 'src/data/GlobalState'
+import { ModalState } from 'src/data/global-state'
 
 import Icon from 'src/components/Icon'
 
@@ -21,6 +22,10 @@ function Loading({ children, ...rest }) {
     return isLoaded ? children : <span {...rest} />
 }
 
+Loading.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
 /**
  * Inline, shorter loading placeholder.
  */
@@ -28,11 +33,19 @@ function LoadingInline({ children }) {
     return <Loading className="loading-text loading-inline">{children}</Loading>
 }
 
+LoadingInline.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
 /**
  * Full line loading placeholder.
  */
 function LoadingText({ children }) {
     return <Loading className="loading-text">{children}</Loading>
+}
+
+LoadingText.propTypes = {
+    children: PropTypes.node.isRequired,
 }
 
 /**
@@ -79,5 +92,8 @@ function LoadingParagraph({ children }) {
     )
 }
 
-// Exports
+LoadingParagraph.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
 export { LoadingInline, LoadingText, LoadingParagraph }

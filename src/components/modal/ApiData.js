@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 
-import { ModalState } from 'src/data/GlobalState'
+import { ModalState } from 'src/data/global-state'
 
-import { getNestedProperty } from 'src/helpers/Modal'
+import { getNestedProperty } from 'src/helpers/modal'
 
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.

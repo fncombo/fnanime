@@ -31,7 +31,7 @@ export default function RelatedList({ data }) {
             <strong>{type}</strong>
             <ul className="related-list">
                 {allAnime.map((anime) => (
-                    <RelatedListItem key={anime.mal_id} {...anime} />
+                    <RelatedListItem key={anime.mal_id} anime={anime} />
                 ))}
             </ul>
         </Fragment>

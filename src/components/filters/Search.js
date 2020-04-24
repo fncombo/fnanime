@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 
-import 'src/styles/Filters.scss'
+import { ACTIONS, GlobalState } from 'src/data/global-state'
 
-import { GlobalState, ACTIONS } from 'src/data/GlobalState'
+import 'src/styles/Filters.scss'
 
 /**
  * Search input to filter anime by a query string.
@@ -13,7 +13,9 @@ export default function Search() {
         dispatch,
     } = useContext(GlobalState)
 
-    // Callback for the search input change
+    /**
+     * Callback for the search input change.
+     */
     function searchCallback({ target: { value } }) {
         dispatch({
             type: ACTIONS.SEARCH,

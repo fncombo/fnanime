@@ -3,7 +3,6 @@ const { readFile, writeFile } = require('fs').promises
 
 const has = require('has')
 const { eachSeries } = require('async')
-const beautify = require('js-beautify')
 const { magenta, yellow } = require('chalk')
 const fetch = require('node-fetch')
 
@@ -12,6 +11,9 @@ const CACHE_LOCATION = 'cache.json'
 
 /**
  * Get detailed data (for use in cache) about a single anime.
+ *
+ * @param animeId
+ * @param tryCount
  */
 async function getAnimeData(animeId, tryCount = 1) {
     // Stop after too many retries
@@ -53,6 +55,8 @@ async function getAnimeData(animeId, tryCount = 1) {
 
 /**
  * Generate cache data for all given anime IDs.
+ *
+ * @param animeIds
  */
 async function generateCache(animeIds) {
     console.log('Generating new cache, this will take a while')
@@ -75,6 +79,9 @@ async function generateCache(animeIds) {
 
 /**
  * Updates provided current cache with anime IDs which are not present in it.
+ *
+ * @param cache
+ * @param animeIds
  */
 async function updateCache(cache, animeIds) {
     // Filter to get only anime IDs which aren't already present in the cache
@@ -123,9 +130,12 @@ async function loadCache() {
 
 /**
  * Save cache data to file.
+ *
+ * @param data
+ * @param isUpdate
  */
 async function saveCache(data, isUpdate = false) {
-    const saveData = beautify(JSON.stringify(data))
+    const saveData = JSON.stringify(data, null, 4)
 
     try {
         await writeFile(CACHE_LOCATION, saveData)
@@ -138,7 +148,6 @@ async function saveCache(data, isUpdate = false) {
     return true
 }
 
-// Exports
 module.exports = {
     getAnimeData,
     updateCache,

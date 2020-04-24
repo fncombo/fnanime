@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { formatDuration } from 'src/helpers/Generic'
+import { formatDuration, PROP_TYPES } from 'src/helpers/generic'
 
 /**
  * Displays the total duration of the anime and the duration per episode.
  */
-export default function Duration({ episodeDuration, episodes }) {
+export default function Duration({ anime: { episodeDuration, episodes } }) {
     if (!episodeDuration || !episodes) {
         return 'Unknown'
     }
@@ -18,4 +18,8 @@ export default function Duration({ episodeDuration, episodes }) {
             )}
         </>
     )
+}
+
+Duration.propTypes = {
+    anime: PROP_TYPES.ANIME.isRequired,
 }

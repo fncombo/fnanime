@@ -1,60 +1,60 @@
-@import '_base';
+@import "_base";
 
 .fnheader {
-    background: $backdrop-background-light-fallback;
-    height: $sticky-panel-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: sticky;
-    top: 0;
     z-index: 30;
+    top: 0;
+    display: flex;
+    height: $sticky-panel-height;
+    align-items: center;
+    justify-content: center;
+    background: $backdrop-background-light-fallback;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
     @supports (backdrop-filter: $backdrop-filter) {
-        background: $backdrop-background-light;
         backdrop-filter: $backdrop-filter;
+        background: $backdrop-background-light;
     }
 }
 
 .fnheader::before {
-    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
-    content: '';
-    display: block;
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
+    display: block;
     height: 2px;
+    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
+    content: "";
 }
 
 .fnheader h1 {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
     color: #000;
     font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .fnheader h1 a {
+    position: relative;
     margin-left: 0.25rem;
     background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
 }
 
 .fnheader h1 a::after {
-    content: '';
-    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
-    display: block;
     position: absolute;
+    right: -1px;
     bottom: 0;
     left: -1px;
-    right: -1px;
+    display: block;
     height: 2px;
+    background: linear-gradient(to right, rgb(130, 180, 50), rgb(80, 160, 240));
     border-radius: 2px;
+    content: "";
     opacity: 0;
     transition: opacity 0.15s ease-in-out;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import SelectOption from 'src/components/filters/SelectOption'
 
@@ -20,4 +21,10 @@ export default function SelectOptionGroup({ filterName, options, children: label
             ))}
         </optgroup>
     )
+}
+
+SelectOptionGroup.propTypes = {
+    filterName: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
+    children: PropTypes.string.isRequired,
 }

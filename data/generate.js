@@ -4,7 +4,6 @@ const { promisify } = require('util')
 
 const has = require('has')
 const { eachSeries } = require('async')
-const beautify = require('js-beautify')
 const { green, magenta, red, yellow } = require('chalk')
 const fetch = require('node-fetch')
 const getFolderSize = promisify(require('get-folder-size'))
@@ -75,6 +74,8 @@ const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2
 
 /**
  * Update anime data from the API.
+ *
+ * @param allAnime
  */
 function processApiData(allAnime) {
     allAnime.forEach((anime) => {
@@ -113,6 +114,10 @@ function processApiData(allAnime) {
 
 /**
  * Save anime data from local folders and files.
+ *
+ * @param filename
+ * @param size
+ * @param folder
  */
 function processLocalData(filename, size, folder) {
     // Ignore rubbish
@@ -197,6 +202,8 @@ function processCacheData() {
 
 /**
  * Process user profile data.
+ *
+ * @param userProfileData
  */
 function processUserProfileData(userProfileData) {
     // Assign each anime its favorite status and order
@@ -209,6 +216,9 @@ function processUserProfileData(userProfileData) {
 
 /**
  * Get anime list API data.
+ *
+ * @param page
+ * @param isRetry
  */
 async function getApiData(page = 1, isRetry = false) {
     // Stop after too many retries
@@ -259,6 +269,8 @@ async function getApiData(page = 1, isRetry = false) {
 
 /**
  * Get all the user profile data.
+ *
+ * @param isRetry
  */
 async function getUserProfileData(isRetry = false) {
     // Stop after too many retries
@@ -417,7 +429,7 @@ getApiData()
 
         // Save all anime data
         try {
-            await writeFile(ANIME_JSON_LOCATION, beautify(JSON.stringify(saveData)))
+            await writeFile(ANIME_JSON_LOCATION, JSON.stringify(saveData, null, 4))
         } catch (error) {
             throw new Error('Could not save anime data JSON')
         }

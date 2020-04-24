@@ -1,11 +1,16 @@
 import clone from 'clone'
 
-import { DEFAULTS } from 'src/data/Data'
-import { FILTER_NAMES, FILTERS } from 'src/data/Filters'
-import { TABLE_COLUMN_NAMES, SORTING_ORDERS } from 'src/data/Table'
+import { DEFAULTS } from 'src/data/data'
+import { FILTER_NAMES, FILTERS } from 'src/data/filters'
+import { SORTING_ORDERS, TABLE_COLUMN_NAMES } from 'src/data/table'
 
 /**
  * Get updated API date to display the latest info such as episode watch progress.
+ *
+ * @param {number} page The API page number to get.
+ * @param {boolean|number} isRetry Whether or not this request is a retry.
+ *
+ * @returns {object} API data.
  */
 async function getApiData(page = 1, isRetry = false) {
     // Collect new API data
@@ -75,6 +80,8 @@ async function getApiData(page = 1, isRetry = false) {
 
 /**
  * Returns complete and validated filtering, sorting, and search data found in the query string.
+ *
+ * @returns {object} Filtering, sorting, and search data.
  */
 function getUrlQueryStringData() {
     // Check if the string has data to work with
@@ -122,7 +129,8 @@ function getUrlQueryStringData() {
                 if (keyType === 'sorting') {
                     const column = keyValue
 
-                    // Check if this is valid table column or the hidden "favorite" field, and that the sorting order is valid
+                    // Check if this is valid table column or the hidden "favorite" field,
+                    // and that the sorting order is valid
                     if ((TABLE_COLUMN_NAMES.includes(column) || column === 'favorite') && SORTING_ORDERS[value]) {
                         const index = parseInt(key.slice(0, 2), 10)
 
@@ -199,9 +207,10 @@ function getUrlQueryStringData() {
 
 /**
  * Updates the URL to reflect the provided search, sorting, and filtering.
+ *
  * @param {string} searchQuery Current search string.
  * @param {Map} activeSorting Map of the current table sorting settings.
- * @param {Object} activeFilters Object of currently active filter names and their values.
+ * @param {object} activeFilters Object of currently active filter names and their values.
  */
 function updateUrlQueryString(searchQuery, activeSorting, activeFilters) {
     // Map of all filters, sorting, and the search query
@@ -242,5 +251,4 @@ function resetUrlQueryString() {
     window.history.replaceState(undefined, document.title, window.location.pathname)
 }
 
-// Exports
 export { getApiData, getUrlQueryStringData, updateUrlQueryString, resetUrlQueryString }

@@ -1,23 +1,23 @@
 import React from 'react'
 
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
 
 /**
  * Array of values which should be comma-separated. Can look up description from filters.
  */
-export default function MultiValueData({ data, ...anime }) {
+export default function MultiValueData({ data, anime }) {
     // No data, fallback on a dash
     if (!data) {
         return <>&mdash;</>
     }
 
     // If data is an array, make a comma-separated list
-    if (Array.isArray(data) && data.length) {
-        return data.join(', ')
+    if (Array.isArray(data)) {
+        return data.length ? data.join(', ') : <>&mdash;</>
     }
 
     // If the data property is not present on the anime, or it's not an array with values, fallback on a dash
-    if (!anime[data] || !Array.isArray(anime[data]) || !anime[data].length) {
+    if (!anime[data]?.length) {
         return <>&mdash;</>
     }
 

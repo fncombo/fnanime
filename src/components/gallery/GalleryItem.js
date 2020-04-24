@@ -1,14 +1,16 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import classNames from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
-import 'src/styles/Gallery.scss'
+import { FILTERS } from 'src/data/filters'
 
-import { FILTERS } from 'src/data/Filters'
+import { PROP_TYPES } from 'src/helpers/generic'
 
-import ModalContainer from 'src/components/modal/ModalContainer'
 import Favorite from 'src/components/Favorite'
+import ModalContainer from 'src/components/modal/ModalContainer'
+
+import 'src/styles/Gallery.scss'
 
 // Width of the gallery item
 const ITEM_WIDTH = 165
@@ -26,7 +28,7 @@ const GALLERY_ITEM_OPTIONS = {
 /**
  * Gallery item for a single anime including the image, type, status, and favorite icon.
  */
-export default function GalleryItem(anime) {
+export default function GalleryItem({ anime }) {
     const [hoverClass, setHoverClass] = useState('')
     const [tooltipStyle, setTooltipStyle] = useState({})
     const [itemRef, inView] = useInView(GALLERY_ITEM_OPTIONS)
@@ -37,7 +39,9 @@ export default function GalleryItem(anime) {
         return <div className="gallery-item-placeholder" ref={itemRef} />
     }
 
-    // Calculate whether the item is very close to the left or right edge to alter it's scaling on hover
+    /**
+     * Calculate whether the item is very close to the left or right edge to alter it's scaling on hover.
+     */
     function hoverCallback({ currentTarget }) {
         const itemBounds = currentTarget.getBoundingClientRect()
         const gallerySectionBounds = currentTarget.parentNode.parentNode.getBoundingClientRect()
@@ -46,20 +50,18 @@ export default function GalleryItem(anime) {
             bottom: gallerySectionBounds.height - currentTarget.offsetTop,
         }
 
-        // Close to the left
         if (itemBounds.x <= ITEM_WIDTH / 4) {
+            // Close to the left
             setHoverClass('is-left')
 
             style.left = currentTarget.offsetLeft
-
+        } else if (itemBounds.x + ITEM_WIDTH + ITEM_WIDTH / 7 >= window.innerWidth) {
             // Close to the right
-        } else if (itemBounds.x + ITEM_WIDTH + ITEM_WIDTH / 8 >= window.innerWidth) {
             setHoverClass('is-right')
 
             style.right = gallerySectionBounds.width - currentTarget.offsetLeft - itemBounds.width
-
-            // Reset previous class
         } else if (hoverClass.length) {
+            // Reset previous class
             setHoverClass('')
         }
 
@@ -88,11 +90,15 @@ export default function GalleryItem(anime) {
                         FILTERS.type.descriptions[type]
                     )}
                 </span>
-                <Favorite showHash>{favorite}</Favorite>
+                <Favorite hasHash>{favorite}</Favorite>
             </div>
             <div className="gallery-item-tooltip" style={tooltipStyle} ref={tooltipRef}>
                 {title}
             </div>
         </ModalContainer>
     )
+}
+
+GalleryItem.propTypes = {
+    anime: PROP_TYPES.ANIME.isRequired,
 }

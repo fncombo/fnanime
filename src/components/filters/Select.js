@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
-import { GlobalState, FiltersState, ACTIONS } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
 
 import SelectOption from 'src/components/filters/SelectOption'
 import SelectOptionGroup from 'src/components/filters/SelectOptionGroup'
@@ -16,7 +17,9 @@ export default function Select({ filterName }) {
     } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
-    // Callback to update the anime list when selecting this filter
+    /**
+     * Callback to update the anime list when selecting this filter.
+     */
     function selectFilterCallback({ target: { value: filterValue } }) {
         let actualFilterValue = filterValue
 
@@ -68,4 +71,8 @@ export default function Select({ filterName }) {
             </select>
         </div>
     )
+}
+
+Select.propTypes = {
+    filterName: PropTypes.string.isRequired,
 }

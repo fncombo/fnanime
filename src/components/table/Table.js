@@ -1,14 +1,14 @@
 import React, { useContext, useReducer } from 'react'
 
-import 'src/styles/Table.scss'
-
-import { GlobalState, TableState, ACTIONS } from 'src/data/GlobalState'
-import { DEFAULTS } from 'src/data/Data'
+import { DEFAULTS } from 'src/data/data'
+import { ACTIONS, GlobalState, TableState } from 'src/data/global-state'
 
 import Icon from 'src/components/Icon'
+import Pagination from 'src/components/pagination/Pagination'
 import Header from 'src/components/table/Header'
 import Row from 'src/components/table/Row'
-import Pagination from 'src/components/pagination/Pagination'
+
+import 'src/styles/Table.scss'
 
 // Default table state
 const INITIAL_TABLE_STATE = {
@@ -18,8 +18,8 @@ const INITIAL_TABLE_STATE = {
 /**
  * Table state reducer.
  */
-function tableStateReducer(state, action) {
-    switch (action.type) {
+function tableStateReducer(state, { type, page }) {
+    switch (type) {
         case ACTIONS.NEXT_PAGE:
             return { page: state.page + 1 }
 
@@ -27,7 +27,7 @@ function tableStateReducer(state, action) {
             return { page: state.page - 1 }
 
         case ACTIONS.SET_PAGE:
-            return { page: action.page }
+            return { page }
 
         default:
             return state
@@ -63,7 +63,7 @@ export default function Table() {
                 <div className="table">
                     <Header />
                     {allAnime.slice((state.page - 1) * DEFAULTS.perPage, state.page * DEFAULTS.perPage).map((anime) => (
-                        <Row key={anime.id} {...anime} />
+                        <Row key={anime.id} anime={anime} />
                     ))}
                     <Pagination />
                 </div>

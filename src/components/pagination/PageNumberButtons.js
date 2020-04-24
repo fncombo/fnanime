@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 
-import 'src/styles/Pagination.scss'
-
-import { TableState } from 'src/data/GlobalState'
-import { DEFAULTS } from 'src/data/Data'
+import { DEFAULTS } from 'src/data/data'
+import { TableState } from 'src/data/global-state'
 
 import NumberButton from 'src/components/pagination/NumberButton'
+
+import 'src/styles/Pagination.scss'
 
 /**
  * Number buttons to navigate the table. Some number buttons are truncated when the are too many between the current

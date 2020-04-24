@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
+
+import { Portal } from 'react-portal'
+
+import { PROP_TYPES } from 'src/helpers/generic'
 
 import Modal from 'src/components/modal/Modal'
-
-// DOM element into which to portal the modal
-const MODAL_ELEMENT = document.getElementById('modal')
 
 /**
  * Makes any element a button to open a portal to a modal.
@@ -12,7 +13,9 @@ const MODAL_ELEMENT = document.getElementById('modal')
 export default function ModalContainer({ as: Element = 'a', anime, children, ...rest }) {
     const [isModalOpen, setModalOpen] = useState(false)
 
-    // Callback to open the modal when the main element is clicked
+    /**
+     * Callback to open the modal when the main element is clicked.
+     */
     function openModal(event) {
         if (event.button === 0) {
             event.preventDefault()
@@ -21,7 +24,9 @@ export default function ModalContainer({ as: Element = 'a', anime, children, ...
         }
     }
 
-    // Callback to close the modal
+    /**
+     * Callback to close the modal.
+     */
     function closeModal() {
         setModalOpen(false)
     }
@@ -30,10 +35,10 @@ export default function ModalContainer({ as: Element = 'a', anime, children, ...
     const linkAttributes =
         Element === 'a'
             ? {
-                  href: anime.url,
-                  target: '_blank',
-                  rel: 'noopener noreferrer',
-              }
+                href: anime.url,
+                target: '_blank',
+                rel: 'noopener noreferrer',
+            }
             : {}
 
     // Do not put modal inside the Element as that messes up click events: they all get handled by `openModal`
@@ -43,7 +48,17 @@ export default function ModalContainer({ as: Element = 'a', anime, children, ...
             <Element onClick={openModal} {...linkAttributes} {...rest}>
                 {children}
             </Element>
-            {isModalOpen && ReactDOM.createPortal(<Modal closeModal={closeModal} {...anime} />, MODAL_ELEMENT)}
+            {isModalOpen && (
+                <Portal>
+                    <Modal closeModal={closeModal} anime={anime} />
+                </Portal>
+            )}
         </>
     )
+}
+
+ModalContainer.propTypes = {
+    as: PropTypes.string,
+    anime: PROP_TYPES.ANIME.isRequired,
+    children: PropTypes.node.isRequired,
 }

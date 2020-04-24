@@ -1,15 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import { FILTERS } from 'src/data/filters'
+
+import { PROP_TYPES } from 'src/helpers/generic'
+import { add } from 'src/helpers/statistics'
 
 import 'src/styles/Statistics.scss'
-
-import { FILTERS } from 'src/data/Filters'
-
-import { add } from 'src/helpers/Statistics'
 
 /**
  * Column of statistics for specific data within a rating. Accepts a format function to modify data.
  */
-export default function StatisticsColumn({ rating, data, formatFunction, showPercentage }) {
+export default function StatisticsColumn({ rating, data, formatFunction = undefined, hasPercentage = false }) {
     // Total of this data for this rating
     const ratingData = data.totals[rating]
     const sum = ratingData.reduce(add)
@@ -23,7 +25,7 @@ export default function StatisticsColumn({ rating, data, formatFunction, showPer
     return (
         <div className="column">
             {formatFunction ? formatFunction(sum) : sum.toLocaleString()}
-            {!!showPercentage &&
+            {!!hasPercentage &&
                 sum !== data.count &&
                 !!rating &&
                 ` (${Math.round((sum / data.count) * 100).toLocaleString()}%)`}
@@ -48,4 +50,11 @@ export default function StatisticsColumn({ rating, data, formatFunction, showPer
             </div>
         </div>
     )
+}
+
+StatisticsColumn.propTypes = {
+    rating: PropTypes.number.isRequired,
+    data: PROP_TYPES.STATISTICS.isRequired,
+    formatFunction: PropTypes.func,
+    hasPercentage: PropTypes.bool,
 }

@@ -23,6 +23,7 @@
     "clone": "^2.1.2",
     "copy-text-to-clipboard": "^2.2.0",
     "fast-sort": "^2.1.1",
+    "fibers": "^5.0.0",
     "filesize": "^6.1.0",
     "fuse.js": "^5.2.3",
     "gatsby": "^2.20.31",
@@ -33,13 +34,15 @@
     "gatsby-source-filesystem": "^2.2.5",
     "node-sass": "^4.14.0",
     "pretty-ms": "^6.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
     "react-intersection-observer": "^8.26.1",
-    "react-scripts": "^3.4.1",
+    "react-portal": "^4.2.1",
     "react-slidedown": "^2.4.5",
-    "react-snap": "^1.23.0",
-    "react-string-replace": "^0.4.4"
+    "react-string-replace": "^0.4.4",
+    "sass": "^1.26.5"
   },
   "devDependencies": {
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
@@ -60,7 +63,6 @@
     "get-folder-size": "^2.0.1",
     "has": "^1.0.3",
     "husky": "^4.2.5",
-    "js-beautify": "^1.11.0",
     "lint-staged": "^10.1.7",
     "log4js": "^6.2.1",
     "node-fetch": "^2.6.0",
@@ -78,7 +80,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "eslint \"**/*.js\" --fix && prettier \"**/*.{js,json}\" --write && stylelint \"src/**/*.scss\" --syntax scss --fix",
+    "format": "eslint \"**/*.js\" --fix && prettier \"**/*.{js,json}\" --write && stylelint \"**/*.scss\" --syntax scss --fix",
     "start": "npm run develop",
     "clean": "gatsby clean"
   },

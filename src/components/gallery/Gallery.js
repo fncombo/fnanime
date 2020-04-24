@@ -2,9 +2,9 @@ import React from 'react'
 
 import { useInView } from 'react-intersection-observer'
 
-import 'src/styles/Gallery.scss'
-
 import GallerySection from 'src/components/gallery/GallerySection'
+
+import 'src/styles/Gallery.scss'
 
 // Intersection options for the component and individual items
 const GALLERY_OPTIONS = {

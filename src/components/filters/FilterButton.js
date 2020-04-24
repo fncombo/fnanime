@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import 'src/styles/Filters.scss'
+import { FILTERS } from 'src/data/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
 
-import { GlobalState, FiltersState, ACTIONS } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import 'src/styles/Filters.scss'
 
 /**
  * Single filter button for a value of a filter with a count of how many anime currently match it.
@@ -17,7 +18,9 @@ export default function FilterButton({ filterName, children: filterValue }) {
     } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
-    // Callback to update the anime list when selecting this filter
+    /**
+     * Callback to update the anime list when selecting this filter.
+     */
     function selectFilterCallback() {
         dispatch({
             type: ACTIONS.SELECT_FILTER,
@@ -48,4 +51,9 @@ export default function FilterButton({ filterName, children: filterValue }) {
             {!!count && notAllFilterValue && <span className="count">{count}</span>}
         </button>
     )
+}
+
+FilterButton.propTypes = {
+    filterName: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 }

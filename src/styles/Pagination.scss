@@ -1,10 +1,10 @@
-@import '_base';
+@import "_base";
 
 .pagination {
-    display: flex;
-    flex-wrap: wrap;
     position: sticky;
     bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 -0.75rem !important;
 
     @include mobile {
@@ -13,21 +13,21 @@
 
     // Page wide element to show the shadow when stuck
     &::before {
-        background: $backdrop-background-light-fallback;
-        content: '';
-        width: 200vw;
-        height: 100%;
-        display: block;
         position: absolute;
+        z-index: 1;
         top: 0;
         left: -50%;
-        z-index: 1;
+        display: block;
+        width: 200vw;
+        height: 100%;
+        background: $backdrop-background-light-fallback;
+        content: "";
         pointer-events: none;
         transition: box-shadow $duration-fast $easing;
 
         @include mobile {
-            width: 100%;
             left: 0;
+            width: 100%;
         }
     }
 
@@ -39,16 +39,16 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
             @supports (backdrop-filter: $backdrop-filter) {
-                background: $backdrop-background-light;
                 backdrop-filter: $backdrop-filter;
+                background: $backdrop-background-light;
             }
         }
     }
 
     .column {
+        z-index: 2;
         display: flex;
         align-items: center;
-        z-index: 2;
 
         @include mobile {
             flex: 0 1 auto;
@@ -62,13 +62,13 @@
     .icon {
         $size: 1.5rem;
 
-        background: none;
         width: $size * 1.25;
         height: 100%;
-        font-size: $size;
+        border: none;
+        background: none;
         color: $dark;
         cursor: pointer;
-        border: none;
+        font-size: $size;
         outline: none;
         transition: color $duration-fast $easing;
 
@@ -92,8 +92,8 @@
 
         &.is-disabled {
             opacity: 0;
-            visibility: hidden;
             pointer-events: none;
+            visibility: hidden;
         }
     }
 }
@@ -103,10 +103,10 @@
     justify-content: center;
 
     .button {
-        flex: 0 0 2.25em;
         width: 2.25em;
         height: 2.25em;
-        padding: 0.25rem;
+        flex: 0 0 2.25em;
+        padding: 0.25rem !important;
         margin: 0 0.25rem;
         transition: none !important;
 
@@ -119,18 +119,18 @@
 
 .pagination-ellipsis {
     display: flex;
-    flex: 0 0 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
-    margin: 0 0.25rem;
-    justify-content: center;
+    flex: 0 0 2.25rem;
     align-items: center;
+    justify-content: center;
+    margin: 0 0.25rem;
 }
 
 .pagination-sentinel {
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     pointer-events: none;
 }

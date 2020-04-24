@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { getSizeBarWidth, getSizeBarColor } from 'src/helpers/Table'
-import fileSize from 'src/helpers/FileSize'
+import fileSize from 'src/helpers/file-size'
+import { getSizeBarColor, getSizeBarWidth } from 'src/helpers/table'
 
 /**
  * Displays the formatted file size and a progress bar which is relative to the maximum and minimum sizes for the
@@ -22,4 +23,9 @@ export default function SizeBar({ size, type }) {
             <progress className={`progress is-${color}`} value={width} max="100" />
         </>
     )
+}
+
+SizeBar.propTypes = {
+    size: PropTypes.number.isRequired,
+    type: PropTypes.oneOf(['total', 'episode']).isRequired,
 }

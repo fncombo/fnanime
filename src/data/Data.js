@@ -1,8 +1,8 @@
 import { anime as ANIME_OBJECT } from 'src/data/data.json'
-import { FILTERS } from 'src/data/Filters'
-import { SORTING_ORDERS } from 'src/data/Table'
+import { FILTERS } from 'src/data/filters'
+import { SORTING_ORDERS } from 'src/data/table'
 
-import { calculateAdditionalData } from 'src/helpers/Data'
+import { calculateAdditionalData } from 'src/helpers/data'
 
 // Array of all current anime IDs
 const ANIME_IDS = Object.keys(ANIME_OBJECT)
@@ -33,5 +33,4 @@ calculateAdditionalData(ANIME_IDS)
 // Populate default filter data and filter values.
 FILTERS.createDefaults(ANIME_OBJECT)
 
-// Exports
 export { ANIME_OBJECT, ANIME_PROPS, DEFAULTS }

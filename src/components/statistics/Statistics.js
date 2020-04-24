@@ -2,15 +2,15 @@ import React, { useContext } from 'react'
 
 import { useInView } from 'react-intersection-observer'
 
-import 'src/styles/Statistics.scss'
+import { GlobalState } from 'src/data/global-state'
 
-import { GlobalState } from 'src/data/GlobalState'
-
-import { formatDuration } from 'src/helpers/Generic'
-import { getStatisticsAnime, calculateTotals } from 'src/helpers/Statistics'
-import fileSize from 'src/helpers/FileSize'
+import fileSize from 'src/helpers/file-size'
+import { formatDuration } from 'src/helpers/generic'
+import { calculateTotals, getStatisticsAnime } from 'src/helpers/statistics'
 
 import StatisticsRow from 'src/components/statistics/StatisticsRow'
+
+import 'src/styles/Statistics.scss'
 
 /**
  * Show all the ratings, the number of anime per rating, and a column for each of the other totals.
@@ -77,7 +77,7 @@ export default function Statistics() {
                     <h6>Total Watch Time</h6>
                 </div>
             </div>
-            {Array.from({ length: 10 }, (value, index) => index + 1)
+            {Array.from({ length: 10 }, (_, index) => index + 1)
                 .slice(firstNonZero, lastNonZero)
                 .map((rating) => <StatisticsRow rating={rating} totals={totals} key={rating} />)
                 .reverse()}

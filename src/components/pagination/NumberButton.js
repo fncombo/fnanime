@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
+
+import { ACTIONS, TableState } from 'src/data/global-state'
 
 import 'src/styles/Pagination.scss'
-
-import { TableState, ACTIONS } from 'src/data/GlobalState'
 
 /**
  * Single page button with a number which takes you to that page when clicked.
@@ -13,7 +14,9 @@ export default function NumberButton({ children: pageNumber }) {
         dispatch,
     } = useContext(TableState)
 
-    // Callback to switch the table to a specific page
+    /**
+     * Callback to switch the table to a specific page.
+     */
     function setPageCallback() {
         dispatch({
             type: ACTIONS.SET_PAGE,
@@ -31,4 +34,8 @@ export default function NumberButton({ children: pageNumber }) {
             {pageNumber}
         </button>
     )
+}
+
+NumberButton.propTypes = {
+    children: PropTypes.number.isRequired,
 }

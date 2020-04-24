@@ -1,4 +1,4 @@
-@import '_base';
+@import "_base";
 
 $gap: 5px;
 
@@ -28,15 +28,15 @@ $gap: 5px;
     }
 
     img {
-        height: var(--img-height);
         width: var(--img-width);
+        height: var(--img-height);
         pointer-events: none;
     }
 }
 
 .gallery-section {
-    margin-top: $section-gap;
     position: relative;
+    margin-top: $section-gap;
 }
 
 // Grid of gallery items
@@ -51,89 +51,91 @@ $gap: 5px;
 .gallery-heading-sentinel {
     position: absolute;
     top: -$sticky-panel-height;
-    left: 0;
     right: 0;
+    left: 0;
     pointer-events: none;
 }
 
 // Gallery heading
 .gallery-heading {
-    background: $backdrop-background-light-fallback;
-    height: $sticky-panel-height;
     position: sticky;
     top: $sticky-panel-height;
     display: flex;
-    justify-content: center;
+    height: $sticky-panel-height;
     align-items: center;
+    justify-content: center;
     margin: 0 -1rem !important;
-    transition: box-shadow $duration-fast $easing;
-    font-weight: 600;
+    background: $backdrop-background-light-fallback;
     font-size: 1.25rem;
+    font-weight: 600;
+    transition: box-shadow $duration-fast $easing;
 
     .icon {
         font-size: 1rem;
     }
 
     &.is-stuck {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
         z-index: 20;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
         @supports (backdrop-filter: $backdrop-filter) {
-            background: $backdrop-background-light;
             backdrop-filter: $backdrop-filter;
+            background: $backdrop-background-light;
         }
     }
 }
 
 // Detailed description text for each rating
 .gallery-detailed-description {
-    text-align: center;
     padding: 0 0 20px;
+    text-align: center;
 }
 
-// Item placeholder for when it shouldn't be rendered
+// Item placeholder for when it shouldn"t be rendered
 .gallery-item-placeholder {
-    flex: 0 0 var(--img-width);
     width: var(--img-width);
     height: calc(var(--img-height) + 2rem);
+    flex: 0 0 var(--img-width);
     margin: $gap;
 }
 
 // Gallery item
 .gallery-item {
-    flex: 0 0 var(--img-width);
+    z-index: 1;
     width: var(--img-width);
+    flex: 0 0 var(--img-width);
     margin: $gap;
     transition: z-index $duration-medium $easing;
-    z-index: 1;
 
     @media (hover: hover) {
         &:hover {
-            text-decoration: none;
             z-index: 15;
+            text-decoration: none;
         }
     }
 }
 
 // Inner container of gallery item
 .gallery-item-inner {
+    position: relative;
+    z-index: 10;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     border-radius: 6px;
     cursor: pointer;
-    transition-property: opacity, box-shadow, transform;
     transition-duration: $duration-medium;
+    transition-property: opacity, box-shadow, transform;
     transition-timing-function: $easing;
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
     will-change: opacity, box-shadow, transform;
 
     @media (hover: hover) {
+        will-change: transform, opacity;
+
         .gallery-item:hover & {
-            opacity: 1;
-            color: unset;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: unset;
+            opacity: 1;
             transform: scale(1.5);
         }
     }
@@ -155,33 +157,33 @@ $gap: 5px;
 
 // Hover tooltip
 .gallery-item-tooltip {
-    background: $backdrop-background-dark-fallback;
+    position: absolute;
+    z-index: 5;
     max-width: 27.5rem;
     padding: 0.5rem 1rem;
+    background: $backdrop-background-dark-fallback;
     border-radius: 6px;
-    position: absolute;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
     font-size: 1.5rem;
-    text-align: center;
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(0);
-    transition-property: visibility, opacity, transform;
-    transition-duration: $duration-medium;
-    transition-timing-function: $easing;
-    z-index: 5;
     pointer-events: none;
+    text-align: center;
+    transform: translateY(0);
+    transition-duration: $duration-medium;
+    transition-property: visibility, opacity, transform;
+    transition-timing-function: $easing;
+    visibility: hidden;
 
     @supports (backdrop-filter: $backdrop-filter) {
-        background: $backdrop-background-dark;
         backdrop-filter: $backdrop-filter;
+        background: $backdrop-background-dark;
     }
 
     .gallery-item:hover & {
         opacity: 1;
-        visibility: visible;
         transform: translateY(-4.25rem);
+        visibility: visible;
     }
 
     .gallery-item.is-left & {

@@ -1,16 +1,17 @@
 import React from 'react'
 
-import { DEFAULTS } from 'src/data/Data'
+import { DEFAULTS } from 'src/data/data'
 
-import { reverseSort, excludeBlankValues } from 'src/helpers/Filters'
+import { excludeBlankValues, reverseSort } from 'src/helpers/filters'
 
 import Icon from 'src/components/Icon'
 
 /**
- * Descriptions and data related to all possible filters
+ * Descriptions and data related to all possible filters.
+ *
  * Key:
- * `false` is "All" value for filtering purposes
- * `nul` is when anime is present locally, but has unknown values (e.g. no codec info)
+ * `false` is "All" value for filtering purposes.
+ * `nul` is when anime is present locally, but has unknown values (for example no codec info).
  */
 const FILTERS = {
     type: {
@@ -401,5 +402,4 @@ Object.defineProperties(FILTERS, {
     },
 })
 
-// Exports
 export { FILTERS, FILTER_NAMES }

@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
+import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { GlobalState } from 'src/data/GlobalState'
+import { GlobalState } from 'src/data/global-state'
 
 import Icon from 'src/components/Icon'
 
@@ -52,4 +53,8 @@ export default function UpdateMessage({ hideTimeout = 3000 }) {
     }
 
     return <div className={classes}>{updateStatusMessage}</div>
+}
+
+UpdateMessage.propTypes = {
+    hideTimeout: PropTypes.number,
 }

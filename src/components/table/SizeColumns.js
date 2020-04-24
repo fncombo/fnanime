@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { TABLE_COLUMNS } from 'src/data/Table'
+import { TABLE_COLUMNS } from 'src/data/table'
 
 import SizeBar from 'src/components/table/SizeBar'
 
@@ -47,4 +48,9 @@ export default function SizeColumns({ episodeSize, size }) {
             </div>
         </>
     )
+}
+
+SizeColumns.propTypes = {
+    episodeSize: PropTypes.number.isRequired,
+    size: PropTypes.number.isRequired,
 }

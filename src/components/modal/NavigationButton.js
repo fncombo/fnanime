@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { GlobalState, ACTIONS } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
+import { ACTIONS, GlobalState } from 'src/data/global-state'
 
-import { getAdjacentAnime } from 'src/helpers/Modal'
+import { getAdjacentAnime } from 'src/helpers/modal'
 
 import Icon from 'src/components/Icon'
 
@@ -31,7 +32,9 @@ export default function NavigationButton({ direction, changeAnime, currentAnimeI
         return <div className={classes} />
     }
 
-    // Callback to change the modal anime when clicking on the button
+    /**
+     * Callback to change the modal anime when clicking on the button.
+     */
     function changeAnimeCallback() {
         changeAnime(navAnime)
     }
@@ -45,4 +48,10 @@ export default function NavigationButton({ direction, changeAnime, currentAnimeI
             <img width="74" height="100" className="rounded" src={navAnime.img} alt={navAnime.title} />
         </div>
     )
+}
+
+NavigationButton.propTypes = {
+    direction: PropTypes.oneOf([ACTIONS.NEXT_ANIME, ACTIONS.PREV_ANIME]).isRequired,
+    changeAnime: PropTypes.func.isRequired,
+    currentAnimeId: PropTypes.number.isRequired,
 }

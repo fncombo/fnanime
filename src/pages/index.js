@@ -1,23 +1,24 @@
-import React, { useReducer, useEffect } from 'react'
+import React, { useEffect, useReducer } from 'react'
 
 import clone from 'clone'
+import { Helmet } from 'react-helmet'
+
+import { DEFAULTS } from 'src/data/data'
+import { updated as updateTime } from 'src/data/data.json'
+import { ACTIONS, GlobalState } from 'src/data/global-state'
+
+import { getApiData, getUrlQueryStringData, resetUrlQueryString, updateUrlQueryString } from 'src/helpers/app'
+import { getAnime, updateAnimeFromApi } from 'src/helpers/data'
+import 'src/helpers/font-awesome'
+
+import Filters from 'src/components/filters/Filters'
+import Gallery from 'src/components/gallery/Gallery'
+import Statistics from 'src/components/statistics/Statistics'
+import Table from 'src/components/table/Table'
+import UpdateMessage from 'src/components/UpdateMessage'
 
 import 'src/styles/App.scss'
 import 'src/styles/fn.scss'
-
-import { updated as updateTime } from 'src/data/data.json'
-import { GlobalState, ACTIONS } from 'src/data/GlobalState'
-import { DEFAULTS } from 'src/data/Data'
-
-import { getApiData, getUrlQueryStringData, updateUrlQueryString, resetUrlQueryString } from 'src/helpers/App'
-import { getAnime, updateAnimeFromApi } from 'src/helpers/Data'
-import 'js/helpers/FontAwesome'
-
-import Filters from 'src/components/filters/Filters'
-import Table from 'src/components/table/Table'
-import Statistics from 'src/components/statistics/Statistics'
-import Gallery from 'src/components/gallery/Gallery'
-import UpdateMessage from 'src/components/UpdateMessage'
 
 // Local data last update time
 const UPDATE_TIME = new Intl.DateTimeFormat('en-GB', {
@@ -118,7 +119,7 @@ function globalReducer(state, action) {
 }
 
 /**
- * ZA WARUDO
+ * ZA WARUDO.
  */
 export default function App() {
     const [state, dispatch] = useReducer(globalReducer, INITIAL_STATE)
@@ -129,7 +130,9 @@ export default function App() {
             return
         }
 
-        // Update certain data from live API
+        /**
+         * Update certain data from live API.
+         */
         async function fetchData() {
             const newAnime = await getApiData()
 
@@ -162,6 +165,17 @@ export default function App() {
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
+            <Helmet defer={false} defaultTitle="Anime List – fncombo" titleTemplate="%s – Anime List – fncombo">
+                <html lang="en" />
+                <meta name="description" content="Custom data table and gallery of owned anime." />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+            </Helmet>
+            <div className="fnheader">
+                <h1>
+                    Anime List <a href="https://fncombo.me">fncombo</a>
+                </h1>
+            </div>
             <div className="container">
                 <Filters />
             </div>

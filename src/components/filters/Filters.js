@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 
-import 'src/styles/Filters.scss'
-
-import { GlobalState, FiltersState, ACTIONS } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
 
 import FilterButtonGroup from 'src/components/filters/FilterButtonGroup'
 import Search from 'src/components/filters/Search'
 import Select from 'src/components/filters/Select'
 import Summary from 'src/components/filters/Summary'
+
+import 'src/styles/Filters.scss'
 
 /**
  * Groups of filters, search input, summary, and reset button.
@@ -19,7 +19,9 @@ export default function Filters() {
         dispatch,
     } = useContext(GlobalState)
 
-    // Callback to reset filters, sorting, and search (not the active table page)
+    /**
+     * Callback to reset filters, sorting, and search (not the active table page).
+     */
     function resetCallback() {
         dispatch({ type: ACTIONS.RESET })
     }

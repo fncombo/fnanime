@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { useInView } from 'react-intersection-observer'
 
@@ -18,4 +19,9 @@ export default function StuckSentinel({ className, children }) {
             {children(isStuck)}
         </>
     )
+}
+
+StuckSentinel.propTypes = {
+    className: PropTypes.string.isRequired,
+    children: PropTypes.func.isRequired,
 }

@@ -1,4 +1,4 @@
-@import '_base';
+@import "_base";
 
 // Placeholder when statistics are off screen
 .statistics-placeholder {
@@ -10,8 +10,8 @@
 // Statistics container
 .statistics-container {
     @include mobile {
-        padding-left: 0;
         padding-right: 0;
+        padding-left: 0;
         font-size: 0.75rem;
     }
 }
@@ -40,8 +40,8 @@
     .column {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
 
         &.is-rating {
             flex-direction: row;

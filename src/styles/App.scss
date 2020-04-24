@@ -1,26 +1,29 @@
-@import '_base';
+@import "_base";
 
 // Bulma base
-@import '~bulma/sass/base/_all.sass';
+@import "~bulma/sass/base/_all.sass";
 
 // Bulma elements
-@import '~bulma/sass/elements/button.sass';
-@import '~bulma/sass/elements/icon.sass';
-@import '~bulma/sass/elements/notification.sass';
-@import '~bulma/sass/elements/other.sass';
-@import '~bulma/sass/elements/progress.sass';
-@import '~bulma/sass/elements/tag.sass';
-@import '~bulma/sass/elements/title.sass';
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/elements/notification.sass";
+@import "~bulma/sass/elements/other.sass";
+@import "~bulma/sass/elements/progress.sass";
+@import "~bulma/sass/elements/tag.sass";
+@import "~bulma/sass/elements/title.sass";
 
 // Bulma grid
-@import '~bulma/sass/grid/columns.sass';
+@import "~bulma/sass/grid/columns.sass";
+
+// React slidedown
+@import "~react-slidedown/lib/slidedown.css";
 
 // Base
 html,
 body {
-    font-family: 'Open Sans', $body-family;
-    font-size: 14px;
     color: #000;
+    font-family: "Open Sans", $body-family;
+    font-size: 14px;
 
     @include tablet {
         min-width: 1325px;
@@ -145,8 +148,8 @@ strong {
 .select select,
 .table-column,
 .table-row {
-    transition-property: background-color, box-shadow, border-color, color, fill, opacity;
     transition-duration: $duration-fast;
+    transition-property: background-color, box-shadow, border-color, color, fill, opacity;
     transition-timing-function: $easing;
 }
 
@@ -176,37 +179,37 @@ strong {
 
 // Message box
 .message {
-    background: $backdrop-background-dark-fallback;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rem;
     position: fixed;
+    z-index: 300;
     bottom: calc(#{$sticky-panel-height} + 0.75rem);
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 300;
-    white-space: pre;
-    text-align: center;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background: $backdrop-background-dark-fallback;
+    border-radius: 10rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     color: #fff;
+    pointer-events: none;
+    text-align: center;
+    transform: translateX(-50%);
     transition: opacity $duration-slow $easing;
+    white-space: pre;
 
     @supports (backdrop-filter: $backdrop-filter) {
-        background: $backdrop-background-dark;
         backdrop-filter: $backdrop-filter;
+        background: $backdrop-background-dark;
     }
 
     &.is-loading {
-        animation-name: loading-message, done-message;
-        animation-duration: 1s, $duration-slow;
+        animation-delay: 0s, 0.5s;
         animation-direction: normal, reverse;
-        animation-timing-function: $easing;
+        animation-duration: 1s, $duration-slow;
         animation-fill-mode: none, forwards;
         animation-iteration-count: infinite, 1;
-        animation-delay: 0s, 0.5s;
+        animation-name: loading-message, done-message;
+        animation-timing-function: $easing;
     }
 
     &.is-hidden {

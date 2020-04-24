@@ -11,6 +11,10 @@ const TYPES = {
 
 /**
  * Checks whether a given type has a valid value.
+ *
+ * @param type
+ * @param value
+ * @param animeTitle
  */
 function validateType(type, value, animeTitle) {
     if (!has(TYPES, type)) {
@@ -28,6 +32,8 @@ function validateType(type, value, animeTitle) {
 
 /**
  * Replace or remove characters which cannot be used in folder and file names.
+ *
+ * @param string
  */
 function removeInvalidChars(string) {
     return string.replace(/[√:?]/g, '').replace(/[★/]/g, ' ')
@@ -35,6 +41,8 @@ function removeInvalidChars(string) {
 
 /**
  * Get the rewatch count from the anime's tags.
+ *
+ * @param tags
  */
 function getRewatchCount(tags) {
     if (!tags) {
@@ -48,6 +56,8 @@ function getRewatchCount(tags) {
 
 /**
  * Extract the total duration in minutes from API data.
+ *
+ * @param duration
  */
 function getDuration(duration) {
     if (!duration) {
@@ -74,6 +84,9 @@ function getDuration(duration) {
 
 /**
  * Returns whether an anime is a favorite anime and its order in the favorites list.
+ *
+ * @param animeId
+ * @param favoriteAnime
  */
 function getFavoriteStatus(animeId, favoriteAnime) {
     // Check whether this anime ID exists in favorites
@@ -99,7 +112,6 @@ const animeProxy = {
     },
 }
 
-// Exports
 module.exports = {
     validateType,
     removeInvalidChars,

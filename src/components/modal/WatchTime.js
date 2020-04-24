@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { formatDuration } from 'src/helpers/Generic'
+import { formatDuration } from 'src/helpers/generic'
 
 /**
  * Display the total watch time of this anime based on episode duration and number of episodes watched.
  */
-export default function WatchTime({ episodeDuration, episodes, episodesWatched, watchTime, rewatchCount }) {
+export default function WatchTime({ anime: { episodeDuration, episodes, episodesWatched, watchTime, rewatchCount } }) {
     if (!episodeDuration || !episodesWatched) {
         return 'None'
     }

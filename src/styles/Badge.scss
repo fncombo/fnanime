@@ -1,4 +1,4 @@
-@import '_base';
+@import "_base";
 
 .tag {
     .icon {
@@ -16,22 +16,22 @@
     }
 
     .is-dark {
-        display: flex;
         position: relative;
+        display: flex;
 
         &:not(.is-parted) {
             padding-left: 0.25rem;
 
             &::before {
-                content: '';
                 position: absolute;
                 top: 0;
                 left: -0.75em;
                 width: 0;
                 height: 0;
                 border-top: 2em solid transparent;
-                border-bottom: 0 solid transparent;
                 border-right: 0.75em solid $dark;
+                border-bottom: 0 solid transparent;
+                content: "";
             }
         }
     }
@@ -47,27 +47,27 @@
 }
 
 .tag-part {
-    display: flex;
-    align-items: center;
-    height: 100%;
     position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
 
     &::before {
-        content: '';
         position: absolute;
         top: 0;
         left: -0.75em;
         width: 0;
         height: 0;
         border-top: 2em solid transparent;
-        border-bottom: 0 solid transparent;
         border-right: 0.75em solid $dark;
+        border-bottom: 0 solid transparent;
+        content: "";
     }
 
     &.is-current {
-        background-image: linear-gradient(to left, rgba($dark, 0.5), rgba($dark, 0.5));
-        margin: 0 0.75em 0 -0.75em;
         padding: 0 1em 0 0.25em;
+        margin: 0 0.75em 0 -0.75em;
+        background-image: linear-gradient(to left, rgba($dark, 0.5), rgba($dark, 0.5));
 
         &::before {
             opacity: 0.5;
@@ -75,7 +75,7 @@
     }
 
     &.is-total {
-        margin-left: -0.75em;
         padding-left: 0.25em;
+        margin-left: -0.75em;
     }
 }

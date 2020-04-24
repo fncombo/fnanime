@@ -112,11 +112,4 @@ const TABLE_COLUMNS = {
 // Only the keys (names) of all table columns
 const TABLE_COLUMN_NAMES = Object.keys(TABLE_COLUMNS)
 
-// Exports
-export {
-    TABLE_COLUMNS,
-    TABLE_COLUMN_NAMES,
-    STORAGE_SIZE_LIMITS,
-    SORTING_ORDERS,
-    SORTING_ICONS,
-}
+export { TABLE_COLUMNS, TABLE_COLUMN_NAMES, STORAGE_SIZE_LIMITS, SORTING_ORDERS, SORTING_ICONS }

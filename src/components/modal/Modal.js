@@ -1,28 +1,31 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
+
+import { FILTERS } from 'src/data/filters'
+import { ACTIONS, GlobalState } from 'src/data/global-state'
+
+import { PROP_TYPES } from 'src/helpers/generic'
+import { getAdjacentAnime } from 'src/helpers/modal'
+
+import Icon from 'src/components/Icon'
+import CopyIcon from 'src/components/modal/CopyIcon'
+import ModalBody from 'src/components/modal/ModalBody'
+import NavigationButton from 'src/components/modal/NavigationButton'
 
 import 'src/styles/Modal.scss'
-import 'react-slidedown/lib/slidedown.css'
-
-import { GlobalState, ACTIONS } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
-
-import { getAdjacentAnime } from 'src/helpers/Modal'
-
-import NavigationButton from 'src/components/modal/NavigationButton'
-import ModalBody from 'src/components/modal/ModalBody'
-import CopyIcon from 'src/components/modal/CopyIcon'
-import Icon from 'src/components/Icon'
 
 /**
  * All the modal HTML including managing what it's displaying and its animations.
  */
-export default function Modal({ closeModal: closeCallback, ...props }) {
+export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
     const {
         state: { anime: allAnime },
     } = useContext(GlobalState)
-    const [anime, setAnime] = useState(props)
+    const [anime, setAnime] = useState(propAnime)
 
-    // Callback to change the anime info inside the modal with a transition animation in between
+    /**
+     * Callback to change the anime info inside the modal with a transition animation in between.
+     */
     function changeAnime(newAnime) {
         document.body.classList.add('is-changing')
 
@@ -33,7 +36,9 @@ export default function Modal({ closeModal: closeCallback, ...props }) {
         }, 150)
     }
 
-    // Callback to close the modal after it has finished animating out
+    /**
+     * Callback to close the modal after it has finished animating out.
+     */
     function closeModal() {
         document.body.classList.remove('is-active')
 
@@ -42,7 +47,9 @@ export default function Modal({ closeModal: closeCallback, ...props }) {
         }, 150)
     }
 
-    // Switch between next and previous anime using arrow keys and close the modal using esc
+    /**
+     * Switch between next and previous anime using arrow keys and close the modal using esc.
+     */
     function keyHandler({ key }) {
         if (key === 'Escape') {
             closeModal()
@@ -94,10 +101,15 @@ export default function Modal({ closeModal: closeCallback, ...props }) {
                     <Icon as="button" type="button" title="Close" icon="times-circle" onClick={closeModal} />
                 </div>
                 <div className="modal-card-body">
-                    <ModalBody closeModal={closeModal} changeAnime={changeAnime} {...anime} />
+                    <ModalBody closeModal={closeModal} changeAnime={changeAnime} anime={anime} />
                 </div>
             </div>
             <NavigationButton direction={ACTIONS.NEXT_ANIME} changeAnime={changeAnime} currentAnimeId={anime.id} />
         </div>
     )
+}
+
+Modal.propTypes = {
+    closeModal: PropTypes.func.isRequired,
+    anime: PROP_TYPES.ANIME.isRequired,
 }

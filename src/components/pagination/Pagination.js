@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 
 import classNames from 'classnames'
 
-import 'src/styles/Pagination.scss'
+import { ACTIONS, TableState } from 'src/data/global-state'
 
-import { TableState, ACTIONS } from 'src/data/GlobalState'
-
-import StuckSentinel from 'src/components/StuckSentinel'
 import NavigationButton from 'src/components/pagination/NavigationButton'
 import PageNumberButtons from 'src/components/pagination/PageNumberButtons'
+import StuckSentinel from 'src/components/StuckSentinel'
+
+import 'src/styles/Pagination.scss'
 
 /**
  * Previous, next, and number buttons to control the table.
@@ -40,7 +40,7 @@ export default function Pagination() {
             {(isStuck) => (
                 <div className={classNames('columns pagination', { 'is-stuck': isStuck })}>
                     <div className="column is-3">
-                        <NavigationButton action={ACTIONS.PREV_PAGE} disabled={page === 1} />
+                        <NavigationButton action={ACTIONS.PREV_PAGE} isDisabled={page === 1} />
                     </div>
                     <div className="column is-6 pagination-list is-hidden-tablet">
                         Page {page} of {lastPage}
@@ -49,7 +49,7 @@ export default function Pagination() {
                         <PageNumberButtons />
                     </div>
                     <div className="column is-3">
-                        <NavigationButton action={ACTIONS.NEXT_PAGE} disabled={page === lastPage} />
+                        <NavigationButton action={ACTIONS.NEXT_PAGE} isDisabled={page === lastPage} />
                     </div>
                 </div>
             )}

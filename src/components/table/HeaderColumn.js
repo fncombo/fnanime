@@ -1,11 +1,12 @@
 import React, { memo, useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import clone from 'clone'
 
-import { GlobalState, ACTIONS } from 'src/data/GlobalState'
-import { TABLE_COLUMNS, SORTING_ORDERS, SORTING_ICONS } from 'src/data/Table'
+import { ACTIONS, GlobalState } from 'src/data/global-state'
+import { SORTING_ICONS, SORTING_ORDERS, TABLE_COLUMNS } from 'src/data/table'
 
-import { formatOrdinal } from 'src/helpers/Generic'
+import { formatOrdinal } from 'src/helpers/generic'
 
 import Icon from 'src/components/Icon'
 
@@ -14,13 +15,15 @@ import Icon from 'src/components/Icon'
  * Clicking on already sorted column changes the sort direction.
  * If the shift key is held down, multiple columns can be added for sorting.
  */
-const HeaderColumn = memo(({ children: columnName }) => {
+function HeaderColumn({ children: columnName }) {
     const {
         state: { activeSorting },
         dispatch,
     } = useContext(GlobalState)
 
-    // Callback to update sorting when clicking on a column
+    /**
+     * Callback to update sorting when clicking on a column.
+     */
     function changeSortingCallback({ shiftKey }) {
         // Amending current sorting by holding shift or sorting only the currently sorted column
         // modifies existing sorting settings, otherwise create new settings
@@ -84,7 +87,10 @@ const HeaderColumn = memo(({ children: columnName }) => {
             {TABLE_COLUMNS[columnName].text}
         </div>
     )
-})
+}
 
-// Exports
-export default HeaderColumn
+HeaderColumn.propTypes = {
+    children: PropTypes.string.isRequired,
+}
+
+export default memo(HeaderColumn)

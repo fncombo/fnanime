@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
 
 import Icon from 'src/components/Icon'
 
@@ -29,4 +30,8 @@ export default function Rating({ children: rating }) {
             </h5>
         </>
     )
+}
+
+Rating.propTypes = {
+    children: PropTypes.number.isRequired,
 }

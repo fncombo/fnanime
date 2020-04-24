@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import copy from 'copy-text-to-clipboard'
 
@@ -22,7 +23,9 @@ export default function CopyIcon({ value }) {
         return null
     }
 
-    // Callback to reset the title when the mouse leaves and the tooltip is fully faded out
+    /**
+     * Callback to reset the title when the mouse leaves and the tooltip is fully faded out.
+     */
     function onMouseOutCallback() {
         if (copyStatus !== COPY_STATUS.INITIAL) {
             setTimeout(() => {
@@ -31,7 +34,9 @@ export default function CopyIcon({ value }) {
         }
     }
 
-    // Callback to try and copy the title and change the status based on whether it succeeded
+    /**
+     * Callback to try and copy the title and change the status based on whether it succeeded.
+     */
     function onClickCallback() {
         const didCopy = copy(value)
 
@@ -44,4 +49,8 @@ export default function CopyIcon({ value }) {
             <div className="copy-tooltip">{copyStatus}</div>
         </div>
     )
+}
+
+CopyIcon.propTypes = {
+    value: PropTypes.string.isRequired,
 }

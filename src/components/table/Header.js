@@ -2,10 +2,10 @@ import React, { memo } from 'react'
 
 import classNames from 'classnames'
 
-import { TABLE_COLUMN_NAMES } from 'src/data/Table'
+import { TABLE_COLUMN_NAMES } from 'src/data/table'
 
+import StuckSentinel from 'src/components/StuckSentinel'
 import HeaderColumn from 'src/components/table/HeaderColumn'
-import StuckSentinel from '../StuckSentinel'
 
 /**
  * Table header row which becomes stuck to the top of the page and gains additional styling when scrolling.
@@ -22,5 +22,4 @@ const Header = memo(() => (
     </StuckSentinel>
 ))
 
-// Exports
 export default Header

@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
-import { ModalState } from 'src/data/GlobalState'
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
+import { ModalState } from 'src/data/global-state'
 
-import { getAnimeApiData } from 'src/helpers/Modal'
+import { PROP_TYPES } from 'src/helpers/generic'
+import { getAnimeApiData } from 'src/helpers/modal'
 
-import Rating from 'src/components/modal/Rating'
-import ApiData from 'src/components/modal/ApiData'
-import Episodes from 'src/components/modal/Episodes'
-import MultiValueData from 'src/components/modal/MultiValueData'
-import Size from 'src/components/modal/Size'
-import Duration from 'src/components/modal/Duration'
-import WatchTime from 'src/components/modal/WatchTime'
-import Synopsis from 'src/components/modal/Synopsis'
-import RelatedList from 'src/components/modal/RelatedList'
-import Favorite from 'src/components/Favorite'
 import Badge from 'src/components/Badge'
-import { LoadingInline, LoadingText, LoadingParagraph } from 'src/components/modal/Loading'
+import Favorite from 'src/components/Favorite'
+import ApiData from 'src/components/modal/ApiData'
+import Duration from 'src/components/modal/Duration'
+import Episodes from 'src/components/modal/Episodes'
+import { LoadingInline, LoadingParagraph, LoadingText } from 'src/components/modal/Loading'
+import MultiValueData from 'src/components/modal/MultiValueData'
+import Rating from 'src/components/modal/Rating'
+import RelatedList from 'src/components/modal/RelatedList'
+import Size from 'src/components/modal/Size'
+import Synopsis from 'src/components/modal/Synopsis'
+import WatchTime from 'src/components/modal/WatchTime'
 
 // Initial state of the modal
 const INITIAL_MODAL_BODY_STATE = {
@@ -28,11 +30,14 @@ const INITIAL_MODAL_BODY_STATE = {
 /**
  * Body of the modal which contains all the information about the anime.
  */
-export default function ModalBody({ closeModal, changeAnime, ...anime }) {
+export default function ModalBody({ closeModal, changeAnime, anime }) {
     const [modalState, setModalState] = useState(INITIAL_MODAL_BODY_STATE)
     const { isLoaded, apiData } = modalState
 
     useEffect(() => {
+        /**
+         * TODO.
+         */
         async function fetchData() {
             // Loading addition data about the anime
             if (!isLoaded && !apiData.mal_id) {
@@ -78,7 +83,7 @@ export default function ModalBody({ closeModal, changeAnime, ...anime }) {
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
                     <Rating>{anime.rating}</Rating>
-                    <Favorite showHash>{anime.favorite}</Favorite>
+                    <Favorite hasHash>{anime.favorite}</Favorite>
                     <hr />
                     <LoadingText>
                         <p>
@@ -112,7 +117,7 @@ export default function ModalBody({ closeModal, changeAnime, ...anime }) {
                         <p>{FILTERS.airStatus.descriptions[anime.airStatus]}</p>
                     )}
                     <div className="status">
-                        <Badge {...anime} />
+                        <Badge anime={anime} />
                     </div>
                     <hr />
                     <a href={anime.url} target="_blank" rel="noopener noreferrer">
@@ -151,23 +156,23 @@ export default function ModalBody({ closeModal, changeAnime, ...anime }) {
                         </li>
                         <li>
                             <strong>Duration: </strong>
-                            <Duration {...anime} />
+                            <Duration anime={anime} />
                         </li>
                         <li>
                             <strong>Watch Time: </strong>
-                            <WatchTime {...anime} />
+                            <WatchTime anime={anime} />
                         </li>
                         <li>
                             <strong>Release: </strong>
-                            <MultiValueData data="subs" {...anime} />
+                            <MultiValueData data="subs" anime={anime} />
                         </li>
                         <li>
                             <strong>Genres: </strong>
-                            <MultiValueData data="genres" {...anime} />
+                            <MultiValueData data="genres" anime={anime} />
                         </li>
                         <li>
                             <strong>Studios: </strong>
-                            <MultiValueData data="studios" {...anime} />
+                            <MultiValueData data="studios" anime={anime} />
                         </li>
                     </ul>
                     <hr />
@@ -184,4 +189,10 @@ export default function ModalBody({ closeModal, changeAnime, ...anime }) {
             </div>
         </ModalState.Provider>
     )
+}
+
+ModalBody.propTypes = {
+    closeModal: PropTypes.func.isRequired,
+    changeAnime: PropTypes.func.isRequired,
+    anime: PROP_TYPES.ANIME.isRequired,
 }

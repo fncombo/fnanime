@@ -1,18 +1,20 @@
 import React from 'react'
 
-import { FILTERS } from 'src/data/Filters'
+import { FILTERS } from 'src/data/filters'
 
-import ModalContainer from 'src/components/modal/ModalContainer'
-import TitleColumn from 'src/components/table/TitleColumn'
-import Column from 'src/components/table/Column'
+import { PROP_TYPES } from 'src/helpers/generic'
+
 import Badge from 'src/components/Badge'
+import ModalContainer from 'src/components/modal/ModalContainer'
+import Column from 'src/components/table/Column'
 import SizeColumns from 'src/components/table/SizeColumns'
+import TitleColumn from 'src/components/table/TitleColumn'
 
 /**
  * Default table row of data for a single anime. Contains the anime image and all the various columns.
  * Clicking on the table rows brings up the modal for its anime.
  */
-export default function Row(anime) {
+export default function Row({ anime }) {
     return (
         <ModalContainer anime={anime} className="table-row">
             <img
@@ -24,13 +26,13 @@ export default function Row(anime) {
                 loading="lazy"
                 style={{ gridArea: 'img' }}
             />
-            <TitleColumn {...anime} />
+            <TitleColumn anime={anime} />
             <Column columnName="status">
-                <Badge showAirStatus {...anime} />
+                <Badge hasAirStatus anime={anime} />
             </Column>
             <Column columnName="rating">{anime.rating}</Column>
             <Column columnName="rewatchCount">{anime.rewatchCount}</Column>
-            <Column columnName="subs" value={anime.subs}>
+            <Column columnName="subs">
                 <span className="has-text-overflow">{anime.subs.length ? anime.subs.join(', ') : <>&mdash;</>}</span>
             </Column>
             <Column columnName="resolution" value={anime.resolution}>
@@ -45,4 +47,8 @@ export default function Row(anime) {
             <SizeColumns episodeSize={anime.episodeSize} size={anime.size} />
         </ModalContainer>
     )
+}
+
+Row.propTypes = {
+    anime: PROP_TYPES.ANIME.isRequired,
 }

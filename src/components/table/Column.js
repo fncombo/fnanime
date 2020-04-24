@@ -1,13 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { TABLE_COLUMNS } from 'src/data/Table'
+import { TABLE_COLUMNS } from 'src/data/table'
 
-import { getColumnTextColor } from 'src/helpers/Table'
+import { getColumnTextColor } from 'src/helpers/table'
 
 /**
  * Generic table cell with anime data. The text is color coded if mapping for data to color are found for this column.
  */
-export default function Column({ value, columnName, children }) {
+export default function Column({ value = undefined, columnName, children = null }) {
     // Try to get the column's text color of they are defined
     const textColor = getColumnTextColor(columnName, value || children)
 
@@ -25,4 +26,10 @@ export default function Column({ value, columnName, children }) {
             {(value === undefined ? children : value) ? children || value : <>&mdash;</>}
         </div>
     )
+}
+
+Column.propTypes = {
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    columnName: PropTypes.string.isRequired,
+    children: PropTypes.node,
 }

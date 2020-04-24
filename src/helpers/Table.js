@@ -1,10 +1,12 @@
-import { FILTERS } from 'src/data/Filters'
-import { STORAGE_SIZE_LIMITS } from 'src/data/Table'
+import { FILTERS } from 'src/data/filters'
+import { STORAGE_SIZE_LIMITS } from 'src/data/table'
 
 /**
  * Returns the colour name for a given overall file quality.
+ *
  * @param {number} fileQuality Number from 0 to 5 representing the overall quality of the files in the anime.
- * @returns {string}
+ *
+ * @returns {string} Colour name.
  */
 function getFileQualityColor(fileQuality) {
     if (!fileQuality) {
@@ -28,9 +30,11 @@ function getFileQualityColor(fileQuality) {
 
 /**
  * Returns the colour name based on the column and its contents (taken from filters or overall file quality).
+ *
  * @param {string} columnName Name of the column.
  * @param {string|number} value Value of the contents of this column.
- * @returns {string}
+ *
+ * @returns {string} Colour name.
  */
 function getColumnTextColor(columnName, value) {
     // Special treatment for file quality
@@ -44,9 +48,11 @@ function getColumnTextColor(columnName, value) {
 
 /**
  * Returns the percentage size from 0 to 100 for a size bar based on the minimum and maximum sizes for that type.
+ *
  * @param {number} size The total size of the anime or average size of individual episodes.
  * @param {"total"|"episode"} type The type of size, either the total of the anime or episode average.
- * @returns {number}
+ *
+ * @returns {number} Percentage from 0 to 100.
  */
 function getSizeBarWidth(size, type) {
     return ((size - STORAGE_SIZE_LIMITS[type].min) / STORAGE_SIZE_LIMITS[type].max) * 100
@@ -54,9 +60,11 @@ function getSizeBarWidth(size, type) {
 
 /**
  * Returns the colour name for a size bar based on the size band it falls into for its type.
+ *
  * @param {number} size The total size of the anime or average size of individual episodes.
  * @param {"total"|"episode"} type The type of size, either the total of the anime or episode average.
- * @returns {string}
+ *
+ * @returns {string} Colour name.
  */
 function getSizeBarColor(size, type) {
     if (size > STORAGE_SIZE_LIMITS[type].large) {
@@ -74,5 +82,4 @@ function getSizeBarColor(size, type) {
     return 'green'
 }
 
-// Exports
 export { getColumnTextColor, getFileQualityColor, getSizeBarWidth, getSizeBarColor }

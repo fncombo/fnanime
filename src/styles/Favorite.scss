@@ -1,4 +1,4 @@
-@import '_base';
+@import "_base";
 
 .is-favorite {
     position: relative;
@@ -10,19 +10,19 @@
     }
 
     .gallery & {
-        background: $backdrop-background-dark-fallback;
         position: absolute;
-        bottom: 2rem;
         right: 0;
+        bottom: 2rem;
         width: auto;
         height: auto;
-        margin: 0 0 0 1rem !important;
         padding: 0.25rem 0.75rem;
+        margin: 0 0 0 1rem !important;
+        background: $backdrop-background-dark-fallback;
         border-top-left-radius: 6px;
 
         @supports (backdrop-filter: $backdrop-filter) {
-            background: $backdrop-background-dark;
             backdrop-filter: $backdrop-filter;
+            background: $backdrop-background-dark;
         }
 
         @include mobile {
@@ -45,8 +45,8 @@
 
     .table & {
         position: absolute;
-        bottom: 0;
         right: 0;
+        bottom: 0;
         font-size: 0.75rem;
         text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
     }

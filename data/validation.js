@@ -59,6 +59,11 @@ const VALID_SUBTITLES = ['ass', 'subrip']
 
 /**
  * Logs a generic mismatch of configured vs actual data for an anime.
+ *
+ * @param what
+ * @param animeTitle
+ * @param configured
+ * @param actual
  */
 function logMismatch(what, animeTitle, configured, actual) {
     log.warn(`${what} mismatch for anime "${animeTitle}". Configured: "${configured}". Actual: "${actual}"`)
@@ -66,6 +71,9 @@ function logMismatch(what, animeTitle, configured, actual) {
 
 /**
  * Validates a single video stream to ensure it has correct format.
+ *
+ * @param stream
+ * @param anime
  */
 function validateVideoStream(stream, anime) {
     // Wrong codec
@@ -96,6 +104,9 @@ function validateVideoStream(stream, anime) {
 
 /**
  * Validates all audio streams to ensure there is Japanese language audio and it has the correct format.
+ *
+ * @param streams
+ * @param anime
  */
 function validateAudioStreams(streams, anime) {
     // Whether a Japanese audio stream was found and it matched to the configured codec
@@ -147,6 +158,9 @@ function validateAudioStreams(streams, anime) {
 
 /**
  * Validates all subtitle streams to ensure there are proper English subtitles.
+ *
+ * @param streams
+ * @param anime
  */
 function validateSubtitleStreams(streams, anime) {
     // Whether proper English subtitles were found and they are of valid format
@@ -201,6 +215,10 @@ function validateSubtitleStreams(streams, anime) {
 
 /**
  * Validates an anime by using ffprobe to get data about the video, audio, and subtitles contained within the file.
+ *
+ * @param path
+ * @param isDirectory
+ * @param anime
  */
 async function validateLocalData(path, isDirectory, anime) {
     // The file to probe
@@ -281,7 +299,6 @@ async function validateLocalData(path, isDirectory, anime) {
     validateSubtitleStreams(subtitleStreams, anime)
 }
 
-// Exports
 module.exports = {
     validateLocalData,
 }
