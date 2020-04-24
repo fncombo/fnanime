@@ -39,4 +39,6 @@ export default function Summary() {
     if (!downloadedCount && notDownloadedCount) {
         return <span>Found {notDownloadedCount} anime</span>
     }
+
+    return null
 }

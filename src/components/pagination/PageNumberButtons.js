@@ -34,7 +34,7 @@ export default function PageNumberButtons() {
     }
 
     // Create the buttons and "..." between the first button, last button, and the middle button group
-    let previousPage = false
+    let previousPage = 0
 
     for (const pageNumber of pageNumbers) {
         if (pageNumber - previousPage === 2) {

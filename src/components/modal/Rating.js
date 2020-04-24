@@ -14,12 +14,12 @@ export default function Rating({ children: rating }) {
         <>
             <div className="rating">
                 <span className="has-text-warning">
-                    {Array.from({ length: rating }, (value, i) => (
+                    {Array.from({ length: rating }, (_, i) => (
                         <Icon icon={['fas', 'star']} key={i} />
                     ))}
                 </span>
                 <span className="has-text-grey-light">
-                    {Array.from({ length: 10 - rating }, (value, i) => (
+                    {Array.from({ length: 10 - rating }, (_, i) => (
                         <Icon icon={['far', 'star']} key={i} />
                     ))}
                 </span>
