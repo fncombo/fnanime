@@ -1,0 +1,12 @@
+# Dependency directories
+**/node_modules
+
+# Project directories
+docker-files/
+
+# gatsby files
+.cache/
+public
+
+# Editor files
+.vscode

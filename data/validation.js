@@ -7,7 +7,6 @@ process.env.FFPROBE_PATH = './ffprobe'
 const { unlinkSync } = require('fs')
 const { readdir } = require('fs').promises
 
-// Libraries
 const has = require('has')
 const ffprobe = require('ffprobe-client')
 const log4js = require('log4js')
@@ -29,7 +28,7 @@ log4js.configure({
     },
     categories: {
         default: {
-            appenders: [ 'validation' ],
+            appenders: ['validation'],
             level: 'debug',
         },
     },
@@ -56,10 +55,7 @@ const AUDIO_CODEC_MAP = {
 }
 
 // Array of valid subtitle formats to check for
-const VALID_SUBTITLES = [
-    'ass',
-    'subrip',
-]
+const VALID_SUBTITLES = ['ass', 'subrip']
 
 /**
  * Logs a generic mismatch of configured vs actual data for an anime.
@@ -122,16 +118,16 @@ function validateAudioStreams(streams, anime) {
                 if (AUDIO_CODEC_MAP[stream.codec_name] === anime.audioCodec) {
                     hasMatchedJp = true
 
-                // Otherwise create an array of all codecs found for Japanese audio streams to display in the error
+                    // Otherwise create an array of all codecs found for Japanese audio streams to display in the error
                 } else if (Array.isArray(hasMatchedJp)) {
                     hasMatchedJp.push(stream.codec_name)
                 } else if (hasMatchedJp === false) {
-                    hasMatchedJp = [ stream.codec_name ]
+                    hasMatchedJp = [stream.codec_name]
                 }
             }
 
-        // Only warn about missing language tag when there are more than 1 audio streams,
-        // sometimes for only 1 stream, the language is not specified because it's obvious
+            // Only warn about missing language tag when there are more than 1 audio streams,
+            // sometimes for only 1 stream, the language is not specified because it's obvious
         } else if (streams.length > 1) {
             log.warn(`No audio language tags found on an audio stream for anime "${anime.title}"`)
         }
@@ -184,8 +180,8 @@ function validateSubtitleStreams(streams, anime) {
                 }
             }
 
-        // Only warn about missing language tag when there are more than 1 subtitle streams,
-        // sometimes for only 1 stream, the language is not specified because it's obvious
+            // Only warn about missing language tag when there are more than 1 subtitle streams,
+            // sometimes for only 1 stream, the language is not specified because it's obvious
         } else if (streams.length > 1) {
             log.warn(`No subtitle language tags found on a subtitle stream for anime "${anime.title}"`)
         }
@@ -224,7 +220,7 @@ async function validateLocalData(path, isDirectory, anime) {
         }
 
         // Find the first probe-able file
-        const probeFile = contents.find(content => {
+        const probeFile = contents.find((content) => {
             // Ignore just opening and ending files
             if (/((?:NC)?(?:OP|ED)(?:\s\d+|\d+)?)(?!\w*\]|(?:\s?-))/.test(content.name)) {
                 return false

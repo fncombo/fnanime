@@ -1,0 +1,4 @@
+module.exports = [{
+      plugin: require('../node_modules/gatsby-plugin-offline/gatsby-browser.js'),
+      options: {"plugins":[]},
+    }]

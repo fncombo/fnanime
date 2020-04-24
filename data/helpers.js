@@ -1,13 +1,12 @@
-// Libraries
 const has = require('has')
 
 // Valid values for different types of data
 const TYPES = {
-    resolution: [ 1080, 720, 576, 480, 360 ],
-    source: [ 'BD', 'TV', 'Web', 'DVD' ],
-    videoCodec: [ 'H.265', 'H.264' ],
-    audioCodec: [ 'FLAC', 'DTS', 'AAC', 'AC3', 'Opus' ],
-    bits: [ 10, 8 ],
+    resolution: [1080, 720, 576, 480, 360],
+    source: ['BD', 'TV', 'Web', 'DVD'],
+    videoCodec: ['H.265', 'H.264'],
+    audioCodec: ['FLAC', 'DTS', 'AAC', 'AC3', 'Opus'],
+    bits: [10, 8],
 }
 
 /**
@@ -57,13 +56,13 @@ function getDuration(duration) {
 
     // Convert hours into minutes
     if (/hr/i.test(duration)) {
-        const [ , hours, minutes ] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
+        const [, hours, minutes] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
 
-        return (parseInt(hours, 10) * 60) + (minutes ? parseInt(minutes, 10) : 0)
+        return parseInt(hours, 10) * 60 + (minutes ? parseInt(minutes, 10) : 0)
     }
 
     if (/\d+/.test(duration)) {
-        const [ digits ] = duration.match(/\d+/)
+        const [digits] = duration.match(/\d+/)
 
         if (digits) {
             return parseInt(digits, 10)
