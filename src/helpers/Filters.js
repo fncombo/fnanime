@@ -342,6 +342,13 @@ const FILTERS = {
             Other: 2,
         },
     },
+    together: {
+        descriptions: {
+            false: 'All',
+            1: 'Solo',
+            2: 'Duo',
+        },
+    },
 }
 
 // All filter names

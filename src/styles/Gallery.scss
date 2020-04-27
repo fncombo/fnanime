@@ -145,6 +145,17 @@ $gap: 5px;
         opacity: 0.5;
     }
 
+    // Style for anime we have watched together
+    .is-together & {
+        box-shadow: 0 0 0 3px rgba($blue, 0.5);
+
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0 0 0 3px rgba($blue, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
     // Style for items which are very close to the sides
     .gallery-item.is-left & {
         transform-origin: left center;

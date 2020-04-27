@@ -27,13 +27,14 @@ export default function Filters() {
     return (
         <div className="columns is-mobile is-multiline filters">
             <FiltersState.Provider value={{ filterCounts: FILTERS.getCounts(anime) }}>
-                <FilterButtonGroup filterName="rating" isFullWidth />
-                <FilterButtonGroup filterName="type" />
-                <FilterButtonGroup filterName="resolution" />
-                <FilterButtonGroup filterName="status" />
-                <FilterButtonGroup filterName="videoCodec" />
-                <FilterButtonGroup filterName="source" />
-                <FilterButtonGroup filterName="audioCodec" />
+                <FilterButtonGroup filterName="rating" size={12} />
+                <FilterButtonGroup filterName="type" size={7} />
+                <FilterButtonGroup filterName="source" size={5} />
+                <FilterButtonGroup filterName="status" size={7} />
+                <FilterButtonGroup filterName="resolution" size={5} />
+                <FilterButtonGroup filterName="videoCodec" size={4} />
+                <FilterButtonGroup filterName="audioCodec" size={6} />
+                <FilterButtonGroup filterName="together" size={2} />
                 <div className="column is-6-mobile is-3-tablet">
                     <Search />
                 </div>

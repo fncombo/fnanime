@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import { isFunction, isNumber, isString } from 'is-what'
 
@@ -7,7 +8,7 @@ import { ModalState } from 'src/helpers/global-state'
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.
  */
-export default function ApiData({ data, fallback, children }) {
+export default function ApiData({ data, fallback = null, children = null }) {
     const {
         modalState: { apiData },
     } = useContext(ModalState)
@@ -36,4 +37,10 @@ export default function ApiData({ data, fallback, children }) {
     }
 
     return dataValue
+}
+
+ApiData.propTypes = {
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
+    fallback: PropTypes.node,
+    children: PropTypes.func,
 }

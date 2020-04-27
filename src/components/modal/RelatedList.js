@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import RelatedListItem from 'src/components/modal/RelatedListItem'
 
@@ -36,4 +37,8 @@ export default function RelatedList({ data }) {
             </ul>
         </Fragment>
     ))
+}
+
+RelatedList.propTypes = {
+    data: PropTypes.object.isRequired,
 }

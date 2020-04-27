@@ -1,6 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { FILTERS } from 'src/helpers/filters'
+import { PROP_TYPES } from 'src/helpers/generic'
 
 /**
  * Array of values which should be comma-separated. Can look up description from filters.
@@ -24,4 +26,9 @@ export default function MultiValueData({ data, anime }) {
     // Get the data from the anime as a comma-separated list
     // If this data has a definition in the filters data, use that instead
     return anime[data].map((value) => FILTERS?.[data].descriptions?.[value] || value).join(', ')
+}
+
+MultiValueData.propTypes = {
+    data: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired,
+    anime: PROP_TYPES.ANIME,
 }

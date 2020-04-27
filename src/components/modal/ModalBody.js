@@ -86,17 +86,17 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
                     <hr />
                     <LoadingText>
                         <p>
-                            Mean MAL rating: <ApiData property="score" fallback="N/A" />
+                            Mean MAL rating: <ApiData data="score" fallback="N/A" />
                         </p>
                     </LoadingText>
                     <LoadingText>
                         <p>
-                            Rated by <ApiData property="scored_by" fallback="?" /> people
+                            Rated by <ApiData data="scored_by" fallback="?" /> people
                         </p>
                     </LoadingText>
                     <LoadingText>
                         <p>
-                            <ApiData property="rank" fallback="Ranked ?">
+                            <ApiData data="rank" fallback="Ranked ?">
                                 {(rankNumber) => `Ranked #${rankNumber.toLocaleString()}`}
                             </ApiData>
                         </p>
@@ -109,7 +109,7 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
                     {anime.airStatus === 2 ? (
                         <LoadingText>
                             <p>
-                                Aired: <ApiData property="aired.string" fallback="N/A" />
+                                Aired: <ApiData data={(data) => data?.aired?.string} fallback="N/A" />
                             </p>
                         </LoadingText>
                     ) : (
@@ -128,19 +128,19 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
                         <li>
                             <strong>English Title: </strong>
                             <LoadingInline>
-                                <ApiData property="title_english" />
+                                <ApiData data="title_english" />
                             </LoadingInline>
                         </li>
                         <li>
                             <strong>Japanese Title: </strong>
                             <LoadingInline>
-                                <ApiData property="title_japanese" />
+                                <ApiData data="title_japanese" />
                             </LoadingInline>
                         </li>
                         <li>
                             <strong>Synonyms: </strong>
                             <LoadingInline>
-                                <ApiData property="title_synonyms">
+                                <ApiData data="title_synonyms">
                                     {(synonyms) => <MultiValueData data={synonyms} />}
                                 </ApiData>
                             </LoadingInline>

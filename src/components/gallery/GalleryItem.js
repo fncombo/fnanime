@@ -70,9 +70,10 @@ export default function GalleryItem({ anime }) {
         return <div className="gallery-item-placeholder" ref={itemRef} />
     }
 
-    const { title, img, episodes, type, size, status, favorite } = anime
+    const { title, img, episodes, type, size, status, favorite, together } = anime
     const classes = classNames('gallery-item', hoverClass, {
         'is-not-downloaded': !size,
+        'is-together': together === 2,
     })
 
     return (

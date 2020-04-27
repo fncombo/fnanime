@@ -78,7 +78,7 @@ const TAGS_REGEXP = /\[([\w\s,-]+)\]\[(\d{3,4})p\s(\w{2,3})\s(H\.\d{3})\s(\d{1,2
  * @param allAnime
  */
 function processApiData(allAnime) {
-    allAnime.forEach((anime) => {
+    for (const anime of allAnime) {
         // Remove diacritics and other unwanted characters from the title
         const title = removeDiacritics(anime.title).replace(/["]/g, '')
 
@@ -106,10 +106,24 @@ function processApiData(allAnime) {
                 bits: false,
                 audioCodec: false,
                 size: 0,
+                together: 1,
             },
             animeProxy
         )
-    })
+    }
+}
+
+/**
+ * Change to `true` for anime which we have watched together.
+ *
+ * @param allAnime
+ */
+function processTogetherData(allAnime) {
+    for (const anime of allAnime) {
+        if (anime.watching_status === 2) {
+            ALL_ANIME[removeInvalidChars(removeDiacritics(anime.title).replace(/["]/g, ''))].together = 2
+        }
+    }
 }
 
 /**
@@ -226,7 +240,7 @@ async function getApiData(username, page = 1, isRetry = false) {
         throw new Error('Too many API retries')
     }
 
-    console.log(isRetry ? 'Retrying' : 'Getting', 'page', yellow(page), 'of API')
+    console.log(isRetry ? 'Retrying' : 'Getting', 'page', yellow(page), 'of', yellow(`${username}'s`), 'anime list')
 
     // Wait at least 2 seconds between API requests, increasing with each retry
     if (page > 1 || isRetry) {
@@ -239,7 +253,7 @@ async function getApiData(username, page = 1, isRetry = false) {
     let response
 
     try {
-        response = await fetch(`https://api.jikan.moe/v3/user/${MAL_USERNAME}/animelist/all/${page}`)
+        response = await fetch(`https://api.jikan.moe/v3/user/${username}/animelist/all/${page}`)
     } catch (error) {
         console.log(magenta('Error occurred while fetching API, retrying'))
 
@@ -258,10 +272,9 @@ async function getApiData(username, page = 1, isRetry = false) {
 
     // If this page was full (300 entries per page), get the next page
     if (anime.length === 300) {
-        return {
-            ...anime,
-            ...getApiData(username, page + 1),
-        }
+        const nextAnime = await getApiData(username, page + 1)
+
+        return [...anime, ...nextAnime]
     }
 
     return anime
@@ -314,11 +327,15 @@ async function getUserProfileData(isRetry = false) {
 /**
  * Monolith incoming.
  */
-getApiData('fncombo')
+getApiData(MAL_USERNAME)
     .then(async (anime) => {
-        console.log(anime)
         // Process the API data
         processApiData(anime)
+
+        // Get and process anime we've watched together
+        const togetherAnime = await getApiData('aendym')
+
+        processTogetherData(togetherAnime)
 
         // Get and process user profile data
         processUserProfileData(await getUserProfileData())
