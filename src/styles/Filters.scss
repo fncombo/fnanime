@@ -1,0 +1,96 @@
+@import "_base";
+
+// Bulma form
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/input-textarea.sass";
+@import "~bulma/sass/form/select.sass";
+
+.filters {
+    @include mobile {
+        padding-bottom: $column-gap;
+    }
+
+    .buttons {
+        overflow: hidden;
+        flex-wrap: nowrap;
+        align-items: normal;
+        margin: 0 !important;
+
+        @include mobile {
+            overflow: scroll;
+            padding-right: 0;
+            -webkit-overflow-scrolling: touch;
+
+            &::after {
+                display: inline-flex;
+                min-width: $column-gap;
+                flex: 0 0 $column-gap;
+                content: "";
+            }
+        }
+
+        .button {
+            display: block;
+            height: 2.5em;
+            flex: 1 1 auto;
+            padding: 0.25rem;
+            margin-bottom: -$column-gap;
+            box-shadow: none !important;
+
+            @include mobile {
+                padding: 0.25rem 0.75rem;
+            }
+
+            .icon {
+                width: 1rem;
+                height: 1rem;
+                margin: 0;
+                font-size: 0.75rem;
+            }
+
+            .count {
+                opacity: 0.5;
+
+                &::before {
+                    content: "\00a0(";
+                }
+
+                &::after {
+                    content: ")";
+                }
+            }
+
+            &.is-dark {
+                z-index: 5;
+            }
+
+            &.is-faded {
+                color: $border;
+
+                &:hover {
+                    color: $border-hover;
+                }
+            }
+        }
+    }
+
+    .select::after {
+        border-color: $dark !important;
+    }
+
+    .summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .column:not(.buttons) {
+        @include mobile {
+            padding-bottom: 0;
+
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+        }
+    }
+}

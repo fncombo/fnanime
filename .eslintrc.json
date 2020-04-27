@@ -1,84 +1,243 @@
 {
+    "settings": {
+        "import/resolver": {
+            "alias": [
+                ["^src", "./src"],
+                ["^assets", "./src/assets"],
+                ["^components", "./src/js/components"],
+                ["^helpers", "./src/js/helpers"],
+                ["^templates", "./src/js/templates"],
+                ["^styles", "./src/styles"]
+            ]
+        },
+        "jsdoc": {
+            "mode": "typescript",
+            "preferredTypes": {
+                ".<>": false,
+                "<>": false
+            }
+        }
+    },
     "env": {
         "browser": true
     },
-    "extends": [
-        "airbnb",
-        "airbnb/hooks"
-    ],
+    "extends": ["airbnb", "airbnb/hooks"],
+    "plugins": ["simple-import-sort", "jsdoc"],
     "parser": "babel-eslint",
     "rules": {
         // Changed rules
-        "semi": [ "error", "never" ],
-        "indent": [ "error", 4 ],
-        "max-len": [ "error", 120 ],
-        "arrow-parens": [ "error", "as-needed" ],
-        "array-bracket-spacing": [ "error", "always" ],
-        "object-curly-newline": [ "error", {
-            "consistent": true
-        } ],
-        "operator-linebreak": [ "error", "before", {
-            "overrides": {
-                "&&": "after"
+        "semi": ["error", "never"],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+                "VariableDeclarator": 1,
+                "outerIIFEBody": 1,
+                "FunctionDeclaration": {
+                    "parameters": 1,
+                    "body": 1
+                },
+                "FunctionExpression": {
+                    "parameters": 1,
+                    "body": 1
+                },
+                "CallExpression": {
+                    "arguments": 1
+                },
+                "ArrayExpression": 1,
+                "ObjectExpression": 1,
+                "ImportDeclaration": 1,
+                "flatTernaryExpressions": false,
+                "ignoredNodes": [
+                    "JSXElement",
+                    "JSXElement > *",
+                    "JSXAttribute",
+                    "JSXIdentifier",
+                    "JSXNamespacedName",
+                    "JSXMemberExpression",
+                    "JSXSpreadAttribute",
+                    "JSXExpressionContainer",
+                    "JSXOpeningElement",
+                    "JSXClosingElement",
+                    "JSXText",
+                    "JSXEmptyExpression",
+                    "JSXSpreadChild"
+                ],
+                "ignoreComments": false
             }
-        } ],
-        "comma-dangle": [ "error", {
-            "arrays": "always-multiline",
-            "objects": "always-multiline",
-            "imports": "always-multiline",
-            "exports": "always-multiline",
-            "functions": "never"
-        } ],
+        ],
+        "max-len": ["error", 120],
+        "object-curly-newline": [
+            "error",
+            {
+                "consistent": true
+            }
+        ],
+        "operator-linebreak": [
+            "error",
+            "before",
+            {
+                "overrides": {
+                    "||": "after",
+                    "&&": "after",
+                    "+": "after",
+                    "=": "ignore"
+                }
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ],
         "no-multiple-empty-lines": [
-            "error", {
+            "error",
+            {
                 "max": 1,
                 "maxBOF": 0,
                 "maxEOF": 1
             }
         ],
         "padding-line-between-statements": [
-            "error", {
+            "error",
+            {
                 "blankLine": "always",
                 "prev": "*",
                 "next": "*"
-            }, {
+            },
+            {
                 "blankLine": "any",
-                "prev": [
-                    "const",
-                    "let",
-                    "import"
-                ],
-                "next": [
-                    "const",
-                    "let",
-                    "import"
-                ]
+                "prev": ["const", "let", "import"],
+                "next": ["const", "let", "import"]
+            }
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": ["accumulator", "draft"]
+            }
+        ],
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": ["./*", "../*"]
             }
         ],
 
         // Disabled rules
         "implicit-arrow-linebreak": 0,
-        "symbol-description": 0,
         "function-paren-newline": 0,
-        "no-restricted-syntax": 0,
-        "no-continue": 0,
         "no-console": 0,
+        "no-continue": 0,
 
-        "import/no-unresolved": 0,
-        "import/no-extraneous-dependencies": 0,
+        "no-restricted-syntax": 0,
 
-        "react/jsx-indent": [ "error", 4 ],
-        "react/jsx-indent-props": [ "error", 4 ],
-        "react/jsx-filename-extension": 0,
-        "react/jsx-wrap-multilines": 0,
+        // Changed plugin rules
+        "import/default": "error",
+        "import/group-exports": "error",
+        "import/no-cycle": 0,
+        "import/prefer-default-export": 0,
+
+        "simple-import-sort/sort": [
+            "error",
+            {
+                "groups": [
+                    ["^react$", "^react-dom$", "^prop-types$"],
+                    ["^@?\\w(?!src/styles/|src/helpers/)"],
+                    ["^\\u0000(?!src/styles/src/|helpers/)"],
+                    ["^src/data/.+$"],
+                    ["^src/helpers/.+$", "^\\u0000src/helpers/"],
+                    ["^src/components/.+$"],
+                    ["^src/styles/.+$", "^\\u0000src/styles/"]
+                ]
+            }
+        ],
+
+        "jsdoc/check-alignment": "error",
+        "jsdoc/check-examples": "error",
+        "jsdoc/check-indentation": "error",
+        "jsdoc/check-param-names": "error",
+        "jsdoc/check-syntax": "error",
+        "jsdoc/check-tag-names": "error",
+        "jsdoc/check-types": "error",
+        "jsdoc/implements-on-classes": "error",
+        "jsdoc/match-description": "error",
+        "jsdoc/newline-after-description": "error",
+        "jsdoc/no-types": 0,
+        "jsdoc/no-undefined-types": "error",
+        "jsdoc/require-description": "error",
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-example": 0,
+        "jsdoc/require-hyphen-before-param-description": ["error", "never"],
+        "jsdoc/require-jsdoc": "error",
+        "jsdoc/require-param": "error",
+        "jsdoc/require-param-description": "error",
+        "jsdoc/require-param-name": "error",
+        "jsdoc/require-param-type": "error",
+        "jsdoc/require-returns": "error",
+        "jsdoc/require-returns-check": "error",
+        "jsdoc/require-returns-description": "error",
+        "jsdoc/require-returns-type": "error",
+        "jsdoc/valid-types": "error",
+
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/mouse-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/control-has-associated-label": 0,
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "assert": "either",
+                "depth": 25
+            }
+        ],
+
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [".js"]
+            }
+        ],
         "react/jsx-one-expression-per-line": 0,
         "react/jsx-props-no-spreading": 0,
-        "react/jsx-curly-newline": 0,
-        "react/prop-types": 0,
+        "react/jsx-key": "error",
 
-        "jsx-a11y/no-static-element-interactions": 0,
-        "jsx-a11y/click-events-have-key-events": 0,
-        "jsx-a11y/control-has-associated-label": 0,
-        "jsx-a11y/mouse-events-have-key-events": 0
-    }
+        "react/forbid-prop-types": 0,
+        "react/require-default-props": 0,
+        "react/jsx-no-useless-fragment": "error",
+        "react/prefer-read-only-props": "error",
+        "react/function-component-definition": [
+            "error",
+            {
+                "namedComponents": "function-declaration",
+                "unnamedComponents": "arrow-function"
+            }
+        ],
+        "react/boolean-prop-naming": [
+            "error",
+            {
+                "propTypeNames": ["bool", "mutuallyExclusiveTrueProps"],
+                "rule": "^((is|has)[A-Z]([A-Za-z0-9]?)+)$",
+                "validateNested": true
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["src/pages/**/*.js", "src/components/**/*.js"],
+            "rules": {
+                "jsdoc/require-param": 0,
+                "jsdoc/require-returns": 0
+            }
+        }
+    ]
 }

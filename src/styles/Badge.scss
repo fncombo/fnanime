@@ -1,0 +1,81 @@
+@import "_base";
+
+.tag {
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.25em 0 -0.25em !important;
+    }
+}
+
+.tags {
+    flex-wrap: nowrap;
+
+    .tag:first-child {
+        padding-right: 1em;
+    }
+
+    .is-dark {
+        position: relative;
+        display: flex;
+
+        &:not(.is-parted) {
+            padding-left: 0.25rem;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -0.75em;
+                width: 0;
+                height: 0;
+                border-top: 2em solid transparent;
+                border-right: 0.75em solid $dark;
+                border-bottom: 0 solid transparent;
+                content: "";
+            }
+        }
+    }
+}
+
+.is-modal-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+    .tag {
+        text-decoration: underline;
+    }
+}
+
+.tag-part {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -0.75em;
+        width: 0;
+        height: 0;
+        border-top: 2em solid transparent;
+        border-right: 0.75em solid $dark;
+        border-bottom: 0 solid transparent;
+        content: "";
+    }
+
+    &.is-current {
+        padding: 0 1em 0 0.25em;
+        margin: 0 0.75em 0 -0.75em;
+        background-image: linear-gradient(to left, rgba($dark, 0.5), rgba($dark, 0.5));
+
+        &::before {
+            opacity: 0.5;
+        }
+    }
+
+    &.is-total {
+        padding-left: 0.25em;
+        margin-left: -0.75em;
+    }
+}

@@ -1,17 +1,20 @@
-// Libraries
 const has = require('has')
 
 // Valid values for different types of data
 const TYPES = {
-    resolution: [ 1080, 720, 576, 480, 360 ],
-    source: [ 'BD', 'TV', 'Web', 'DVD' ],
-    videoCodec: [ 'H.265', 'H.264' ],
-    audioCodec: [ 'FLAC', 'DTS', 'AAC', 'AC3', 'Opus' ],
-    bits: [ 10, 8 ],
+    resolution: [1080, 720, 576, 480, 360],
+    source: ['BD', 'TV', 'Web', 'DVD'],
+    videoCodec: ['H.265', 'H.264'],
+    audioCodec: ['FLAC', 'DTS', 'AAC', 'AC3', 'Opus'],
+    bits: [10, 8],
 }
 
 /**
  * Checks whether a given type has a valid value.
+ *
+ * @param type
+ * @param value
+ * @param animeTitle
  */
 function validateType(type, value, animeTitle) {
     if (!has(TYPES, type)) {
@@ -29,6 +32,8 @@ function validateType(type, value, animeTitle) {
 
 /**
  * Replace or remove characters which cannot be used in folder and file names.
+ *
+ * @param string
  */
 function removeInvalidChars(string) {
     return string.replace(/[√:?]/g, '').replace(/[★/]/g, ' ')
@@ -36,6 +41,8 @@ function removeInvalidChars(string) {
 
 /**
  * Get the rewatch count from the anime's tags.
+ *
+ * @param tags
  */
 function getRewatchCount(tags) {
     if (!tags) {
@@ -49,6 +56,8 @@ function getRewatchCount(tags) {
 
 /**
  * Extract the total duration in minutes from API data.
+ *
+ * @param duration
  */
 function getDuration(duration) {
     if (!duration) {
@@ -57,13 +66,13 @@ function getDuration(duration) {
 
     // Convert hours into minutes
     if (/hr/i.test(duration)) {
-        const [ , hours, minutes ] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
+        const [, hours, minutes] = duration.match(/(\d+)\s?hr\.?\s?(\d+)?/i)
 
-        return (parseInt(hours, 10) * 60) + (minutes ? parseInt(minutes, 10) : 0)
+        return parseInt(hours, 10) * 60 + (minutes ? parseInt(minutes, 10) : 0)
     }
 
     if (/\d+/.test(duration)) {
-        const [ digits ] = duration.match(/\d+/)
+        const [digits] = duration.match(/\d+/)
 
         if (digits) {
             return parseInt(digits, 10)
@@ -75,6 +84,9 @@ function getDuration(duration) {
 
 /**
  * Returns whether an anime is a favorite anime and its order in the favorites list.
+ *
+ * @param animeId
+ * @param favoriteAnime
  */
 function getFavoriteStatus(animeId, favoriteAnime) {
     // Check whether this anime ID exists in favorites
@@ -100,7 +112,6 @@ const animeProxy = {
     },
 }
 
-// Exports
 module.exports = {
     validateType,
     removeInvalidChars,

@@ -1,10 +1,8 @@
 // Node
 const { readFile, writeFile } = require('fs').promises
 
-// Libraries
 const has = require('has')
 const { eachSeries } = require('async')
-const beautify = require('js-beautify')
 const { magenta, yellow } = require('chalk')
 const fetch = require('node-fetch')
 
@@ -13,6 +11,9 @@ const CACHE_LOCATION = 'cache.json'
 
 /**
  * Get detailed data (for use in cache) about a single anime.
+ *
+ * @param animeId
+ * @param tryCount
  */
 async function getAnimeData(animeId, tryCount = 1) {
     // Stop after too many retries
@@ -23,7 +24,7 @@ async function getAnimeData(animeId, tryCount = 1) {
     console.log(tryCount > 1 ? 'Retrying' : 'Getting', 'data for anime ID:', yellow(animeId))
 
     // Wait at least 4 seconds between API requests, increasing with each retry, and 4 seconds on initial
-    await new Promise(resolve => {
+    await new Promise((resolve) => {
         setTimeout(resolve, tryCount * 4000)
     })
 
@@ -54,6 +55,8 @@ async function getAnimeData(animeId, tryCount = 1) {
 
 /**
  * Generate cache data for all given anime IDs.
+ *
+ * @param animeIds
  */
 async function generateCache(animeIds) {
     console.log('Generating new cache, this will take a while')
@@ -65,7 +68,7 @@ async function generateCache(animeIds) {
     }
 
     // Go through each anime ID and generate cache for it one at a time
-    await eachSeries(animeIds, async animeId => {
+    await eachSeries(animeIds, async (animeId) => {
         const data = await getAnimeData(animeId)
 
         cache.anime[animeId] = data
@@ -76,17 +79,20 @@ async function generateCache(animeIds) {
 
 /**
  * Updates provided current cache with anime IDs which are not present in it.
+ *
+ * @param cache
+ * @param animeIds
  */
 async function updateCache(cache, animeIds) {
     // Filter to get only anime IDs which aren't already present in the cache
-    const newAnimeIds = animeIds.filter(animeId => !has(cache.anime, animeId))
+    const newAnimeIds = animeIds.filter((animeId) => !has(cache.anime, animeId))
 
     if (!newAnimeIds.length) {
         return false
     }
 
     // Go through each new anime ID and generate cache for it one at a time
-    await eachSeries(newAnimeIds, async newAnimeId => {
+    await eachSeries(newAnimeIds, async (newAnimeId) => {
         // eslint-disable-next-line no-param-reassign
         cache.anime[newAnimeId] = await getAnimeData(newAnimeId)
     })
@@ -107,12 +113,12 @@ async function loadCache() {
 
         // Check if the cache is too old
         if (Date.now() - cache.updated > 2.628e9) {
-            console.log('Cache is over a month old, consider deleting it so that it\'s generated again')
+            console.log("Cache is over a month old, consider deleting it so that it's generated again")
         } else {
             console.log('Successfully loaded cache')
         }
 
-    // Generate new cache if it wasn't found
+        // Generate new cache if it wasn't found
     } catch (error) {
         console.log(magenta('No cache found'))
 
@@ -124,9 +130,12 @@ async function loadCache() {
 
 /**
  * Save cache data to file.
+ *
+ * @param data
+ * @param isUpdate
  */
 async function saveCache(data, isUpdate = false) {
-    const saveData = beautify(JSON.stringify(data))
+    const saveData = JSON.stringify(data, null, 4)
 
     try {
         await writeFile(CACHE_LOCATION, saveData)
@@ -139,7 +148,6 @@ async function saveCache(data, isUpdate = false) {
     return true
 }
 
-// Exports
 module.exports = {
     getAnimeData,
     updateCache,

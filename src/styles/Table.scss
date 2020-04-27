@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+@import "_base";
+
+.table {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-top: 1px solid $border;
+}
+
+.table-sentinel {
+    position: absolute;
+    top: -$sticky-panel-height;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.table-header {
+    position: sticky;
+    z-index: 5;
+    top: $sticky-panel-height;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    transition-duration: $duration-fast;
+    transition-property: height, margin-bottom;
+    transition-timing-function: $easing;
+
+    @include mobile {
+        display: none;
+    }
+
+    // Page wide element to show the shadow when stuck
+    &::before {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -50%;
+        display: block;
+        width: 200vw;
+        height: 100%;
+        background: $backdrop-background-light-fallback;
+        content: "";
+        pointer-events: none;
+        transition: box-shadow $duration-fast $easing;
+    }
+
+    // Special style when the table header is stuck
+    &.is-stuck {
+        height: $sticky-panel-height;
+        margin-bottom: calc(-#{$sticky-panel-height} + 45px);
+
+        &::before {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+            @supports (backdrop-filter: $backdrop-filter) {
+                backdrop-filter: $backdrop-filter;
+                background: $backdrop-background-light;
+            }
+        }
+    }
+
+    .table-column {
+        position: relative;
+        z-index: 2;
+        padding: 0 5px;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        user-select: none;
+
+        &:hover {
+            color: $info;
+        }
+
+        &::before {
+            position: absolute;
+            top: 1px;
+            left: calc(50% + #{$spacing});
+            width: 20px;
+            content: attr(data-index);
+            font-size: 10px;
+            text-align: left;
+        }
+
+        .icon {
+            position: absolute;
+            left: 50%;
+            font-size: 1rem;
+            transform: translateX(-50%);
+
+            &.is-asc {
+                top: 0;
+            }
+
+            &.is-desc {
+                top: -$spacing;
+            }
+        }
+
+        &:first-child {
+            flex-grow: 1;
+            flex-shrink: 1;
+            justify-content: flex-start;
+            padding-left: calc(33px + #{$spacing});
+
+            &::before {
+                left: calc(33px + #{$spacing} + 1.5rem);
+            }
+
+            .icon {
+                left: calc(33px + #{$spacing} + 1rem);
+            }
+        }
+    }
+}
+
+.table-row {
+    display: flex;
+    color: unset;
+
+    @include mobile {
+        display: grid;
+        padding: 0.25rem 0;
+        border-bottom: 1px solid $border;
+        margin: 0.25rem 0;
+        grid-template:
+            "img title title title title title" #{$mobile-table-img-height / 2}
+            "img status status status status status" #{$mobile-table-img-height / 2}
+            "rating resolution source videoCodec audioCodec fileQuality" 1fr
+            "episodeSize episodeSize episodeSize size size size" 1fr
+            / #{$mobile-table-img-width} 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @include tablet {
+        &:nth-child(odd) {
+            background: $row-color;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background: $row-color-hover;
+                color: unset;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .table-header + & {
+                border-top: 1px solid $border;
+            }
+        }
+    }
+}
+
+.table-column {
+    display: flex;
+    overflow: hidden;
+    height: 45px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        height: 30px;
+
+        &.is-rewatchCount,
+        &.is-subs {
+            display: none;
+        }
+    }
+
+    &.is-img {
+        width: 33px;
+        height: 45px;
+        flex: 0 0 33px;
+        grid-area: img;
+
+        @include mobile {
+            width: $mobile-table-img-width;
+            height: $mobile-table-img-height;
+        }
+    }
+
+    &.is-title {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        margin: 0 $spacing;
+        grid-area: title;
+
+        @include mobile {
+            padding-left: $spacing;
+        }
+    }
+
+    &.is-status {
+        @include mobile {
+            justify-content: flex-start;
+            padding-left: $spacing;
+        }
+    }
+
+    .type {
+        margin-left: $spacing;
+        color: $grey-light;
+    }
+
+    .air-status {
+        padding-right: $spacing;
+        padding-left: $spacing;
+        margin-right: $spacing;
+        background: rgba($dark, 0.5);
+        border-radius: 100px;
+        color: $white-ter;
+        white-space: nowrap;
+    }
+
+    // Search highlighted text
+    strong {
+        display: inline-block;
+        padding: 0.25rem 0.1rem;
+        border-radius: 0.25rem;
+        color: $white-ter;
+        font-weight: normal;
+        white-space: pre;
+    }
+
+    &.has-highlight-success strong {
+        background-color: $success;
+    }
+
+    &.has-highlight-info strong {
+        background-color: $info;
+    }
+
+    &.has-highlight-warning strong {
+        background-color: $warning;
+        color: $warning-invert;
+    }
+
+    &.has-highlight-danger strong {
+        background-color: $danger;
+    }
+
+    &.has-highlight-dark strong {
+        background-color: $dark;
+    }
+
+    .tag {
+        @include mobile {
+            font-size: 0.75rem !important;
+        }
+    }
+
+    // Size progress column don"t wrap long numbers
+    &.has-progress {
+        flex-direction: column;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .progress {
+        width: 100%;
+        height: $progress-height;
+        margin-top: 0.25rem;
+    }
+}
+
+// No results after search
+.table-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.75rem;
+    color: $danger;
+}
