@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = {
+const config = {
     plugins: [
         {
             resolve: 'gatsby-plugin-root-import',
@@ -8,6 +8,14 @@ module.exports = {
                 src: path.join(__dirname, 'src'),
             },
         },
+        'gatsby-plugin-sass',
+        'gatsby-plugin-offline',
+        'gatsby-plugin-react-helmet',
+    ],
+}
+
+if (process.env.NODE_ENV !== 'production') {
+    config.plugins.push(
         {
             resolve: 'gatsby-plugin-eslint',
             options: {
@@ -25,9 +33,8 @@ module.exports = {
             options: {
                 files: 'src/styles/*.scss',
             },
-        },
-        'gatsby-plugin-sass',
-        'gatsby-plugin-offline',
-        'gatsby-plugin-react-helmet',
-    ],
+        }
+    )
 }
+
+module.exports = config
