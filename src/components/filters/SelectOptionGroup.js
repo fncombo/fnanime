@@ -6,7 +6,7 @@ import SelectOption from 'src/components/filters/SelectOption'
 /**
  * A group of filter options in a select list with a label.
  */
-export default function SelectOptionGroup({ filterName, options, children: label }) {
+export default function SelectOptionGroup({ filterName, options, label }) {
     // Skip option group if there are no options
     if (!options.length) {
         return null
@@ -15,9 +15,7 @@ export default function SelectOptionGroup({ filterName, options, children: label
     return (
         <optgroup label={label}>
             {options.map((filterValue) => (
-                <SelectOption filterName={filterName} key={filterValue}>
-                    {filterValue}
-                </SelectOption>
+                <SelectOption filterName={filterName} filterValue={filterValue} key={filterValue} />
             ))}
         </optgroup>
     )
@@ -26,5 +24,5 @@ export default function SelectOptionGroup({ filterName, options, children: label
 SelectOptionGroup.propTypes = {
     filterName: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
-    children: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
 }

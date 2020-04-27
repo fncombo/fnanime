@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
-import { ACTIONS, GlobalState } from 'src/data/global-state'
-
+import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
+import { ACTIONS, GlobalState } from 'src/helpers/global-state'
 import { getAdjacentAnime } from 'src/helpers/modal'
 
 import Icon from 'src/components/Icon'
@@ -23,10 +22,8 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
     } = useContext(GlobalState)
     const [anime, setAnime] = useState(propAnime)
 
-    /**
-     * Callback to change the anime info inside the modal with a transition animation in between.
-     */
-    function changeAnime(newAnime) {
+    // Callback to change the anime info inside the modal with a transition animation in between
+    const changeAnime = useCallback((newAnime) => {
         document.body.classList.add('is-changing')
 
         setTimeout(() => {
@@ -34,40 +31,39 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
 
             setAnime(newAnime)
         }, 150)
-    }
+    }, [])
 
-    /**
-     * Callback to close the modal after it has finished animating out.
-     */
-    function closeModal() {
+    // Callback to close the modal after it has finished animating out
+    const closeModal = useCallback(() => {
         document.body.classList.remove('is-active')
 
         setTimeout(() => {
             closeCallback()
         }, 150)
-    }
+    }, [closeCallback])
 
-    /**
-     * Switch between next and previous anime using arrow keys and close the modal using esc.
-     */
-    function keyHandler({ key }) {
-        if (key === 'Escape') {
-            closeModal()
+    // Switch between next and previous anime using arrow keys and close the modal using esc
+    const keyHandler = useCallback(
+        ({ key }) => {
+            if (key === 'Escape') {
+                closeModal()
 
-            return
-        }
+                return
+            }
 
-        if (key !== 'ArrowLeft' && key !== 'ArrowRight') {
-            return
-        }
+            if (key !== 'ArrowLeft' && key !== 'ArrowRight') {
+                return
+            }
 
-        const direction = key === 'ArrowLeft' ? ACTIONS.PREV_ANIME : ACTIONS.NEXT_ANIME
-        const adjacentAnime = getAdjacentAnime(allAnime, anime.id, direction)
+            const direction = key === 'ArrowLeft' ? ACTIONS.PREV_ANIME : ACTIONS.NEXT_ANIME
+            const adjacentAnime = getAdjacentAnime(allAnime, anime.id, direction)
 
-        if (adjacentAnime) {
-            changeAnime(adjacentAnime)
-        }
-    }
+            if (adjacentAnime) {
+                changeAnime(adjacentAnime)
+            }
+        },
+        [allAnime, anime.id, changeAnime, closeModal]
+    )
 
     // Add and remove the modal open classes from the body
     useEffect(() => {

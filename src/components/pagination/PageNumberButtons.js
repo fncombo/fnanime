@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
-import { DEFAULTS } from 'src/data/data'
-import { TableState } from 'src/data/global-state'
+import { DEFAULTS } from 'src/helpers/data'
+import { TableState } from 'src/helpers/global-state'
 
 import NumberButton from 'src/components/pagination/NumberButton'
 

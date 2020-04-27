@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { TABLE_COLUMNS } from 'src/data/table'
+import { TABLE_COLUMNS } from 'src/helpers/table'
 
 import SizeBar from 'src/components/table/SizeBar'
 

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import classNames from 'classnames'
 
-import { ACTIONS, TableState } from 'src/data/global-state'
+import { ACTIONS, TableState } from 'src/helpers/global-state'
 
 import NavigationButton from 'src/components/pagination/NavigationButton'
 import PageNumberButtons from 'src/components/pagination/PageNumberButtons'

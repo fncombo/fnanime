@@ -19,7 +19,6 @@ const ACTIONS = {
     SET_PAGE: Symbol('SET_PAGE'),
     PREV_ANIME: Symbol('PREV_ANIME'),
     NEXT_ANIME: Symbol('NEXT_ANIME'),
-    UPDATE_FROM_HASH: Symbol('UPDATE_FROM_HASH'),
 }
 
 export { ACTIONS, GlobalState, FiltersState, TableState, ModalState }

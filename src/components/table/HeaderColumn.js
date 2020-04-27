@@ -1,12 +1,11 @@
-import React, { memo, useContext } from 'react'
+import React, { memo, useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import clone from 'clone'
 
-import { ACTIONS, GlobalState } from 'src/data/global-state'
-import { SORTING_ICONS, SORTING_ORDERS, TABLE_COLUMNS } from 'src/data/table'
-
 import { formatOrdinal } from 'src/helpers/generic'
+import { ACTIONS, GlobalState } from 'src/helpers/global-state'
+import { SORTING_ICONS, SORTING_ORDERS, TABLE_COLUMNS } from 'src/helpers/table'
 
 import Icon from 'src/components/Icon'
 
@@ -21,33 +20,36 @@ function HeaderColumn({ children: columnName }) {
         dispatch,
     } = useContext(GlobalState)
 
-    /**
-     * Callback to update sorting when clicking on a column.
-     */
-    function changeSortingCallback({ shiftKey }) {
-        // Amending current sorting by holding shift or sorting only the currently sorted column
-        // modifies existing sorting settings, otherwise create new settings
-        const newSorting =
-            shiftKey || (activeSorting.size === 1 && activeSorting.has(columnName)) ? clone(activeSorting) : new Map()
+    // Callback to update sorting when clicking on a column
+    const changeSortingCallback = useCallback(
+        ({ shiftKey }) => {
+            // Amending current sorting by holding shift or sorting only the currently sorted column
+            // modifies existing sorting settings, otherwise create new settings
+            const newSorting =
+                shiftKey || (activeSorting.size === 1 && activeSorting.has(columnName))
+                    ? clone(activeSorting)
+                    : new Map()
 
-        // Check if this column is already being sorted, in which case reverse it,
-        if (newSorting.has(columnName)) {
-            newSorting.set(
+            // Check if this column is already being sorted, in which case reverse it,
+            if (newSorting.has(columnName)) {
+                newSorting.set(
+                    columnName,
+                    newSorting.get(columnName) === SORTING_ORDERS.asc ? SORTING_ORDERS.desc : SORTING_ORDERS.asc
+                )
+
+                // Otherwise add new sorting for this column and use the default direction for it
+            } else {
+                newSorting.set(columnName, TABLE_COLUMNS[columnName].defaultSorting)
+            }
+
+            dispatch({
+                type: ACTIONS.CHANGE_SORTING,
                 columnName,
-                newSorting.get(columnName) === SORTING_ORDERS.asc ? SORTING_ORDERS.desc : SORTING_ORDERS.asc
-            )
-
-            // Otherwise add new sorting for this column and use the default direction for it
-        } else {
-            newSorting.set(columnName, TABLE_COLUMNS[columnName].defaultSorting)
-        }
-
-        dispatch({
-            type: ACTIONS.CHANGE_SORTING,
-            columnName,
-            newSorting,
-        })
-    }
+                newSorting,
+            })
+        },
+        [activeSorting, columnName, dispatch]
+    )
 
     let index
     let title = ''

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { FILTERS } from 'src/data/filters'
-
+import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
 
 import 'src/styles/Badge.scss'

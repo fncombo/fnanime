@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
-
+import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
 import { add } from 'src/helpers/statistics'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { FILTERS } from 'src/data/filters'
+import { FILTERS } from 'src/helpers/filters'
 
 /**
  * Array of values which should be comma-separated. Can look up description from filters.

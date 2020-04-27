@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
+import { FILTERS } from 'src/helpers/filters'
 
 import FilterButton from 'src/components/filters/FilterButton'
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import { GlobalState } from 'src/data/global-state'
+import { GlobalState } from 'src/helpers/global-state'
 
 /**
  * Displays how many downloaded and not downloaded anime there are.

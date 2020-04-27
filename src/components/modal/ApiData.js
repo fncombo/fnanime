@@ -1,32 +1,39 @@
 import React, { useContext } from 'react'
 
-import { ModalState } from 'src/data/global-state'
+import { isFunction, isNumber, isString } from 'is-what'
 
-import { getNestedProperty } from 'src/helpers/modal'
+import { ModalState } from 'src/helpers/global-state'
 
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.
  */
-export default function ApiData({ property, fallback, children }) {
+export default function ApiData({ data, fallback, children }) {
     const {
         modalState: { apiData },
     } = useContext(ModalState)
-    const data = getNestedProperty(apiData, ...property.split('.'))
+
+    let dataValue = null
+
+    if (isString(data)) {
+        dataValue = apiData[data]
+    } else if (isFunction(data)) {
+        dataValue = data(apiData)
+    }
 
     // No such API data or it's empty, return the fallback
-    if (!data) {
+    if (!dataValue) {
         return fallback || <>&mdash;</>
     }
 
     // Render function provided, pass the data to it
-    if (typeof children === 'function') {
-        return children(data)
+    if (isFunction(children)) {
+        return children(dataValue)
     }
 
     // The data is a number, format it properly
-    if (typeof data === 'number') {
-        return data.toLocaleString()
+    if (isNumber(dataValue)) {
+        return dataValue.toLocaleString()
     }
 
-    return data
+    return dataValue
 }

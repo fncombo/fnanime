@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { FILTERS } from 'src/data/filters'
-import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
-
-import 'src/styles/Filters.scss'
+import { FILTERS } from 'src/helpers/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/helpers/global-state'
 
 /**
  * Single filter button for a value of a filter with a count of how many anime currently match it.
@@ -18,16 +16,14 @@ export default function FilterButton({ filterName, children: filterValue }) {
     } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
-    /**
-     * Callback to update the anime list when selecting this filter.
-     */
-    function selectFilterCallback() {
+    // Callback to update the anime list when selecting this filter
+    const selectFilterCallback = useCallback(() => {
         dispatch({
             type: ACTIONS.SELECT_FILTER,
             filterName,
             filterValue,
         })
-    }
+    }, [dispatch, filterName, filterValue])
 
     // Whether this filter is currently selected (being filtered by)
     const isSelected = activeFilters[filterName] === filterValue

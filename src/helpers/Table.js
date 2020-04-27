@@ -1,32 +1,120 @@
-import { FILTERS } from 'src/data/filters'
-import { STORAGE_SIZE_LIMITS } from 'src/data/table'
+import { isNumber } from 'is-what'
 
-/**
- * Returns the colour name for a given overall file quality.
- *
- * @param {number} fileQuality Number from 0 to 5 representing the overall quality of the files in the anime.
- *
- * @returns {string} Colour name.
- */
-function getFileQualityColor(fileQuality) {
-    if (!fileQuality) {
-        return 'default'
-    }
+import { FILTERS } from 'src/helpers/filters'
 
-    if (fileQuality < 2.75) {
-        return 'red'
-    }
-
-    if (fileQuality < 3.75) {
-        return 'orange'
-    }
-
-    if (fileQuality < 4.75) {
-        return 'yellow'
-    }
-
-    return 'green'
+// Storage size limits
+const STORAGE_SIZE_LIMITS = {
+    total: {
+        // 1GB
+        min: 1073741824,
+        // 50 GB
+        max: 53687091200,
+        // 12.5 GB
+        small: 13421772800,
+        // 25 GB
+        medium: 26843545600,
+        // 50 GB
+        large: 53687091200,
+    },
+    episode: {
+        // 100 MB
+        min: 104857600,
+        // 2 GB
+        max: 2147483648,
+        // 500 MB
+        small: 524288000,
+        // 1 GB
+        medium: 1073741824,
+        // 2BG
+        large: 2147483648,
+    },
 }
+
+// Column sizes
+const COLUMN_SIZES = {
+    small: '5%',
+    medium: '7%',
+    large: '15%',
+}
+
+// Sorting directions
+const SORTING_ORDERS = {
+    asc: 'asc',
+    desc: 'desc',
+}
+
+// Sorting icons
+const SORTING_ICONS = {
+    asc: 'sort-up',
+    desc: 'sort-down',
+}
+
+// Columns setup
+const TABLE_COLUMNS = {
+    title: {
+        text: 'Title',
+        defaultSorting: SORTING_ORDERS.asc,
+        size: 'auto',
+    },
+    status: {
+        text: 'Status',
+        defaultSorting: SORTING_ORDERS.asc,
+        size: 'auto',
+    },
+    rating: {
+        text: 'Rating',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
+    },
+    rewatchCount: {
+        text: 'Rewatched',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
+    },
+    subs: {
+        text: 'Release',
+        defaultSorting: SORTING_ORDERS.asc,
+        size: COLUMN_SIZES.medium,
+    },
+    resolution: {
+        text: 'Resolution',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
+    },
+    source: {
+        text: 'Source',
+        defaultSorting: SORTING_ORDERS.asc,
+        size: COLUMN_SIZES.small,
+    },
+    videoCodec: {
+        text: 'Video',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
+    },
+    audioCodec: {
+        text: 'Audio',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
+    },
+    fileQuality: {
+        text: 'Quality',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.small,
+    },
+    episodeSize: {
+        text: 'Episode Size',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
+    },
+    size: {
+        text: 'Total Size',
+        defaultSorting: SORTING_ORDERS.desc,
+        size: COLUMN_SIZES.medium,
+    },
+}
+
+// Only the keys (names) of all table columns
+const TABLE_COLUMN_NAMES = Object.keys(TABLE_COLUMNS)
 
 /**
  * Returns the colour name based on the column and its contents (taken from filters or overall file quality).
@@ -39,7 +127,23 @@ function getFileQualityColor(fileQuality) {
 function getColumnTextColor(columnName, value) {
     // Special treatment for file quality
     if (columnName === 'fileQuality') {
-        return getFileQualityColor(value)
+        if (!isNumber(value)) {
+            return 'default'
+        }
+
+        if (value < 2.75) {
+            return 'red'
+        }
+
+        if (value < 3.75) {
+            return 'orange'
+        }
+
+        if (value < 4.75) {
+            return 'yellow'
+        }
+
+        return 'green'
     }
 
     // If color codes mapping exists for this column use it
@@ -82,4 +186,13 @@ function getSizeBarColor(size, type) {
     return 'green'
 }
 
-export { getColumnTextColor, getFileQualityColor, getSizeBarWidth, getSizeBarColor }
+export {
+    TABLE_COLUMNS,
+    TABLE_COLUMN_NAMES,
+    STORAGE_SIZE_LIMITS,
+    SORTING_ORDERS,
+    SORTING_ICONS,
+    getColumnTextColor,
+    getSizeBarWidth,
+    getSizeBarColor,
+}

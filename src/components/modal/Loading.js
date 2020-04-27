@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { SlideDown } from 'react-slidedown'
 
-import { ModalState } from 'src/data/global-state'
+import { ModalState } from 'src/helpers/global-state'
 
 import Icon from 'src/components/Icon'
 

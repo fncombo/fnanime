@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import copy from 'copy-text-to-clipboard'
@@ -18,29 +18,25 @@ const COPY_STATUS = {
 export default function CopyIcon({ value }) {
     const [copyStatus, setCopyStatus] = useState(COPY_STATUS.INITIAL)
 
-    // Nothing to copy
-    if (!value) {
-        return null
-    }
-
-    /**
-     * Callback to reset the title when the mouse leaves and the tooltip is fully faded out.
-     */
-    function onMouseOutCallback() {
+    // Callback to reset the title when the mouse leaves and the tooltip is fully faded out
+    const onMouseOutCallback = useCallback(() => {
         if (copyStatus !== COPY_STATUS.INITIAL) {
             setTimeout(() => {
                 setCopyStatus(COPY_STATUS.INITIAL)
             }, 150)
         }
-    }
+    }, [copyStatus])
 
-    /**
-     * Callback to try and copy the title and change the status based on whether it succeeded.
-     */
-    function onClickCallback() {
+    // Callback to try and copy the title and change the status based on whether it succeeded
+    const onClickCallback = useCallback(() => {
         const didCopy = copy(value)
 
         setCopyStatus(didCopy ? COPY_STATUS.SUCCESS : COPY_STATUS.FAIL)
+    }, [value])
+
+    // Nothing to copy
+    if (!value) {
+        return null
     }
 
     return (

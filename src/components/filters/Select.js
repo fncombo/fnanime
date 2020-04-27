@@ -1,8 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
-import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
+import { isString } from 'is-what'
+
+import { FILTERS } from 'src/helpers/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/helpers/global-state'
 
 import SelectOption from 'src/components/filters/SelectOption'
 import SelectOptionGroup from 'src/components/filters/SelectOptionGroup'
@@ -17,30 +19,27 @@ export default function Select({ filterName }) {
     } = useContext(GlobalState)
     const { filterCounts } = useContext(FiltersState)
 
-    /**
-     * Callback to update the anime list when selecting this filter.
-     */
-    function selectFilterCallback({ target: { value: filterValue } }) {
-        let actualFilterValue = filterValue
+    // Callback to update the anime list when selecting this filter
+    const selectFilter = useCallback(
+        ({ target: { value: filterValue } }) => {
+            let actualFilterValue = filterValue
 
-        // Check if the filter value is the string "false" and convert it to a proper boolean if it is
-        if (filterValue === 'false') {
-            actualFilterValue = false
+            if (filterValue === 'false') {
+                // Check if the filter value is the string "false" and convert it to a proper boolean if it is
+                actualFilterValue = false
+            } else if (/^\d+$/.test(filterValue)) {
+                // Check if the option value is fully a number, and convert it to the correct type if it is
+                actualFilterValue = parseInt(filterValue, 10)
+            }
 
-            // Check if the option value is fully a number, and convert it to the correct type if it is
-        } else if (/^\d+$/.test(filterValue)) {
-            actualFilterValue = parseInt(filterValue, 10)
-        }
-
-        dispatch({
-            type: ACTIONS.SELECT_FILTER,
-            filterName,
-            filterValue: actualFilterValue,
-        })
-    }
-
-    // Currently active value for this filter
-    const activeFilterValue = activeFilters[filterName]
+            dispatch({
+                type: ACTIONS.SELECT_FILTER,
+                filterName,
+                filterValue: actualFilterValue,
+            })
+        },
+        [dispatch, filterName]
+    )
 
     // Get all the filter values which currently have matching anime to them
     const withCount = FILTERS[filterName].values
@@ -50,7 +49,7 @@ export default function Select({ filterName }) {
                 // Sort options by how many matches they have to them
                 filterCounts[filterName][filterValueB] - filterCounts[filterName][filterValueA] ||
                 // If the same number of matches, sort alphabetically
-                (typeof filterValueA === 'string' && filterValueA.localeCompare(filterValueB))
+                (isString(filterValueA) && filterValueA.localeCompare(filterValueB))
         )
 
     // Get all the filter values which don't currently have matching anime to them, sorted alphabetically by default
@@ -60,14 +59,10 @@ export default function Select({ filterName }) {
 
     return (
         <div className="select is-fullwidth">
-            <select value={activeFilterValue} onChange={selectFilterCallback}>
-                <SelectOption filterName={filterName}>{false}</SelectOption>
-                <SelectOptionGroup filterName={filterName} options={withCount}>
-                    Have matching anime
-                </SelectOptionGroup>
-                <SelectOptionGroup filterName={filterName} options={withoutCount}>
-                    No matching anime
-                </SelectOptionGroup>
+            <select value={activeFilters[filterName]} onChange={selectFilter}>
+                <SelectOption filterName={filterName} filterValue={false} />
+                <SelectOptionGroup filterName={filterName} options={withCount} label="Have matching anime" />
+                <SelectOptionGroup filterName={filterName} options={withoutCount} label="No matching anime" />
             </select>
         </div>
     )

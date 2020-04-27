@@ -1,7 +1,7 @@
 import React, { useContext, useReducer } from 'react'
 
-import { DEFAULTS } from 'src/data/data'
-import { ACTIONS, GlobalState, TableState } from 'src/data/global-state'
+import { DEFAULTS } from 'src/helpers/data'
+import { ACTIONS, GlobalState, TableState } from 'src/helpers/global-state'
 
 import Icon from 'src/components/Icon'
 import Pagination from 'src/components/pagination/Pagination'

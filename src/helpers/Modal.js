@@ -1,28 +1,7 @@
-import { ACTIONS } from 'src/data/global-state'
+import { ACTIONS } from 'src/helpers/global-state'
 
 // Object to cache API data to avoid fetching the same thing multiple times
 const CACHED_API_DATA = new Map()
-
-/**
- * Attempt to retrieve a deeply nested property from an object. Returns the value if found or false.
- *
- * @param {object} object The object to search.
- * @param {string} property The current property name to search for.
- * @param {string[]} rest The rest of deeper property names to search for after "property" is found.
- *
- * @returns {any} Value of the deep nested property if found.
- */
-function getNestedProperty(object, property, ...rest) {
-    if (!object) {
-        return false
-    }
-
-    if (rest.length === 0 && object[property]) {
-        return object[property]
-    }
-
-    return getNestedProperty(object[property], ...rest)
-}
 
 /**
  * Replaces special characters returned by the API into proper HTML entities.
@@ -134,4 +113,4 @@ async function getAnimeApiData(animeId, isRetry = false) {
     return apiData
 }
 
-export { getNestedProperty, replaceSpecialChars, getAdjacentAnime, getAnimeApiData }
+export { replaceSpecialChars, getAdjacentAnime, getAnimeApiData }

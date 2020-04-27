@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { FILTERS } from 'src/data/filters'
-import { ACTIONS, GlobalState } from 'src/data/global-state'
-
+import { FILTERS } from 'src/helpers/filters'
+import { ACTIONS, GlobalState } from 'src/helpers/global-state'
 import { getAdjacentAnime } from 'src/helpers/modal'
 
 import Icon from 'src/components/Icon'
@@ -27,16 +26,14 @@ export default function NavigationButton({ direction, changeAnime, currentAnimeI
         'is-prev': direction !== ACTIONS.NEXT_ANIME,
     })
 
+    // Callback to change the modal anime when clicking on the button
+    const changeAnimeCallback = useCallback(() => {
+        changeAnime(navAnime)
+    }, [changeAnime, navAnime])
+
     // If no adjacent anime was found (e.g. this is the first or last anime already), then only display a placeholder
     if (!navAnime) {
         return <div className={classes} />
-    }
-
-    /**
-     * Callback to change the modal anime when clicking on the button.
-     */
-    function changeAnimeCallback() {
-        changeAnime(navAnime)
     }
 
     // The icon to use based on whether this is the previous/next button

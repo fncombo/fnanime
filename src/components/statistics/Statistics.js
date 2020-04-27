@@ -2,10 +2,9 @@ import React, { useContext } from 'react'
 
 import { useInView } from 'react-intersection-observer'
 
-import { GlobalState } from 'src/data/global-state'
-
 import fileSize from 'src/helpers/file-size'
 import { formatDuration } from 'src/helpers/generic'
+import { GlobalState } from 'src/helpers/global-state'
 import { calculateTotals, getStatisticsAnime } from 'src/helpers/statistics'
 
 import StatisticsRow from 'src/components/statistics/StatisticsRow'

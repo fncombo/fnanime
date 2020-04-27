@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { TABLE_COLUMNS } from 'src/data/table'
-
-import { getColumnTextColor } from 'src/helpers/table'
+import { getColumnTextColor, TABLE_COLUMNS } from 'src/helpers/table'
 
 /**
  * Generic table cell with anime data. The text is color coded if mapping for data to color are found for this column.

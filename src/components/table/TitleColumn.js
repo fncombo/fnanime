@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { FILTERS } from 'src/data/filters'
-import { TABLE_COLUMNS } from 'src/data/table'
-
+import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
+import { TABLE_COLUMNS } from 'src/helpers/table'
 
 import Favorite from 'src/components/Favorite'
 import HighlightTitle from 'src/components/table/HighlightTitle'

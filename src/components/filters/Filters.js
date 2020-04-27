@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 
-import { FILTERS } from 'src/data/filters'
-import { ACTIONS, FiltersState, GlobalState } from 'src/data/global-state'
+import { FILTERS } from 'src/helpers/filters'
+import { ACTIONS, FiltersState, GlobalState } from 'src/helpers/global-state'
 
 import FilterButtonGroup from 'src/components/filters/FilterButtonGroup'
 import Search from 'src/components/filters/Search'
@@ -19,19 +19,14 @@ export default function Filters() {
         dispatch,
     } = useContext(GlobalState)
 
-    /**
-     * Callback to reset filters, sorting, and search (not the active table page).
-     */
-    function resetCallback() {
+    // Callback to reset filters, sorting, and search (not the active table page)
+    const reset = useCallback(() => {
         dispatch({ type: ACTIONS.RESET })
-    }
-
-    // Count how many anime match each filter
-    const filterCounts = FILTERS.getCounts(anime)
+    }, [dispatch])
 
     return (
         <div className="columns is-mobile is-multiline filters">
-            <FiltersState.Provider value={{ filterCounts }}>
+            <FiltersState.Provider value={{ filterCounts: FILTERS.getCounts(anime) }}>
                 <FilterButtonGroup filterName="rating" isFullWidth />
                 <FilterButtonGroup filterName="type" />
                 <FilterButtonGroup filterName="resolution" />
@@ -55,7 +50,7 @@ export default function Filters() {
                     <Summary />
                 </div>
                 <div className="column is-4-mobile is-1-tablet">
-                    <button type="button" className="button is-fullwidth" onClick={resetCallback}>
+                    <button type="button" className="button is-fullwidth" onClick={reset}>
                         Reset
                     </button>
                 </div>

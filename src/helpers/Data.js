@@ -2,9 +2,9 @@ import clone from 'clone'
 import fastSort from 'fast-sort'
 import Fuse from 'fuse.js'
 
-import { ANIME_OBJECT, ANIME_PROPS, DEFAULTS } from 'src/data/data'
-import { FILTERS } from 'src/data/filters'
-import { SORTING_ORDERS } from 'src/data/table'
+import { anime as ANIME_OBJECT } from 'src/helpers/data.json'
+import { FILTERS } from 'src/helpers/filters'
+import { SORTING_ORDERS } from 'src/helpers/table'
 
 // Fuzzy search options
 const FUSE_OPTIONS = {
@@ -15,6 +15,32 @@ const FUSE_OPTIONS = {
     minMatchCharLength: 2,
     keys: ['title'],
 }
+
+// Array of all current anime IDs
+const ANIME_IDS = Object.keys(ANIME_OBJECT).map(Number)
+
+// Array of all props an anime has
+const ANIME_PROPS = Object.keys(ANIME_OBJECT[ANIME_IDS[0]])
+
+// Various default values for the app
+const DEFAULTS = {
+    // Table sorting first by status then by title
+    sorting: new Map([
+        ['status', SORTING_ORDERS.asc],
+        ['favorite', SORTING_ORDERS.asc],
+        ['rating', SORTING_ORDERS.desc],
+        ['title', SORTING_ORDERS.asc],
+    ]),
+    // Filtering is populated later based on all available filters
+    filters: {},
+    // Rows per table page
+    perPage: 25,
+    // Number of buttons on each side of the current page button
+    pageButtons: 2,
+}
+
+// Populate default filter data and filter values.
+FILTERS.createDefaults(ANIME_OBJECT)
 
 /**
  * Returns the average file quality of an anime from 0 to 5 based on the video and audio properties.
@@ -44,94 +70,6 @@ function getFileQuality(anime) {
 }
 
 /**
- * Returns the ID of an anime's type by reverse looking it up from a string from the filters data.
- *
- * @param {string} type Name of the type.
- *
- * @returns {number} ID of an anime's type.
- */
-function reverseTypeLookup(type) {
-    const data = Object.entries(FILTERS.type.descriptions).find(([, value]) => value === type)
-
-    // Type not found for any reason, use "Unknown"
-    if (!data) {
-        return 8
-    }
-
-    return parseInt(data[0], 10)
-}
-
-/**
- * Creates a very basic entry for a new anime from the API which didn't originally exist in the local data.
- *
- * @param {number} animeId ID of the anime.
- * @param {object} anime Anime data from the API.
- */
-function createAnimeFromApiData(animeId, anime) {
-    ANIME_OBJECT[animeId] = {
-        id: anime.mal_id,
-        title: anime.title,
-        type: reverseTypeLookup(anime.type),
-        episodes: anime.total_episodes,
-        episodesWatched: anime.watched_episodes,
-        img: anime.image_url.match(/^[^?]+/)[0],
-        status: anime.watching_status,
-        airStatus: anime.airing_status,
-        rating: anime.score || (anime.watching_status < 5 ? null : false),
-        rewatchCount: 0,
-        url: anime.url,
-        favorite: false,
-        genres: [],
-        subs: [],
-        resolution: false,
-        source: false,
-        videoCodec: false,
-        bits: false,
-        audioCodec: false,
-        size: 0,
-        updated: true,
-    }
-}
-
-/**
- * Updates info about an anime from provided new API data.
- *
- * @param {number} animeId ID of the anime to update.
- * @param {object} newData Object of new data to overwrite old data with.
- * @param {object} fullData Object of the full original data from the API.
- */
-function updateAnimeData(animeId, newData, fullData) {
-    // If the anime doesn't exist, create an entry for it
-    if (!ANIME_OBJECT[animeId]) {
-        createAnimeFromApiData(animeId, fullData)
-
-        return
-    }
-
-    // Check that the rating is different
-    if (ANIME_OBJECT[animeId].rating === newData.rating) {
-        // eslint-disable-next-line no-param-reassign
-        delete newData.rating
-    }
-
-    // Figure out if any data for this anime has changed
-    const changed = Object.entries(newData).some(
-        ([newDataName, newDataValue]) => ANIME_OBJECT[animeId][newDataName] !== newDataValue
-    )
-
-    // Do not update if all data is the same
-    if (!changed) {
-        return
-    }
-
-    // Update with new data
-    ANIME_OBJECT[animeId] = {
-        ...ANIME_OBJECT[animeId],
-        ...newData,
-    }
-}
-
-/**
  * Addd data that didn't need to be downloaded to each anime because it can be calculated on the fly.
  *
  * @param {number[]} animeIds Array of anime IDs to loop.
@@ -154,44 +92,8 @@ function calculateAdditionalData(animeIds) {
     }
 }
 
-/**
- * Updates all anime from new API data. If the anime doesn't exist in the API, delete it. If a new anime is present in
- * the API but not in cached data, add a very basic entry for it. Re-creates filter defaults afterwards.
- *
- * @param {Array} newAnime Array of all anime objects from the API.
- */
-function updateAnimeFromApi(newAnime) {
-    // Update each anime's data
-    for (const anime of newAnime) {
-        updateAnimeData(
-            anime.mal_id,
-            {
-                status: anime.watching_status,
-                airStatus: anime.airing_status,
-                rating: anime.score || (anime.watching_status < 5 ? null : false),
-                episodes: anime.total_episodes,
-                episodesWatched: anime.watched_episodes,
-                updated: true,
-            },
-            anime
-        )
-    }
-
-    const animeIds = Object.keys(ANIME_OBJECT)
-
-    // Delete anime which were not updated and therefore were not in the API
-    for (const animeId of animeIds) {
-        if (!ANIME_OBJECT[animeId].updated) {
-            delete ANIME_OBJECT[animeId]
-        }
-    }
-
-    // Add additional data to each anime
-    calculateAdditionalData(animeIds)
-
-    // Re-create filter defaults based on new anime data
-    FILTERS.createDefaults(ANIME_OBJECT)
-}
+// Add additional data to each anime
+calculateAdditionalData(ANIME_IDS)
 
 /**
  * Returns the searched, sorted, and filtered array of anime to display.
@@ -300,4 +202,4 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     return results
 }
 
-export { getFileQuality, calculateAdditionalData, updateAnimeFromApi, getAnime }
+export { ANIME_OBJECT, ANIME_PROPS, DEFAULTS, getFileQuality, calculateAdditionalData, getAnime }

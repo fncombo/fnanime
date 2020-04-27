@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import { ACTIONS, TableState } from 'src/data/global-state'
+import { ACTIONS, TableState } from 'src/helpers/global-state'
 
 import Icon from 'src/components/Icon'
 
@@ -15,12 +15,10 @@ import 'src/styles/Pagination.scss'
 export default function NavigationButton({ action, isDisabled = false }) {
     const { dispatch } = useContext(TableState)
 
-    /**
-     * Callback to go to the next or previous page.
-     */
-    function changePageCallback() {
+    // Callback to go to the next or previous page
+    const changePageCallback = useCallback(() => {
         dispatch({ type: action })
-    }
+    }, [action, dispatch])
 
     // Determine icon based on the button direction
     const icon = action === ACTIONS.PREV_PAGE ? 'chevron-left' : 'chevron-right'

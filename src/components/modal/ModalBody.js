@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
-import { ModalState } from 'src/data/global-state'
-
+import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
+import { ModalState } from 'src/helpers/global-state'
 import { getAnimeApiData } from 'src/helpers/modal'
 
 import Badge from 'src/components/Badge'

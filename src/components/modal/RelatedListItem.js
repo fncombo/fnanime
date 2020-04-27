@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 
-import { ANIME_OBJECT } from 'src/data/data'
-import { ModalState } from 'src/data/global-state'
-
+import { ANIME_OBJECT } from 'src/helpers/data'
+import { ModalState } from 'src/helpers/global-state'
 import { replaceSpecialChars } from 'src/helpers/modal'
 
 import Badge from 'src/components/Badge'
@@ -14,12 +13,10 @@ import Badge from 'src/components/Badge'
 export default function RelatedListItem({ anime: { mal_id: id, url, name } }) {
     const { changeAnime } = useContext(ModalState)
 
-    /**
-     * Callback to change the anime when clicking on the badge.
-     */
-    function onClickCallback() {
+    // Callback to change the anime when clicking on the badge
+    const onClickCallback = useCallback(() => {
         changeAnime(ANIME_OBJECT[id])
-    }
+    }, [changeAnime, id])
 
     return (
         <li>

@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FILTERS } from 'src/data/filters'
-
 import fileSize from 'src/helpers/file-size'
+import { FILTERS } from 'src/helpers/filters'
 import { formatDuration, PROP_TYPES } from 'src/helpers/generic'
 
 import StatisticsColumn from 'src/components/statistics/StatisticsColumn'

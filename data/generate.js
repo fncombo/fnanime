@@ -20,7 +20,7 @@ const { validateLocalData } = require('./validation.js')
 const notifier = new WindowsBalloon()
 
 // Location of the file to save data to
-const ANIME_JSON_LOCATION = '../src/js/data/data.json'
+const ANIME_JSON_LOCATION = '../src/helpers/data.json'
 
 // MyAnimeList.net username
 const MAL_USERNAME = 'fncombo'
@@ -220,7 +220,7 @@ function processUserProfileData(userProfileData) {
  * @param page
  * @param isRetry
  */
-async function getApiData(page = 1, isRetry = false) {
+async function getApiData(username, page = 1, isRetry = false) {
     // Stop after too many retries
     if (isRetry > 5) {
         throw new Error('Too many API retries')
@@ -243,28 +243,28 @@ async function getApiData(page = 1, isRetry = false) {
     } catch (error) {
         console.log(magenta('Error occurred while fetching API, retrying'))
 
-        return getApiData(page, isRetry ? isRetry + 1 : 1)
+        return getApiData(username, page, isRetry ? isRetry + 1 : 1)
     }
 
     // Re-try if failed for any reason
     if (response.status !== 200) {
         console.log(magenta('API responded with non-200 status, retrying'))
 
-        return getApiData(page, isRetry ? isRetry + 1 : 1)
+        return getApiData(username, page, isRetry ? isRetry + 1 : 1)
     }
 
     // Parse JSON response
     const { anime } = await response.json()
 
-    // Process the API data
-    processApiData(anime)
-
     // If this page was full (300 entries per page), get the next page
     if (anime.length === 300) {
-        return getApiData(page + 1)
+        return {
+            ...anime,
+            ...getApiData(username, page + 1),
+        }
     }
 
-    return true
+    return anime
 }
 
 /**
@@ -314,8 +314,12 @@ async function getUserProfileData(isRetry = false) {
 /**
  * Monolith incoming.
  */
-getApiData()
-    .then(async () => {
+getApiData('fncombo')
+    .then(async (anime) => {
+        console.log(anime)
+        // Process the API data
+        processApiData(anime)
+
         // Get and process user profile data
         processUserProfileData(await getUserProfileData())
 
