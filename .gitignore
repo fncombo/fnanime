@@ -72,5 +72,8 @@ yarn-error.log
 .vscode
 .idea
 
+# Custom
+data/cache.json
+
 # ffprobe
 *ffprobe*
