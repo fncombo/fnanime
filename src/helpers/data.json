@@ -1,5 +1,5 @@
 {
-    "updated": 1587988510536,
+    "updated": 1590187089898,
     "anime": {
         "20": {
             "id": 20,
@@ -3123,7 +3123,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 9,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood",
             "favorite": false,
             "genres": [
@@ -3137,15 +3137,15 @@
                 27
             ],
             "subs": [
-                "Reaktor"
+                "ShadyCrab"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.265",
+            "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "AC3",
-            "size": 23267914487,
-            "together": 1,
+            "audioCodec": "FLAC",
+            "size": 107609950118,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -5144,7 +5144,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/2/43557.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1149/107242.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 7,
@@ -8074,7 +8074,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/18119/Servant_x_Service",
             "favorite": false,
             "genres": [
@@ -8091,7 +8091,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 9761430612,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "A-1 Pictures"
             ],
@@ -11054,7 +11054,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 1,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/31859/Hai_to_Gensou_no_Grimgar",
             "favorite": false,
             "genres": [
@@ -11072,7 +11072,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 11891046643,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "A-1 Pictures"
             ],
@@ -11387,7 +11387,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 5,
-            "rewatchCount": 0,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/32561/Hai_to_Gensou_no_Grimgar__Furoagari_no_Kabe_ni_Kaketa_Seishun_-_One_More_Centimeter",
             "favorite": false,
             "genres": [
@@ -13695,7 +13695,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/38450/Mo_Dao_Zu_Shi_2nd_Season",
             "favorite": false,
             "genres": [
@@ -14330,6 +14330,39 @@
                 "CloverWorks"
             ],
             "episodeDuration": 27
+        },
+        "40221": {
+            "id": 40221,
+            "title": "Kami no Tou",
+            "type": 1,
+            "episodes": 13,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1702/106229.jpg",
+            "status": 6,
+            "airStatus": 1,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/40221/Kami_no_Tou",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                8,
+                10,
+                7
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Telecom Animation Film"
+            ],
+            "episodeDuration": 23
         },
         "40314": {
             "id": 40314,
