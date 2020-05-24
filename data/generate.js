@@ -26,14 +26,12 @@ const ANIME_JSON_LOCATION = '../src/helpers/data.json'
 const MAL_USERNAME = 'fncombo'
 
 // Location of all the anime
-const ROOT_LOCATION = 'E:/Anime/'
 const ANIME_FOLDERS = [
-    `${ROOT_LOCATION}Series`,
-    `${ROOT_LOCATION}OVA`,
-    `${ROOT_LOCATION}Movies`,
-    `${ROOT_LOCATION}Specials`,
-    `${ROOT_LOCATION}Other`,
-    `${ROOT_LOCATION}Ghibli Movies`,
+    'E:/Anime/Series',
+    'E:/Anime/OVA',
+    'E:/Anime/Movies',
+    'E:/Anime/Specials',
+    'E:/Anime/Ghibli Movies',
 ]
 
 // Type lookup
