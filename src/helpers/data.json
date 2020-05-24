@@ -1,5 +1,5 @@
 {
-    "updated": 1590330368520,
+    "updated": 1590337802995,
     "anime": {
         "20": {
             "id": 20,
@@ -2112,7 +2112,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/11/50411.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 9,
+            "rating": 8,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/2924/ef__A_Tale_of_Memories",
             "favorite": false,
@@ -2919,7 +2919,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/13/50519.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 9,
+            "rating": 8,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/4789/ef__A_Tale_of_Melodies",
             "favorite": false,
