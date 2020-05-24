@@ -479,7 +479,7 @@ getApiData(MAL_USERNAME)
             sound: false,
             time: 2500,
             wait: false,
-            type: 'error',
+            type: 'info',
         })
     })
     .catch((error) => {
