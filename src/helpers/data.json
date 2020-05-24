@@ -1,5 +1,5 @@
 {
-    "updated": 1590348574847,
+    "updated": 1590355163405,
     "anime": {
         "20": {
             "id": 20,
@@ -1700,7 +1700,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/4/5123.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann",
             "favorite": false,
@@ -10064,7 +10064,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/5/71553.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/28223/Death_Parade",
             "favorite": false,
