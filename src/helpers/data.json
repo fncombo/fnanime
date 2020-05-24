@@ -1,5 +1,5 @@
 {
-    "updated": 1590337802995,
+    "updated": 1590348574847,
     "anime": {
         "20": {
             "id": 20,
@@ -2516,7 +2516,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/5/74983.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 4,
+            "rating": 3,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/3784/Evangelion__20_You_Can_Not_Advance",
             "favorite": false,
@@ -11386,7 +11386,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/11/78160.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 5,
+            "rating": 6,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/32561/Hai_to_Gensou_no_Grimgar__Furoagari_no_Kabe_ni_Kaketa_Seishun_-_One_More_Centimeter",
             "favorite": false,
