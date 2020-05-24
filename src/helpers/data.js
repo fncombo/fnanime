@@ -27,7 +27,7 @@ const DEFAULTS = {
     // Table sorting first by status then by title
     sorting: new Map([
         ['status', SORTING_ORDERS.asc],
-        ['favorite', SORTING_ORDERS.asc],
+        // ['favorite', SORTING_ORDERS.asc],
         ['rating', SORTING_ORDERS.desc],
         ['title', SORTING_ORDERS.asc],
     ]),
@@ -177,11 +177,11 @@ function getAnime(searchQuery = null, sorting = DEFAULTS.sorting, filters = DEFA
     }
 
     // Insert sorting by favorite just before the title, to make favorite anime (usually) first in the list
-    if (!actualSorting.has('favorite')) {
-        const titleIndex = fastSortOptions.findIndex(({ asc, desc }) => asc === 'title' || desc === 'title')
+    // if (!actualSorting.has('favorite')) {
+    //     const titleIndex = fastSortOptions.findIndex(({ asc, desc }) => asc === 'title' || desc === 'title')
 
-        fastSortOptions.splice(titleIndex, 0, { asc: 'favorite' })
-    }
+    //     fastSortOptions.splice(titleIndex, 0, { asc: 'favorite' })
+    // }
 
     fastSort(sortResults).by(fastSortOptions)
 
