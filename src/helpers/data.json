@@ -1,5 +1,5 @@
 {
-    "updated": 1590415528942,
+    "updated": 1590425002026,
     "anime": {
         "20": {
             "id": 20,
@@ -2412,7 +2412,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 7,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/3652/Higurashi_no_Naku_Koro_ni_Rei",
             "favorite": false,
             "genres": [
@@ -2431,7 +2431,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 5541396151,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Studio Deen"
             ],
@@ -10420,7 +10420,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 2748580680,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Artland"
             ],
