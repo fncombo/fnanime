@@ -1,5 +1,5 @@
 {
-    "updated": 1590425002026,
+    "updated": 1590441277026,
     "anime": {
         "20": {
             "id": 20,
@@ -141,44 +141,6 @@
                 "Production I.G"
             ],
             "episodeDuration": 82
-        },
-        "121": {
-            "id": 121,
-            "title": "Fullmetal Alchemist",
-            "type": 1,
-            "episodes": 51,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/10/75815.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/121/Fullmetal_Alchemist",
-            "favorite": false,
-            "genres": [
-                1,
-                2,
-                4,
-                8,
-                10,
-                16,
-                38,
-                27
-            ],
-            "subs": [
-                "BlackStrat"
-            ],
-            "resolution": 1080,
-            "source": "BD",
-            "videoCodec": "H.264",
-            "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 37434136298,
-            "together": 1,
-            "studios": [
-                "Bones"
-            ],
-            "episodeDuration": 24
         },
         "134": {
             "id": 134,
@@ -3144,7 +3106,7 @@
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 107609950118,
+            "size": 104501471425,
             "together": 2,
             "studios": [
                 "Bones"
