@@ -1,5 +1,5 @@
 {
-    "updated": 1590355163405,
+    "updated": 1590415528942,
     "anime": {
         "20": {
             "id": 20,
@@ -1491,7 +1491,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/5/17407.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 10,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/1735/Naruto__Shippuuden",
             "favorite": false,
@@ -1630,7 +1630,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 9,
-            "rewatchCount": 1,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/1889/Higurashi_no_Naku_Koro_ni_Kai",
             "favorite": 5,
             "genres": [
@@ -1648,7 +1648,7 @@
             "bits": 8,
             "audioCodec": "AC3",
             "size": 10179301435,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Studio Deen"
             ],
@@ -6240,7 +6240,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/13/50521.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 10,
+            "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/12189/Hyouka",
             "favorite": 3,
@@ -13531,7 +13531,7 @@
             "episodes": 21,
             "episodesWatched": 2,
             "img": "https://cdn.myanimelist.net/images/anime/1194/103420.jpg",
-            "status": 3,
+            "status": 4,
             "airStatus": 2,
             "rating": null,
             "rewatchCount": 0,
@@ -13555,70 +13555,6 @@
                 "CloverWorks"
             ],
             "episodeDuration": 23
-        },
-        "38085": {
-            "id": 38085,
-            "title": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 1 - Wandering; Agateram",
-            "type": 3,
-            "episodes": 1,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1535/103385.jpg",
-            "status": 6,
-            "airStatus": 3,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/38085/Fate_Grand_Order__Shinsei_Entaku_Ryouiki_Camelot_1_-_Wandering__Agateram",
-            "favorite": false,
-            "genres": [
-                1,
-                37,
-                16,
-                10
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "Signal.MD"
-            ],
-            "episodeDuration": 0
-        },
-        "38086": {
-            "id": 38086,
-            "title": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram",
-            "type": 3,
-            "episodes": 1,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1713/93278.jpg",
-            "status": 6,
-            "airStatus": 3,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/38086/Fate_Grand_Order__Shinsei_Entaku_Ryouiki_Camelot_2_-_Paladin__Agateram",
-            "favorite": false,
-            "genres": [
-                1,
-                37,
-                16,
-                10
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "Production I.G"
-            ],
-            "episodeDuration": 0
         },
         "38145": {
             "id": 38145,
@@ -13659,7 +13595,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1315/102961.jpg",
             "status": 1,
             "airStatus": 2,
-            "rating": null,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season",
             "favorite": false,
@@ -14743,36 +14679,6 @@
             "studios": [
                 "Studio Deen"
             ],
-            "episodeDuration": 0
-        },
-        "41497": {
-            "id": 41497,
-            "title": "Fate/Grand Order: Shuukyoku Tokuiten - Kani Jikan Shinden Solomon",
-            "type": 8,
-            "episodes": 0,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1709/106616.jpg",
-            "status": 6,
-            "airStatus": 3,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/41497/Fate_Grand_Order__Shuukyoku_Tokuiten_-_Kani_Jikan_Shinden_Solomon",
-            "favorite": false,
-            "genres": [
-                1,
-                37,
-                16,
-                10
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [],
             "episodeDuration": 0
         },
         "41587": {
