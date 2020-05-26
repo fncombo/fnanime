@@ -1,5 +1,5 @@
 {
-    "updated": 1590441277026,
+    "updated": 1590529404329,
     "anime": {
         "20": {
             "id": 20,
@@ -2900,7 +2900,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 16090342056,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Shaft"
             ],
