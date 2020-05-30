@@ -1,5 +1,5 @@
 {
-    "updated": 1590529404329,
+    "updated": 1590878679105,
     "anime": {
         "20": {
             "id": 20,
@@ -990,14 +990,14 @@
                 10
             ],
             "subs": [
-                "HACK-JOB"
+                "jeebs"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
-            "bits": 8,
-            "audioCodec": "FLAC",
-            "size": 4410241584,
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 9312086589,
             "together": 1,
             "studios": [
                 "Toei Animation"
@@ -1832,7 +1832,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 9,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/2246/Mononoke",
             "favorite": false,
             "genres": [
@@ -1854,7 +1854,7 @@
             "bits": 8,
             "audioCodec": "FLAC",
             "size": 9385164478,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Toei Animation"
             ],
@@ -5463,14 +5463,14 @@
                 31
             ],
             "subs": [
-                "AnimeKayo"
+                "TenB"
             ],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "Opus",
-            "size": 36147398247,
+            "audioCodec": "FLAC",
+            "size": 66950118276,
             "together": 1,
             "studios": [
                 "Madhouse"
@@ -14135,16 +14135,16 @@
         },
         "40028": {
             "id": 40028,
-            "title": "Shingeki no Kyojin The Final Season",
+            "title": "Shingeki no Kyojin: The Final Season",
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1873/103180.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1384/107759.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin_The_Final_Season",
+            "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
             "favorite": false,
             "genres": [
                 1,
