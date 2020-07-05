@@ -1,5 +1,5 @@
 {
-    "updated": 1593543290938,
+    "updated": 1593984461345,
     "anime": {
         "20": {
             "id": 20,
@@ -22,13 +22,15 @@
                 17,
                 27
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "AnimeRG"
+            ],
+            "resolution": 720,
+            "source": "Web",
+            "videoCodec": "H.265",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 25606248456,
             "together": 1,
             "studios": [
                 "Studio Pierrot"
@@ -1522,11 +1524,11 @@
             "title": "Seirei no Moribito",
             "type": 1,
             "episodes": 26,
-            "episodesWatched": 9,
+            "episodesWatched": 26,
             "img": "https://cdn.myanimelist.net/images/anime/4/50337.jpg",
-            "status": 1,
+            "status": 2,
             "airStatus": 2,
-            "rating": null,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/1827/Seirei_no_Moribito",
             "favorite": false,
@@ -3903,6 +3905,41 @@
             ],
             "episodeDuration": 92
         },
+        "6702": {
+            "id": 6702,
+            "title": "Fairy Tail",
+            "type": 1,
+            "episodes": 175,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/5/18179.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/6702/Fairy_Tail",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                16,
+                10,
+                27
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Satelight",
+                "A-1 Pictures"
+            ],
+            "episodeDuration": 24
+        },
         "6707": {
             "id": 6707,
             "title": "Kuroshitsuji II",
@@ -6149,13 +6186,15 @@
                 38,
                 42
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Judas"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "Opus",
+            "size": 10833083848,
             "together": 1,
             "studios": [
                 "Studio Pierrot"
@@ -7849,13 +7888,15 @@
                 13,
                 42
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Judas"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "Opus",
+            "size": 10641858096,
             "together": 1,
             "studios": [
                 "Studio Pierrot"
@@ -8883,6 +8924,41 @@
             "together": 2,
             "studios": [
                 "Artland"
+            ],
+            "episodeDuration": 24
+        },
+        "22043": {
+            "id": 22043,
+            "title": "Fairy Tail (2014)",
+            "type": 1,
+            "episodes": 102,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/3/60551.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/22043/Fairy_Tail_2014",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                10,
+                16,
+                27
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "A-1 Pictures",
+                "Bridge"
             ],
             "episodeDuration": 24
         },
@@ -12479,6 +12555,42 @@
             ],
             "episodeDuration": 115
         },
+        "35972": {
+            "id": 35972,
+            "title": "Fairy Tail: Final Series",
+            "type": 1,
+            "episodes": 51,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1536/93863.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/35972/Fairy_Tail__Final_Series",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                16,
+                10,
+                27
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "A-1 Pictures",
+                "Bridge",
+                "CloverWorks"
+            ],
+            "episodeDuration": 23
+        },
         "36038": {
             "id": 36038,
             "title": "Net-juu no Susume",
@@ -13396,7 +13508,7 @@
         },
         "37932": {
             "id": 37932,
-            "title": "Quanzhi Gaoshou 2nd Season",
+            "title": "Quanzhi Gaoshou 2",
             "type": 5,
             "episodes": 12,
             "episodesWatched": 0,
@@ -13405,7 +13517,7 @@
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/37932/Quanzhi_Gaoshou_2nd_Season",
+            "url": "https://myanimelist.net/anime/37932/Quanzhi_Gaoshou_2",
             "favorite": false,
             "genres": [
                 1,
@@ -14524,11 +14636,11 @@
             "id": 40956,
             "title": "Enen no Shouboutai: Ni no Shou",
             "type": 1,
-            "episodes": 0,
+            "episodes": 24,
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1673/107657.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40956/Enen_no_Shouboutai__Ni_no_Shou",
