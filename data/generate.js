@@ -183,7 +183,7 @@ function processLocalData(filename, size, folder) {
 
     ALL_ANIME[title] = {
         ...ALL_ANIME[title],
-        subs: subs.split(', '),
+        subs: subs.split(', ').sort(),
         resolution: parseInt(resolution, 10),
         source,
         videoCodec,
@@ -204,9 +204,12 @@ function processCacheData() {
         const cachedAnime = CACHE.anime[anime.id]
 
         // eslint-disable-next-line camelcase
-        anime.genres = cachedAnime.genres.filter(({ type }) => type === 'anime').map(({ mal_id }) => mal_id)
+        anime.genres = cachedAnime.genres
+            .filter(({ type }) => type === 'anime')
+            .map(({ mal_id }) => mal_id)
+            .sort((a, b) => a - b)
 
-        anime.studios = cachedAnime.studios.map(({ name }) => name)
+        anime.studios = cachedAnime.studios.map(({ name }) => name).sort()
 
         anime.episodeDuration = getDuration(cachedAnime.duration)
     }
