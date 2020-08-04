@@ -1,5 +1,5 @@
 {
-    "updated": 1593984461345,
+    "updated": 1596570073671,
     "anime": {
         "20": {
             "id": 20,
@@ -18,9 +18,9 @@
                 1,
                 2,
                 4,
-                31,
                 17,
-                27
+                27,
+                31
             ],
             "subs": [
                 "AnimeRG"
@@ -55,8 +55,8 @@
                 5,
                 8,
                 18,
-                40,
-                24
+                24,
+                40
             ],
             "subs": [
                 "bonkai77"
@@ -88,11 +88,11 @@
             "url": "https://myanimelist.net/anime/32/Neon_Genesis_Evangelion__The_End_of_Evangelion",
             "favorite": false,
             "genres": [
-                24,
                 5,
-                40,
                 8,
-                18
+                18,
+                24,
+                40
             ],
             "subs": [
                 "Sephirotic"
@@ -126,9 +126,9 @@
             "genres": [
                 1,
                 18,
+                24,
                 39,
                 40,
-                24,
                 42
             ],
             "subs": [],
@@ -159,10 +159,10 @@
             "favorite": false,
             "genres": [
                 1,
-                40,
-                38,
                 8,
-                24
+                24,
+                38,
+                40
             ],
             "subs": [
                 "Official"
@@ -196,9 +196,9 @@
                 1,
                 2,
                 4,
-                37,
-                8,
-                27
+                27,
+                31,
+                37
             ],
             "subs": [
                 "utsubyou"
@@ -263,8 +263,8 @@
             "favorite": false,
             "genres": [
                 2,
-                37,
-                8
+                8,
+                37
             ],
             "subs": [
                 "Coalgirls"
@@ -296,11 +296,11 @@
             "favorite": false,
             "genres": [
                 1,
-                14,
-                40,
-                37,
                 8,
+                14,
                 22,
+                37,
+                40,
                 42
             ],
             "subs": [
@@ -332,11 +332,11 @@
             "url": "https://myanimelist.net/anime/256/Hoshi_no_Koe",
             "favorite": false,
             "genres": [
-                24,
-                29,
                 8,
+                18,
                 22,
-                18
+                24,
+                29
             ],
             "subs": [
                 "niizk"
@@ -369,8 +369,8 @@
             "genres": [
                 1,
                 14,
-                37,
                 32,
+                37,
                 42
             ],
             "subs": [
@@ -403,8 +403,8 @@
             "favorite": false,
             "genres": [
                 1,
-                31,
-                10
+                10,
+                31
             ],
             "subs": [],
             "resolution": false,
@@ -434,11 +434,11 @@
             "favorite": false,
             "genres": [
                 5,
-                8,
                 7,
-                40,
+                8,
                 24,
-                37
+                37,
+                40
             ],
             "subs": [
                 "bonkai77"
@@ -470,10 +470,10 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
                 22,
-                10
+                37
             ],
             "subs": [
                 "THORA"
@@ -504,11 +504,11 @@
             "url": "https://myanimelist.net/anime/376/Elfen_Lied__Tooriame_nite_Arui_wa_Shoujo_wa_Ikani_Shite_Sono_Shinjou_ni_Itatta_ka_-_Regenschauer",
             "favorite": false,
             "genres": [
-                14,
-                40,
-                37,
                 8,
                 9,
+                14,
+                37,
+                40,
                 42
             ],
             "subs": [
@@ -540,11 +540,11 @@
             "url": "https://myanimelist.net/anime/387/Haibane_Renmei",
             "favorite": false,
             "genres": [
-                36,
                 7,
-                40,
                 8,
-                10
+                10,
+                36,
+                40
             ],
             "subs": [
                 "Coalgirls"
@@ -580,8 +580,8 @@
                 4,
                 8,
                 13,
-                38,
-                22
+                22,
+                38
             ],
             "subs": [],
             "resolution": false,
@@ -645,9 +645,9 @@
             "favorite": false,
             "genres": [
                 8,
-                38,
                 22,
-                24
+                24,
+                38
             ],
             "subs": [
                 "niizk"
@@ -713,11 +713,11 @@
             "favorite": false,
             "genres": [
                 2,
-                36,
                 7,
-                13,
-                37,
                 10,
+                13,
+                36,
+                37,
                 42
             ],
             "subs": [
@@ -751,8 +751,8 @@
             "genres": [
                 1,
                 2,
-                40,
-                36
+                36,
+                40
             ],
             "subs": [
                 "niizk"
@@ -786,9 +786,9 @@
                 2,
                 4,
                 8,
+                10,
                 16,
-                22,
-                10
+                22
             ],
             "subs": [
                 "THORA"
@@ -987,9 +987,9 @@
             "favorite": false,
             "genres": [
                 7,
+                10,
                 13,
-                14,
-                10
+                14
             ],
             "subs": [
                 "jeebs"
@@ -1084,10 +1084,10 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 14,
-                37,
                 32,
+                37,
+                38,
                 42
             ],
             "subs": [
@@ -1101,9 +1101,9 @@
             "size": 24859459438,
             "together": 1,
             "studios": [
+                "Graphinica",
                 "Madhouse",
-                "Satelight",
-                "Graphinica"
+                "Satelight"
             ],
             "episodeDuration": 50
         },
@@ -1121,9 +1121,9 @@
             "url": "https://myanimelist.net/anime/790/Ergo_Proxy",
             "favorite": false,
             "genres": [
-                40,
                 7,
-                24
+                24,
+                40
             ],
             "subs": [
                 "project-gxs"
@@ -1155,10 +1155,10 @@
             "favorite": false,
             "genres": [
                 4,
-                35,
                 22,
                 23,
-                25
+                25,
+                35
             ],
             "subs": [
                 "Hi10"
@@ -1189,11 +1189,11 @@
             "url": "https://myanimelist.net/anime/934/Higurashi_no_Naku_Koro_ni",
             "favorite": false,
             "genres": [
-                7,
                 5,
+                7,
                 14,
-                40,
                 37,
+                40,
                 41
             ],
             "subs": [
@@ -1359,11 +1359,11 @@
             "favorite": false,
             "genres": [
                 7,
+                27,
+                37,
                 39,
                 40,
-                37,
-                41,
-                27
+                41
             ],
             "subs": [
                 "bonkai77"
@@ -1395,8 +1395,8 @@
             "favorite": false,
             "genres": [
                 8,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "AkihitoSubs"
@@ -1427,9 +1427,9 @@
             "url": "https://myanimelist.net/anime/1689/Byousoku_5_Centimeter",
             "favorite": false,
             "genres": [
-                36,
                 8,
-                22
+                22,
+                36
             ],
             "subs": [
                 "kuchikirukia"
@@ -1463,9 +1463,9 @@
                 1,
                 2,
                 4,
-                31,
                 17,
-                27
+                27,
+                31
             ],
             "subs": [
                 "AnimeRG"
@@ -1498,11 +1498,11 @@
             "genres": [
                 1,
                 2,
-                31,
                 6,
-                37,
                 10,
-                27
+                27,
+                31,
+                37
             ],
             "subs": [
                 "TCL"
@@ -1535,8 +1535,8 @@
             "genres": [
                 1,
                 2,
-                13,
-                10
+                10,
+                13
             ],
             "subs": [
                 "bonkai77"
@@ -1601,8 +1601,8 @@
             "favorite": 5,
             "genres": [
                 7,
-                40,
                 37,
+                40,
                 41
             ],
             "subs": [
@@ -1635,11 +1635,11 @@
             "favorite": false,
             "genres": [
                 5,
+                7,
                 10,
                 14,
-                7,
-                40,
                 24,
+                40,
                 41
             ],
             "subs": [
@@ -1765,8 +1765,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/1804/95033.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 1,
+            "rating": 9,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/2167/Clannad",
             "favorite": false,
             "genres": [
@@ -1786,7 +1786,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 20522099613,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Kyoto Animation"
             ],
@@ -1840,13 +1840,13 @@
             "url": "https://myanimelist.net/anime/2246/Mononoke",
             "favorite": false,
             "genres": [
+                6,
                 7,
+                10,
                 13,
                 14,
-                6,
-                40,
                 37,
-                10,
+                40,
                 42
             ],
             "subs": [
@@ -1983,9 +1983,9 @@
             "favorite": false,
             "genres": [
                 2,
-                19,
                 4,
                 8,
+                19,
                 23,
                 42
             ],
@@ -2218,8 +2218,8 @@
             "genres": [
                 1,
                 8,
-                38,
-                24
+                24,
+                38
             ],
             "subs": [
                 "Official"
@@ -2315,10 +2315,10 @@
             "favorite": false,
             "genres": [
                 1,
-                10,
                 4,
-                37,
-                27
+                10,
+                27,
+                37
             ],
             "subs": [
                 "Kami"
@@ -2351,9 +2351,9 @@
             "genres": [
                 4,
                 10,
-                35,
                 22,
-                25
+                25,
+                35
             ],
             "subs": [],
             "resolution": false,
@@ -2382,10 +2382,10 @@
             "url": "https://myanimelist.net/anime/3652/Higurashi_no_Naku_Koro_ni_Rei",
             "favorite": false,
             "genres": [
-                7,
                 4,
-                40,
+                7,
                 37,
+                40,
                 41
             ],
             "subs": [
@@ -2419,8 +2419,8 @@
             "genres": [
                 1,
                 7,
-                37,
                 22,
+                37,
                 41
             ],
             "subs": [
@@ -2454,8 +2454,8 @@
             "genres": [
                 1,
                 7,
-                37,
                 8,
+                37,
                 41
             ],
             "subs": [
@@ -2488,8 +2488,8 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
-                18
+                18,
+                24
             ],
             "subs": [
                 "bonkai77"
@@ -2521,8 +2521,8 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
-                18
+                18,
+                24
             ],
             "subs": [
                 "bonkai77"
@@ -2554,8 +2554,8 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
-                18
+                18,
+                24
             ],
             "subs": [],
             "resolution": false,
@@ -2580,7 +2580,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 6,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/4059/Clannad__Mou_Hitotsu_no_Sekai_Tomoyo-hen",
             "favorite": false,
             "genres": [
@@ -2610,7 +2610,7 @@
             "type": 1,
             "episodes": 13,
             "episodesWatched": 13,
-            "img": "https://cdn.myanimelist.net/images/anime/7/28859.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1681/108439.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 7,
@@ -2618,11 +2618,11 @@
             "url": "https://myanimelist.net/anime/4081/Natsume_Yuujinchou",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [
                 "tlacatlc6"
@@ -2681,16 +2681,16 @@
             "img": "https://cdn.myanimelist.net/images/anime/13/24647.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 9,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/4181/Clannad__After_Story",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                37,
                 8,
-                22
+                22,
+                36,
+                37
             ],
             "subs": [
                 "Doki"
@@ -2757,9 +2757,9 @@
             "genres": [
                 1,
                 7,
-                37,
                 8,
                 22,
+                37,
                 41
             ],
             "subs": [
@@ -2862,8 +2862,8 @@
             "genres": [
                 2,
                 10,
-                35,
-                25
+                25,
+                35
             ],
             "subs": [],
             "resolution": false,
@@ -2891,9 +2891,9 @@
             "favorite": false,
             "genres": [
                 7,
-                37,
                 8,
-                22
+                22,
+                37
             ],
             "subs": [
                 "ANE"
@@ -2960,8 +2960,8 @@
             "genres": [
                 7,
                 14,
-                40,
-                37
+                37,
+                40
             ],
             "subs": [
                 "Coalgirls"
@@ -2993,12 +2993,12 @@
             "favorite": false,
             "genres": [
                 1,
-                7,
                 4,
-                13,
                 6,
-                37,
-                27
+                7,
+                13,
+                27,
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -3029,10 +3029,10 @@
             "url": "https://myanimelist.net/anime/5081/Bakemonogatari",
             "favorite": false,
             "genres": [
-                22,
-                37,
                 7,
-                32
+                22,
+                32,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -3094,13 +3094,13 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 2,
                 4,
                 8,
-                16,
                 10,
-                27
+                16,
+                27,
+                38
             ],
             "subs": [
                 "ShadyCrab"
@@ -3132,8 +3132,8 @@
             "favorite": false,
             "genres": [
                 1,
-                16,
                 7,
+                16,
                 22,
                 37,
                 41
@@ -3169,8 +3169,8 @@
             "genres": [
                 1,
                 7,
-                37,
                 22,
+                37,
                 41
             ],
             "subs": [
@@ -3202,11 +3202,11 @@
             "url": "https://myanimelist.net/anime/5300/Zoku_Natsume_Yuujinchou",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -3236,9 +3236,9 @@
             "favorite": false,
             "genres": [
                 2,
+                10,
                 13,
-                22,
-                10
+                22
             ],
             "subs": [
                 "Elysium"
@@ -3302,10 +3302,10 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
                 7,
                 8,
                 22,
+                24,
                 41
             ],
             "subs": [
@@ -3337,8 +3337,8 @@
             "url": "https://myanimelist.net/anime/5681/Summer_Wars",
             "favorite": false,
             "genres": [
-                24,
-                4
+                4,
+                24
             ],
             "subs": [
                 "UTW"
@@ -3404,11 +3404,11 @@
             "url": "https://myanimelist.net/anime/6045/Kimi_ni_Todoke",
             "favorite": false,
             "genres": [
-                36,
                 8,
                 22,
                 23,
-                25
+                25,
+                36
             ],
             "subs": [
                 "Golo"
@@ -3642,8 +3642,8 @@
             "favorite": false,
             "genres": [
                 4,
-                8,
                 7,
+                8,
                 22,
                 36,
                 41
@@ -3742,12 +3742,12 @@
             "url": "https://myanimelist.net/anime/6421/Fullmetal_Alchemist__Brotherhood_Specials",
             "favorite": false,
             "genres": [
-                38,
                 2,
                 8,
-                16,
                 10,
-                27
+                16,
+                27,
+                38
             ],
             "subs": [
                 "Reaktor"
@@ -3885,8 +3885,8 @@
             "genres": [
                 1,
                 4,
-                8,
                 7,
+                8,
                 22,
                 41
             ],
@@ -3922,8 +3922,8 @@
                 1,
                 2,
                 4,
-                16,
                 10,
+                16,
                 27
             ],
             "subs": [],
@@ -3935,8 +3935,8 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "Satelight",
-                "A-1 Pictures"
+                "A-1 Pictures",
+                "Satelight"
             ],
             "episodeDuration": 24
         },
@@ -3956,10 +3956,10 @@
             "genres": [
                 1,
                 4,
-                13,
                 6,
-                37,
-                27
+                13,
+                27,
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -4022,10 +4022,10 @@
             "favorite": false,
             "genres": [
                 4,
-                13,
                 6,
-                37,
-                27
+                13,
+                27,
+                37
             ],
             "subs": [
                 "ShinsenSubs"
@@ -4082,7 +4082,7 @@
             "type": 4,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/3/52557.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/6/78756.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 5,
@@ -4122,9 +4122,9 @@
             "favorite": false,
             "genres": [
                 1,
-                36,
                 8,
-                23
+                23,
+                36
             ],
             "subs": [
                 "THORA"
@@ -4158,8 +4158,8 @@
                 8,
                 13,
                 40,
-                42,
-                41
+                41,
+                42
             ],
             "subs": [
                 "Coalgirls"
@@ -4287,8 +4287,8 @@
             "favorite": false,
             "genres": [
                 2,
-                29,
-                10
+                10,
+                29
             ],
             "subs": [
                 "bxyh"
@@ -4319,9 +4319,9 @@
             "url": "https://myanimelist.net/anime/8142/Colorful_Movie",
             "favorite": false,
             "genres": [
+                8,
                 36,
-                37,
-                8
+                37
             ],
             "subs": [
                 "CBM"
@@ -4334,8 +4334,8 @@
             "size": 2716308084,
             "together": 1,
             "studios": [
-                "Sunrise",
-                "Ascension"
+                "Ascension",
+                "Sunrise"
             ],
             "episodeDuration": 127
         },
@@ -4389,8 +4389,8 @@
             "favorite": 6,
             "genres": [
                 7,
-                13,
                 8,
+                13,
                 22
             ],
             "subs": [
@@ -4422,10 +4422,10 @@
             "url": "https://myanimelist.net/anime/8857/Nichijou__Nichijou_no_0-wa",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 23,
-                27
+                27,
+                36
             ],
             "subs": [
                 "UTW"
@@ -4490,9 +4490,9 @@
             "url": "https://myanimelist.net/anime/9055/Tamayura",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                8
+                8,
+                36
             ],
             "subs": [
                 "Coalgirls"
@@ -4523,8 +4523,8 @@
             "url": "https://myanimelist.net/anime/9253/Steins_Gate",
             "favorite": false,
             "genres": [
-                41,
-                24
+                24,
+                41
             ],
             "subs": [
                 "Cerberus"
@@ -4616,11 +4616,11 @@
             "url": "https://myanimelist.net/anime/9656/Kimi_ni_Todoke_2nd_Season",
             "favorite": false,
             "genres": [
-                36,
                 8,
                 22,
                 23,
-                25
+                25,
+                36
             ],
             "subs": [
                 "Golo"
@@ -4651,9 +4651,9 @@
             "url": "https://myanimelist.net/anime/9756/Mahou_Shoujo_Madoka★Magica",
             "favorite": false,
             "genres": [
-                40,
                 8,
                 16,
+                40,
                 41
             ],
             "subs": [
@@ -4686,8 +4686,8 @@
             "favorite": false,
             "genres": [
                 2,
-                22,
-                10
+                10,
+                22
             ],
             "subs": [
                 "THORA"
@@ -4787,8 +4787,8 @@
             "url": "https://myanimelist.net/anime/9938/Ikoku_Meiro_no_Croisée_The_Animation",
             "favorite": false,
             "genres": [
-                36,
                 13,
+                36,
                 42
             ],
             "subs": [
@@ -4821,8 +4821,8 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 7,
+                11,
                 27
             ],
             "subs": [
@@ -4854,9 +4854,9 @@
             "url": "https://myanimelist.net/anime/9989/Ano_Hi_Mita_Hana_no_Namae_wo_Bokutachi_wa_Mada_Shiranai",
             "favorite": false,
             "genres": [
+                8,
                 36,
-                37,
-                8
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -4922,9 +4922,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [
                 "UTW"
@@ -4988,9 +4988,9 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
                 7,
-                8
+                8,
+                24
             ],
             "subs": [
                 "Doki"
@@ -5021,8 +5021,8 @@
             "url": "https://myanimelist.net/anime/10162/Usagi_Drop",
             "favorite": false,
             "genres": [
-                43,
-                36
+                36,
+                43
             ],
             "subs": [
                 "Zurako"
@@ -5053,10 +5053,10 @@
             "url": "https://myanimelist.net/anime/10165/Nichijou",
             "favorite": 4,
             "genres": [
-                36,
                 4,
                 23,
-                27
+                27,
+                36
             ],
             "subs": [
                 "Coalgirls"
@@ -5120,11 +5120,11 @@
             "url": "https://myanimelist.net/anime/10379/Natsume_Yuujinchou_San",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -5153,8 +5153,8 @@
             "url": "https://myanimelist.net/anime/10389/Momo_e_no_Tegami",
             "favorite": false,
             "genres": [
-                37,
-                8
+                8,
+                37
             ],
             "subs": [
                 "Commie"
@@ -5257,10 +5257,10 @@
             "genres": [
                 1,
                 2,
-                17,
-                31,
                 7,
-                27
+                17,
+                27,
+                31
             ],
             "subs": [
                 "Koten_Gars"
@@ -5293,9 +5293,9 @@
             "genres": [
                 1,
                 7,
-                40,
                 27,
                 37,
+                40,
                 41
             ],
             "subs": [
@@ -5328,8 +5328,8 @@
             "favorite": false,
             "genres": [
                 1,
-                40,
-                24
+                24,
+                40
             ],
             "subs": [
                 "THORA"
@@ -5361,11 +5361,11 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
-                31,
                 8,
+                18,
                 22,
-                18
+                24,
+                31
             ],
             "subs": [
                 "Doki"
@@ -5428,10 +5428,10 @@
             "genres": [
                 8,
                 11,
-                43,
                 23,
+                30,
                 36,
-                30
+                43
             ],
             "subs": [
                 "Commie"
@@ -5462,8 +5462,8 @@
             "url": "https://myanimelist.net/anime/10863/Steins_Gate__Oukoubakko_no_Poriomania",
             "favorite": false,
             "genres": [
-                24,
                 4,
+                24,
                 41
             ],
             "subs": [
@@ -5491,7 +5491,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 9,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
             "favorite": false,
             "genres": [
@@ -5510,7 +5510,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 66950118276,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Madhouse"
             ],
@@ -5532,9 +5532,9 @@
             "genres": [
                 7,
                 14,
+                23,
                 37,
-                41,
-                23
+                41
             ],
             "subs": [
                 "Underwater"
@@ -5704,8 +5704,8 @@
             "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
             "favorite": false,
             "genres": [
-                24,
-                8
+                8,
+                24
             ],
             "subs": [
                 "Cerberus"
@@ -5736,11 +5736,11 @@
             "url": "https://myanimelist.net/anime/11665/Natsume_Yuujinchou_Shi",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -5769,8 +5769,8 @@
             "url": "https://myanimelist.net/anime/11701/Another__The_Other_-_Inga",
             "favorite": false,
             "genres": [
-                14,
                 7,
+                14,
                 41
             ],
             "subs": [
@@ -5906,9 +5906,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [
                 "UTW"
@@ -5976,9 +5976,9 @@
             "genres": [
                 1,
                 11,
-                24,
                 22,
-                23
+                23,
+                24
             ],
             "subs": [
                 "bonkai77"
@@ -6009,9 +6009,9 @@
             "url": "https://myanimelist.net/anime/11843/Danshi_Koukousei_no_Nichijou",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                23
+                23,
+                36
             ],
             "subs": [
                 "DB"
@@ -6042,12 +6042,12 @@
             "url": "https://myanimelist.net/anime/11887/Kokoro_Connect",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                37,
                 8,
                 22,
-                23
+                23,
+                36,
+                37
             ],
             "subs": [
                 "Doki"
@@ -6078,9 +6078,9 @@
             "url": "https://myanimelist.net/anime/11977/Mahou_Shoujo_Madoka★Magica_Movie_1__Hajimari_no_Monogatari",
             "favorite": false,
             "genres": [
-                40,
                 8,
                 16,
+                40,
                 41
             ],
             "subs": [
@@ -6147,9 +6147,9 @@
             "favorite": false,
             "genres": [
                 7,
-                40,
                 8,
                 16,
+                40,
                 41
             ],
             "subs": [
@@ -6216,8 +6216,8 @@
             "favorite": false,
             "genres": [
                 1,
-                40,
-                24
+                24,
+                40
             ],
             "subs": [
                 "THORA"
@@ -6281,10 +6281,10 @@
             "url": "https://myanimelist.net/anime/12291/Acchi_Kocchi_TV",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 22,
-                23
+                23,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -6345,8 +6345,8 @@
             "url": "https://myanimelist.net/anime/12445/Tasogare_Otome_x_Amnesia",
             "favorite": false,
             "genres": [
-                14,
                 7,
+                14,
                 22,
                 23,
                 27,
@@ -6395,8 +6395,8 @@
             "size": 5607456494,
             "together": 2,
             "studios": [
-                "Studio Rikka",
-                "Purple Cow Studio Japan"
+                "Purple Cow Studio Japan",
+                "Studio Rikka"
             ],
             "episodeDuration": 99
         },
@@ -6415,11 +6415,11 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
                 22,
-                10,
-                27
+                27,
+                37
             ],
             "subs": [
                 "UTW"
@@ -6451,8 +6451,8 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 7,
+                11,
                 27
             ],
             "subs": [
@@ -6485,8 +6485,8 @@
             "favorite": false,
             "genres": [
                 1,
-                13,
-                7
+                7,
+                13
             ],
             "subs": [
                 "Commie"
@@ -6517,12 +6517,12 @@
             "url": "https://myanimelist.net/anime/13125/Shinsekai_yori",
             "favorite": false,
             "genres": [
-                24,
                 7,
+                8,
                 14,
-                40,
+                24,
                 37,
-                8
+                40
             ],
             "subs": [
                 "UTW"
@@ -6554,9 +6554,9 @@
             "favorite": false,
             "genres": [
                 1,
+                8,
                 24,
-                31,
-                8
+                31
             ],
             "subs": [
                 "Commie"
@@ -6621,9 +6621,9 @@
             "favorite": false,
             "genres": [
                 1,
+                24,
                 39,
-                40,
-                24
+                40
             ],
             "subs": [],
             "resolution": false,
@@ -6654,9 +6654,9 @@
             "genres": [
                 1,
                 2,
-                31,
                 17,
-                27
+                27,
+                31
             ],
             "subs": [
                 "Koten_Gars"
@@ -6721,9 +6721,9 @@
             "url": "https://myanimelist.net/anime/14175/Hanasaku_Iroha__Home_Sweet_Home",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                8
+                8,
+                36
             ],
             "subs": [
                 "Underwater"
@@ -6754,8 +6754,8 @@
             "url": "https://myanimelist.net/anime/14189/Tasogare_Otome_x_Amnesia__Taima_Otome",
             "favorite": false,
             "genres": [
-                14,
                 7,
+                14,
                 22,
                 23,
                 27,
@@ -6790,11 +6790,11 @@
             "url": "https://myanimelist.net/anime/14227/Tonari_no_Kaibutsu-kun",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 22,
                 23,
-                25
+                25,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -6859,8 +6859,8 @@
             "genres": [
                 2,
                 4,
-                16,
                 10,
+                16,
                 23
             ],
             "subs": [
@@ -6892,10 +6892,10 @@
             "url": "https://myanimelist.net/anime/14353/Death_Billiards",
             "favorite": false,
             "genres": [
-                11,
                 7,
-                40,
                 8,
+                11,
+                40,
                 41
             ],
             "subs": [
@@ -6929,10 +6929,10 @@
             "genres": [
                 8,
                 11,
-                43,
                 23,
+                30,
                 36,
-                30
+                43
             ],
             "subs": [
                 "Commie"
@@ -6998,11 +6998,11 @@
             "url": "https://myanimelist.net/anime/14741/Chuunibyou_demo_Koi_ga_Shitai",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 8,
                 22,
-                23
+                23,
+                36
             ],
             "subs": [
                 "FFF"
@@ -7102,10 +7102,10 @@
             "url": "https://myanimelist.net/anime/14807/Kara_no_Kyoukai__Mirai_Fukuin",
             "favorite": false,
             "genres": [
-                8,
                 7,
-                42,
-                37
+                8,
+                37,
+                42
             ],
             "subs": [
                 "UTW"
@@ -7138,8 +7138,8 @@
             "genres": [
                 2,
                 6,
-                22,
-                10
+                10,
+                22
             ],
             "subs": [
                 "AnimeNOW"
@@ -7170,9 +7170,9 @@
             "url": "https://myanimelist.net/anime/15039/Ano_Hi_Mita_Hana_no_Namae_wo_Bokutachi_wa_Mada_Shiranai_Movie",
             "favorite": false,
             "genres": [
+                8,
                 36,
-                37,
-                8
+                37
             ],
             "subs": [
                 "MD"
@@ -7270,8 +7270,8 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 7,
+                11,
                 27
             ],
             "subs": [
@@ -7372,11 +7372,11 @@
             "url": "https://myanimelist.net/anime/16201/Aku_no_Hana",
             "favorite": false,
             "genres": [
-                40,
                 8,
                 22,
                 23,
-                27
+                27,
+                40
             ],
             "subs": [
                 "FFF"
@@ -7408,12 +7408,12 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 7,
-                31,
                 8,
                 10,
-                27
+                27,
+                31,
+                38
             ],
             "subs": [
                 "FFF"
@@ -7444,9 +7444,9 @@
             "url": "https://myanimelist.net/anime/16528/Hal",
             "favorite": false,
             "genres": [
-                24,
                 8,
                 22,
+                24,
                 25
             ],
             "subs": [
@@ -7479,8 +7479,9 @@
             "favorite": false,
             "genres": [
                 7,
-                40,
-                23
+                14,
+                23,
+                40
             ],
             "subs": [
                 "UTW"
@@ -7544,8 +7545,8 @@
             "url": "https://myanimelist.net/anime/16700/Higurashi_no_Naku_Koro_ni_Kaku__Outbreak",
             "favorite": false,
             "genres": [
-                14,
                 7,
+                14,
                 40,
                 41
             ],
@@ -7579,9 +7580,9 @@
             "favorite": false,
             "genres": [
                 1,
-                40,
+                27,
                 37,
-                27
+                40
             ],
             "subs": [
                 "GotWoot"
@@ -7612,10 +7613,10 @@
             "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
             "favorite": false,
             "genres": [
-                36,
-                40,
                 8,
-                22
+                22,
+                36,
+                40
             ],
             "subs": [
                 "THORA"
@@ -7647,10 +7648,10 @@
             "favorite": false,
             "genres": [
                 1,
-                31,
-                22,
                 17,
-                27
+                22,
+                27,
+                31
             ],
             "subs": [
                 "Koten_Gars"
@@ -7815,10 +7816,10 @@
             "favorite": 7,
             "genres": [
                 1,
-                11,
                 2,
-                16,
-                10
+                10,
+                11,
+                16
             ],
             "subs": [
                 "SallySubs"
@@ -7850,9 +7851,9 @@
             "favorite": false,
             "genres": [
                 1,
+                8,
                 24,
-                29,
-                8
+                29
             ],
             "subs": [
                 "Hatsuyuki-TechMod"
@@ -7884,8 +7885,8 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 13,
+                38,
                 42
             ],
             "subs": [
@@ -7952,8 +7953,8 @@
             "genres": [
                 4,
                 23,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "Tsundere"
@@ -8050,8 +8051,8 @@
             "genres": [
                 1,
                 2,
-                16,
                 10,
+                16,
                 27
             ],
             "subs": [
@@ -8084,8 +8085,8 @@
             "favorite": false,
             "genres": [
                 4,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "Final8"
@@ -8116,9 +8117,9 @@
             "url": "https://myanimelist.net/anime/18153/Kyoukai_no_Kanata",
             "favorite": false,
             "genres": [
+                10,
                 36,
-                37,
-                10
+                37
             ],
             "subs": [
                 "AkihitoSubs"
@@ -8150,12 +8151,12 @@
             "favorite": false,
             "genres": [
                 1,
-                35,
-                37,
                 9,
-                32,
                 10,
-                23
+                23,
+                32,
+                35,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -8166,8 +8167,8 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "Silver Link.",
-                "Connect"
+                "Connect",
+                "Silver Link."
             ],
             "episodeDuration": 24
         },
@@ -8185,9 +8186,9 @@
             "url": "https://myanimelist.net/anime/18411/Gingitsune",
             "favorite": false,
             "genres": [
-                42,
                 36,
-                37
+                37,
+                42
             ],
             "subs": [
                 "WBDP"
@@ -8254,11 +8255,11 @@
             "url": "https://myanimelist.net/anime/18507/Free",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                30,
                 8,
-                23
+                23,
+                30,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -8269,8 +8270,8 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "Kyoto Animation",
-                "Animation Do"
+                "Animation Do",
+                "Kyoto Animation"
             ],
             "episodeDuration": 24
         },
@@ -8325,9 +8326,9 @@
             "genres": [
                 1,
                 4,
-                31,
                 9,
-                23
+                23,
+                31
             ],
             "subs": [
                 "bonkai77"
@@ -8358,9 +8359,9 @@
             "url": "https://myanimelist.net/anime/18745/Chihayafuru_2__Waga_Miyo_ni_Furu_Nagame_Shima_ni",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 23,
+                36,
                 43
             ],
             "subs": [],
@@ -8409,7 +8410,7 @@
             "studios": [
                 "Kyoto Animation"
             ],
-            "episodeDuration": 97
+            "episodeDuration": 90
         },
         "19363": {
             "id": 19363,
@@ -8459,10 +8460,10 @@
             "url": "https://myanimelist.net/anime/19369/Outbreak_Company",
             "favorite": false,
             "genres": [
-                35,
                 4,
+                10,
                 20,
-                10
+                35
             ],
             "subs": [
                 "Doki"
@@ -8495,13 +8496,13 @@
             "genres": [
                 2,
                 4,
-                16,
                 10,
+                16,
                 23
             ],
             "subs": [
-                "UCCUSS",
-                "UBW"
+                "UBW",
+                "UCCUSS"
             ],
             "resolution": 1080,
             "source": "BD",
@@ -8529,12 +8530,12 @@
             "url": "https://myanimelist.net/anime/19815/No_Game_No_Life",
             "favorite": false,
             "genres": [
-                11,
                 2,
                 4,
-                37,
                 9,
-                10
+                10,
+                11,
+                37
             ],
             "subs": [
                 "Nep_Blanc"
@@ -8565,9 +8566,9 @@
             "url": "https://myanimelist.net/anime/20057/Space☆Dandy",
             "favorite": false,
             "genres": [
+                4,
                 24,
-                29,
-                4
+                29
             ],
             "subs": [],
             "resolution": false,
@@ -8596,11 +8597,11 @@
             "url": "https://myanimelist.net/anime/20651/Natsume_Yuujinchou__Itsuka_Yuki_no_Hi_ni",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -8629,10 +8630,10 @@
             "url": "https://myanimelist.net/anime/20903/Harmonie",
             "favorite": false,
             "genres": [
-                36,
-                40,
                 8,
-                23
+                23,
+                36,
+                40
             ],
             "subs": [
                 "Watashi"
@@ -8697,11 +8698,11 @@
             "favorite": false,
             "genres": [
                 2,
-                36,
                 7,
-                13,
-                37,
                 10,
+                13,
+                36,
+                37,
                 42
             ],
             "subs": [
@@ -8734,8 +8735,8 @@
             "favorite": false,
             "genres": [
                 7,
-                40,
-                8
+                8,
+                40
             ],
             "subs": [
                 "Coalgirls"
@@ -8766,11 +8767,11 @@
             "url": "https://myanimelist.net/anime/21603/Mekakucity_Actors",
             "favorite": false,
             "genres": [
-                24,
                 4,
+                22,
+                24,
                 31,
-                37,
-                22
+                37
             ],
             "subs": [
                 "Commie"
@@ -8803,8 +8804,8 @@
             "genres": [
                 1,
                 4,
-                31,
-                23
+                23,
+                31
             ],
             "subs": [
                 "bonkai77"
@@ -8837,8 +8838,8 @@
             "genres": [
                 4,
                 23,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "Tsundere"
@@ -8870,10 +8871,10 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                22,
-                10
+                10,
+                11,
+                22
             ],
             "subs": [
                 "Doki"
@@ -8905,11 +8906,11 @@
             "favorite": false,
             "genres": [
                 2,
-                36,
                 7,
-                13,
-                37,
                 10,
+                13,
+                36,
+                37,
                 42
             ],
             "subs": [
@@ -9010,12 +9011,12 @@
             "favorite": false,
             "genres": [
                 1,
-                7,
                 4,
-                13,
                 6,
-                37,
-                27
+                7,
+                13,
+                27,
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -9115,11 +9116,11 @@
             "url": "https://myanimelist.net/anime/22265/Free__Eternal_Summer",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                30,
                 8,
-                23
+                23,
+                30,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -9130,8 +9131,8 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "Kyoto Animation",
-                "Animation Do"
+                "Animation Do",
+                "Kyoto Animation"
             ],
             "episodeDuration": 24
         },
@@ -9185,10 +9186,10 @@
             "genres": [
                 1,
                 7,
-                14,
-                40,
-                37,
                 8,
+                14,
+                37,
+                40,
                 42
             ],
             "subs": [
@@ -9231,8 +9232,8 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "Studio Ghibli",
-                "Polygon Pictures"
+                "Polygon Pictures",
+                "Studio Ghibli"
             ],
             "episodeDuration": 25
         },
@@ -9251,10 +9252,10 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
-                14,
-                40,
                 8,
+                14,
+                24,
+                40,
                 42
             ],
             "subs": [
@@ -9287,9 +9288,9 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
+                18,
                 24,
-                18
+                38
             ],
             "subs": [
                 "FFF"
@@ -9422,12 +9423,12 @@
             "favorite": false,
             "genres": [
                 1,
-                7,
                 4,
-                13,
                 6,
-                37,
-                27
+                7,
+                13,
+                27,
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -9563,8 +9564,8 @@
             "genres": [
                 4,
                 23,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "Tsundere"
@@ -9627,12 +9628,12 @@
             "favorite": false,
             "genres": [
                 2,
+                7,
                 10,
                 13,
-                7,
-                42,
                 36,
-                37
+                37,
+                42
             ],
             "subs": [
                 "Kawaiika-Raws"
@@ -9664,12 +9665,12 @@
             "favorite": 1,
             "genres": [
                 2,
+                7,
                 10,
                 13,
-                7,
-                42,
                 36,
-                37
+                37,
+                42
             ],
             "subs": [
                 "Kawaiika-Raws"
@@ -9701,8 +9702,8 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
-                10
+                10,
+                37
             ],
             "subs": [
                 "CTR"
@@ -9800,12 +9801,12 @@
             "favorite": false,
             "genres": [
                 1,
+                7,
                 8,
                 10,
-                38,
-                7,
                 27,
-                31
+                31,
+                38
             ],
             "subs": [
                 "kBaraka",
@@ -9871,8 +9872,8 @@
             "genres": [
                 1,
                 10,
-                38,
-                24
+                24,
+                38
             ],
             "subs": [
                 "bonkai77"
@@ -9938,11 +9939,11 @@
             "url": "https://myanimelist.net/anime/27727/Binan_Koukou_Chikyuu_Boueibu_LOVE",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                20,
                 16,
-                23
+                20,
+                23,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -10007,10 +10008,10 @@
             "genres": [
                 1,
                 7,
-                14,
-                40,
-                37,
                 8,
+                14,
+                37,
+                40,
                 42
             ],
             "subs": [
@@ -10042,9 +10043,9 @@
             "url": "https://myanimelist.net/anime/27969/Hana_to_Alice__Satsujin_Jiken",
             "favorite": false,
             "genres": [
-                36,
                 7,
-                8
+                8,
+                36
             ],
             "subs": [
                 "Watashi"
@@ -10057,8 +10058,8 @@
             "size": 3084465062,
             "together": 1,
             "studios": [
-                "Steve N' Steven",
-                "Rockwell Eyes"
+                "Rockwell Eyes",
+                "Steve N' Steven"
             ],
             "episodeDuration": 98
         },
@@ -10079,8 +10080,8 @@
                 1,
                 2,
                 4,
-                22,
-                10
+                10,
+                22
             ],
             "subs": [],
             "resolution": false,
@@ -10109,10 +10110,10 @@
             "url": "https://myanimelist.net/anime/28223/Death_Parade",
             "favorite": false,
             "genres": [
-                11,
                 7,
-                40,
                 8,
+                11,
+                40,
                 41
             ],
             "subs": [
@@ -10162,8 +10163,8 @@
             "size": 7931917881,
             "together": 2,
             "studios": [
-                "SANZIGEN",
-                "LIDENFILMS"
+                "LIDENFILMS",
+                "SANZIGEN"
             ],
             "episodeDuration": 24
         },
@@ -10181,8 +10182,8 @@
             "url": "https://myanimelist.net/anime/28621/Subete_ga_F_ni_Naru",
             "favorite": false,
             "genres": [
-                24,
                 7,
+                24,
                 40
             ],
             "subs": [],
@@ -10212,8 +10213,8 @@
             "url": "https://myanimelist.net/anime/28625/Shisha_no_Teikoku",
             "favorite": false,
             "genres": [
-                24,
                 13,
+                24,
                 40
             ],
             "subs": [],
@@ -10444,12 +10445,12 @@
             "favorite": false,
             "genres": [
                 2,
+                7,
                 10,
                 13,
-                7,
-                42,
                 36,
-                37
+                37,
+                42
             ],
             "subs": [
                 "Kawaiika-Raws"
@@ -10516,9 +10517,9 @@
             "url": "https://myanimelist.net/anime/30015/ReLIFE",
             "favorite": false,
             "genres": [
-                36,
                 22,
-                23
+                23,
+                36
             ],
             "subs": [
                 "Pixel"
@@ -10549,7 +10550,9 @@
             "url": "https://myanimelist.net/anime/30187/Sakurako-san_no_Ashimoto_ni_wa_Shitai_ga_Umatteiru",
             "favorite": false,
             "genres": [
-                7
+                7,
+                8,
+                41
             ],
             "subs": [
                 "FFF"
@@ -10581,12 +10584,11 @@
             "favorite": false,
             "genres": [
                 1,
-                24,
                 4,
                 20,
+                24,
                 31,
-                37,
-                42
+                37
             ],
             "subs": [
                 "Cerberus"
@@ -10617,10 +10619,10 @@
             "url": "https://myanimelist.net/anime/30346/Doukyuusei_Movie",
             "favorite": false,
             "genres": [
-                36,
                 22,
                 23,
-                28
+                28,
+                36
             ],
             "subs": [
                 "aarinfantasy"
@@ -10685,8 +10687,8 @@
             "genres": [
                 1,
                 2,
-                16,
-                10
+                10,
+                16
             ],
             "subs": [
                 "neko-raws"
@@ -10718,8 +10720,8 @@
             "favorite": false,
             "genres": [
                 7,
-                40,
                 37,
+                40,
                 42
             ],
             "subs": [
@@ -10822,8 +10824,8 @@
             "genres": [
                 8,
                 11,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [],
             "resolution": false,
@@ -10852,11 +10854,11 @@
             "url": "https://myanimelist.net/anime/31680/Super_Lovers",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 8,
                 22,
-                28
+                28,
+                36
             ],
             "subs": [
                 "Unknown"
@@ -10957,10 +10959,10 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                22,
-                10
+                10,
+                11,
+                22
             ],
             "subs": [
                 "bonkai77"
@@ -10991,9 +10993,9 @@
             "url": "https://myanimelist.net/anime/31798/Kiznaiver",
             "favorite": false,
             "genres": [
-                24,
                 8,
-                22
+                22,
+                24
             ],
             "subs": [
                 "Asenshi"
@@ -11025,12 +11027,12 @@
             "favorite": false,
             "genres": [
                 1,
-                7,
                 4,
-                13,
                 6,
-                37,
-                27
+                7,
+                13,
+                27,
+                37
             ],
             "subs": [
                 "iAHD"
@@ -11063,11 +11065,11 @@
             "genres": [
                 1,
                 2,
-                13,
-                37,
                 8,
                 10,
-                27
+                13,
+                27,
+                37
             ],
             "subs": [
                 "Cleo"
@@ -11198,9 +11200,9 @@
             "url": "https://myanimelist.net/anime/32093/Tanaka-kun_wa_Itsumo_Kedaruge",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                23
+                23,
+                36
             ],
             "subs": [
                 "Kametsu"
@@ -11296,10 +11298,10 @@
             "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
             "favorite": false,
             "genres": [
+                8,
                 22,
-                37,
                 23,
-                8
+                37
             ],
             "subs": [
                 "bonkai77"
@@ -11330,11 +11332,11 @@
             "url": "https://myanimelist.net/anime/32438/Mayoiga",
             "favorite": false,
             "genres": [
-                7,
                 4,
+                7,
+                8,
                 14,
-                40,
-                8
+                40
             ],
             "subs": [
                 "Chihiro"
@@ -11365,9 +11367,9 @@
             "url": "https://myanimelist.net/anime/32542/Sakamoto_Desu_ga",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 23,
+                36,
                 42
             ],
             "subs": [],
@@ -11399,8 +11401,8 @@
             "genres": [
                 4,
                 23,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [
                 "Tsundere"
@@ -11462,9 +11464,9 @@
             "url": "https://myanimelist.net/anime/32648/Handa-kun",
             "favorite": false,
             "genres": [
-                36,
                 4,
-                27
+                27,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -11526,10 +11528,10 @@
             "url": "https://myanimelist.net/anime/32902/Mahoutsukai_no_Yome__Hoshi_Matsu_Hito",
             "favorite": false,
             "genres": [
-                36,
-                16,
                 10,
-                27
+                16,
+                27,
+                36
             ],
             "subs": [
                 "meta"
@@ -11560,11 +11562,11 @@
             "url": "https://myanimelist.net/anime/32983/Natsume_Yuujinchou_Go",
             "favorite": false,
             "genres": [
-                36,
                 6,
-                37,
                 8,
-                25
+                25,
+                36,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -11593,11 +11595,11 @@
             "url": "https://myanimelist.net/anime/33013/Super_Lovers_OVA",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 8,
                 22,
-                28
+                28,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -11659,9 +11661,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -11724,10 +11726,10 @@
             "favorite": false,
             "genres": [
                 1,
-                14,
                 7,
-                42,
-                37
+                14,
+                37,
+                42
             ],
             "subs": [
                 "iAHD"
@@ -11758,9 +11760,9 @@
             "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
             "favorite": false,
             "genres": [
-                36,
                 8,
-                10
+                10,
+                36
             ],
             "subs": [
                 "Komorebi"
@@ -11791,11 +11793,11 @@
             "url": "https://myanimelist.net/anime/33417/Super_Lovers_2",
             "favorite": false,
             "genres": [
-                36,
                 4,
                 8,
                 22,
-                28
+                28,
+                36
             ],
             "subs": [
                 "Unknown"
@@ -11828,9 +11830,9 @@
             "genres": [
                 1,
                 4,
-                31,
                 23,
-                27
+                27,
+                31
             ],
             "subs": [
                 "kBaraka",
@@ -11864,9 +11866,9 @@
             "genres": [
                 1,
                 6,
-                37,
                 10,
-                27
+                27,
+                37
             ],
             "subs": [
                 "MK-SCY"
@@ -11899,8 +11901,8 @@
             "genres": [
                 1,
                 2,
-                16,
-                10
+                10,
+                16
             ],
             "subs": [],
             "resolution": false,
@@ -11929,11 +11931,11 @@
             "url": "https://myanimelist.net/anime/33674/No_Game_No_Life__Zero",
             "favorite": false,
             "genres": [
-                11,
-                37,
                 8,
+                10,
+                11,
                 22,
-                10
+                37
             ],
             "subs": [
                 "animeisdead"
@@ -11976,7 +11978,7 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "G.CMay Animation & Film"
+                "B.CMAY PICTURES"
             ],
             "episodeDuration": 24
         },
@@ -11986,7 +11988,7 @@
             "type": 1,
             "episodes": 13,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1218/105465.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1788/108410.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -11996,8 +11998,8 @@
             "genres": [
                 1,
                 2,
-                16,
-                10
+                10,
+                16
             ],
             "subs": [
                 "neko-raws"
@@ -12029,9 +12031,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [
                 "Kametsu"
@@ -12062,11 +12064,11 @@
             "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
             "favorite": false,
             "genres": [
-                24,
                 2,
                 7,
                 8,
-                10
+                10,
+                24
             ],
             "subs": [
                 "Asenshi",
@@ -12099,10 +12101,10 @@
             "favorite": false,
             "genres": [
                 7,
-                31,
                 8,
                 10,
-                25
+                25,
+                31
             ],
             "subs": [
                 "Asenshi"
@@ -12133,10 +12135,10 @@
             "url": "https://myanimelist.net/anime/35062/Mahoutsukai_no_Yome",
             "favorite": false,
             "genres": [
-                36,
-                16,
                 10,
-                27
+                16,
+                27,
+                36
             ],
             "subs": [
                 "GSK_kun"
@@ -12168,11 +12170,11 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                37,
+                10,
+                11,
                 16,
-                10
+                37
             ],
             "subs": [
                 "kBaraka",
@@ -12272,8 +12274,8 @@
             "genres": [
                 8,
                 11,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [],
             "resolution": false,
@@ -12370,9 +12372,9 @@
             "favorite": false,
             "genres": [
                 1,
+                7,
                 8,
                 10,
-                7,
                 42
             ],
             "subs": [],
@@ -12436,12 +12438,12 @@
             "favorite": false,
             "genres": [
                 1,
+                7,
                 8,
                 10,
-                38,
-                7,
                 27,
-                31
+                31,
+                38
             ],
             "subs": [
                 "kBaraka",
@@ -12508,7 +12510,8 @@
             "favorite": false,
             "genres": [
                 2,
-                4
+                4,
+                8
             ],
             "subs": [],
             "resolution": false,
@@ -12572,8 +12575,8 @@
                 1,
                 2,
                 4,
-                16,
                 10,
+                16,
                 27
             ],
             "subs": [],
@@ -12605,8 +12608,8 @@
             "url": "https://myanimelist.net/anime/36038/Net-juu_no_Susume",
             "favorite": 10,
             "genres": [
-                11,
                 4,
+                11,
                 22
             ],
             "subs": [
@@ -12638,8 +12641,8 @@
             "url": "https://myanimelist.net/anime/36043/Net-juu_no_Susume_Special",
             "favorite": false,
             "genres": [
-                11,
                 4,
+                11,
                 22
             ],
             "subs": [
@@ -12736,10 +12739,10 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                22,
-                10
+                10,
+                11,
+                22
             ],
             "subs": [
                 "Erai-raws"
@@ -12770,11 +12773,11 @@
             "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
             "favorite": false,
             "genres": [
-                24,
                 2,
                 7,
                 8,
-                10
+                10,
+                24
             ],
             "subs": [],
             "resolution": false,
@@ -12787,7 +12790,7 @@
             "studios": [
                 "Kinema Citrus"
             ],
-            "episodeDuration": 0
+            "episodeDuration": 105
         },
         "36896": {
             "id": 36896,
@@ -12838,9 +12841,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [
                 "Apex"
@@ -13029,8 +13032,8 @@
                 1,
                 2,
                 4,
-                13,
                 7,
+                13,
                 37
             ],
             "subs": [
@@ -13044,7 +13047,7 @@
             "size": 4046218499,
             "together": 2,
             "studios": [
-                "G.CMay Animation & Film"
+                "B.CMAY PICTURES"
             ],
             "episodeDuration": 24
         },
@@ -13097,10 +13100,10 @@
             "genres": [
                 8,
                 11,
-                43,
                 23,
+                30,
                 36,
-                30
+                43
             ],
             "subs": [],
             "resolution": false,
@@ -13222,9 +13225,9 @@
             "favorite": false,
             "genres": [
                 2,
+                7,
                 8,
                 10,
-                7,
                 24
             ],
             "subs": [],
@@ -13238,7 +13241,7 @@
             "studios": [
                 "Kinema Citrus"
             ],
-            "episodeDuration": 135
+            "episodeDuration": 119
         },
         "37515": {
             "id": 37515,
@@ -13254,11 +13257,11 @@
             "url": "https://myanimelist.net/anime/37515/Made_in_Abyss_Movie_2__Hourou_Suru_Tasogare",
             "favorite": false,
             "genres": [
-                24,
                 2,
                 7,
                 8,
-                10
+                10,
+                24
             ],
             "subs": [],
             "resolution": false,
@@ -13271,7 +13274,7 @@
             "studios": [
                 "Kinema Citrus"
             ],
-            "episodeDuration": 0
+            "episodeDuration": 105
         },
         "37520": {
             "id": 37520,
@@ -13289,11 +13292,11 @@
             "genres": [
                 1,
                 2,
-                13,
                 6,
-                37,
+                13,
                 21,
-                27
+                27,
+                37
             ],
             "subs": [
                 "Judas"
@@ -13306,8 +13309,8 @@
             "size": 7787422939,
             "together": 2,
             "studios": [
-                "Tezuka Productions",
-                "MAPPA"
+                "MAPPA",
+                "Tezuka Productions"
             ],
             "episodeDuration": 24
         },
@@ -13327,8 +13330,8 @@
             "genres": [
                 1,
                 2,
-                13,
                 8,
+                13,
                 42
             ],
             "subs": [],
@@ -13420,9 +13423,9 @@
             "favorite": false,
             "genres": [
                 1,
-                16,
                 10,
                 11,
+                16,
                 37
             ],
             "subs": [
@@ -13454,12 +13457,12 @@
             "url": "https://myanimelist.net/anime/37779/Yakusoku_no_Neverland",
             "favorite": false,
             "genres": [
-                24,
                 7,
                 14,
+                24,
+                27,
                 40,
-                41,
-                27
+                41
             ],
             "subs": [
                 "Erai-raws"
@@ -13531,8 +13534,10 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
-            "episodeDuration": 24
+            "studios": [
+                "Colored-Pencil Animation Design"
+            ],
+            "episodeDuration": 0
         },
         "38000": {
             "id": 38000,
@@ -13567,7 +13572,7 @@
             "studios": [
                 "ufotable"
             ],
-            "episodeDuration": 24
+            "episodeDuration": 23
         },
         "38015": {
             "id": 38015,
@@ -13646,8 +13651,8 @@
             "url": "https://myanimelist.net/anime/38145/Doukyonin_wa_Hiza_Tokidoki_Atama_no_Ue",
             "favorite": false,
             "genres": [
-                36,
-                4
+                4,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -13678,9 +13683,9 @@
             "genres": [
                 1,
                 4,
-                31,
                 23,
-                27
+                27,
+                31
             ],
             "subs": [
                 "Erai-raws"
@@ -13713,8 +13718,8 @@
             "genres": [
                 1,
                 4,
-                13,
                 7,
+                13,
                 37
             ],
             "subs": [
@@ -13728,7 +13733,7 @@
             "size": 1863544366,
             "together": 2,
             "studios": [
-                "G.CMay Animation & Film"
+                "B.CMAY PICTURES"
             ],
             "episodeDuration": 24
         },
@@ -13747,12 +13752,12 @@
             "favorite": false,
             "genres": [
                 1,
+                7,
                 8,
                 10,
-                38,
-                7,
                 27,
-                31
+                31,
+                38
             ],
             "subs": [
                 "kBaraka",
@@ -13786,8 +13791,9 @@
             "genres": [
                 1,
                 4,
-                14,
                 10,
+                14,
+                16,
                 42
             ],
             "subs": [],
@@ -13801,7 +13807,7 @@
             "studios": [
                 "MAPPA"
             ],
-            "episodeDuration": 0
+            "episodeDuration": 23
         },
         "38671": {
             "id": 38671,
@@ -13818,8 +13824,8 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
-                27
+                27,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -13880,8 +13886,8 @@
             "url": "https://myanimelist.net/anime/38959/Lord_El-Melloi_II_Sei_no_Jikenbo__Rail_Zeppelin_Grace_Note",
             "favorite": false,
             "genres": [
-                10,
                 7,
+                10,
                 37
             ],
             "subs": [],
@@ -13911,10 +13917,10 @@
             "url": "https://myanimelist.net/anime/39195/Beastars",
             "favorite": false,
             "genres": [
-                36,
-                40,
                 8,
-                27
+                27,
+                36,
+                40
             ],
             "subs": [],
             "resolution": false,
@@ -13945,8 +13951,8 @@
             "genres": [
                 1,
                 2,
-                22,
-                10
+                10,
+                22
             ],
             "subs": [
                 "Erai-raws"
@@ -14014,9 +14020,9 @@
             "genres": [
                 1,
                 4,
-                31,
                 23,
-                27
+                27,
+                31
             ],
             "subs": [],
             "resolution": false,
@@ -14029,7 +14035,7 @@
             "studios": [
                 "Bones"
             ],
-            "episodeDuration": 0
+            "episodeDuration": 104
         },
         "39576": {
             "id": 39576,
@@ -14066,20 +14072,20 @@
             "id": 39587,
             "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
             "type": 1,
-            "episodes": 0,
+            "episodes": 13,
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1444/108005.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
             "favorite": false,
             "genres": [
-                40,
                 8,
-                41,
-                10
+                10,
+                40,
+                41
             ],
             "subs": [],
             "resolution": false,
@@ -14089,8 +14095,10 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
-            "episodeDuration": 0
+            "studios": [
+                "White Fox"
+            ],
+            "episodeDuration": 25
         },
         "39597": {
             "id": 39597,
@@ -14107,10 +14115,10 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                22,
-                10
+                10,
+                11,
+                22
             ],
             "subs": [
                 "Erai-raws"
@@ -14141,11 +14149,11 @@
             "url": "https://myanimelist.net/anime/39617/Yakusoku_no_Neverland_2nd_Season",
             "favorite": false,
             "genres": [
-                24,
                 7,
+                24,
+                27,
                 40,
-                41,
-                27
+                41
             ],
             "subs": [],
             "resolution": false,
@@ -14156,7 +14164,7 @@
             "size": 0,
             "together": 1,
             "studios": [],
-            "episodeDuration": 22
+            "episodeDuration": 0
         },
         "39710": {
             "id": 39710,
@@ -14172,9 +14180,9 @@
             "url": "https://myanimelist.net/anime/39710/Yesterday_wo_Utatte",
             "favorite": false,
             "genres": [
-                36,
                 8,
                 22,
+                36,
                 42
             ],
             "subs": [],
@@ -14205,8 +14213,8 @@
             "favorite": false,
             "genres": [
                 4,
-                42,
-                36
+                36,
+                42
             ],
             "subs": [],
             "resolution": false,
@@ -14216,7 +14224,9 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
+            "studios": [
+                "Silver Link."
+            ],
             "episodeDuration": 0
         },
         "40020": {
@@ -14262,12 +14272,12 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 7,
-                31,
                 8,
                 10,
-                27
+                27,
+                31,
+                38
             ],
             "subs": [],
             "resolution": false,
@@ -14277,7 +14287,9 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
+            "studios": [
+                "MAPPA"
+            ],
             "episodeDuration": 0
         },
         "40206": {
@@ -14295,9 +14307,9 @@
             "favorite": false,
             "genres": [
                 1,
-                37,
+                10,
                 16,
-                10
+                37
             ],
             "subs": [
                 "Erai-raws"
@@ -14319,20 +14331,20 @@
             "title": "Kami no Tou",
             "type": 1,
             "episodes": 13,
-            "episodesWatched": 0,
+            "episodesWatched": 13,
             "img": "https://cdn.myanimelist.net/images/anime/1702/106229.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40221/Kami_no_Tou",
             "favorite": false,
             "genres": [
                 1,
                 2,
+                7,
                 8,
-                10,
-                7
+                10
             ],
             "subs": [
                 "Judas"
@@ -14353,7 +14365,7 @@
             "id": 40314,
             "title": "Sekaiichi Hatsukoi: Propose-hen",
             "type": 3,
-            "episodes": 0,
+            "episodes": 1,
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1896/102829.jpg",
             "status": 6,
@@ -14377,7 +14389,7 @@
             "size": 0,
             "together": 1,
             "studios": [],
-            "episodeDuration": 0
+            "episodeDuration": 22
         },
         "40356": {
             "id": 40356,
@@ -14453,11 +14465,11 @@
             "url": "https://myanimelist.net/anime/40421/Given_Movie",
             "favorite": false,
             "genres": [
-                19,
-                36,
                 8,
+                19,
                 22,
-                28
+                28,
+                36
             ],
             "subs": [],
             "resolution": false,
@@ -14487,11 +14499,11 @@
             "favorite": false,
             "genres": [
                 1,
-                13,
                 6,
-                37,
                 8,
-                16
+                13,
+                16,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -14501,7 +14513,9 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
+            "studios": [
+                "B.CMAY PICTURES"
+            ],
             "episodeDuration": 0
         },
         "40456": {
@@ -14519,10 +14533,10 @@
             "favorite": false,
             "genres": [
                 1,
-                13,
                 6,
-                37,
-                27
+                13,
+                27,
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -14545,17 +14559,17 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1438/105106.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40540/Sword_Art_Online__Alicization_-_War_of_Underworld_2nd_Season",
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                22,
-                10
+                10,
+                11,
+                22
             ],
             "subs": [],
             "resolution": false,
@@ -14568,7 +14582,7 @@
             "studios": [
                 "A-1 Pictures"
             ],
-            "episodeDuration": 0
+            "episodeDuration": 24
         },
         "40682": {
             "id": 40682,
@@ -14585,8 +14599,8 @@
             "favorite": false,
             "genres": [
                 1,
-                38,
                 13,
+                38,
                 42
             ],
             "subs": [],
@@ -14597,8 +14611,10 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
-            "episodeDuration": 0
+            "studios": [
+                "Studio Signpost"
+            ],
+            "episodeDuration": 24
         },
         "40935": {
             "id": 40935,
@@ -14614,10 +14630,10 @@
             "url": "https://myanimelist.net/anime/40935/Beastars_2nd_Season",
             "favorite": false,
             "genres": [
-                36,
-                40,
                 8,
-                27
+                27,
+                36,
+                40
             ],
             "subs": [],
             "resolution": false,
@@ -14658,8 +14674,10 @@
             "audioCodec": false,
             "size": 0,
             "together": 1,
-            "studios": [],
-            "episodeDuration": 20
+            "studios": [
+                "David Production"
+            ],
+            "episodeDuration": 24
         },
         "41006": {
             "id": 41006,
@@ -14675,11 +14693,11 @@
             "url": "https://myanimelist.net/anime/41006/Higurashi_no_Naku_Koro_ni_2020",
             "favorite": false,
             "genres": [
-                7,
                 5,
+                7,
                 14,
-                40,
                 37,
+                40,
                 41
             ],
             "subs": [],
@@ -14709,11 +14727,11 @@
             "url": "https://myanimelist.net/anime/41084/Made_in_Abyss_2",
             "favorite": false,
             "genres": [
-                24,
                 2,
                 7,
                 8,
-                10
+                10,
+                24
             ],
             "subs": [],
             "resolution": false,
@@ -14730,7 +14748,7 @@
             "id": 41109,
             "title": "Log Horizon: Entaku Houkai",
             "type": 1,
-            "episodes": 0,
+            "episodes": 12,
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1510/108026.jpg",
             "status": 6,
@@ -14741,10 +14759,10 @@
             "favorite": false,
             "genres": [
                 1,
-                11,
                 2,
-                16,
-                10
+                10,
+                11,
+                16
             ],
             "subs": [],
             "resolution": false,
@@ -14775,9 +14793,9 @@
             "genres": [
                 1,
                 4,
-                31,
                 23,
-                27
+                27,
+                31
             ],
             "subs": [],
             "resolution": false,
@@ -14804,10 +14822,10 @@
             "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
             "favorite": false,
             "genres": [
-                40,
                 8,
-                41,
-                10
+                10,
+                40,
+                41
             ],
             "subs": [],
             "resolution": false,
@@ -14839,9 +14857,9 @@
                 1,
                 2,
                 4,
+                27,
                 31,
-                37,
-                27
+                37
             ],
             "subs": [],
             "resolution": false,
@@ -14852,6 +14870,39 @@
             "size": 0,
             "together": 1,
             "studios": [],
+            "episodeDuration": 0
+        },
+        "42603": {
+            "id": 42603,
+            "title": "Boku no Hero Academia: Ikinokore! Kesshi no Survival Kunren",
+            "type": 5,
+            "episodes": 2,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1345/108741.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/42603/Boku_no_Hero_Academia__Ikinokore_Kesshi_no_Survival_Kunren",
+            "favorite": false,
+            "genres": [
+                1,
+                4,
+                23,
+                27,
+                31
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Bones"
+            ],
             "episodeDuration": 0
         }
     }
