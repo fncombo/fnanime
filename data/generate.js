@@ -29,9 +29,9 @@ const MAL_USERNAME = 'fncombo'
 const ANIME_FOLDERS = [
     'E:/Anime/Series',
     'E:/Anime/OVA',
-    'E:/Anime/Movies',
+    'F:/Anime/Movies',
     'E:/Anime/Specials',
-    'E:/Anime/Ghibli Movies',
+    'F:/Anime/Ghibli Movies',
 ]
 
 // Type lookup
