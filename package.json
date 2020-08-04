@@ -62,7 +62,6 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "get-folder-size": "^2.0.1",
     "has": "^1.0.3",
-    "husky": "^4.2.5",
     "lint-staged": "^10.1.7",
     "log4js": "^6.2.1",
     "node-fetch": "^2.6.0",
@@ -82,23 +81,6 @@
     "format": "eslint \"**/*.js\" --fix && prettier \"**/*.{js,json}\" --write && stylelint \"**/*.scss\" --syntax scss --fix",
     "start": "npm run develop",
     "clean": "gatsby clean"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.json": [
-      "prettier --write"
-    ],
-    "*.scss": [
-      "stylelint --syntax scss --fix"
-    ]
   },
   "browserslist": [
     ">5%",
