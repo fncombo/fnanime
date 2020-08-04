@@ -465,7 +465,7 @@ getApiData(MAL_USERNAME)
         // Commit and push data if the "commit" argument was passed
         console.log('Committing data to repository')
 
-        await git().commit('Anime data JSON update', ANIME_JSON_LOCATION, { '--no-verify': null })
+        await git().commit('Anime data JSON update', ANIME_JSON_LOCATION)
 
         console.log('Pushing master to origin')
 
