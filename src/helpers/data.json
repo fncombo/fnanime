@@ -1,5 +1,5 @@
 {
-    "updated": 1596570073671,
+    "updated": 1596652466522,
     "anime": {
         "20": {
             "id": 20,
@@ -1184,7 +1184,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/12/19634.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 9,
+            "rating": 10,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/934/Higurashi_no_Naku_Koro_ni",
             "favorite": false,
@@ -2579,7 +2579,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/12/19620.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 6,
+            "rating": 7,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/4059/Clannad__Mou_Hitotsu_no_Sekai_Tomoyo-hen",
             "favorite": false,
@@ -2681,7 +2681,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/13/24647.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 9,
+            "rating": 10,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/4181/Clannad__After_Story",
             "favorite": false,
@@ -2701,7 +2701,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 21152961671,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Kyoto Animation"
             ],
@@ -3589,7 +3589,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 794774646,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Kyoto Animation"
             ],
@@ -4217,7 +4217,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/9/75905.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 4,
             "url": "https://myanimelist.net/anime/7711/Karigurashi_no_Arrietty",
             "favorite": false,
@@ -6141,7 +6141,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/5/54231.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 10,
+            "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/11981/Mahou_Shoujo_Madoka★Magica_Movie_3__Hangyaku_no_Monogatari",
             "favorite": false,
