@@ -1,5 +1,5 @@
 {
-    "updated": 1596652466522,
+    "updated": 1597011078028,
     "anime": {
         "20": {
             "id": 20,
@@ -1187,7 +1187,7 @@
             "rating": 10,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/934/Higurashi_no_Naku_Koro_ni",
-            "favorite": false,
+            "favorite": 4,
             "genres": [
                 5,
                 7,
@@ -1598,7 +1598,7 @@
             "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/1889/Higurashi_no_Naku_Koro_ni_Kai",
-            "favorite": 5,
+            "favorite": false,
             "genres": [
                 7,
                 37,
@@ -2598,7 +2598,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 665775094,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Kyoto Animation"
             ],
@@ -2682,7 +2682,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 10,
-            "rewatchCount": 1,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/4181/Clannad__After_Story",
             "favorite": false,
             "genres": [
@@ -3572,7 +3572,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 6,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/6351/Clannad__After_Story_-_Mou_Hitotsu_no_Sekai_Kyou-hen",
             "favorite": false,
             "genres": [
@@ -4386,7 +4386,7 @@
             "rating": 9,
             "rewatchCount": 4,
             "url": "https://myanimelist.net/anime/8425/Gosick",
-            "favorite": 6,
+            "favorite": 5,
             "genres": [
                 7,
                 8,
@@ -5051,7 +5051,7 @@
             "rating": 10,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/10165/Nichijou",
-            "favorite": 4,
+            "favorite": 3,
             "genres": [
                 4,
                 23,
@@ -5085,7 +5085,7 @@
             "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/10357/Jinrui_wa_Suitai_Shimashita",
-            "favorite": 8,
+            "favorite": 9,
             "genres": [
                 4,
                 10,
@@ -6246,7 +6246,7 @@
             "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/12189/Hyouka",
-            "favorite": 3,
+            "favorite": 7,
             "genres": [
                 7,
                 23,
@@ -7387,7 +7387,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7871442833,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Zexcs"
             ],
@@ -7813,7 +7813,7 @@
             "rating": 9,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/17265/Log_Horizon",
-            "favorite": 7,
+            "favorite": 6,
             "genres": [
                 1,
                 2,
@@ -7949,7 +7949,7 @@
             "rating": 9,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/17549/Non_Non_Biyori",
-            "favorite": 9,
+            "favorite": 8,
             "genres": [
                 4,
                 23,
@@ -12896,11 +12896,11 @@
             "title": "Non Non Biyori Movie: Vacation",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1044/93575.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/36990/Non_Non_Biyori_Movie__Vacation",
             "favorite": false,
@@ -12909,14 +12909,16 @@
                 36,
                 42
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
+            "subs": [
+                "FFF-Vivid"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.264",
+            "bits": 20,
+            "audioCodec": "AAC",
+            "size": 3163095951,
+            "together": 2,
             "studios": [
                 "Silver Link."
             ],
