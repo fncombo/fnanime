@@ -1,5 +1,5 @@
 {
-    "updated": 1597011078028,
+    "updated": 1598721493842,
     "anime": {
         "20": {
             "id": 20,
@@ -43,7 +43,7 @@
             "type": 1,
             "episodes": 26,
             "episodesWatched": 26,
-            "img": "https://cdn.myanimelist.net/images/anime/12/21418.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1314/108941.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 5,
@@ -944,7 +944,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/8/75921.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1491/108609.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 8,
@@ -1423,7 +1423,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 5,
+            "rewatchCount": 6,
             "url": "https://myanimelist.net/anime/1689/Byousoku_5_Centimeter",
             "favorite": false,
             "genres": [
@@ -1440,7 +1440,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 4896680353,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "CoMix Wave Films"
             ],
@@ -2541,7 +2541,7 @@
         },
         "3786": {
             "id": 3786,
-            "title": "Evangelion: 3.0+1.0",
+            "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
@@ -2550,7 +2550,7 @@
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/3786/Evangelion__30_10",
+            "url": "https://myanimelist.net/anime/3786/Evangelion__30_10_Thrice_Upon_a_Time",
             "favorite": false,
             "genres": [
                 1,
@@ -5016,8 +5016,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/2/29665.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 0,
+            "rating": 9,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/10162/Usagi_Drop",
             "favorite": false,
             "genres": [
@@ -5025,15 +5025,15 @@
                 43
             ],
             "subs": [
-                "Zurako"
+                "Doki"
             ],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
             "audioCodec": "FLAC",
-            "size": 12423177771,
-            "together": 1,
+            "size": 8231567925,
+            "together": 2,
             "studios": [
                 "Production I.G"
             ],
@@ -5384,7 +5384,7 @@
         },
         "10798": {
             "id": 10798,
-            "title": "UN-GO",
+            "title": "Un-Go",
             "type": 1,
             "episodes": 11,
             "episodesWatched": 0,
@@ -5393,7 +5393,7 @@
             "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/10798/UN-GO",
+            "url": "https://myanimelist.net/anime/10798/Un-Go",
             "favorite": false,
             "genres": [
                 7,
@@ -5421,7 +5421,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/3/35749.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/10800/Chihayafuru",
             "favorite": false,
@@ -6525,14 +6525,14 @@
                 40
             ],
             "subs": [
-                "UTW"
+                "Reaktor"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
+            "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 43727399637,
+            "audioCodec": "AC3",
+            "size": 9525349937,
             "together": 1,
             "studios": [
                 "A-1 Pictures"
@@ -6922,7 +6922,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/6/47435.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/14397/Chihayafuru_2",
             "favorite": false,
@@ -7368,7 +7368,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/16201/Aku_no_Hana",
             "favorite": false,
             "genres": [
@@ -9108,7 +9108,7 @@
             "type": 1,
             "episodes": 13,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/10/64097.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1719/108886.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -11654,7 +11654,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1400/104685.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/33050/Fate_stay_night_Movie__Heavens_Feel_-_III_Spring_Song",
@@ -13847,11 +13847,11 @@
             "title": "Tenki no Ko",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1880/101146.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38826/Tenki_no_Ko",
             "favorite": false,
@@ -13861,14 +13861,16 @@
                 22,
                 36
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
+            "subs": [
+                "Judas"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "Opus",
+            "size": 2671882000,
+            "together": 2,
             "studios": [
                 "CoMix Wave Films"
             ],
@@ -14461,7 +14463,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1706/106042.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40421/Given_Movie",
@@ -14492,7 +14494,7 @@
             "type": 5,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1828/106489.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1797/108863.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14687,7 +14689,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1808/105271.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1520/108936.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14882,7 +14884,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1345/108741.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/42603/Boku_no_Hero_Academia__Ikinokore_Kesshi_no_Survival_Kunren",
