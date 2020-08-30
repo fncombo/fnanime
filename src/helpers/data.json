@@ -1,5 +1,5 @@
 {
-    "updated": 1598721493842,
+    "updated": 1598827346454,
     "anime": {
         "20": {
             "id": 20,
@@ -5181,7 +5181,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 1,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
             "favorite": false,
             "genres": [
@@ -5199,7 +5199,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 945932816,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Brain's Base"
             ],
@@ -6513,7 +6513,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 9,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/13125/Shinsekai_yori",
             "favorite": false,
             "genres": [
@@ -6533,7 +6533,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 9525349937,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "A-1 Pictures"
             ],
@@ -8729,7 +8729,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/7/64293.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
             "favorite": false,
@@ -8739,15 +8739,15 @@
                 40
             ],
             "subs": [
-                "Coalgirls"
+                "USS"
             ],
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 7481890701,
-            "together": 1,
+            "audioCodec": "AC3",
+            "size": 4383933101,
+            "together": 2,
             "studios": [
                 "Studio Ghibli"
             ],
