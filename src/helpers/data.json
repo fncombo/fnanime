@@ -1,5 +1,5 @@
 {
-    "updated": 1598827346454,
+    "updated": 1602797580278,
     "anime": {
         "20": {
             "id": 20,
@@ -80,7 +80,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/12/39305.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1404/98182.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 5,
@@ -944,7 +944,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/1491/108609.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1899/109259.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 8,
@@ -1353,8 +1353,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/9/9453.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 0,
+            "rating": 9,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/1535/Death_Note",
             "favorite": false,
             "genres": [
@@ -1373,8 +1373,8 @@
             "videoCodec": "H.265",
             "bits": 10,
             "audioCodec": "AAC",
-            "size": 20530122565,
-            "together": 1,
+            "size": 20530121902,
+            "together": 2,
             "studios": [
                 "Madhouse"
             ],
@@ -3411,14 +3411,14 @@
                 36
             ],
             "subs": [
-                "Golo"
+                "neoHEVC"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
+            "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 20575658620,
+            "audioCodec": "AAC",
+            "size": 8403035118,
             "together": 1,
             "studios": [
                 "Production I.G"
@@ -4623,14 +4623,14 @@
                 36
             ],
             "subs": [
-                "Golo"
+                "neoHEVC"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
+            "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 8966455059,
+            "audioCodec": "AAC",
+            "size": 3569914284,
             "together": 1,
             "studios": [
                 "Production I.G"
@@ -8730,7 +8730,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
             "favorite": false,
             "genres": [
@@ -10477,7 +10477,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/29803/Overlord",
             "favorite": false,
             "genres": [
@@ -10497,7 +10497,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 7424528473,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Madhouse"
             ],
@@ -12165,7 +12165,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/35073/Overlord_II",
             "favorite": false,
             "genres": [
@@ -12186,7 +12186,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 13245866120,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Madhouse"
             ],
@@ -13420,7 +13420,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/37675/Overlord_III",
             "favorite": false,
             "genres": [
@@ -13431,15 +13431,16 @@
                 37
             ],
             "subs": [
-                "Erai-raws"
+                "kBaraka",
+                "neko-raws"
             ],
             "resolution": 1080,
-            "source": "Web",
+            "source": "BD",
             "videoCodec": "H.264",
             "bits": 10,
-            "audioCodec": "AAC",
-            "size": 14151202456,
-            "together": 1,
+            "audioCodec": "FLAC",
+            "size": 17503624144,
+            "together": 2,
             "studios": [
                 "Madhouse"
             ],
@@ -13517,9 +13518,9 @@
             "type": 5,
             "episodes": 12,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1296/101468.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1573/109220.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/37932/Quanzhi_Gaoshou_2",
@@ -14080,7 +14081,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1444/108005.jpg",
             "status": 6,
-            "airStatus": 1,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
@@ -14145,7 +14146,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1708/104922.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1272/108838.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14267,7 +14268,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1384/107759.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1536/109462.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14397,16 +14398,16 @@
         },
         "40356": {
             "id": 40356,
-            "title": "Tate no Yuusha no Nariagari 2nd Season",
+            "title": "Tate no Yuusha no Nariagari Season 2",
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1008/102902.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1683/109090.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/40356/Tate_no_Yuusha_no_Nariagari_2nd_Season",
+            "url": "https://myanimelist.net/anime/40356/Tate_no_Yuusha_no_Nariagari_Season_2",
             "favorite": false,
             "genres": [
                 1,
@@ -14427,7 +14428,7 @@
         },
         "40357": {
             "id": 40357,
-            "title": "Tate no Yuusha no Nariagari 3rd Season",
+            "title": "Tate no Yuusha no Nariagari Season 3",
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
@@ -14436,7 +14437,7 @@
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/40357/Tate_no_Yuusha_no_Nariagari_3rd_Season",
+            "url": "https://myanimelist.net/anime/40357/Tate_no_Yuusha_no_Nariagari_Season_3",
             "favorite": false,
             "genres": [
                 1,
@@ -14530,7 +14531,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1704/106947.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
@@ -14563,7 +14564,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1438/105106.jpg",
             "status": 6,
-            "airStatus": 1,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40540/Sword_Art_Online__Alicization_-_War_of_Underworld_2nd_Season",
@@ -14594,7 +14595,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1332/106392.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1247/109332.jpg",
             "status": 6,
             "airStatus": 1,
             "rating": false,
@@ -14620,13 +14621,47 @@
             ],
             "episodeDuration": 24
         },
+        "40748": {
+            "id": 40748,
+            "title": "Jujutsu Kaisen (TV)",
+            "type": 1,
+            "episodes": 24,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
+            "status": 6,
+            "airStatus": 1,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV",
+            "favorite": false,
+            "genres": [
+                1,
+                6,
+                14,
+                23,
+                27,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "MAPPA"
+            ],
+            "episodeDuration": 0
+        },
         "40935": {
             "id": 40935,
             "title": "Beastars 2nd Season",
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1266/105286.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1097/109646.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14685,16 +14720,16 @@
         },
         "41006": {
             "id": 41006,
-            "title": "Higurashi no Naku Koro ni (2020)",
+            "title": "Higurashi no Naku Koro ni Gou",
             "type": 1,
-            "episodes": 0,
+            "episodes": 24,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1520/108936.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1287/109031.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/41006/Higurashi_no_Naku_Koro_ni_2020",
+            "url": "https://myanimelist.net/anime/41006/Higurashi_no_Naku_Koro_ni_Gou",
             "favorite": false,
             "genres": [
                 5,
@@ -14781,13 +14816,48 @@
             ],
             "episodeDuration": 0
         },
+        "41353": {
+            "id": 41353,
+            "title": "The God of High School",
+            "type": 1,
+            "episodes": 13,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1722/107269.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/41353/The_God_of_High_School",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                10,
+                17,
+                24,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "MAPPA"
+            ],
+            "episodeDuration": 23
+        },
         "41587": {
             "id": 41587,
             "title": "Boku no Hero Academia 5th Season",
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1333/106860.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1502/109585.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14850,7 +14920,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1466/107993.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1186/109243.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14907,6 +14977,103 @@
             "studios": [
                 "Bones"
             ],
+            "episodeDuration": 0
+        },
+        "42894": {
+            "id": 42894,
+            "title": "Natsume Yuujinchou: Ishi Okoshi to Ayashiki Raihousha",
+            "type": 8,
+            "episodes": 2,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1326/109283.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/42894/Natsume_Yuujinchou__Ishi_Okoshi_to_Ayashiki_Raihousha",
+            "favorite": false,
+            "genres": [
+                6,
+                8,
+                25,
+                36,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Shuka"
+            ],
+            "episodeDuration": 0
+        },
+        "42897": {
+            "id": 42897,
+            "title": "Horimiya",
+            "type": 1,
+            "episodes": 0,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1268/109252.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/42897/Horimiya",
+            "favorite": false,
+            "genres": [
+                4,
+                22,
+                23,
+                27,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "CloverWorks"
+            ],
+            "episodeDuration": 0
+        },
+        "42916": {
+            "id": 42916,
+            "title": "Sword Art Online: Progressive",
+            "type": 8,
+            "episodes": 0,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1698/109309.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/42916/Sword_Art_Online__Progressive",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                10,
+                11,
+                22
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [],
             "episodeDuration": 0
         }
     }
