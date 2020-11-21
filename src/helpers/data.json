@@ -1,5 +1,5 @@
 {
-    "updated": 1602797580278,
+    "updated": 1605994510584,
     "anime": {
         "20": {
             "id": 20,
@@ -3053,7 +3053,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/7/82870.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1419/103272.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 4,
@@ -3399,8 +3399,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/7/17890.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 0,
+            "rating": 9,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/6045/Kimi_ni_Todoke",
             "favorite": false,
             "genres": [
@@ -3419,7 +3419,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 8403035118,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Production I.G"
             ],
@@ -4611,8 +4611,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/8/27174.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 0,
+            "rating": 9,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/9656/Kimi_ni_Todoke_2nd_Season",
             "favorite": false,
             "genres": [
@@ -4631,7 +4631,7 @@
             "bits": 10,
             "audioCodec": "AAC",
             "size": 3569914284,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Production I.G"
             ],
@@ -4959,14 +4959,14 @@
                 25
             ],
             "subs": [
-                "Golo"
+                "neoHEVC"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
+            "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
-            "size": 793398577,
+            "audioCodec": "AAC",
+            "size": 322569306,
             "together": 1,
             "studios": [
                 "Production I.G"
@@ -8351,7 +8351,7 @@
             "type": 2,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/1582/99554.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1603/107707.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 6,
@@ -12759,6 +12759,38 @@
             ],
             "episodeDuration": 24
         },
+        "36649": {
+            "id": 36649,
+            "title": "Banana Fish",
+            "type": 1,
+            "episodes": 24,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1190/93472.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/36649/Banana_Fish",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                8,
+                25
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "MAPPA"
+            ],
+            "episodeDuration": 22
+        },
         "36862": {
             "id": 36862,
             "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
@@ -13676,7 +13708,7 @@
             "type": 1,
             "episodes": 25,
             "episodesWatched": 25,
-            "img": "https://cdn.myanimelist.net/images/anime/1315/102961.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1412/107914.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 7,
@@ -14595,7 +14627,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1247/109332.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1723/109872.jpg",
             "status": 6,
             "airStatus": 1,
             "rating": false,
@@ -15047,16 +15079,16 @@
         },
         "42916": {
             "id": 42916,
-            "title": "Sword Art Online: Progressive",
-            "type": 8,
-            "episodes": 0,
+            "title": "Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria",
+            "type": 3,
+            "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1698/109309.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1492/110130.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
             "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/42916/Sword_Art_Online__Progressive",
+            "url": "https://myanimelist.net/anime/42916/Sword_Art_Online__Progressive_Movie_-_Hoshi_Naki_Yoru_no_Aria",
             "favorite": false,
             "genres": [
                 1,
