@@ -1,5 +1,7 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock'
 
 import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
@@ -21,6 +23,7 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
         state: { anime: allAnime },
     } = useContext(GlobalState)
     const [anime, setAnime] = useState(propAnime)
+    const modalBodyRef = useRef(null)
 
     // Callback to change the anime info inside the modal with a transition animation in between
     const changeAnime = useCallback((newAnime) => {
@@ -67,6 +70,8 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
 
     // Add and remove the modal open classes from the body
     useEffect(() => {
+        disableBodyScroll(modalBodyRef.current, { reserveScrollBarGap: true })
+
         document.body.classList.add('is-active')
 
         document.documentElement.classList.add('is-clipped')
@@ -79,6 +84,8 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
             document.documentElement.classList.remove('is-clipped')
 
             window.removeEventListener('keyup', keyHandler)
+
+            clearAllBodyScrollLocks()
         }
     })
 
@@ -96,7 +103,7 @@ export default function Modal({ closeModal: closeCallback, anime: propAnime }) {
                     <CopyIcon value={anime.title} />
                     <Icon as="button" type="button" title="Close" icon="times-circle" onClick={closeModal} />
                 </div>
-                <div className="modal-card-body">
+                <div className="modal-card-body" ref={modalBodyRef}>
                     <ModalBody closeModal={closeModal} changeAnime={changeAnime} anime={anime} />
                 </div>
             </div>

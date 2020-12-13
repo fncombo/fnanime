@@ -1,8 +1,5 @@
 import { ACTIONS } from 'src/helpers/global-state'
 
-// Object to cache API data to avoid fetching the same thing multiple times
-const CACHED_API_DATA = new Map()
-
 /**
  * Replaces special characters returned by the API into proper HTML entities.
  *
@@ -53,64 +50,4 @@ function getAdjacentAnime(allAnime, animeId, direction) {
     }
 }
 
-/**
- * Retrieves more information about an anime from the API or cache if already previously retrieved.
- *
- * @param {number} animeId ID of the anime to retrieve.
- * @param {boolean|number} isRetry Whether this request is a retry, and if so the retry count number.
- *
- * @returns {object} API data.
- */
-async function getAnimeApiData(animeId, isRetry = false) {
-    // Return cached data
-    if (CACHED_API_DATA.has(animeId)) {
-        return CACHED_API_DATA.get(animeId)
-    }
-
-    // Stop after too many retries
-    if (isRetry > 5) {
-        throw new Error('Too many API retries')
-    }
-
-    // Wait at least 2 seconds between API requests, increasing with each retry
-    if (isRetry) {
-        await new Promise((resolve) => {
-            setTimeout(resolve, isRetry * 2000)
-        })
-    }
-
-    // Attempt to get API data
-    let response
-
-    try {
-        response = await fetch(`https://api.jikan.moe/v3/anime/${animeId}`)
-    } catch (error) {
-        throw new Error('A network error occurred')
-    }
-
-    // If any response other than 200 was returned, try again
-    if (response.status !== 200) {
-        return getAnimeApiData(animeId, isRetry ? isRetry + 1 : 1)
-    }
-
-    // Attempt to parse API daa
-    let apiData
-
-    try {
-        apiData = await response.json()
-    } catch (error) {
-        throw new Error('Could not parse API data')
-    }
-
-    // Handle other errors returned by the API
-    if (apiData.error) {
-        throw new Error('API responded with an error')
-    }
-
-    // Save this anime's data so we don't have to fetch it in the future
-    CACHED_API_DATA.set(animeId, apiData)
-
-    return apiData
-}
-
-export { replaceSpecialChars, getAdjacentAnime, getAnimeApiData }
+export { replaceSpecialChars, getAdjacentAnime }

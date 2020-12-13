@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 
 import clone from 'clone'
-import { Helmet } from 'react-helmet'
 
 import { DEFAULTS, getAnime } from 'src/helpers/data'
 import { updated as updateTime } from 'src/helpers/data.json'
@@ -86,12 +85,6 @@ export default function App() {
 
     return (
         <GlobalState.Provider value={{ state, dispatch }}>
-            <Helmet defer={false} defaultTitle="Anime List – fncombo" titleTemplate="%s – Anime List – fncombo">
-                <html lang="en" />
-                <meta name="description" content="Custom data table and gallery of owned anime." />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" />
-                <link rel="shortcut icon" href="/favicon.ico" />
-            </Helmet>
             <div className="fnheader">
                 <h1>
                     Anime List <a href="https://fncombo.me">fncombo</a>

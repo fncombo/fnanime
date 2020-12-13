@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
@@ -27,9 +27,9 @@ export default function NavigationButton({ direction, changeAnime, currentAnimeI
     })
 
     // Callback to change the modal anime when clicking on the button
-    const changeAnimeCallback = useCallback(() => {
+    const onClick = () => {
         changeAnime(navAnime)
-    }, [changeAnime, navAnime])
+    }
 
     // If no adjacent anime was found (e.g. this is the first or last anime already), then only display a placeholder
     if (!navAnime) {
@@ -40,7 +40,7 @@ export default function NavigationButton({ direction, changeAnime, currentAnimeI
     const icon = direction === ACTIONS.NEXT_ANIME ? 'chevron-right' : 'chevron-left'
 
     return (
-        <div className={classes} title={navAnime.title} onClick={changeAnimeCallback}>
+        <div className={classes} title={navAnime.title} onClick={onClick}>
             <Icon icon={icon} className="is-medium" size="2x" />
             <img width="74" height="100" className="rounded" src={navAnime.img} alt={navAnime.title} />
         </div>

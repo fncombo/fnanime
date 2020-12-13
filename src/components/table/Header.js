@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 
 import classNames from 'classnames'
 
@@ -24,4 +24,4 @@ function Header() {
     )
 }
 
-export default memo(Header)
+export default Header

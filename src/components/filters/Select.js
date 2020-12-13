@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import { isString } from 'is-what'
@@ -20,26 +20,23 @@ export default function Select({ filterName }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilter = useCallback(
-        ({ target: { value: filterValue } }) => {
-            let actualFilterValue = filterValue
+    const selectFilter = ({ target: { value: filterValue } }) => {
+        let actualFilterValue = filterValue
 
-            if (filterValue === 'false') {
-                // Check if the filter value is the string "false" and convert it to a proper boolean if it is
-                actualFilterValue = false
-            } else if (/^\d+$/.test(filterValue)) {
-                // Check if the option value is fully a number, and convert it to the correct type if it is
-                actualFilterValue = parseInt(filterValue, 10)
-            }
+        if (filterValue === 'false') {
+            // Check if the filter value is the string "false" and convert it to a proper boolean if it is
+            actualFilterValue = false
+        } else if (/^\d+$/.test(filterValue)) {
+            // Check if the option value is fully a number, and convert it to the correct type if it is
+            actualFilterValue = parseInt(filterValue, 10)
+        }
 
-            dispatch({
-                type: ACTIONS.SELECT_FILTER,
-                filterName,
-                filterValue: actualFilterValue,
-            })
-        },
-        [dispatch, filterName]
-    )
+        dispatch({
+            type: ACTIONS.SELECT_FILTER,
+            filterName,
+            filterValue: actualFilterValue,
+        })
+    }
 
     // Get all the filter values which currently have matching anime to them
     const withCount = FILTERS[filterName].values

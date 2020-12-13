@@ -34,6 +34,7 @@ PROP_TYPES.ANIME = PropTypes.exact({
     watchTime: PropTypes.number.isRequired,
     index: PropTypes.number.isRequired,
     updated: PropTypes.bool.isRequired,
+    together: PropTypes.number.isRequired,
 })
 
 PROP_TYPES.STATISTICS = PropTypes.exact({

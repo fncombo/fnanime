@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+
+import axios from 'axios'
+import { useQuery } from 'react-query'
 
 import { FILTERS } from 'src/helpers/filters'
 import { PROP_TYPES } from 'src/helpers/generic'
 import { ModalState } from 'src/helpers/global-state'
-import { getAnimeApiData } from 'src/helpers/modal'
 
 import Badge from 'src/components/Badge'
 import Favorite from 'src/components/Favorite'
@@ -19,65 +21,16 @@ import Size from 'src/components/modal/Size'
 import Synopsis from 'src/components/modal/Synopsis'
 import WatchTime from 'src/components/modal/WatchTime'
 
-// Initial state of the modal
-const INITIAL_MODAL_BODY_STATE = {
-    isLoaded: false,
-    isError: false,
-    apiData: {},
-}
-
 /**
  * Body of the modal which contains all the information about the anime.
  */
-export default function ModalBody({ closeModal, changeAnime, anime }) {
-    const [modalState, setModalState] = useState(INITIAL_MODAL_BODY_STATE)
-    const { isLoaded, apiData } = modalState
-
-    useEffect(() => {
-        /**
-         * TODO.
-         */
-        async function fetchData() {
-            // Loading addition data about the anime
-            if (!isLoaded && !apiData.mal_id) {
-                let loadingApiData
-
-                try {
-                    loadingApiData = await getAnimeApiData(anime.id)
-                } catch (error) {
-                    setModalState({
-                        isLoaded: true,
-                        isError: true,
-                        apiData: {},
-                    })
-
-                    return
-                }
-
-                // Add a delay 2x the duration of animations to not make things too jumpy and give a sense
-                // of loading (and to let the user appreciate the animation, hah!)
-                setTimeout(() => {
-                    setModalState({
-                        isLoaded: true,
-                        apiData: loadingApiData,
-                    })
-                }, 300)
-            }
-
-            // If the anime has changed, load in the new API data
-            if (isLoaded && apiData.mal_id && anime.id !== apiData.mal_id) {
-                setModalState({
-                    isLoaded: false,
-                    apiData: {},
-                })
-            }
-        }
-
-        fetchData()
-    }, [isLoaded, apiData.mal_id, anime.id, closeModal])
+export default function ModalBody({ changeAnime, anime }) {
+    const { data: { data = {} } = {}, isLoading, isError } = useQuery(`${anime.id}`, async () =>
+        axios.get(`https://api.jikan.moe/v3/anime/${anime.id}`)
+    )
 
     return (
-        <ModalState.Provider value={{ modalState, changeAnime }}>
+        <ModalState.Provider value={{ data, isLoading, isError, changeAnime }}>
             <div className="columns">
                 <div className="column is-3 has-text-centered">
                     <img width="269" className="rounded" src={anime.img} alt={anime.title} />
@@ -109,7 +62,7 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
                     {anime.airStatus === 2 ? (
                         <LoadingText>
                             <p>
-                                Aired: <ApiData data={(data) => data?.aired?.string} fallback="N/A" />
+                                Aired: <ApiData data={(apiData) => apiData?.aired?.string} fallback="N/A" />
                             </p>
                         </LoadingText>
                     ) : (
@@ -177,12 +130,12 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
                     <hr />
                     <h5 className="title is-5">Synopsis</h5>
                     <LoadingParagraph>
-                        <Synopsis>{apiData.synopsis}</Synopsis>
+                        <Synopsis>{data.synopsis}</Synopsis>
                     </LoadingParagraph>
                     <hr />
                     <h5 className="title is-5">Related Anime</h5>
                     <LoadingParagraph>
-                        <RelatedList data={apiData.related} />
+                        <RelatedList data={data.related} />
                     </LoadingParagraph>
                 </div>
             </div>
@@ -191,7 +144,6 @@ export default function ModalBody({ closeModal, changeAnime, anime }) {
 }
 
 ModalBody.propTypes = {
-    closeModal: PropTypes.func.isRequired,
     changeAnime: PropTypes.func.isRequired,
     anime: PROP_TYPES.ANIME.isRequired,
 }

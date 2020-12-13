@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import { ANIME_OBJECT } from 'src/helpers/data'
@@ -14,16 +14,16 @@ export default function RelatedListItem({ anime: { mal_id: id, url, name } }) {
     const { changeAnime } = useContext(ModalState)
 
     // Callback to change the anime when clicking on the badge
-    const onClickCallback = useCallback(() => {
+    const onClick = () => {
         changeAnime(ANIME_OBJECT[id])
-    }, [changeAnime, id])
+    }
 
     return (
         <li>
             <a className="has-text-overflow" href={url} target="_blank" rel="noopener noreferrer">
                 {replaceSpecialChars(name)}
             </a>
-            {!!ANIME_OBJECT[id] && <Badge hasRating onClick={onClickCallback} anime={ANIME_OBJECT[id]} />}
+            {!!ANIME_OBJECT[id] && <Badge hasRating onClick={onClick} anime={ANIME_OBJECT[id]} />}
         </li>
     )
 }

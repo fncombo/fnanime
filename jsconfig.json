@@ -13,5 +13,5 @@
         "baseUrl": "./"
     },
     "include": ["src/**/*", "*.js"],
-    "exclude": [".cache", "node_modules", "public"]
+    "exclude": ["node_modules"]
 }

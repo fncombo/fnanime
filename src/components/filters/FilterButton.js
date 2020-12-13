@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
@@ -17,13 +17,13 @@ export default function FilterButton({ filterName, children: filterValue }) {
     const { filterCounts } = useContext(FiltersState)
 
     // Callback to update the anime list when selecting this filter
-    const selectFilterCallback = useCallback(() => {
+    const selectFilter = () => {
         dispatch({
             type: ACTIONS.SELECT_FILTER,
             filterName,
             filterValue,
         })
-    }, [dispatch, filterName, filterValue])
+    }
 
     // Whether this filter is currently selected (being filtered by)
     const isSelected = activeFilters[filterName] === filterValue
@@ -42,7 +42,7 @@ export default function FilterButton({ filterName, children: filterValue }) {
     })
 
     return (
-        <button type="button" className={classes} onClick={selectFilterCallback}>
+        <button type="button" className={classes} onClick={selectFilter}>
             {FILTERS[filterName].descriptions[filterValue]}
             {!!count && notAllFilterValue && <span className="count">{count}</span>}
         </button>
