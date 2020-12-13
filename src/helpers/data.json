@@ -1,5 +1,5 @@
 {
-    "updated": 1607818431476,
+    "updated": 1607818651662,
     "anime": {
         "20": {
             "id": 20,
@@ -12845,7 +12845,7 @@
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "OPUS",
+            "audioCodec": "Opus",
             "size": 1244373691,
             "together": 1,
             "studios": [
@@ -13111,7 +13111,7 @@
             "resolution": 1080,
             "source": "BD",
             "videoCodec": "H.264",
-            "bits": 20,
+            "bits": 10,
             "audioCodec": "AAC",
             "size": 3163095951,
             "together": 2,
@@ -13503,7 +13503,7 @@
             "source": "BD",
             "videoCodec": "H.265",
             "bits": 10,
-            "audioCodec": "FLAC",
+            "audioCodec": "Opus",
             "size": 7787422939,
             "together": 2,
             "studios": [
