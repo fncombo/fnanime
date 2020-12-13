@@ -1,14 +1,7 @@
 {
     "settings": {
         "import/resolver": {
-            "alias": [
-                ["^src", "./src"],
-                ["^assets", "./src/assets"],
-                ["^components", "./src/js/components"],
-                ["^helpers", "./src/js/helpers"],
-                ["^templates", "./src/js/templates"],
-                ["^styles", "./src/styles"]
-            ]
+            "alias": [["^src", "./src"]]
         },
         "jsdoc": {
             "mode": "typescript",
@@ -145,7 +138,7 @@
         "import/no-cycle": 0,
         "import/prefer-default-export": 0,
 
-        "simple-import-sort/sort": [
+        "simple-import-sort/imports": [
             "error",
             {
                 "groups": [

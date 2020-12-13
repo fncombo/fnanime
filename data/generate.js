@@ -232,6 +232,7 @@ function processUserProfileData(userProfileData) {
 /**
  * Get anime list API data.
  *
+ * @param username
  * @param page
  * @param isRetry
  */

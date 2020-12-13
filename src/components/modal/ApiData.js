@@ -8,17 +8,15 @@ import { ModalState } from 'src/helpers/global-state'
 /**
  * Attempt to get API data using a string property e.g. "foo.bar". Returns the found data, the fallback, or a dash.
  */
-export default function ApiData({ data, fallback = null, children = null }) {
-    const {
-        modalState: { apiData },
-    } = useContext(ModalState)
+export default function ApiData({ data: dataKey, fallback = null, children = null }) {
+    const { data } = useContext(ModalState)
 
     let dataValue = null
 
-    if (isString(data)) {
-        dataValue = apiData[data]
-    } else if (isFunction(data)) {
-        dataValue = data(apiData)
+    if (isString(dataKey)) {
+        dataValue = data[dataKey]
+    } else if (isFunction(dataKey)) {
+        dataValue = dataKey(data)
     }
 
     // No such API data or it's empty, return the fallback

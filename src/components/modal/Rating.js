@@ -33,5 +33,5 @@ export default function Rating({ children: rating }) {
 }
 
 Rating.propTypes = {
-    children: PropTypes.number.isRequired,
+    children: PropTypes.number,
 }

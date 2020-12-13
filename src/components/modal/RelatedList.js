@@ -27,18 +27,22 @@ export default function RelatedList({ data }) {
     }
 
     // Sub list for every relation type
-    return relatedAnime.map(([type, allAnime]) => (
-        <Fragment key={type}>
-            <strong>{type}</strong>
-            <ul className="related-list">
-                {allAnime.map((anime) => (
-                    <RelatedListItem key={anime.mal_id} anime={anime} />
-                ))}
-            </ul>
-        </Fragment>
-    ))
+    return (
+        <>
+            {relatedAnime.map(([type, allAnime]) => (
+                <Fragment key={type}>
+                    <strong>{type}</strong>
+                    <ul className="related-list">
+                        {allAnime.map((anime) => (
+                            <RelatedListItem key={anime.mal_id} anime={anime} />
+                        ))}
+                    </ul>
+                </Fragment>
+            ))}
+        </>
+    )
 }
 
 RelatedList.propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.object,
 }

@@ -11,15 +11,13 @@ import Icon from 'src/components/Icon'
  * Single-line loading placeholder.
  */
 function Loading({ children, ...rest }) {
-    const {
-        modalState: { isLoaded, isError },
-    } = useContext(ModalState)
+    const { isLoading, isError } = useContext(ModalState)
 
     if (isError) {
         return <LoadingError />
     }
 
-    return isLoaded ? children : <span {...rest} />
+    return isLoading ? <span {...rest} /> : children
 }
 
 Loading.propTypes = {
@@ -63,16 +61,14 @@ function LoadingError() {
  * A multi-line loading paragraphs placeholder which animates to the correct height when the content has loaded.
  */
 function LoadingParagraph({ children }) {
-    const {
-        modalState: { isLoaded, isError },
-    } = useContext(ModalState)
+    const { isLoading, isError } = useContext(ModalState)
 
     if (isError) {
         return <LoadingError />
     }
 
     return (
-        <SlideDown className={`loading-paragraph ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
+        <SlideDown className={`loading-paragraph ${isLoading ? 'is-loading' : 'is-loaded'}`}>
             <div className="placeholders">
                 <span />
                 <span />
@@ -85,8 +81,8 @@ function LoadingParagraph({ children }) {
                 <span />
                 <span />
             </div>
-            <div className={`loading-content ${isLoaded ? 'is-loaded' : 'is-loading'}`}>
-                {isLoaded ? children : null}
+            <div className={`loading-content ${isLoading ? 'is-loading' : 'is-loaded'}`}>
+                {isLoading ? null : children}
             </div>
         </SlideDown>
     )

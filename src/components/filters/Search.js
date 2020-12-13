@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 
 import { ACTIONS, GlobalState } from 'src/helpers/global-state'
 
@@ -12,15 +12,12 @@ export default function Search() {
     } = useContext(GlobalState)
 
     // Callback for the search input change
-    const search = useCallback(
-        ({ target: { value } }) => {
-            dispatch({
-                type: ACTIONS.SEARCH,
-                searchQuery: value,
-            })
-        },
-        [dispatch]
-    )
+    const search = ({ target: { value } }) => {
+        dispatch({
+            type: ACTIONS.SEARCH,
+            searchQuery: value,
+        })
+    }
 
     return <input type="text" className="input" placeholder="Search" value={searchQuery} onChange={search} />
 }

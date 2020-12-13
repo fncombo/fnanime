@@ -54,6 +54,12 @@
 .modal-card-title {
     flex: 1 1 auto;
     padding-right: 1rem;
+
+    a {
+        &:hover {
+            color: $white;
+        }
+    }
 }
 
 .modal-card {

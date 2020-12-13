@@ -1,5 +1,5 @@
 {
-    "updated": 1605994510584,
+    "updated": 1607817849351,
     "anime": {
         "20": {
             "id": 20,
@@ -317,6 +317,39 @@
                 "Arms"
             ],
             "episodeDuration": 25
+        },
+        "239": {
+            "id": 239,
+            "title": "Gankutsuou",
+            "type": 1,
+            "episodes": 24,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/10/2235.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/239/Gankutsuou",
+            "favorite": false,
+            "genres": [
+                7,
+                8,
+                24,
+                37,
+                41
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Gonzo"
+            ],
+            "episodeDuration": 24
         },
         "256": {
             "id": 256,
@@ -1666,7 +1699,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/4/5123.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann",
             "favorite": false,
@@ -4815,7 +4848,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/12/34045.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/9981/Phi_Brain__Kami_no_Puzzle",
             "favorite": false,
@@ -6445,7 +6478,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/11/39033.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/12753/Phi_Brain__Kami_no_Puzzle_-_Orpheus_Order-hen",
             "favorite": false,
@@ -7264,7 +7297,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/12/54099.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/15651/Phi_Brain__Kami_no_Puzzle_-_Shukuteki_Rätsel-hen",
             "favorite": false,
@@ -7678,7 +7711,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/16918/Gin_no_Saji",
             "favorite": false,
             "genres": [
@@ -7688,15 +7721,15 @@
                 36
             ],
             "subs": [
-                "tlactic6"
+                "neoHEVC"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
-            "bits": 8,
-            "audioCodec": "FLAC",
-            "size": 9189491759,
-            "together": 1,
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 4742957785,
+            "together": 2,
             "studios": [
                 "A-1 Pictures"
             ],
@@ -8422,7 +8455,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/19363/Gin_no_Saji_2nd_Season",
             "favorite": false,
             "genres": [
@@ -8432,15 +8465,15 @@
                 36
             ],
             "subs": [
-                "tlactic6"
+                "neoHEVC"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
-            "bits": 8,
-            "audioCodec": "FLAC",
-            "size": 14959981122,
-            "together": 1,
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 3305188836,
+            "together": 2,
             "studios": [
                 "A-1 Pictures"
             ],
@@ -8583,6 +8616,71 @@
             ],
             "episodeDuration": 24
         },
+        "20371": {
+            "id": 20371,
+            "title": "Sekaiichi Hatsukoi Movie: Yokozawa Takafumi no Baai",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/11/65927.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/20371/Sekaiichi_Hatsukoi_Movie__Yokozawa_Takafumi_no_Baai",
+            "favorite": false,
+            "genres": [
+                4,
+                8,
+                22,
+                28
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Studio Deen"
+            ],
+            "episodeDuration": 50
+        },
+        "20507": {
+            "id": 20507,
+            "title": "Noragami",
+            "type": 1,
+            "episodes": 12,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/9/77809.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/20507/Noragami",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                27,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Bones"
+            ],
+            "episodeDuration": 24
+        },
         "20651": {
             "id": 20651,
             "title": "Natsume Yuujinchou: Itsuka Yuki no Hi ni",
@@ -8615,6 +8713,37 @@
                 "Brain's Base"
             ],
             "episodeDuration": 23
+        },
+        "20815": {
+            "id": 20815,
+            "title": "Sekaiichi Hatsukoi: Valentine-hen",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/5/55723.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/20815/Sekaiichi_Hatsukoi__Valentine-hen",
+            "favorite": false,
+            "genres": [
+                4,
+                22,
+                28
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Studio Deen"
+            ],
+            "episodeDuration": 15
         },
         "20903": {
             "id": 20903,
@@ -8729,7 +8858,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/7/64293.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 7,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
             "favorite": false,
@@ -10671,6 +10800,39 @@
             ],
             "episodeDuration": 23
         },
+        "30503": {
+            "id": 30503,
+            "title": "Noragami Aragoto",
+            "type": 1,
+            "episodes": 13,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1689/94850.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/30503/Noragami_Aragoto",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                4,
+                27,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Bones"
+            ],
+            "episodeDuration": 24
+        },
         "30911": {
             "id": 30911,
             "title": "Tales of Zestiria the Cross",
@@ -11160,7 +11322,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/31964/Boku_no_Hero_Academia",
             "favorite": false,
             "genres": [
@@ -11180,7 +11342,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 28812921707,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -11824,7 +11986,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/33486/Boku_no_Hero_Academia_2nd_Season",
             "favorite": false,
             "genres": [
@@ -12665,24 +12827,26 @@
             "title": "Kimi no Suizou wo Tabetai",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1768/93291.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
             "favorite": false,
             "genres": [
                 8
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Judas"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "OPUS",
+            "size": 1244373691,
             "together": 1,
             "studios": [
                 "Studio VOLN"
@@ -12717,7 +12881,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 24091509450,
+            "size": 24091548808,
             "together": 1,
             "studios": [
                 "Bones"
@@ -13552,7 +13716,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1573/109220.jpg",
             "status": 6,
-            "airStatus": 1,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/37932/Quanzhi_Gaoshou_2",
@@ -13730,7 +13894,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 36230964115,
+            "size": 36232661595,
             "together": 1,
             "studios": [
                 "Bones"
@@ -14046,11 +14210,11 @@
             "title": "Boku no Hero Academia the Movie 2: Heroes:Rising",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1019/103292.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39565/Boku_no_Hero_Academia_the_Movie_2__Heroes_Rising",
             "favorite": false,
@@ -14061,13 +14225,15 @@
                 27,
                 31
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "CBM"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AC3",
+            "size": 4510024822,
             "together": 1,
             "studios": [
                 "Bones"
@@ -14079,11 +14245,11 @@
             "title": "Goblin Slayer: Goblin's Crown",
             "type": 3,
             "episodes": 1,
-            "episodesWatched": 0,
+            "episodesWatched": 1,
             "img": "https://cdn.myanimelist.net/images/anime/1885/100023.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39576/Goblin_Slayer__Goblins_Crown",
             "favorite": false,
@@ -14178,7 +14344,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1272/108838.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1815/110626.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14300,9 +14466,9 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1536/109462.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1000/110531.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
@@ -14653,16 +14819,49 @@
             ],
             "episodeDuration": 24
         },
+        "40730": {
+            "id": 40730,
+            "title": "Tian Guan Ci Fu",
+            "type": 5,
+            "episodes": 11,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1319/109301.jpg",
+            "status": 6,
+            "airStatus": 1,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/40730/Tian_Guan_Ci_Fu",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                8,
+                13,
+                37
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Haoliners Animation League"
+            ],
+            "episodeDuration": 25
+        },
         "40748": {
             "id": 40748,
             "title": "Jujutsu Kaisen (TV)",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 0,
+            "episodesWatched": 10,
             "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 1,
-            "rating": false,
+            "rating": null,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV",
             "favorite": false,
@@ -14674,13 +14873,15 @@
                 27,
                 37
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Erai-Raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 14591312819,
             "together": 1,
             "studios": [
                 "MAPPA"
@@ -14727,7 +14928,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1673/107657.jpg",
             "status": 6,
-            "airStatus": 1,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40956/Enen_no_Shouboutai__Ni_no_Shou",
@@ -14920,7 +15121,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1046/107988.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1132/110666.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -14978,46 +15179,13 @@
             "studios": [],
             "episodeDuration": 0
         },
-        "42603": {
-            "id": 42603,
-            "title": "Boku no Hero Academia: Ikinokore! Kesshi no Survival Kunren",
-            "type": 5,
-            "episodes": 2,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1345/108741.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/42603/Boku_no_Hero_Academia__Ikinokore_Kesshi_no_Survival_Kunren",
-            "favorite": false,
-            "genres": [
-                1,
-                4,
-                23,
-                27,
-                31
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "Bones"
-            ],
-            "episodeDuration": 0
-        },
         "42894": {
             "id": 42894,
             "title": "Natsume Yuujinchou: Ishi Okoshi to Ayashiki Raihousha",
             "type": 8,
             "episodes": 2,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1326/109283.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1589/109656.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -15050,7 +15218,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1268/109252.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1791/110336.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -15106,6 +15274,39 @@
             "size": 0,
             "together": 1,
             "studios": [],
+            "episodeDuration": 0
+        },
+        "44200": {
+            "id": 44200,
+            "title": "Boku no Hero Academia the Movie 3",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1479/110406.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/44200/Boku_no_Hero_Academia_the_Movie_3",
+            "favorite": false,
+            "genres": [
+                1,
+                4,
+                23,
+                27,
+                31
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Bones"
+            ],
             "episodeDuration": 0
         }
     }

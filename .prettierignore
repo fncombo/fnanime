@@ -5,9 +5,5 @@ package-lock.json
 # Dependency directories
 node_modules/
 
-# gatsby files
-.cache/
-public
-
 # Editor files
 .vscode
