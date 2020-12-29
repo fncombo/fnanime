@@ -1,5 +1,5 @@
 {
-    "updated": 1607818651662,
+    "updated": 1609283382450,
     "anime": {
         "20": {
             "id": 20,
@@ -1789,6 +1789,39 @@
             ],
             "episodeDuration": 24
         },
+        "2164": {
+            "id": 2164,
+            "title": "Dennou Coil",
+            "type": 1,
+            "episodes": 26,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/5/12844.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/2164/Dennou_Coil",
+            "favorite": false,
+            "genres": [
+                2,
+                4,
+                7,
+                8,
+                24
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Madhouse"
+            ],
+            "episodeDuration": 25
+        },
         "2167": {
             "id": 2167,
             "title": "Clannad",
@@ -2269,39 +2302,6 @@
             ],
             "episodeDuration": 25
         },
-        "3342": {
-            "id": 3342,
-            "title": "Mnemosyne: Mnemosyne no Musume-tachi",
-            "type": 1,
-            "episodes": 6,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/10/10918.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/3342/Mnemosyne__Mnemosyne_no_Musume-tachi",
-            "favorite": false,
-            "genres": [
-                1,
-                14,
-                24,
-                26,
-                37
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "Xebec"
-            ],
-            "episodeDuration": 45
-        },
         "3466": {
             "id": 3466,
             "title": "Kino no Tabi: The Beautiful World - Tou no Kuni - Free Lance",
@@ -2578,7 +2578,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1929/107081.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1421/110903.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
@@ -3937,41 +3937,6 @@
                 "Production I.G"
             ],
             "episodeDuration": 92
-        },
-        "6702": {
-            "id": 6702,
-            "title": "Fairy Tail",
-            "type": 1,
-            "episodes": 175,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/5/18179.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/6702/Fairy_Tail",
-            "favorite": false,
-            "genres": [
-                1,
-                2,
-                4,
-                10,
-                16,
-                27
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "A-1 Pictures",
-                "Satelight"
-            ],
-            "episodeDuration": 24
         },
         "6707": {
             "id": 6707,
@@ -8279,11 +8244,11 @@
             "title": "Free!",
             "type": 1,
             "episodes": 12,
-            "episodesWatched": 0,
+            "episodesWatched": 12,
             "img": "https://cdn.myanimelist.net/images/anime/6/51107.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/18507/Free",
             "favorite": false,
@@ -8294,14 +8259,16 @@
                 30,
                 36
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
+            "subs": [
+                "Commie"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.264",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 14460774604,
+            "together": 2,
             "studios": [
                 "Animation Do",
                 "Kyoto Animation"
@@ -8548,6 +8515,38 @@
                 "Trigger"
             ],
             "episodeDuration": 53
+        },
+        "19671": {
+            "id": 19671,
+            "title": "Free!: FrFr - Short Movie",
+            "type": 4,
+            "episodes": 7,
+            "episodesWatched": 7,
+            "img": "https://cdn.myanimelist.net/images/anime/3/55083.jpg",
+            "status": 2,
+            "airStatus": 2,
+            "rating": 7,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/19671/Free__FrFr_-_Short_Movie",
+            "favorite": false,
+            "genres": [
+                4,
+                30
+            ],
+            "subs": [
+                "Commie"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.264",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 486530311,
+            "together": 2,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 2
         },
         "19815": {
             "id": 19815,
@@ -9054,41 +9053,6 @@
             "together": 2,
             "studios": [
                 "Artland"
-            ],
-            "episodeDuration": 24
-        },
-        "22043": {
-            "id": 22043,
-            "title": "Fairy Tail (2014)",
-            "type": 1,
-            "episodes": 102,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/3/60551.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/22043/Fairy_Tail_2014",
-            "favorite": false,
-            "genres": [
-                1,
-                2,
-                4,
-                10,
-                16,
-                27
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "A-1 Pictures",
-                "Bridge"
             ],
             "episodeDuration": 24
         },
@@ -9985,6 +9949,37 @@
             ],
             "episodeDuration": 24
         },
+        "26213": {
+            "id": 26213,
+            "title": "Free!: Eternal Summer - Kindan no All Hard!",
+            "type": 4,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/6/73125.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/26213/Free__Eternal_Summer_-_Kindan_no_All_Hard",
+            "favorite": false,
+            "genres": [
+                4,
+                23,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 24
+        },
         "27631": {
             "id": 27631,
             "title": "God Eater",
@@ -10767,6 +10762,39 @@
                 "A-1 Pictures"
             ],
             "episodeDuration": 60
+        },
+        "30415": {
+            "id": 30415,
+            "title": "High☆Speed!: Free! Starting Days",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/8/76967.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/30415/High☆Speed__Free_Starting_Days",
+            "favorite": false,
+            "genres": [
+                4,
+                8,
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 110
         },
         "30484": {
             "id": 30484,
@@ -12006,7 +12034,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 55263621017,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -12113,6 +12141,38 @@
                 "Madhouse"
             ],
             "episodeDuration": 106
+        },
+        "33845": {
+            "id": 33845,
+            "title": "Free! Movie 1: Timeless Medley - Kizuna",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/5/87930.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/33845/Free_Movie_1__Timeless_Medley_-_Kizuna",
+            "favorite": false,
+            "genres": [
+                8,
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 95
         },
         "33926": {
             "id": 33926,
@@ -12452,6 +12512,68 @@
             ],
             "episodeDuration": 25
         },
+        "35191": {
+            "id": 35191,
+            "title": "Free! Movie 2: Timeless Medley - Yakusoku",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/13/87931.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/35191/Free_Movie_2__Timeless_Medley_-_Yakusoku",
+            "favorite": false,
+            "genres": [
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 98
+        },
+        "35198": {
+            "id": 35198,
+            "title": "Free!: Take Your Marks",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/6/87928.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/35198/Free__Take_Your_Marks",
+            "favorite": false,
+            "genres": [
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 108
+        },
         "35262": {
             "id": 35262,
             "title": "Boku no Hero Academia 2nd Season: Hero Note",
@@ -12461,7 +12583,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/11/84951.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 5,
+            "rating": null,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/35262/Boku_no_Hero_Academia_2nd_Season__Hero_Note",
             "favorite": false,
@@ -12720,42 +12842,6 @@
             ],
             "episodeDuration": 115
         },
-        "35972": {
-            "id": 35972,
-            "title": "Fairy Tail: Final Series",
-            "type": 1,
-            "episodes": 51,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1536/93863.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/35972/Fairy_Tail__Final_Series",
-            "favorite": false,
-            "genres": [
-                1,
-                2,
-                4,
-                10,
-                16,
-                27
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "A-1 Pictures",
-                "Bridge",
-                "CloverWorks"
-            ],
-            "episodeDuration": 23
-        },
         "36038": {
             "id": 36038,
             "title": "Net-juu no Susume",
@@ -12863,7 +12949,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 8,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/36456/Boku_no_Hero_Academia_3rd_Season",
             "favorite": false,
             "genres": [
@@ -12882,7 +12968,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 24091548808,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -12955,13 +13041,47 @@
             ],
             "episodeDuration": 22
         },
+        "36704": {
+            "id": 36704,
+            "title": "Free!: Dive to the Future",
+            "type": 1,
+            "episodes": 12,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1243/95025.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/36704/Free__Dive_to_the_Future",
+            "favorite": false,
+            "genres": [
+                4,
+                8,
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Animation Do",
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 23
+        },
         "36862": {
             "id": 36862,
             "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1175/101926.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1502/110723.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -12998,7 +13118,7 @@
             "status": 2,
             "airStatus": 2,
             "rating": 7,
-            "rewatchCount": 0,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/36896/Boku_no_Hero_Academia_the_Movie_1__Futari_no_Hero",
             "favorite": false,
             "genres": [
@@ -13016,7 +13136,7 @@
             "bits": 10,
             "audioCodec": "FLAC",
             "size": 10454891167,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -13288,7 +13408,7 @@
             "type": 1,
             "episodes": 24,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1590/102068.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1898/110709.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -13684,7 +13804,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1314/105430.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1286/110725.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -13866,6 +13986,38 @@
             ],
             "episodeDuration": 23
         },
+        "38400": {
+            "id": 38400,
+            "title": "Free! (Movie)",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1123/108914.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/38400/Free_Movie",
+            "favorite": false,
+            "genres": [
+                8,
+                23,
+                30,
+                36
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Kyoto Animation"
+            ],
+            "episodeDuration": 0
+        },
         "38408": {
             "id": 38408,
             "title": "Boku no Hero Academia 4th Season",
@@ -13875,7 +14027,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1412/107914.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season",
             "favorite": false,
@@ -13895,7 +14047,7 @@
             "bits": 8,
             "audioCodec": "AAC",
             "size": 36232661595,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -14073,37 +14225,6 @@
             ],
             "episodeDuration": 114
         },
-        "38959": {
-            "id": 38959,
-            "title": "Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note",
-            "type": 1,
-            "episodes": 13,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1051/102394.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/38959/Lord_El-Melloi_II_Sei_no_Jikenbo__Rail_Zeppelin_Grace_Note",
-            "favorite": false,
-            "genres": [
-                7,
-                10,
-                37
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "TROYCA"
-            ],
-            "episodeDuration": 23
-        },
         "39195": {
             "id": 39195,
             "title": "Beastars",
@@ -14214,7 +14335,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1019/103292.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39565/Boku_no_Hero_Academia_the_Movie_2__Heroes_Rising",
             "favorite": false,
@@ -14234,7 +14355,7 @@
             "bits": 10,
             "audioCodec": "AC3",
             "size": 4510024822,
-            "together": 1,
+            "together": 2,
             "studios": [
                 "Bones"
             ],
@@ -14246,7 +14367,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/1885/100023.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1845/105085.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 7,
@@ -14375,7 +14496,7 @@
             "type": 1,
             "episodes": 12,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1986/105547.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1553/107721.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -14464,12 +14585,12 @@
             "id": 40028,
             "title": "Shingeki no Kyojin: The Final Season",
             "type": 1,
-            "episodes": 0,
-            "episodesWatched": 0,
+            "episodes": 16,
+            "episodesWatched": 4,
             "img": "https://cdn.myanimelist.net/images/anime/1000/110531.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 1,
-            "rating": false,
+            "rating": null,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
             "favorite": false,
@@ -14482,13 +14603,15 @@
                 31,
                 38
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Erai-raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 5834271916,
             "together": 1,
             "studios": [
                 "MAPPA"
@@ -14857,7 +14980,7 @@
             "title": "Jujutsu Kaisen (TV)",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 10,
+            "episodesWatched": 13,
             "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
             "status": 1,
             "airStatus": 1,
@@ -14881,7 +15004,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 14591312819,
+            "size": 18972236497,
             "together": 1,
             "studios": [
                 "MAPPA"
@@ -15153,7 +15276,7 @@
             "type": 1,
             "episodes": 0,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1186/109243.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1733/110849.jpg",
             "status": 6,
             "airStatus": 3,
             "rating": false,
