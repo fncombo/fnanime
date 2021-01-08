@@ -9,9 +9,8 @@ import { SORTING_ORDERS } from 'src/helpers/table'
 // Fuzzy search options
 const FUSE_OPTIONS = {
     includeMatches: true,
-    threshold: 0.2,
-    location: 0,
-    distance: 100,
+    ignoreLocation: true,
+    threshold: 0.1,
     minMatchCharLength: 2,
     keys: ['title'],
 }
