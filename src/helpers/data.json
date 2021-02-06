@@ -1,5 +1,5 @@
 {
-    "updated": 1610298478235,
+    "updated": 1612653365869,
     "anime": {
         "20": {
             "id": 20,
@@ -290,7 +290,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/10/6883.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/226/Elfen_Lied",
             "favorite": false,
@@ -1081,7 +1081,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1144/93627.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/759/Tokyo_Godfathers",
             "favorite": false,
@@ -1320,7 +1320,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/9/83824.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 4,
+            "rating": 5,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/1140/Giniro_no_Kami_no_Agito",
             "favorite": false,
@@ -2672,39 +2672,6 @@
             ],
             "episodeDuration": 24
         },
-        "4107": {
-            "id": 4107,
-            "title": "Tengen Toppa Gurren Lagann Movie 1: Gurren-hen",
-            "type": 3,
-            "episodes": 1,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/10/11373.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/4107/Tengen_Toppa_Gurren_Lagann_Movie_1__Gurren-hen",
-            "favorite": false,
-            "genres": [
-                1,
-                4,
-                18
-            ],
-            "subs": [
-                "DB"
-            ],
-            "resolution": 1080,
-            "source": "BD",
-            "videoCodec": "H.265",
-            "bits": 10,
-            "audioCodec": "AAC",
-            "size": 1500498646,
-            "together": 1,
-            "studios": [
-                "Gainax"
-            ],
-            "episodeDuration": 112
-        },
         "4181": {
             "id": 4181,
             "title": "Clannad: After Story",
@@ -2844,41 +2811,6 @@
             ],
             "episodeDuration": 92
         },
-        "4565": {
-            "id": 4565,
-            "title": "Tengen Toppa Gurren Lagann Movie 2: Lagann-hen",
-            "type": 3,
-            "episodes": 1,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/12/19698.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/4565/Tengen_Toppa_Gurren_Lagann_Movie_2__Lagann-hen",
-            "favorite": false,
-            "genres": [
-                1,
-                18,
-                24,
-                29,
-                31
-            ],
-            "subs": [
-                "DB"
-            ],
-            "resolution": 1080,
-            "source": "BD",
-            "videoCodec": "H.265",
-            "bits": 10,
-            "audioCodec": "AAC",
-            "size": 2179727124,
-            "together": 1,
-            "studios": [
-                "Gainax"
-            ],
-            "episodeDuration": 125
-        },
         "4662": {
             "id": 4662,
             "title": "Neo Angelique Abyss: Second Age",
@@ -2986,7 +2918,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/10/17709.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 6,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/4896/Umineko_no_Naku_Koro_ni",
             "favorite": false,
@@ -4183,7 +4115,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/9/27711.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/7465/Eve_no_Jikan_Movie",
             "favorite": false,
@@ -4384,7 +4316,7 @@
             "rating": 9,
             "rewatchCount": 4,
             "url": "https://myanimelist.net/anime/8425/Gosick",
-            "favorite": 5,
+            "favorite": 10,
             "genres": [
                 7,
                 8,
@@ -5083,7 +5015,7 @@
             "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/10357/Jinrui_wa_Suitai_Shimashita",
-            "favorite": 9,
+            "favorite": 8,
             "genres": [
                 4,
                 10,
@@ -5284,7 +5216,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/13/33465.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/10620/Mirai_Nikki",
             "favorite": false,
@@ -5554,11 +5486,11 @@
             "title": "Sekaiichi Hatsukoi 2",
             "type": 1,
             "episodes": 12,
-            "episodesWatched": 4,
+            "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/8/34871.jpg",
-            "status": 3,
+            "status": 6,
             "airStatus": 2,
-            "rating": null,
+            "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/11123/Sekaiichi_Hatsukoi_2",
             "favorite": false,
@@ -5592,7 +5524,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/4/65605.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 6,
+            "rating": 5,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/11135/Hybrid_Child",
             "favorite": false,
@@ -5662,7 +5594,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/12/59405.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/11433/Ano_Natsu_de_Matteru",
             "favorite": false,
@@ -6244,7 +6176,7 @@
             "rating": 9,
             "rewatchCount": 2,
             "url": "https://myanimelist.net/anime/12189/Hyouka",
-            "favorite": 7,
+            "favorite": 5,
             "genres": [
                 7,
                 23,
@@ -7058,7 +6990,7 @@
             "episodes": 6,
             "episodesWatched": 4,
             "img": "https://cdn.myanimelist.net/images/anime/2/40175.jpg",
-            "status": 1,
+            "status": 3,
             "airStatus": 1,
             "rating": 8,
             "rewatchCount": 0,
@@ -7471,7 +7403,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/4/51463.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 6,
+            "rating": 5,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/16592/Danganronpa__Kibou_no_Gakuen_to_Zetsubou_no_Koukousei_The_Animation",
             "favorite": false,
@@ -7947,7 +7879,7 @@
             "rating": 9,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/17549/Non_Non_Biyori",
-            "favorite": 8,
+            "favorite": 7,
             "genres": [
                 4,
                 23,
@@ -8455,7 +8387,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/7/54343.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/19369/Outbreak_Company",
             "favorite": false,
@@ -8787,7 +8719,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/2/56133.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 6,
+            "rating": 5,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/20973/Sekai_Seifuku__Bouryaku_no_Zvezda",
             "favorite": false,
@@ -9169,7 +9101,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1429/95946.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/22199/Akame_ga_Kill",
             "favorite": false,
@@ -10872,11 +10804,11 @@
             "title": "Tales of Zestiria the Cross",
             "type": 1,
             "episodes": 12,
-            "episodesWatched": 2,
+            "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/3/79271.jpg",
-            "status": 3,
+            "status": 6,
             "airStatus": 2,
-            "rating": null,
+            "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/30911/Tales_of_Zestiria_the_Cross",
             "favorite": false,
@@ -12122,7 +12054,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1085/90759.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 7,
+            "rating": 6,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/33674/No_Game_No_Life__Zero",
             "favorite": false,
@@ -12462,7 +12394,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/2/89973.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 7,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
             "favorite": false,
@@ -12788,6 +12720,40 @@
             ],
             "episodeDuration": 23
         },
+        "35848": {
+            "id": 35848,
+            "title": "Promare",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 1,
+            "img": "https://cdn.myanimelist.net/images/anime/1008/101845.jpg",
+            "status": 2,
+            "airStatus": 2,
+            "rating": 7,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/35848/Promare",
+            "favorite": false,
+            "genres": [
+                1,
+                18,
+                24,
+                31
+            ],
+            "subs": [
+                "CBM"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AC3",
+            "size": 5775854436,
+            "together": 1,
+            "studios": [
+                "Trigger"
+            ],
+            "episodeDuration": 111
+        },
         "35851": {
             "id": 35851,
             "title": "Sayonara no Asa ni Yakusoku no Hana wo Kazarou",
@@ -12832,7 +12798,7 @@
             "rating": 9,
             "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/36038/Net-juu_no_Susume",
-            "favorite": 10,
+            "favorite": 9,
             "genres": [
                 4,
                 11,
@@ -13075,13 +13041,15 @@
                 10,
                 24
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Asenshi-MTBB"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.264",
+            "bits": 10,
+            "audioCodec": "AAC",
+            "size": 5109972787,
             "together": 1,
             "studios": [
                 "Kinema Citrus"
@@ -13196,7 +13164,7 @@
             "img": "https://cdn.myanimelist.net/images/anime/1044/93575.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/36990/Non_Non_Biyori_Movie__Vacation",
             "favorite": false,
@@ -13617,11 +13585,11 @@
             "title": "Vinland Saga",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 0,
+            "episodesWatched": 5,
             "img": "https://cdn.myanimelist.net/images/anime/1500/103005.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 2,
-            "rating": false,
+            "rating": null,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/37521/Vinland_Saga",
             "favorite": false,
@@ -13751,8 +13719,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/1125/96929.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 9,
-            "rewatchCount": 0,
+            "rating": 8,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/37779/Yakusoku_no_Neverland",
             "favorite": false,
             "genres": [
@@ -13764,15 +13732,15 @@
                 41
             ],
             "subs": [
-                "Erai-raws"
+                "SCY"
             ],
             "resolution": 1080,
-            "source": "Web",
+            "source": "BD",
             "videoCodec": "H.264",
-            "bits": 8,
-            "audioCodec": "AAC",
-            "size": 5403627012,
-            "together": 1,
+            "bits": 10,
+            "audioCodec": "FLAC",
+            "size": 14308771867,
+            "together": 2,
             "studios": [
                 "CloverWorks"
             ],
@@ -13784,7 +13752,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1286/110725.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1328/111351.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -13838,6 +13806,39 @@
             ],
             "episodeDuration": 0
         },
+        "37999": {
+            "id": 37999,
+            "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+            "type": 1,
+            "episodes": 12,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1295/106551.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
+            "favorite": false,
+            "genres": [
+                4,
+                22,
+                23,
+                40,
+                42
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "A-1 Pictures"
+            ],
+            "episodeDuration": 25
+        },
         "38000": {
             "id": 38000,
             "title": "Kimetsu no Yaiba",
@@ -13847,8 +13848,8 @@
             "img": "https://cdn.myanimelist.net/images/anime/1286/99889.jpg",
             "status": 2,
             "airStatus": 2,
-            "rating": 8,
-            "rewatchCount": 0,
+            "rating": 9,
+            "rewatchCount": 1,
             "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
             "favorite": false,
             "genres": [
@@ -13859,15 +13860,15 @@
                 37
             ],
             "subs": [
-                "Erai-raws"
+                "CBM"
             ],
             "resolution": 1080,
             "source": "BD",
-            "videoCodec": "H.264",
-            "bits": 8,
-            "audioCodec": "AAC",
-            "size": 27009003872,
-            "together": 1,
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AC3",
+            "size": 19536653146,
+            "together": 2,
             "studios": [
                 "ufotable"
             ],
@@ -14178,11 +14179,11 @@
             "title": "Enen no Shouboutai",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 0,
+            "episodesWatched": 24,
             "img": "https://cdn.myanimelist.net/images/anime/1664/103275.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/38671/Enen_no_Shouboutai",
             "favorite": false,
@@ -14190,6 +14191,39 @@
                 1,
                 27,
                 37
+            ],
+            "subs": [
+                "EMBER"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "AC3",
+            "size": 10140681686,
+            "together": 2,
+            "studios": [
+                "David Production"
+            ],
+            "episodeDuration": 23
+        },
+        "38691": {
+            "id": 38691,
+            "title": "Dr. Stone",
+            "type": 1,
+            "episodes": 24,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1613/102576.jpg",
+            "status": 6,
+            "airStatus": 2,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/38691/Dr_Stone",
+            "favorite": false,
+            "genres": [
+                2,
+                24,
+                27
             ],
             "subs": [],
             "resolution": false,
@@ -14200,9 +14234,42 @@
             "size": 0,
             "together": 1,
             "studios": [
-                "David Production"
+                "TMS Entertainment"
             ],
-            "episodeDuration": 23
+            "episodeDuration": 24
+        },
+        "38816": {
+            "id": 38816,
+            "title": "Hello World",
+            "type": 3,
+            "episodes": 1,
+            "episodesWatched": 1,
+            "img": "https://cdn.myanimelist.net/images/anime/1395/102089.jpg",
+            "status": 2,
+            "airStatus": 2,
+            "rating": 7,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/38816/Hello_World",
+            "favorite": false,
+            "genres": [
+                8,
+                22,
+                24
+            ],
+            "subs": [
+                "AnimeKayo"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "Opus",
+            "size": 1141538748,
+            "together": 1,
+            "studios": [
+                "Graphinica"
+            ],
+            "episodeDuration": 97
         },
         "38826": {
             "id": 38826,
@@ -14379,7 +14446,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 1,
-            "img": "https://cdn.myanimelist.net/images/anime/1845/105085.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1129/111477.jpg",
             "status": 2,
             "airStatus": 2,
             "rating": 7,
@@ -14391,13 +14458,15 @@
                 2,
                 10
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Judas"
+            ],
+            "resolution": 1080,
+            "source": "BD",
+            "videoCodec": "H.265",
+            "bits": 10,
+            "audioCodec": "Opus",
+            "size": 1251046845,
             "together": 1,
             "studios": [
                 "White Fox"
@@ -14476,11 +14545,11 @@
             "title": "Yakusoku no Neverland 2nd Season",
             "type": 1,
             "episodes": 11,
-            "episodesWatched": 0,
+            "episodesWatched": 4,
             "img": "https://cdn.myanimelist.net/images/anime/1815/110626.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 1,
-            "rating": false,
+            "rating": null,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39617/Yakusoku_no_Neverland_2nd_Season",
             "favorite": false,
@@ -14491,59 +14560,29 @@
                 40,
                 41
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Erai-Raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 5399703961,
             "together": 1,
             "studios": [],
             "episodeDuration": 0
-        },
-        "39710": {
-            "id": 39710,
-            "title": "Yesterday wo Utatte",
-            "type": 1,
-            "episodes": 12,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1553/107721.jpg",
-            "status": 6,
-            "airStatus": 2,
-            "rating": false,
-            "rewatchCount": 0,
-            "url": "https://myanimelist.net/anime/39710/Yesterday_wo_Utatte",
-            "favorite": false,
-            "genres": [
-                8,
-                22,
-                36,
-                42
-            ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
-            "studios": [
-                "Doga Kobo"
-            ],
-            "episodeDuration": 23
         },
         "39808": {
             "id": 39808,
             "title": "Non Non Biyori Nonstop",
             "type": 1,
             "episodes": 12,
-            "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1159/107670.jpg",
-            "status": 6,
+            "episodesWatched": 4,
+            "img": "https://cdn.myanimelist.net/images/anime/1033/111540.jpg",
+            "status": 1,
             "airStatus": 1,
-            "rating": false,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/39808/Non_Non_Biyori_Nonstop",
             "favorite": false,
@@ -14552,13 +14591,15 @@
                 36,
                 42
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Erai-Raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 6072504067,
             "together": 1,
             "studios": [
                 "Silver Link."
@@ -14598,11 +14639,11 @@
             "title": "Shingeki no Kyojin: The Final Season",
             "type": 1,
             "episodes": 16,
-            "episodesWatched": 4,
+            "episodesWatched": 8,
             "img": "https://cdn.myanimelist.net/images/anime/1000/110531.jpg",
             "status": 1,
             "airStatus": 1,
-            "rating": null,
+            "rating": 9,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
             "favorite": false,
@@ -14623,7 +14664,7 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 5834271916,
+            "size": 11674524960,
             "together": 1,
             "studios": [
                 "MAPPA"
@@ -14795,7 +14836,7 @@
             "type": 3,
             "episodes": 1,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1706/106042.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1648/111422.jpg",
             "status": 6,
             "airStatus": 2,
             "rating": false,
@@ -14994,11 +15035,11 @@
             "title": "Jujutsu Kaisen (TV)",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 13,
+            "episodesWatched": 16,
             "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
             "status": 1,
             "airStatus": 1,
-            "rating": null,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV",
             "favorite": false,
@@ -15018,12 +15059,78 @@
             "videoCodec": "H.264",
             "bits": 8,
             "audioCodec": "AAC",
-            "size": 18972236497,
+            "size": 23347074332,
             "together": 1,
             "studios": [
                 "MAPPA"
             ],
             "episodeDuration": 0
+        },
+        "40852": {
+            "id": 40852,
+            "title": "Dr. Stone: Stone Wars",
+            "type": 1,
+            "episodes": 11,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1711/110614.jpg",
+            "status": 6,
+            "airStatus": 1,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/40852/Dr_Stone__Stone_Wars",
+            "favorite": false,
+            "genres": [
+                2,
+                24,
+                27
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "TMS Entertainment"
+            ],
+            "episodeDuration": 24
+        },
+        "40908": {
+            "id": 40908,
+            "title": "Kemono Jihen",
+            "type": 1,
+            "episodes": 12,
+            "episodesWatched": 4,
+            "img": "https://cdn.myanimelist.net/images/anime/1258/108331.jpg",
+            "status": 1,
+            "airStatus": 1,
+            "rating": 7,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/40908/Kemono_Jihen",
+            "favorite": false,
+            "genres": [
+                1,
+                6,
+                7,
+                27,
+                37
+            ],
+            "subs": [
+                "Erai-Raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 5520193217,
+            "together": 1,
+            "studios": [
+                "Ajia-Do"
+            ],
+            "episodeDuration": 23
         },
         "40935": {
             "id": 40935,
@@ -15062,11 +15169,11 @@
             "title": "Enen no Shouboutai: Ni no Shou",
             "type": 1,
             "episodes": 24,
-            "episodesWatched": 0,
+            "episodesWatched": 24,
             "img": "https://cdn.myanimelist.net/images/anime/1673/107657.jpg",
-            "status": 6,
+            "status": 2,
             "airStatus": 2,
-            "rating": false,
+            "rating": 8,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/40956/Enen_no_Shouboutai__Ni_no_Shou",
             "favorite": false,
@@ -15075,14 +15182,16 @@
                 27,
                 37
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
-            "together": 1,
+            "subs": [
+                "Erai-raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 35637173253,
+            "together": 2,
             "studios": [
                 "David Production"
             ],
@@ -15094,7 +15203,7 @@
             "type": 1,
             "episodes": 24,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1287/109031.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1716/111533.jpg",
             "status": 6,
             "airStatus": 1,
             "rating": false,
@@ -15161,7 +15270,7 @@
             "episodesWatched": 0,
             "img": "https://cdn.myanimelist.net/images/anime/1510/108026.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 1,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/41109/Log_Horizon__Entaku_Houkai",
@@ -15322,9 +15431,9 @@
             "type": 3,
             "episodes": 2,
             "episodesWatched": 0,
-            "img": "https://cdn.myanimelist.net/images/anime/1589/109656.jpg",
+            "img": "https://cdn.myanimelist.net/images/anime/1992/111560.jpg",
             "status": 6,
-            "airStatus": 3,
+            "airStatus": 2,
             "rating": false,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/42894/Natsume_Yuujinchou__Ishi_Okoshi_to_Ayashiki_Raihousha",
@@ -15354,11 +15463,11 @@
             "title": "Horimiya",
             "type": 1,
             "episodes": 13,
-            "episodesWatched": 0,
+            "episodesWatched": 4,
             "img": "https://cdn.myanimelist.net/images/anime/1791/110336.jpg",
-            "status": 6,
+            "status": 1,
             "airStatus": 1,
-            "rating": false,
+            "rating": 10,
             "rewatchCount": 0,
             "url": "https://myanimelist.net/anime/42897/Horimiya",
             "favorite": false,
@@ -15369,13 +15478,15 @@
                 27,
                 36
             ],
-            "subs": [],
-            "resolution": false,
-            "source": false,
-            "videoCodec": false,
-            "bits": false,
-            "audioCodec": false,
-            "size": 0,
+            "subs": [
+                "Erai-Raws"
+            ],
+            "resolution": 1080,
+            "source": "Web",
+            "videoCodec": "H.264",
+            "bits": 8,
+            "audioCodec": "AAC",
+            "size": 5509459545,
             "together": 1,
             "studios": [
                 "CloverWorks"
@@ -15444,6 +15555,67 @@
             "studios": [
                 "Bones"
             ],
+            "episodeDuration": 0
+        },
+        "44961": {
+            "id": 44961,
+            "title": "Platinum End",
+            "type": 1,
+            "episodes": 0,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1524/110802.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/44961/Platinum_End",
+            "favorite": false,
+            "genres": [
+                8,
+                27,
+                37,
+                40
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [
+                "Signal.MD"
+            ],
+            "episodeDuration": 0
+        },
+        "47160": {
+            "id": 47160,
+            "title": "Goblin Slayer 2nd Season",
+            "type": 1,
+            "episodes": 0,
+            "episodesWatched": 0,
+            "img": "https://cdn.myanimelist.net/images/anime/1225/111459.jpg",
+            "status": 6,
+            "airStatus": 3,
+            "rating": false,
+            "rewatchCount": 0,
+            "url": "https://myanimelist.net/anime/47160/Goblin_Slayer_2nd_Season",
+            "favorite": false,
+            "genres": [
+                1,
+                2,
+                10
+            ],
+            "subs": [],
+            "resolution": false,
+            "source": false,
+            "videoCodec": false,
+            "bits": false,
+            "audioCodec": false,
+            "size": 0,
+            "together": 1,
+            "studios": [],
             "episodeDuration": 0
         }
     }
