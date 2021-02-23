@@ -11,5 +11,13 @@
     "jsxBracketSameLine": false,
     "arrowParens": "always",
     "htmlWhitespaceSensitivity": "css",
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": "*.md",
+            "options": {
+                "tabWidth": 1
+            }
+        }
+    ]
 }

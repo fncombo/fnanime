@@ -1,9 +1,12 @@
+# Dependency directories
+node_modules/
+
 # Package files
 package.json
 package-lock.json
 
-# Dependency directories
-node_modules/
-
 # Editor files
 .vscode
+
+# Files
+*.svg

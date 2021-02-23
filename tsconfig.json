@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "jsx": "react-jsx",
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "include": ["src"],
+    "exclude": ["src/data"]
+}

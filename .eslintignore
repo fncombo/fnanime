@@ -1,8 +1,5 @@
 # Dependency directories
-**/node_modules
+node_modules/
 
-# Project directories
-docker-files/
-
-# Editor files
-.vscode
+# TypeScript definitions
+*.d.ts
