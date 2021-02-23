@@ -7,11 +7,11 @@ const FilterAnimeCount = styled.span`
 `
 
 /**
- * Displays a label for a filter button. When the filter has anime matching it, the anime count is displayed in
- * brackets.
+ * Displays the content for a filter button or select option. When the filter has anime matching it, the anime count
+ * is displayed in brackets next to the value.
  */
 const FilterLabel: FunctionComponent<{
-    animeCount?: number
+    animeCount: number
     children: ReactNode
 }> = ({ animeCount, children }) => (
     <>

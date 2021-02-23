@@ -3,20 +3,19 @@ import { FunctionComponent, ReactNode } from 'react'
 import { Tag } from 'antd'
 import styled from 'styled-components'
 
-import { Anime } from '../types'
-
-import { filtersDictionary } from './config'
+import { FilterName, filtersDictionary, FilterValue } from './filters'
 
 const TightTag = styled(Tag)`
     margin: 0;
 `
 
 /**
- * Displays a filter's label as a tag in the correct colour.
+ * Given a filter name and value, displays its label as a tag. If the filter value has a color, it will be used
+ * for the tag. Can specify children as a render function for the label value.
  */
 const FilterTag: FunctionComponent<{
-    name: keyof Anime
-    value: string | number
+    name: FilterName
+    value: FilterValue
     children?: (label: ReactNode) => ReactNode
 }> = ({ name, value, children }) => {
     const { color, label } = filtersDictionary[name][value]
