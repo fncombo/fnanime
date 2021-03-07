@@ -11,18 +11,20 @@ interface Totals {
     maxPerScore: number
 }
 
-const humanizeDurationOptions: Options = {
-    units: ['d', 'h', 'm'],
-}
-
-const columns: {
+interface Column {
     key: keyof Anime
     header: string
     render: (value: number, percent: number) => ReactNode
     footer: (value: number) => ReactNode
     isCount?: boolean
     isAdvanced?: boolean
-}[] = [
+}
+
+const humanizeDurationOptions: Options = {
+    units: ['d', 'h', 'm'],
+}
+
+const columns: Column[] = [
     {
         key: 'id',
         header: 'Total Anime',
@@ -108,8 +110,8 @@ const ShortProgress = styled(Progress)`
 `
 
 /**
- * Displays a simple table of statistics for the given anime. All the statistics are displayed relative to each other
- * for each column as progress bars.
+ * Displays a simple table of statistics for the given anime. All the statistics progress bar percentages are relative
+ * to each one within their columns.
  */
 const Statistics: FunctionComponent<{
     anime: Anime[]
@@ -117,9 +119,9 @@ const Statistics: FunctionComponent<{
 }> = ({ anime, hasAdvancedFilters }) => {
     const statisticsAnime = anime.filter(({ watchingStatus }) => watchingStatus !== 'Planned')
 
-    const filteredColumns = columns.filter(({ isAdvanced }) => (isAdvanced ? hasAdvancedFilters : true))
+    const displayColumns = hasAdvancedFilters ? columns : columns.filter(({ isAdvanced }) => !isAdvanced)
 
-    const data = filteredColumns.reduce((accumulator, { key, isCount }) => {
+    const data = displayColumns.reduce((accumulator, { key, isCount }) => {
         accumulator[key] = calculateTotals(statisticsAnime, key, isCount)
 
         return accumulator
@@ -140,14 +142,14 @@ const Statistics: FunctionComponent<{
         <>
             <Row>
                 <Col>Score</Col>
-                {filteredColumns.map(({ header, key }) => (
+                {displayColumns.map(({ header, key }) => (
                     <Col key={key}>{header}</Col>
                 ))}
             </Row>
             {rows.map(({ score }) => (
                 <Row key={score}>
                     <Col>{score}</Col>
-                    {filteredColumns.map(({ render, key }) => {
+                    {displayColumns.map(({ render, key }) => {
                         const percent = (data[key].totalsPerScore[score] / data[key].maxPerScore) * 100
 
                         return (
@@ -161,7 +163,7 @@ const Statistics: FunctionComponent<{
             ))}
             <Row>
                 <Col>Totals</Col>
-                {filteredColumns.map(({ footer, key }) => (
+                {displayColumns.map(({ footer, key }) => (
                     <Col key={key}>{footer(data[key].totalsPerScore.reduce((a, b) => a + b, 0))}</Col>
                 ))}
             </Row>
