@@ -4,7 +4,7 @@ import produce from 'immer'
 
 import { Anime } from '../types'
 
-import { Filter, FilterName, filtersConfig, FilterValue } from './filters'
+import { Filter, FilterName, filtersConfig, FilterValue } from './config'
 
 type FilterValues = Record<FilterName, FilterValue>
 

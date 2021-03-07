@@ -3,7 +3,7 @@ import { FunctionComponent, ReactNode } from 'react'
 import { Tag } from 'antd'
 import styled from 'styled-components'
 
-import { FilterName, filtersDictionary, FilterValue } from './filters'
+import { FilterName, filtersDictionary, FilterValue } from './config'
 
 const TightTag = styled(Tag)`
     margin: 0;
