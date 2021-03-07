@@ -344,7 +344,7 @@ const filtersConfig = [
     studiosFilter,
 ] as Filter[]
 
-// Create an object for each filter name which contains the label and color for each value
+// Create an object for each filter name which contains an object of its values mapped to their label and color
 const filtersDictionary = filtersConfig
     // Skip filters without predefined options
     .filter(({ options }) => !!options)

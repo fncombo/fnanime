@@ -16,12 +16,12 @@ const FullWidthCol = styled(Col)`
     justify-content: center;
 `
 
-const FilterGroup = styled(Radio.Group)`
+const FilterRadioGroup = styled(Radio.Group)`
     display: flex;
     width: 100%;
 `
 
-const FilterButton = styled(Radio.Button)<{ hasAnime: boolean }>`
+const FilterRadioButton = styled(Radio.Button)<{ hasAnime: boolean }>`
     flex: 1 1 auto;
     padding: 0;
     opacity: ${({ hasAnime }) => (hasAnime ? 1 : 0.5)};
@@ -67,17 +67,17 @@ const FilterControls: FunctionComponent<
             .filter(({ isSelect }) => !isSelect)
             .map(({ name, span, filterValue, options }) => (
                 <FullWidthCol span={span} key={name}>
-                    <FilterGroup
+                    <FilterRadioGroup
                         value={filterValue}
                         buttonStyle="solid"
                         onChange={({ target: { value } }) => setFilter(name, value)}
                     >
                         {options.map(({ label, value, animeCount }) => (
-                            <FilterButton value={value} hasAnime={value === -1 || !!animeCount} key={value}>
+                            <FilterRadioButton value={value} hasAnime={value === -1 || !!animeCount} key={value}>
                                 <FilterLabel animeCount={animeCount}>{label}</FilterLabel>
-                            </FilterButton>
+                            </FilterRadioButton>
                         ))}
-                    </FilterGroup>
+                    </FilterRadioGroup>
                 </FullWidthCol>
             ))}
         <Col span={hasAdvancedFilters ? 3 : 4}>
