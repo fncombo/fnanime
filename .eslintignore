@@ -3,3 +3,4 @@ node_modules/
 
 # TypeScript definitions
 *.d.ts
+react-app-env.d.ts
