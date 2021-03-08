@@ -6,7 +6,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import './styles.css'
 
-import LoadAnime from './LoadAnime'
+import App from './App'
 
 const queryClient = new QueryClient()
 
@@ -36,7 +36,7 @@ ReactDOM.render(
     <StrictMode>
         <QueryClientProvider client={queryClient}>
             <GlobalStyle />
-            <LoadAnime />
+            <App />
         </QueryClientProvider>
     </StrictMode>,
     document.getElementById('root')

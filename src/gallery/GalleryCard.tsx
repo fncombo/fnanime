@@ -1,10 +1,11 @@
 import { FunctionComponent } from 'react'
 
 import { Card, Tag, Tooltip, Typography } from 'antd'
-import { InView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 
 import FilterTag from '../filters/FilterTag'
+import { useModal } from '../modal/Modal'
 import { Anime } from '../types'
 
 const imageWidth = 155
@@ -25,17 +26,17 @@ const AnimeCard = styled(Card)`
     }
 `
 
-const AnimeCardImage = styled.img`
+const Image = styled.img`
     margin: -1px 0 0 -1px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 `
 
-const AnimeCardBody = styled.div`
+const Body = styled.div`
     padding: 8px;
 `
 
-const AnimeCardTitle = styled(Typography.Text)`
+const Title = styled(Typography.Text)`
     display: -webkit-box;
     overflow: hidden;
     width: 100%;
@@ -60,48 +61,43 @@ const FavoriteIcon = styled.span`
  */
 const GalleryCard: FunctionComponent<{
     anime: Anime
-}> = ({ anime: { image, title, type, episodeCount, watchingStatus, watchedEpisodeCount, isFavorite } }) => (
-    <InView rootMargin="300px">
-        {({ ref, inView }) => (
-            <Container ref={ref}>
-                {inView && (
-                    <AnimeCard>
-                        <AnimeCardImage
-                            src={image}
-                            alt={title}
-                            width={imageWidth}
-                            height={imageWidth * 1.4}
-                            loading="lazy"
-                        />
-                        <AnimeCardBody>
-                            <AnimeCardTitle>
-                                {isFavorite && (
-                                    <Tooltip title="Favourite anime" color="red">
-                                        <FavoriteIcon>❤</FavoriteIcon>
-                                    </Tooltip>
-                                )}
-                                {title}
-                            </AnimeCardTitle>
-                            <Tag>{type}</Tag>
-                            {(type !== 'Movie' || episodeCount > 1) && (
-                                <>
-                                    {' '}
-                                    {episodeCount} episode{episodeCount > 1 && 's'}
-                                </>
+}> = ({ anime: { id, image, title, type, episodeCount, watchingStatus, watchedEpisodeCount, isFavorite } }) => {
+    const { ref, inView } = useInView({ rootMargin: '300px' })
+    const openModal = useModal()
+
+    return (
+        <Container ref={ref}>
+            {inView && (
+                <AnimeCard onClick={() => openModal(id)} hoverable>
+                    <Image src={image} alt={title} width={imageWidth} height={imageWidth * 1.4} loading="lazy" />
+                    <Body>
+                        <Title>
+                            {isFavorite && (
+                                <Tooltip title="Favourite anime" color="red">
+                                    <FavoriteIcon>❤</FavoriteIcon>
+                                </Tooltip>
                             )}
-                            {watchingStatus !== 'Completed' && (
-                                <WatchingStatus>
-                                    <FilterTag name="watchingStatus" value={watchingStatus}>
-                                        {(label) => `${label} (${watchedEpisodeCount}/${episodeCount})`}
-                                    </FilterTag>
-                                </WatchingStatus>
-                            )}
-                        </AnimeCardBody>
-                    </AnimeCard>
-                )}
-            </Container>
-        )}
-    </InView>
-)
+                            {title}
+                        </Title>
+                        <Tag>{type}</Tag>
+                        {(type !== 'Movie' || episodeCount > 1) && (
+                            <>
+                                {' '}
+                                {episodeCount} episode{episodeCount > 1 && 's'}
+                            </>
+                        )}
+                        {watchingStatus !== 'Completed' && (
+                            <WatchingStatus>
+                                <FilterTag name="watchingStatus" value={watchingStatus}>
+                                    {(label) => `${label} (${watchedEpisodeCount}/${episodeCount})`}
+                                </FilterTag>
+                            </WatchingStatus>
+                        )}
+                    </Body>
+                </AnimeCard>
+            )}
+        </Container>
+    )
+}
 
 export default GalleryCard

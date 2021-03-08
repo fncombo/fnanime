@@ -1,146 +1,191 @@
-import { FunctionComponent } from 'react'
+import { createContext, FunctionComponent, ReactNode, useContext, useMemo, useState } from 'react'
 
-import { Button, Col, Input, Radio, Row, Select, Space, Switch, Typography } from 'antd'
-import styled from 'styled-components'
+import produce from 'immer'
 
-import FilterLabel from './FilterLabel'
-import { FilterOption, FilterValue } from './config'
-import { FiltersHook } from './useFilters'
+import { Anime } from '../types'
 
-const FiltersRow = styled(Row)`
-    margin: 24px;
-`
+import { Filter, FilterName, filtersConfig, FilterValue } from './config'
 
-const FullWidthCol = styled(Col)`
-    display: flex;
-    justify-content: center;
-`
+type FilterValues = Record<FilterName, FilterValue>
 
-const FilterRadioGroup = styled(Radio.Group)`
-    display: flex;
-    width: 100%;
-`
+interface FilterOption {
+    label: ReactNode
+    value: FilterValue
+}
 
-const FilterRadioButton = styled(Radio.Button)<{ hasAnime: boolean }>`
-    flex: 1 1 auto;
-    padding: 0;
-    opacity: ${({ hasAnime }) => (hasAnime ? 1 : 0.5)};
-    text-align: center;
-`
+type FilterOptions = Record<FilterName, FilterOption[]>
 
-const FullWidthSelect = styled(Select)`
-    width: 100%;
-`
-
-const ButtonsSpace = styled(Space)`
-    width: 100%;
-    justify-content: space-between;
-`
-
-const AnimeCount = styled(Typography.Text)`
-    text-align: center;
-`
+interface Filtering {
+    filters: Filter[]
+    setFilter: (name: FilterName, value: FilterValue) => void
+    resetFilters: () => void
+    searchValue: string
+    setSearchValue: (value: string) => void
+    hasAdvancedFilters: boolean
+    toggleAdvancedFilters: () => void
+    anime: Anime[]
+}
 
 /**
- * Displays controls for all filters, such as buttons, dropdowns, and inputs. Also displays toggles for advanced
- * filters and the table, and a button to reset all filters.
+ * Returns a boolean based on whether the given anime matches the given filter based on its name and value. If the
+ * filter value is an array, at least one of those values must be present on the anime. If the anime value is an array,
+ * then the filter value must match at least one of the anime values. For other data types, the filter and anime value
+ * must match exactly.
  */
-const Filters: FunctionComponent<
-    FiltersHook & {
-        hasTable: boolean
-        setHasTable: (value: boolean) => void
+const testAnime = (name: FilterName, value: FilterValue | string[]) => (anime: Anime): boolean => {
+    const animeValue = anime[name] as FilterValue | string[]
+
+    if (Array.isArray(value)) {
+        if (!value.length) {
+            return true
+        }
+
+        return value.some((subValue) => {
+            if (Array.isArray(animeValue)) {
+                return animeValue.includes(subValue)
+            }
+
+            return subValue.includes(animeValue.toString())
+        })
     }
-> = ({
-    filters,
-    setFilter,
-    resetFilters,
-    searchValue,
-    setSearchValue,
-    hasAdvancedFilters,
-    toggleAdvancedFilters,
-    filteredAnime,
-    hasTable,
-    setHasTable,
-}) => (
-    <FiltersRow gutter={[16, 16]}>
-        {filters
-            .filter(({ isSelect }) => !isSelect)
-            .map(({ name, span, filterValue, options }) => (
-                <FullWidthCol span={span} key={name}>
-                    <FilterRadioGroup
-                        value={filterValue}
-                        buttonStyle="solid"
-                        onChange={({ target: { value } }) => setFilter(name, value)}
-                    >
-                        {options.map(({ label, value, animeCount }) => (
-                            <FilterRadioButton value={value} hasAnime={value === -1 || !!animeCount} key={value}>
-                                <FilterLabel animeCount={animeCount}>{label}</FilterLabel>
-                            </FilterRadioButton>
-                        ))}
-                    </FilterRadioGroup>
-                </FullWidthCol>
-            ))}
-        <Col span={hasAdvancedFilters ? 3 : 4}>
-            <Input
-                placeholder="Search"
-                value={searchValue}
-                onChange={({ target: { value } }) => setSearchValue(value)}
-            />
-        </Col>
-        {filters
-            .filter(({ isSelect }) => isSelect)
-            .map(({ name, options, placeholder }) => {
-                const optionsWithAnime = options.filter(({ animeCount }) => !!animeCount)
-                const optionsWithoutAnime = options.filter(({ animeCount }) => !animeCount)
 
-                const renderOption = ({ label, value, animeCount }: FilterOption) => (
-                    <Select.Option value={value} key={value}>
-                        <FilterLabel animeCount={animeCount}>{label}</FilterLabel>
-                    </Select.Option>
-                )
+    if (Array.isArray(animeValue)) {
+        return animeValue.includes(value.toString())
+    }
 
+    return animeValue === value
+}
+
+/**
+ * Generates an object of options for each filter. Options without any anime to them are excluded. For select filters,
+ * an options array is generated from all the unique values from all the anime.
+ */
+const getFilterOptions = (allAnime: Anime[]) =>
+    filtersConfig.reduce((accumulator, { name, options, isSelect }) => {
+        // Generate a unique array of options for select filters based on all the values from all the anime
+        if (isSelect) {
+            accumulator[name] = [...new Set(allAnime.flatMap((anime) => anime[name]))]
+                .filter((value) => !!value)
+                .map((value) => ({ label: value, value } as FilterOption))
+
+            return accumulator
+        }
+
+        // Filter out options which have no anime to them at all
+        accumulator[name] = options.filter(
+            ({ value }) => value === -1 || allAnime.some((anime) => anime[name] === value)
+        )
+
+        return accumulator
+    }, {} as FilterOptions)
+
+/**
+ * Simple way to normalize a string for searching anime titles.
+ */
+const normalizeString = (string: string) => string.toLowerCase().replace(/\s/g, '')
+
+const FiltersContext = createContext<Filtering | undefined>(undefined)
+
+/**
+ * Hook to access the filters context.
+ */
+const useFilters = (): Filtering => useContext(FiltersContext) as Filtering
+
+/**
+ * Provides filters, filter controls, search controls, toggle controls for advanced filters, and an array of
+ * filtered anime. A filter value of -1 is used to represent the "all" option.
+ */
+const FiltersProvider: FunctionComponent<{
+    anime: Anime[]
+}> = ({ anime: allAnime, children }) => {
+    const [filterValues, setFilterValues] = useState({} as FilterValues)
+    const [searchValue, setSearchValue] = useState('')
+    const [hasAdvancedFilters, setHasAdvancedFilters] = useState(false)
+    const filterOptions = useMemo(() => getFilterOptions(allAnime), [allAnime])
+
+    const activeFilterValues = Object.entries(filterValues).filter(([, value]) => value !== -1)
+
+    const filteredAnime = allAnime
+        // Filter anime by filters
+        .filter((anime) => activeFilterValues.every(([name, value]) => testAnime(name as FilterName, value)(anime)))
+        // Filter anime by searching against the title and the alt title if it exists
+        .filter(({ title, altTitle }) => {
+            if (!searchValue.length) {
+                return true
+            }
+
+            const normalizedSearch = normalizeString(searchValue)
+
+            if (altTitle) {
                 return (
-                    <Col span={hasAdvancedFilters ? 5 : 7} key={name}>
-                        <FullWidthSelect
-                            mode="multiple"
-                            allowClear
-                            maxTagCount="responsive"
-                            placeholder={placeholder}
-                            onChange={(value) => setFilter(name, value as FilterValue)}
-                        >
-                            {!!optionsWithAnime.length && (
-                                <Select.OptGroup label="Have Matching Anime">
-                                    {optionsWithAnime.map(renderOption)}
-                                </Select.OptGroup>
-                            )}
-                            {!!optionsWithoutAnime.length && (
-                                <Select.OptGroup label="No Matching Anime">
-                                    {optionsWithoutAnime.map(renderOption)}
-                                </Select.OptGroup>
-                            )}
-                        </FullWidthSelect>
-                    </Col>
+                    normalizeString(title).includes(normalizedSearch) ||
+                    normalizeString(altTitle).includes(normalizedSearch)
                 )
-            })}
-        <Col span={6}>
-            <ButtonsSpace>
-                <Switch
-                    checkedChildren="Advanced"
-                    unCheckedChildren="Advanced"
-                    checked={hasAdvancedFilters}
-                    onChange={toggleAdvancedFilters}
-                />
-                <Switch
-                    checkedChildren="Table"
-                    unCheckedChildren="Table"
-                    checked={hasTable}
-                    onChange={() => setHasTable(!hasTable)}
-                />
-                <AnimeCount>{filteredAnime.length} anime</AnimeCount>
-                <Button onClick={resetFilters}>Reset</Button>
-            </ButtonsSpace>
-        </Col>
-    </FiltersRow>
-)
+            }
 
-export default Filters
+            return normalizeString(title).includes(normalizedSearch)
+        })
+
+    const filters = filtersConfig
+        .map((filter) => ({
+            ...filter,
+            // Add how many anime currently match each option
+            options: filterOptions[filter.name].map((option) => ({
+                ...option,
+                animeCount: filteredAnime.filter(testAnime(filter.name, option.value)).length,
+            })),
+            // If a value for this filter has not been defined yet, use -1 to represent the "all" option
+            filterValue: filterValues[filter.name] ?? -1,
+        }))
+        // Remove advanced filters when they are turned off
+        .filter(({ isAdvanced }) => (hasAdvancedFilters ? true : !isAdvanced))
+
+    // Callback to set a filter's value by its name
+    const setFilter = (name: FilterName, value: FilterValue) => {
+        setFilterValues(
+            produce((draft: FilterValues) => {
+                draft[name] = value
+            })
+        )
+    }
+
+    // Callback to reset all filters and search
+    const resetFilters = () => {
+        setFilterValues({} as FilterValues)
+
+        setSearchValue('')
+    }
+
+    // Callback to toggle whether advanced filters are turned on
+    const toggleAdvancedFilters = () => {
+        setHasAdvancedFilters(!hasAdvancedFilters)
+
+        // When turning off advanced filters, reset the values of all advanced filters
+        if (hasAdvancedFilters) {
+            for (const { name, isAdvanced } of filters) {
+                if (isAdvanced) {
+                    setFilter(name, -1)
+                }
+            }
+        }
+    }
+
+    return (
+        <FiltersContext.Provider
+            value={{
+                filters,
+                setFilter,
+                resetFilters,
+                searchValue,
+                setSearchValue,
+                hasAdvancedFilters,
+                toggleAdvancedFilters,
+                anime: filteredAnime,
+            }}
+        >
+            {children}
+        </FiltersContext.Provider>
+    )
+}
+
+export { FiltersProvider, useFilters }

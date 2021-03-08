@@ -4,6 +4,7 @@ import { Progress, Typography } from 'antd'
 import humanizeDuration, { Options } from 'humanize-duration'
 import styled from 'styled-components'
 
+import { useFilters } from '../filters/Filters'
 import { Anime } from '../types'
 
 interface Totals {
@@ -58,8 +59,8 @@ const columns: Column[] = [
     {
         key: 'totalWatchTime',
         header: 'Total Watch Time',
-        render: (value) => value,
-        footer: (value) => value,
+        render: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
+        footer: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
     },
 ]
 
@@ -113,10 +114,9 @@ const ShortProgress = styled(Progress)`
  * Displays a simple table of statistics for the given anime. All the statistics progress bar percentages are relative
  * to each one within their columns.
  */
-const Statistics: FunctionComponent<{
-    anime: Anime[]
-    hasAdvancedFilters: boolean
-}> = ({ anime, hasAdvancedFilters }) => {
+const Statistics: FunctionComponent = () => {
+    const { anime, hasAdvancedFilters } = useFilters()
+
     const statisticsAnime = anime.filter(({ watchingStatus }) => watchingStatus !== 'Planned')
 
     const displayColumns = hasAdvancedFilters ? columns : columns.filter(({ isAdvanced }) => !isAdvanced)

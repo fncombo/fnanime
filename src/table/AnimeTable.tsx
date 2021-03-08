@@ -4,6 +4,8 @@ import { Table } from 'antd'
 import { ColumnsType } from 'antd/lib/table'
 import styled, { createGlobalStyle } from 'styled-components'
 
+import { useFilters } from '../filters/Filters'
+import { useModal } from '../modal/Modal'
 import { Anime } from '../types'
 
 import TableCell from './TableCell'
@@ -16,18 +18,22 @@ const widths = {
     xl: '11%',
 }
 
+const { compare } = new Intl.Collator(undefined, { numeric: true })
+
 const columns: ColumnsType<Anime> = [
     {
         title: 'Title',
         dataIndex: 'title',
         key: 'title',
         render: (title, anime) => <TitleCell title={title} anime={anime} />,
+        sorter: (a, b) => compare(a.title, b.title),
     },
     {
         title: 'Status',
         dataIndex: 'watchingStatus',
         key: 'watchingStatus',
         render: (value) => <TableCell filter="watchingStatus">{value}</TableCell>,
+        sorter: (a, b) => compare(a.watchingStatus, b.watchingStatus),
         align: 'center',
         width: widths.xl,
     },
@@ -36,6 +42,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'score',
         key: 'score',
         render: (value) => <TableCell>{value}</TableCell>,
+        sorter: (a, b) => a.score - b.score,
         align: 'center',
         width: widths.sm,
     },
@@ -52,6 +59,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'release',
         key: 'release',
         render: (value) => <TableCell>{value}</TableCell>,
+        sorter: (a, b) => compare(a.release || '', b.release || ''),
         align: 'center',
         width: widths.md,
     },
@@ -60,6 +68,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'resolution',
         key: 'resolution',
         render: (value) => <TableCell filter="resolution">{value}</TableCell>,
+        sorter: (a, b) => (a.resolution || 0) - (b.resolution || 0),
         align: 'center',
         width: widths.md,
     },
@@ -68,6 +77,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'source',
         key: 'source',
         render: (value) => <TableCell filter="source">{value}</TableCell>,
+        sorter: (a, b) => compare(a.source || '', b.source || ''),
         align: 'center',
         width: widths.sm,
     },
@@ -76,6 +86,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'videoCodec',
         key: 'videoCodec',
         render: (value) => <TableCell filter="videoCodec">{value}</TableCell>,
+        sorter: (a, b) => compare(a.videoCodec || '', b.videoCodec || ''),
         align: 'center',
         width: widths.sm,
     },
@@ -84,6 +95,7 @@ const columns: ColumnsType<Anime> = [
         dataIndex: 'audioCodec',
         key: 'audioCodec',
         render: (value) => <TableCell filter="audioCodec">{value}</TableCell>,
+        sorter: (a, b) => compare(a.audioCodec || '', b.audioCodec || ''),
         align: 'center',
         width: widths.sm,
     },
@@ -140,26 +152,27 @@ const GlobalStyle = createGlobalStyle`
  * Displays the given anime in a sortable, paginated table. When advanced filters are enabled, additional columns
  * are displayed.
  */
-const AnimeTable: FunctionComponent<{
-    anime: Anime[]
-    hasAdvancedFilters: boolean
-}> = ({ anime, hasAdvancedFilters }) => (
-    <TableContainer>
-        <GlobalStyle />
-        <Table
-            dataSource={anime}
-            columns={
-                hasAdvancedFilters ? columns : columns.filter(({ key }) => !advancedColumns.includes(key as string))
-            }
-            rowClassName={TableRow.styledComponentId}
-            pagination={{ position: ['bottomCenter'] }}
-            onRow={({ title }) => ({
-                onClick: () => {
-                    console.log(title)
-                },
-            })}
-        />
-    </TableContainer>
-)
+const AnimeTable: FunctionComponent = () => {
+    const { anime, hasAdvancedFilters } = useFilters()
+    const openModal = useModal()
+
+    return (
+        <TableContainer>
+            <GlobalStyle />
+            <Table
+                dataSource={anime}
+                columns={
+                    hasAdvancedFilters ? columns : columns.filter(({ key }) => !advancedColumns.includes(key as string))
+                }
+                rowClassName={TableRow.styledComponentId}
+                pagination={{ position: ['bottomCenter'] }}
+                sortDirections={['ascend', 'descend']}
+                onRow={({ id }) => ({
+                    onClick: () => openModal(id),
+                })}
+            />
+        </TableContainer>
+    )
+}
 
 export default AnimeTable

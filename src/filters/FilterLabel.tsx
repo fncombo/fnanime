@@ -2,7 +2,7 @@ import { FunctionComponent, ReactNode } from 'react'
 
 import styled from 'styled-components'
 
-const FilterAnimeCount = styled.span`
+const AnimeCount = styled.span`
     opacity: 0.5;
 `
 
@@ -16,7 +16,7 @@ const FilterLabel: FunctionComponent<{
 }> = ({ animeCount, children }) => (
     <>
         {children}
-        {!!animeCount && <FilterAnimeCount> ({animeCount})</FilterAnimeCount>}
+        {!!animeCount && <AnimeCount> ({animeCount})</AnimeCount>}
     </>
 )
 

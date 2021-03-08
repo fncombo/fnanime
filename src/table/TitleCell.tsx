@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 
-import { Tag, Typography } from 'antd'
+import { Space, Tag, Typography } from 'antd'
 import styled from 'styled-components'
 
 import { Anime } from '../types'
@@ -18,10 +18,17 @@ const TitleCell: FunctionComponent<{
 }> = ({ title, anime: { image, type, url } }) => (
     <>
         <Image src={image} alt={title} width={41} height={55} />
-        <a href={url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>
-            <Typography.Text>{title}</Typography.Text>
-        </a>{' '}
-        <Tag>{type}</Tag>
+        <Space>
+            <Typography.Link
+                href={url}
+                target="_blank"
+                rel="noreferrer noopener"
+                onClick={(event) => event.stopPropagation()}
+            >
+                <Typography.Text>{title}</Typography.Text>
+            </Typography.Link>
+            <Tag>{type}</Tag>
+        </Space>
     </>
 )
 

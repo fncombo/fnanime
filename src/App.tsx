@@ -1,15 +1,36 @@
 import { FunctionComponent, useState } from 'react'
 
-import { Divider, Typography } from 'antd'
+import { Alert, Button, Divider, Spin, Typography } from 'antd'
 import { format, fromUnixTime } from 'date-fns'
+import { useQuery } from 'react-query'
 import styled from 'styled-components'
 
-import Filters from './filters/Filters'
-import useFilters from './filters/useFilters'
+import FilterControls from './filters/FilterControls'
+import { FiltersProvider } from './filters/Filters'
 import Gallery from './gallery/Gallery'
+import { ModalProvider } from './modal/Modal'
 import Statistics from './statistics/Statistics'
 import AnimeTable from './table/AnimeTable'
 import { Anime } from './types'
+
+const queryOptions = {
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    refetchOnWindowFocus: false,
+}
+
+const Centered = styled.div`
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+`
+
+const WideAlert = styled(Alert)`
+    width: 500px;
+    align-items: center;
+`
 
 const Container = styled.div`
     width: 1300px;
@@ -23,64 +44,78 @@ const Footer = styled.div`
 `
 
 /**
- * After the anime has been loaded, displays the filters, table, statistics, and gallery.
+ * Loads the anime list data from the API. Shows a pretty spinner while loading, an error message with a button to
+ * retry if there's an error, or the loaded anime list.
  */
-const App: FunctionComponent<{
-    anime?: Anime[]
-    dbUpdatedAt?: number
-}> = ({ anime = [], dbUpdatedAt }) => {
-    const {
-        filters,
-        selectFilters,
-        setFilter,
-        resetFilters,
-        searchValue,
-        setSearchValue,
-        hasAdvancedFilters,
-        toggleAdvancedFilters,
-        filteredAnime,
-    } = useFilters(anime)
+const LoadAnime: FunctionComponent = () => {
+    const { data, isLoading, isError, refetch } = useQuery<{
+        anime: Anime[]
+        updatedAt: number
+    }>('data', () => fetch(process.env.REACT_APP_API as string).then((res) => res.json()), queryOptions)
+
     const [hasTable, setHasTable] = useState(false)
 
-    return (
-        <>
-            <Container>
-                <Filters
-                    filters={filters}
-                    selectFilters={selectFilters}
-                    setFilter={setFilter}
-                    resetFilters={resetFilters}
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                    hasAdvancedFilters={hasAdvancedFilters}
-                    toggleAdvancedFilters={toggleAdvancedFilters}
-                    filteredAnime={filteredAnime}
-                    hasTable={hasTable}
-                    setHasTable={setHasTable}
+    if (isLoading) {
+        return (
+            <Centered>
+                <Spin size="large" />
+            </Centered>
+        )
+    }
+
+    if (isError || !data) {
+        const action = (
+            <Button onClick={() => refetch()} danger>
+                Retry
+            </Button>
+        )
+
+        return (
+            <Centered>
+                <WideAlert
+                    message="Error"
+                    description="Couldn't load the anime list."
+                    type="error"
+                    showIcon
+                    action={action}
                 />
-                {hasTable && <AnimeTable anime={filteredAnime} hasAdvancedFilters={hasAdvancedFilters} />}
-            </Container>
-            <Divider />
-            <Container>
-                <Statistics anime={filteredAnime} hasAdvancedFilters={hasAdvancedFilters} />
-            </Container>
-            <Divider />
-            <Gallery anime={filteredAnime} />
-            {typeof dbUpdatedAt === 'number' && (
-                <>
-                    <Divider />
-                    <Footer>
-                        <Typography.Paragraph>
-                            Offline data last updated on {format(fromUnixTime(dbUpdatedAt), 'do LLLL yyy')}
-                        </Typography.Paragraph>
-                        <Typography.Text>
-                            Anime list data last updated on {format(fromUnixTime(dbUpdatedAt), 'do LLLL yyy')}
-                        </Typography.Text>
-                    </Footer>
-                </>
-            )}
-        </>
+            </Centered>
+        )
+    }
+
+    const { anime, updatedAt } = data
+
+    const toggleTable = () => setHasTable(!hasTable)
+
+    return (
+        <FiltersProvider anime={anime}>
+            <ModalProvider anime={anime}>
+                <Container>
+                    <FilterControls hasTable={hasTable} toggleTable={toggleTable} />
+                    {hasTable && <AnimeTable />}
+                </Container>
+                <Divider />
+                <Container>
+                    <Statistics />
+                </Container>
+                <Divider />
+                <Gallery />
+                {typeof updatedAt === 'number' && (
+                    <>
+                        <Divider />
+                        <Footer>
+                            <Typography.Paragraph>
+                                Offline data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
+                            </Typography.Paragraph>
+                            <Typography.Text>
+                                Anime list data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
+                            </Typography.Text>
+                        </Footer>
+                    </>
+                )}
+            </ModalProvider>
+        </FiltersProvider>
     )
 }
 
-export default App
+export default LoadAnime

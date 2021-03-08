@@ -70,7 +70,7 @@ const SubTitle = styled(Typography.Paragraph)`
     text-align: center;
 `
 
-const AnimeCards = styled.div`
+const GalleryCards = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -96,13 +96,13 @@ const GallerySection: FunctionComponent<{
             )}
         </InView>
         <SubTitle>{descriptions[score]}</SubTitle>
-        <AnimeCards>
+        <GalleryCards>
             {sort(anime)
                 .asc('title')
                 .map((sortedAnime) => (
                     <GalleryCard anime={sortedAnime} key={sortedAnime.id} />
                 ))}
-        </AnimeCards>
+        </GalleryCards>
     </Container>
 )
 
