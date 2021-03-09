@@ -53,7 +53,7 @@ eachSeries(directories, async (directory) => {
 
         // Anime found multiple times
         if (anime[encodedTitle]) {
-            console.log(red('Anime', yellow(title), 'was found multiple times'))
+            throw new Error(red('Anime', yellow(title), 'was found multiple times'))
         }
 
         const size = entry.isDirectory()

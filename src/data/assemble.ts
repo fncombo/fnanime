@@ -8,7 +8,7 @@ import { closeDatabase, database, encodeFirebaseKey } from './database'
 import { animeDetailsDataFactory, animeListDataFactory, seriesFactory } from './factories'
 import { AnimeLocalData, MalDetailsAnime, MalListAnime, Profile } from './types'
 
-console.log('Getting all the necessary data...')
+console.log('Getting all the necessary data for assembling...')
 
 /**
  * Sanitizes an anime title from MyAnimeList so that it matches the anime title saved locally.

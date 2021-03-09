@@ -36,7 +36,7 @@ database
             updatedDetails += 1
 
             const { body } = await limiter.schedule(() => {
-                console.log('Getting details for anime ID', yellow(id))
+                console.log('Getting details for anime ID', yellow(id), '...')
 
                 return got<MalDetailsAnime>(`https://api.jikan.moe/v3/anime/${id}`, {
                     responseType: 'json',
