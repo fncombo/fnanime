@@ -5,16 +5,15 @@ import { green, yellow } from 'chalk'
 import { differenceInWeeks, fromUnixTime, getUnixTime, isValid } from 'date-fns'
 import got from 'got'
 
-import { MalAnime } from '../types'
-
 import { closeDatabase, database } from './database'
+import { MalDetailsAnime } from './types'
 
 interface ListSnapshot {
     id: string
     [key: string]: unknown
 }
 
-console.log('Updating individual anime details')
+console.log('Checking for outdated individual anime details...')
 
 database
     .ref(process.env.MYANIMELIST_USERNAME)
@@ -24,7 +23,9 @@ database
         const detailsDatabase = database.ref('details')
         const details = (await detailsDatabase.once('value')).val()
 
-        each(Object.values(listSnapshot.val()) as ListSnapshot[], async ({ id }) => {
+        let updatedDetails = 0
+
+        await each(Object.values(listSnapshot.val()) as ListSnapshot[], async ({ id }) => {
             const updatedAt = fromUnixTime(details?.[id]?.updatedAt)
 
             // Skip anime which have recently been updated
@@ -32,18 +33,27 @@ database
                 return
             }
 
-            const data = await limiter.schedule(async () => {
+            updatedDetails += 1
+
+            const { body } = await limiter.schedule(() => {
                 console.log('Getting details for anime ID', yellow(id))
 
-                return (await got<MalAnime>(`https://api.jikan.moe/v3/anime/${id}`, { responseType: 'json' })).body
+                return got<MalDetailsAnime>(`https://api.jikan.moe/v3/anime/${id}`, {
+                    responseType: 'json',
+                })
             })
 
-            await detailsDatabase
-                .child(id)
-                .set({ ...camelcaseKeys(data, { deep: true }), updatedAt: getUnixTime(currentDate) })
+            await detailsDatabase.child(id).set({
+                ...camelcaseKeys(body, { deep: true }),
+                updatedAt: getUnixTime(currentDate),
+            })
         })
 
-        console.log(green('Details of all anime saved to Firebase'))
+        if (updatedDetails) {
+            console.log(green('Updated details of', yellow(updatedDetails), 'anime saved to Firebase'))
+        } else {
+            console.log(green('No anime details needed to be updated'))
+        }
 
         await closeDatabase()
     })

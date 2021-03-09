@@ -1,96 +1,116 @@
 import { eachSeries } from 'async'
-import { green, red, yellow } from 'chalk'
-import fs from 'fs'
+import { green, red, white, yellow } from 'chalk'
+import { promises as fs } from 'fs'
 import getFolderSizeCallback from 'get-folder-size'
 import path from 'path'
 import { stdout as singleLineLog } from 'single-line-log'
 import { promisify } from 'util'
 
-import { filtersDictionary } from '../filters/config'
-import { Anime } from '../types'
+import { closeDatabase, database, encodeFirebaseKey } from './database'
+import { localAnimeDataFactory } from './factories'
+import { AnimeLocalData } from './types'
 
-import { closeDatabase, database } from './database'
-import { encodeFirebaseKey } from './firebaseKey'
-
-const { readdir, stat } = fs.promises
-const getFolderSize = promisify(getFolderSizeCallback)
-const directories = process.env.DIRECTORIES as string
-
-const anime = new Map()
+const getFolderSize = promisify<string, number>(getFolderSizeCallback)
+const directories = process.env.DIRECTORIES?.split(',') || []
+const anime: Record<string, AnimeLocalData> = {}
 const infoRegex = /(.+)\s\[(.*)\]\[(\d+p)\s(\w+)\s(H\.\d+)\s(\d+bit)\s(\w+)\]/
 
-/**
- * TODO: ...
- */
-const validateType = <T extends string | number>(title: string) => (value: T, type: keyof Anime): T => {
-    if (!filtersDictionary[type][value]) {
-        console.log(red('Invalid value', yellow(value), 'for type', yellow(type), 'for anime', yellow(title)))
+let processedDirectories = 0
 
-        throw new Error('Validation')
+/**
+ * Simple way to normalize a release name for duplicate search.
+ */
+const normalizeString = (string: string) => string.toLowerCase().replace(/[^\w\d]/g, '')
+
+eachSeries(directories, async (directory) => {
+    // Skip directories which don't exist
+    if (!(await fs.stat(directory))) {
+        console.log('Directory', yellow(directory), 'not found, skipping')
+
+        return
     }
 
-    return value
-}
+    processedDirectories += 1
 
-eachSeries(directories.split(','), async (directory) => {
-    // Get everything in the directory and filter out unwanted files
-    const entries = (await readdir(directory, { withFileTypes: true })).filter((entry) => !/\.ini/.test(entry.name))
+    // Get everything in the directory and filter out unwanted entries
+    const entries = (await fs.readdir(directory, { withFileTypes: true })).filter(({ name }) => !/\.ini/.test(name))
 
     await eachSeries(entries, async (entry) => {
-        // Anime cannot be matched against the regex because it is named incorrectly
-        if (!infoRegex.test(entry.name)) {
-            console.log(red('Folder or file name for anime', yellow(entry.name), 'is invalid'))
+        const { name } = entry
 
-            throw new Error('Validation')
+        // Anime cannot be matched against the regex because it is named incorrectly
+        if (!infoRegex.test(name)) {
+            throw new Error(red('Folder or file name for anime', yellow(name), 'is invalid'))
         }
 
         const count = `${yellow(entries.indexOf(entry) + 1)}/${yellow(entries.length)}`
 
-        singleLineLog(`Getting the total size of ${count} anime from ${yellow(directory)}\n`)
+        singleLineLog(`Getting the total size of ${count} anime from ${yellow(directory)}...\n`)
 
-        const [, title, release, resolution, source, codec, bits, audio] = infoRegex.exec(entry.name) as string[]
-        const fullPath = path.join(directory, entry.name)
-        const size = entry.isDirectory() ? await getFolderSize(fullPath) : (await stat(fullPath)).size
+        const [, title, release, resolution, source, videoCodec, bits, audioCodec] = infoRegex.exec(name) as string[]
 
-        // Anime found multiple times in different folders
-        if (anime.has(title)) {
-            console.log(red('Anime', yellow(title), 'exists more than once'))
+        const encodedTitle = encodeFirebaseKey(title)
 
-            throw new Error('Validation')
+        // Anime found multiple times
+        if (anime[encodedTitle]) {
+            console.log(red('Anime', yellow(title), 'was found multiple times'))
         }
 
-        const validate = validateType(title)
+        const size = entry.isDirectory()
+            ? await getFolderSize(path.join(directory, name))
+            : (await fs.stat(path.join(directory, name))).size
 
-        anime.set(encodeFirebaseKey(title), {
+        anime[encodedTitle] = localAnimeDataFactory({
+            title,
             release,
-            resolution: validate(parseInt(resolution, 10), 'resolution'),
-            source: validate(source, 'source'),
-            videoCodec: validate(codec, 'videoCodec'),
-            bits: validate(parseInt(bits, 10), 'bits'),
-            audioCodec: validate(audio, 'audioCodec'),
+            resolution,
+            source,
+            videoCodec,
+            bits,
+            audioCodec,
             size,
         })
-    })
 
-    console.log('All directories processed')
+        // Make sure all release names are consistent (case, spacing, symbols, etc.)
+        const releaseNamingMismatch = Object.entries(anime).find(
+            ([, { release: animeRelease = '' }]) =>
+                animeRelease !== release && normalizeString(animeRelease) === normalizeString(release)
+        )
+
+        if (releaseNamingMismatch) {
+            throw new Error(
+                red(
+                    'Release name mismatch found between',
+                    white(decodeURIComponent(releaseNamingMismatch[0])),
+                    yellow(`[${releaseNamingMismatch[1].release}]`),
+                    'and',
+                    white(title),
+                    yellow(`[${release}]`)
+                )
+            )
+        }
+    })
 })
     .then(async () => {
-        // TODO: Make sure all release names are consistent and unique
+        // TODO: Make sure all anime are saved in the correct folders based on their types
 
-        // TODO: Make sure all anime are saved in the correct folders based on their type
+        // If some directories were not found, just update the local data, otherwise completely overwrite it
+        if (processedDirectories === directories.length) {
+            console.log(green('All directories processed successfully, overwriting all local data in Firebase...'))
 
-        console.log('Saving local anime data to Firebase')
+            await database.ref('local').set(anime)
+        } else {
+            console.log(green('Only some directories processed, updating some local data in Firebase...'))
 
-        await database.ref('local').set(Object.fromEntries(anime))
+            await database.ref('local').update(anime)
+        }
 
         console.log(green('Local anime data saved to Firebase'))
 
         await closeDatabase()
     })
-    .catch(async (error) => {
+    .catch(async ({ message }) => {
         await closeDatabase()
 
-        if (error.message !== 'Validation') {
-            throw error
-        }
+        console.log(message)
     })

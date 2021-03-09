@@ -2,16 +2,18 @@ import { green } from 'chalk'
 import { getUnixTime } from 'date-fns'
 import { remove as removeDiacritics } from 'diacritics'
 
-import { Anime, MalAnime, MalDetails } from '../types'
+import { Anime } from '../types'
 
-import animeDetailsFactory from './animeDetailsFactory'
-import animeListFactory from './animeListFactory'
-import { closeDatabase, database } from './database'
-import { encodeFirebaseKey } from './firebaseKey'
+import { closeDatabase, database, encodeFirebaseKey } from './database'
+import { animeDetailsDataFactory, animeListDataFactory, seriesFactory } from './factories'
+import { AnimeLocalData, MalDetailsAnime, MalListAnime, Profile } from './types'
 
-console.log('Getting all the necessary data')
+console.log('Getting all the necessary data...')
 
-const sanitizeAnimeTitle = (name: string): string => removeDiacritics(name.replace(/[√:?"]/g, '').replace(/[★/]/g, ' '))
+/**
+ * Sanitizes an anime title from MyAnimeList so that it matches the anime title saved locally.
+ */
+const sanitizeAnimeTitle = (name: string) => removeDiacritics(name.replace(/[√:?"]/g, '').replace(/[★/]/g, ' '))
 
 Promise.all([
     database.ref(process.env.MYANIMELIST_USERNAME).once('value'),
@@ -21,39 +23,41 @@ Promise.all([
     database.ref('profile').once('value'),
 ])
     .then(async (promises) => {
-        const [list, compareList, local, details, profile] = promises.map(
-            (promise) => new Map(Object.entries(promise.val()))
-        ) as [
-            Map<string, MalAnime>,
-            Map<string, MalAnime>,
-            Map<string, Record<string, unknown>>,
-            Map<string, MalDetails>,
-            Map<string, Record<string, unknown>>
+        const [list, compareList, local, details, profile] = promises.map((promise) => promise.val()) as [
+            Record<string, MalListAnime>,
+            Record<string, MalListAnime>,
+            Record<string, AnimeLocalData>,
+            Record<string, MalDetailsAnime>,
+            Profile
         ]
 
-        const { anime: favorites } = profile.get('favorites') as { anime: MalAnime[] }
+        const data = Object.values(list).map(
+            (anime): Anime => {
+                const stringId = anime.id.toString()
+
+                const listData = animeListDataFactory(anime)
+                const detailsData = animeDetailsDataFactory(details[stringId])
+
+                const { totalWatchedEpisodes, rewatched } = listData
+                const { episodeDuration } = detailsData
+
+                return {
+                    ...listData,
+                    ...detailsData,
+                    // Only include local data if it exists for the anime
+                    ...(local[encodeFirebaseKey(sanitizeAnimeTitle(anime.title))] || {}),
+                    // Do not include this property if there is no compare list
+                    ...(Object.keys(compareList).length ? { isInCompareList: compareList[stringId] ? 1 : 0 } : {}),
+                    ...seriesFactory(anime.id, details),
+                    isFavorite: profile.favorites.anime.some(({ malId }) => malId === anime.id),
+                    totalWatchTime: totalWatchedEpisodes * episodeDuration * (rewatched + 1),
+                    related: [],
+                }
+            }
+        )
 
         await database.ref('data').set({
-            anime: [...list.values()].map(
-                (anime): Anime => {
-                    const key = encodeFirebaseKey(sanitizeAnimeTitle(anime.title))
-                    const id = `${anime.id}`
-
-                    const data = {
-                        ...animeListFactory(anime),
-                        ...animeDetailsFactory(details.get(id) as MalDetails),
-                        ...(local.has(key) ? local.get(key) : {}),
-                        // Do not include this property if there is no compare list
-                        ...(compareList.size ? { isInCompareList: compareList.has(id) ? 1 : (0 as 0 | 1) } : {}),
-                        isFavorite: favorites.some(({ malId }) => malId === anime.id),
-                    }
-
-                    return {
-                        ...data,
-                        totalWatchTime: 1,
-                    }
-                }
-            ),
+            anime: data,
             updatedAt: getUnixTime(new Date()),
         })
 
