@@ -24,7 +24,9 @@ const normalizeString = (string: string): string => string.toLowerCase().replace
 
 eachSeries(directories, async (directory) => {
     // Skip directories which don't exist
-    if (!(await fs.stat(directory))) {
+    try {
+        await fs.stat(directory)
+    } catch (error) {
         console.log('Directory', yellow(directory), 'not found, skipping')
 
         return
