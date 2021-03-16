@@ -52,7 +52,7 @@ const FilterControls: FunctionComponent<{
     toggleTable: () => void
     hasStatistics: boolean
     toggleStatistics: () => void
-}> = ({ hasTable, toggleTable, hasStatistics, toggleStatistics }) => {
+}> = ({ hasStatistics, toggleStatistics }) => {
     const {
         filters,
         setFilter,
@@ -133,12 +133,6 @@ const FilterControls: FunctionComponent<{
                         unCheckedChildren="Advanced"
                         checked={hasAdvancedFilters}
                         onChange={toggleAdvancedFilters}
-                    />
-                    <Switch
-                        checkedChildren="Table"
-                        unCheckedChildren="Table"
-                        checked={hasTable}
-                        onChange={toggleTable}
                     />
                     <Switch
                         checkedChildren="Statistics"
