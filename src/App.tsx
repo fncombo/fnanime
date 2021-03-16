@@ -80,7 +80,7 @@ const LoadAnime: FunctionComponent = () => {
             <Centered>
                 <WideAlert
                     message="Error"
-                    description="Couldn't load the anime list."
+                    description="Could not load the anime list."
                     type="error"
                     showIcon
                     action={action}

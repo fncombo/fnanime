@@ -25,7 +25,7 @@ interface Column {
 const columns: Column[] = [
     {
         key: 'id',
-        header: 'Total Anime',
+        header: 'Total anime',
         render: (value, percent): ReactNode => (
             <>
                 {value.toLocaleString()} ({Math.round(percent).toLocaleString()}%)
@@ -36,26 +36,26 @@ const columns: Column[] = [
     },
     {
         key: 'size',
-        header: 'Total Storage Size',
+        header: 'Total storage size',
         render: (value): ReactNode => <FormattedBytes bytes={value} />,
         footer: (value): ReactNode => <FormattedBytes bytes={value} />,
         isAdvanced: true,
     },
     {
         key: 'totalEpisodes',
-        header: 'Total Number of Episodes',
+        header: 'Total number of episodes',
         render: (value): ReactNode => value.toLocaleString(),
         footer: (value): ReactNode => value.toLocaleString(),
     },
     {
         key: 'totalDuration',
-        header: 'Total Duration',
+        header: 'Total duration',
         render: (value): ReactNode => <FormattedDuration duration={value} />,
         footer: (value): ReactNode => <FormattedDuration duration={value} />,
     },
     {
         key: 'totalWatchTime',
-        header: 'Total Watch Time',
+        header: 'Total watch time',
         render: (value): ReactNode => <FormattedDuration duration={value} />,
         footer: (value): ReactNode => <FormattedDuration duration={value} />,
     },
