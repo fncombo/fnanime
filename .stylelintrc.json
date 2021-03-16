@@ -1,13 +1,19 @@
 {
     "extends": ["stylelint-config-recommended", "stylelint-config-standard", "stylelint-config-idiomatic-order"],
-    "plugins": ["stylelint-scss"],
     "rules": {
         "indentation": 4,
-        "string-quotes": "double",
-        "at-rule-no-unknown": null,
-        "scss/at-rule-no-unknown": null,
-        "font-family-no-missing-generic-family-keyword": null,
-        "no-descending-specificity": null
-    },
-    "syntax": "scss"
+        "value-keyword-case": null,
+        "rule-empty-line-before": null,
+        "selector-type-no-unknown": null,
+        "selector-type-case": null,
+        "declaration-colon-newline-after": null,
+        "function-parentheses-newline-inside": null,
+        "function-comma-newline-after": null,
+        "function-name-case": null,
+        "property-disallowed-list": ["float", "clear"],
+        "block-no-empty": null,
+        "declaration-empty-line-before": null,
+        "no-empty-source": null,
+        "at-rule-empty-line-before": null
+    }
 }
