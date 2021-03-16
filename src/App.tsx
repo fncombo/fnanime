@@ -51,7 +51,7 @@ const LoadAnime: FunctionComponent = () => {
     const { data, isLoading, isError, refetch } = useQuery<{
         anime: Anime[]
         updatedAt: number
-    }>('data', () => fetch(`${process.env.DATABASE_URL}/data.json`).then((res) => res.json()), queryOptions)
+    }>('data', () => fetch(`${process.env.REACT_APP_DATABASE_URL}/data.json`).then((res) => res.json()), queryOptions)
 
     const [hasTable, setHasTable] = useState(false)
     const [hasStatistics, setHasStatistics] = useState(false)
