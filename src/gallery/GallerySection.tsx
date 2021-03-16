@@ -12,29 +12,6 @@ import GalleryCard from './GalleryCard'
 
 type GalleryScore = Score | 'Watching'
 
-const descriptions: Record<GalleryScore, ReactNode> = {
-    Watching: 'This is what I am currently watching 👀',
-    10: "If you don't like these as much as I do then we can't be friends 🤔",
-    9: 'The very best anime which you can spend your time on 🤩',
-    8: 'The second best (surprise!) anime which you can spend your time on 😉',
-    7: "These are average anime which were nice and didn't make me regret the time 🙃",
-    6: 'Not terrible but not that good either, better luck next time 🥱',
-    5: 'Low effort, incomprehensible, overrated, deep, you get the idea 🙄',
-    4: "If you rated any of these more than an 8 then we can't be friends either 🙂",
-    3: 'How did these even get a budget approved for them 😑',
-    2: "I've never rating anything this low before so if you see this message, congratulations!",
-    1: "I've never rating anything this low before so if you see this message, congratulations!",
-    0: (
-        <>
-            Haven&apos;t rated these yet! I also don&apos;t rate dropped anime with{' '}
-            <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">
-                fewer than 20%
-            </a>{' '}
-            of the episodes watched 📉
-        </>
-    ),
-}
-
 const boxShadow = [
     '0 3px 6px -4px rgba(0, 0, 0, 0.12)',
     '0 6px 16px 0 rgba(0, 0, 0, 0.08)',
@@ -95,7 +72,16 @@ const GallerySection: FunctionComponent<{
                 </>
             )}
         </InView>
-        <SubTitle>{descriptions[score]}</SubTitle>
+        {score === 'Watching' && <SubTitle>This is what I am currently watching 👀</SubTitle>}
+        {score === 0 && (
+            <SubTitle>
+                Haven&apos;t rated these yet! I also don&apos;t rate dropped anime with{' '}
+                <a href="https://myanimelist.net/info.php?go=topanime" target="_blank" rel="noopener noreferrer">
+                    fewer than 20%
+                </a>{' '}
+                of the episodes watched 📉
+            </SubTitle>
+        )}
         <GalleryCards>
             {sort(anime)
                 .asc('title')

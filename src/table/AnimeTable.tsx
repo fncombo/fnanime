@@ -100,14 +100,14 @@ const columns: ColumnsType<Anime> = [
         width: widths.sm,
     },
     {
-        title: 'Episode Size',
+        title: 'Episode size',
         dataIndex: 'episodeSize',
         render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
         width: widths.lg,
     },
     {
-        title: 'Total Size',
+        title: 'Total size',
         dataIndex: 'totalSize',
         render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
