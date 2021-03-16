@@ -1,7 +1,7 @@
 import { eachSeries } from 'async'
 import camelcaseKeys from 'camelcase-keys'
 import { green, yellow } from 'chalk'
-import got from 'got'
+import got, { Options } from 'got'
 
 import { closeDatabase, database } from './database'
 import { MalListAnime } from './types'
@@ -15,8 +15,14 @@ const getAllAnime = async (username: string): Promise<MalListAnime[]> =>
             page: 1,
         },
         pagination: {
-            transform: (response) => typeof response.body === 'string' && JSON.parse(response.body).anime,
-            paginate: (response, _, currentItems) => {
+            transform: (response): MalListAnime[] => {
+                if (typeof response.body === 'string') {
+                    return JSON.parse(response.body).anime
+                }
+
+                return []
+            },
+            paginate: (response, _, currentItems): Options | false => {
                 const currentPage = response.request.options.searchParams?.get('page')
 
                 // Attempt to get the next page when the current page has the maximum number of anime

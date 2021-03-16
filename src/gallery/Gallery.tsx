@@ -15,23 +15,26 @@ import GallerySection from './GallerySection'
 const Gallery: FunctionComponent = () => {
     const { anime } = useFilters()
 
+    // Watching anime to show at the top
     const watchingAnime = anime.filter(({ watchingStatus }) => watchingStatus === 'Watching')
-    const restAnime = anime.filter(({ watchingStatus }) => watchingStatus !== 'Watching')
+
+    // Non-watching and non-planned anime to show for all the scores
+    const restAnime = anime.filter(
+        ({ watchingStatus }) => watchingStatus !== 'Planned' && watchingStatus !== 'Watching'
+    )
+
+    // Group all anime by score
+    const groupedAnime = groupArray(restAnime, 'score') as Record<Score, Anime[]>
+
+    // Sort scores from highest to lowest
+    const sortedAnime = sort(Object.entries(groupedAnime)).desc(([score]) => parseInt(score, 10))
 
     return (
         <>
             <GallerySection score="Watching" anime={watchingAnime} />
-            {sort(Object.entries(groupArray(restAnime, 'score') as Record<Score, Anime[]>))
-                .desc(([score]) => parseInt(score, 10))
-                .map(([score, scoreAnime]) => (
-                    <GallerySection
-                        score={parseInt(score, 10) as Score}
-                        anime={scoreAnime.filter(
-                            ({ watchingStatus }) => watchingStatus !== 'Planned' && watchingStatus !== 'Watching'
-                        )}
-                        key={score}
-                    />
-                ))}
+            {sortedAnime.map(([score, scoreAnime]) => (
+                <GallerySection score={parseInt(score, 10) as Score} anime={scoreAnime} key={score} />
+            ))}
         </>
     )
 }

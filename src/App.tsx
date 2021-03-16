@@ -54,6 +54,7 @@ const LoadAnime: FunctionComponent = () => {
     }>('data', () => fetch(process.env.REACT_APP_API as string).then((res) => res.json()), queryOptions)
 
     const [hasTable, setHasTable] = useState(false)
+    const [hasStatistics, setHasStatistics] = useState(false)
 
     if (isLoading) {
         return (
@@ -65,7 +66,12 @@ const LoadAnime: FunctionComponent = () => {
 
     if (isError || !data) {
         const action = (
-            <Button onClick={() => refetch()} danger>
+            <Button
+                onClick={(): void => {
+                    refetch()
+                }}
+                danger
+            >
                 Retry
             </Button>
         )
@@ -85,34 +91,40 @@ const LoadAnime: FunctionComponent = () => {
 
     const { anime, updatedAt } = data
 
-    const toggleTable = () => setHasTable(!hasTable)
+    const toggleTable = (): void => setHasTable(!hasTable)
+    const toggleStatistics = (): void => setHasStatistics(!hasStatistics)
 
     return (
         <FiltersProvider anime={anime}>
             <ModalProvider anime={anime}>
                 <Container>
-                    <FilterControls hasTable={hasTable} toggleTable={toggleTable} />
+                    <FilterControls
+                        hasTable={hasTable}
+                        toggleTable={toggleTable}
+                        hasStatistics={hasStatistics}
+                        toggleStatistics={toggleStatistics}
+                    />
                     {hasTable && <AnimeTable />}
                 </Container>
-                <Divider />
-                <Container>
-                    <Statistics />
-                </Container>
-                <Divider />
-                <Gallery />
-                {typeof updatedAt === 'number' && (
+                {hasStatistics && (
                     <>
                         <Divider />
-                        <Footer>
-                            <Typography.Paragraph>
-                                Offline data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
-                            </Typography.Paragraph>
-                            <Typography.Text>
-                                Anime list data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
-                            </Typography.Text>
-                        </Footer>
+                        <Container>
+                            <Statistics />
+                        </Container>
                     </>
                 )}
+                <Divider />
+                <Gallery />
+                <Divider />
+                <Footer>
+                    <Typography.Paragraph>
+                        Offline data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
+                    </Typography.Paragraph>
+                    <Typography.Text>
+                        Anime list data last updated on {format(fromUnixTime(updatedAt), 'do LLLL yyy')}
+                    </Typography.Text>
+                </Footer>
             </ModalProvider>
         </FiltersProvider>
     )

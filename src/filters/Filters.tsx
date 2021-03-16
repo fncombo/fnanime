@@ -26,6 +26,8 @@ interface Filtering {
     anime: Anime[]
 }
 
+const FiltersContext = createContext<Filtering | undefined>(undefined)
+
 /**
  * Returns a boolean based on whether the given anime matches the given filter based on its name and value. If the
  * filter value is an array, at least one of those values must be present on the anime. If the anime value is an array,
@@ -53,6 +55,11 @@ const testAnime = (name: FilterName, value: FilterValue | string[]) => (anime: A
         return animeValue.includes(value.toString())
     }
 
+    // Do not count planned anime as "not scored"
+    if (name === 'score' && anime.watchingStatus === 'Planned') {
+        return false
+    }
+
     return animeValue === value
 }
 
@@ -60,7 +67,7 @@ const testAnime = (name: FilterName, value: FilterValue | string[]) => (anime: A
  * Generates an object of options for each filter. Options without any anime to them are excluded. For select filters,
  * an options array is generated from all the unique values from all the anime.
  */
-const getFilterOptions = (allAnime: Anime[]) =>
+const getFilterOptions = (allAnime: Anime[]): FilterOptions =>
     filtersConfig.reduce((accumulator, { name, options, isSelect }) => {
         // Generate a unique array of options for select filters based on all the values from all the anime
         if (isSelect) {
@@ -82,9 +89,7 @@ const getFilterOptions = (allAnime: Anime[]) =>
 /**
  * Simple way to normalize a string for searching anime titles.
  */
-const normalizeString = (string: string) => string.toLowerCase().replace(/\s/g, '')
-
-const FiltersContext = createContext<Filtering | undefined>(undefined)
+const normalizeString = (string: string): string => string.toLowerCase().replace(/\s/g, '')
 
 /**
  * Hook to access the filters context.
@@ -108,22 +113,28 @@ const FiltersProvider: FunctionComponent<{
     const filteredAnime = allAnime
         // Filter anime by filters
         .filter((anime) => activeFilterValues.every(([name, value]) => testAnime(name as FilterName, value)(anime)))
-        // Filter anime by searching against the title and the alt title if it exists
-        .filter(({ title, altTitle }) => {
+        // Filter anime by searching against all the titles (done with a bunch of if statements to improve
+        // readability of logic)
+        .filter(({ title, englishTitle, synonyms }) => {
             if (!searchValue.length) {
                 return true
             }
 
             const normalizedSearch = normalizeString(searchValue)
 
-            if (altTitle) {
-                return (
-                    normalizeString(title).includes(normalizedSearch) ||
-                    normalizeString(altTitle).includes(normalizedSearch)
-                )
+            if (normalizeString(title).includes(normalizedSearch)) {
+                return true
             }
 
-            return normalizeString(title).includes(normalizedSearch)
+            if (englishTitle && normalizeString(englishTitle).includes(normalizedSearch)) {
+                return true
+            }
+
+            if (synonyms && synonyms.some((synonym) => normalizeString(synonym).includes(normalizedSearch))) {
+                return true
+            }
+
+            return false
         })
 
     const filters = filtersConfig
@@ -141,7 +152,7 @@ const FiltersProvider: FunctionComponent<{
         .filter(({ isAdvanced }) => (hasAdvancedFilters ? true : !isAdvanced))
 
     // Callback to set a filter's value by its name
-    const setFilter = (name: FilterName, value: FilterValue) => {
+    const setFilter = (name: FilterName, value: FilterValue): void => {
         setFilterValues(
             produce((draft: FilterValues) => {
                 draft[name] = value
@@ -150,14 +161,14 @@ const FiltersProvider: FunctionComponent<{
     }
 
     // Callback to reset all filters and search
-    const resetFilters = () => {
+    const resetFilters = (): void => {
         setFilterValues({} as FilterValues)
 
         setSearchValue('')
     }
 
     // Callback to toggle whether advanced filters are turned on
-    const toggleAdvancedFilters = () => {
+    const toggleAdvancedFilters = (): void => {
         setHasAdvancedFilters(!hasAdvancedFilters)
 
         // When turning off advanced filters, reset the values of all advanced filters

@@ -173,7 +173,7 @@
                     // Side effect packages
                     ["^\\u0000(?!\\.).+"],
                     // Packages
-                    ["^@?(?!material-ui)\\w.+"],
+                    ["^@?\\w.+"],
                     // Source side effects
                     ["^\\u0000\\.+.+"],
                     // Source relative
@@ -238,7 +238,9 @@
         "@typescript-eslint/no-use-before-define": ["error"],
 
         "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": ["error"]
+        "@typescript-eslint/no-unused-vars": ["error"],
+
+        "@typescript-eslint/explicit-function-return-type": ["error"]
     },
     "overrides": [
         {

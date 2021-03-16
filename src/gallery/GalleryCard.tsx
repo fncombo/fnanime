@@ -4,7 +4,7 @@ import { Card, Tag, Tooltip, Typography } from 'antd'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 
-import FilterTag from '../filters/FilterTag'
+import WatchingStatus from '../common/WatchingStatus'
 import { useModal } from '../modal/Modal'
 import { Anime } from '../types'
 
@@ -26,10 +26,22 @@ const AnimeCard = styled(Card)`
     }
 `
 
-const Image = styled.img`
+const ImageContainer = styled.div`
+    display: flex;
+    overflow: hidden;
+    width: ${imageWidth}px;
+    height: ${imageWidth * 1.4}px;
+    align-items: center;
+    justify-content: center;
     margin: -1px 0 0 -1px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+`
+
+const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
 
 const Body = styled.div`
@@ -46,7 +58,7 @@ const Title = styled(Typography.Text)`
     -webkit-line-clamp: 2;
 `
 
-const WatchingStatus = styled.div`
+const WatchingStatusContainer = styled.div`
     margin-top: 8px;
 `
 
@@ -61,15 +73,19 @@ const FavoriteIcon = styled.span`
  */
 const GalleryCard: FunctionComponent<{
     anime: Anime
-}> = ({ anime: { id, image, title, type, episodeCount, watchingStatus, watchedEpisodeCount, isFavorite } }) => {
+}> = ({
+    anime: { id, image, title, type, totalEpisodes, watchingStatus, totalWatchedEpisodes, isFavorite, isRewatching },
+}) => {
     const { ref, inView } = useInView({ rootMargin: '300px' })
     const openModal = useModal()
 
     return (
         <Container ref={ref}>
             {inView && (
-                <AnimeCard onClick={() => openModal(id)} hoverable>
-                    <Image src={image} alt={title} width={imageWidth} height={imageWidth * 1.4} loading="lazy" />
+                <AnimeCard onClick={(): void => openModal(id)} hoverable>
+                    <ImageContainer>
+                        <Image src={image} alt={title} />
+                    </ImageContainer>
                     <Body>
                         <Title>
                             {isFavorite && (
@@ -80,18 +96,21 @@ const GalleryCard: FunctionComponent<{
                             {title}
                         </Title>
                         <Tag>{type}</Tag>
-                        {(type !== 'Movie' || episodeCount > 1) && (
+                        {(type !== 'Movie' || totalEpisodes > 1) && (
                             <>
                                 {' '}
-                                {episodeCount} episode{episodeCount > 1 && 's'}
+                                {totalEpisodes} episode{totalEpisodes > 1 && 's'}
                             </>
                         )}
                         {watchingStatus !== 'Completed' && (
-                            <WatchingStatus>
-                                <FilterTag name="watchingStatus" value={watchingStatus}>
-                                    {(label) => `${label} (${watchedEpisodeCount}/${episodeCount})`}
-                                </FilterTag>
-                            </WatchingStatus>
+                            <WatchingStatusContainer>
+                                <WatchingStatus
+                                    watchingStatus={watchingStatus}
+                                    totalWatchedEpisodes={totalWatchedEpisodes}
+                                    totalEpisodes={totalEpisodes}
+                                    isRewatching={isRewatching}
+                                />
+                            </WatchingStatusContainer>
                         )}
                     </Body>
                 </AnimeCard>

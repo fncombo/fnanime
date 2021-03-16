@@ -14,12 +14,21 @@ type AnimeListData = Pick<
     | 'watchingStatus'
     | 'type'
     | 'url'
-    | 'rewatched'
+    | 'totalRewatchedTimes'
+    | 'isRewatching'
 >
 
 type AnimeDetailsData = Pick<
     Anime,
-    'englishTitle' | 'synonyms' | 'genres' | 'studios' | 'episodeDuration' | 'totalDuration' | 'meanScore' | 'rank'
+    | 'englishTitle'
+    | 'synonyms'
+    | 'genres'
+    | 'studios'
+    | 'episodeDuration'
+    | 'totalDuration'
+    | 'meanScore'
+    | 'rank'
+    | 'related'
 >
 
 type AnimeSeriesData = Pick<Anime, 'prequels' | 'sequels'>

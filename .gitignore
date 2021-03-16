@@ -5,6 +5,7 @@ node_modules/
 .env
 firebase.json
 *.css
+react-app-env.d.ts
 
 # OS files
 .DS_Store

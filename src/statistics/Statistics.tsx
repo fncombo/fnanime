@@ -1,9 +1,10 @@
 import { FunctionComponent, ReactNode } from 'react'
 
 import { Progress, Typography } from 'antd'
-import humanizeDuration, { Options } from 'humanize-duration'
 import styled from 'styled-components'
 
+import FormattedBytes from '../common/FormattedBytes'
+import FormattedDuration from '../common/FormattedDuration'
 import { useFilters } from '../filters/Filters'
 import { Anime } from '../types'
 
@@ -21,46 +22,42 @@ interface Column {
     isAdvanced?: boolean
 }
 
-const humanizeDurationOptions: Options = {
-    units: ['d', 'h', 'm'],
-}
-
 const columns: Column[] = [
     {
         key: 'id',
         header: 'Total Anime',
-        render: (value, percent) => (
+        render: (value, percent): ReactNode => (
             <>
                 {value.toLocaleString()} ({Math.round(percent).toLocaleString()}%)
             </>
         ),
-        footer: (value) => value.toLocaleString(),
+        footer: (value): ReactNode => value.toLocaleString(),
         isCount: true,
     },
     {
         key: 'size',
         header: 'Total Storage Size',
-        render: (value) => value,
-        footer: (value) => value,
+        render: (value): ReactNode => <FormattedBytes bytes={value} />,
+        footer: (value): ReactNode => <FormattedBytes bytes={value} />,
         isAdvanced: true,
     },
     {
-        key: 'episodeCount',
+        key: 'totalEpisodes',
         header: 'Total Number of Episodes',
-        render: (value) => value.toLocaleString(),
-        footer: (value) => value.toLocaleString(),
+        render: (value): ReactNode => value.toLocaleString(),
+        footer: (value): ReactNode => value.toLocaleString(),
     },
     {
         key: 'totalDuration',
         header: 'Total Duration',
-        render: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
-        footer: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
+        render: (value): ReactNode => <FormattedDuration duration={value} />,
+        footer: (value): ReactNode => <FormattedDuration duration={value} />,
     },
     {
         key: 'totalWatchTime',
         header: 'Total Watch Time',
-        render: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
-        footer: (value) => humanizeDuration(value * 6e4, humanizeDurationOptions),
+        render: (value): ReactNode => <FormattedDuration duration={value} />,
+        footer: (value): ReactNode => <FormattedDuration duration={value} />,
     },
 ]
 

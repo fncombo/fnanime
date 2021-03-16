@@ -1,7 +1,7 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 
 import { Table } from 'antd'
-import { ColumnsType } from 'antd/lib/table'
+import { ColumnsType, ColumnType } from 'antd/lib/table'
 import styled, { createGlobalStyle } from 'styled-components'
 
 import { useFilters } from '../filters/Filters'
@@ -18,108 +18,98 @@ const widths = {
     xl: '11%',
 }
 
-const { compare } = new Intl.Collator(undefined, { numeric: true })
+const { compare } = new Intl.Collator(undefined, {
+    numeric: true,
+})
 
 const columns: ColumnsType<Anime> = [
     {
         title: 'Title',
         dataIndex: 'title',
-        key: 'title',
-        render: (title, anime) => <TitleCell title={title} anime={anime} />,
-        sorter: (a, b) => compare(a.title, b.title),
+        render: (title, anime): ReactNode => <TitleCell title={title} anime={anime} />,
+        sorter: (a, b): number => compare(a.title, b.title),
     },
     {
         title: 'Status',
         dataIndex: 'watchingStatus',
-        key: 'watchingStatus',
-        render: (value) => <CellValue filter="watchingStatus">{value}</CellValue>,
-        sorter: (a, b) => compare(a.watchingStatus, b.watchingStatus),
+        render: (value): ReactNode => <CellValue filter="watchingStatus">{value}</CellValue>,
+        sorter: (a, b): number => compare(a.watchingStatus, b.watchingStatus),
         align: 'center',
         width: widths.xl,
     },
     {
         title: 'Score',
         dataIndex: 'score',
-        key: 'score',
-        render: (value) => <CellValue>{value}</CellValue>,
-        sorter: (a, b) => a.score - b.score,
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
+        sorter: (a, b): number => a.score - b.score,
         align: 'center',
         width: widths.sm,
     },
     {
         title: 'Rewatched',
-        dataIndex: 'rewatchCount',
-        key: 'rewatchCount',
-        render: (value) => <CellValue>{value}</CellValue>,
+        dataIndex: 'rewatched',
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
         width: widths.md,
     },
     {
         title: 'Release',
         dataIndex: 'release',
-        key: 'release',
-        render: (value) => <CellValue>{value}</CellValue>,
-        sorter: (a, b) => compare(a.release || '', b.release || ''),
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
+        sorter: (a, b): number => compare(a.release || '', b.release || ''),
         align: 'center',
         width: widths.md,
     },
     {
         title: 'Resolution',
         dataIndex: 'resolution',
-        key: 'resolution',
-        render: (value) => <CellValue filter="resolution">{value}</CellValue>,
-        sorter: (a, b) => (a.resolution || 0) - (b.resolution || 0),
+        render: (value): ReactNode => <CellValue filter="resolution">{value}</CellValue>,
+        sorter: (a, b): number => (a.resolution || 0) - (b.resolution || 0),
         align: 'center',
         width: widths.md,
     },
     {
         title: 'Source',
         dataIndex: 'source',
-        key: 'source',
-        render: (value) => <CellValue filter="source">{value}</CellValue>,
-        sorter: (a, b) => compare(a.source || '', b.source || ''),
+        render: (value): ReactNode => <CellValue filter="source">{value}</CellValue>,
+        sorter: (a, b): number => compare(a.source || '', b.source || ''),
         align: 'center',
         width: widths.sm,
     },
     {
         title: 'Video',
         dataIndex: 'videoCodec',
-        key: 'videoCodec',
-        render: (value) => <CellValue filter="videoCodec">{value}</CellValue>,
-        sorter: (a, b) => compare(a.videoCodec || '', b.videoCodec || ''),
+        render: (value): ReactNode => <CellValue filter="videoCodec">{value}</CellValue>,
+        sorter: (a, b): number => compare(a.videoCodec || '', b.videoCodec || ''),
         align: 'center',
         width: widths.sm,
     },
     {
         title: 'Audio',
         dataIndex: 'audioCodec',
-        key: 'audioCodec',
-        render: (value) => <CellValue filter="audioCodec">{value}</CellValue>,
-        sorter: (a, b) => compare(a.audioCodec || '', b.audioCodec || ''),
+        render: (value): ReactNode => <CellValue filter="audioCodec">{value}</CellValue>,
+        sorter: (a, b): number => compare(a.audioCodec || '', b.audioCodec || ''),
         align: 'center',
         width: widths.sm,
     },
     {
         title: 'Quality',
         dataIndex: 'quality',
-        key: 'quality',
-        render: (value) => <CellValue>{value}</CellValue>,
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
         width: widths.sm,
     },
     {
         title: 'Episode Size',
         dataIndex: 'episodeSize',
-        key: 'episodeSize',
-        render: (value) => <CellValue>{value}</CellValue>,
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
         width: widths.lg,
     },
     {
         title: 'Total Size',
         dataIndex: 'totalSize',
-        key: 'totalSize',
-        render: (value) => <CellValue>{value}</CellValue>,
+        render: (value): ReactNode => <CellValue>{value}</CellValue>,
         align: 'center',
         width: widths.lg,
     },
@@ -156,19 +146,21 @@ const AnimeTable: FunctionComponent = () => {
     const { anime, hasAdvancedFilters } = useFilters()
     const openModal = useModal()
 
+    const tableColumns = hasAdvancedFilters
+        ? columns
+        : columns.filter(({ dataIndex }: ColumnType<Anime>) => !advancedColumns.includes(dataIndex as string))
+
     return (
         <TableContainer>
             <GlobalStyle />
             <Table
                 dataSource={anime}
-                columns={
-                    hasAdvancedFilters ? columns : columns.filter(({ key }) => !advancedColumns.includes(key as string))
-                }
+                columns={tableColumns}
                 rowClassName={TableRow.styledComponentId}
                 pagination={{ position: ['bottomCenter'] }}
                 sortDirections={['ascend', 'descend']}
-                onRow={({ id }) => ({
-                    onClick: () => openModal(id),
+                onRow={({ id }): HTMLAttributes<HTMLElement> => ({
+                    onClick: (): void => openModal(id),
                 })}
             />
         </TableContainer>

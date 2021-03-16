@@ -23,7 +23,7 @@ const TitleCell: FunctionComponent<{
                 href={url}
                 target="_blank"
                 rel="noreferrer noopener"
-                onClick={(event) => event.stopPropagation()}
+                onClick={(event): void => event.stopPropagation()}
             >
                 <Typography.Text>{title}</Typography.Text>
             </Typography.Link>

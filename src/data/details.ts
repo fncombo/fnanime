@@ -13,7 +13,7 @@ interface ListSnapshot {
     [key: string]: unknown
 }
 
-console.log('Checking for outdated individual anime details...')
+console.log('Checking for outdated individual anime details', '...')
 
 database
     .ref(process.env.MYANIMELIST_USERNAME)

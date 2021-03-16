@@ -2,9 +2,24 @@ import { ReactNode } from 'react'
 
 import { Anime } from '../types'
 
-type FilterName = keyof Anime
+type FilterName = keyof Pick<
+    Anime,
+    | 'score'
+    | 'type'
+    | 'source'
+    | 'watchingStatus'
+    | 'resolution'
+    | 'isInCompareList'
+    | 'videoCodec'
+    | 'audioCodec'
+    | 'release'
+    | 'genres'
+    | 'studios'
+>
 
 type FilterValue = string | number
+
+type FilterColor = 'green' | 'orange' | 'red' | 'blue'
 
 interface AnimeFilter<T extends FilterName> {
     name: T
@@ -15,7 +30,7 @@ interface AnimeFilter<T extends FilterName> {
     options?: {
         label: ReactNode
         value: -1 | Anime[T]
-        color?: 'green' | 'orange' | 'red' | 'blue'
+        color?: FilterColor
     }[]
 }
 
@@ -23,7 +38,7 @@ interface FilterOption {
     label: ReactNode
     value: FilterValue
     animeCount: number
-    color?: 'green' | 'orange' | 'red' | 'blue'
+    color?: FilterColor
 }
 
 interface Filter {
@@ -36,7 +51,13 @@ interface Filter {
     placeholder?: string
 }
 
-type FilterDictionary = Record<FilterValue, { label: ReactNode; color?: 'green' | 'orange' | 'red' | 'blue' }>
+type FilterDictionary = Record<
+    FilterValue,
+    {
+        label: ReactNode
+        color?: FilterColor
+    }
+>
 
 const scoreFilter: AnimeFilter<'score'> = {
     name: 'score',
@@ -355,7 +376,10 @@ const filtersDictionary = filtersConfig
             .filter(({ value }) => value !== -1)
             // Create an object of each filter value to its label and color
             .reduce((innerAccumulator, { label, value, color }) => {
-                innerAccumulator[value] = { label, color }
+                innerAccumulator[value] = {
+                    label,
+                    color,
+                }
 
                 return innerAccumulator
             }, {} as FilterDictionary)
@@ -365,4 +389,4 @@ const filtersDictionary = filtersConfig
 
 export { filtersConfig, filtersDictionary }
 
-export type { FilterName, FilterValue, FilterOption, Filter }
+export type { FilterName, FilterValue, FilterColor, FilterOption, Filter }

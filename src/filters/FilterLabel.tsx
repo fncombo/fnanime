@@ -1,23 +1,18 @@
 import { FunctionComponent, ReactNode } from 'react'
 
-import styled from 'styled-components'
-
-const AnimeCount = styled.span`
-    opacity: 0.5;
-`
+import { FilterName, filtersDictionary, FilterValue } from './config'
 
 /**
- * Displays the content for a filter button or select option. When the filter has anime matching it, the anime count
- * is displayed in brackets next to the value.
+ * Given a filter name and value, displays its label. Can specify children as a render function for the label value.
  */
 const FilterLabel: FunctionComponent<{
-    animeCount: number
-    children: ReactNode
-}> = ({ animeCount, children }) => (
-    <>
-        {children}
-        {!!animeCount && <AnimeCount> ({animeCount})</AnimeCount>}
-    </>
-)
+    name: FilterName
+    value: FilterValue
+    children?: (label: ReactNode) => ReactNode
+}> = ({ name, value, children }) => {
+    const { label } = filtersDictionary[name][value]
+
+    return (children ? children(label) : label) as JSX.Element
+}
 
 export default FilterLabel

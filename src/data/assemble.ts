@@ -8,12 +8,12 @@ import { closeDatabase, database, encodeFirebaseKey } from './database'
 import { animeDetailsDataFactory, animeListDataFactory, seriesFactory } from './factories'
 import { AnimeLocalData, MalDetailsAnime, MalListAnime, Profile } from './types'
 
-console.log('Getting all the necessary data for assembling...')
+console.log('Getting all the necessary data for assembling', '...')
 
 /**
  * Sanitizes an anime title from MyAnimeList so that it matches the anime title saved locally.
  */
-const sanitizeAnimeTitle = (name: string) => removeDiacritics(name.replace(/[√:?"]/g, '').replace(/[★/]/g, ' '))
+const sanitizeAnimeTitle = (name: string): string => removeDiacritics(name.replace(/[√:?"]/g, '').replace(/[★/]/g, ' '))
 
 Promise.all([
     database.ref(process.env.MYANIMELIST_USERNAME).once('value'),
@@ -36,9 +36,9 @@ Promise.all([
                 const stringId = anime.id.toString()
 
                 const listData = animeListDataFactory(anime)
-                const detailsData = animeDetailsDataFactory(details[stringId])
+                const detailsData = animeDetailsDataFactory(details[stringId], details)
 
-                const { totalWatchedEpisodes, rewatched } = listData
+                const { totalWatchedEpisodes, totalRewatchedTimes: rewatched } = listData
                 const { episodeDuration } = detailsData
 
                 return {
@@ -51,7 +51,6 @@ Promise.all([
                     ...seriesFactory(anime.id, details),
                     isFavorite: profile.favorites.anime.some(({ malId }) => malId === anime.id),
                     totalWatchTime: totalWatchedEpisodes * episodeDuration * (rewatched + 1),
-                    related: [],
                 }
             }
         )

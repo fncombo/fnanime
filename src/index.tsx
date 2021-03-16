@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -33,11 +32,9 @@ const GlobalStyle = createGlobalStyle`
 `
 
 ReactDOM.render(
-    <StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <GlobalStyle />
-            <App />
-        </QueryClientProvider>
-    </StrictMode>,
+    <QueryClientProvider client={queryClient}>
+        <GlobalStyle />
+        <App />
+    </QueryClientProvider>,
     document.getElementById('root')
 )

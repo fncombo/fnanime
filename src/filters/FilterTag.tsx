@@ -4,6 +4,7 @@ import { Tag } from 'antd'
 import styled from 'styled-components'
 
 import { FilterName, filtersDictionary, FilterValue } from './config'
+import FilterLabel from './FilterLabel'
 
 const TightTag = styled(Tag)`
     margin: 0;
@@ -18,9 +19,13 @@ const FilterTag: FunctionComponent<{
     value: FilterValue
     children?: (label: ReactNode) => ReactNode
 }> = ({ name, value, children }) => {
-    const { color, label } = filtersDictionary[name][value]
+    const { color } = filtersDictionary[name][value]
 
-    return <TightTag color={color}>{children ? children(label) : label}</TightTag>
+    return (
+        <FilterLabel name={name} value={value}>
+            {(label): ReactNode => <TightTag color={color}>{children ? children(label) : label}</TightTag>}
+        </FilterLabel>
+    )
 }
 
 export default FilterTag

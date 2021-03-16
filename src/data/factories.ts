@@ -1,4 +1,5 @@
 import { red, yellow } from 'chalk'
+import { sentenceCase } from 'change-case'
 
 import {
     AiringStatus,
@@ -9,11 +10,12 @@ import {
     AudioCodecValues,
     Bits,
     BitsValues,
+    RelatedAnime,
+    RelatedAnimeByType,
     Resolution,
     ResolutionValues,
     Score,
     ScoreValues,
-    SeriesAnime,
     Source,
     SourceValues,
     VideoCodec,
@@ -61,7 +63,7 @@ const watchingStatusDictionary: Record<number, WatchingStatus> = {
  * Asserts that the given value is one of the allowed values for the specified type, otherwise an error is thrown.
  */
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-function assertValue<T extends AssertType>(
+function assert<T extends AssertType>(
     animeTitle: string,
     value: string | number,
     allowedValues: T[],
@@ -73,16 +75,16 @@ function assertValue<T extends AssertType>(
 }
 
 /**
- * Asserts that the given value is one of the allowed values for the specified type and returns it, otherwise an
- * error is thrown.
+ * Validates that the given value is one of the allowed values for the specified type and returns it,
+ * otherwise an error is thrown.
  */
-const assertAndReturnValue = <T extends AssertType>(
+const validate = <T extends AssertType>(
     animeTitle: string,
     value: string | number,
     allowedValues: T[],
     name: string
 ): T => {
-    assertValue<T>(animeTitle, value, allowedValues, name)
+    assert<T>(animeTitle, value, allowedValues, name)
 
     return value
 }
@@ -114,7 +116,7 @@ const getDuration = (duration: string): number => {
 /**
  * Returns the number of times this anime was rewatched from the tags.
  */
-const getRewatched = (tags: string | null): number => {
+const getTotalRewatchedTimes = (tags: string | null): number => {
     const regex = /re.*watched\s*:\s*(\d+)/i
 
     if (!tags || !regex.test(tags)) {
@@ -149,11 +151,11 @@ const localAnimeDataFactory = ({
     size: number
 }): AnimeLocalData => ({
     release,
-    resolution: assertAndReturnValue<Resolution>(title, parseInt(resolution, 10), ResolutionValues, 'resolution'),
-    source: assertAndReturnValue<Source>(title, source, SourceValues, 'source'),
-    videoCodec: assertAndReturnValue<VideoCodec>(title, videoCodec, VideoCodecValues, 'video codec'),
-    bits: assertAndReturnValue<Bits>(title, parseInt(bits, 10), BitsValues, 'bits'),
-    audioCodec: assertAndReturnValue<AudioCodec>(title, audioCodec, AudioCodecValues, 'audio codec'),
+    resolution: validate<Resolution>(title, parseInt(resolution, 10), ResolutionValues, 'resolution'),
+    source: validate<Source>(title, source, SourceValues, 'source'),
+    videoCodec: validate<VideoCodec>(title, videoCodec, VideoCodecValues, 'video codec'),
+    bits: validate<Bits>(title, parseInt(bits, 10), BitsValues, 'bits'),
+    audioCodec: validate<AudioCodec>(title, audioCodec, AudioCodecValues, 'audio codec'),
     size,
 })
 
@@ -172,12 +174,13 @@ const animeListDataFactory = ({
     type,
     url,
     tags,
+    isRewatching,
 }: MalListAnime): AnimeListData => ({
     id,
     title,
-    score: assertAndReturnValue<Score>(title, score, ScoreValues, 'score'),
+    score: validate<Score>(title, score, ScoreValues, 'score'),
     image: imageUrl,
-    airingStatus: assertAndReturnValue<AiringStatus>(
+    airingStatus: validate<AiringStatus>(
         title,
         airingStatusDictionary[airingStatus],
         AiringStatusValues,
@@ -185,30 +188,35 @@ const animeListDataFactory = ({
     ),
     totalEpisodes: totalEpisodes || 0,
     totalWatchedEpisodes: watchedEpisodes || 0,
-    watchingStatus: assertAndReturnValue<WatchingStatus>(
+    watchingStatus: validate<WatchingStatus>(
         title,
-        watchingStatusDictionary[watchingStatus],
+        isRewatching ? 'Watching' : watchingStatusDictionary[watchingStatus],
         WatchingStatusValues,
         'watching status'
     ),
-    type: assertAndReturnValue<AnimeType>(title, type, AnimeTypeValues, 'type'),
+    type: validate<AnimeType>(title, type, AnimeTypeValues, 'type'),
     url,
-    rewatched: getRewatched(tags),
+    isRewatching,
+    totalRewatchedTimes: getTotalRewatchedTimes(tags),
 })
 
 /**
  * Creates a partial anime data object from MyAnimeList details data.
  */
-const animeDetailsDataFactory = ({
-    titleEnglish,
-    titleSynonyms,
-    genres,
-    studios = [],
-    duration,
-    episodes,
-    score,
-    rank,
-}: MalDetailsAnime): AnimeDetailsData => {
+const animeDetailsDataFactory = (
+    {
+        titleEnglish,
+        titleSynonyms,
+        genres = [],
+        studios = [],
+        duration,
+        episodes,
+        score,
+        rank,
+        related,
+    }: MalDetailsAnime,
+    details: Record<string, MalDetailsAnime>
+): AnimeDetailsData => {
     const data: AnimeDetailsData = {
         genres: genres
             .filter(({ type }) => type === 'anime')
@@ -236,6 +244,41 @@ const animeDetailsDataFactory = ({
         data.rank = rank
     }
 
+    if (related && Object.values(related).length) {
+        data.related = Object.values(
+            Object.entries(related).reduce((accumulator, [relationType, relatedItems]) => {
+                if (relationType === 'sequel' || relationType === 'prequel') {
+                    return accumulator
+                }
+
+                for (const relatedItem of relatedItems) {
+                    if (relatedItem.type === 'anime') {
+                        const relationData: RelatedAnime = {
+                            id: relatedItem.malId,
+                        }
+
+                        if (!details[relatedItem.malId]) {
+                            relationData.title = relatedItem.name
+                        }
+
+                        if (!accumulator[relationType]) {
+                            accumulator[relationType] = {
+                                type: sentenceCase(relationType),
+                                anime: [],
+                            }
+
+                            console.log(sentenceCase(relationType))
+                        }
+
+                        accumulator[relationType].anime.push(relationData)
+                    }
+                }
+
+                return accumulator
+            }, {} as Record<string, RelatedAnimeByType>)
+        )
+    }
+
     return data
 }
 
@@ -245,18 +288,25 @@ const animeDetailsDataFactory = ({
  */
 const getSeries = (
     type: 'prequel' | 'sequel',
-    series: SeriesAnime[][],
+    series: RelatedAnime[][],
     id: number,
     details: Record<string, MalDetailsAnime>
 ): void => {
     const currentSeries = details[id]?.related?.[type]
         // Only get anime, not manga
         ?.filter(({ type: currentSeriesType }) => currentSeriesType === 'anime')
-        // Get only the ID and title
-        .map(({ malId, name }) => ({
-            id: malId,
-            title: name,
-        }))
+        // Get only the ID, and the title of the anime if it's not in details
+        .map(({ malId, name }) => {
+            const data: RelatedAnime = {
+                id: malId,
+            }
+
+            if (!details[malId]) {
+                data.title = name
+            }
+
+            return data
+        })
         // Remove duplicates
         .filter(({ id: currentSeriesId }) =>
             series.every((innerSeries) =>
@@ -282,8 +332,8 @@ const getSeries = (
  * Returns an object with all prequels and sequels for the given anime ID.
  */
 const seriesFactory = (id: number, details: Record<string, MalDetailsAnime>): AnimeSeriesData => {
-    const prequels: SeriesAnime[][] = []
-    const sequels: SeriesAnime[][] = []
+    const prequels: RelatedAnime[][] = []
+    const sequels: RelatedAnime[][] = []
 
     getSeries('prequel', prequels, id, details)
 

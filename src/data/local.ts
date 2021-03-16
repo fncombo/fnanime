@@ -20,7 +20,7 @@ let processedDirectories = 0
 /**
  * Simple way to normalize a release name for duplicate search.
  */
-const normalizeString = (string: string) => string.toLowerCase().replace(/[^\w\d]/g, '')
+const normalizeString = (string: string): string => string.toLowerCase().replace(/[^\w\d]/g, '')
 
 eachSeries(directories, async (directory) => {
     // Skip directories which don't exist
