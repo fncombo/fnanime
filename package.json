@@ -12,7 +12,8 @@
         "data:list": "ts-node --project tsconfig.data.json src/data/list.ts",
         "data:details": "ts-node --project tsconfig.data.json src/data/details.ts",
         "data:assemble": "ts-node --project tsconfig.data.json src/data/assemble.ts",
-        "data": "npm run data:list && npm run data:details && npm run data:assemble"
+        "data:external": "npm run data:list && npm run data:details && npm run data:assemble",
+        "data:all": "npm run data:local && npm run data:list && npm run data:details && npm run data:assemble"
     },
     "repository": {
         "type": "git",

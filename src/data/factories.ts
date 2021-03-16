@@ -266,8 +266,6 @@ const animeDetailsDataFactory = (
                                 type: sentenceCase(relationType),
                                 anime: [],
                             }
-
-                            console.log(sentenceCase(relationType))
                         }
 
                         accumulator[relationType].anime.push(relationData)

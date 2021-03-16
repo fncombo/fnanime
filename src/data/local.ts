@@ -24,7 +24,9 @@ const normalizeString = (string: string): string => string.toLowerCase().replace
 
 eachSeries(directories, async (directory) => {
     // Skip directories which don't exist
-    if (!(await fs.stat(directory))) {
+    try {
+        await fs.stat(directory)
+    } catch (error) {
         console.log('Directory', yellow(directory), 'not found, skipping')
 
         return
@@ -45,7 +47,7 @@ eachSeries(directories, async (directory) => {
 
         const count = `${yellow(entries.indexOf(entry) + 1)}/${yellow(entries.length)}`
 
-        singleLineLog(`Getting the total size of ${count} anime from ${yellow(directory)}...\n`)
+        singleLineLog(`Getting the total size of ${count} anime from ${yellow(directory)}`)
 
         const [, title, release, resolution, source, videoCodec, bits, audioCodec] = infoRegex.exec(name) as string[]
 
@@ -90,6 +92,9 @@ eachSeries(directories, async (directory) => {
             )
         }
     })
+
+    // Empty log required to separate single line logs
+    console.log()
 })
     .then(async () => {
         // TODO: Make sure all anime are saved in the correct folders based on their types
@@ -110,6 +115,8 @@ eachSeries(directories, async (directory) => {
         await closeDatabase()
     })
     .catch(async ({ message }) => {
+        console.log()
+
         await closeDatabase()
 
         console.log(message)
