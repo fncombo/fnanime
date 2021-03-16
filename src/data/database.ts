@@ -1,12 +1,10 @@
 import dotenv from 'dotenv'
 import firebaseAdmin, { ServiceAccount } from 'firebase-admin'
 
-import firebaseKey from '../../firebase.json'
-
 dotenv.config()
 
 firebaseAdmin.initializeApp({
-    credential: firebaseAdmin.credential.cert(firebaseKey as ServiceAccount),
+    credential: firebaseAdmin.credential.cert(JSON.parse(process.env.FIREBASE as string) as ServiceAccount),
     databaseURL: process.env.DATABASE_URL,
 })
 
