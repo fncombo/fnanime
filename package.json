@@ -5,7 +5,7 @@
     "description": "fnanime",
     "scripts": {
         "start": "react-scripts start",
-        "build": "react-scripts build",
+        "build": "npm run styles && react-scripts build",
         "styles": "lessc src/styles.less src/styles.css --js",
         "format": "eslint \"**/*.{ts,tsx}\" --fix && prettier --write \"**/*.{ts,tsx}\" && stylelint \"**/*.{ts,tsx}\" --fix",
         "data:local": "ts-node --project tsconfig.data.json src/data/local.ts",
